@@ -1,3 +1,4 @@
+import { assertRegionalCatalog, releasedSeventyPresentationsOnly, REGIONAL_IDS } from "./regional-wave1.mjs";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -24,10 +25,13 @@ export const THREE_CLEARED_CONFIDENCE = { "DELTA-ROWE-CROP-FARM-2026": "good", "
 // Historical suites retain their complete released registry, after affirming the
 // entire current registry has exactly the pinned three additions and no edits.
 export function releasedPresentationsOnly(registry) {
+  registry = releasedSeventyPresentationsOnly(registry);
   assert.deepEqual(registry, { ...THREE_CLEARED_BASELINE.presentations, ...THREE_CLEARED_PRESENTATIONS });
   return Object.fromEntries(Object.entries(registry).filter(([id]) => !THREE_CLEARED_RECORD_IDS.includes(id)));
 }
 export function assertThreeClearedCatalog(rows, presentations) {
+  assertRegionalCatalog(rows, presentations);
+  rows = rows.filter(row => !REGIONAL_IDS.includes(row.id));
   const normalize = values => JSON.parse(JSON.stringify(values)).sort((a, b) => a.id.localeCompare(b.id));
   const newRows = THREE_CLEARED_RECORDS.map(row => ({ ...row, lat: row.seasonalListing.placement.lat, lon: row.seasonalListing.placement.lon }));
   assert.deepEqual(normalize(rows), normalize([...THREE_CLEARED_BASELINE.catalog, ...newRows]));

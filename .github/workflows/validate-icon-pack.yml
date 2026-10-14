@@ -122,6 +122,7 @@ jobs:
           - seasonal-next-missouri
           - seasonal-hold-cleanup
           - seasonal-ranked-holds
+          - seasonal-regional-wave1
           - geometry
 
     steps:
@@ -250,6 +251,14 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
           SEASONAL_RANKED_HOLDS: "true"
+        run: node scripts/seasonal-ten-record-browser.mjs
+
+      - name: Exercise exact independently cleared regional twelve
+        if: matrix.suite == 'seasonal-regional-wave1'
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          SEASONAL_REGIONAL_WAVE1: "true"
         run: node scripts/seasonal-ten-record-browser.mjs
 
       - name: Compare seasonal and standard card geometry

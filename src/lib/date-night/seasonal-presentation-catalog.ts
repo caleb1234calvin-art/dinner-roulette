@@ -3,6 +3,133 @@ import type { SeasonalPresentation } from "./seasonal-presentation";
 /** Explicit independently reviewed visitor copy. Full facts remain in immutable audit
  * artifacts and catalog metadata; no audit narratives are rendered as consumer prose. */
 export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentation>> = {
+  "OK-W1-ANNABELLE-2026": {
+    "canonicalId": "date-night-ok26-w1-annabelle",
+    "confidence": "good",
+    "details": [
+      "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+      "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "AR26-W1-003": {
+    "canonicalId": "date-night-ar26-warehouse",
+    "confidence": "good",
+    "details": [
+      "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+      "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+      "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "AR26-W1-002": {
+    "canonicalId": "date-night-ar26-asylum",
+    "confidence": "good",
+    "details": [
+      "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+      "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+      "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "KS26-W1-LOUISBURG": {
+    "canonicalId": "date-night-ks26-louisburg",
+    "confidence": "good",
+    "details": [
+      "Family farm, corn maze, pumpkin patch and wagon rides, September 11–November 1, 2026.",
+      "Monday–Thursday 8 a.m.–6 p.m.; Sunday 9 a.m.–6 p.m. Friday–Saturday opens at 8 a.m.; closing time is unconfirmed because operator pages differ. Check before an evening visit.",
+      "Family Farm admission required; Country Store entry is free. Pumpkins are separate.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "KS26-W1-EXILED": {
+    "canonicalId": "date-night-ks26-exiled",
+    "confidence": "good",
+    "details": [
+      "Outdoor Trail of Terrors and Twisted Carnival on 13 nights, October 2–November 1, 2026.",
+      "Paid timed Trail ticket required; Carnival entry is free. Check in during the 30-minute window beginning at your ticket time.",
+      "Closed-toe shoes required. Trail has hills, stairs and crawling and cannot accommodate mobility aids. Recommended 12+; under 12 must stay with an adult.",
+      "Optional Green Level is 16+ and may include light contact and simulated blood or paint; consent required.",
+      "No costumes, identity-concealing masks or outside lights on the Trail. Fog and strobes are used; review the operator’s health guidance before booking.",
+      "Location is approximate."
+    ]
+  },
+  "OK-W1-PSYCHO-2026": {
+    "canonicalId": "date-night-ok26-w1-psycho",
+    "confidence": "good",
+    "details": [
+      "Outdoor haunted ride and Shadow Box walkthrough on Fridays and Saturdays in October 2026.",
+      "Book main admission online for a timed entry. Shadow Box lights-out nights are October 30–31; Shadow Box-only tickets are listed as on-site.",
+      "Outdoor and weather-dependent, with strobes, fog and loud noises.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "AR26-W1-007": {
+    "canonicalId": "date-night-ar26-river",
+    "confidence": "good",
+    "details": [
+      "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+      "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+      "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "OK-W1-ROOTS-2026": {
+    "canonicalId": "date-night-ok26-w1-roots",
+    "confidence": "good",
+    "details": [
+      "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+      "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+      "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+      "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "OK-W1-CASTLE-2026": {
+    "canonicalId": "date-night-ok26-w1-castle",
+    "confidence": "good",
+    "details": [
+      "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+      "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+      "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+      "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "AR26-W1-019": {
+    "canonicalId": "date-night-ar26-hollow",
+    "confidence": "good",
+    "details": [
+      "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+      "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+      "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+      "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+      "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "OK-W1-PLANTATION-2026": {
+    "canonicalId": "date-night-ok26-w1-plantation",
+    "confidence": "good",
+    "details": [
+      "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+      "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+      "Expect light touching and theatrical blood; a waiver is required. Intense scares; age recommendations vary, so parental discretion applies. Outdoor terrain, fog and strobes.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
+  "AR26-W1-018": {
+    "canonicalId": "date-night-ar26-magic",
+    "confidence": "good",
+    "details": [
+      "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+      "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+      "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+      "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+      "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+      "Location is approximate. Directions use the visitor address."
+    ]
+  },
   "DELTA-ROWE-CROP-FARM-2026": {
     "canonicalId": "date-night-mo26-delta-rowe-crop-farm",
     "confidence": "good",

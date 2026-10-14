@@ -1,0 +1,1324 @@
+{
+  "scope": "Exact accepted full source objects and presentations; selection does not change facts or authorize release.",
+  "acceptedCombinedSha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688",
+  "canonicalIDs": [
+    "date-night-ok26-w1-annabelle",
+    "date-night-ar26-warehouse",
+    "date-night-ar26-asylum",
+    "date-night-ks26-louisburg",
+    "date-night-ks26-exiled",
+    "date-night-ok26-w1-psycho",
+    "date-night-ar26-river",
+    "date-night-ok26-w1-roots",
+    "date-night-ok26-w1-castle",
+    "date-night-ar26-hollow",
+    "date-night-ok26-w1-plantation",
+    "date-night-ar26-magic"
+  ],
+  "records": [
+    {
+      "id": "date-night-ok26-w1-annabelle",
+      "name": "Annabelle’s Fun Farm",
+      "address": "444584 East 110 Rd, Welch, OK 74369",
+      "website": "https://annabellesfunfarm.com/",
+      "activityTypes": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "openingHours": null,
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "phone": null,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-09-26",
+        "activeUntil": "2026-11-01",
+        "activeDates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-16",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-02T00:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://www.annabellesfunfarm.com/",
+          "https://annabellesfunfarm.com/pages/hours-pricing",
+          "https://annabellesfunfarm.com/pages/calendar",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+        ],
+        "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review.",
+        "endsAt": "2026-11-02T00:00:00Z"
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "OK-W1-ANNABELLE-2026",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "444584 East 110 Rd, Welch, OK 74369",
+        "placement": {
+          "lat": 36.859403553545,
+          "lon": -95.077985149603,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-14T02:27:00.597440+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "444584 East 110 Rd, Welch, OK 74369"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "September 26–November 1, 2026: Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions and locations may be closed on Fridays. Last admission is not stated."
+        },
+        "listingExpiresAt": "2026-11-02T00:00:00Z",
+        "expiryBasis": "exact",
+        "sourceUrls": [
+          "https://www.annabellesfunfarm.com/",
+          "https://annabellesfunfarm.com/pages/hours-pricing",
+          "https://annabellesfunfarm.com/pages/calendar",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+          "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "OK2026-RELEASE-WINDOW-R1-2026-10-14",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+        "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+        "Location is approximate. Directions use the visitor address."
+      ],
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Corn Maze / Pumpkin Patch",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "moodLevel": 2
+    },
+    {
+      "id": "date-night-ar26-warehouse",
+      "name": "Warehouse of Fear at Riverside Entertainment",
+      "address": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "moodLevel": 3,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "seasonYear": 2026,
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "sourceUrls": [
+          "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+          "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house"
+        ],
+        "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "AR26-W1-003",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+        "placement": {
+          "lat": 36.170073979298,
+          "lon": -94.433748347312,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "17023 Chamber Springs Rd, Siloam Springs, AR 72761"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Fridays and Saturdays in October; doors open 7 PM. Closing time and last admission are unconfirmed."
+        },
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+          "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "AR2026-RELEASE-WINDOW-20261014-R1-PROPOSED-NOT-APPROVED",
+        "visibility": "halloween-layer"
+      },
+      "seasonalVisitNotes": [
+        "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+        "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+        "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    {
+      "id": "date-night-ar26-asylum",
+      "name": "The Asylum Haunted House",
+      "address": "210 N Main St, Cave Springs, AR 72718",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://www.theasylumhauntedhouse.net/",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "moodLevel": 3,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "seasonYear": 2026,
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "sourceUrls": [
+          "https://www.stubwire.com/events/asylumhauntedhouse/",
+          "https://www.theasylumhauntedhouse.net/",
+          "https://www.theasylumhauntedhouse.net/faq/"
+        ],
+        "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. Remaining ticket dates only; not a claim about the full past season."
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "AR26-W1-002",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "210 N Main St, Cave Springs, AR 72718",
+        "placement": {
+          "lat": 36.265148995252,
+          "lon": -94.231741991627,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "210 N Main St, Cave Springs, AR 72718"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Remaining dated tickets: October 16–17, 23–24 and 29–31, 2026. Ticket window opens 7 PM; attraction start, last admission and closing time are unconfirmed."
+        },
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://www.stubwire.com/events/asylumhauntedhouse/",
+          "https://www.theasylumhauntedhouse.net/",
+          "https://www.theasylumhauntedhouse.net/faq/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "AR2026-RELEASE-WINDOW-20261014-R1-PROPOSED-NOT-APPROVED",
+        "visibility": "halloween-layer"
+      },
+      "seasonalVisitNotes": [
+        "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+        "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+        "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    {
+      "id": "date-night-ks26-louisburg",
+      "name": "Louisburg Cider Mill Family Farm",
+      "address": "14730 K68 Highway, Louisburg, KS 66053, USA",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Corn Maze / Pumpkin Patch",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://www.louisburgcidermill.com/family-farm",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "moodLevel": 2,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-09-11",
+        "activeUntil": "2026-11-01",
+        "activeDates": [
+          "2026-09-11",
+          "2026-09-12",
+          "2026-09-13",
+          "2026-09-14",
+          "2026-09-15",
+          "2026-09-16",
+          "2026-09-17",
+          "2026-09-18",
+          "2026-09-19",
+          "2026-09-20",
+          "2026-09-21",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24",
+          "2026-09-25",
+          "2026-09-26",
+          "2026-09-27",
+          "2026-09-28",
+          "2026-09-29",
+          "2026-09-30",
+          "2026-10-01",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-05",
+          "2026-10-06",
+          "2026-10-07",
+          "2026-10-08",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-12",
+          "2026-10-13",
+          "2026-10-14",
+          "2026-10-15",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-19",
+          "2026-10-20",
+          "2026-10-21",
+          "2026-10-22",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-26",
+          "2026-10-27",
+          "2026-10-28",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-02T00:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://www.louisburgcidermill.com/family-farm",
+          "https://louisburgcidermill.com/",
+          "https://www.louisburgcidermill.com/faq",
+          "https://www.louisburgcidermill.com/copy-of-country-store"
+        ],
+        "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence.",
+        "endsAt": "2026-11-02T00:00:00Z"
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "KS26-W1-LOUISBURG",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "14730 K68 Highway, Louisburg, KS 66053, USA",
+        "placement": {
+          "lat": 38.6218568,
+          "lon": -94.755488,
+          "basis": "operator-site",
+          "sourceUrl": "https://www.louisburgcidermill.com/family-farm",
+          "checkedAt": "2026-10-14T02:27:31.900139+00:00",
+          "precisionLabel": "Approximate operator-published venue location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "14730 K68 Highway, Louisburg, KS 66053, USA"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "September 11–November 1, 2026. Monday–Thursday 8 a.m.–6 p.m.; Sunday 9 a.m.–6 p.m. Friday–Saturday opens at 8 a.m.; operator pages disagree on 8 p.m. versus 10 p.m. closing. Check the operator before an evening visit. Last admission is not stated."
+        },
+        "listingExpiresAt": "2026-11-02T00:00:00Z",
+        "expiryBasis": "exact",
+        "sourceUrls": [
+          "https://www.louisburgcidermill.com/family-farm",
+          "https://louisburgcidermill.com/",
+          "https://www.louisburgcidermill.com/faq",
+          "https://www.louisburgcidermill.com/copy-of-country-store"
+        ],
+        "reviewRevision": "KS-RELEASE-WINDOW-2026-10-14-R2-PENDING-INDEPENDENT-REVIEW",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Family farm, corn maze, pumpkin patch and wagon rides, September 11–November 1, 2026.",
+        "Monday–Thursday 8 a.m.–6 p.m.; Sunday 9 a.m.–6 p.m. Friday–Saturday opens at 8 a.m.; closing time is unconfirmed because operator pages differ. Check before an evening visit.",
+        "Family Farm admission required; Country Store entry is free. Pumpkins are separate.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    {
+      "id": "date-night-ks26-exiled",
+      "name": "Exiled KC: Trail of Terrors & Twisted Carnival",
+      "address": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://exiledkc.com/",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "moodLevel": 2,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-11-01",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-29",
+          "2026-10-30",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-02T06:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://exiledkc.com/",
+          "https://exiledkc.com/carnival/",
+          "https://exiledkc.com/faq/"
+        ],
+        "note": "Finite 2026 occurrences only. No machine opening intervals; no 2027 recurrence."
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "KS26-W1-EXILED",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+        "placement": {
+          "lat": 39.010297081473,
+          "lon": -94.914563314124,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:19:31.801356+00:00",
+          "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "12829 Loring Road, Bonner Springs, KS 66012, USA"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "13 show nights October 2–November 1, 2026. Trail check-in starts at the ticket time and lasts 30 minutes; actual start depends on the line. Carnival opens 30 minutes before first Trail time and stays open approximately 90 minutes after last ticket time. Final closing time unknown."
+        },
+        "listingExpiresAt": "2026-11-02T06:00:00Z",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://exiledkc.com/",
+          "https://exiledkc.com/carnival/",
+          "https://exiledkc.com/faq/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+          "https://frightfind.com/state-frights/kansas/c/haunted-houses-attractions/haunt-events/"
+        ],
+        "reviewRevision": "KS-RELEASE-WINDOW-2026-10-14-R1-PENDING-INDEPENDENT-REVIEW",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Outdoor Trail of Terrors and Twisted Carnival on 13 nights, October 2–November 1, 2026.",
+        "Paid timed Trail ticket required; Carnival entry is free. Check in during the 30-minute window beginning at your ticket time.",
+        "Closed-toe shoes required. Trail has hills, stairs and crawling and cannot accommodate mobility aids. Recommended 12+; under 12 must stay with an adult.",
+        "Optional Green Level is 16+ and may include light contact and simulated blood or paint; consent required.",
+        "No costumes, identity-concealing masks or outside lights on the Trail. Fog and strobes are used; review the operator’s health guidance before booking.",
+        "Location is approximate."
+      ]
+    },
+    {
+      "id": "date-night-ok26-w1-psycho",
+      "name": "Psycho Path Haunted Attraction",
+      "address": "1517 East 106th Street North, Sperry, OK 74073",
+      "website": "https://psychopathhaunt.com/",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "openingHours": null,
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "phone": null,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-16",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://i0.wp.com/psychopathhaunt.com/wp-content/uploads/2026/09/2026-CALENDAR%403x.png?w=800",
+          "https://psychopathhaunt.com/",
+          "https://psychopathhaunt.com/faq/"
+        ],
+        "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "OK-W1-PSYCHO-2026",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "1517 East 106th Street North, Sperry, OK 74073",
+        "placement": {
+          "lat": 36.3076991,
+          "lon": -95.9675955,
+          "basis": "operator-site",
+          "sourceUrl": "https://psychopathhaunt.com/",
+          "checkedAt": "2026-10-14T02:28:31.980577+00:00",
+          "precisionLabel": "Approximate operator-published venue location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1517 East 106th Street North, Sperry, OK 74073"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Fridays and Saturdays in October 2026. Timed online entry; select the available time when booking. Shadow Box lights-out nights October 30–31. Final admission and closing time are not stated."
+        },
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://i0.wp.com/psychopathhaunt.com/wp-content/uploads/2026/09/2026-CALENDAR%403x.png?w=800",
+          "https://psychopathhaunt.com/",
+          "https://psychopathhaunt.com/faq/"
+        ],
+        "reviewRevision": "OK2026-RELEASE-WINDOW-R2-2026-10-14",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Outdoor haunted ride and Shadow Box walkthrough on Fridays and Saturdays in October 2026.",
+        "Book main admission online for a timed entry. Shadow Box lights-out nights are October 30–31; Shadow Box-only tickets are listed as on-site.",
+        "Outdoor and weather-dependent, with strobes, fog and loud noises.",
+        "Location is approximate. Directions use the visitor address."
+      ],
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "moodLevel": 3
+    },
+    {
+      "id": "date-night-ar26-river",
+      "name": "River Valley Nightmare",
+      "address": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://rivervalleynightmare.com/",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "moodLevel": 3,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-03",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "seasonYear": 2026,
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "sourceUrls": [
+          "https://rivervalleynightmare.com/",
+          "https://rivervalleynightmare.com/frequently-asked-questions/"
+        ],
+        "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "AR26-W1-007",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+        "placement": {
+          "lat": 35.289291260452,
+          "lon": -94.387901368211,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "10203 Columbus Acres Rd, Fort Smith, AR 72916"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Gates/ticket booth 7 PM; trail 8 PM; last ticket sales 10 PM; nominal close 11 PM. Guests in line before closing are admitted; final exit unconfirmed."
+        },
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://rivervalleynightmare.com/",
+          "https://rivervalleynightmare.com/frequently-asked-questions/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "AR2026-RELEASE-WINDOW-20261014-R1-PROPOSED-NOT-APPROVED",
+        "visibility": "halloween-layer"
+      },
+      "seasonalVisitNotes": [
+        "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+        "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+        "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    {
+      "id": "date-night-ok26-w1-roots",
+      "name": "TwistedRoots Haunted Trail",
+      "address": "1900 E 62nd Street N, Muskogee, OK 74403",
+      "website": "https://www.feartheroots.com/",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "openingHours": null,
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "phone": null,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-16",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T04:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://www.feartheroots.com/",
+          "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+          "https://tickets.feartheroots.com/",
+          "https://www.feartheroots.com/faq",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+        ],
+        "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review.",
+        "endsAt": "2026-11-01T04:00:00Z"
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "OK-W1-ROOTS-2026",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "1900 E 62nd Street N, Muskogee, OK 74403",
+        "placement": {
+          "lat": 35.829712091412,
+          "lon": -95.351540504515,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-14T02:27:03.860452+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1900 E 62nd Street N, Muskogee, OK 74403"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Fridays and Saturdays in October 2026. Midway opens 7 p.m.; trail begins about 8 p.m. or when dark and runs until 11 p.m. Last ticket time is not stated."
+        },
+        "listingExpiresAt": "2026-11-01T04:00:00Z",
+        "expiryBasis": "exact",
+        "sourceUrls": [
+          "https://www.feartheroots.com/",
+          "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+          "https://tickets.feartheroots.com/",
+          "https://www.feartheroots.com/faq",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "OK2026-RELEASE-WINDOW-R1-2026-10-14",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+        "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+        "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+        "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+        "Location is approximate. Directions use the visitor address."
+      ],
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "moodLevel": 3
+    },
+    {
+      "id": "date-night-ok26-w1-castle",
+      "name": "Haunted Castle Halloween Festival",
+      "address": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+      "website": "https://okcastle.com/",
+      "activityTypes": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "openingHours": null,
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "phone": null,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-02",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-16",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://www.okcastle.com/halloween.html",
+          "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+          "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+        ],
+        "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "OK-W1-CASTLE-2026",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+        "placement": {
+          "lat": 35.784066316157,
+          "lon": -95.40543363465,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-14T02:27:18.445493+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "3400 W Fern Mountain Rd, Muskogee, OK 74401"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Fridays and Saturdays, October 2–31, 2026. Gates 5:30 p.m.; indoor attractions 6:15 p.m.; outdoor attractions at dusk. Ticket sales end 11 p.m.; attractions may run later. Final closing is not stated."
+        },
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://www.okcastle.com/halloween.html",
+          "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+          "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "OK2026-RELEASE-WINDOW-R1-2026-10-14",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+        "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+        "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+        "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+        "Location is approximate. Directions use the visitor address."
+      ],
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House / Halloween Festival",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "moodLevel": 3
+    },
+    {
+      "id": "date-night-ar26-hollow",
+      "name": "Horror in the Hollow at Pumpkin Hollow",
+      "address": "671 County Road 336, Piggott, AR 72454",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted House",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://www.pumpkinhollow.com/horror-in-the-hollow",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "moodLevel": 3,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-09-19",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-09-19",
+          "2026-09-26",
+          "2026-10-02",
+          "2026-10-03",
+          "2026-10-09",
+          "2026-10-10",
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "seasonYear": 2026,
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "sourceUrls": [
+          "https://www.pumpkinhollow.com/horror-in-the-hollow",
+          "https://www.pumpkinhollow.com/hith-faqs",
+          "https://www.pumpkinhollow.com/directions",
+          "https://www.pumpkinhollow.com/policies"
+        ],
+        "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "AR26-W1-019",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "671 County Road 336, Piggott, AR 72454",
+        "placement": {
+          "lat": 36.46053333333333,
+          "lon": -90.19216666666667,
+          "basis": "operator-site",
+          "sourceUrl": "https://www.pumpkinhollow.com/directions",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate operator property point; not an entrance, parking area or ride dropoff"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "671 County Road 336, Piggott, AR 72454"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Haunting starts approximately 7 PM; tickets from 6:30–10 PM. Guests in line to buy by 10 PM are admitted; haunts finish after purchased activities, so final close is unknown."
+        },
+        "listingExpiresAt": "2026-11-01T00:00:00-05:00",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://www.pumpkinhollow.com/horror-in-the-hollow",
+          "https://www.pumpkinhollow.com/hith-faqs",
+          "https://www.pumpkinhollow.com/directions",
+          "https://www.pumpkinhollow.com/policies",
+          "https://www.pumpkinhollow.com/directions"
+        ],
+        "reviewRevision": "AR2026-RELEASE-WINDOW-20261014-R1-PROPOSED-NOT-APPROVED",
+        "visibility": "halloween-layer"
+      },
+      "seasonalVisitNotes": [
+        "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+        "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+        "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+        "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+        "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    {
+      "id": "date-night-ok26-w1-plantation",
+      "name": "Haunted Plantation",
+      "address": "21701 E 161st St S, Coweta, OK 74429",
+      "website": "https://hauntedplantationok.com/",
+      "activityTypes": [
+        "haunted-house",
+        "corn-maze",
+        "other-halloween-fall"
+      ],
+      "openingHours": null,
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "phone": null,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-10-16",
+        "activeUntil": "2026-10-31",
+        "activeDates": [
+          "2026-10-16",
+          "2026-10-17",
+          "2026-10-23",
+          "2026-10-24",
+          "2026-10-30",
+          "2026-10-31"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-16",
+        "timeZone": "America/Chicago",
+        "openNowPolicy": "never",
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "seasonYear": 2026,
+        "sourceUrls": [
+          "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+          "https://hauntedplantationok.com/",
+          "https://hauntedplantationok.com/faqs/",
+          "https://hauntedplantationok.com/parking/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+        ],
+        "note": "Finite source-bound 2026 dates only; no 2027 recurrence. Display-only hours. Research proposal awaiting fresh independent review."
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "OK-W1-PLANTATION-2026",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "21701 E 161st St S, Coweta, OK 74429",
+        "placement": {
+          "lat": 35.93010608085,
+          "lon": -95.734447960358,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-14T02:27:24.440705+00:00",
+          "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "21701 E 161st St S, Coweta, OK 74429"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "partial",
+          "displayText": "Remaining verified ticket dates: October 16–17, 23–24 and 30–31, 2026. Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m. Final closing is unclear; check with the operator."
+        },
+        "listingExpiresAt": "2026-11-01T05:00:00Z",
+        "expiryBasis": "date-only",
+        "sourceUrls": [
+          "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+          "https://hauntedplantationok.com/",
+          "https://hauntedplantationok.com/faqs/",
+          "https://hauntedplantationok.com/parking/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+        ],
+        "reviewRevision": "OK2026-RELEASE-WINDOW-R1-2026-10-14",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+        "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+        "Expect light touching and theatrical blood; a waiver is required. Intense scares; age recommendations vary, so parental discretion applies. Outdoor terrain, fog and strobes.",
+        "Location is approximate. Directions use the visitor address."
+      ],
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Haunted Attractions / Corn Maze",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "moodLevel": 3
+    },
+    {
+      "id": "date-night-ar26-magic",
+      "name": "Magic Screams at Magic Springs",
+      "address": "1701 East Grand Avenue, Hot Springs, AR 71901",
+      "cuisines": [
+        "other"
+      ],
+      "cuisineLabel": "Other Halloween / Fall",
+      "priceLevel": null,
+      "rating": null,
+      "reviewCount": null,
+      "openingHours": null,
+      "phone": null,
+      "website": "https://magicsprings.com/magic-screams/",
+      "isChain": false,
+      "photoKey": "cafe",
+      "source": "catalog",
+      "activityTypes": [
+        "other-halloween-fall",
+        "haunted-house"
+      ],
+      "moodLevel": 2,
+      "seasonalAvailability": {
+        "status": "confirmed",
+        "activeFrom": "2026-09-26",
+        "activeUntil": "2026-11-01",
+        "activeDates": [
+          "2026-09-26",
+          "2026-09-27",
+          "2026-10-03",
+          "2026-10-04",
+          "2026-10-10",
+          "2026-10-11",
+          "2026-10-17",
+          "2026-10-18",
+          "2026-10-24",
+          "2026-10-25",
+          "2026-10-31",
+          "2026-11-01"
+        ],
+        "checkedAt": "2026-10-14",
+        "revalidateAfter": "2026-10-15",
+        "timeZone": "America/Chicago",
+        "seasonYear": 2026,
+        "openNowPolicy": "never",
+        "endsAt": "2026-11-01T21:00:00-06:00",
+        "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+        "sourceUrls": [
+          "https://magicsprings.com/buy-tickets/",
+          "https://magicsprings.com/magic-screams/",
+          "https://magicsprings.com/magic-screams/fright-by-night/",
+          "https://magicsprings.com/contact/",
+          "https://magicsprings.com/calendar/"
+        ],
+        "note": "Finite 2026 date list; no machine opening intervals or automatic recurrence. "
+      },
+      "seasonalListing": {
+        "contract": "ListingCompletenessV1",
+        "recordId": "AR26-W1-018",
+        "seasonYear": 2026,
+        "timeZone": "America/Chicago",
+        "visitorAddress": "1701 East Grand Avenue, Hot Springs, AR 71901",
+        "placement": {
+          "lat": 34.518342001859,
+          "lon": -93.021430344209,
+          "basis": "address-geocode",
+          "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+          "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+          "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+        },
+        "directionsTarget": {
+          "kind": "visitor-address",
+          "address": "1701 East Grand Avenue, Hot Springs, AR 71901"
+        },
+        "ridesharePolicy": "external-picker",
+        "hours": {
+          "state": "verified",
+          "displayText": "Saturdays 2–11 PM; Sundays 2–9 PM. Family daytime activities precede scare attractions, which begin opening at 6 PM; some open at 7 PM."
+        },
+        "listingExpiresAt": "2026-11-01T21:00:00-06:00",
+        "expiryBasis": "exact",
+        "sourceUrls": [
+          "https://magicsprings.com/buy-tickets/",
+          "https://magicsprings.com/magic-screams/",
+          "https://magicsprings.com/magic-screams/fright-by-night/",
+          "https://magicsprings.com/contact/",
+          "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+          "https://magicsprings.com/calendar/"
+        ],
+        "reviewRevision": "AR2026-RELEASE-WINDOW-20261014-R1-PROPOSED-NOT-APPROVED",
+        "visibility": "listing-lifecycle"
+      },
+      "seasonalVisitNotes": [
+        "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+        "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+        "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+        "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+        "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    }
+  ],
+  "presentations": {
+    "date-night-ok26-w1-annabelle": {
+      "canonicalId": "date-night-ok26-w1-annabelle",
+      "confidence": "good",
+      "details": [
+        "Corn maze, pumpkin patch and fall farm activities, September 26–November 1, 2026.",
+        "Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions may be closed Fridays.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ar26-warehouse": {
+      "canonicalId": "date-night-ar26-warehouse",
+      "confidence": "good",
+      "details": [
+        "Haunted house on Fridays and Saturdays in October 2026; doors open 7 PM. Closing time is unconfirmed.",
+        "Intense no-contact attraction, not recommended for children. The operator says it is not wheelchair accessible.",
+        "A separate no-scare visit runs October 22, 6–9 PM. No filming or photography inside the haunt.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ar26-asylum": {
+      "canonicalId": "date-night-ar26-asylum",
+      "confidence": "good",
+      "details": [
+        "Remaining 2026 ticket dates: October 16–17, 23–24 and 29–31. Ticket window opens 7 PM; haunt start and closing time are unconfirmed.",
+        "Intense, zero-contact haunted house. Not recommended for young children; no strict age limit.",
+        "No refunds, including if you cannot finish. Follow onsite parking attendants and signs.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ks26-louisburg": {
+      "canonicalId": "date-night-ks26-louisburg",
+      "confidence": "good",
+      "details": [
+        "Family farm, corn maze, pumpkin patch and wagon rides, September 11–November 1, 2026.",
+        "Monday–Thursday 8 a.m.–6 p.m.; Sunday 9 a.m.–6 p.m. Friday–Saturday opens at 8 a.m.; closing time is unconfirmed because operator pages differ. Check before an evening visit.",
+        "Family Farm admission required; Country Store entry is free. Pumpkins are separate.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ks26-exiled": {
+      "canonicalId": "date-night-ks26-exiled",
+      "confidence": "good",
+      "details": [
+        "Outdoor Trail of Terrors and Twisted Carnival on 13 nights, October 2–November 1, 2026.",
+        "Paid timed Trail ticket required; Carnival entry is free. Check in during the 30-minute window beginning at your ticket time.",
+        "Closed-toe shoes required. Trail has hills, stairs and crawling and cannot accommodate mobility aids. Recommended 12+; under 12 must stay with an adult.",
+        "Optional Green Level is 16+ and may include light contact and simulated blood or paint; consent required.",
+        "No costumes, identity-concealing masks or outside lights on the Trail. Fog and strobes are used; review the operator’s health guidance before booking.",
+        "Location is approximate."
+      ]
+    },
+    "date-night-ok26-w1-psycho": {
+      "canonicalId": "date-night-ok26-w1-psycho",
+      "confidence": "good",
+      "details": [
+        "Outdoor haunted ride and Shadow Box walkthrough on Fridays and Saturdays in October 2026.",
+        "Book main admission online for a timed entry. Shadow Box lights-out nights are October 30–31; Shadow Box-only tickets are listed as on-site.",
+        "Outdoor and weather-dependent, with strobes, fog and loud noises.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ar26-river": {
+      "canonicalId": "date-night-ar26-river",
+      "confidence": "good",
+      "details": [
+        "October 3, 9–10, 16–17, 23–24 and 30–31, 2026. Gates open 7 PM; trail opens 8 PM.",
+        "Ticket sales end 10 PM; nominal close is 11 PM. Guests already in line can finish, so final exit time is unconfirmed.",
+        "Outdoor trail; wear closed-toe shoes. Severe weather may close the event. Not recommended for very young children.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ok26-w1-roots": {
+      "canonicalId": "date-night-ok26-w1-roots",
+      "confidence": "good",
+      "details": [
+        "Outdoor haunted walking trail on Fridays and Saturdays in October 2026. Wear sturdy closed-toe shoes.",
+        "Midway opens 7 p.m.; trail starts about 8 p.m. or when dark and runs until 11 p.m.",
+        "Recommended ages 13+; under 12s need an adult unless management approves otherwise. Optional Twisted Touch upgrade is 18+.",
+        "Not wheelchair accessible; uneven terrain, inclines and stairs.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ok26-w1-castle": {
+      "canonicalId": "date-night-ok26-w1-castle",
+      "confidence": "good",
+      "details": [
+        "Haunted attractions and family-friendly festival activities on Fridays and Saturdays, October 2–31, 2026.",
+        "Gates open 5:30 p.m.; indoor attractions at 6:15 p.m., outdoor attractions at dusk. Ticket sales end 11 p.m.; haunts may run later.",
+        "Under 16s need a parent or legal guardian throughout. Unaccompanied under-18s need photo ID. Children cannot be carried or taken in strollers/wagons through walkthroughs.",
+        "Festival grounds are wheelchair accessible. Casa Morte, Domus Horrificus and Monster Blaster accommodate wheelchairs up to 36 inches wide; other haunts have limitations.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ar26-hollow": {
+      "canonicalId": "date-night-ar26-hollow",
+      "confidence": "good",
+      "details": [
+        "September 19 and 26, then Fridays and Saturdays October 2–31, 2026. Haunting starts around 7 PM.",
+        "Tickets sell 6:30–10 PM; online tickets must be exchanged before 10 PM. Final closing time depends on guests finishing their paid activities.",
+        "Intense effects and uneven trails; not recommended for small children. All children must be accompanied by an adult.",
+        "Strobes, fog and uneven trails; the operator advises against visits for people with seizure, heart or breathing conditions and during pregnancy.",
+        "Check the operator’s current directions for the Highway 62 bridge detour before travel.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ok26-w1-plantation": {
+      "canonicalId": "date-night-ok26-w1-plantation",
+      "confidence": "good",
+      "details": [
+        "Interactive haunted hayride, wooded trail and corn-maze game. Remaining verified dates: October 16–17, 23–24 and 30–31, 2026.",
+        "Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m.",
+        "Expect light touching and theatrical blood; a waiver is required. Intense scares; age recommendations vary, so parental discretion applies. Outdoor terrain, fog and strobes.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    },
+    "date-night-ar26-magic": {
+      "canonicalId": "date-night-ar26-magic",
+      "confidence": "good",
+      "details": [
+        "Weekends September 26–November 1, 2026. Saturdays 2–11 PM; Sundays 2–9 PM.",
+        "Family activities by day; scare attractions begin opening at 6 PM, with some starting at 7 PM. Park admission includes the haunt, scare zones and available rides.",
+        "No re-entry after 6 PM. Bags are searched; no large backpacks, coolers or weapons, including toy weapons.",
+        "Face-covering masks for guests over 13 require a costume-policy exception; staff may ask to see your face.",
+        "Wasteland opens 7 PM and is recommended for ages 12+ with parental discretion. Participants must move forward independently and willingly; children cannot be carried.",
+        "Location is approximate. Directions use the visitor address."
+      ]
+    }
+  }
+}

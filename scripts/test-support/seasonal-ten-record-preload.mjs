@@ -18,6 +18,13 @@ globalThis.fetch = async (input, init) => {
   // No external redirects can escape the local-fetch exception.
   if (["127.0.0.1", "localhost"].includes(url.hostname)) return originalFetch(input, { ...init, redirect: "error" });
   const state = control();
+  if (state.fixture === "regional-location" && url.hostname === "nominatim.openstreetmap.org" && url.pathname === "/search") {
+    const query = url.searchParams.get("q");
+    const location = state.locationFixtures?.find(item => item.label.toLowerCase() === query?.toLowerCase());
+    record(state, { event: "intercepted-geocoder", host: url.hostname, query, matched: Boolean(location), forwarded: false });
+    return Response.json(location ? [{ lat: String(location.lat), lon: String(location.lon),
+      address: { city: location.locality, state: location.region, country: "United States", country_code: "us" } }] : []);
+  }
   if (!mirrors.has(url.hostname)) {
     record(state, { event: "blocked-external", host: url.hostname });
     throw new Error("External network disabled in V1 ten-record acceptance");

@@ -1,3 +1,4 @@
+import { REGIONAL_RECORDS, REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, assertRegionalCatalog } from "./test-support/regional-wave1.mjs";
 import { THREE_CLEARED_RECORDS, THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 import assert from "node:assert/strict";
 import { execFileSync, spawn } from "node:child_process";
@@ -25,9 +26,10 @@ const phase4 = process.env.SEASONAL_PHASE4 === "true";
 const nextMissouri = process.env.SEASONAL_NEXT_MISSOURI === "true";
 const holdCleanup = process.env.SEASONAL_HOLD_CLEANUP === "true";
 const rankedHolds = process.env.SEASONAL_RANKED_HOLDS === "true";
-const expanded = astra || extras || phase4 || nextMissouri || holdCleanup || rankedHolds;
-assert.ok([cumulative, astra, extras, phase4, nextMissouri, holdCleanup, rankedHolds].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
-const output = resolve(`audit/browser-results/${rankedHolds ? "seasonal-ranked-holds" : holdCleanup ? "seasonal-hold-cleanup" : nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
+const regional = process.env.SEASONAL_REGIONAL_WAVE1 === "true";
+const expanded = astra || extras || phase4 || nextMissouri || holdCleanup || rankedHolds || regional;
+assert.ok([cumulative, astra, extras, phase4, nextMissouri, holdCleanup, rankedHolds, regional].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
+const output = resolve(`audit/browser-results/${regional ? "seasonal-regional-wave1" : rankedHolds ? "seasonal-ranked-holds" : holdCleanup ? "seasonal-hold-cleanup" : nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
 const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
@@ -40,7 +42,7 @@ await setControl({ at: defaultAt, scenario: "startup" });
 const server = spawn(process.execPath, ["scripts/with-app-env.mjs", process.execPath, "--import",
   resolve("scripts/test-support/seasonal-ten-record-preload.mjs"), "node_modules/vite/bin/vite.js", "preview",
   "--host", "127.0.0.1", "--port", "8099", "--strictPort"], {
-  env: { ...process.env, DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
+  env: { ...process.env, TZ: "UTC", DATABASE_URL: "", SEASONAL_TEN_CONTROL: control, SEASONAL_TEN_EVENTS: events },
   detached: true, stdio: ["ignore", "pipe", "pipe"],
 });
 let logs = "", browser;
@@ -84,9 +86,10 @@ const threeRows = load("src/lib/date-night/missouri-2026-three-cleared-catalog.t
 const ownerRows = load("src/lib/date-night/missouri-2026-owner-evidence-catalog.ts").MISSOURI_2026_OWNER_EVIDENCE_CATALOG;
 const ownerAcceptedBytes = await readFile("scripts/test-support/owner-evidence-browser-projections.json");
 const ownerAccepted = JSON.parse(ownerAcceptedBytes);
+const regionalRows = load("src/lib/date-night/regional-2026-wave1-catalog.ts").REGIONAL_2026_WAVE1_CATALOG;
 const rankedLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS, ...THREE_CLEARED_MATERIAL_FACTS };
 const rankedLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE, ...THREE_CLEARED_CONFIDENCE };
-const rows = rankedHolds ? [...rankedRows, ...ownerRows, ...threeRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const rows = regional ? regionalRows : rankedHolds ? [...rankedRows, ...ownerRows, ...threeRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -194,7 +197,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
   const presentation = seasonalPresentation(row);
   const facts = materialFacts[row.seasonalListing.recordId] ?? occurrenceFacts[row.seasonalListing.recordId];
-  const expectedDetails = occurrencePresentations[row.seasonalListing.recordId]?.details ?? presentation.details;
+  const expectedDetails = REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]?.details ?? occurrencePresentations[row.seasonalListing.recordId]?.details ?? presentation.details;
   assert.ok(facts, "Each inspected row has an independent visitor-fact checklist");
   assert.equal(await section.locator("[data-seasonal-confidence]").innerText(), SEASONAL_CONFIDENCE_LABELS[presentation.confidence]);
   assert.ok(presentation.details.length > 0, "Reviewed consumer details are required");
@@ -316,7 +319,7 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
       result.blockedBrowserRequests.push(route.request().url());
       return route.abort();
     });
-    await context.addInitScript(({ row, scenario, at, filters, preferences, exclusions, identityReceipts }) => {
+    await context.addInitScript(({ row, scenario, at, filters, preferences, exclusions, identityReceipts, location }) => {
       globalThis.__geolocationCalls = [];
       for (const method of ["getCurrentPosition", "watchPosition"]) {
         Object.defineProperty(navigator.geolocation, method, { value: () => {
@@ -335,13 +338,13 @@ async function runScenario(row, index, scenario, callback, overrides = {}) {
         localStorage.setItem("pick-for-us-seasonal-identity-v1", JSON.stringify(identityReceipts));
       }
       if (!localStorage.getItem("pick-for-us-v1")) localStorage.setItem("pick-for-us-v1", JSON.stringify({ version: 0, state: {
-        location: { lat: row.lat + (scenario === "radius-exclusion" ? 0.06 : 0), lon: row.lon, label: row.name, source: "manual" }, homeMode: "date-night",
+        location: location ?? { lat: row.lat + (scenario === "radius-exclusion" ? 0.06 : 0), lon: row.lon, label: row.name, source: "manual" }, homeMode: "date-night",
         spookySeasonEnabled: scenario !== "season-off", preferences: preferences ?? {}, exclusions: exclusions ?? [], dateNightFilters: {
           radiusMiles: 1, activityTypes: scenario === "category" ? row.activityTypes : ["anything"],
           mood: 50, openNowOnly: scenario === "open-now", favoritesOnly: false, reduceParks: false, ...filters,
         },
       } }));
-    }, { row, scenario, at: state.at, filters: overrides.filters, preferences: overrides.preferences, exclusions: overrides.exclusions, identityReceipts: overrides.identityReceipts });
+    }, { row, scenario, at: state.at, filters: overrides.filters, preferences: overrides.preferences, exclusions: overrides.exclusions, identityReceipts: overrides.identityReceipts, location: overrides.location });
     page = await context.newPage();
     page.on("pageerror", error => result.pageErrors.push(error.message));
     page.on("console", message => {
@@ -468,7 +471,7 @@ const occurrenceFacts = {
   "DELTA2-HOLLOWS": extraFacts["DELTA2-HOLLOWS"],
   "DELTA2-MISSOURI-NIGHTMARE": astraFacts["DELTA2-MISSOURI-NIGHTMARE"],
 };
-const materialFacts = rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = regional ? REGIONAL_MATERIAL_FACTS : rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -478,7 +481,7 @@ const ordinaryRows = load("src/lib/date-night/jasper-county-catalog.ts").JASPER_
 const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEASONAL_DATE_NIGHT_CATALOG;
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
-const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows, ...threeRows];
+const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows, ...threeRows, ...regionalRows];
 const catalog = [...ordinaryRows, ...anchors, ...curatedRows];
 const occurrenceRows = OCCURRENCE_AMENDMENTS.map(amendment => {
   const row = curatedRows.find(candidate => candidate.id === amendment.canonicalId);
@@ -488,6 +491,16 @@ const occurrenceRows = OCCURRENCE_AMENDMENTS.map(amendment => {
 const { haversineMiles } = load("src/lib/restaurants/geo.ts");
 const { getOpenStatus } = load("src/lib/restaurants/hours.ts");
 const { getDateNightAvailability } = load("src/lib/date-night/availability.ts");
+const { HALLOWEEN_THRILL_TYPES, HALLOWEEN_SETTLE_TYPES } = load("src/lib/date-night/season.ts");
+const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
+const isSettle = row => row.activityTypes.some(type => HALLOWEEN_SETTLE_TYPES.includes(type));
+// Both browser and owned preview use UTC. This independent calendar expectation
+// follows the actual global window (September 1 through November 2 local), not
+// a record's lifecycle visibility or destination's operating schedule.
+const inGlobalHalloweenWindow = at => {
+  const date = new Date(at), month = date.getUTCMonth() + 1, day = date.getUTCDate();
+  return month === 9 || month === 10 || (month === 11 && day <= 2);
+};
 const categoryLabel = row => row.activityTypes.includes("other-halloween-fall") ? "Other Halloween / Fall" : row.activityTypes.includes("corn-maze") ? "Corn Maze" : row.activityTypes.includes("pumpkin-patch") ? "Pumpkin Patch" : "Haunted House";
 const categoryButton = (page, row) => page.getByRole("button", { name: categoryLabel(row), exact: true });
 const categoryTypes = row => [row.activityTypes.includes("other-halloween-fall") ? "other-halloween-fall" : row.activityTypes.includes("corn-maze") ? "corn-maze" : row.activityTypes.includes("pumpkin-patch") ? "pumpkin-patch" : "haunted-house"];
@@ -501,6 +514,113 @@ const nearby = (row, { at = defaultAt, category, season = true, open = false, of
   const now = new Date(at), availability = getDateNightAvailability({ ...other, ...getOpenStatus(other.openingHours, now) }, now);
   return availability.browseEligible && (!open || availability.openNowEligible);
 });
+// Frozen controlled origins and membership expectations use the independently
+// accepted source coordinates, never the candidate's runtime projection. These
+// are synthetic manual-location fixtures, not device GPS or public geocoding.
+const regionalLocations = [
+  { key: "KS", locality: "Regional Kansas control", region: "Kansas", lat: 38.6218568, lon: -94.755488,
+    expected: { 1: ["date-night-ks26-louisburg"], 15: ["date-night-ks26-louisburg"],
+      25: ["date-night-ks26-louisburg"], 30: ["date-night-ks26-exiled", "date-night-ks26-louisburg"],
+      50: ["date-night-ks26-exiled", "date-night-ks26-louisburg"] } },
+  { key: "AR", locality: "Regional Arkansas control", region: "Arkansas", lat: 36.170073979298, lon: -94.433748347312,
+    expected: { 1: ["date-night-ar26-warehouse"], 15: ["date-night-ar26-asylum", "date-night-ar26-warehouse"],
+      25: ["date-night-ar26-asylum", "date-night-ar26-warehouse"], 30: ["date-night-ar26-asylum", "date-night-ar26-warehouse"],
+      50: ["date-night-ar26-asylum", "date-night-ar26-warehouse"] } },
+  { key: "OK", locality: "Regional Oklahoma control", region: "Oklahoma", lat: 35.829712091412, lon: -95.351540504515,
+    expected: { 1: ["date-night-ok26-w1-roots"], 15: ["date-night-ok26-w1-castle", "date-night-ok26-w1-roots"],
+      25: ["date-night-ok26-w1-castle", "date-night-ok26-w1-plantation", "date-night-ok26-w1-roots"],
+      30: ["date-night-ok26-w1-castle", "date-night-ok26-w1-plantation", "date-night-ok26-w1-roots"],
+      50: ["date-night-ok26-w1-castle", "date-night-ok26-w1-plantation", "date-night-ok26-w1-psycho", "date-night-ok26-w1-roots"] } },
+  { key: "MO", locality: "Missouri-side border control", region: "Missouri", lat: 36.51, lon: -94.5,
+    expected: { 1: [], 15: [], 25: ["date-night-ar26-asylum", "date-night-ar26-warehouse"],
+      30: ["date-night-ar26-asylum", "date-night-ar26-warehouse"],
+      50: ["date-night-ar26-asylum", "date-night-ar26-warehouse", "date-night-ok26-w1-annabelle"] } },
+].map(location => ({ ...location, label: `${location.locality}, ${location.region}, United States`, source: "manual", country: "United States", countryCode: "US" }));
+// Spherical law of cosines and the standard initial-bearing formula are an
+// independent oracle; do not call the production distance/patch-owner helpers.
+const regionalDistance = (origin, target) => {
+  const p = origin.lat * Math.PI / 180, q = target.lat * Math.PI / 180;
+  const longitude = (target.lon - origin.lon) * Math.PI / 180;
+  return 3958.8 * Math.acos(Math.max(-1, Math.min(1, Math.sin(p) * Math.sin(q) + Math.cos(p) * Math.cos(q) * Math.cos(longitude))));
+};
+const regionalOwner = (origin, target) => {
+  const distance = Math.round(regionalDistance(origin, target) * 1e8) / 1e8;
+  if (distance <= 15) return "radial-v1:core";
+  const p = origin.lat * Math.PI / 180, q = target.lat * Math.PI / 180;
+  const delta = (target.lon - origin.lon) * Math.PI / 180;
+  const bearing = (Math.atan2(Math.sin(delta) * Math.cos(q), Math.cos(p) * Math.sin(q) - Math.sin(p) * Math.cos(q) * Math.cos(delta)) * 180 / Math.PI + 360) % 360;
+  const band = [[20, 4], [30, 7], [40, 9], [50, 11]].find(([outer]) => distance <= outer);
+  return band ? `radial-v1:${band[0]}:${Math.floor(bearing * band[1] / 360)}` : null;
+};
+const regionalPatchIds = radius => ["radial-v1:core", ...[[15, 20, 4], [20, 30, 7], [30, 40, 9], [40, 50, 11]]
+  .filter(([inner]) => inner < radius).flatMap(([, outer, sectors]) => Array.from({ length: sectors }, (_, index) => `radial-v1:${outer}:${index}`))];
+const regionalFavorites = Object.fromEntries(REGIONAL_ROWS.map(row => [row.id, { restaurantId: row.id, name: row.name,
+  favorite: true, neverRecommend: false, ourRating: null, timesVisited: 0, lastVisited: null,
+  cuisineLabel: row.cuisineLabel, photoKey: row.photoKey, lat: row.lat, lon: row.lon, address: row.address, priceLevel: null }]));
+const inspectRegionalMembership = async (test, location, radius, start = 0) => {
+  await waitFor(async () => await test.page.locator("[data-radial-progress]").innerText() === `Loaded through ${radius} miles`,
+    `Regional ${location.key} ${radius}-mile coverage did not complete`, 65000);
+  await settleLocal(test);
+  const expected = location.expected[radius];
+  await activityCount(test.page, expected.length);
+  const responses = test.rpc.slice(start).map(entry => {
+    assert.equal(entry.status, 200); assert.ok(entry.response);
+    return fromCrossJSON(JSON.parse(entry.response), { refs: new Map() }).result;
+  });
+  assert.deepEqual(responses.map(response => response.patch.id).sort(), regionalPatchIds(radius).sort(),
+    "One completed real RPC per independently expected patch, with no duplicate spatial authority");
+  const ownership = [];
+  for (const response of responses) {
+    assert.equal(response.patch.version, "radial-v1");
+    for (const venue of response.venues.filter(venue => REGIONAL_ROWS.some(row => row.id === venue.id))) {
+      const frozen = REGIONAL_ROWS.find(row => row.id === venue.id);
+      assert.deepEqual(venue.seasonalListing, frozen.seasonalListing);
+      assert.deepEqual([venue.lat, venue.lon, venue.openingHours], [frozen.lat, frozen.lon, null]);
+      const expectedPatch = regionalOwner(location, frozen);
+      assert.equal(response.patch.id, expectedPatch, "Every regional positive belongs only to its independently calculated radial patch");
+      ownership.push({ id: venue.id, patch: response.patch.id, expectedPatch, distanceMiles: regionalDistance(location, frozen) });
+    }
+  }
+  const acquired = ownership.map(item => item.id).sort();
+  const acquisitionRadius = Math.max(15, radius);
+  const expectedAcquired = REGIONAL_ROWS.filter(row => regionalDistance(location, row) <= acquisitionRadius).map(row => row.id).sort();
+  assert.deepEqual(acquired, expectedAcquired, "Exact regional acquisition membership has no missing, extra or multiply owned identity");
+  const actualVisible = [];
+  if (expected.length) {
+    await optionsButton(test.page).click();
+    await test.page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+    for (const row of REGIONAL_ROWS) {
+      const count = await rowHeading(test.page, row).count();
+      assert.equal(count, expected.includes(row.id) ? 1 : 0, "Controlled favorites expose exactly the regional radial membership");
+      if (count) actualVisible.push(row.id);
+    }
+    assert.equal(await test.page.locator("article").count(), expected.length);
+    await closeOptions(test.page);
+  } else {
+    assert.equal(await pickButton(test.page).isDisabled(), true);
+    assert.equal(await optionsButton(test.page).isDisabled(), true);
+  }
+  assert.deepEqual(actualVisible.sort(), expected);
+  const evidence = { location: location.key, lat: location.lat, lon: location.lon, radius, expectedIds: expected, actualVisibleIds: actualVisible, ownership };
+  if (radius === 30) {
+    // 25 is deliberately NOT a selectable app distance. Prove its independent
+    // membership from a real supported 30-mile acquisition without inventing UI.
+    const measured25 = acquired.filter(id => regionalDistance(location, REGIONAL_ROWS.find(row => row.id === id)) <= 25.05);
+    assert.deepEqual(measured25, location.expected[25]);
+    evidence.radius25 = { source: "Independent 25-mile filter of actual 30-mile acquired regional rows", uiJourney: false,
+      expectedIds: location.expected[25], measuredIds: measured25 };
+  }
+  return evidence;
+};
+const setTravelDistance = async (page, radius) => {
+  const indices = { 1: 0, 15: 4, 30: 6, 50: 8 };
+  const slider = page.getByRole("slider", { name: "Travel distance", exact: true });
+  await slider.focus();
+  const current = Number(await slider.getAttribute("aria-valuenow"));
+  const delta = indices[radius] - current;
+  for (let step = 0; step < Math.abs(delta); step++) await slider.press(delta > 0 ? "ArrowRight" : "ArrowLeft");
+  await page.getByText(`Within ${radius} miles`, { exact: true }).waitFor();
+};
 const selectTarget = async (page, row) => {
   await rowHeading(page, row).waitFor();
   await rowCard(page, row).getByRole("button").filter({ has: rowHeading(page, row) }).click();
@@ -590,9 +710,12 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length + THREE_CLEARED_RECORDS.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, regional ? 12 : rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length + THREE_CLEARED_RECORDS.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
   assertThreeClearedCatalog(curatedRows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
+  assertRegionalCatalog(curatedRows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
+  assert.deepEqual(regionalRows, REGIONAL_ROWS, "Every global neighborhood uses exactly the frozen accepted regional objects");
+  for (const row of regionalRows) assert.deepEqual(seasonalPresentation(row), REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]);
   for (const row of threeRows) assert.deepEqual(seasonalPresentation(row), THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId]);
   for (const row of occurrenceRows) {
     assert.deepEqual(seasonalPresentation(row), occurrencePresentations[row.seasonalListing.recordId], "Only the exact cleared occurrence presentation changes");
@@ -679,7 +802,7 @@ try {
     assert.deepEqual(seasonalPresentation(current).details, accepted.details);
   }
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, rankedHolds ? rankedLaneConfidence[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, regional ? REGIONAL_CONFIDENCE[row.seasonalListing.recordId] : rankedHolds ? rankedLaneConfidence[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -891,7 +1014,7 @@ try {
       assert.deepEqual(Object.values(state.preferences).filter(item => item.favorite).map(item => item.restaurantId), [row.id]);
       await closeResult(page); await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space"); await activityCount(page, 1);
       await advance(test, row.seasonalListing.listingExpiresAt); await activityCount(page, 0);
-      if (row.seasonalListing.visibility === "listing-lifecycle") {
+      if (inGlobalHalloweenWindow(defaultAt) !== inGlobalHalloweenWindow(row.seasonalListing.listingExpiresAt)) {
         // Crossing the global Halloween boundary changes the acquisition signature
         // once. This is not an expiry refresh or positive seasonal discovery.
         await waitFor(async () => test.rpc.length === before + 1 && test.rpc.at(-1).response, "Ordinary-only season-window refresh missing");
@@ -969,8 +1092,8 @@ try {
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
-    if (phase4 || nextMissouri || holdCleanup || rankedHolds) {
-      const targetIsSettle = phase4 && row.activityTypes.includes("pumpkin-patch");
+    if (phase4 || nextMissouri || holdCleanup || rankedHolds || regional) {
+      const targetIsSettle = !isThrill(row) && isSettle(row);
       const settle = targetIsSettle
         ? astraRows.find(item => item.seasonalListing.recordId === "MO26-056")
         : { ...row, id: "date-night-osm-node-910003", name: "Ordinary park control", activityTypes: ["park"] };
@@ -979,11 +1102,11 @@ try {
         await activityCount(page, 2);
         await settleLocal(test); const before = test.rpc.length;
         await page.getByRole("button", { name: "Plan the night", exact: true }).click();
-        const ownerOther = [...ownerRows, ...threeRows].some(item => item.id === row.id) && row.activityTypes.includes("other-halloween-fall");
-        if (ownerOther) {
+        const noCompatiblePair = !isThrill(row) && !targetIsSettle;
+        if (noCompatiblePair) {
           await page.getByText("No complete seasonal pair yet.", { exact: true }).waitFor();
           const overlay = overlayRoot(page, "plan");
-          assert.equal(await overlay.locator("article").count(), 0, "Other-only does not fabricate a Scare first stop");
+          assert.equal(await overlay.locator("article").count(), 0, "A target with no supported thrill/settle type cannot fabricate a Scare first stop");
           await overlay.getByRole("button", { name: "Close night plan", exact: true }).click();
           await assertNoRpc(test, before, "Negative Plan control uses acquired pool");
           test.result.evidence.plan = { target: row.id, eligible: false, reason: "No compatible Scare first stop" };
@@ -1002,6 +1125,72 @@ try {
       }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
         [row.id]: preference(row, row.id, { favorite: true }), [settle.id]: preference(settle, settle.id, { favorite: true }),
       } });
+    }
+    if (regional) {
+      const accepted = REGIONAL_RECORDS.find(candidate => candidate.id === row.id);
+      await runScenario(row, index, "supported-category-matrix", async test => {
+        const { page, result } = test;
+        await activityCount(page, n); await settleLocal(test); const before = test.rpc.length;
+        result.evidence.supportedCategories = [];
+        for (const [type, label] of [["haunted-house", "Haunted House"], ["corn-maze", "Corn Maze"],
+          ["pumpkin-patch", "Pumpkin Patch"], ["other-halloween-fall", "Other Halloween / Fall"]]) {
+          await press(page.getByRole("button", { name: "Anything", exact: true }));
+          await press(page.getByRole("button", { name: label, exact: true }));
+          const expected = nearby(row, { category: [type] }), included = accepted.activityTypes.includes(type);
+          await activityCount(page, expected.length);
+          assert.equal(expected.some(candidate => candidate.id === row.id), included);
+          if (expected.length) {
+            await optionsButton(page).click();
+            await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+            assert.equal(await rowHeading(page, row).count(), included ? 1 : 0, "Only independently accepted activity types include the regional identity");
+            await closeOptions(page);
+          } else assert.equal(await pickButton(page).isDisabled(), true);
+          result.evidence.supportedCategories.push({ type, included, expectedIds: expected.map(candidate => candidate.id) });
+        }
+        await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, n);
+        await assertNoRpc(test, before, "Every supported and unsupported seasonal category uses the acquired superset");
+      });
+      for (const lifecycle of ["permanently-closed", "disused"]) {
+        await runScenario(row, index, `negative-lifecycle-${lifecycle}`, async test => {
+          const { page, result } = test;
+          await activityCount(page, 0); await settleLocal(test); assert.equal(test.rpc.length, 1);
+          assert.ok(result.evidence.negativeLifecycleFixtures?.some(fixture => fixture.canonicalId === row.id && fixture.lifecycle === lifecycle));
+          const delivered = fromCrossJSON(JSON.parse(test.rpc[0].response), { refs: new Map() }).result;
+          assert.equal(delivered.venues.find(venue => venue.id === row.id).lifecycle, lifecycle, "Actual RPC delivery retains negative lifecycle evidence");
+          assert.equal(await pickButton(page).isDisabled(), true);
+          await press(categoryButton(page, row)); await activityCount(page, 0);
+          await press(page.getByRole("button", { name: "Anything", exact: true })); await activityCount(page, 0);
+          await advance(test, new Date(Date.parse(defaultAt) + 60000).toISOString()); await activityCount(page, 0);
+          await press(page.getByRole("switch", { name: "Favorites only", exact: true }), "Space");
+          await activityCount(page, n);
+          await optionsButton(page).click();
+          await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+          assert.equal(await rowHeading(page, row).count(), 0, "Current regional policy must never erase a negative lifecycle veto");
+          await closeOptions(page);
+          await assertNoRpc(test, 1, "Negative lifecycle stays authoritative through category, favorites and resume");
+        }, { fixture: "mixed", negativeLifecycle: lifecycle, filters: { favoritesOnly: true },
+          preferences: { [row.id]: preference(row, row.id, { favorite: true }) } });
+      }
+      await runScenario(row, index, "history-choice-reload-expiry", async test => {
+        const { page, result } = test;
+        await activityCount(page, 1); await optionsButton(page).click(); await selectTarget(page, row);
+        await page.getByRole("button", { name: "We did this", exact: true }).click();
+        await page.getByRole("button", { name: "Save choice", exact: true }).click();
+        await visitNav(page, "History", "/history");
+        await savedItem(page, row).waitFor(); assert.equal(await savedItem(page, row).count(), 1);
+        await settleLocal(test); const before = test.rpc.length;
+        const original = (await stored(page)).visits;
+        assert.equal(original.length, 1); assert.equal(original[0].restaurantId, row.id);
+        assert.equal(original[0].restaurantName, accepted.name);
+        await page.reload({ waitUntil: "domcontentloaded" }); await savedItem(page, row).waitFor();
+        await assertNoRpc(test, before, "History reload retains the actual selected canonical identity without discovery");
+        await advance(test, accepted.seasonalListing.listingExpiresAt);
+        await page.reload({ waitUntil: "domcontentloaded" }); await savedItem(page, row).waitFor();
+        assert.deepEqual((await stored(page)).visits, original, "Expiry preserves the user's recorded visit without reviving discovery eligibility");
+        assert.doesNotMatch(await savedItem(page, row).innerText(), /Open now/);
+        await assertNoRpc(test, before, "Expired History reload does not fetch or fabricate current operation");
+        result.evidence.history = { canonicalId: row.id, visits: original, retainedAfterExpiry: true };
+      }, { filters: { favoritesOnly: true }, preferences: { [row.id]: preference(row, row.id, { favorite: true }) } });
     }
     if (expanded) {
       await runScenario(row, index, "explicit-nonseasonal-filter", async test => {
@@ -1053,6 +1242,71 @@ try {
           staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
+  }
+  if (regional) {
+    const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
+    assert.throws(() => planDateNightPatches(regionalLocations[0], 25), /Choose a valid Date Night distance/,
+      "The regional addition does not change the unsupported 25-mile UI/planner contract");
+    verdict.regionalDistanceContract = { actualUiRadii: [1, 15, 30, 50], independentlyMeasuredRadius: 25,
+      unsupported25PlannerRejected: true, oracle: "Frozen accepted coordinates; independent spherical cosine and initial-bearing formulas" };
+    for (const location of regionalLocations) {
+      for (const radius of [1, 15, 25, 30, 50]) assert.deepEqual(
+        REGIONAL_ROWS.filter(row => regionalDistance(location, row) <= radius + 0.05).map(row => row.id).sort(), location.expected[radius],
+        "Literal independently frozen memberships cannot drift with runtime catalog or geometry changes");
+      await runScenario(regionalRows[0], `regional-${location.key}`, "controlled-radius-and-patch-ownership", async test => {
+        test.result.evidence.regionalRadii = [];
+        for (const radius of [1, 15, 30, 50]) {
+          if (radius !== 1) await setTravelDistance(test.page, radius);
+          test.result.evidence.regionalRadii.push(await inspectRegionalMembership(test, location, radius));
+        }
+        const before = test.rpc.length;
+        await setTravelDistance(test.page, 1);
+        await activityCount(test.page, location.expected[1].length);
+        await assertNoRpc(test, before, "Shrinking a completed regional radial session reuses its exact acquired pool");
+      }, { location, filters: { favoritesOnly: true }, preferences: regionalFavorites });
+    }
+    await runScenario(regionalRows[0], "regional-relocation", "manual-cross-state-relocation", async test => {
+      const { page, result } = test;
+      result.evidence.manualRelocations = [await inspectRegionalMembership(test, regionalLocations[0], 1)];
+      const section = page.getByRole("region", { name: "Search location" });
+      for (const location of regionalLocations.slice(1)) {
+        const before = test.rpc.length;
+        const toggle = section.getByRole("button", { name: "Change location", exact: true });
+        if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
+        await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(location.label);
+        await page.getByRole("button", { name: "Set location", exact: true }).click();
+        await section.getByText(location.label, { exact: true }).waitFor();
+        await ready(page);
+        await waitFor(async () => test.rpc.length > before, "Manual state relocation must acquire its new coordinate signature");
+        result.evidence.manualRelocations.push(await inspectRegionalMembership(test, location, 1, before));
+        const storedLocation = (await stored(page)).location;
+        assert.deepEqual([storedLocation.lat, storedLocation.lon, storedLocation.region, storedLocation.source],
+          [location.lat, location.lon, location.region, "manual"]);
+      }
+      const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse).filter(event => event.scenario === test.state.scenario);
+      assert.deepEqual(calls.filter(event => event.event === "intercepted-geocoder").map(event => event.query), regionalLocations.slice(1).map(location => location.label));
+      assert.ok(calls.every(event => event.forwarded === false));
+      result.evidence.manualGeocoderCalls = calls.filter(event => event.event === "intercepted-geocoder");
+    }, { fixture: "regional-location", location: regionalLocations[0], locationFixtures: regionalLocations,
+      filters: { favoritesOnly: true }, preferences: regionalFavorites });
+    const dstRows = regionalRows.filter(row => Date.parse(row.seasonalListing.listingExpiresAt) > Date.parse("2026-11-01T07:30:00Z"));
+    assert.deepEqual(dstRows.map(row => row.id).sort(), ["date-night-ar26-magic", "date-night-ks26-exiled", "date-night-ks26-louisburg", "date-night-ok26-w1-annabelle"],
+      "Exactly four frozen regional lifecycles remain eligible through both occurrences of the DST hour");
+    for (const [index, row] of dstRows.entries()) await runScenario(row, `regional-dst-${index}`, "repeated-chicago-hour", async test => {
+      const { page, result } = test;
+      await activityCount(page, 1); await settleLocal(test); const before = test.rpc.length;
+      result.evidence.dst = [];
+      for (const at of ["2026-11-01T06:30:00Z", "2026-11-01T06:59:59.999Z", "2026-11-01T07:00:00Z", "2026-11-01T07:30:00Z"]) {
+        await advance(test, at); await activityCount(page, 1);
+        await optionsButton(page).click(); await rowHeading(page, row).waitFor();
+        assert.doesNotMatch(await rowCard(page, row).innerText(), /Open now/);
+        await closeOptions(page);
+        await press(page.getByRole("switch", { name: "Open now only", exact: true }), "Space"); await activityCount(page, 0);
+        await press(page.getByRole("switch", { name: "Open now only", exact: true }), "Space"); await activityCount(page, 1);
+        await assertNoRpc(test, before, "Repeated Chicago hour changes neither frozen expiry nor never-Open-Now eligibility");
+        result.evidence.dst.push({ at, timeZone: "America/Chicago", visible: true, openNowEligible: false });
+      }
+    }, { at: "2026-11-01T06:29:00Z", filters: { favoritesOnly: true }, preferences: { [row.id]: preference(row, row.id, { favorite: true }) } });
   }
   if (extras) {
     // Keep the hosted Extras invocation responsible for this bounded amendment
@@ -1371,14 +1625,45 @@ try {
       result.evidence.providerCalls = calls;
     }, { at: "2026-11-03T18:00:00Z", fixture: "mixed" });
   }
-  if (cumulative || expanded) for (const [index, row] of rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").entries()) {
+  if (cumulative || expanded) for (const [index, row] of rows.filter(row => regional || row.seasonalListing.visibility === "listing-lifecycle").entries()) {
     const at = "2026-11-05T12:00:00-06:00";
-    await runScenario(row, `late-${index}`, "late-fall-anything-cache-expiry", async test => {
+    const frozen = REGIONAL_RECORDS.find(accepted => accepted.id === row.id);
+    const expiredRegional = Boolean(frozen && Date.parse(frozen.seasonalListing.listingExpiresAt) <= Date.parse(at));
+    if (regional) assert.equal(expiredRegional, true, "All twelve accepted regional cutoffs precede November 5");
+    await runScenario(row, `late-${index}`, expiredRegional ? "november5-expired-negative" : "late-fall-anything-cache-expiry", async test => {
       const { page, result, state } = test;
       const count = nearby(row, { at, season: false }).length;
       await activityCount(page, count);
       for (const label of ["Haunted House", "Corn Maze", "Pumpkin Patch", "Other Halloween / Fall"]) {
         assert.equal(await page.getByRole("button", { name: label, exact: true }).count(), 0, "Halloween chips remain absent after November 2");
+      }
+      if (expiredRegional) {
+        assert.equal(nearby(row, { at, season: false }).some(candidate => candidate.id === row.id), false);
+        await settleLocal(test); const before = test.rpc.length;
+        assert.equal(before, 1, "Expired November 5 control still completes real ordinary discovery");
+        if (count) {
+          await optionsButton(page).click();
+          await page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+          assert.equal(await rowHeading(page, row).count(), 0);
+          await closeOptions(page);
+        } else {
+          assert.equal(await pickButton(page).isDisabled(), true);
+          assert.equal(await optionsButton(page).isDisabled(), true);
+        }
+        for (const toggle of ["Open now only", "Favorites only"]) {
+          await press(page.getByRole("switch", { name: toggle, exact: true }), "Space");
+          await activityCount(page, toggle === "Favorites only" ? 0 : nearby(row, { at, season: false, open: true }).length);
+          await press(page.getByRole("switch", { name: toggle, exact: true }), "Space");
+          await activityCount(page, count);
+        }
+        await advance(test, "2026-11-05T18:01:00Z"); await activityCount(page, count);
+        await assertNoRpc(test, before, "Expired regional identities stay excluded through local filters and resume");
+        const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse).filter(event => event.scenario === state.scenario);
+        assert.ok(calls.length > 0);
+        assert.ok(calls.every(event => event.group !== "seasonal"), "November 5 must never trigger positive seasonal discovery");
+        result.evidence.lateFall = { at, expiry: frozen.seasonalListing.listingExpiresAt, expectedEligible: false,
+          actualTargetCount: await rowHeading(page, row).count(), providerCalls: calls };
+        return;
       }
       await optionsButton(page).click(); await rowHeading(page, row).waitFor();
       await inspectQualifiedOverlay(test, row, "options"); await selectTarget(page, row);
@@ -1458,8 +1743,15 @@ try {
       identityReceipts: { [providerId]: { canonicalId: row.id, canonicalName: row.name, reviewRevision: oldRevision(row) } } });
   }
   assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
-    ((cumulative || expanded) ? rows.filter(row => row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0) + (extras ? 11 : 0));
+    ((cumulative || expanded) ? rows.filter(row => regional || row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
+    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds || regional ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0) + (extras ? 11 : 0) + (regional ? rows.length * 4 + 4 + 1 + 4 : 0));
+  if (regional) {
+    assert.equal(verdict.scenarios.length, 317, "Frozen regional lane completion requires exactly 317 deliberately enumerated scenarios");
+    verdict.regionalAcceptance = { acceptedIds: REGIONAL_ROWS.map(row => row.id), expectedScenarioCount: 317,
+      actualScenarioCount: verdict.scenarios.length, expiredNovember5Controls: 12,
+      negativeLifecycleControls: 24, actualUiRadii: [1, 15, 30, 50], independentRadiusOnly: 25,
+      manualLocationOnly: true, historicalReceiptControls: receiptRows.length };
+  }
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
 } catch (error) {

@@ -1,0 +1,2261 @@
+{
+  "targetSize": 12,
+  "geographicBasis": "Qualitative public Joplin/Four-State, Kansas–Missouri border, northwest/northeast/western Arkansas, northeast/eastern Oklahoma and regional activity diversity; no owner GPS, measured mileage, route, or radius-coverage claim.",
+  "stateMix": {
+    "Kansas": 2,
+    "Arkansas": 5,
+    "Oklahoma": 5
+  },
+  "selectionMethod": "Eligibility is a hard gate. Rank current remaining-season usefulness, authoritative finite dates, geographic/activity diversity, clear one-destination identity, qualified source uncertainty, and incremental integration/test cost. No equal-state quota or quantitative precision score.",
+  "reserveMeaning": "Reserve is selection priority only, not a factual downgrade. If all22 are accepted, retain exactly12 selected and10 eligible reserves.",
+  "exclusions": "All52 other regional factual HOLDs, residential records, new discovery, runtime/PR/canonical/public writes and release actions are outside this planning lane.",
+  "status": "FINAL_SELECTION_PLANNING_FREEZE_AFTER_INDEPENDENT_22_PASS",
+  "frozenAt": "2026-10-14T03:07:53.660121+00:00",
+  "canonicalCheckpoint": "686c0f11c23b223ee95f14884dfaed6d58186226",
+  "releasedMain": "6c619adda4d9ef3b2683befb2ca874b257505eb2",
+  "baselinePublishedCount": 70,
+  "expectedCandidateCountIfExact12Imported": 82,
+  "publishedByThisPlanningTask": 0,
+  "selectedCount": 12,
+  "reserveCount": 10,
+  "all22DispositionCounts": {
+    "identities": 22,
+    "factualPASS": 22,
+    "factualHOLD": 0,
+    "factualREJECT": 0,
+    "placementPASS": 22,
+    "placementHOLD": 0,
+    "implementationELIGIBLE": 22,
+    "implementationHOLD": 0,
+    "runtimeAccepted": 0,
+    "publishedNow": 0
+  },
+  "selectedStateCounts": {
+    "Oklahoma": 5,
+    "Arkansas": 5,
+    "Kansas": 2
+  },
+  "reserveStateCounts": {
+    "Kansas": 6,
+    "Arkansas": 3,
+    "Oklahoma": 1
+  },
+  "independentInputs": {
+    "EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688",
+    "FINAL-22-VERDICT-LEDGER.json": "0202c8580ff0534f439b9f66c590eb0aa3357b12e020925ac8491f8dfdb0062d",
+    "FREEZE-MANIFEST.json": "202106d50e63a02542c60089d1b29595125031560e592db84be3f63469c19de5"
+  },
+  "sourceManifests": [
+    {
+      "label": "Kansas R1",
+      "path": "regional-window-2026-10-14/kansas/MANIFEST.sha256",
+      "sha256": "bf0918463f1dc6c8de2c8136685e42d8a892038d301ba83a79033189a3e3e059"
+    },
+    {
+      "label": "Kansas R2",
+      "path": "regional-window-2026-10-14/kansas/r2/MANIFEST.sha256",
+      "sha256": "72307385dc88606f4c2de9e462350bd3ee729bb8e4c6fe3bce4df0df84d9bc4c"
+    },
+    {
+      "label": "Arkansas R1",
+      "path": "regional-window-2026-10-14/arkansas/R1/SHA256-MANIFEST.json",
+      "sha256": "b0c615f6894ba884105a79178c8cb122eb8322f5ec5d7c93b02f602b2774389d"
+    },
+    {
+      "label": "Oklahoma R1",
+      "path": "regional-window-2026-10-14/oklahoma/FREEZE-MANIFEST.json",
+      "sha256": "91e56a1666da351deb3c6afc363366cb3cc1dab7b166b73b191b06d7b6f9d571"
+    },
+    {
+      "label": "Oklahoma R2",
+      "path": "regional-window-2026-10-14/oklahoma/R2/FREEZE-MANIFEST.json",
+      "sha256": "5513e92c2927239bc12306093dbac9a3a437d3e6374ab377aeb8ad11b1ac654a"
+    },
+    {
+      "label": "Placement author",
+      "path": "regional-window-2026-10-14/placement/FREEZE-MANIFEST.json",
+      "sha256": "695769f6dc31d2548e5a7ef4ab6eaa7d7c2fc97c2299707383f79dbee2f21d35"
+    },
+    {
+      "label": "Placement independent R1",
+      "path": "regional-window-2026-10-14/independent-placement/FREEZE-MANIFEST.json",
+      "sha256": "9e217c0b1bc83f2fc1337b28c3b86c831b433ce4738296fa8e743d0c8c38e943"
+    },
+    {
+      "label": "Placement independent R2 corrigendum",
+      "path": "regional-window-2026-10-14/independent-placement/r2/FREEZE-MANIFEST.json",
+      "sha256": "c3a70c196b131f90858e8771bd3dc0a2f990dbe517457a0d0424470b2fe0ef91"
+    }
+  ],
+  "selected": [
+    {
+      "rank": 1,
+      "canonicalId": "date-night-ok26-w1-annabelle",
+      "name": "Annabelle’s Fun Farm",
+      "justification": "Welch/northeastern Oklahoma supplies the strongest Four-State-area daytime corn-maze/pumpkin/farm variety, with nine remaining enumerated dates through November 1 and explicit Friday limitations.",
+      "dependencies": "Keep current 444584 address, Friday partial-attraction caveat and November 1 18:00 CST expiry.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ANNABELLE",
+      "listingRecordId": "OK-W1-ANNABELLE-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "a1c9755a4087131c6e12ba7ce87143a776abbd8d92a095f0c65f5f9e41fac01f",
+      "presentationSha256": "0812007fcbaf59d5ebdf06b3de5cdce7e34de26e52add520762d0a88c2d0612d",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "444584 East 110 Rd, Welch, OK 74369",
+      "activityTypes": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-02T00:00:00Z",
+        "utc": "2026-11-02T00:00:00Z",
+        "local": "2026-11-01T18:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-02T00:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "September 26–November 1, 2026: Fridays 1–6 p.m.; Saturdays and Sundays 10 a.m.–6 p.m. Some attractions and locations may be closed on Fridays. Last admission is not stated."
+      },
+      "placement": {
+        "lat": 36.859403553545,
+        "lon": -95.077985149603,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-14T02:27:00.597440+00:00",
+        "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.annabellesfunfarm.com/",
+        "https://annabellesfunfarm.com/pages/hours-pricing",
+        "https://annabellesfunfarm.com/pages/calendar",
+        "https://annabellesfunfarm.com/cdn/shop/files/2026_Hours.png?v=1788302842&width=1800",
+        "https://annabellesfunfarm.com/cdn/shop/files/2026_Season_Dates_for_Footer.png?v=1788302878&width=1800",
+        "https://annabellesfunfarm.com/cdn/shop/files/Annabelles_Weekends_2026.png?v=1790393327&width=1800",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=444584+East+110+Rd%2C+Welch%2C+OK+74369&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Independently fetched image pixels establish17 dates and final CST cutoff; Friday limitations and current address retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 2,
+      "canonicalId": "date-night-ar26-warehouse",
+      "name": "Warehouse of Fear",
+      "justification": "Siloam Springs adds the northwest Arkansas border region with six remaining haunted dates and a clear single destination.",
+      "dependencies": "Preserve all no-contact/child/wheelchair restrictions. October 22 no-scare stays outside haunted activeDates and remains subtype-mapping HOLD.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-003",
+      "listingRecordId": "AR26-W1-003",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "c3c3511146b82cf45eda96378167860c5b3b3e5be1fc994b553cadc6cad8ee0f",
+      "presentationSha256": "f5f087ae6489813bba64dd857187bc978e621b2b198e230c82faa89ff4949d47",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "17023 Chamber Springs Rd, Siloam Springs, AR 72761",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T00:00:00-05:00",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Fridays and Saturdays in October; doors open 7 PM. Closing time and last admission are unconfirmed."
+      },
+      "placement": {
+        "lat": 36.170073979298,
+        "lon": -94.433748347312,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://www.riverside-entertainment.com/warehouse-of-fear-2/",
+        "https://app.hauntpay.com/events/warehouse-of-fear-haunted-house",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=17023+Chamber+Springs+Rd%2C+Siloam+Springs%2C+AR+72761&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Ten haunted dates and 19:00 doors supported. October 22 no-scare remains separate subtype mapping HOLD, outside haunted dates and identity counts.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 3,
+      "canonicalId": "date-night-ar26-asylum",
+      "name": "The Asylum Haunted House",
+      "justification": "Cave Springs complements northwest Arkansas with seven remaining explicit dates, including October 29, and a straightforward distinct venue identity.",
+      "dependencies": "Ticket window 19:00 must not become haunt opening or final close; preserve refund and parking qualifications.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-002",
+      "listingRecordId": "AR26-W1-002",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "61ac5b6f237159040c37909e6a9624db33c06eedd32f08707acd3f81da948058",
+      "presentationSha256": "26875c0fb249d0021101904b6a39acc96c52991b84cfd2d4e61c8ec6242e2c2e",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "210 N Main St, Cave Springs, AR 72718",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T00:00:00-05:00",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Remaining dated tickets: October 16–17, 23–24 and 29–31, 2026. Ticket window opens 7 PM; attraction start, last admission and closing time are unconfirmed."
+      },
+      "placement": {
+        "lat": 36.265148995252,
+        "lon": -94.231741991627,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://www.stubwire.com/events/asylumhauntedhouse/",
+        "https://www.theasylumhauntedhouse.net/",
+        "https://www.theasylumhauntedhouse.net/faq/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=210+N+Main+St%2C+Cave+Springs%2C+AR+72718&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Seven dated linked 2026 tickets and supported visitor address; ticket-window opening is not haunt opening or closing.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 4,
+      "canonicalId": "date-night-ks26-louisburg",
+      "name": "Louisburg Cider Mill Family Farm",
+      "justification": "Newly supported placement makes the Kansas–Missouri-side farm useful for daily daytime variety through November 1. It complements Annabelle rather than adding another night-only haunt; historical MO26-064 stays the same identity.",
+      "dependencies": "Requires exact independently accepted new operator-site point and qualified Friday/Saturday 20:00-versus-22:00 closing conflict. Shared-business-location point is not a farm entrance.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Kansas",
+      "researchRecordId": "louisburg",
+      "listingRecordId": "KS26-W1-LOUISBURG",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "aee90c5a02befb144cf50a2b7fe5011525877e08d2c6a524920229f717eb17ed",
+      "presentationSha256": "a8518d76cf479897be8fedf0bb245fcd8dd2ef36653d64d13609df0cffe3e625",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "14730 K68 Highway, Louisburg, KS 66053, USA",
+      "activityTypes": [
+        "corn-maze",
+        "pumpkin-patch"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-02T00:00:00Z",
+        "utc": "2026-11-02T00:00:00Z",
+        "local": "2026-11-01T18:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-02T00:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "September 11–November 1, 2026. Monday–Thursday 8 a.m.–6 p.m.; Sunday 9 a.m.–6 p.m. Friday–Saturday opens at 8 a.m.; operator pages disagree on 8 p.m. versus 10 p.m. closing. Check the operator before an evening visit. Last admission is not stated."
+      },
+      "placement": {
+        "lat": 38.6218568,
+        "lon": -94.755488,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.louisburgcidermill.com/family-farm",
+        "checkedAt": "2026-10-14T02:27:31.900139+00:00",
+        "precisionLabel": "Approximate operator-published venue location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.louisburgcidermill.com/family-farm",
+        "https://louisburgcidermill.com/",
+        "https://www.louisburgcidermill.com/faq",
+        "https://www.louisburgcidermill.com/copy-of-country-store"
+      ],
+      "acceptedReviewReason": "Current finite farm season and Sunday end supported; conflicting Friday/Saturday closes honestly qualified. Independently accepted exact approximate operator-site point adopted in author R2.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": "MO26-064, previously known"
+    },
+    {
+      "rank": 5,
+      "canonicalId": "date-night-ks26-exiled",
+      "name": "Exiled KC",
+      "justification": "Bonner Springs provides Kansas City border-area coverage, nine remaining source-dated nights through November 1 and differentiated trail/free-carnival options in one destination.",
+      "dependencies": "Keep paid Trail/free Carnival distinction, timed check-in versus start, optional 16+ contact consent and all mobility/footwear guidance.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Kansas",
+      "researchRecordId": "exiled",
+      "listingRecordId": "KS26-W1-EXILED",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "c64ac1e7d55c47e25d51b545373a712ecf37e39c5f6668a3605d22e1c9179d5c",
+      "presentationSha256": "e67118b5e19c3d2f52ddcaab5d0f33df23c9ad696714db8ce717d6a0229f61bd",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "12829 Loring Road, Bonner Springs, KS 66012, USA",
+      "activityTypes": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-02T06:00:00Z",
+        "utc": "2026-11-02T06:00:00Z",
+        "local": "2026-11-02T00:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "13 show nights October 2–November 1, 2026. Trail check-in starts at the ticket time and lasts 30 minutes; actual start depends on the line. Carnival opens 30 minutes before first Trail time and stays open approximately 90 minutes after last ticket time. Final closing time unknown."
+      },
+      "placement": {
+        "lat": 39.010297081473,
+        "lon": -94.914563314124,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:19:31.801356+00:00",
+        "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://exiledkc.com/",
+        "https://exiledkc.com/carnival/",
+        "https://exiledkc.com/faq/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=12829+Loring+Rd%2C+Bonner+Springs%2C+KS+66012&benchmark=Public_AR_Current&format=json",
+        "https://frightfind.com/state-frights/kansas/c/haunted-houses-attractions/haunt-events/"
+      ],
+      "acceptedReviewReason": "Current operator 13-night calendar and all qualified check-in/access semantics independently reproduced; final exit unknown.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 6,
+      "canonicalId": "date-night-ok26-w1-psycho",
+      "name": "Psycho Path Haunted Attraction",
+      "justification": "Newly supported approximate placement adds the Tulsa/Sperry northeastern Oklahoma area and a haunted ride plus walkthrough across six remaining October nights. It expands the practical regional mix beyond the Muskogee cluster.",
+      "dependencies": "Requires exact accepted operator-linked named-place point, never viewport coordinates; keep unexplained secondary point conflict. Dark Ride is not a hayride; Shadow Box-only on-site/lights-out exception remains scoped.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-PSYCHO",
+      "listingRecordId": "OK-W1-PSYCHO-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "cff232c0550fd0a1578441049a9c446d8c5f9c612d0165c9db4e0304ddabb9eb",
+      "presentationSha256": "ee94194e9ee82bfe81ca6221556328413bde491fec9da1d207fd9ce2191a58e1",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "1517 East 106th Street North, Sperry, OK 74073",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T05:00:00Z",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Fridays and Saturdays in October 2026. Timed online entry; select the available time when booking. Shadow Box lights-out nights October 30–31. Final admission and closing time are not stated."
+      },
+      "placement": {
+        "lat": 36.3076991,
+        "lon": -95.9675955,
+        "basis": "operator-site",
+        "sourceUrl": "https://psychopathhaunt.com/",
+        "checkedAt": "2026-10-14T02:28:31.980577+00:00",
+        "precisionLabel": "Approximate operator-published venue location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://i0.wp.com/psychopathhaunt.com/wp-content/uploads/2026/09/2026-CALENDAR%403x.png?w=800",
+        "https://psychopathhaunt.com/",
+        "https://psychopathhaunt.com/faq/"
+      ],
+      "acceptedReviewReason": "Actual October2026 calendar pixels and ticket exceptions supported. New independently accepted named-place point adopted with approximate copy; lower-priority334m directory conflict retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 7,
+      "canonicalId": "date-night-ar26-river",
+      "name": "River Valley Nightmare",
+      "justification": "Fort Smith brings western Arkansas coverage and six remaining trail dates, avoiding concentration exclusively in northwest Arkansas or the same Muskogee destinations.",
+      "dependencies": "Retain distinct gates/trail/ticket/nominal closing times and unknown final exit for guests already in line.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-007",
+      "listingRecordId": "AR26-W1-007",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "883fb68c9cab96eff746456fd0007042a2a4dfccd2f2d25865a26dd8bd936da9",
+      "presentationSha256": "36baff7c7376eb478567f9c18eeb716da4cd88791b4859a5ff3e975bcca6f4aa",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "10203 Columbus Acres Rd, Fort Smith, AR 72916",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T00:00:00-05:00",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Gates/ticket booth 7 PM; trail 8 PM; last ticket sales 10 PM; nominal close 11 PM. Guests in line before closing are admitted; final exit unconfirmed."
+      },
+      "placement": {
+        "lat": 35.289291260452,
+        "lon": -94.387901368211,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://rivervalleynightmare.com/",
+        "https://rivervalleynightmare.com/frequently-asked-questions/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10203+Columbus+Acres+Rd%2C+Fort+Smith%2C+AR+72916&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Nine source dates and gates/trail/ticket/nominal close distinctions supported; queued guests may finish later; trail-length conflict omitted.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 8,
+      "canonicalId": "date-night-ok26-w1-roots",
+      "name": "TwistedRoots Haunted Trail",
+      "justification": "Current Muskogee venue provides an eastern Oklahoma outdoor walking-trail option across six remaining nights with precise finite close.",
+      "dependencies": "Keep current city/address, old Chelsea/Ada aliases, dated-source precedence over stale FAQ, optional 18+ touch and terrain/access restrictions.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-ROOTS",
+      "listingRecordId": "OK-W1-ROOTS-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "3cf00b6145aa7ae8bba3c8c4adefb9bdabc51f0590ae6b8dff8db55d0c25dea6",
+      "presentationSha256": "0cb2e7a3441ff0dc6a407d20300b448bd9c6c94781ce8ea2b3abc69867f0b318",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "1900 E 62nd Street N, Muskogee, OK 74403",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T04:00:00Z",
+        "utc": "2026-11-01T04:00:00Z",
+        "local": "2026-10-31T23:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T04:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Fridays and Saturdays in October 2026. Midway opens 7 p.m.; trail begins about 8 p.m. or when dark and runs until 11 p.m. Last ticket time is not stated."
+      },
+      "placement": {
+        "lat": 35.829712091412,
+        "lon": -95.351540504515,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-14T02:27:03.860452+00:00",
+        "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.feartheroots.com/",
+        "https://static.wixstatic.com/media/b1a87b_5e80d1d797d0470e8ba68e32d45cd9bf~mv2.png/v1/fill/w_384,h_335,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/October%202026%20Calendar_edited_edited.png",
+        "https://tickets.feartheroots.com/",
+        "https://www.feartheroots.com/faq",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1900+E+62nd+Street+N%2C+Muskogee%2C+OK+74403&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Current 2026 heading/calendar image and linked tickets outrank conflicting lower-page unconfirmed text, which remains disclosed; all terrain/touch/age qualifications retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 9,
+      "canonicalId": "date-night-ok26-w1-castle",
+      "name": "Haunted Castle Halloween Festival",
+      "justification": "The independently distinct Muskogee festival adds a broader family/scare mix rather than treating neighboring attractions as duplicate haunts; six remaining nights.",
+      "dependencies": "Long minor/child-carrying/wheelchair notes require real narrow-screen tests. Operator indoor 18:15 overrides but does not erase tourism 18:00 disagreement; ticket end is not final exit.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-CASTLE",
+      "listingRecordId": "OK-W1-CASTLE-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "2d3917458ba0713efa507288b25c3ffff01ac591009a9e9117eaf7a9e344f593",
+      "presentationSha256": "cb6e501b9d691b232a5e2f46efc6b2210c83241eebe507e5f50b40e6e06303bb",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "3400 W Fern Mountain Rd, Muskogee, OK 74401",
+      "activityTypes": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T05:00:00Z",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Fridays and Saturdays, October 2–31, 2026. Gates 5:30 p.m.; indoor attractions 6:15 p.m.; outdoor attractions at dusk. Ticket sales end 11 p.m.; attractions may run later. Final closing is not stated."
+      },
+      "placement": {
+        "lat": 35.784066316157,
+        "lon": -95.40543363465,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-14T02:27:18.445493+00:00",
+        "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.okcastle.com/halloween.html",
+        "https://okcastle.com/halloween-festival-faq/halloween-festival-faq/",
+        "https://visitmuskogee.com/news/castle-of-muskogee-announces-2026-halloween-festival/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3400+W+Fern+Mountain+Rd%2C+Muskogee%2C+OK+74401&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Dated official tourism year/date binding and specific operator FAQ support all fields; indoor-start discrepancy retained, queued/final exit unknown.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 10,
+      "canonicalId": "date-night-ar26-hollow",
+      "name": "Horror in the Hollow",
+      "justification": "Piggott adds northeastern Arkansas/Missouri-border coverage that the northwest cluster does not establish, with six remaining nights and operator property placement.",
+      "dependencies": "Preserve health/child/trail restrictions and only qualified operator detour advice; final ticket exchange is not final exit.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-019",
+      "listingRecordId": "AR26-W1-019",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "ca9b789164e3526e112205adb955cad2c81d9027eaa0d5b6d3efb4ef293faa71",
+      "presentationSha256": "4b60741b77cd7fd5bcc0130e9e3749ddaced5a8602f7f98587de4ad5a62ec906",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "671 County Road 336, Piggott, AR 72454",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-09-19",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T00:00:00-05:00",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Haunting starts approximately 7 PM; tickets from 6:30–10 PM. Guests in line to buy by 10 PM are admitted; haunts finish after purchased activities, so final close is unknown."
+      },
+      "placement": {
+        "lat": 36.46053333333333,
+        "lon": -90.19216666666667,
+        "basis": "operator-site",
+        "sourceUrl": "https://www.pumpkinhollow.com/directions",
+        "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+        "precisionLabel": "Approximate operator property point; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://www.pumpkinhollow.com/horror-in-the-hollow",
+        "https://www.pumpkinhollow.com/hith-faqs",
+        "https://www.pumpkinhollow.com/directions",
+        "https://www.pumpkinhollow.com/policies"
+      ],
+      "acceptedReviewReason": "Twelve source dates, ticket-exchange cutoff and unknown final exit supported. Operator coordinate conversion retained approximate; road notice is advice only.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 11,
+      "canonicalId": "date-night-ok26-w1-plantation",
+      "name": "Haunted Plantation",
+      "justification": "Coweta broadens the northeast/east Oklahoma spread and adds interactive hayride/trail/corn-game variety over six remaining dates, with explicit finite occurrence evidence.",
+      "dependencies": "Only accepted advisory-age-conflict copy may be used; retain touching/blood/waiver/terrain conditions. Zombie Rampage remains separate and HOLD.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-PLANTATION",
+      "listingRecordId": "OK-W1-PLANTATION-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "74c6269fb0e6acab2c544df385ae97ed0021fe3e8d59b8d256e6b9fe3679723a",
+      "presentationSha256": "451158e199e6bf082285e8d59fb9ef509661b756573f0e2495dd900daa643681",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "21701 E 161st St S, Coweta, OK 74429",
+      "activityTypes": [
+        "haunted-house",
+        "corn-maze",
+        "other-halloween-fall"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T05:00:00Z",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Remaining verified ticket dates: October 16–17, 23–24 and 30–31, 2026. Gates open 6 p.m.; rides begin at dark; last on-site tickets 10 p.m. Final closing is unclear; check with the operator."
+      },
+      "placement": {
+        "lat": 35.93010608085,
+        "lon": -95.734447960358,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-14T02:27:24.440705+00:00",
+        "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.ticketsignup.io/TicketEvent/HauntedPlantation",
+        "https://hauntedplantationok.com/",
+        "https://hauntedplantationok.com/faqs/",
+        "https://hauntedplantationok.com/parking/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=21701+E+161st+St+S%2C+Coweta%2C+OK+74429&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Six individually dated tickets supported; contradictory final-close text not projected. Current age-advisory conflict resolved with qualified parental-discretion copy, no minimum invented.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "rank": 12,
+      "canonicalId": "date-night-ar26-magic",
+      "name": "Magic Screams at Magic Springs",
+      "justification": "Hot Springs supplies central/south-central Arkansas breadth and day/night amusement variety with six remaining weekend dates through November 1. Its longer hours and activity mix justify retaining it despite more detailed copy.",
+      "dependencies": "Preserve park versus attraction starts, Wasteland movement/age guidance, re-entry/bag/mask rules, and final November 1 21:00 CST expiry.",
+      "cohort": "SELECTED_FOR_ONE_AUTHORIZED_CANDIDATE",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-018",
+      "listingRecordId": "AR26-W1-018",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "b579ba308e7b3b6a886e6274f64750e7cd948423f24d8fcd61d6359035d8f38d",
+      "presentationSha256": "a2e427339e341f244d199d5d5e58a8cbddfa0495ad47b8b6ce9e313792206674",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "1701 East Grand Avenue, Hot Springs, AR 71901",
+      "activityTypes": [
+        "other-halloween-fall",
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-10",
+        "2026-10-11",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T21:00:00-06:00",
+        "utc": "2026-11-02T03:00:00Z",
+        "local": "2026-11-01T21:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T21:00:00-06:00"
+      },
+      "displayHours": {
+        "state": "verified",
+        "displayText": "Saturdays 2–11 PM; Sundays 2–9 PM. Family daytime activities precede scare attractions, which begin opening at 6 PM; some open at 7 PM."
+      },
+      "placement": {
+        "lat": 34.518342001859,
+        "lon": -93.021430344209,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:29:08.893307+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://magicsprings.com/buy-tickets/",
+        "https://magicsprings.com/magic-screams/",
+        "https://magicsprings.com/magic-screams/fright-by-night/",
+        "https://magicsprings.com/contact/",
+        "https://magicsprings.com/calendar/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1701+East+Grand+Avenue%2C+Hot+Springs%2C+AR+71901&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Actual operator 2026 calendar supports twelve dates, park hours and CST final cutoff; scare-start/access rules retained, no2027 from pass sales.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    }
+  ],
+  "reserves": [
+    {
+      "reserveRank": 1,
+      "canonicalId": "date-night-ks26-nightmare",
+      "name": "Nightmare Festival",
+      "reason": "First uniform replacement: eight remaining Topeka dates and clear exact hours offer eastern/central Kansas breadth. Deferred because the new Tulsa/Sperry coverage adds more to this public Joplin-border-oriented first batch.",
+      "dependencies": "Clean dated backup; doors versus attractions, Blackout, clear bags and group-ticket exception still need tests.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "nightmare",
+      "listingRecordId": "KS26-W1-NIGHTMARE",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "27ae82830c9dab522c28c06370d0a8258d36c052a774127a21ff5146443f3d78",
+      "presentationSha256": "759fc9f7084e89168903b73344ac64e7a79f7b7274a3e12a4f4918719c751462",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "One Expocentre Drive, Topeka, KS 66612-1442, USA",
+      "activityTypes": [
+        "haunted-house",
+        "other-halloween-fall"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T03:30:00Z",
+        "utc": "2026-11-01T03:30:00Z",
+        "local": "2026-10-31T22:30:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T03:30:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "October 16–18,23–25,30–31, 2026. Doors 6:45 p.m.; attractions 7–10:30 p.m. Last ticket/token sale unspecified. October 31 Blackout Night."
+      },
+      "placement": {
+        "lat": 39.034496091335,
+        "lon": -95.683529000007,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:21:30.378731+00:00",
+        "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.stormontvaileventscenter.com/events/2026/nightmare26",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=1+Expocentre+Dr%2C+Topeka%2C+KS+66612&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Eight explicit venue events, distinct doors/event times, token/group exception and clear-bag rule supported; one destination.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 2,
+      "canonicalId": "date-night-ks26-walters",
+      "name": "The Haunt at Walters",
+      "reason": "Second uniform replacement: distinctive wagon/two-barn attraction and six remaining nights in Burns, but its final date is October 30 and Louisburg offers daily farm diversity and a longer window on the Kansas–Missouri side.",
+      "dependencies": "Preserve conservative gate-based October 30 23:00 retirement with no inferred final exit; never use daytime Pumpkinfest schedule.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "walters",
+      "listingRecordId": "KS26-W1-WALTERS",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "67e45612871a62b663ad90b6905a4d629d1fe92c86d0a625917c662b43129617",
+      "presentationSha256": "e88262e99e9c7bcc01eebe2fb1a0a5ac703376e47bc9a7e5cb1bef46320a5c22",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "10001 NW U.S. Highway 77, Burns, KS 66840, USA",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-10-31T04:00:00Z",
+        "utc": "2026-10-31T04:00:00Z",
+        "local": "2026-10-30T23:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "September 18–19,25–26; October 2–3,9–10,16–17,23–24 and 30, 2026. Gates 7:30 p.m.; first wagon 8 p.m.; gates close 11 p.m. Final exit and last-ticket time unknown."
+      },
+      "placement": {
+        "lat": 37.953096849462,
+        "lon": -96.85429777569,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:19:31.803572+00:00",
+        "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://thewaltersfarm.com/haunt/",
+        "https://walterspumpkinpatch.ticketspice.com/the-haunt-at-walters-2026-season",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=10001+NW+US+Highway+77%2C+Burns%2C+KS+66840&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Current 13-date haunt calendar separate from daytime Pumpkinfest; gate-based conservative retirement retained, final exit not inferred.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 3,
+      "canonicalId": "date-night-ks26-wicked",
+      "name": "Wicked Island",
+      "reason": "Wichita outdoor island trail adds central Kansas breadth, six remaining nights and exact scheduled midnight. Deferred behind first-batch border-region destinations and the first two original recommendations.",
+      "dependencies": "Known date/hour evidence remains strong; pre-fallback midnight and gate/ticket distinctions require explicit checks.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "wicked",
+      "listingRecordId": "KS26-W1-WICKED",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "a384ef866ac375023efe6e478f1930a8b46f5c6f0d9e04d67b28878a99dadd1f",
+      "presentationSha256": "0c1173b76d71fb295a32d58a6ec94aa7d5036c19529cf28fd7e773d9cf76df90",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "3022 S. McLean Blvd., Wichita, KS 67217, USA",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-09-26",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T05:00:00Z",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T05:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "September 26 and October 2–3,9–10,16–17,23–24,30–31, 2026. Haunt 8 p.m.–midnight; ticket sales start 7:30 p.m.; park gates close 11:30 p.m. Last ticket sale not separately stated."
+      },
+      "placement": {
+        "lat": 37.640056507941,
+        "lon": -97.343205633423,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:19:31.802085+00:00",
+        "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.wickedwoodswichita.com/hours",
+        "https://www.wickedwoodswichita.com/",
+        "https://www.wickedwoodswichita.com/rules",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=3022+S+McLean+Blvd%2C+Wichita%2C+KS+67217&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Current operator 11-date season, haunt midnight, ticket start and earlier gate closure remain distinct; pre-fallback midnight converted correctly.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 4,
+      "canonicalId": "date-night-ar26-royal",
+      "name": "Royal Haunted House",
+      "reason": "Nine remaining dates begin October 15 and detailed official hours are useful; Benton adds central Arkansas. Deferred because Magic already gives this batch central Arkansas variety through November 1 while Royal adds another intensive night haunt.",
+      "dependencies": "Do not ignore its earlier upcoming dates. Retain strict stairs/mobility/health/refund restrictions and exclude private tours; attractive substitution if season utility shifts.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-012",
+      "listingRecordId": "AR26-W1-012",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "87ef6db5a0d9f11d9f036dd172d84ada1eb28563dd9ef06098e156939d77c175",
+      "presentationSha256": "a6506d71812f01f94c123cfb58e5e0b4f72597e9af9930e32fec284a09529599",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "111 South Market Street, Benton, AR 72015",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-10-31T22:00:00-05:00",
+        "utc": "2026-11-01T03:00:00Z",
+        "local": "2026-10-31T22:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-10-31T22:00:00-05:00"
+      },
+      "displayHours": {
+        "state": "verified",
+        "displayText": "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM. Tickets are sold until sold out; online sales may end earlier than box-office sales."
+      },
+      "placement": {
+        "lat": 34.563224662909,
+        "lon": -92.588223916041,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:31:04.913570+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://www.theroyaltheatre.org/",
+        "https://onthestage.tickets/the-royal-theatre/season",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=111+S+Market+St%2C+Benton%2C+AR+72015&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Nine dated nights and strict mobility/health/ticket restrictions supported; private tours excluded.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 5,
+      "canonicalId": "date-night-ok26-w1-guthrie",
+      "name": "Guthrie Haunts Scaregrounds",
+      "reason": "High-value later-season reserve: eight remaining dates include November 6–7. It adds central Oklahoma, but that extra late-fall window requires scoped Anything/lifecycle tests beyond the uniform first batch.",
+      "dependencies": "Do not shorten the accepted date-only November 8 cutoff to an editorial cap or expand Halloween chips/provider season.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Oklahoma",
+      "researchRecordId": "OK-W1-GUTHRIE",
+      "listingRecordId": "OK-W1-GUTHRIE-2026",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "254e12823eec413df4e65778bdba77681200c2a43cb03e864ab67b67c8640532",
+      "presentationSha256": "ca6754fc7eab234b13881f1f984097dcd5461181209a696e1fcc932174c68bbf",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/oklahoma/R2/FULL-SIX-PROJECTIONS.json",
+        "sha256": "a9ba3894a832951395a541a53fd5c9a2c5066ad3b85633d6fecb32ecc541c643",
+        "bytes": 29048
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "4524 Riverside Circle, Guthrie, OK 73044",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-16",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-08T06:00:00Z",
+        "utc": "2026-11-08T06:00:00Z",
+        "local": "2026-11-08T00:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "date-only",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Remaining 2026 nights: October 16–17, 23–24, 30–31 and November 6–7. Ticket window 7 p.m.–midnight; guests already in line may enter later. November 6–7 are Blackout nights. Final closing is not stated."
+      },
+      "placement": {
+        "lat": 35.922897131675,
+        "lon": -97.425477322616,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-14T02:27:03.971308+00:00",
+        "precisionLabel": "Approximate public-address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.guthriescaregrounds.com/",
+        "https://www.guthriescaregrounds.com/calendar",
+        "https://www.guthriescaregrounds.com/location",
+        "https://www.stubwire.com/events/guthriehauntsscaregrounds/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=4524+Riverside+Circle%2C+Guthrie%2C+OK+73044&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Fresh 2026 linked ticket calendar confirms eight remaining dates through November7 and Blackout; midnight is ticket-window end only, date-only retirement and scoped late-fall remain.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 6,
+      "canonicalId": "date-night-ks26-acres",
+      "name": "Acres of Madness",
+      "reason": "High-value later-season reserve: newly verified 12 remaining dates through November 7, including some Thursday/Sunday nights. Deferred because this batch already serves the Kansas City side and contact/consent ambiguity plus late-fall scope adds review/test burden.",
+      "dependencies": "New dates are a real evidence gain, not an operator-change claim. Keep Limited confidence/contact qualification, exact November 8 midnight close and scoped late-fall eligibility.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "acres",
+      "listingRecordId": "KS26-W1-ACRES",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "209a7e8a7157803505802aaa8337604ea58d729ff5b446e18f92a8e1b392d18f",
+      "presentationSha256": "4e995205b765a40a9cb35b3fe6d85ccc16c22358ad56d6c09440dbf1ea959420",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "5615 Wolcott Drive, Kansas City, KS 66109, USA",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "limited",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-08T06:00:00Z",
+        "utc": "2026-11-08T06:00:00Z",
+        "local": "2026-11-08T00:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-08T06:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Remaining ticket dates: October 16–18, 23–25 and 29–31; November 1 and 6–7, 2026, 7:30 p.m.–midnight. Last admission is not stated."
+      },
+      "placement": {
+        "lat": 39.201193638566,
+        "lon": -94.820425979083,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:40:58.198599+00:00",
+        "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://zombiepurge.com/",
+        "https://acresofmadness.ticketspice.com/acres-of-madness-2026",
+        "https://zombiepurge.com/hells-gate",
+        "https://zombiepurge.com/knightmares-kurse",
+        "https://zombiepurge.com/faq",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=5615+Wolcott+Drive%2C+Kansas+City%2C+KS+66109&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Live linked ticket calendar independently supplies 12 remaining dates through November 7 and explicit stated hours; exact scheduled cutoff, limited confidence and contact uncertainty retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 7,
+      "canonicalId": "date-night-ks26-souls",
+      "name": "13 Sinister Souls",
+      "reason": "Newly verified six remaining Wichita ticket nights now make a clean finite-schedule reserve. Deferred because Wichita breadth is already represented by stronger reserve alternatives and this adds another intense indoor haunt rather than new first-batch variety.",
+      "dependencies": "Calendar evidence improved without erasing Limited confidence. Preserve purchased-slot semantics, midnight pre-fallback expiry and gore warning.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "souls",
+      "listingRecordId": "KS26-W1-SOULS",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "b47a0e52dd454fe27d668cda901b1f25cc25597b43dbdcd4d3be64235460252a",
+      "presentationSha256": "af12f896429934af65c27bfde67fb517eabc8bb9543a07e622ff69aefe6334af",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "527 E Harry St, Wichita, KS 67211, USA",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "limited",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T05:00:00Z",
+        "utc": "2026-11-01T05:00:00Z",
+        "local": "2026-11-01T00:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T05:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "October 9–10, 16–17, 23–24 and 30–31, 2026, 7 p.m.–midnight. Use your purchased 7–8:30 p.m. or 8:30 p.m.–midnight slot; last admission is not separately stated."
+      },
+      "placement": {
+        "lat": 37.664297309832,
+        "lon": -97.332499508779,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:41:02.583241+00:00",
+        "precisionLabel": "Approximate public visitor-address location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://13sinistersouls.com/",
+        "https://13sinistersouls.com/buy-tickets/",
+        "https://13sinistersouls.com/about/",
+        "https://13sinistersouls.com/product/general-admission-2026/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=527+E+Harry+St%2C+Wichita%2C+KS+67211&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Actual operator calendar/product independently establish eight dates and stated hours as well as purchased-slot limits; last admission remains separate unknown.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 8,
+      "canonicalId": "date-night-ks26-colby",
+      "name": "Colby Haunted House",
+      "reason": "Four upcoming dates and clear hours are sound, but far-western Kansas adds less to the qualitative first-ring/public Joplin-border focus than eastern/central alternatives.",
+      "dependencies": "No mileage or owner-radius claim. Preserve Central time, unknown matinee and unresolved AYSO antecedent.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Kansas",
+      "researchRecordId": "colby",
+      "listingRecordId": "KS26-W1-COLBY",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "6b935e4351b5fc93349fa89ca3d2fef5a8df72b21dd438a908a6e8ada7614a1a",
+      "presentationSha256": "3be1a908c6b5c0f5c747488dd1bcb66a01fb1ae527db6314356f6e7f23710461",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/kansas/r2/proposed-full-projections.json",
+        "sha256": "83d007088ff9a321135f0c402efb0f9fc7b4265bccf534eb5d7da8097c891434",
+        "bytes": 38414
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "660 N. Franklin, Colby, KS 67701, USA",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "good",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "remainingCalendarDatesOnOrAfter20261014": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-01T03:00:00Z",
+        "utc": "2026-11-01T03:00:00Z",
+        "local": "2026-10-31T22:00:00-05:00",
+        "timeZone": "America/Chicago",
+        "basis": "exact",
+        "endsAt": "2026-11-01T03:00:00Z"
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "October 23–24 and 30–31, 2026,7–10 p.m. Last admission not separately stated."
+      },
+      "placement": {
+        "lat": 39.399554732651,
+        "lon": -101.045933842025,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:20:24.299484+00:00",
+        "precisionLabel": "Approximate address-derived location; not a verified entrance, parking area or rideshare dropoff."
+      },
+      "sourceUrls": [
+        "https://www.colbyhauntedhouse.com/",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=660+N+Franklin%2C+Colby%2C+KS+67701&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Four explicit dates, public visitor address and 19:00–22:00 Central hours supported; matinee and possible AYSO relationship remain unresolved.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": "unestablished",
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [
+          "AYSO possible historical antecedent; not an established alias and not a second runtime addition"
+        ],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 9,
+      "canonicalId": "date-night-ar26-fear-factory",
+      "name": "Fear Factory 501",
+      "reason": "Jacksonville provides additional central Arkansas potential, but unconfirmed operating nights and editorial retention make it a weaker immediate scheduling option than all dated choices.",
+      "dependencies": "Research readiness remains valid with unknown hours; do not turn event envelope into dates or November 2 retention into operation.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-009",
+      "listingRecordId": "AR26-W1-009",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "91c3dc996f6d557ff88ed0bc27be7ceec781f485d05b3a1caf2b07fb42d9eb7e",
+      "presentationSha256": "5cd18a5a37bd33137a7a692b65ac68444d407d12b7cd03fe0eac82a920bcee07",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "25120 AR-107, Jacksonville, AR 72076",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "limited",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": null,
+      "remainingCalendarDatesOnOrAfter20261014": [],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-02T00:00:00-06:00",
+        "utc": "2026-11-02T06:00:00Z",
+        "local": "2026-11-02T00:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "editorial",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "Current 2026 tickets are listed. Operating nights, last admission and final closing time are unconfirmed; check the official ticket calendar."
+      },
+      "placement": {
+        "lat": 34.941053703969,
+        "lon": -92.164002769092,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:31:04.912794+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://fearfactory501.com/",
+        "https://www.strideevents.com/events/fear-factory-501/2026/tickets",
+        "https://www.strideevents.com/fear-factory-501/event-information",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=25120+AR-107%2C+Jacksonville%2C+AR+72076&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Current linked 2026 ticket identity/address supported; unknown sessions are honestly unconfirmed, limited details and non-operational editorial cap retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    },
+    {
+      "reserveRank": 10,
+      "canonicalId": "date-night-ar26-chill",
+      "name": "Chill Factor Haunted Attraction",
+      "reason": "Trumann adds northeast Arkansas potential, but unconfirmed operating dates and editorial retention provide less immediate visit-planning value than dated Horror in the Hollow.",
+      "dependencies": "Keep Limited confidence, 19:00 lobby versus unknown haunt start/close and one destination for two attractions.",
+      "cohort": "ELIGIBLE_RESERVE_NOT_SELECTED",
+      "state": "Arkansas",
+      "researchRecordId": "AR26-W1-020",
+      "listingRecordId": "AR26-W1-020",
+      "factualVerdict": "PASS",
+      "placementVerdict": "PASS",
+      "implementationDisposition": "ELIGIBLE",
+      "runtimeAcceptance": "NOT_RUN",
+      "releaseApproval": "NONE",
+      "recordSha256": "434383f3bfa1705134c6398668f92e70490c287e5998290f5f1f5d03f589b5db",
+      "presentationSha256": "e71353928a214591aa3eb24b31802c436d871c6d3ea385f4bb60c02414e2531a",
+      "hashMethod": "SHA256 of UTF8 JSON with sorted keys, compact comma/colon separators and ensure_ascii=False; no newline. Whole-file hashes are separate.",
+      "authorProjectionFile": {
+        "path": "regional-window-2026-10-14/arkansas/R1/PROPOSED-COMPLETE-PROJECTIONS.json",
+        "sha256": "6940d4f3ecbed9c2ac73021599591fcf5864c5661643de10bca474f1c5b8c41b",
+        "bytes": 35630
+      },
+      "acceptedCombinedSource": {
+        "path": "regional-window-2026-10-14/independent/EXACT-22-INDEPENDENTLY-CLEARED-PROJECTIONS.json",
+        "sha256": "c0dc677c1acfa64b652581e85e7dbdbed1ab8d75bea6b23272869f0dd9389688"
+      },
+      "visitorAddress": "115 E Main St, Trumann, AR 72472",
+      "activityTypes": [
+        "haunted-house"
+      ],
+      "confidence": "limited",
+      "checkedAt": "2026-10-14",
+      "revalidateAfter": "2026-10-15",
+      "activeDates": null,
+      "remainingCalendarDatesOnOrAfter20261014": [],
+      "planningDateBasis": "Calendar dates on or after 2026-10-14 in America/Chicago; not live ticket availability or Open Now. Unknown calendars remain unknown.",
+      "cutoff": {
+        "original": "2026-11-02T00:00:00-06:00",
+        "utc": "2026-11-02T06:00:00Z",
+        "local": "2026-11-02T00:00:00-06:00",
+        "timeZone": "America/Chicago",
+        "basis": "editorial",
+        "endsAt": null
+      },
+      "displayHours": {
+        "state": "partial",
+        "displayText": "2026 season announced. Lobby opens 7 PM on operating nights; operating dates, attraction opening, last admission and final close are unconfirmed."
+      },
+      "placement": {
+        "lat": 35.67390966313,
+        "lon": -90.505908265161,
+        "basis": "address-geocode",
+        "sourceUrl": "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json",
+        "checkedAt": "2026-10-13T18:31:04.912011+00:00",
+        "precisionLabel": "Approximate public visitor-address range; not an entrance, parking area or ride dropoff"
+      },
+      "sourceUrls": [
+        "https://chillfactorhaunt.com/",
+        "https://chillfactorhaunt.com/attractions",
+        "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=115+E+Main+St%2C+Trumann%2C+AR+72472&benchmark=Public_AR_Current&format=json"
+      ],
+      "acceptedReviewReason": "Explicit current-year public haunt supported; lobby time is not haunt opening, unknown dates and non-operational editorial cap retained.",
+      "retainedLimitations": [
+        "Approximate venue point only; not entrance/parking/dropoff verified.",
+        "Null machine openingHours and never Open Now.",
+        "2026 source-bound lifecycle only; check operator before travel."
+      ],
+      "historicalIdentity": {
+        "implementedNow": 0,
+        "potentialFutureRuntimeAddition": 1,
+        "newlyDiscoveredIdentity": true,
+        "knownHistoricalIdentities": [],
+        "unresolvedRelationships": [],
+        "rule": "Historical discovery and future runtime addition are separate counts; no aggregate74new identity claim."
+      }
+    }
+  ],
+  "changesFromOriginal12": {
+    "added": [
+      "date-night-ks26-louisburg",
+      "date-night-ok26-w1-psycho"
+    ],
+    "movedToReserve": [
+      "date-night-ks26-walters",
+      "date-night-ks26-nightmare"
+    ],
+    "retainedOriginalCount": 10,
+    "reason": "New independent placement clearance enables daily farm diversity on the Kansas–Missouri side and Tulsa/Sperry coverage. Selection priority is not factual downgrade."
+  },
+  "fallbackPolicy": "No fallback is needed: all22 exact source objects are independently ELIGIBLE. If later material drift/HOLD occurs, do not edit or import stale facts; return to the parent for the smallest explicit successor selection. Nightmare and Walters are the first two uniform eligible reserves. No padding.",
+  "scope": "One proposed 12-record non-production implementation selection. No runtime, branch, PR, canonical, public or release writes performed. Current approval to create one candidate is owned by parent; this artifact grants no merge/deployment authority.",
+  "boundaryNote": "Some selected records have explicit November1 activity and require scoped listing-lifecycle/seasonal-off/DST tests. The first batch avoids November6–7 records; it does not eliminate late-fall boundary testing."
+}

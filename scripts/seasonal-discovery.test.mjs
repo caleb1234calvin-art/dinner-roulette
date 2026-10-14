@@ -1,3 +1,4 @@
+import { REGIONAL_IDS, REGIONAL_ROWS } from "./test-support/regional-wave1.mjs";
 import { affirmativeClauses } from "./test-support/date-night-query-evaluator.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
@@ -48,10 +49,21 @@ const eligible = (venues, patch = {}, location = international, at = now) =>
     at.getTime(),
   );
 function assertReviewedAuroraSavedCoverage(venues) {
+  const acceptedAnnabelle = REGIONAL_ROWS.find(row => row.id === "date-night-ok26-w1-annabelle");
+  const regional = venues.filter(venue => REGIONAL_IDS.includes(venue.id));
+  assert.deepEqual(regional, [{ ...acceptedAnnabelle, lifecycle: undefined, discoveryEvidence: undefined }],
+    "The actual Carthage acquisition contains exactly the complete independently accepted Annabelle addition");
+  const [annabelle] = decorateDateNight(regional, origin, now);
+  assert.deepEqual([annabelle.lat, annabelle.lon], [36.859403553545, -95.077985149603]);
+  assert.ok(Math.abs(annabelle.distanceMiles - 47.685058254997095) < 0.000001,
+    "Independent accepted coordinates place Annabelle inside the unchanged 50-mile Carthage fixture");
+  assert.equal(annabelle.source, "catalog");
+  assert.equal(annabelle.openingHours, null);
+  assert.equal(annabelle.discoveryEvidence, undefined, "No live-provider provenance is fabricated for Annabelle");
   const cornMazes = decorateDateNight(venues, origin, now).filter(venue =>
     venue.distanceMiles <= filters.radiusMiles + 0.05 && venue.availability.browseEligible && venue.activityTypes.includes("corn-maze"));
-  assert.deepEqual(cornMazes.map(venue => venue.id), ["date-night-mo26-astra-aurora-maize"]);
-  const [aurora] = cornMazes;
+  assert.deepEqual(cornMazes.map(venue => venue.id).sort(), ["date-night-mo26-astra-aurora-maize", "date-night-ok26-w1-annabelle"]);
+  const aurora = cornMazes.find(venue => venue.id === "date-night-mo26-astra-aurora-maize");
   assert.equal(aurora.name, "Aurora Maize at Adventure Farm");
   assert.deepEqual([aurora.lat, aurora.lon], [36.9808456, -93.6877871]);
   assert.ok(Math.abs(aurora.distanceMiles - 36.876755617897096) < 0.000001,
@@ -60,6 +72,9 @@ function assertReviewedAuroraSavedCoverage(venues) {
   assert.equal(aurora.source, "catalog");
   assert.ok(!(aurora.discoveryEvidence ?? []).some(evidence => evidence.source === "osm" && evidence.activityTypes.includes("corn-maze")),
     "A newly imported corn maze is saved coverage, never inferred live-provider provenance");
+  // Only after exact current membership and full new-object checks, retain the
+  // historical missing-pumpkin fixture and every original Aurora assertion.
+  return venues.filter(venue => venue.id !== acceptedAnnabelle.id);
 }
 const record = {
   status: "confirmed",
@@ -246,9 +261,16 @@ test("saved-only successful sparse coverage, missing categories and provider out
   const result = await search(t, [], origin);
   assert.equal(result.source, "merged");
   assert.equal(result.warning, undefined);
-  assertReviewedAuroraSavedCoverage(result.venues);
+  const legacyVenues = assertReviewedAuroraSavedCoverage(result.venues);
+  const currentCoverage = seasonalCoverage(decorateDateNight(result.venues, origin, now), filters, result.source, true);
+  assert.deepEqual(currentCoverage.live, []);
+  assert.deepEqual(currentCoverage.savedOnly, ["haunted-house", "corn-maze", "pumpkin-patch"]);
+  assert.deepEqual(currentCoverage.missing, []);
+  assert.equal(currentCoverage.sparse, true);
+  assert.equal(currentCoverage.outage, false);
+  assert.doesNotMatch(currentCoverage.text, /unavailable/);
   const coverage = seasonalCoverage(
-    decorateDateNight(result.venues, origin, now),
+    decorateDateNight(legacyVenues, origin, now),
     filters,
     result.source,
     true,
@@ -299,8 +321,17 @@ test("per-category provenance never labels a saved haunt as live because its ord
     true,
   );
   assert.deepEqual(coverage.live, []);
-  assertReviewedAuroraSavedCoverage(result.venues);
-  assert.deepEqual(coverage.savedOnly, ["haunted-house", "corn-maze"]);
+  const legacyVenues = assertReviewedAuroraSavedCoverage(result.venues);
+  assert.deepEqual(coverage.savedOnly, ["haunted-house", "corn-maze", "pumpkin-patch"]);
+  assert.deepEqual(coverage.missing, []);
+  assert.equal(coverage.sparse, true);
+  assert.equal(coverage.outage, false);
+  const legacyCoverage = seasonalCoverage(decorateDateNight(legacyVenues, origin, now), filters, result.source, true);
+  assert.deepEqual(legacyCoverage.live, []);
+  assert.deepEqual(legacyCoverage.savedOnly, ["haunted-house", "corn-maze"]);
+  assert.deepEqual(legacyCoverage.missing, ["pumpkin-patch"]);
+  assert.equal(legacyCoverage.sparse, true);
+  assert.equal(legacyCoverage.outage, false);
 });
 
 test("ordinary Date Night and seasonal toggle still work internationally; unknown hours fail strict ON", async (t) => {
