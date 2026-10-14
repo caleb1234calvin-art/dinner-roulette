@@ -275,6 +275,7 @@ try {
             for (let index = 0; index < await paragraphs.count(); index++) {
               const paragraph = paragraphs.nth(index);
               await paragraph.scrollIntoViewIfNeeded();
+              await paragraph.evaluate(el => el.scrollIntoView({ block: "center", inline: "nearest", behavior: "instant" }));
               const metric = await paragraph.evaluate(el => {
                 const box = el.getBoundingClientRect();
                 const x = Math.max(0, Math.min(innerWidth - 1, box.x + box.width / 2));
