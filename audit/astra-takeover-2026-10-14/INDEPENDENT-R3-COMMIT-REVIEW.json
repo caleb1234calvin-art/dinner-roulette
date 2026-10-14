@@ -1,0 +1,89 @@
+{
+  "verdict": "PASS_STATIC_COMMIT_BINDING",
+  "head": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+  "tree": "95f66498048590cbd30c623b17d15bf2d5b7cc73",
+  "parent": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+  "baseMain": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
+  "reviewedFiles": 11,
+  "exactChangedPathSet": true,
+  "files": [
+    {
+      "path": "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-FROZEN-INPUTS.json",
+      "sha256": "7930bee7026862da73e103ceba8e6e9d8e42a39e669eeff8dae6114e57037300",
+      "bytes": 48514,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "scripts/seasonal-ten-record-browser.mjs",
+      "sha256": "3fc641f989408c31587183cce97d7e84bac400d8c7402392f29ad307ec786b23",
+      "bytes": 154038,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "scripts/seasonal-wave2.test.mjs",
+      "sha256": "cd17a6466aa36d93d037785febd0228184856aacef8af252d5a7b72b86d49545",
+      "bytes": 3569,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "src/lib/date-night/halloween-2026-wave2-catalog.ts",
+      "sha256": "e7341361b06d0083b1bc47bf51fc04f5cab8a95a6d78b896d5b67662b6efc4c7",
+      "bytes": 38357,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "sha256": "787b4426df9318d7b85e23714614ad2556cfd78b8e4d6ffec619742b7b2d8bbf",
+      "bytes": 50735,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-R2-PRE-TAKEOVER.json",
+      "sha256": "6ba010aced6367e52b7f0e1b269801b5e6605d2e44dd5275219bbcc08b6d20af",
+      "bytes": 47613,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/TAKEOVER-COPY-R3.json",
+      "sha256": "7d625f768086f847a9f074e94d00b5bb63700a1894dc9df846ada2fce88e9896",
+      "bytes": 5305,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/TAKEOVER-REMEDIATION-R3.md",
+      "sha256": "e16f1f30a414014d48b57f988d210e034c1a4a8d317a3c6aad54a43e80e7c151",
+      "bytes": 5599,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "scripts/test-support/wave2-browser-oracle.json",
+      "sha256": "7024f4159d20eb1e6799808792e93293ee3eb97df4d159262a5d24637ea98aaa",
+      "bytes": 47801,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "scripts/test-support/wave2-browser.mjs",
+      "sha256": "12cf01e88d3bbb9d4b33421a621cdaa99b699e58738a762f1e94e3b14a3fce74",
+      "bytes": 6285,
+      "matchesReviewedBytes": true
+    },
+    {
+      "path": "scripts/test-support/wave2-radius-oracle.json",
+      "sha256": "2a49ffd42e700f2cfd79e8f9127b9f778548993fb9f3d39169f15acdb56412d0",
+      "bytes": 12549,
+      "matchesReviewedBytes": true
+    }
+  ],
+  "staticChecks": {
+    "tenRuntimeFrozenOracleEqual": true,
+    "threeCopyAmendmentsOnly": true,
+    "all82LegacyPresentationsExact": true,
+    "originalFrozenBytesRetained": true,
+    "independentRadiusBytesExact": true,
+    "legacyRegionalOracleFunctionsExact": true,
+    "legacy317Retained": true,
+    "workflowDependenciesDeployUnchanged": true
+  },
+  "runtimeVerdict": "PENDING_NEW_EXACT_HEAD_HOSTED_ACCEPTANCE",
+  "releaseAuthorized": false
+}

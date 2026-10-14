@@ -1,0 +1,47 @@
+{
+  "revision": "PR72-SOURCE-COPY-R3-COMMIT-BINDING",
+  "checkedAt": "2026-10-14T23:02:03.830583+00:00",
+  "commit": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+  "tree": "95f66498048590cbd30c623b17d15bf2d5b7cc73",
+  "parent": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+  "verdict": "PASS",
+  "scope": "Exact reviewed content file bytes bound to commit; qualified source/copy disposition retained",
+  "reviewReport": "source-copy-review-r3.md",
+  "reviewReportSha256": "34cafff26cf46145f951abd5b2071fd5c6a91bd884b4418aa193e7c9e91a77f5",
+  "reviewEvidenceSha256": "aca3816cdbdf941da1e004a7e5985198cf615dcc9c116899440c3ccc377f8228",
+  "files": [
+    {
+      "path": "src/lib/date-night/halloween-2026-wave2-catalog.ts",
+      "reviewedSha256": "e7341361b06d0083b1bc47bf51fc04f5cab8a95a6d78b896d5b67662b6efc4c7",
+      "commitSha256": "e7341361b06d0083b1bc47bf51fc04f5cab8a95a6d78b896d5b67662b6efc4c7",
+      "match": true
+    },
+    {
+      "path": "src/lib/date-night/seasonal-presentation-catalog.ts",
+      "reviewedSha256": "787b4426df9318d7b85e23714614ad2556cfd78b8e4d6ffec619742b7b2d8bbf",
+      "commitSha256": "787b4426df9318d7b85e23714614ad2556cfd78b8e4d6ffec619742b7b2d8bbf",
+      "match": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-FROZEN-INPUTS.json",
+      "reviewedSha256": "7930bee7026862da73e103ceba8e6e9d8e42a39e669eeff8dae6114e57037300",
+      "commitSha256": "7930bee7026862da73e103ceba8e6e9d8e42a39e669eeff8dae6114e57037300",
+      "match": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/TAKEOVER-COPY-R3.json",
+      "reviewedSha256": "7d625f768086f847a9f074e94d00b5bb63700a1894dc9df846ada2fce88e9896",
+      "commitSha256": "7d625f768086f847a9f074e94d00b5bb63700a1894dc9df846ada2fce88e9896",
+      "match": true
+    },
+    {
+      "path": "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-R2-PRE-TAKEOVER.json",
+      "reviewedSha256": "6ba010aced6367e52b7f0e1b269801b5e6605d2e44dd5275219bbcc08b6d20af",
+      "commitSha256": "6ba010aced6367e52b7f0e1b269801b5e6605d2e44dd5275219bbcc08b6d20af",
+      "match": true
+    }
+  ],
+  "sourceRevalidationPerformed": false,
+  "runtimeValidation": "PENDING",
+  "releaseAuthorized": false
+}
