@@ -1,3 +1,33 @@
+# CURRENT — OWNER DECISION GATE AND PRESERVED PARTIAL WORK (2026-10-14, 18:04 UTC)
+
+## CURRENT
+- **PR70 remains frozen for owner release decision with QUALIFIED EXACT-HEAD HOSTED ACCEPTANCE PASS**, at **963d1e54954a8e6baa77ade00a052fbce39e5afb**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**, sole parent **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**. Fresh read confirms it remains draft. No merge or release occurred.
+- Fresh main remains **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**; production **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**, source exact main, **70 published identities**. Candidate total remains 82. Rollback2PV and all evidence/physical-device/alias limitations in the full acceptance entry below remain unchanged.
+- Illinois has **21 independently eligible future-research records**; the combined future queue contains **31**, ranked **15 recommended/16 reserves**. No second implementation PR exists. Research-data eligibility is not runtime or release acceptance.
+
+## Iowa superseding status
+- After the earlier offline plan, ordinary public-source reads resumed successfully. Existing Iowa lead/east/west research workers then hit the platform preview limit at approximately **17:55 UTC**. The reported reset text was **November 13, 5:55 PM**, with no timezone specified; it is not a verified UTC resume promise.
+- **23 provisional leads remain unverified; zero independent Iowa clearance and no final normalized implementation projections.** Partial resumed source JSONs are now preserved. Therefore the earlier “zero newly captured directory bodies” description applies only to the historical offline packet, not this later resumed work.
+- No replacement execution or alternate route was started to bypass the limit. Preserve source observations as partial evidence, not a completed statewide four-source sweep or proof of operation.
+- Private version-0 package **libfile_f79a4653f5b481919822ee2d3baffa8a**, **163,481 bytes**, SHA256 **fef1f7a6570e1d369d7522d2beefc7aa71b69f74be1bcf2cc35c3d80cc100cbf**, contains 23 members/22 source-manifest entries, all recovered and verified for paths/CRC/size/SHA. Manifest **e30c3ab6e2c9484163ae26e059cd2b4b11c33282c0f68128b2e45395664f7eb3**.
+
+## Missouri owner-evidence packet
+- The nine owner-field records remain **HOLD**, with no new factual clearance: Hannibal, Bakersfield, Rising, TerrifiedExist, Twisted Minds, Dark Lords, Zombie World, Lemp and Macabre.
+- Highest-value optional owner captures: **Hannibal, Bakersfield and Rising**; then TerrifiedExist and Twisted Minds. The packet identifies exact date/address/operation gaps and retained official starting links. Missing URLs were not invented. No new blocked-source retries, travel or operator contact occurred.
+- Private version-0 packet **libfile_8790603989148191854fe401ab44a1c8**, **14,940 bytes**, SHA256 **b09ed7a3ef6764028686115a4eed800dddd617dc2f1c7197ee6a2ff7ea4d5818**; five members/three manifest files recovered and verified. Manifest **79d6f615566530e696bd31397902216a0e83224a377ec59b9acf34a84f5f5c94**.
+- Separate readable capture request **libfile_8d9542141d00819199e2a513286a37af**, version 0, **4,172 bytes**, SHA256 **195061bba9299f74ab2fe43072946089c9612b7335d0c6dea75ebd3f43e63757**, exactly matches the packaged document.
+- Combined preservation receipt **partial-evidence-preservation-2026-10-14/PARTIAL-EVIDENCE-LIBRARY-PRESERVATION-RECEIPT.json**, SHA256 **bc1c3d52128ec50bcf5c0dde3b0db5892bfd34367437328b9194517cf04a59fe**. Preservation creates no factual/runtime clearance.
+
+## Documentation outcome and stopping boundary
+- The new checkpoint blob and tree succeeded, but its first create_commit returned **“user cancelled MCP tool call”** at approximately 17:59:56. No branch update was attempted at that point.
+- Owner explicitly answered **“Yes”** at18:00:35 to retry the documentation-only commit and publish. Fresh ref reconciliation preceded the identical retry. It succeeded as **77cc6eb4b8f10c47d955a9f43b33191133e99a7a**, tree **2681b58d7cdd3881c2a84b788ca78a8f3cc0a700**, parent **4f873f277625b6e91f4f7f0c6a3b78b4b2a4a887**. Nonforce expected-head publication and full readback passed; prior historical body was unchanged.
+- This timestamped addendum preserves that published body in full and reconciles later Iowa/owner-packet facts. Earlier unknown operation outcomes remain unknown; the explicit later cancellation and authorized retry are separate.
+- **NEXT: owner release decision for exact PR70**, retaining all qualified evidence limitations, including finite screenshot-artifact retention and missing raw terminal logs. No automatic release, second implementation PR or new waiver.
+- **HOLD: further Iowa work is platform-limited; physical Android/WebView/GPS/PWA/offline and signing/Play remain outside acceptance; Missouri evidence gaps remain.** Resume only through normal permitted access with source freshness and independent review.
+- The bounded mission has reached its practical work-horizon/platform-blocked stop with recoverable research and one clean release decision. Do not expand or mutate production while awaiting that decision. PR61 remains parked; **“Radial discovery becomes an audit layer.”** remains future intent.
+
+---
+
 # CURRENT — PR70 QUALIFIED PASS; ILLINOIS REVIEW AND FUTURE QUEUE PRESERVED (2026-10-14, 17:54 UTC)
 
 ## One owner release decision
