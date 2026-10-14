@@ -840,4 +840,113 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
       "May be canceled for weather; check within 48 hours of the event."
     ]
   }
+  "KS26-W1-WALTERS": {
+  "canonicalId": "date-night-ks26-walters",
+  "confidence": "good",
+  "details": [
+    "Haunted wagon ride and two barns on select nights, September 18–October 30, 2026.",
+    "Gates open 7:30 p.m.; first wagon 8 p.m.; gates close 11 p.m. Final exit time is unconfirmed.",
+    "Separate haunt ticket required. Recommended for ages 12+.",
+    "Location is approximate."
+  ]
+},
+  "IL26-W1-spook": {
+  "canonicalId": "date-night-il26-w1-spook",
+  "confidence": "good",
+  "details": [
+    "Current ticket occurrence shows18:00 start; complete admission/closing hours unknown.",
+    "Intense indoor/outdoor attraction; under13 not recommended, but all ages allowed.",
+    "One ticket covers Spook Hollow, M.C. Manor and M.C. Nightmare; these are components of one venue. No refunds except stated organizer-cancellation policy.",
+    "Speed pass shortens wait but does not promise immediate access.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-boo": {
+  "canonicalId": "date-night-il26-w1-boo",
+  "confidence": "good",
+  "details": [
+    "Current2026 ticket event: Fridays/Saturdays in October except Halloween. Box office18:30; scares19:00; full closing not established.",
+    "Under12 requires adult; no minimum age otherwise. Most, not all, areas accessible; wood-chip trail may be difficult.",
+    "No single regular GA tickets; regular GA groups2–6, VIP minimum4; max6 enter together. Timed queue entry; capacity may sell out before travel.",
+    "Appropriate footwear; no costumes/props or recording inside. Rain operation may stop for severe weather. No refund except organizer cancellation policy.",
+    "Actor proximity/incidental collision possible; do not promise no-contact.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-sonny-acres-haunted-experiences": {
+  "canonicalId": "date-night-il26-w1-sonny-acres-haunted-experiences",
+  "confidence": "good",
+  "details": [
+    "Select published nights only; date bounds are not daily operation. Haunted experiences run through October 30; Friday/Saturday haunted hours end 22:00 CDT. Farm, bar and festival hours do not extend this endpoint.",
+    "Paid haunted-experience tickets. Advance purchase recommended because dates may sell out. Dogs are not permitted during Fall Fest. Free on-site parking and overflow shuttle arrangements are provided.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-hayride-horror-bayou": {
+  "canonicalId": "date-night-il26-w1-hayride-horror-bayou",
+  "confidence": "good",
+  "details": [
+    "Select published nights only; date bounds are not daily operation. Final October 30 session and last-ticket endpoint is 22:00 CDT. This is listing/admission-based retirement, not guaranteed final exit; queued guests may continue.",
+    "October 29 offers Curse of the Bayou only, with no hayride. Tickets are date-specific. Outdoor event is weather-dependent. Proper footwear is required; no flip-flops, sandals or high heels. No costumes, weapons or alcohol. Parents should use discretion for children.",
+    "Ordinary ticket sales are final and nonrefundable. If the venue or organizer cancels an event, ticket purchases are refunded within four business days of the event date.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-217": {
+  "canonicalId": "date-night-il26-w1-217",
+  "confidence": "good",
+  "details": [
+    "Supported future subset only: Fri/Sat19:00–23:00; Sun/Thu18:00–21:00. Last scheduled dateOct31. Official 217 Terror 2026 ticket event duration ends October 31 at 23:00 CDT; future-only supported date subset is unchanged.",
+    "Operator warning excludes pregnancy, intoxication, casts, medical braces, crutches, physical limitations, and listed medical/respiratory/heart/seizure concerns. The warning also prohibits entry while taking medications or drugs; preserve the exact warning for operator clarification rather than give medical advice.",
+    "Four attractions at one venue and one ticket; no intentional touching. No age minimum; operator says11-and-under should have adult.",
+    "Indoor haunt and waiting; free parking; no photos/video, phones/lighters/flashlights inside. Ticket waiver and no-refund terms apply.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-paintball": {
+  "canonicalId": "date-night-il26-w1-paintball",
+  "confidence": "good",
+  "details": [
+    "2026Oct9/10/16/17/23/24/30/31 19:00–22:00; gates18:00.",
+    "Zombie paintball bus followed by a haunted trail; targets do not fire back. The operator generally recommends ages five and up for the bus, not a hard minimum. Guests skipping the scary trail may ride the bus back.",
+    "No reservations; prepurchase or gate, first come/served; keep operator capacity claims qualified rather than promise availability.",
+    "Stops for thunderstorms/lightning or heavy rain; check current operator updates.",
+    "Separate ordinary paintball/airsoft hours excluded from seasonal hours.",
+    "Every participant must complete and sign the required waiver. For participants under 18, a parent or guardian must sign the waiver. The operator provides online submission; do not imply an assistant has signed or accepted it.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "IL26-W1-chitty": {
+  "canonicalId": "date-night-il26-w1-chitty",
+  "confidence": "good",
+  "details": [
+    "2026 Fridays/Saturdays October 2–31: haunt 19:00–midnight; ticket office 18:30–23:30. Final closing is midnight after October 31.",
+    "Operator says the haunt is not wheelchair accessible: uneven and moving floors and stairs. Guests with prior injuries or medical conditions should not enter. No strict age minimum; parental discretion and not intended for younger children.",
+    "No-touch haunt; virtual queue sends text when group is called; max6/group, larger groups split.",
+    "Strobes, fog, moving floors, darkness and sudden effects; operator excludes pregnancy and conditions/medication impairing safe reaction; no intoxication.",
+    "No weapons/fire/recording/flashlights; no refunds. Groups15+ require reservation24hours ahead for group pricing.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
+  "KS26-W1-NIGHTMARE": {
+  "canonicalId": "date-night-ks26-nightmare",
+  "confidence": "good",
+  "details": [
+    "Indoor haunted festival at Exhibition Hall, October 16–18,23–25 and 30–31, 2026. October 31 is Blackout Night.",
+    "Doors 6:45 p.m.; event 7–10:30 p.m.",
+    "Festival entry is free; haunted attractions and activities require paid tokens sold at the door. Advance sales only for group experiences. Clear bags only.",
+    "Location is approximate; use the venue’s visitor address."
+  ]
+},
+  "AR26-W1-012": {
+  "canonicalId": "date-night-ar26-royal",
+  "confidence": "good",
+  "details": [
+    "October 15–17, 22–24 and 29–31, 2026. Thursdays 7–9 PM; Fridays and Saturdays 7–10 PM.",
+    "Requires walking and stairs; no wheelchair-accessible route. No admission with casts, braces or crutches, or while intoxicated.",
+    "Strobes, fog and narrow areas; operator warns against admission during pregnancy or with heart, breathing, seizure or other medical conditions.",
+    "Entry is first-come, first-served, except skip-the-line tickets. Tickets may sell out; no refunds or touching actors/props.",
+    "Location is approximate. Directions use the visitor address."
+  ]
+},
 };
