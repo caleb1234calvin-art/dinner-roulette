@@ -1,3 +1,41 @@
+# CURRENT — DRAFT PR #70 PUBLISHED; EXACT-HEAD HOSTED VALIDATION IN PROGRESS (2026-10-14)
+
+## Current candidate
+- Draft PR **#70**: https://github.com/caleb1234calvin-art/dinner-roulette/pull/70
+- Branch: **integration/regional-wave1-2026-10-14**.
+- Remote SHA: **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**.
+- Tree: **096aaa2c2b78962c5d3e2a92bc510cface3d618e**.
+- Sole parent: **6c619adda4d9ef3b2683befb2ca874b257505eb2**.
+- One commit and 26 changed paths. The candidate adds the exact selected 12 regional records, for 82 candidate identities; all 70 released records and presentations remain unchanged. It is open, draft and unmerged. No successor release authority exists.
+- Independent review compared the entire remote recursive tree with local R2: **1,432 files and 89 directories**, all paths, modes, types and object IDs identical, without truncation. Remote commit metadata differs from local **b455d0dc6ff7603b1efd56a24aec96061b8333e1**, but the complete tree and sole parent are equal.
+- **Independent source-only PASS is rebound to this exact remote identity.** Receipt: regional-candidate-source-rebind/SOURCE-VERDICT-REBIND-cbf17b70.json, SHA256 **e0fd8c4573c05e5bd2507a3ffbc968654f7ca6405be51fe82d7c4ab10cb883fc**. The original 185-check source review remains **c385e1a5fecea2a51b8b621edc14a6f526865a0e7fa67fd8edbc0c9097588c6a**.
+- Local 1,242 repository and 71 application tests, typecheck, lint and safe authenticated build results were executed on local R2. They remain **source-equality-qualified local evidence**, not newly executed remote exact-head runs. Original R1 failures, local browser failures and publication interruptions/cancellations remain preserved below.
+
+## Validation gates
+- Fresh GitHub read at approximately 07:24 UTC: web/browser run **38527728125 IN_PROGRESS**, Android run **38527728064 IN_PROGRESS**, both at exact **cbf17b70787a2d8ee247eb9183d45fe9d1b73755**.
+- Exact-head hosted tests, browser journeys, geometry, Android original-artifact inspection and final independent acceptance remain **PENDING/HOLD**. No aggregate candidate PASS or release-ready declaration.
+- Local browser executed zero scenarios because of the recorded environment blocker. Hosted execution must establish its own result; it cannot retrospectively turn that local attempt into PASS.
+- Any source mutation requires a new exact SHA/tree and fresh affected gates. Do not transfer execution results from an old head without an explicit justified binding.
+
+## Production and authority
+- Fresh main remains **6c619adda4d9ef3b2683befb2ca874b257505eb2**, tree **236110f86f9f3dc8c0cf0a5a664be79e2569bc43**.
+- Project latest production remains **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**, source released main; **70 published identities**. PR69 release is complete. No production change occurred for PR70 or this documentation.
+- Supported immediate rollback remains **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ**, source **3b6b9ed0f4be1581b3b541207b2637183fff57d3**. Prior authenticated route and generated-alias limitations remain unchanged; no new rollback exercise.
+- Owner's 07:14 resumption resolved both previous publication cancellations. The single regional draft PR and routine documentation publication are authorized; **merge, deployment, a second implementation PR and a new release waiver are not authorized**.
+
+## Next
+1. Complete exact-head hosted validation and inspect original evidence independently. Preserve failures and make only justified bounded corrections, with new-head verification where required.
+2. Run bounded Illinois discovery in parallel, **30–50 leads**, using Haunts.com, The Scare Factor, FrightMaps and FrightFind, followed by field-level official evidence and deduplication. Produce evidence, state ledgers and future implementation queues only.
+3. Keep PR70 as the sole successor implementation/release-decision candidate. Run-ahead research must not create another implementation PR or add unreviewed records to its frozen scope.
+4. Update and fully read back continuity at the next material validation or research gate.
+
+## Holds and history
+- Regional factual HOLDs, Warehouse October22 no-scare subtype mapping, physical Android/WebView/GPS/installed-PWA acceptance and inherited warning/visual/provider limitations remain separate and unchanged.
+- Cadaver and Werehouse are live; do not reopen superseded clearance blockers. PR61 is parked. **“Radial discovery becomes an audit layer.”** remains future product intent.
+- This documentation-only entry supersedes the prior “no remote PR confirmed” state. Full prior canonical **97e18c33064d9ac596cff05d62d81b41635b3058** is preserved, including failed attempts and recovery limits. Publication is on deployment-disabled **integration/continuity-refresh-2026-10-07**, with full readback required.
+
+---
+
 # CURRENT — REGIONAL R2 LOCAL VALIDATION PASS; PUBLICATION RESUMING (2026-10-14)
 
 ## CURRENT
