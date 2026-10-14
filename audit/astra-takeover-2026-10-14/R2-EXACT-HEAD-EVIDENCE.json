@@ -1,0 +1,318 @@
+{
+  "observedAt": "2026-10-14T22:55:49Z",
+  "handoff": "d08962ea1e07c66f7374b18ee3e5741612f254c2",
+  "main": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
+  "mainTree": "c7c49796abc809c4a00690cd282f69920e325bbc",
+  "releasedCount": 82,
+  "production": "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+  "productionState": "READY",
+  "candidate": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+  "candidateTree": "f316c81634a9735a742baa635c44b4c92984c03a",
+  "candidateParent": "328f30a482034f9f9eccd46da6d1995c4faf7be0",
+  "candidateState": "OPEN/DRAFT/UNMERGED",
+  "webRun": 38646830691,
+  "androidRun": 38646830940,
+  "webJobs": [
+    {
+      "id": 116135639334,
+      "name": "checks",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639559,
+      "name": "Browser (seasonal-ranked-holds)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639611,
+      "name": "Browser (seasonal-regional-wave1)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639613,
+      "name": "Browser (casino)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639680,
+      "name": "Browser (geometry)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639907,
+      "name": "Browser (seasonal-completeness-v1)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639972,
+      "name": "Browser (seasonal-hold-cleanup)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135639986,
+      "name": "Browser (seasonal-cumulative)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640004,
+      "name": "Browser (seasonal-astra)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640023,
+      "name": "Browser (seasonal-two)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640028,
+      "name": "Browser (seasonal-phase4)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640052,
+      "name": "Browser (seasonal-astra-extras)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640066,
+      "name": "Browser (date-night-radial)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640077,
+      "name": "Browser (seasonal-next-missouri)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640080,
+      "name": "Browser (location)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116135640280,
+      "name": "Browser (seasonal-ten)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116145112594,
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "browserScenariosExcludingCasinoLocation": 1753,
+  "geometry": {
+    "comparisons": 774,
+    "recordIds": 92,
+    "width320Comparisons": 258,
+    "wave2Comparisons": 90,
+    "wave1Comparisons": 108,
+    "errors": 0,
+    "scope": "SSR/component Chromium geometry; not hydrated integrated app"
+  },
+  "android": {
+    "package": "com.calebcalvin.pickforus",
+    "unsignedAabSha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+    "lintWarnings": 14,
+    "missingKeyFailClosed": true,
+    "physicalAcceptance": false
+  },
+  "artifactCount": 18,
+  "artifactBytes": 1247498585,
+  "artifactEntryCount": 12653,
+  "artifactManifestSha256": "6e615bbecbeb1649fe1770ade04012bc5868467650cbfc34605b045f31bb9b83",
+  "artifacts": [
+    {
+      "id": 11932009222,
+      "name": "PickForUs-Android-lint-f9d99f95efa8b55735d0fd6e1f32abae08c2c908",
+      "size_in_bytes": 24068,
+      "digest": "sha256:2fe7ca49642ecca0549b94b479e01ef1b2166ee4c39ffe8c9c0125ef12147cc0",
+      "expires_at": "2026-10-28T22:23:11Z",
+      "entries": 3,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11932932238,
+      "name": "casino-browser-evidence-casino",
+      "size_in_bytes": 219765,
+      "digest": "sha256:946a5e93a9f340ea919db9b504df851f015c26181386529f252830010c40c717",
+      "expires_at": "2026-10-28T22:20:21Z",
+      "entries": 7,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11932442594,
+      "name": "casino-browser-evidence-date-night-radial",
+      "size_in_bytes": 3288588,
+      "digest": "sha256:325fa85ec33bbdae6fd304b54e86ef6a8077dc20e40c1a809f299cf7584299bb",
+      "expires_at": "2026-10-28T22:22:31Z",
+      "entries": 15,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11931919108,
+      "name": "casino-browser-evidence-location",
+      "size_in_bytes": 429210,
+      "digest": "sha256:52a0f5352d0f2d67635d0cae93c781a77d989b4be6d182ae995f3a96acf439aa",
+      "expires_at": "2026-10-28T22:21:17Z",
+      "entries": 8,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11934110252,
+      "name": "casino-browser-evidence-seasonal-astra-extras",
+      "size_in_bytes": 86748160,
+      "digest": "sha256:dd92be1dbc1b4283a54ef0d1a34d348ce5a84c82a3417c3e6ded01b164205bdd",
+      "expires_at": "2026-10-28T22:34:40Z",
+      "entries": 697,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933467251,
+      "name": "casino-browser-evidence-seasonal-astra",
+      "size_in_bytes": 94568266,
+      "digest": "sha256:5684324ea9976db2f553f5410ff099c9bb22fdcc5d645f21c015ecff8e39e395",
+      "expires_at": "2026-10-28T22:35:49Z",
+      "entries": 729,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933207330,
+      "name": "casino-browser-evidence-seasonal-completeness-v1",
+      "size_in_bytes": 58588424,
+      "digest": "sha256:c3756e9719b8824a26777c5b0542b68d57d3fb7ac18818100cd3a20798f08e38",
+      "expires_at": "2026-10-28T22:25:16Z",
+      "entries": 521,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11934065711,
+      "name": "casino-browser-evidence-seasonal-cumulative",
+      "size_in_bytes": 116371480,
+      "digest": "sha256:b9bebe8a206b4ffb8236e3f1488e0c3a7baa8eac0c08626b160cedc99402679b",
+      "expires_at": "2026-10-28T22:37:28Z",
+      "entries": 944,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933192404,
+      "name": "casino-browser-evidence-seasonal-hold-cleanup",
+      "size_in_bytes": 20529206,
+      "digest": "sha256:aaf22946a91caf808309b4453be1e08aa05942c8e1c1bd7e5b2505f09712e399",
+      "expires_at": "2026-10-28T22:25:03Z",
+      "entries": 184,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11932877992,
+      "name": "casino-browser-evidence-seasonal-next-missouri",
+      "size_in_bytes": 30262611,
+      "digest": "sha256:2b966e6422903a81040c67e905f46a185229aeb12b626cc94da5743b7f8fc107",
+      "expires_at": "2026-10-28T22:24:49Z",
+      "entries": 286,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933263209,
+      "name": "casino-browser-evidence-seasonal-phase4",
+      "size_in_bytes": 68422536,
+      "digest": "sha256:a099d76956e52447adbc7fd883a62eae396dad6b49ead17d23197bd145d78916",
+      "expires_at": "2026-10-28T22:30:25Z",
+      "entries": 587,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11932803912,
+      "name": "casino-browser-evidence-seasonal-ranked-holds",
+      "size_in_bytes": 77468358,
+      "digest": "sha256:f986a3482554467e403626819b88f30d966699e4deee0f669d03ece0902d3795",
+      "expires_at": "2026-10-28T22:33:15Z",
+      "entries": 586,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933581063,
+      "name": "casino-browser-evidence-seasonal-ten",
+      "size_in_bytes": 77552339,
+      "digest": "sha256:4c431e393d395bf91d224d069d9673d20f46ad27ad63dfbb2d60629bbed1509a",
+      "expires_at": "2026-10-28T22:33:21Z",
+      "entries": 598,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933177788,
+      "name": "casino-browser-evidence-seasonal-two",
+      "size_in_bytes": 22717122,
+      "digest": "sha256:26202fd6b0f24e5c397dc04c144dacf65f978fb67f742fe7d6e28f810c132ac4",
+      "expires_at": "2026-10-28T22:22:56Z",
+      "entries": 222,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11931999238,
+      "name": "PickForUs-Android-validation-f9d99f95efa8b55735d0fd6e1f32abae08c2c908",
+      "size_in_bytes": 6866411,
+      "digest": "sha256:f106c6c8acb8d40b5224651e445ea138e3673f2fedab7557734d403a1a7ad838",
+      "expires_at": "2026-10-28T22:23:10Z",
+      "entries": 8,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11934246672,
+      "name": "casino-browser-evidence-geometry",
+      "size_in_bytes": 449930727,
+      "digest": "sha256:f28f4a6d0c877be782873587f2a3cacb219acc4c292dd3f858dfde2d5201afa2",
+      "expires_at": "2026-10-28T22:44:08Z",
+      "entries": 6264,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11933261741,
+      "name": "validation-check-build-proof",
+      "size_in_bytes": 391,
+      "digest": "sha256:53a67454162346a6647ab22c46b2fc34b6c7177ac836bd5915e1335cf5202ee2",
+      "expires_at": "2026-10-28T22:21:27Z",
+      "entries": 1,
+      "saveStatus": "succeeded"
+    },
+    {
+      "id": 11934840071,
+      "name": "casino-browser-evidence-seasonal-regional-wave1",
+      "size_in_bytes": 133510923,
+      "digest": "sha256:45948a61788893946a94f54ff72750a37e6a2749e489e5e755f5e1709b420496",
+      "expires_at": "2026-10-28T22:43:58Z",
+      "entries": 993,
+      "saveStatus": "succeeded"
+    }
+  ],
+  "currentVerdict": "HOLD: three copy defects and new-ten integrated browser omission; bounded remediation in same PR",
+  "noMergeDeploy": true,
+  "casinoChecks": 16,
+  "locationChecks": 19,
+  "repositoryTests": {
+    "passed": 1244,
+    "skipped": 4,
+    "failed": 0
+  },
+  "applicationTests": {
+    "passed": 71,
+    "failed": 0
+  },
+  "webLintWarnings": 6
+}

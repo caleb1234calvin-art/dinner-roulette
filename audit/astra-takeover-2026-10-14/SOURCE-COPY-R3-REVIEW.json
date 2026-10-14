@@ -1,0 +1,54 @@
+{
+  "revision": "PR72-INDEPENDENT-COPY-R3",
+  "reviewedAt": "2026-10-14T22:55:48Z",
+  "parent": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+  "candidateCommit": null,
+  "candidateTree": null,
+  "commitBinding": "PENDING",
+  "correctionVerdict": "PASS_FOR_HASHED_FILES",
+  "overallCopyVerdict": "QUALIFIED",
+  "releaseAuthorized": false,
+  "sourceMutationsByReviewer": false,
+  "closedFindings": [
+    "COPY-SONNY-ADMISSION",
+    "COPY-HAYRIDE-PARENTAL",
+    "COPY-CHITTY-RESTRICTIONS"
+  ],
+  "copyPassRecordIds": [
+    "IL26-W1-spook",
+    "IL26-W1-sonny-acres-haunted-experiences",
+    "IL26-W1-hayride-horror-bayou",
+    "IL26-W1-paintball",
+    "IL26-W1-chitty",
+    "KS26-W1-NIGHTMARE",
+    "AR26-W1-012"
+  ],
+  "copyQualifiedRecordIds": [
+    "KS26-W1-WALTERS",
+    "IL26-W1-boo",
+    "IL26-W1-217"
+  ],
+  "checks": {
+    "onlyThreeCatalogNotesChanged": true,
+    "allTenNonCopyFieldsUnchanged": true,
+    "all92PresentationIdentityConfidenceUnchanged": true,
+    "unchangedPresentationObjects": 89,
+    "catalogFrozenParity": true,
+    "presentationFrozenParity": true,
+    "priorFrozenPreservedByteForByte": true,
+    "receiptBeforeAfterExact": true
+  },
+  "sha256": {
+    "src/lib/date-night/halloween-2026-wave2-catalog.ts": "e7341361b06d0083b1bc47bf51fc04f5cab8a95a6d78b896d5b67662b6efc4c7",
+    "src/lib/date-night/seasonal-presentation-catalog.ts": "787b4426df9318d7b85e23714614ad2556cfd78b8e4d6ffec619742b7b2d8bbf",
+    "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-FROZEN-INPUTS.json": "7930bee7026862da73e103ceba8e6e9d8e42a39e669eeff8dae6114e57037300",
+    "audit/halloween-wave2-2026-10-14/TAKEOVER-COPY-R3.json": "7d625f768086f847a9f074e94d00b5bb63700a1894dc9df846ada2fce88e9896",
+    "audit/halloween-wave2-2026-10-14/ADAPTED-TEN-R2-PRE-TAKEOVER.json": "6ba010aced6367e52b7f0e1b269801b5e6605d2e44dd5275219bbcc08b6d20af"
+  },
+  "reportSha256": "34cafff26cf46145f951abd5b2071fd5c6a91bd884b4418aa193e7c9e91a77f5",
+  "remaining": [
+    "Bind exact bytes to frozen commit/tree",
+    "Exact-head external checks/browser/geometry",
+    "Inherited supplementary source freshness qualifications from R1"
+  ]
+}
