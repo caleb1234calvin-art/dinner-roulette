@@ -1,3 +1,62 @@
+# CURRENT — CLOSEOUT PARTIAL ACCEPTANCE AND INTERRUPTED REFRESH (2026-10-14, 21:13 UTC)
+
+- PR70 remains released at main **0344ccce79ce157196ff9e84b1aaf3e40802afc5**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**; last independently verified production **dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb READY**, source exact main, 82 source identities. Main was freshly re-read for this checkpoint. No source, main, production or settings mutation occurred.
+- **Both current continuity documents are published on integration/continuity-refresh-2026-10-07**, the verified deployment-disabled route. The full RELEASE_CONTINUITY body from continuity/release@2f0e07a8 is preserved here. Leave that old branch untouched: its separate old-package preview failure does not affect patched production.
+- The earlier 19:38 baseline entry below is timestamped history. Its “running” work descriptions are superseded: live acceptance and research workers subsequently failed with platform preview-limit messages. Reported November13 reset text had no specified timezone. No replacement execution or access bypass was attempted.
+- **No new implementation candidate was created. The fresh 31-record review is unfinished.** Previous research clearance remains historical input, not a completed fresh review. Do not infer new PASS/HOLD totals from incomplete captures.
+
+## Kansas City partial result
+- Actual cloud-browser observations: Kansas City, Kansas; Haunted House only; Spooky ON; Open Now OFF. At15 miles, three saved activities appeared at19:33:14UTC with incomplete-coverage and saved-place banners. One explicit retry at19:33:55 did not clear the failure. At50 miles the same three remained at19:35:21.
+- Observed: Beast, Edge of Hell and Worlds of Fun Halloween Haunt. Open Now ON yielded zero, consistent with shipped conservative policy; this does not prove actual operating hours.
+- Pinned source/geometry review identifies an **inherited failed-core gating limitation**: provider fallback is display-only core data and failed core prevents outer acquisitions. Three outer curated identities would be within50 miles for every center compatible with the displayed Beast distance: **Exiled KC, Dark Nightmares Haunted Forest and Terror at the Ranch**.
+- This outer membership is source/geometry inference. The exact browser geocoded center was not exposed. Reviewed logic was extracted at exact released0344, not the stale local worktree. No runtime/provider benchmark or source edit was performed.
+- Existing19:33–19:34 production receipts show seasonal mirror timeouts/HTTP504 and zero successful groups. They support observed upstream failure; no coordinates in those logs establish exact browser-request correlation, and deeper outage cause remains unknown.
+- **Honest saved-core fallback PASS; full-radius/provider acceptance HOLD; PR70 regression NOT OBSERVED.** The acquisition logic predates PR70. Do not call the issue transient/resolved. A separate bounded repair decision is needed before changing outer-curated availability during outages; keep it distinct from content work.
+- Report **closeout-2026-10-14/kc-source-review/KC-SOURCE-REVIEW.md**, SHA256 **81bc6c1959b9266e4fbd17b68e168b3028910882cd003abd5d43db68a911e40b**; manifest **a087dce067c58880e7e91e186b9c31c50f4eceb1b35a2197fee68e7642563be0**. Partial browser receipt **closeout-2026-10-14/live-acceptance/browser-observations-part1.json**, SHA256 **d89af861a75155748b2aac1120753df120c3944b77df327a5f62aff4490f6a4f**. Local evidence is not claimed privately uploaded by this checkpoint.
+
+## NEXT / HOLD
+- Resume the unfinished live regional/Options/Result/Details/Plan/OFF/radius checks and31-record source refresh only through normal available execution. No scripted or unobserved action counts as PASS.
+- Current rollback activation permission remains **HOLD403 deploymentRollback**, despite AQ75/2PV READY retention. Effective hosted build override remains unexposed; actual J7T Vite logs had no migration invocation. Never use migration-chaining npm run build.
+- Physical Android/WebView/GPS/PWA, provider reliability, inherited UI limits, finite October28 screenshot retention, Iowa23 provisional and nine Missouri owner-field HOLDs remain distinct.
+- Owner approved this documentation checkpoint at21:12:37. The earlier pending blob operation completed successfully; its prepared baseline bodies are preserved below, with this addendum added before commit. No prior uncertain operation was retried or misreported.
+- This is a recoverable partial-work checkpoint, not completion of the requested closeout or authorization for merge/deployment. October25 remains a content target; no new candidate or release decision is asserted. PR61 remains parked.
+
+---
+
+# CURRENT — CLOSEOUT TAKEOVER BASELINE WITH OPERATIONAL HOLDS (2026-10-14, 19:38 UTC)
+
+## Authoritative release state
+- PR70 is **merged**, not pending: main **0344ccce79ce157196ff9e84b1aaf3e40802afc5**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**, parents **6c619adda4d9ef3b2683befb2ca874b257505eb2** and **963d1e54954a8e6baa77ade00a052fbce39e5afb**. Its reviewed tree is unchanged.
+- Fresh production read: **dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb READY**, source exact main, **82 curated source identities**. Independent control-plane receipts bind all five aliases to J7T; www redirects308 to apex. This alone is not all-record interactive acceptance.
+- Frozen independent baseline **closeout-2026-10-14/baseline/BASELINE-VERIFICATION.json**, SHA256 **d14283d1876a38599841e3831d5e60e3afc70d49a5a48ede3f85e7160d24d954**; manifest **6d5ba335a7b4a92bb51c3db2ae852581b976db17a6145b4b754e525c49c57997**. Observation window19:31:35–19:35:42UTC. Identity and alias baseline PASS with operational HOLDs.
+
+## Safe continuity location
+- **Both AI_CONTINUITY.md and RELEASE_CONTINUITY.md are now maintained on deployment-disabled integration/continuity-refresh-2026-10-07.** This update adds the full release master from **continuity/release@2f0e07a8c69f2ff72020a8292bec786b05f182ef**, preserving its body verbatim below the new checkpoint. AI history from **b4dd9190993a5aa7ea4d9c33b73c919e98c24958** is likewise preserved exactly.
+- **Do not write continuity/release for routine updates.** It is not deployment-disabled: commit2f0e07a8 triggered nonproduction **dpl_BxCZjos8sUVv1WXComjvt2XW7Arz ERROR**, BLOCKED_PACKAGE, old @tanstack/react-start1.168.49. Current main pins patched1.168.60 and production remains READY. This historical documentation-branch failure is not evidence of a current production vulnerability.
+- Verified repository deployment exclusion covers **integration/** only. No Vercel setting, ignore rule, dependency or source change is made here; continuity/release remains untouched at2f0e07a8. Its old release-master location is historical; this integration branch is the safe current update location for both files.
+
+## Rollback and build safety
+- Prior **AQ75 (dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf)** remains READY at6c619; older **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ** remains READY at3b6b9ed0. **Retention/identity PASS; current activation eligibility and permission HOLD.**
+- A read-only rollbackCandidate request returned **403 forbidden, resource deploymentRollback**. No retry, alternate credentials, bypass or activation was attempted. READY metadata and historical alias arrays do not prove current restoration permission or present alias assignments. Any future authorized restore requires supported access plus all-alias and interactive verification.
+- **Effective hosted build override remains unexposed/HOLD.** Project responses omit buildCommand/ignoreCommand; CLI absent. Fresh J7T logs show completed Vite client/SSR builds and no migration invocation in returned events. That observation does not prove all future build paths safe.
+- Repository **npm run build chains db:migrate** and must not be used for this work. Preserve the vetted migration-free authenticated Vite route. No migration, build, credential, main or production mutation was performed by this baseline lane.
+
+## Live acceptance and current research
+- Issue71 and both comments were read in full. Earlier live Joplin/RIP Details flow is recorded as bounded evidence. Kansas City15-mile search observed three matching activities with truthful incomplete-coverage/saved-place fallback; **50-mile completeness remains HOLD**, and full seasonal OFF/Options/Result/Details/Plan/regional acceptance is still running.
+- Exact19:33–19:34 server logs show seasonal fallback after mirror timeouts and HTTP504; outdoor fallback also appears. These support observed upstream failure, not a demonstrated application regression or root cause. Logs lack coordinates and cannot alone identify a specific city/browser request. Empty generic error queries do not erase the precise warning records.
+- Source-only inherited gating analysis is pending its final report; do not preclaim diagnosis or remediation. No runtime correction is approved by this checkpoint.
+- Fresh revalidation of the **31-item future research queue** is running. The previously ranked15 and reserve16 are research inputs, not newly cleared import objects. Prioritize actual useful remaining dates; Dark Hollows' remaining window needs explicit consideration. **No new candidate exists yet.**
+- Owner authorizes one bounded nonproduction successor after factual/placement review and full independent exact-head validation. October25 is the major-content target, not permission to skip gates. No merge/deployment, migrations, credential changes or Android/Play release authority.
+
+## NEXT / HOLD
+- Finish honest live regional acceptance and bounded Kansas City diagnosis; distinguish provider failure, inherited behavior and actual regressions.
+- Complete field-level queue freshness review, independently verify useful records, and only then prepare one bounded candidate. Retain exact lifecycle, no2027 recurrence, conservative Open Now and supported routing.
+- Keep rollback activation and effective override HOLD until supported read/access evidence resolves them. Preserve physical Android/WebView/GPS/PWA, provider/weather/ticket, approximate placement and inherited UI limitations.
+- Screenshot-bearing originals expire October28; preserve the exact allowed-byte/retention boundaries already documented. Iowa23 provisional/zero clearance and nine Missouri owner-field HOLDs remain outside automatic import. PR61 remains parked.
+- This is documentation only on the verified excluded integration branch. Full prior histories follow unchanged; no old pending-release statement overrides the released baseline.
+
+---
+
 # CURRENT — PR #70 RELEASED; REGIONAL WAVE 1 PRODUCTION ACCEPTANCE BOUNDARY (2026-10-14)
 
 ## Released exact identity and owner authority
