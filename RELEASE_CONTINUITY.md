@@ -1,3 +1,21 @@
+# CURRENT — Pick For Us PR #70 production release (October 14, 2026)
+
+**Release complete: PR #70 merged and Vercel production READY.** Earlier September milestones below remain historical, not the current production baseline.
+
+- Owner explicitly approved PR #70. Exact frozen candidate `963d1e54954a8e6baa77ade00a052fbce39e5afb` with reviewed tree `c7c49796abc809c4a00690cd282f69920e325bbc`.
+- GitHub merge-commit `0344ccce79ce157196ff9e84b1aaf3e40802afc5` was read back on `main`. Its tree is identical to reviewed candidate; parents are old main `6c619adda4d9ef3b2683befb2ca874b257505eb2` and approved candidate head. [PR #70](https://github.com/caleb1234calvin-art/dinner-roulette/pull/70) is closed/merged.
+- **82 curated seasonal source identities** in main (70 prior +12 regional: 2 Kansas, 5 Arkansas, 5 Oklahoma). Previously released 70 full records/presentations retained.
+- **Production READY:** `dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` at merge `0344ccce...`; target Vercel project `prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm`. All five Vercel aliases independently mapped to this deployment: `pickforus.app`, `www.pickforus.app` redirecting to apex, `dinner-roulette-chi.vercel.app`, `dinner-roulette-minions-9e2c.vercel.app`, and `dinner-roulette-git-main-minions-9e2c.vercel.app`.
+- External unauthenticated homepage fetch of `https://pickforus.app/` returned **HTTP 200** with Pick For Us homepage content. **Interactive live regional listings/filters and physical device tests remain unperformed**; avoid describing the public fetch as those journeys.
+- **Immediate supported rollback candidate:** previous READY `dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf` at main `6c619adda4d9ef3b2683befb2ca874b257505eb2` (70 records). Older READY fallback `dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ`. No rollback performed. On any rollback verify apex, www, other aliases and interactive behavior independently.
+- Frozen independent acceptance: **QUALIFIED PASS**; exact-head workflows `38593086320` (web/browser) and `38593086226` (Android unsigned readiness) succeeded. Evidence: 1,242 repository +71 application tests PASS, four inherited skips, 684/684 geometry comparisons and strict R3 assertions, 1,753 overlapping browser scenario-lane executions (including 317 regional). Original earlier geometry failures remain historical, not erased by R3.
+- Build safety: `npm run build` still chains `db:migrate`. Historical Vercel release logs show direct Vite builds, but effective hosted build-command override was not read directly. No database migration, Play upload, signing, secret/config change or explicit standalone deployment action was performed by the assistant. Keep migration-free release safeguards mandatory.
+- Held boundaries: actual Android/WebView/GPS/PWA, visual 320px Directions overflow, partial provider/weather/ticket reliability and approximate coordinates; 31 research records queued (15 ranked/16 reserve), incomplete Iowa 23 provisional/0 cleared, Missouri nine owner-HOLDs, PR #61 parked. Screenshot-bearing GitHub validation evidence expires **October 28, 2026**; retain original hashes and preserved packages while making no durability claims about expired images.
+- Source of truth for full chronological history: canonical `AI_CONTINUITY.md` on `integration/continuity-refresh-2026-10-07`, documentation commit **`b4dd9190993a5aa7ea4d9c33b73c919e98c24958`**, independently read back.
+- This release-master update is documentation-only on `continuity/release`, not merged into main; prior release-master history follows unchanged.
+
+---
+
 # Pick For Me — Release Continuity Master
 
 Updated: September 15, 2026
