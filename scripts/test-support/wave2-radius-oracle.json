@@ -1,0 +1,399 @@
+{
+  "sourceSha": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+  "sourceTree": "f316c81634a9735a742baa635c44b4c92984c03a",
+  "frozenInputSha256": "6ba010aced6367e52b7f0e1b269801b5e6605d2e44dd5275219bbcc08b6d20af",
+  "createdBy": "Independent adversarial reviewer; independent source-coordinate computation, not application/test author",
+  "method": "Python math spherical unit-vector cross/dot atan2 central angle, radius3958.8mi; independent initial bearing; documented core15 and bands20/4,30/7,40/9,50/11; no app geometry or runtime module imported. Coordinates read from exact immutable frozen JSON. Membership uses documented0.05mi UI tolerance; acquired membership uses strict patch radius.",
+  "scope": "Ten candidate identities only; synthetic manual-location controls, not live public geocoding or device GPS. Four origins cover cross-state plus outer acquisition. Every ID still requires individual own-origin application journey.",
+  "radiiMiles": [
+    1,
+    15,
+    25,
+    30,
+    50
+  ],
+  "uiRadiiMiles": [
+    1,
+    15,
+    30,
+    50
+  ],
+  "nonUiIndependentRadiusMiles": 25,
+  "canonicalIds": [
+    "date-night-ar26-royal",
+    "date-night-il26-w1-217",
+    "date-night-il26-w1-boo",
+    "date-night-il26-w1-chitty",
+    "date-night-il26-w1-hayride-horror-bayou",
+    "date-night-il26-w1-paintball",
+    "date-night-il26-w1-sonny-acres-haunted-experiences",
+    "date-night-il26-w1-spook",
+    "date-night-ks26-nightmare",
+    "date-night-ks26-walters"
+  ],
+  "locations": [
+    {
+      "key": "KS",
+      "locality": "Wave 2 Topeka control",
+      "region": "Kansas",
+      "lat": 39.034496091335,
+      "lon": -95.683529000007,
+      "expected": {
+        "1": [
+          "date-night-ks26-nightmare"
+        ],
+        "15": [
+          "date-night-ks26-nightmare"
+        ],
+        "25": [
+          "date-night-ks26-nightmare"
+        ],
+        "30": [
+          "date-night-ks26-nightmare"
+        ],
+        "50": [
+          "date-night-ks26-nightmare"
+        ]
+      },
+      "expectedAcquired": {
+        "1": [
+          "date-night-ks26-nightmare"
+        ],
+        "15": [
+          "date-night-ks26-nightmare"
+        ],
+        "30": [
+          "date-night-ks26-nightmare"
+        ],
+        "50": [
+          "date-night-ks26-nightmare"
+        ]
+      },
+      "measurements": {
+        "date-night-ar26-royal": {
+          "distanceMiles": 353.1685777845,
+          "initialBearingDegrees": 150.0592470295,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-217": {
+          "distanceMiles": 285.761552733,
+          "initialBearingDegrees": 82.0652995794,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-boo": {
+          "distanceMiles": 336.8153267465,
+          "initialBearingDegrees": 79.5928564672,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-chitty": {
+          "distanceMiles": 369.9186629311,
+          "initialBearingDegrees": 100.8717913903,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-hayride-horror-bayou": {
+          "distanceMiles": 438.0069431567,
+          "initialBearingDegrees": 63.9531551844,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-paintball": {
+          "distanceMiles": 304.0866439128,
+          "initialBearingDegrees": 96.0539954303,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-sonny-acres-haunted-experiences": {
+          "distanceMiles": 440.9041310785,
+          "initialBearingDegrees": 60.79691723,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-spook": {
+          "distanceMiles": 340.7873570628,
+          "initialBearingDegrees": 69.3101091019,
+          "expectedPatch": null
+        },
+        "date-night-ks26-nightmare": {
+          "distanceMiles": 0.0,
+          "initialBearingDegrees": 0.0,
+          "expectedPatch": "radial-v1:core"
+        },
+        "date-night-ks26-walters": {
+          "distanceMiles": 97.9335438136,
+          "initialBearingDegrees": 220.6423220107,
+          "expectedPatch": null
+        }
+      }
+    },
+    {
+      "key": "AR",
+      "locality": "Wave 2 Arkansas outer-radius control",
+      "region": "Arkansas",
+      "lat": 34.963224662909,
+      "lon": -92.588223916041,
+      "expected": {
+        "1": [],
+        "15": [],
+        "25": [],
+        "30": [
+          "date-night-ar26-royal"
+        ],
+        "50": [
+          "date-night-ar26-royal"
+        ]
+      },
+      "expectedAcquired": {
+        "1": [],
+        "15": [],
+        "30": [
+          "date-night-ar26-royal"
+        ],
+        "50": [
+          "date-night-ar26-royal"
+        ]
+      },
+      "measurements": {
+        "date-night-ar26-royal": {
+          "distanceMiles": 27.6376377712,
+          "initialBearingDegrees": 180.0,
+          "expectedPatch": "radial-v1:30:3"
+        },
+        "date-night-il26-w1-217": {
+          "distanceMiles": 335.3502270349,
+          "initialBearingDegrees": 20.6451021405,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-boo": {
+          "distanceMiles": 373.0475397336,
+          "initialBearingDegrees": 26.6390085147,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-chitty": {
+          "distanceMiles": 280.4705415553,
+          "initialBearingDegrees": 43.9614239667,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-hayride-horror-bayou": {
+          "distanceMiles": 518.3991020906,
+          "initialBearingDegrees": 26.8716417936,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-paintball": {
+          "distanceMiles": 276.9099624419,
+          "initialBearingDegrees": 29.2060454797,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-sonny-acres-haunted-experiences": {
+          "distanceMiles": 535.7237074072,
+          "initialBearingDegrees": 25.0090638429,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-spook": {
+          "distanceMiles": 423.5098738868,
+          "initialBearingDegrees": 21.7463670649,
+          "expectedPatch": null
+        },
+        "date-night-ks26-nightmare": {
+          "distanceMiles": 329.0419223112,
+          "initialBearingDegrees": 329.6546420284,
+          "expectedPatch": null
+        },
+        "date-night-ks26-walters": {
+          "distanceMiles": 314.383890476,
+          "initialBearingDegrees": 312.3204712285,
+          "expectedPatch": null
+        }
+      }
+    },
+    {
+      "key": "IL-N",
+      "locality": "Wave 2 Lockport control",
+      "region": "Illinois",
+      "lat": 41.5748765,
+      "lon": -88.0632969,
+      "expected": {
+        "1": [
+          "date-night-il26-w1-hayride-horror-bayou"
+        ],
+        "15": [
+          "date-night-il26-w1-hayride-horror-bayou"
+        ],
+        "25": [
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-sonny-acres-haunted-experiences"
+        ],
+        "30": [
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-sonny-acres-haunted-experiences"
+        ],
+        "50": [
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-sonny-acres-haunted-experiences"
+        ]
+      },
+      "expectedAcquired": {
+        "1": [
+          "date-night-il26-w1-hayride-horror-bayou"
+        ],
+        "15": [
+          "date-night-il26-w1-hayride-horror-bayou"
+        ],
+        "30": [
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-sonny-acres-haunted-experiences"
+        ],
+        "50": [
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-sonny-acres-haunted-experiences"
+        ]
+      },
+      "measurements": {
+        "date-night-ar26-royal": {
+          "distanceMiles": 543.1953031243,
+          "initialBearingDegrees": 208.3578485981,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-217": {
+          "distanceMiles": 188.5482004815,
+          "initialBearingDegrees": 220.7929442286,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-boo": {
+          "distanceMiles": 145.3624836233,
+          "initialBearingDegrees": 210.27601994,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-chitty": {
+          "distanceMiles": 263.4596167963,
+          "initialBearingDegrees": 191.4508790452,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-hayride-horror-bayou": {
+          "distanceMiles": 0.0,
+          "initialBearingDegrees": 0.0,
+          "expectedPatch": "radial-v1:core"
+        },
+        "date-night-il26-w1-paintball": {
+          "distanceMiles": 241.9804479109,
+          "initialBearingDegrees": 207.0086622261,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-sonny-acres-haunted-experiences": {
+          "distanceMiles": 24.3284634828,
+          "initialBearingDegrees": 344.1561279143,
+          "expectedPatch": "radial-v1:30:6"
+        },
+        "date-night-il26-w1-spook": {
+          "distanceMiles": 103.68898426,
+          "initialBearingDegrees": 231.0395031693,
+          "expectedPatch": null
+        },
+        "date-night-ks26-nightmare": {
+          "distanceMiles": 438.0069431567,
+          "initialBearingDegrees": 248.8877582393,
+          "expectedPatch": null
+        },
+        "date-night-ks26-walters": {
+          "distanceMiles": 529.3610034362,
+          "initialBearingDegrees": 244.6772852903,
+          "expectedPatch": null
+        }
+      }
+    },
+    {
+      "key": "IL-C",
+      "locality": "Wave 2 central Illinois control",
+      "region": "Illinois",
+      "lat": 40.05,
+      "lon": -89.85,
+      "expected": {
+        "1": [],
+        "15": [],
+        "25": [],
+        "30": [
+          "date-night-il26-w1-boo"
+        ],
+        "50": [
+          "date-night-il26-w1-217",
+          "date-night-il26-w1-boo",
+          "date-night-il26-w1-spook"
+        ]
+      },
+      "expectedAcquired": {
+        "1": [],
+        "15": [],
+        "30": [
+          "date-night-il26-w1-boo"
+        ],
+        "50": [
+          "date-night-il26-w1-217",
+          "date-night-il26-w1-boo",
+          "date-night-il26-w1-spook"
+        ]
+      },
+      "measurements": {
+        "date-night-ar26-royal": {
+          "distanceMiles": 407.8195470242,
+          "initialBearingDegrees": 202.4928550711,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-217": {
+          "distanceMiles": 47.8904824875,
+          "initialBearingDegrees": 215.6222013356,
+          "expectedPatch": "radial-v1:50:6"
+        },
+        "date-night-il26-w1-boo": {
+          "distanceMiles": 29.9477051867,
+          "initialBearingDegrees": 133.7390705095,
+          "expectedPatch": "radial-v1:30:2"
+        },
+        "date-night-il26-w1-chitty": {
+          "distanceMiles": 159.4833161392,
+          "initialBearingDegrees": 163.5195620676,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-hayride-horror-bayou": {
+          "distanceMiles": 140.814289931,
+          "initialBearingDegrees": 40.986037199,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-paintball": {
+          "distanceMiles": 112.2495145247,
+          "initialBearingDegrees": 186.7260359498,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-sonny-acres-haunted-experiences": {
+          "distanceMiles": 155.0850375239,
+          "initialBearingDegrees": 33.3393030153,
+          "expectedPatch": null
+        },
+        "date-night-il26-w1-spook": {
+          "distanceMiles": 41.5768534327,
+          "initialBearingDegrees": 18.3314044671,
+          "expectedPatch": "radial-v1:50:0"
+        },
+        "date-night-ks26-nightmare": {
+          "distanceMiles": 318.5796906461,
+          "initialBearingDegrees": 259.1480426199,
+          "expectedPatch": null
+        },
+        "date-night-ks26-walters": {
+          "distanceMiles": 402.892948182,
+          "initialBearingDegrees": 251.1628851513,
+          "expectedPatch": null
+        }
+      }
+    }
+  ],
+  "coveredByRadiusOrigins": [
+    "date-night-ar26-royal",
+    "date-night-il26-w1-217",
+    "date-night-il26-w1-boo",
+    "date-night-il26-w1-hayride-horror-bayou",
+    "date-night-il26-w1-sonny-acres-haunted-experiences",
+    "date-night-il26-w1-spook",
+    "date-night-ks26-nightmare"
+  ],
+  "remainingOwnOriginJourneyIds": [
+    "date-night-il26-w1-chitty",
+    "date-night-il26-w1-paintball",
+    "date-night-ks26-walters"
+  ]
+}

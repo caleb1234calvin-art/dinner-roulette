@@ -877,7 +877,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
   "details": [
     "Haunted hayride and barn operate on select nights October 2–30, 2026; not every Fall Festival day includes the haunts.",
     "Haunted experiences generally begin at 7 p.m.; Friday/Saturday haunted hours end at 10 p.m. Other nights may differ.",
-    "Fall Festival admission is free, but haunted attractions require tickets and may sell out. No dogs during Fall Fest; free parking with overflow shuttles as needed.",
+    "Haunted attractions require tickets and may sell out; separate festival admission charges may apply. Check current ticket terms before visiting. No dogs during Fall Fest; free parking with overflow shuttles as needed.",
     "Location is approximate. Directions use the visitor address."
   ]
 },
@@ -888,6 +888,7 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "Hayride of Horror and Curse of the Bayou run select October 2026 nights through October 30. October 29 offers Curse of the Bayou only, without the hayride.",
     "Friday/Saturday events run 7–10 p.m.; October 25 and 29 run 6–9 p.m. Final October 30 ticket sale is 10 p.m.; guests already in line may exit later.",
     "Tickets are date-specific. This outdoor event is weather-dependent; wear appropriate closed-toe shoes. No costumes, weapons or alcohol.",
+    "Fog, strobes and loud scares; not recommended during pregnancy or with heart conditions. Parents should use discretion for children.",
     "Other ticket sales are nonrefundable; organizer cancellations are refunded within four business days.",
     "Location is approximate. Directions use the visitor address."
   ]
@@ -921,6 +922,8 @@ export const SEASONAL_PRESENTATIONS: Readonly<Record<string, SeasonalPresentatio
     "Haunted school on Fridays and Saturdays through October 31, 2026, 7 p.m.–midnight. Ticket office runs 6:30–11:30 p.m.",
     "A virtual queue sends a text when your group is called; no more than six enter together.",
     "Not wheelchair accessible due to stairs and uneven/moving floors. Strobes, fog and darkness are used. The operator advises against entry during pregnancy or with relevant injuries or medical conditions.",
+    "No strict age minimum; parental discretion is advised and the haunt is not intended for younger children.",
+    "No entry while intoxicated or while using medication/drugs that impair reactions.",
     "No touching, filming, weapons or flashlights. No refunds; group pricing for 15 or more requires booking at least 24 hours ahead.",
     "Location is approximate. Directions use the visitor address."
   ]

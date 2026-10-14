@@ -1,3 +1,4 @@
+import { WAVE2_OFF_IDS, assertWave2Catalog } from "./test-support/wave2-browser.mjs";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -15,6 +16,7 @@ const date = new Date("2026-10-21T12:00:00-05:00");
 
 test("Wave 2 exact ten preserve adapted researched source and explicit presentations", () => {
   assert.equal(frozen.releasedBase, "0344ccce79ce157196ff9e84b1aaf3e40802afc5");
+  assertWave2Catalog(rows, SEASONAL_PRESENTATIONS);
   assert.equal(inputs.length, 10);
   assert.equal(rows.length, 10);
   assert.deepEqual(plain(inputs), frozen.records);
@@ -50,7 +52,7 @@ test("Wave 2 never claims Open Now, revives expired/2027 entries or leaks in sea
     assert.equal(eligible(new Date(cutoff)).length, 0, row.id);
     assert.equal(eligible(new Date(cutoff + 1)).length, 0, row.id);
     assert.equal(eligible(new Date("2027-10-21T12:00:00-05:00")).length, 0, row.id);
-    const explicitlyScoped = row.seasonalListing.visibility === "listing-lifecycle";
+    const explicitlyScoped = WAVE2_OFF_IDS.includes(row.id);
     assert.equal(eligible(date, {}, false).length, explicitlyScoped ? 1 : 0,
       row.id + ": preserve source-backed listing-lifecycle visibility only when explicitly scoped");
     assert.equal(eligible(date, { openNowOnly: true }, false).length, 0, row.id);
