@@ -1,3 +1,31 @@
+# CURRENT — PR #70 RELEASED; REGIONAL WAVE 1 PRODUCTION ACCEPTANCE BOUNDARY (2026-10-14)
+
+## Released exact identity and owner authority
+- The owner explicitly approved release of PR #70 in the project conversation. Approved source candidate: `963d1e54954a8e6baa77ade00a052fbce39e5afb`, complete tree `c7c49796abc809c4a00690cd282f69920e325bbc`, sole parent `cbf17b70787a2d8ee247eb9183d45fe9d1b73755`.
+- Draft PR **#70**, https://github.com/caleb1234calvin-art/dinner-roulette/pull/70, was marked ready and **successfully merged** using GitHub's merge-commit method and exact expected-head SHA. Merge commit / current main **`0344ccce79ce157196ff9e84b1aaf3e40802afc5`**, parents released main `6c619adda4d9ef3b2683befb2ca874b257505eb2` and approved head `963d1e54954a8e6baa77ade00a052fbce39e5afb`; its tree exactly matches frozen candidate `c7c49796abc809c4a00690cd282f69920e325bbc`. PR70 is CLOSED/MERGED, not draft or pending release.
+- New released source catalog: **82 unique curated seasonal identities** (prior 70 + twelve independently cleared regional records, Kansas 2 / Arkansas 5 / Oklahoma 5). All 70 earlier source records and accepted presentations are preserved. Count refers to deployed curated source identity membership, **not proof each identity appeared in a live interactive regional discovery journey**.
+
+## Vercel production and rollback
+- Automatically triggered GitHub-main production build completed **READY** as deployment **`dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb`**, source exact `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, project `prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm` (TanStack Start / `dinner-roulette`).
+- All five host aliases were independently read back resolving to new deployment: `pickforus.app`, `www.pickforus.app` (redirect to apex), `dinner-roulette-chi.vercel.app`, `dinner-roulette-minions-9e2c.vercel.app`, and `dinner-roulette-git-main-minions-9e2c.vercel.app`.
+- Fresh non-authenticated homepage fetch of `https://pickforus.app/` returned **HTTP 200** and Pick For Us HTML/content. This is **availability only**, not an interactive browser acceptance of regional filters, schedules, 82 record journeys, actual provider results, or device GPS.
+- Immediate post-release previous production rollback candidate is now **`dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf`**, READY at prior main `6c619adda4d9ef3b2683befb2ca874b257505eb2` (70 source identities); earlier older fallback **`dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ`**, READY at `3b6b9ed0f4be1581b3b541207b2637183fff57d3`. No actual rollback was executed. Rollback domain restoration and generated alias checks must still be verified if invoked.
+- No separate Vercel deployment was manually created or promoted. No explicit database migration, settings, credentials, Play signing/upload or Android public release was requested/performed by the assistant. The repository's ordinary `npm run build` still chains `db:migrate`; Vercel hosted effective build override was not directly read. Keep migration-free deployment policy and inspect production build logs instead of assuming all paths safe.
+
+## Frozen acceptance carried through unchanged merge
+- Independent **QUALIFIED exact-head acceptance PASS** for head `963d1e...`. GitHub web/browser run `38593086320` and Android readiness run `38593086226` completed successfully before merge. The complete merge tree equals the independently accepted tree.
+- Hosted evidence: **1,242 repository + 71 application tests PASS**, zero failures, four inherited external-doc skips; typecheck and migration-free CI build PASS; web lint no errors and six inherited warnings. **684/684 geometry comparisons** complete; strict assertions were preserved by R3 centered native scroll. Browser report records 1,753 scenario-lane executions (including 317 regional), overlapping lanes rather than unique tests. The preceding R2 geometry FAIL is preserved as historical evidence, never relabeled PASS.
+- Android workflow PASS covers unsigned AAB / development APK, missing-key fail-closed signing behavior and source/native readiness, **not physical Android/WebView/GPS/installed PWA**, signing or Play release. Fourteen Android lint warnings inherited.
+- Independent verification included screenshot and original artifact integrity but could not retrieve every raw terminal log; the regional and cumulative terminal logs had transport limitations. Screenshot-bearing GitHub artifacts expire **October 28, 2026**. The permitted screenshot-free packages and hash manifests were separately preserved; hashes alone cannot reconstruct expired screenshot pixels.
+
+## Remaining owner/research and operating boundaries
+- The current PR70 release is complete. Next operational acceptance, if requested: real interactive live-site regional discovery test and exact status/cutoff checks, mobile/physical-device acceptance under separate authorization. Do not claim those were completed during this release.
+- **31** independently cleared future-research records remain queued (**15 ranked next-batch recommendations +16 reserves**), not implemented in a second PR. Illinois 41 reviewed: 21 eligible future-research /20 implementation HOLD. Iowa has 23 provisional leads, **zero independently cleared**, partial source evidence preserved after platform limit. Nine Missouri owner-field cases remain HOLD; prioritization begins Hannibal/Bakersfield/Rising. PR #61 remains parked.
+- Preserve the distinction between research FACTUAL PASS, implementation eligible, frozen candidate PASS, hosted CI PASS, production READY and independent live-site/device acceptance. Never import HOLDs, infer unknown operating hours/Open Now, or extend global Halloween policies. Existing 320px Directions clipping and provider/weather/ticket/approximate-coordinate limitations remain.
+- This is a documentation-only continuity checkpoint on deployment-disabled `integration/continuity-refresh-2026-10-07`, not a new main/app/production revision. Full previous continuity history follows verbatim. The old top-of-file `PR70 pending owner decision` claims below are historical and superseded by this record.
+
+---
+
 # CURRENT — OWNER DECISION GATE AND PRESERVED PARTIAL WORK (2026-10-14, 18:04 UTC)
 
 ## CURRENT
