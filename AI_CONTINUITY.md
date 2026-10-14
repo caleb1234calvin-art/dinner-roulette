@@ -1,3 +1,24 @@
+# CURRENT — PR #72 EDITORIAL R2, INDEPENDENT SOURCE PARITY VERIFIED; EXACT-HEAD BROWSER ACCEPTANCE PENDING (2026-10-14)
+
+## Current identity and release status
+- Draft [PR #72](https://github.com/caleb1234calvin-art/dinner-roulette/pull/72) is OPEN, DRAFT and UNMERGED. Latest GitHub head **`0336b55a2a059423c8d5c0dc4f52f79b71bdcacc`**, tree **`f316c81634a9735a742baa635c44b4c92984c03a`**, prior reviewed parent **`328f30a482034f9f9eccd46da6d1995c4faf7be0`**. This latest child changes only source-facing description/display copy; it is NOT the earlier frozen CI candidate.
+- Production unchanged: main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, reviewed tree `c7c49796abc809c4a00690cd282f69920e325bbc`, Vercel **`dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb READY`**, **82 published curated seasonal identities**. Draft source proposes **ten** verified-queue records for possible future **92**-identity release, subject to distinct approval. No Vercel update, merge or migration.
+- Current exact-head CI workflows: web/integration **`38646830691`**, unsigned Android **`38646830940`**. At the latest read, the exact-head `checks` job succeeded (typecheck, lint, full repository/application tests, casino audit and migration-free dev/prod builds); unsigned Android `validate-android` passed; initial casino/location/radial and selected seasonal browser lanes passed. **The full seasonal/browser/strict 92-record geometry suite is still IN PROGRESS. Aggregate PASS not claimed.** All previous-head success/failure evidence is historical.
+
+## Independent source and public-facing copy evidence
+- Private independent archive-to-adapted-object audit read frozen Illinois independent 21-eligible package and KS/AR reviewed reserve object package. Results **10/10 material-source parity, 305/305 field checks, zero mismatches** for the source adapted objects, with reviewed archived hashes; this is **source-data parity only**. Private durable readback: Library **`libfile_f9e8d98da1a08191a876c1c823939a95`**, SHA256 **`814d5e15cf468de8e2b55c89b87bd65c77d925ed2abbf6be16c935e92e5e0711`**.
+- Current child commit `0336b55a` improves **seven Illinois consumer Details/seasonalVisitNotes strings** and **four display-only hours texts** to remove researcher-internal language while preserving safety, ticket and weather qualifications. Explicit prewrite diff checking confirmed **no changes** to 10 canonical IDs/visitor addresses/activeDates/final cutoff timestamps/placement coordinates/directions/seasonal visibility/confidence. Frozen adapted fixture and rendered presentation registry were updated in lockstep. A source check of first-party operator pages supported the revised current-season schedule/cancellation distinctions, including Boo Crew ticket page excluding Halloween, Spook Hollow's full 3-attraction single ticket and Hayride's October 29 Curse-only night. Older conflicting historical pages are not used for 2026 projections.
+- Independent lifecycle audit checked ten date arrays, exact or date-only end behavior, timezone, null machine hours, year=2026 and never-OpenNow; **10/10 PASS**. Two explicit `listing-lifecycle` items retain previously reviewed visibility when the Halloween toggle is OFF; that is not a blanket seasonal extension. No 2027 recurrence or proof of future admission availability.
+- Browser/visual/geometry and physical mobile acceptance **remain separate**. The proof file checks prior research facts and editorial scope; it is not independent 92-card live browser evidence or a guaranteed ticket-availability result.
+
+## HOLD and next
+- Continue `38646830691` to final complete browser/geometry and `38646830940` archive review; inspect exact original evidence (especially 320 px), then seek independent exact-head candidate verdict and **separate owner release approval**. PR remains draft until explicit approval.
+- Kansas City provider timeout + inherited outer-radius gating remains a **separate** HOLD, untouched by PR #72. Rollback candidate `dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf` retained READY but activation permission 403. Hosted build override still not exposed, physical Android/WebView/GPS/PWA and signing/Play not accepted. **Do not use `npm run build` because it chains `db:migrate`.** Screenshot-bearing GitHub original artifacts have finite October 28 retention.
+- Closeout issue [#71](https://github.com/caleb1234calvin-art/dinner-roulette/issues/71) and exact PR [#72](https://github.com/caleb1234calvin-art/dinner-roulette/pull/72) have been updated for this stage. October 25 is a target, not a release waiver.
+- This documentation addendum is published on deployment-disabled `integration/continuity-refresh-2026-10-07`. **The complete previous continuity follows verbatim, including all earlier candidate/head failure evidence and prior PR #70 history.**
+
+---
+
 # CURRENT — HALLOWEEN 2026 WAVE 2 DRAFT PR #72; EXACT-HEAD ACCEPTANCE IN PROGRESS (2026-10-14)
 
 ## Current verified state

@@ -1,3 +1,14 @@
+# CURRENT — PR #72 latest editorial head; full CI PENDING (2026-10-14)
+
+- Production remains **82** identities at main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, Vercel **`dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` READY**. No release or production mutation occurred.
+- Only draft [PR #72](https://github.com/caleb1234calvin-art/dinner-roulette/pull/72), head **`0336b55a2a059423c8d5c0dc4f52f79b71bdcacc`**, tree **`f316c81634a9735a742baa635c44b4c92984c03a`**, OPEN/DRAFT/UNMERGED; ten additions would yield 92 source identities **if** separately accepted and deployed. All reviewed 82 source identities remain unchanged. The earlier head `328f30a4` is superseded for release assessment.
+- Original reviewed-source independent archive cross-check **10/10 records, 305/305 material fields PASS**, separate from live/browser acceptance. Private readback `libfile_f9e8d98da1a08191a876c1c823939a95` SHA256 `814d5e15cf468de8e2b55c89b87bd65c77d925ed2abbf6be16c935e92e5e0711`. Seven Illinois visitor-facing description edits and four display-hour strings improved, with no IDs, 2026 dates, expirations or location point changes; all original primary operator restrictions remain scoped.
+- **Current exact-head workflows** web [38646830691](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38646830691), unsigned Android [38646830940](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38646830940). Latest typecheck/lint/tests/migration-free builds and Android readiness passed; full browser/expanded strict 92-record geometry still **IN PROGRESS** at checkpoint. No overall PASS or release approval.
+- Separate Kansas City radial/provider outage, rollback activation permission 403, hosted build override visibility, and physical Android acceptance remain HOLD. Do not run migration-chaining `npm run build`, change production or sign/publish Play. GitHub screenshot-bearing artifacts expire October 28. Separate owner approval required for merge/deploy.
+- This file is updated only on deployment-disabled `integration/continuity-refresh-2026-10-07`; all earlier release-history text follows unchanged.
+
+---
+
 # CURRENT — WAVE 2 DRAFT PR #72, NOT RELEASED (2026-10-14)
 
 - **Production unchanged:** main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, reviewed tree `c7c49796abc809c4a00690cd282f69920e325bbc`, production `dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` READY, **82** published seasonal curated identities; previous production rollback `dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf` READY but activation-permission inspection 403.
