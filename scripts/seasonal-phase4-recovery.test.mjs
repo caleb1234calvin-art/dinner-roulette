@@ -213,7 +213,16 @@ test("Branson's exact 17 dates survive November/DST as lifecycle Anything browse
 test("all 52 previous V1 records, presentation copy, radial implementation and unchanged UI remain byte-bound to main", () => {
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
-  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(curatedRadiusSourceBefore(path, occurrenceSourceBefore(path))).digest("hex"), hash, path);
+  for (const [path, hash] of Object.entries(baseline.files)) {
+    let source = curatedRadiusSourceBefore(path, occurrenceSourceBefore(path));
+    if (path === "src/components/result-overlay.tsx") {
+      // Explicit UI amendment: preserve the original receipt and prove that
+      // reversing only the reviewed Directions classes recovers every old byte.
+      assert.equal(createHash("sha256").update(source).digest("hex"), "a01c7409e9805588a11ea1f3b92a036348805568a9a11a90e98202753d542931", "Exact Directions-only UI amendment");
+      source = Buffer.from(source.toString().replace("className=\"h-auto min-h-14 w-full whitespace-normal py-3 text-center\" asChild><a href={mapsUrl} target=\"_blank\" rel=\"noopener noreferrer\"><MapPinned className=\"size-5 shrink-0\" /><span className=\"min-w-0 break-words tracking-kicker uppercase\">Directions", "className=\"w-full\" asChild><a href={mapsUrl} target=\"_blank\" rel=\"noopener noreferrer\"><MapPinned className=\"size-5\" /><span className=\"tracking-kicker uppercase\">Directions"));
+    }
+    assert.equal(createHash("sha256").update(source).digest("hex"), hash, path);
+  }
   const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
   assert.equal(Object.keys(baseline.presentations).length, 52);
   const acceptedNextBytes = readFileSync("scripts/test-support/next-missouri-browser-projections.json");

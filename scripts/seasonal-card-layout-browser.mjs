@@ -165,6 +165,25 @@ try {
             summary: el.querySelector("summary")?.getBoundingClientRect().toJSON() };
         }, kind);
         measured[variant] = geometry;
+        // Keep old-source Directions measurements as original failure evidence.
+        // Current variants must fit and may use at most two lines (72px total).
+        if (kind === "result") {
+          const directions = await card.getByRole("link", { name: /Directions · Google Maps/ }).evaluate(el => {
+            const box = el.getBoundingClientRect();
+            return { width: el.clientWidth, scrollWidth: el.scrollWidth, height: box.height,
+              left: box.left, right: box.right,
+              label: [...el.querySelectorAll("span")].map(label => ({ width: label.clientWidth, scrollWidth: label.scrollWidth })) };
+          });
+          geometry.directions = directions;
+          if (variant === "after" || variant.startsWith("current-")) {
+            assert.ok(directions.scrollWidth <= directions.width, "Directions fits without horizontal overflow");
+            assert.ok(directions.label.every(label => label.scrollWidth <= label.width), "Full Directions label remains readable");
+            assert.ok(directions.height >= 56, "Directions retains its 56px minimum touch target");
+            assert.ok(directions.height <= 72, "Directions uses at most two lines and bounded vertical space");
+            assert.ok(directions.left >= 0 && directions.right <= width, "Directions stays within the viewport");
+            assert.ok(geometry.scrollWidth <= geometry.width + 1, "Current result card fits the viewport");
+          }
+        }
         await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
         fs.writeFileSync(`${out}/current-measurement.json`, JSON.stringify({ id: row.id, kind, width, variant, measured }, null, 2));
         if (variant === "after") {
@@ -322,16 +341,33 @@ try {
         }
         await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
       }
-      const delta = measured.after.height - measured.ordinary.height;
-      verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta, standardDelta: measured.after.height - measured.standard.height, percent: delta / measured.ordinary.height * 100 });
-      assert.equal(measured["current-ordinary"].height, measured.ordinary.height, "Ordinary matched card height is unchanged");
-      assert.equal(measured["current-standard"].height, measured.standard.height, "Short ordinary card height is unchanged");
+      const directionsHeightChange = (current, previous) => kind === "result"
+        ? measured[current].directions.height - measured[previous].directions.height : 0;
+      for (const [current, previous] of [["current-ordinary", "ordinary"], ["current-standard", "standard"]]) {
+        const buttonDelta = directionsHeightChange(current, previous);
+        assert.ok(buttonDelta === 0 || buttonDelta === 16, "Only the reviewed one-to-two-line Directions height change is allowed");
+        assert.equal(measured[current].width, measured[previous].width, "Ordinary card width is unchanged");
+        assert.equal(measured[current].height - measured[previous].height, buttonDelta,
+          "Ordinary card height is unchanged outside the exact measured Directions delta");
+      }
+      // Compare seasonal and ordinary cards rendered by the same current source.
+      // Retain historical deltas without charging the shared Directions correction
+      // to seasonal content or weakening the existing 0.5/5px seasonal limits.
+      const delta = measured.after.height - measured["current-ordinary"].height;
+      verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta,
+        standardDelta: measured.after.height - measured["current-standard"].height,
+        historicalDelta: measured.after.height - measured.ordinary.height,
+        directionsHeightChange: directionsHeightChange("after", "before"),
+        percent: delta / measured["current-ordinary"].height * 100 });
       assert.equal(measured.after.mediaHeight, measured.ordinary.mediaHeight);
       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
       if (delta > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
       if (["options", "plan", "plan-settle"].includes(kind) && measured.after.height - measured.standard.height > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
-      assert.ok(measured.after.height <= measured.before.height);
+      const reviewedButtonDelta = directionsHeightChange("after", "before");
+      assert.ok(reviewedButtonDelta === 0 || reviewedButtonDelta === 16, "Seasonal Directions has the same bounded height correction");
+      assert.ok(measured.after.height - reviewedButtonDelta <= measured.before.height,
+        "Seasonal content does not grow beyond the exact reviewed Directions delta");
       } catch (error) {
         verdict.errors.push({ id: row.id, kind, width, message: error.stack });
         if (!verdict.comparisons.some(item => item.id === row.id && item.kind === kind && item.width === width)) verdict.comparisons.push({ id: row.id, kind, width, ...measured, incomplete: true });
