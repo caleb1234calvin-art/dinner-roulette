@@ -1,0 +1,109 @@
+{
+  "capturedAt": "2026-10-15T22:05:09.360Z",
+  "sha": "e25594063bc0de09aeb4e08c4912845f9f08fffa",
+  "tree": "9c4ec8780bdddff51335f523823e1ec40dee001f",
+  "webRun": 38812681149,
+  "webOverall": "in_progress",
+  "jobs": [
+    {
+      "id": 116689542264,
+      "name": "checks",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542618,
+      "name": "Browser (seasonal-two)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542778,
+      "name": "Browser (seasonal-ten)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542783,
+      "name": "Browser (location)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542784,
+      "name": "Browser (date-night-radial)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542792,
+      "name": "Browser (seasonal-completeness-v1)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542819,
+      "name": "Browser (casino)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542864,
+      "name": "Browser (seasonal-hold-cleanup)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689542957,
+      "name": "Browser (seasonal-regional-wave1)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 116689543049,
+      "name": "Browser (seasonal-phase4)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689543054,
+      "name": "Browser (seasonal-ranked-holds)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689543073,
+      "name": "Browser (seasonal-next-missouri)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689543085,
+      "name": "Browser (seasonal-cumulative)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689543115,
+      "name": "Browser (seasonal-astra)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 116689543179,
+      "name": "Browser (geometry)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 116689543199,
+      "name": "Browser (seasonal-astra-extras)",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "androidRun": 38812681178,
+  "android": "success",
+  "signing": "skipped",
+  "fullBrowserArchiveAcceptance": false
+}
