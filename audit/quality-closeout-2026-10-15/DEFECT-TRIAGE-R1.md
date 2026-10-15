@@ -1,6 +1,10 @@
+> **Current R2 technical result:** exact-head web and unsigned Android CI completed successfully. See R2-ACCEPTANCE.md. D1 is validated in fixture/browser evidence but not released; D2/D3 remain open. Pending statements below are historical checkpoints. Independent review, operational release qualification and physical acceptance remain open.
+
 # Demonstrated defects and bounded corrections — 2026-10-15
 
 No production mutation is authorized by this report. PR #73 is a draft, UI-only candidate; provider and catalog changes are excluded.
+
+Current superseding candidate: R2 head `0ea1e6500cbae97c94e9f123c08939ffefbf4090`, tree `7c12c5327af906348992e9b7d3282a11f830a202`, parent R1 `6bac175a4224ba3ef996a44419abb7bbeb9c5777`. D1 runtime correction is unchanged. R1's 184 geometry failures were investigated and retained: the old height invariant conflicted with the exact16px Directions increase. R2 requires the directly measured button delta to explain all card growth, preserves seasonal thresholds and adds a72px cap. Fresh R2 CI is pending; D1 remains prepared, not production-resolved. See current README and PR audit for full original evidence and precise source qualifications.
 
 ## D1 — Result Directions overflow at 320 px
 

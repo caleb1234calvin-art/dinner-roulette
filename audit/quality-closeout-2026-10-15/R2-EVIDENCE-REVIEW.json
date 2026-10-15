@@ -1,0 +1,625 @@
+{
+  "scope": "Evidence inspection by implementing agent; not author-separated independent review; fixtures are not live providers or physical Android.",
+  "candidate": "0ea1e6500cbae97c94e9f123c08939ffefbf4090",
+  "tree": "7c12c5327af906348992e9b7d3282a11f830a202",
+  "parent": "6bac175a4224ba3ef996a44419abb7bbeb9c5777",
+  "sourceFingerprint": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+  "buildProofs": [
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-casino/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:54.498Z",
+        "output": {
+          "sha256": "5d8b4fb1c016869701c7096876cf2e6fa5d6f2561b1ee50a5675fbb402a44d54",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:57.892Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-date-night-radial/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:50.827Z",
+        "output": {
+          "sha256": "b9978cb13b66c2f0010f960767a34d7ed38467240fea5bcd219d157c8d3b0ab5",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:53.446Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-geometry/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:03:45.267Z",
+        "output": {
+          "sha256": "9c80df952932d165e9f0dc64edee6f78ba7b382a03c64583a1e420fcd0cbacdd",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:03:48.791Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-location/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:54.988Z",
+        "output": {
+          "sha256": "dc4ec00f049a1cce1d849d26af6a7ab4a624b262ca63f37cee44fac59bfd640c",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:58.626Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-astra/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:53.403Z",
+        "output": {
+          "sha256": "850c652fdf9c093bd6b5ddec7b9dd03fefc4f21141f4f16819d766381e856477",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:57.275Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-astra-extras/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:50.744Z",
+        "output": {
+          "sha256": "8894546cca16221a8be7f82fb074c851e155ddadbd647b57c00bb0ce38811598",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:54.667Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-completeness-v1/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:50.247Z",
+        "output": {
+          "sha256": "1374858a948bde6f5e5cf3e5c10e143bbdaadf909103346f95920c91057ecfdb",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:53.896Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-cumulative/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:52.581Z",
+        "output": {
+          "sha256": "9fd30be86fe64116aa17f3eed6101061e34e06a0df0feb5a3bdad6ae99bcfb60",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:56.592Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-hold-cleanup/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:49.967Z",
+        "output": {
+          "sha256": "edb124bfbfae2a18c7b7845999607e1cc837657450745312919f42cf0ca5231f",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:53.556Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-next-missouri/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:53.730Z",
+        "output": {
+          "sha256": "a66d02053576068a30e495425dfed6bf117112787e78c0a0400a0dd3d1a8637d",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:57.665Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-phase4/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:49.681Z",
+        "output": {
+          "sha256": "072a40861e11156c040149c77be64d4c35f679b72aed5b8fac03cab85e514b1d",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:53.940Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-ranked-holds/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:02:49.754Z",
+        "output": {
+          "sha256": "102e599ce9e9c7d5976ed8083a5345865743f34cc8e54ba186042336b30b779d",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:02:53.172Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-regional-wave1/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:03:03.825Z",
+        "output": {
+          "sha256": "2785e7f73e63d2502e6fd8fcb2a2fa447a6338cbad7cfd3b4431c59a7c89faf5",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:03:07.767Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-ten/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:55.808Z",
+        "output": {
+          "sha256": "d542ae0d35aebd77668e168d4a31fa7dfdcbfd2da0052090d7c969297cbff74b",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:01:59.395Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-two/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:01:57.944Z",
+        "output": {
+          "sha256": "8b5ed5f7b6abe7d5ca3f0b71cde4a3eba2c60a55f3f303fec7012de84fa2b1bb",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:02:01.743Z"
+      }
+    },
+    {
+      "file": "r2-receipts/pr73-r2-validation-check-build-proof/build-proof.json",
+      "proof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+          "files": 517
+        },
+        "startedAt": "2026-10-15T19:02:10.341Z",
+        "output": {
+          "sha256": "576761da25571fc617cdc0d27fab85061f13c207f569139c7d15f9fd5584d97c",
+          "files": 193
+        },
+        "completedAt": "2026-10-15T19:02:13.069Z"
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-casino/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 0,
+      "checks": 16,
+      "publicProviderCalls": null,
+      "network": null
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-date-night-radial/date-night-radial/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 10,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": null
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-geometry/seasonal-card-layout/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 0,
+      "checks": 0,
+      "publicProviderCalls": null,
+      "network": null
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-astra/seasonal-astra-eleven/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 220,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 1000,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-astra-extras/seasonal-astra-extras/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 196,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 882,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-completeness-v1/seasonal-completeness-v1/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 97,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 512,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-cumulative/seasonal-cumulative-15/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 235,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 1321,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-hold-cleanup/seasonal-hold-cleanup/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 69,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 200,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-next-missouri/seasonal-next-missouri-three/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 87,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 293,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-phase4/seasonal-phase4-recovery-seven/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 164,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 700,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-ranked-holds/seasonal-ranked-holds/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 178,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 816,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-regional-wave1/seasonal-regional-wave1/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 317,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 1916,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-regional-wave1/seasonal-wave2-ten/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 277,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 1737,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-ten/seasonal-ten-record/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 157,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 870,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    },
+    {
+      "path": "r2-receipts/pr73-r2-casino-browser-evidence-seasonal-two/missouri-two-records/verdict.json",
+      "passed": true,
+      "errors": 0,
+      "scenarios": 23,
+      "checks": 0,
+      "publicProviderCalls": 0,
+      "network": {
+        "interceptedProviderCalls": 106,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      }
+    }
+  ],
+  "scenarioTotal": 2030,
+  "geometry": {
+    "comparisons": 774,
+    "identities": 92,
+    "kinds": {
+      "options": 276,
+      "result": 276,
+      "plan": 219,
+      "plan-settle": 3
+    },
+    "widths": [
+      {
+        "viewport": 320,
+        "identities": 92,
+        "buttonHeights": [
+          72
+        ],
+        "reviewedCardHeightDelta": [
+          16
+        ],
+        "overflowFailures": 0
+      },
+      {
+        "viewport": 390,
+        "identities": 92,
+        "buttonHeights": [
+          72
+        ],
+        "reviewedCardHeightDelta": [
+          16
+        ],
+        "overflowFailures": 0
+      },
+      {
+        "viewport": 512,
+        "identities": 92,
+        "buttonHeights": [
+          56
+        ],
+        "reviewedCardHeightDelta": [
+          0
+        ],
+        "overflowFailures": 0
+      }
+    ],
+    "errors": 0
+  },
+  "location": {
+    "passed": true,
+    "checks": 19,
+    "mode": "Real local app/RPC; simulated native geolocation coordinates and provider fixtures; error callbacks explicitly mocked"
+  },
+  "android": {
+    "artifact": "app-release.aab",
+    "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+    "bytes": 3103535,
+    "package": "com.calebcalvin.pickforus",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED"
+  },
+  "androidLint": {
+    "Warning": 14
+  },
+  "preservation": [
+    {
+      "path": "src/lib/date-night",
+      "gitObject": "75e9599cc19a16d1a005cccc7a3d25a79ca24cbc",
+      "unchangedFromMain": true
+    },
+    {
+      "path": "src/lib/location",
+      "gitObject": "8b090bbfd9f78851533c8985db93bf3d5be29d82",
+      "unchangedFromMain": true
+    },
+    {
+      "path": "package-lock.json",
+      "gitObject": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+      "unchangedFromMain": true
+    },
+    {
+      "path": ".github/workflows",
+      "gitObject": "0c63b4b9b0e4cf03293fe0a5fc72937f67a23eb5",
+      "unchangedFromMain": true
+    },
+    {
+      "path": "vercel.json",
+      "gitObject": "65925d91f882a10433e3eb43f53ed802914c969b",
+      "unchangedFromMain": true
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "gitObject": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+      "unchangedFromMain": true
+    }
+  ],
+  "visualSamples": [
+    "AR26-W1-002-320-result-after.png",
+    "AR26-W1-002-390-result-after.png",
+    "AR26-W1-002-512-result-after.png"
+  ],
+  "releaseStatus": "HOLD: independent review, fresh operational qualification, live/mobile/physical acceptance qualifications, owner approval"
+}
