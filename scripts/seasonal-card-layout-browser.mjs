@@ -165,6 +165,22 @@ try {
             summary: el.querySelector("summary")?.getBoundingClientRect().toJSON() };
         }, kind);
         measured[variant] = geometry;
+        // Current controls must fit at every accepted viewport. The old-source
+        // variants remain measured evidence of the original 320px defect.
+        if (kind === "result" && (variant === "after" || variant.startsWith("current-"))) {
+          const directions = await card.getByRole("link", { name: /Directions · Google Maps/ }).evaluate(el => {
+            const box = el.getBoundingClientRect();
+            return { width: el.clientWidth, scrollWidth: el.scrollWidth, height: box.height,
+              left: box.left, right: box.right,
+              label: [...el.querySelectorAll("span")].map(label => ({ width: label.clientWidth, scrollWidth: label.scrollWidth })) };
+          });
+          geometry.directions = directions;
+          assert.ok(directions.scrollWidth <= directions.width, "Directions fits without horizontal overflow");
+          assert.ok(directions.label.every(label => label.scrollWidth <= label.width), "Full Directions label remains readable");
+          assert.ok(directions.height >= 56, "Directions retains its 56px minimum touch target");
+          assert.ok(directions.left >= 0 && directions.right <= width, "Directions stays within the viewport");
+          assert.ok(geometry.scrollWidth <= geometry.width + 1, "Current result card fits the viewport");
+        }
         await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
         fs.writeFileSync(`${out}/current-measurement.json`, JSON.stringify({ id: row.id, kind, width, variant, measured }, null, 2));
         if (variant === "after") {
