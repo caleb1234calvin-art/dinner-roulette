@@ -1,4 +1,4 @@
-import { REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, assertRegionalCatalog } from "./test-support/regional-wave1.mjs";
+import { REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, assertRegionalCatalog, WAVE2_EXPECTED_PRESENTATIONS } from "./test-support/regional-wave1.mjs";
 import { THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 // Source-bound geometry/pixel comparison of real overlay components, using the
 // production stylesheet. Native Details behavior is exercised here; the full
@@ -57,6 +57,17 @@ assertThreeClearedCatalog(rows, pure("src/lib/date-night/seasonal-presentation-c
 assertRegionalCatalog(rows, pure("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
 assert.deepEqual(rows.filter(row => REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]), REGIONAL_ROWS,
   "Geometry subjects are bound to all twelve independently accepted records");
+
+const wave2Fixture = JSON.parse(fs.readFileSync("audit/halloween-wave2-2026-10-14/ADAPTED-TEN-FROZEN-INPUTS.json", "utf8"));
+const wave2Rows = pure("src/lib/date-night/halloween-2026-wave2-catalog.ts").WAVE2_2026_CATALOG;
+assert.equal(wave2Rows.length, 10, "All ten candidate attractions require strict geometry");
+assert.deepEqual(wave2Rows.map(row => row.id), wave2Fixture.identityOrder,
+  "Geometry candidates bound to frozen independently researched identities");
+const wave2Ids = new Set(wave2Rows.map(row => row.id));
+const geometryRows = [...rows, ...wave2Rows];
+assert.equal(geometryRows.length, 92, "All 82 existing and ten proposed listings receive geometry coverage");
+assert.equal(new Set(geometryRows.map(row => row.id)).size, 92);
+
 const { HALLOWEEN_THRILL_TYPES, HALLOWEEN_SETTLE_TYPES } = pure("src/lib/date-night/season.ts");
 const isThrill = row => row.activityTypes.some(type => HALLOWEEN_THRILL_TYPES.includes(type));
 const isSettle = row => row.activityTypes.some(type => HALLOWEEN_SETTLE_TYPES.includes(type));
@@ -113,19 +124,19 @@ function renderer(old = false) {
 }
 const decorate = row => ({ ...row, cuisineLabel: row.activityTypes.join(" · "), distanceMiles: 2.5, hoursKnown: false, isOpen: false, closingSoon: false });
 const ordinary = row => ({ ...decorate(row), id: "ordinary-layout-control", seasonalListing: undefined, seasonalAvailability: undefined, seasonalVisitNotes: undefined, activityTypes: row.activityTypes, name: row.name });
-const verdict = { passed: false, baseline, proof, occurrenceIdentityBaseline: { commit: occurrenceBase, retainedIds: rows.map(row => row.id).sort() }, comparisons: [], errors: [] };
+const verdict = { passed: false, baseline, proof, occurrenceIdentityBaseline: { commit: occurrenceBase, retainedIds: geometryRows.map(row => row.id).sort() }, comparisons: [], errors: [] };
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
   verdict.ineligiblePlanControls = [];
-  for (const row of rows.filter(row => !isThrill(row))) {
+  for (const row of geometryRows.filter(row => !isThrill(row))) {
     const html = renderer()("plan", [decorate(row), { ...ordinary(row), id: "second-control", name: "Ordinary park", activityTypes: ["park"] }]);
     assert.ok(!html.includes("<article"), "Non-thrill first stops must not fabricate Scare plan cards");
     assert.ok(html.includes("No complete seasonal pair yet."));
     verdict.ineligiblePlanControls.push(row.id);
   }
   for (const width of geometryWidths) {
-    for (const row of rows) {
+    for (const row of geometryRows) {
     for (const kind of geometryKinds(row)) {
       const isPlan = kind === "plan" || kind === "plan-settle", componentKind = isPlan ? "plan" : kind;
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
@@ -184,6 +195,20 @@ try {
           const paragraphs = await details.locator("p").allTextContents();
           assertAdmissionConsumerCopy(row.seasonalListing.recordId, paragraphs);
           assertOccurrenceConsumerCopy(row.seasonalListing.recordId, paragraphs);
+          if (WAVE2_EXPECTED_PRESENTATIONS[row.seasonalListing.recordId]) {
+            const expected = WAVE2_EXPECTED_PRESENTATIONS[row.seasonalListing.recordId];
+            assert.deepEqual(paragraphs, expected.details,
+              "Wave 2 exact frozen visitor Details survive every width, overlay and geometry variant");
+            assert.equal(await card.locator("[data-seasonal-confidence]").innerText(),
+              expected.confidence === "high" ? "High confidence" : expected.confidence === "good" ? "Good confidence" : "Limited details");
+            assert.match(await card.innerText(), /Approx\./);
+            assert.doesNotMatch(await card.innerText(), /Open now|reviewRevision|listingExpiresAt|ListingCompletenessV1/);
+            assert.equal(row.seasonalListing.directionsTarget.kind, "visitor-address");
+            if (kind !== "options") {
+              const maps = card.getByRole("link", { name: isPlan ? "Maps" : /Directions · Google Maps/, exact: isPlan });
+              assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
+            }
+          }
           if (REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]) {
             const recordId = row.seasonalListing.recordId, expected = REGIONAL_PRESENTATIONS[recordId];
             assert.deepEqual(paragraphs, expected.details, "Every exact independently accepted regional Detail survives every width and qualified overlay");
@@ -269,7 +294,7 @@ try {
               assert.equal(new URL(await maps.getAttribute("href")).searchParams.get("destination"), row.address);
             }
           }
-          if (isPlan || occurrencePresentations[row.seasonalListing.recordId] || REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]) {
+          if (isPlan || occurrencePresentations[row.seasonalListing.recordId] || REGIONAL_PRESENTATIONS[row.seasonalListing.recordId] || WAVE2_EXPECTED_PRESENTATIONS[row.seasonalListing.recordId]) {
             const paragraphs = details.locator("p");
             geometry.expandedNotes = [];
             for (let index = 0; index < await paragraphs.count(); index++) {
@@ -315,13 +340,25 @@ try {
     }
     }
   }
-  assert.equal(verdict.comparisons.length, rows.reduce((count, row) => count + geometryKinds(row).length * geometryWidths.length, 0),
+  assert.equal(verdict.comparisons.length, geometryRows.reduce((count, row) => count + geometryKinds(row).length * geometryWidths.length, 0),
     "Exact geometry scenario accounting retains every historical and regional width/overlay comparison");
   const regionalComparisons = verdict.comparisons.filter(item => REGIONAL_ROWS.some(row => row.id === item.id));
   assert.equal(regionalComparisons.length, 12 * 3 * 3, "All twelve regional records have Options, Result and valid Scare Plan at three widths");
   for (const comparison of regionalComparisons) {
     assert.deepEqual(comparisonVariants.filter(variant => comparison[variant]), comparisonVariants, "All six regional comparison variants ran");
   }
+  const wave2Comparisons = verdict.comparisons.filter(item => wave2Ids.has(item.id));
+  assert.equal(wave2Comparisons.length,
+    wave2Rows.reduce((sum, row) => sum + geometryKinds(row).length * geometryWidths.length, 0),
+    "Every Wave 2 venue must run all applicable overlay/width comparisons");
+  for (const comparison of wave2Comparisons) {
+    assert.deepEqual(comparisonVariants.filter(variant => comparison[variant]), comparisonVariants,
+      "Wave 2 all six geometry variants executed for every overlay and width");
+    assert.equal(comparison.incomplete, undefined, "Wave 2 may not silently pass incomplete geometry");
+  }
+  verdict.wave2Geometry = { acceptedIds: wave2Rows.map(row => row.id), widths: geometryWidths,
+    variants: comparisonVariants, expectedComparisons: wave2Comparisons.length,
+    completedComparisons: wave2Comparisons.length };
   verdict.regionalGeometry = { acceptedIds: REGIONAL_ROWS.map(row => row.id), widths: geometryWidths,
     variants: comparisonVariants, expectedComparisons: 108, completedComparisons: regionalComparisons.length };
   verdict.passed = verdict.errors.length === 0;

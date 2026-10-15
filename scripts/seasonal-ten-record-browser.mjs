@@ -1,3 +1,4 @@
+import { WAVE2_RECORDS, WAVE2_ROWS, WAVE2_IDS, WAVE2_OFF_IDS, WAVE2_PRESENTATIONS, WAVE2_MATERIAL_FACTS, WAVE2_CONFIDENCE, WAVE2_ORACLE_SHA256, WAVE2_RECORD_SCENARIOS, WAVE2_LOCATIONS, WAVE2_RADIUS_SHA256, WAVE2_EXPECTED_SCENARIO_COUNT, assertWave2Catalog } from "./test-support/wave2-browser.mjs";
 import { REGIONAL_RECORDS, REGIONAL_ROWS, REGIONAL_PRESENTATIONS, REGIONAL_MATERIAL_FACTS, REGIONAL_CONFIDENCE, assertRegionalCatalog } from "./test-support/regional-wave1.mjs";
 import { THREE_CLEARED_RECORDS, THREE_CLEARED_PRESENTATIONS, THREE_CLEARED_MATERIAL_FACTS, THREE_CLEARED_CONFIDENCE, assertThreeClearedCatalog } from "./test-support/three-cleared.mjs";
 import assert from "node:assert/strict";
@@ -27,12 +28,13 @@ const nextMissouri = process.env.SEASONAL_NEXT_MISSOURI === "true";
 const holdCleanup = process.env.SEASONAL_HOLD_CLEANUP === "true";
 const rankedHolds = process.env.SEASONAL_RANKED_HOLDS === "true";
 const regional = process.env.SEASONAL_REGIONAL_WAVE1 === "true";
-const expanded = astra || extras || phase4 || nextMissouri || holdCleanup || rankedHolds || regional;
-assert.ok([cumulative, astra, extras, phase4, nextMissouri, holdCleanup, rankedHolds, regional].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
-const output = resolve(`audit/browser-results/${regional ? "seasonal-regional-wave1" : rankedHolds ? "seasonal-ranked-holds" : holdCleanup ? "seasonal-hold-cleanup" : nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
+const wave2 = process.env.SEASONAL_WAVE2 === "true";
+const expanded = astra || extras || phase4 || nextMissouri || holdCleanup || rankedHolds || regional || wave2;
+assert.ok([cumulative, astra, extras, phase4, nextMissouri, holdCleanup, rankedHolds, regional, wave2].filter(Boolean).length <= 1, "Select one bounded addition batch per invocation");
+const output = resolve(`audit/browser-results/${wave2 ? "seasonal-wave2-ten" : regional ? "seasonal-regional-wave1" : rankedHolds ? "seasonal-ranked-holds" : holdCleanup ? "seasonal-hold-cleanup" : nextMissouri ? "seasonal-next-missouri-three" : phase4 ? "seasonal-phase4-recovery-seven" : extras ? "seasonal-astra-extras" : astra ? "seasonal-astra-eleven" : cumulative ? "seasonal-cumulative-15" : "seasonal-ten-record"}`);
 await mkdir(output, { recursive: true });
 const control = resolve(output, "control.json"), events = resolve(output, "events.jsonl");
-const origin = "http://127.0.0.1:8099", defaultAt = "2026-10-07T18:00:00Z";
+const origin = "http://127.0.0.1:8099", defaultAt = wave2 ? "2026-10-21T18:00:00Z" : "2026-10-07T18:00:00Z";
 const setControl = async state => {
   await writeFile(`${control}.next`, JSON.stringify(state));
   await rename(`${control}.next`, control);
@@ -87,9 +89,10 @@ const ownerRows = load("src/lib/date-night/missouri-2026-owner-evidence-catalog.
 const ownerAcceptedBytes = await readFile("scripts/test-support/owner-evidence-browser-projections.json");
 const ownerAccepted = JSON.parse(ownerAcceptedBytes);
 const regionalRows = load("src/lib/date-night/regional-2026-wave1-catalog.ts").REGIONAL_2026_WAVE1_CATALOG;
+const wave2Rows = load("src/lib/date-night/halloween-2026-wave2-catalog.ts").WAVE2_2026_CATALOG;
 const rankedLaneFacts = { ...RANKED_HOLDS_MATERIAL_FACTS, ...OWNER_EVIDENCE_MATERIAL_FACTS, ...THREE_CLEARED_MATERIAL_FACTS };
 const rankedLaneConfidence = { ...RANKED_HOLDS_CONFIDENCE, ...OWNER_EVIDENCE_CONFIDENCE, ...THREE_CLEARED_CONFIDENCE };
-const rows = regional ? regionalRows : rankedHolds ? [...rankedRows, ...ownerRows, ...threeRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
+const rows = wave2 ? wave2Rows : regional ? regionalRows : rankedHolds ? [...rankedRows, ...ownerRows, ...threeRows] : holdCleanup ? cleanupRows : nextMissouri ? [...nextMissouriRows, ...amendedRows] : phase4 ? phase4Rows : extras ? extraRows : astra ? astraRows : cumulative ? addedRows : priorTen;
 const destinationFor = row => {
   const target = row.seasonalListing.directionsTarget;
   return target.kind === "verified-point" ? `${target.lat},${target.lon}` : target.address;
@@ -197,7 +200,7 @@ async function inspectQualifiedOverlay(test, row, kind) {
   assert.equal(await section.locator(":scope > p").innerText(), SEASONAL_VISITOR_NOTICE);
   const presentation = seasonalPresentation(row);
   const facts = materialFacts[row.seasonalListing.recordId] ?? occurrenceFacts[row.seasonalListing.recordId];
-  const expectedDetails = REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]?.details ?? occurrencePresentations[row.seasonalListing.recordId]?.details ?? presentation.details;
+  const expectedDetails = WAVE2_PRESENTATIONS[row.seasonalListing.recordId]?.details ?? REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]?.details ?? occurrencePresentations[row.seasonalListing.recordId]?.details ?? presentation.details;
   assert.ok(facts, "Each inspected row has an independent visitor-fact checklist");
   assert.equal(await section.locator("[data-seasonal-confidence]").innerText(), SEASONAL_CONFIDENCE_LABELS[presentation.confidence]);
   assert.ok(presentation.details.length > 0, "Reviewed consumer details are required");
@@ -471,7 +474,7 @@ const occurrenceFacts = {
   "DELTA2-HOLLOWS": extraFacts["DELTA2-HOLLOWS"],
   "DELTA2-MISSOURI-NIGHTMARE": astraFacts["DELTA2-MISSOURI-NIGHTMARE"],
 };
-const materialFacts = regional ? REGIONAL_MATERIAL_FACTS : rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
+const materialFacts = wave2 ? WAVE2_MATERIAL_FACTS : regional ? REGIONAL_MATERIAL_FACTS : rankedHolds ? rankedLaneFacts : holdCleanup ? HOLD_CLEANUP_MATERIAL_FACTS : nextMissouri ? NEXT_MISSOURI_MATERIAL_FACTS : phase4 ? PHASE4_MATERIAL_FACTS : extras ? extraFacts : astra ? astraFacts : cumulative ? newFacts : priorFacts;
 const newConfidence = { "MO26-036": "good", "MO26-058": "high", "MO26-069": "high", "MO26-071": "high", "MO26-118": "good", "MO26-012": "good", "MO26-028": "good", "MO26-074": "good", "MO26-084": "good", "MO26-085": "good", "DELTA-EDGE-2026": "high", "DELTA-CREEPYWORLD-2026": "good", "DELTA-DARKNESS-2026": "good", "DELTA-HAUNTED-RIVER-2026": "high", "DELTA-FEAR-BLOODY-TIMBER-2026": "high" };
 const oldRows = [
   ...load("src/lib/date-night/missouri-2026-cleared-catalog.ts").MISSOURI_2026_CLEARED_SEASONAL_CATALOG,
@@ -482,7 +485,7 @@ const anchors = load("src/lib/date-night/seasonal-catalog.ts").JASPER_COUNTY_SEA
 const previousRows = [...oldRows, ...priorTen, ...addedRows];
 const previousReceipts = JSON.parse(await readFile("scripts/test-support/missouri-previous32-receipts.json", "utf8"));
 const curatedRows = [...previousRows, ...astraRows, ...extraRows, ...phase4Rows, ...nextMissouriRows, ...cleanupRows, ...rankedRows, ...ownerRows, ...threeRows, ...regionalRows];
-const catalog = [...ordinaryRows, ...anchors, ...curatedRows];
+const catalog = [...ordinaryRows, ...anchors, ...curatedRows, ...wave2Rows];
 const occurrenceRows = OCCURRENCE_AMENDMENTS.map(amendment => {
   const row = curatedRows.find(candidate => candidate.id === amendment.canonicalId);
   assert.ok(row, "Every occurrence amendment retains its released canonical identity");
@@ -612,6 +615,63 @@ const inspectRegionalMembership = async (test, location, radius, start = 0) => {
   }
   return evidence;
 };
+const wave2Favorites = Object.fromEntries(WAVE2_ROWS.map(row => [row.id, { restaurantId: row.id, name: row.name,
+  favorite: true, neverRecommend: false, ourRating: null, timesVisited: 0, lastVisited: null,
+  cuisineLabel: row.cuisineLabel, photoKey: row.photoKey, lat: row.lat, lon: row.lon, address: row.address, priceLevel: null }]));
+const inspectWave2Membership = async (test, location, radius, start = 0) => {
+  await waitFor(async () => await test.page.locator("[data-radial-progress]").innerText() === `Loaded through ${radius} miles`,
+    `Wave 2 ${location.key} ${radius}-mile coverage did not complete`, 65000);
+  await settleLocal(test);
+  const expected = location.expected[radius];
+  await activityCount(test.page, expected.length);
+  const responses = test.rpc.slice(start).map(entry => {
+    assert.equal(entry.status, 200); assert.ok(entry.response);
+    return fromCrossJSON(JSON.parse(entry.response), { refs: new Map() }).result;
+  });
+  assert.deepEqual(responses.map(response => response.patch.id).sort(), regionalPatchIds(radius).sort(),
+    "One completed real RPC per independently expected patch, with no duplicate spatial authority");
+  const ownership = [];
+  for (const response of responses) {
+    assert.equal(response.patch.version, "radial-v1");
+    for (const venue of response.venues.filter(venue => WAVE2_ROWS.some(row => row.id === venue.id))) {
+      const frozen = WAVE2_ROWS.find(row => row.id === venue.id);
+      assert.deepEqual(venue.seasonalListing, frozen.seasonalListing);
+      assert.deepEqual([venue.lat, venue.lon, venue.openingHours], [frozen.lat, frozen.lon, null]);
+      const expectedPatch = location.measurements[venue.id].expectedPatch;
+      assert.equal(response.patch.id, expectedPatch, "Every Wave 2 positive belongs only to its independently calculated radial patch");
+      ownership.push({ id: venue.id, patch: response.patch.id, expectedPatch, distanceMiles: regionalDistance(location, frozen) });
+    }
+  }
+  const acquired = ownership.map(item => item.id).sort();
+  const expectedAcquired = location.expectedAcquired[radius];
+  assert.deepEqual(acquired, expectedAcquired, "Exact Wave 2 acquisition membership has no missing, extra or multiply owned identity");
+  const actualVisible = [];
+  if (expected.length) {
+    await optionsButton(test.page).click();
+    await test.page.getByRole("button", { name: "Close options", exact: true }).waitFor();
+    for (const row of WAVE2_ROWS) {
+      const count = await rowHeading(test.page, row).count();
+      assert.equal(count, expected.includes(row.id) ? 1 : 0, "Controlled favorites expose exactly the Wave 2 radial membership");
+      if (count) actualVisible.push(row.id);
+    }
+    assert.equal(await test.page.locator("article").count(), expected.length);
+    await closeOptions(test.page);
+  } else {
+    assert.equal(await pickButton(test.page).isDisabled(), true);
+    assert.equal(await optionsButton(test.page).isDisabled(), true);
+  }
+  assert.deepEqual(actualVisible.sort(), expected);
+  const evidence = { location: location.key, lat: location.lat, lon: location.lon, radius, expectedIds: expected, actualVisibleIds: actualVisible, ownership };
+  if (radius === 30) {
+    // 25 is deliberately NOT a selectable app distance. Prove its independent
+    // membership from a real supported 30-mile acquisition without inventing UI.
+    const measured25 = acquired.filter(id => regionalDistance(location, WAVE2_ROWS.find(row => row.id === id)) <= 25.05);
+    assert.deepEqual(measured25, location.expected[25]);
+    evidence.radius25 = { source: "Independent 25-mile filter of actual 30-mile acquired Wave 2 rows", uiJourney: false,
+      expectedIds: location.expected[25], measuredIds: measured25 };
+  }
+  return evidence;
+};
 const setTravelDistance = async (page, radius) => {
   const indices = { 1: 0, 15: 4, 30: 6, 50: 8 };
   const slider = page.getByRole("slider", { name: "Travel distance", exact: true });
@@ -710,10 +770,11 @@ try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH,
     args: ["--no-sandbox", "--disable-dev-shm-usage"] });
   assert.deepEqual(rows.map(row => row.seasonalListing.recordId).sort(), Object.keys(materialFacts).sort(), "Exactly the independently cleared selected batch");
-  assert.equal(new Set(rows.map(row => row.id)).size, regional ? 12 : rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length + THREE_CLEARED_RECORDS.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
+  assert.equal(new Set(rows.map(row => row.id)).size, wave2 ? 10 : regional ? 12 : rankedHolds ? rankedAccepted.newRecords.length + ownerAccepted.newRecords.length + THREE_CLEARED_RECORDS.length : holdCleanup ? cleanupAccepted.newRecords.length : nextMissouri ? 3 : phase4 ? 7 : extras ? 9 : astra ? 11 : cumulative ? 15 : 10);
   assert.equal(previousRows.length, 32, "All previously shipped curated identities remain regression controls");
   assertThreeClearedCatalog(curatedRows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
   assertRegionalCatalog(curatedRows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
+  assertWave2Catalog(wave2Rows, load("src/lib/date-night/seasonal-presentation-catalog.ts").SEASONAL_PRESENTATIONS);
   assert.deepEqual(regionalRows, REGIONAL_ROWS, "Every global neighborhood uses exactly the frozen accepted regional objects");
   for (const row of regionalRows) assert.deepEqual(seasonalPresentation(row), REGIONAL_PRESENTATIONS[row.seasonalListing.recordId]);
   for (const row of threeRows) assert.deepEqual(seasonalPresentation(row), THREE_CLEARED_PRESENTATIONS[row.seasonalListing.recordId]);
@@ -802,7 +863,7 @@ try {
     assert.deepEqual(seasonalPresentation(current).details, accepted.details);
   }
   for (const row of rows) {
-    assert.equal(seasonalPresentation(row).confidence, regional ? REGIONAL_CONFIDENCE[row.seasonalListing.recordId] : rankedHolds ? rankedLaneConfidence[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
+    assert.equal(seasonalPresentation(row).confidence, wave2 ? WAVE2_CONFIDENCE[row.seasonalListing.recordId] : regional ? REGIONAL_CONFIDENCE[row.seasonalListing.recordId] : rankedHolds ? rankedLaneConfidence[row.seasonalListing.recordId] : holdCleanup ? HOLD_CLEANUP_CONFIDENCE[row.seasonalListing.recordId] : nextMissouri ? NEXT_MISSOURI_CONFIDENCE[row.seasonalListing.recordId] : phase4 ? "limited" : (extras ? extraConfidence : astra ? astraConfidence : cumulative ? newConfidence : expectedConfidence)[row.seasonalListing.recordId]);
     assert.equal(row.openingHours, null); assert.equal(row.seasonalAvailability.openNowPolicy, "never");
     assert.ok(["visitor-address", "verified-point"].includes(row.seasonalListing.directionsTarget.kind));
     assert.ok(nearby(row).length <= 3, "The scoped neighborhood must fit in the real four-card shortlist with one ordinary fixture");
@@ -811,7 +872,7 @@ try {
     const n = nearby(row).length, category = nearby(row, { category: categoryTypes(row) }).length;
     const ordinary = nearby(row, { season: false }).length, openOrdinary = nearby(row, { open: true }).length;
     const node = "date-night-osm-node-910001", way = "date-night-osm-way-910002";
-    for (const width of [320, 390]) {
+    for (const width of (wave2 ? [320, 390, 512] : [320, 390])) {
       await runScenario(row, index, `consumer-anything-category-${width}`, async test => {
         const { page, result } = test;
         await activityCount(page, n); await settleLocal(test);
@@ -859,7 +920,7 @@ try {
         const { page } = test;
         await activityCount(page, expected.length);
         assert.equal(await pickButton(page).isDisabled(), expected.length === 0);
-        const targetEligible = scenario === "season-off" && row.seasonalListing.visibility === "listing-lifecycle";
+        const targetEligible = scenario === "season-off" && (wave2 ? WAVE2_OFF_IDS.includes(row.id) : row.seasonalListing.visibility === "listing-lifecycle");
         assert.equal(expected.some(candidate => candidate.id === row.id), targetEligible, "Only explicit lifecycle listings survive seasonal switch-off");
         if (expected.length) {
           await optionsButton(page).click();
@@ -1092,7 +1153,7 @@ try {
     }, { fixture: "mixed", filters: { favoritesOnly: true }, preferences: {
       [node]: preference(row, node, { favorite: true, ourRating: 4 }), [way]: preference(row, way, { favorite: true }),
     } });
-    if (phase4 || nextMissouri || holdCleanup || rankedHolds || regional) {
+    if (phase4 || nextMissouri || holdCleanup || rankedHolds || regional || wave2) {
       const targetIsSettle = !isThrill(row) && isSettle(row);
       const settle = targetIsSettle
         ? astraRows.find(item => item.seasonalListing.recordId === "MO26-056")
@@ -1126,8 +1187,8 @@ try {
         [row.id]: preference(row, row.id, { favorite: true }), [settle.id]: preference(settle, settle.id, { favorite: true }),
       } });
     }
-    if (regional) {
-      const accepted = REGIONAL_RECORDS.find(candidate => candidate.id === row.id);
+    if (regional || wave2) {
+      const accepted = (wave2 ? WAVE2_RECORDS : REGIONAL_RECORDS).find(candidate => candidate.id === row.id);
       await runScenario(row, index, "supported-category-matrix", async test => {
         const { page, result } = test;
         await activityCount(page, n); await settleLocal(test); const before = test.rpc.length;
@@ -1242,6 +1303,59 @@ try {
           staleResponseContainedId: true, expiredIdRendered: false, requests: test.rpc.length };
       }, { holdInitialRpc: true, at: new Date(Date.parse(expiresAt) - 1).toISOString() });
     }
+  }
+  if (wave2) {
+    const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
+    assert.throws(() => planDateNightPatches(WAVE2_LOCATIONS[0], 25), /Choose a valid Date Night distance/,
+      "The regional addition does not change the unsupported 25-mile UI/planner contract");
+    verdict.wave2DistanceContract = { actualUiRadii: [1, 15, 30, 50], independentlyMeasuredRadius: 25,
+      unsupported25PlannerRejected: true, oracle: "Frozen accepted coordinates; independent spherical cosine and initial-bearing formulas" };
+    for (const location of WAVE2_LOCATIONS) {
+      for (const row of WAVE2_ROWS) {
+        assert.ok(Math.abs(regionalDistance(location, row) - location.measurements[row.id].distanceMiles) < 0.0001,
+          "Independent spherical-cosine distance agrees with the separately frozen unit-vector oracle");
+        assert.equal(regionalOwner(location, row), location.measurements[row.id].expectedPatch,
+          "Independent bearing calculation agrees with separately reviewed literal patch ownership");
+      }
+      for (const radius of [1, 15, 25, 30, 50]) assert.deepEqual(
+        WAVE2_ROWS.filter(row => regionalDistance(location, row) <= radius + 0.05).map(row => row.id).sort(), location.expected[radius],
+        "Literal independently frozen memberships cannot drift with runtime catalog or geometry changes");
+      await runScenario(wave2Rows[0], `wave2-${location.key}`, "controlled-radius-and-patch-ownership", async test => {
+        test.result.evidence.wave2Radii = [];
+        for (const radius of [1, 15, 30, 50]) {
+          if (radius !== 1) await setTravelDistance(test.page, radius);
+          test.result.evidence.wave2Radii.push(await inspectWave2Membership(test, location, radius));
+        }
+        const before = test.rpc.length;
+        await setTravelDistance(test.page, 1);
+        await activityCount(test.page, location.expected[1].length);
+        await assertNoRpc(test, before, "Shrinking a completed regional radial session reuses its exact acquired pool");
+      }, { location, filters: { favoritesOnly: true }, preferences: wave2Favorites });
+    }
+    await runScenario(wave2Rows[0], "wave2-relocation", "manual-cross-state-relocation", async test => {
+      const { page, result } = test;
+      result.evidence.manualRelocations = [await inspectWave2Membership(test, WAVE2_LOCATIONS[0], 1)];
+      const section = page.getByRole("region", { name: "Search location" });
+      for (const location of WAVE2_LOCATIONS.slice(1)) {
+        const before = test.rpc.length;
+        const toggle = section.getByRole("button", { name: "Change location", exact: true });
+        if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
+        await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(location.label);
+        await page.getByRole("button", { name: "Set location", exact: true }).click();
+        await section.getByText(location.label, { exact: true }).waitFor();
+        await ready(page);
+        await waitFor(async () => test.rpc.length > before, "Manual state relocation must acquire its new coordinate signature");
+        result.evidence.manualRelocations.push(await inspectWave2Membership(test, location, 1, before));
+        const storedLocation = (await stored(page)).location;
+        assert.deepEqual([storedLocation.lat, storedLocation.lon, storedLocation.region, storedLocation.source],
+          [location.lat, location.lon, location.region, "manual"]);
+      }
+      const calls = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse).filter(event => event.scenario === test.state.scenario);
+      assert.deepEqual(calls.filter(event => event.event === "intercepted-geocoder").map(event => event.query), WAVE2_LOCATIONS.slice(1).map(location => location.label));
+      assert.ok(calls.every(event => event.forwarded === false));
+      result.evidence.manualGeocoderCalls = calls.filter(event => event.event === "intercepted-geocoder");
+    }, { fixture: "regional-location", location: WAVE2_LOCATIONS[0], locationFixtures: WAVE2_LOCATIONS,
+      filters: { favoritesOnly: true }, preferences: wave2Favorites });
   }
   if (regional) {
     const { planDateNightPatches } = load("src/lib/date-night/radial-plan.ts");
@@ -1625,11 +1739,12 @@ try {
       result.evidence.providerCalls = calls;
     }, { at: "2026-11-03T18:00:00Z", fixture: "mixed" });
   }
-  if (cumulative || expanded) for (const [index, row] of rows.filter(row => regional || row.seasonalListing.visibility === "listing-lifecycle").entries()) {
+  if (cumulative || expanded) for (const [index, row] of rows.filter(row => regional || wave2 || row.seasonalListing.visibility === "listing-lifecycle").entries()) {
     const at = "2026-11-05T12:00:00-06:00";
-    const frozen = REGIONAL_RECORDS.find(accepted => accepted.id === row.id);
+    const frozen = (wave2 ? WAVE2_RECORDS : REGIONAL_RECORDS).find(accepted => accepted.id === row.id);
     const expiredRegional = Boolean(frozen && Date.parse(frozen.seasonalListing.listingExpiresAt) <= Date.parse(at));
     if (regional) assert.equal(expiredRegional, true, "All twelve accepted regional cutoffs precede November 5");
+    if (wave2) assert.equal(expiredRegional, true, "All ten independently accepted Wave 2 cutoffs precede November 5");
     await runScenario(row, `late-${index}`, expiredRegional ? "november5-expired-negative" : "late-fall-anything-cache-expiry", async test => {
       const { page, result, state } = test;
       const count = nearby(row, { at, season: false }).length;
@@ -1742,15 +1857,33 @@ try {
     }, { pathname: "/favorites", preferences: { [providerId]: preference(row, providerId, { favorite: true, ourRating: 4 }) },
       identityReceipts: { [providerId]: { canonicalId: row.id, canonicalName: row.name, reviewRevision: oldRevision(row) } } });
   }
-  assert.equal(verdict.scenarios.length, rows.length * (expanded ? 17 : 15) + receiptRows.length +
-    ((cumulative || expanded) ? rows.filter(row => regional || row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
-    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds || regional ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0) + (extras ? 11 : 0) + (regional ? rows.length * 4 + 4 + 1 + 4 : 0));
+  assert.equal(verdict.scenarios.length, rows.length * (wave2 ? 18 : expanded ? 17 : 15) + receiptRows.length +
+    ((cumulative || expanded) ? rows.filter(row => regional || wave2 || row.seasonalListing.visibility === "listing-lifecycle").length : 0) +
+    (phase4 ? rows.length + 5 : nextMissouri || holdCleanup || rankedHolds || regional || wave2 ? rows.length : 0) + (holdCleanup || rankedHolds ? 1 : 0) + (rankedHolds ? 1 : 0) + (extras ? 11 : 0) + (regional ? rows.length * 4 + 4 + 1 + 4 : 0) + (wave2 ? rows.length * 4 + WAVE2_LOCATIONS.length + 1 : 0));
   if (regional) {
     assert.equal(verdict.scenarios.length, 317, "Frozen regional lane completion requires exactly 317 deliberately enumerated scenarios");
     verdict.regionalAcceptance = { acceptedIds: REGIONAL_ROWS.map(row => row.id), expectedScenarioCount: 317,
       actualScenarioCount: verdict.scenarios.length, expiredNovember5Controls: 12,
       negativeLifecycleControls: 24, actualUiRadii: [1, 15, 30, 50], independentRadiusOnly: 25,
       manualLocationOnly: true, historicalReceiptControls: receiptRows.length };
+  }
+  if (wave2) {
+    // Ten x 24 explicit new-record scenarios, 32 unchanged old receipts, plus
+    // the pinned controlled origins and one actual manual-relocation journey.
+    assert.equal(verdict.scenarios.length, WAVE2_EXPECTED_SCENARIO_COUNT, "Frozen Wave 2 scenario accounting");
+    for (const id of WAVE2_IDS) assert.deepEqual(
+      verdict.scenarios.filter(result => result.id === id && WAVE2_RECORD_SCENARIOS.includes(result.scenario))
+        .map(result => result.scenario).sort(), [...WAVE2_RECORD_SCENARIOS].sort(),
+      "Every new identity must execute every required scenario exactly once");
+    assert.equal(verdict.scenarios.filter(result => result.scenario === "old-receipt-survives-batch").length, 32);
+    assert.equal(verdict.scenarios.filter(result => result.scenario === "controlled-radius-and-patch-ownership").length, WAVE2_LOCATIONS.length);
+    assert.equal(verdict.scenarios.filter(result => result.scenario === "manual-cross-state-relocation").length, 1);
+    verdict.wave2Acceptance = { acceptedIds: WAVE2_IDS, literalOffIds: WAVE2_OFF_IDS,
+      expectedScenarioCount: WAVE2_EXPECTED_SCENARIO_COUNT, actualScenarioCount: verdict.scenarios.length,
+      perRecordScenarios: WAVE2_RECORD_SCENARIOS, widths: [320, 390, 512], historicalReceiptControls: 32,
+      expiredNovember5Controls: 10, negativeLifecycleControls: 20, actualUiRadii: [1, 15, 30, 50],
+      independentRadiusOnly: 25, manualLocationOnly: true, oracleSha256: WAVE2_ORACLE_SHA256,
+      radiusOracleSha256: WAVE2_RADIUS_SHA256, publicProviderAcceptance: false };
   }
   assert.equal(verdict.errors.length, 0);
   verdict.passed = true;
@@ -1761,6 +1894,11 @@ try {
   try { process.kill(-server.pid, "SIGTERM"); } catch (error) {
     if (error.code !== "ESRCH") { verdict.errors.push({ message: "Owned preview cleanup failed" }); verdict.passed = false; process.exitCode = 1; }
   }
+  try {
+    await waitFor(async () => server.exitCode !== null || server.signalCode !== null, "Owned preview did not exit after cleanup", 5000);
+  } catch (error) {
+    verdict.errors.push({ message: error.message }); verdict.passed = false; process.exitCode = 1;
+  }
   const network = (await readFile(events, "utf8")).split("\n").filter(Boolean).map(JSON.parse);
   verdict.network = { interceptedProviderCalls: network.filter(event => event.event === "intercepted-provider").length,
     blockedServerRequests: network.filter(event => event.event === "blocked-external"), forwardedExternalCalls: 0 };
@@ -1768,4 +1906,24 @@ try {
   await writeFile(resolve(output, "server.log"), logs);
   await writeFile(resolve(output, "verdict.json"), JSON.stringify(verdict, null, 2));
   console.log(JSON.stringify(verdict, null, 2));
+}
+
+// Preserve the original twelve-record verdict and exact 317-scenario gate. The
+// existing regional CI lane then runs the new ten against the same authenticated
+// build, with separate browser evidence and a recursion guard. No hosted job,
+// timeout, build route or provider policy is changed.
+if (regional && verdict.passed && !process.exitCode) {
+  const childExit = await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, ["scripts/seasonal-ten-record-browser.mjs"], {
+      env: { ...process.env, SEASONAL_REGIONAL_WAVE1: "false", SEASONAL_WAVE2: "true" }, stdio: "inherit",
+    });
+    child.once("error", reject);
+    child.once("exit", (code, signal) => resolve({ code, signal }));
+  });
+  if (childExit.code !== 0 || childExit.signal) process.exitCode = 1;
+  await writeFile(resolve(output, "wave2-subpass.json"), JSON.stringify({
+    schemaVersion: 1, sourceBuildProof: proof, legacyScenarioCount: 317,
+    wave2Verdict: "../seasonal-wave2-ten/verdict.json", ...childExit,
+    passed: childExit.code === 0 && !childExit.signal,
+  }, null, 2));
 }

@@ -36,6 +36,25 @@ export const REGIONAL_MATERIAL_FACTS = Object.fromEntries(Object.entries(REGIONA
   .map(([id, presentation]) => [id, presentation.details.map(detail => new RegExp(escape(detail)))]));
 export const REGIONAL_CONFIDENCE = Object.fromEntries(Object.entries(REGIONAL_PRESENTATIONS)
   .map(([id, presentation]) => [id, presentation.confidence]));
+
+// New 2026 Wave 2 entries are independently enumerated; the 82-record baseline
+// remains exact and the registry may contain *only* these ten additional IDs.
+const wave2Bytes = readFileSync("audit/halloween-wave2-2026-10-14/ADAPTED-TEN-FROZEN-INPUTS.json");
+const WAVE2_FROZEN = JSON.parse(wave2Bytes);
+assert.equal(WAVE2_FROZEN.records.length, 10);
+assert.equal(Object.keys(WAVE2_FROZEN.presentations).length, 10);
+assert.equal(new Set(WAVE2_FROZEN.identityOrder).size, 10);
+const EXPECTED_RELEASED_PRESENTATIONS = { ...REGIONAL_BASELINE.presentations, ...REGIONAL_PRESENTATIONS };
+export const WAVE2_EXPECTED_PRESENTATIONS = WAVE2_FROZEN.presentations;
+const EXPECTED_92_PRESENTATIONS = { ...EXPECTED_RELEASED_PRESENTATIONS, ...WAVE2_EXPECTED_PRESENTATIONS };
+assert.equal(Object.keys(EXPECTED_RELEASED_PRESENTATIONS).length, 82);
+assert.equal(Object.keys(EXPECTED_92_PRESENTATIONS).length, 92);
+const EXPECTED_92_RECORD_IDS = [
+  ...[...REGIONAL_BASELINE.catalog, ...REGIONAL_ROWS].map(row => row.seasonalListing.recordId),
+  ...WAVE2_FROZEN.records.map(row => row.seasonalListing.recordId),
+];
+assert.equal(new Set(EXPECTED_92_RECORD_IDS).size, 92);
+
 const normalized = rows => JSON.parse(JSON.stringify(rows)).sort((a, b) => a.id.localeCompare(b.id));
 export function assertRegionalCatalog(rows, presentations) {
   assert.equal(rows.length, 82, "Exactly released 70 plus independently selected 12");
@@ -43,14 +62,16 @@ export function assertRegionalCatalog(rows, presentations) {
   assert.equal(new Set(rows.map(row => row.seasonalListing.recordId)).size, 82, "No duplicate record IDs");
   assert.deepEqual(normalized(rows), normalized([...REGIONAL_BASELINE.catalog, ...REGIONAL_ROWS]),
     "Complete immutable released and independently accepted objects, without missing or extra fields");
-  assert.deepEqual(presentations, { ...REGIONAL_BASELINE.presentations, ...REGIONAL_PRESENTATIONS },
-    "Complete 82-presentation registry with no orphan, replacement or changed legacy field");
-  assert.deepEqual(Object.keys(presentations).sort(), rows.map(row => row.seasonalListing.recordId).sort());
-  for (const row of rows) assert.equal(presentations[row.seasonalListing.recordId].canonicalId, row.id);
+  assert.deepEqual(presentations, EXPECTED_92_PRESENTATIONS,
+    "Immutable 82-presentation baseline plus exact ten Wave 2 additions, with no orphan, replacement or altered field");
+  assert.deepEqual(Object.keys(presentations).sort(), EXPECTED_92_RECORD_IDS.slice().sort());
+  for (const row of [...rows, ...WAVE2_FROZEN.records])
+    assert.equal(presentations[row.seasonalListing.recordId].canonicalId, row.id);
 }
 export function releasedSeventyPresentationsOnly(registry) {
-  assert.deepEqual(registry, { ...REGIONAL_BASELINE.presentations, ...REGIONAL_PRESENTATIONS });
-  const legacy = Object.fromEntries(Object.entries(registry).filter(([id]) => !REGIONAL_RECORD_IDS.includes(id)));
+  assert.deepEqual(registry, EXPECTED_92_PRESENTATIONS, "Only frozen 82 plus approved ten presentation IDs");
+  const legacy = Object.fromEntries(Object.entries(registry).filter(([id]) =>
+    !REGIONAL_RECORD_IDS.includes(id) && !Object.hasOwn(WAVE2_EXPECTED_PRESENTATIONS, id)));
   assert.deepEqual(legacy, REGIONAL_BASELINE.presentations, "All 70 legacy presentations remain exact");
   return legacy;
 }

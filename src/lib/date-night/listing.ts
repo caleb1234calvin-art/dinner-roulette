@@ -9,7 +9,7 @@ export interface SeasonalListing {
   visitorAddress: string;
   placement: null | {
     lat: number; lon: number;
-    basis: "address-geocode" | "operator-site" | "verified-arrival";
+    basis: "address-geocode" | "operator-site" | "operator-linked-map" | "operator-site-business-location" | "verified-arrival";
     sourceUrl: string; checkedAt: string; precisionLabel: string;
   };
   directionsTarget: { kind: "visitor-address"; address: string } |
