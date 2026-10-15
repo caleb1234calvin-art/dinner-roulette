@@ -1,0 +1,30 @@
+# CURRENT — PR #72 RELEASE-SAFETY DASHBOARD CHECKS PASS WITH LIMITS (2026-10-15, 06:13 UTC)
+
+## CURRENT
+- Fresh independent GitHub readback: main **0344ccce79ce157196ff9e84b1aaf3e40802afc5**, tree **c7c49796abc809c4a00690cd282f69920e325bbc**. PR #72 remains **OPEN / DRAFT / UNMERGED**, head **4b2498e067fd7e4a1816fc3732e2cc7e75415486**, tree **95f66498048590cbd30c623b17d15bf2d5b7cc73**, sole parent **0336b55a2a059423c8d5c0dc4f52f79b71bdcacc**. All 18 applicable check-runs are SUCCESS; signing/upload is SKIPPED. Prior technical acceptance remains qualified, not newly rerun.
+- Production **dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb READY**, source exact main, **82 published source identities**. All five hostname-specific control-plane reads resolve to J7T: pickforus.app, www.pickforus.app, dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app, dinner-roulette-git-main-minions-9e2c.vercel.app. This refresh proves current deployment assignment, not a new interactive live smoke.
+- Retained **dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf READY**, source **6c619adda4d9ef3b2683befb2ca874b257505eb2**; older **dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ READY**, source **3b6b9ed0f4be1581b3b541207b2637183fff57d3**. Historical alias arrays on these retained deployments are not current assignments.
+
+## Operational gate A — PASS, observed configuration only
+The signed-in owner dashboard displayed Build Command Override enabled and the exact full command:
+`VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`
+Save was disabled; nothing was edited or saved. This closes the earlier unexposed effective-command HOLD for the observed project configuration.
+Pinned candidate review confirms with-app-env.mjs merges VITE_ flags and spawns the supplied command, package.json's ordinary npm build still chains db:migrate, vercel.json supplies no buildCommand, and the Vite database bootstrap plugin applies only to serve. The displayed direct Vite route avoids that npm migration chain. It is not an unlimited guarantee about future changed source or settings. **Never substitute ordinary npm run build.**
+
+## Operational gate B — PASS for owner access and current eligible target; coverage limits remain
+The signed-in owner **caleb1234calvin-6132**, Minions Hobby, could open Instant Rollback selection/review. It showed Current J7T /0344ccc and Previous AQ75 /6c619ad, with Confirm Rollback enabled. **Confirm was never clicked**. The dialog was exited using Back and Cancel; overview remained J7T.
+The review listed exactly **pickforus.app, www.pickforus.app and dinner-roulette-chi.vercel.app**. Neither generated alias was listed. **Five-alias rollback coverage is not proven**; any separately authorized future rollback requires separate verification of both generated aliases and must stop on mismatch rather than improvise.
+Warnings included restoring the older deployment's environment/cron configuration and pausing automatic production promotion until rollback is removed. These risks remain relevant.
+The connector's historical **403 deploymentRollback** restriction remains unchanged and was not retried or bypassed. Dashboard owner access does not grant that connector permission. No rollback was executed. After a future approved PR72 deployment, J7T would be the intended immediately previous target; its eligibility must be checked then and is not proven by today's J7T-to-AQ75 dialog.
+
+## NEXT / HOLD
+- These two bounded safety observations close the operational information gaps, not release authorization. **PR72 remains unreleased; separate exact-SHA/tree owner approval is still required**, including acceptance of seven source PASS / three qualified records and inherited UI/provider/mobile limitations.
+- Preserve Walters supplementary ticket/age and 217 supplementary warning/ticket qualifications, Boo Crew ancillary bans not freshly located, inherited 320px Directions overflow/occasional Options notice discrepancy, and separate Kansas City 50-mile provider/core gating. Physical Android/WebView/GPS/PWA and signing/Play remain HOLD/out of scope.
+- No merge, deployment, migration, rollback, alias, credential or settings mutation occurred. PR61 remains parked. No second candidate or new discovery is started.
+- Both full previous continuity bodies are preserved unchanged below. Current safe update location remains deployment-disabled **integration/continuity-refresh-2026-10-07**; do not write continuity/release.
+
+## Evidence and readback
+- Dashboard report: vercel-release-safeguards-2026-10-15/READ-ONLY-OWNER-DASHBOARD-REPORT.md, SHA256 **ca5c4338d70b83a98f740b728253efd6bd1dc69aff669a4c839de7d21005492c**; manifest **72aef16a41ef5d1c5935415c8837336ecc6bfd07c0de7f6cd793dfbd6e46b852**. Screenshots remain local only; no durable private upload is claimed. The six raw DOM text receipts, original local manifest and readable browser report are preserved under audit/astra-takeover-2026-10-14/release-safety-dashboard-2026-10-15/. The original manifest also names local-only screenshots; their listed hashes do not preserve their pixels. Account name and project ID were independently visible; OWNER role/team ID came from the prior verified membership preflight.
+- Control-plane readback: pr72-release-safety-2026-10-15/CONTROL-READBACK.json, SHA256 **a0b85db638edeb20649968688257e0a03cc6657ecfacaeada34cb014e599c3c7**, observed through06:12:36UTC. The full prior safety preflight was read, current continuity sections semantically reviewed and complete historical bodies retained; historical paragraphs were not all semantically re-reviewed anew.
+- Pinned source blobs: wrapper **e48dfafa69fa33d5288269ce939236956ff75e9c**; package **e49aaca989bf9fafed68714fdb7f036785c1a226**; Vercel config **65925d91f882a10433e3eb43f53ed802914c969b**; Vite config **f0aa67ddb6b5067c5aece4678259caa57638aa5a**.
+- This checkpoint supersedes the operational HOLDs in the unchanged earlier report R3-RELEASE-SAFETY-PREFLIGHT-2026-10-15.md only to the bounded extent stated above. It does not erase that report, the connector restriction or any release condition.

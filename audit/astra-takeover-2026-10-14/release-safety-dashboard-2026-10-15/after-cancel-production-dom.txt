@@ -1,0 +1,330 @@
+- link "Skip to content":
+  - /url: "#geist-skip-nav"
+- main:
+  - link "Minions Hobby":
+    - /url: /minions-9e2c
+    - generic: Minions
+    - generic: Hobby
+  - button:
+  - button "Find F":
+    - generic: Find
+    - generic: F
+  - navigation:
+    - link "Overview":
+      - /url: /minions-9e2c/dinner-roulette
+      - generic: Overview
+    - link "Deployments":
+      - /url: /minions-9e2c/dinner-roulette/deployments
+      - generic: Deployments
+    - link "Logs":
+      - /url: /minions-9e2c/dinner-roulette/logs
+      - generic: Logs
+    - link "Analytics":
+      - /url: /minions-9e2c/dinner-roulette/analytics
+      - generic: Analytics
+    - link "Speed Insights":
+      - /url: /minions-9e2c/dinner-roulette/speed-insights
+      - generic: Speed Insights
+    - link "Observability":
+      - /url: /minions-9e2c/dinner-roulette/observability
+      - generic: Observability
+    - link "Firewall":
+      - /url: /minions-9e2c/dinner-roulette/firewall
+      - generic: Firewall
+    - link "CDN":
+      - /url: /minions-9e2c/dinner-roulette/cdn
+      - generic: CDN
+    - separator
+    - link "Environment Variables":
+      - /url: /minions-9e2c/dinner-roulette/settings/environment-variables
+      - generic: Environment Variables
+    - link "Domains":
+      - /url: /minions-9e2c/dinner-roulette/settings/domains
+      - generic: Domains
+    - link "Connect":
+      - /url: /minions-9e2c/dinner-roulette/connect
+      - generic: Connect
+    - link "Integrations":
+      - /url: /minions-9e2c/dinner-roulette/settings/integrations
+      - generic: Integrations
+    - link "Storage":
+      - /url: /minions-9e2c/dinner-roulette/stores
+      - generic: Storage
+    - link "Flags":
+      - /url: /minions-9e2c/dinner-roulette/flags
+      - generic: Flags
+    - link "Agent":
+      - /url: /minions-9e2c/dinner-roulette/agent
+      - generic: Agent
+    - link "AI Gateway":
+      - /url: /minions-9e2c/dinner-roulette/ai-gateway
+      - generic: AI Gateway
+    - link "Sandboxes":
+      - /url: /minions-9e2c/dinner-roulette/sandboxes
+      - generic: Sandboxes
+    - link "Workflows":
+      - /url: /minions-9e2c/dinner-roulette/workflows
+      - generic: Workflows
+    - link "Images":
+      - /url: /minions-9e2c/dinner-roulette/images
+      - generic: Images
+    - separator
+    - link "Usage":
+      - /url: /minions-9e2c/dinner-roulette/usage
+      - generic: Usage
+    - link "Support":
+      - /url: /minions-9e2c/dinner-roulette/support
+      - generic: Support
+    - link "Settings":
+      - /url: /minions-9e2c/dinner-roulette/settings
+      - generic: Settings
+  - button "Avatar for caleb1234calvin-6132 caleb1234calvin-6132":
+    - img "Avatar for caleb1234calvin-6132":
+      - img "Avatar for caleb1234calvin-6132"
+    - generic: caleb1234calvin-6132
+  - button "24 unseen notifications":
+  - button:
+  - link "dinner-roulette":
+    - /url: /minions-9e2c/dinner-roulette
+    - generic: dinner-roulette
+  - button:
+  - link "Back to team view":
+    - /url: /minions-9e2c
+  - navigation "Breadcrumb":
+    - generic: Overview
+  - button "Vercel Agent is available on Pro":
+    - generic: Agent
+  - heading "Production Deployment" [level=3]
+  - link "Open in v0":
+    - /url: https://v0.app/minions-9e2c/projects/dinner-roulette?utm_source=vercel-dashboard
+  - link "Repository":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette
+  - button "Rollback":
+    - generic: Rollback
+  - link "Visit":
+    - /url: https://pickforus.app
+    - generic: Visit
+  - button "Visit with":
+  - button "Project Menu":
+  - link "Visit Deployment":
+    - /url: https://pickforus.app
+  - term: Deployment
+  - definition:
+    - link "dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app":
+      - /url: /minions-9e2c/dinner-roulette/J7TNPFJG4GAnZqytXfrJDR5f8RAb
+  - link "0":
+    - /url: /minions-9e2c/dinner-roulette/speed-insights
+    - progressbar:
+  - term:
+    - text: Domains
+    - button "Add a domain":
+  - definition:
+    - link "pickforus.app":
+      - /url: https://pickforus.app
+      - generic: pickforus.app
+    - link "dinner-roulette-chi.vercel.app":
+      - /url: https://dinner-roulette-chi.vercel.app
+      - generic: dinner-roulette-chi.vercel.app
+  - term: Status
+  - definition:
+    - generic "This deployment is ready.":
+      - generic: Ready
+  - term: Created
+  - definition:
+    - paragraph: 12h ago by caleb1234calvin-art
+    - img "github/caleb1234calvin-art":
+      - img "github/caleb1234calvin-art"
+  - term: Source
+  - definition:
+    - link "main":
+      - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/main
+      - code: main
+    - 'link "0344ccc Merge pull request #70 from caleb1234calvin-art/integration/regional-w…"':
+      - /url: https://github.com/caleb1234calvin-art/dinner-roulette/commit/0344ccce79ce157196ff9e84b1aaf3e40802afc5
+      - code: 0344ccc
+      - 'generic "Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14"': "Merge pull request #70 from caleb1234calvin-art/integration/regional-w…"
+  - button "Deployment Settings 3 Recommendations":
+    - generic: Deployment Settings
+    - generic: 3 Recommendations
+  - generic: To update your Production Deployment, push to the main branch.
+  - link "Deployments":
+    - /url: /minions-9e2c/dinner-roulette/deployments?environment=production
+    - generic: Deployments
+  - link "Learn more":
+    - /url: /docs/git#production-branch
+  - paragraph:
+    - strong: Production Checklist
+  - generic: 4/5
+  - button "Go to page":
+  - button
+  - button "Connect Git Repository":
+    - generic: Connect Git Repository
+  - button "Add Custom Domain":
+    - generic: Add Custom Domain
+  - button "Preview Deployment":
+    - generic: Preview Deployment
+  - button "Enable Web Analytics":
+    - generic: Enable Web Analytics
+  - button "Upgrade to Speed Insights Plus":
+    - generic: Upgrade to Speed Insights Plus
+  - paragraph:
+    - strong: Observability
+  - time: 6h
+  - link "Go to page":
+    - /url: /minions-9e2c/dinner-roulette/observability?period=6h
+  - link:
+    - /url: /minions-9e2c/dinner-roulette/observability?period=6h
+  - generic: CDN Requests
+  - generic: "43"
+  - generic: Function Invocations
+  - generic: "38"
+  - generic: Error Rate
+  - generic: 0%
+  - paragraph:
+    - strong: Analytics
+  - time: 1w
+  - link "Go to page":
+    - /url: /minions-9e2c/dinner-roulette/analytics
+  - link:
+    - /url: /minions-9e2c/dinner-roulette/analytics
+  - paragraph: 37 Visitors
+  - generic: "-65%"
+  - generic: "0"
+  - text: online
+  - paragraph: Active Branches
+  - searchbox "Search"
+  - generic: Press slash to focus search
+  - generic: /
+  - button "Filter by deployment status. 6 of 7 statuses selected":
+    - generic: Status
+    - generic "6 of 7 statuses selected":
+      - generic: 6/7
+  - link:
+    - /url: /minions-9e2c/dinner-roulette/BxCZjos8sUVv1WXComjvt2XW7Arz
+  - paragraph: continuity/release
+  - link "Preview":
+    - /url: /minions-9e2c/dinner-roulette/BxCZjos8sUVv1WXComjvt2XW7Arz
+    - generic: Preview
+  - link "This deployment had an error. BxCZjos8s":
+    - /url: /minions-9e2c/dinner-roulette/BxCZjos8sUVv1WXComjvt2XW7Arz
+    - generic "This deployment had an error."
+    - generic: BxCZjos8s
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/continuity%2Frelease
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-verify-seasonal-three-s-b6819a-minions-9e2c.vercel.app
+  - paragraph: verify/seasonal-three-source-tier-a-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-verify-seasonal-three-s-b6819a-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. 8DTa7ALfp":
+    - /url: /minions-9e2c/dinner-roulette/8DTa7ALfpXCpGhrirDHvcootTQxk
+    - generic "This deployment is ready."
+    - generic: 8DTa7ALfp
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/verify%2Fseasonal-three-source-tier-a-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-research-seasonal-three-63984c-minions-9e2c.vercel.app
+  - paragraph: research/seasonal-three-source-tier-a-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-research-seasonal-three-63984c-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. Cir4sF4eu":
+    - /url: /minions-9e2c/dinner-roulette/Cir4sF4euXCxUUZrbdoGhBhoiviS
+    - generic "This deployment is ready."
+    - generic: Cir4sF4eu
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/research%2Fseasonal-three-source-tier-a-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-research-seasonal-three-8a8230-minions-9e2c.vercel.app
+  - paragraph: research/seasonal-three-source-delta-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-research-seasonal-three-8a8230-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. EDvrTpicY":
+    - /url: /minions-9e2c/dinner-roulette/EDvrTpicYh3wupKxLhYsLw3nXjEK
+    - generic "This deployment is ready."
+    - generic: EDvrTpicY
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/research%2Fseasonal-three-source-delta-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-verify-seasonal-final-u-bd5dfa-minions-9e2c.vercel.app
+  - paragraph: verify/seasonal-final-unresolved-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-verify-seasonal-final-u-bd5dfa-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. cfNQaZPqn":
+    - /url: /minions-9e2c/dinner-roulette/cfNQaZPqn4GbBZwUUaqqJtbUKMeC
+    - generic "This deployment is ready."
+    - generic: cfNQaZPqn
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/verify%2Fseasonal-final-unresolved-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-research-seasonal-final-03d22a-minions-9e2c.vercel.app
+  - paragraph: research/seasonal-final-unresolved-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-research-seasonal-final-03d22a-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. A7gcvk7DL":
+    - /url: /minions-9e2c/dinner-roulette/A7gcvk7DLxfTTYf8E8pBteKMag5E
+    - generic "This deployment is ready."
+    - generic: A7gcvk7DL
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/research%2Fseasonal-final-unresolved-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-verify-seasonal-deferre-0b772b-minions-9e2c.vercel.app
+  - paragraph: verify/seasonal-deferred-batch-3-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-verify-seasonal-deferre-0b772b-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. CEFKfgaJb":
+    - /url: /minions-9e2c/dinner-roulette/CEFKfgaJbFsVwmPDLsebrqs1tCKS
+    - generic "This deployment is ready."
+    - generic: CEFKfgaJb
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/verify%2Fseasonal-deferred-batch-3-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-research-seasonal-defer-976787-minions-9e2c.vercel.app
+  - paragraph: research/seasonal-deferred-batch-3-2026-10-08
+  - link "Preview":
+    - /url: https://dinner-roulette-git-research-seasonal-defer-976787-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. GWVudZeYJ":
+    - /url: /minions-9e2c/dinner-roulette/GWVudZeYJupcLoLx5AgrgnqcbDnJ
+    - generic "This deployment is ready."
+    - generic: GWVudZeYJ
+  - link "Source":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/tree/research%2Fseasonal-deferred-batch-3-2026-10-08
+    - generic: Source
+  - button "Menu":
+  - link:
+    - /url: https://dinner-roulette-git-feature-seasonal-two-re-537bc9-minions-9e2c.vercel.app
+  - paragraph: feature/seasonal-two-records-2026
+  - link "Preview":
+    - /url: https://dinner-roulette-git-feature-seasonal-two-re-537bc9-minions-9e2c.vercel.app
+    - generic: Preview
+  - link "This deployment is ready. 6KmnEVduD":
+    - /url: /minions-9e2c/dinner-roulette/6KmnEVduDBVfSYW9KGVdSdEGd4bS
+    - generic "This deployment is ready."
+    - generic: 6KmnEVduD
+  - link "#48":
+    - /url: https://github.com/caleb1234calvin-art/dinner-roulette/pull/48
+    - generic: "#48"
+  - button "Menu":
+  - button "Load More":
+    - generic: Load More
+- alert

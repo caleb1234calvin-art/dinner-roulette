@@ -1,0 +1,280 @@
+{
+  "observedAt": "2026-10-15T06:12:36Z",
+  "canonical": {
+    "ref": "refs/heads/integration/continuity-refresh-2026-10-07",
+    "node_id": "REF_kwDOUPp-qdoANHJlZnMvaGVhZHMvaW50ZWdyYXRpb24vY29udGludWl0eS1yZWZyZXNoLTIwMjYtMTAtMDc",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/refs/heads/integration/continuity-refresh-2026-10-07",
+    "object": {
+      "sha": "e52b96bb4b102b25f7fcb979eacd04503e7ed7a7",
+      "type": "commit",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/e52b96bb4b102b25f7fcb979eacd04503e7ed7a7"
+    }
+  },
+  "head": {
+    "sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+    "node_id": "C_kwDOUPp-qdoAKDRiMjQ5OGUwNjdmZDdlNGExODE2ZmMzNzMyZTJjYzdlNzU0MTU0ODY",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+    "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+    "author": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-14T23:01:03Z"
+    },
+    "committer": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-14T23:01:03Z"
+    },
+    "tree": {
+      "sha": "95f66498048590cbd30c623b17d15bf2d5b7cc73",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/95f66498048590cbd30c623b17d15bf2d5b7cc73"
+    },
+    "message": "Restore source-backed visitor qualifications and complete Wave2 browser acceptance",
+    "parents": [
+      {
+        "sha": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/0336b55a2a059423c8d5c0dc4f52f79b71bdcacc",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/0336b55a2a059423c8d5c0dc4f52f79b71bdcacc"
+      }
+    ],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "main": {
+    "sha": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
+    "tree": "c7c49796abc809c4a00690cd282f69920e325bbc"
+  },
+  "checks": [
+    {
+      "id": 116167645436,
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116167645436"
+    },
+    {
+      "id": 116152528890,
+      "name": "sign-upload-bundle",
+      "status": "completed",
+      "conclusion": "skipped",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496774/job/116152528890"
+    },
+    {
+      "id": 116151117099,
+      "name": "validate-android",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496774/job/116151117099"
+    },
+    {
+      "id": 116151116387,
+      "name": "Browser (seasonal-regional-wave1)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116387"
+    },
+    {
+      "id": 116151116290,
+      "name": "Browser (date-night-radial)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116290"
+    },
+    {
+      "id": 116151116168,
+      "name": "Browser (seasonal-phase4)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116168"
+    },
+    {
+      "id": 116151116132,
+      "name": "Browser (seasonal-astra)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116132"
+    },
+    {
+      "id": 116151116129,
+      "name": "Browser (location)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116129"
+    },
+    {
+      "id": 116151116127,
+      "name": "Browser (seasonal-ranked-holds)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116127"
+    },
+    {
+      "id": 116151116111,
+      "name": "Browser (seasonal-astra-extras)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116111"
+    },
+    {
+      "id": 116151116090,
+      "name": "Browser (seasonal-cumulative)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116090"
+    },
+    {
+      "id": 116151116084,
+      "name": "Browser (seasonal-two)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116084"
+    },
+    {
+      "id": 116151116030,
+      "name": "Browser (casino)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116030"
+    },
+    {
+      "id": 116151116001,
+      "name": "Browser (seasonal-ten)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151116001"
+    },
+    {
+      "id": 116151115991,
+      "name": "Browser (seasonal-completeness-v1)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151115991"
+    },
+    {
+      "id": 116151115932,
+      "name": "Browser (seasonal-hold-cleanup)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151115932"
+    },
+    {
+      "id": 116151115682,
+      "name": "Browser (seasonal-next-missouri)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151115682"
+    },
+    {
+      "id": 116151115664,
+      "name": "Browser (geometry)",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151115664"
+    },
+    {
+      "id": 116151115464,
+      "name": "checks",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+      "details_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38651496637/job/116151115464"
+    }
+  ],
+  "deployments": {
+    "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_AQ75KpDS6AQ3g7GqHqYshiFhYfVf\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-5umm5wk7i-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791943184703,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"6c619adda4d9ef3b2683befb2ca874b257505eb2\",\n        \"githubCommitMessage\": \"Add three independently cleared Missouri seasonal events\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791943185656,\n      \"ready\": 1791943198986,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_2PV6mKTLmwDgc4BaNeRkvT2ckaMJ\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-gdtsdwx99-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1791873229971,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"3b6b9ed0f4be1581b3b541207b2637183fff57d3\",\n        \"githubCommitMessage\": \"Compose cleared occurrence amendment in historical counterpart assertion\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1791873231226,\n      \"ready\": 1791873247063,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "pickforus.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "www.pickforus.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-chi.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-minions-9e2c.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    },
+    "dinner-roulette-git-main-minions-9e2c.vercel.app": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"result\": {\n    \"deployment\": {\n      \"id\": \"dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb\",\n      \"name\": \"dinner-roulette\",\n      \"url\": \"dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app\",\n      \"type\": \"LAMBDAS\",\n      \"state\": \"READY\",\n      \"createdAt\": 1792003092071,\n      \"creator\": {\n        \"uid\": \"vJzqOIJ7PLOtgdkmemscyDMC\",\n        \"username\": \"caleb1234calvin-6132\"\n      },\n      \"project\": {\n        \"id\": \"prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm\",\n        \"name\": \"dinner-roulette\",\n        \"framework\": \"tanstack-start\"\n      },\n      \"meta\": {\n        \"githubCommitRef\": \"main\",\n        \"githubCommitSha\": \"0344ccce79ce157196ff9e84b1aaf3e40802afc5\",\n        \"githubCommitMessage\": \"Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\\n\\nAdd twelve independently cleared regional seasonal records\",\n        \"githubRepo\": \"dinner-roulette\",\n        \"githubOrg\": \"caleb1234calvin-art\"\n      },\n      \"alias\": [\n        \"pickforus.app\",\n        \"dinner-roulette-chi.vercel.app\",\n        \"www.pickforus.app\",\n        \"dinner-roulette-minions-9e2c.vercel.app\",\n        \"dinner-roulette-git-main-minions-9e2c.vercel.app\"\n      ],\n      \"target\": \"production\",\n      \"regions\": [\n        \"iad1\"\n      ],\n      \"buildingAt\": 1792003093416,\n      \"ready\": 1792003108415,\n      \"readyState\": \"READY\",\n      \"source\": \"git\",\n      \"aliasError\": null\n    }\n  }\n}"
+        }
+      ],
+      "isError": false
+    }
+  }
+}

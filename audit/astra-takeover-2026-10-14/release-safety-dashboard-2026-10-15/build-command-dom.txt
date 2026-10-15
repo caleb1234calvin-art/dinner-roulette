@@ -1,0 +1,392 @@
+- link "Skip to content":
+  - /url: "#geist-skip-nav"
+- main:
+  - link "Minions Hobby":
+    - /url: /minions-9e2c
+    - generic: Minions
+    - generic: Hobby
+  - button:
+  - button "Find F":
+    - generic: Find
+    - generic: F
+  - navigation:
+    - link "Overview":
+      - /url: /minions-9e2c/dinner-roulette
+      - generic: Overview
+    - link "Deployments":
+      - /url: /minions-9e2c/dinner-roulette/deployments
+      - generic: Deployments
+    - link "Logs":
+      - /url: /minions-9e2c/dinner-roulette/logs
+      - generic: Logs
+    - link "Analytics":
+      - /url: /minions-9e2c/dinner-roulette/analytics
+      - generic: Analytics
+    - link "Speed Insights":
+      - /url: /minions-9e2c/dinner-roulette/speed-insights
+      - generic: Speed Insights
+    - link "Observability":
+      - /url: /minions-9e2c/dinner-roulette/observability
+      - generic: Observability
+    - link "Firewall":
+      - /url: /minions-9e2c/dinner-roulette/firewall
+      - generic: Firewall
+    - link "CDN":
+      - /url: /minions-9e2c/dinner-roulette/cdn
+      - generic: CDN
+    - separator
+    - link "Environment Variables":
+      - /url: /minions-9e2c/dinner-roulette/settings/environment-variables
+      - generic: Environment Variables
+    - link "Domains":
+      - /url: /minions-9e2c/dinner-roulette/settings/domains
+      - generic: Domains
+    - link "Connect":
+      - /url: /minions-9e2c/dinner-roulette/connect
+      - generic: Connect
+    - link "Integrations":
+      - /url: /minions-9e2c/dinner-roulette/settings/integrations
+      - generic: Integrations
+    - link "Storage":
+      - /url: /minions-9e2c/dinner-roulette/stores
+      - generic: Storage
+    - link "Flags":
+      - /url: /minions-9e2c/dinner-roulette/flags
+      - generic: Flags
+    - link "Agent":
+      - /url: /minions-9e2c/dinner-roulette/agent
+      - generic: Agent
+    - link "AI Gateway":
+      - /url: /minions-9e2c/dinner-roulette/ai-gateway
+      - generic: AI Gateway
+    - link "Sandboxes":
+      - /url: /minions-9e2c/dinner-roulette/sandboxes
+      - generic: Sandboxes
+    - link "Workflows":
+      - /url: /minions-9e2c/dinner-roulette/workflows
+      - generic: Workflows
+    - link "Images":
+      - /url: /minions-9e2c/dinner-roulette/images
+      - generic: Images
+    - separator
+    - link "Usage":
+      - /url: /minions-9e2c/dinner-roulette/usage
+      - generic: Usage
+    - link "Support":
+      - /url: /minions-9e2c/dinner-roulette/support
+      - generic: Support
+    - link "Settings":
+      - /url: /minions-9e2c/dinner-roulette/settings
+      - generic: Settings
+    - button "Settings":
+      - generic: Settings
+    - link "General":
+      - /url: /minions-9e2c/dinner-roulette/settings/general
+      - generic: General
+    - link "Build and Deployment" [active]:
+      - /url: /minions-9e2c/dinner-roulette/settings/build-and-deployment
+      - generic: Build and Deployment
+    - link "Environments":
+      - /url: /minions-9e2c/dinner-roulette/settings/environments
+      - generic: Environments
+    - link "Git":
+      - /url: /minions-9e2c/dinner-roulette/settings/git
+      - generic: Git
+    - link "Deployment Protection":
+      - /url: /minions-9e2c/dinner-roulette/settings/deployment-protection
+      - generic: Deployment Protection
+    - link "Passport":
+      - /url: /minions-9e2c/dinner-roulette/settings/passport
+      - generic: Passport
+    - link "Functions":
+      - /url: /minions-9e2c/dinner-roulette/settings/functions
+      - generic: Functions
+    - link "Sandboxes":
+      - /url: /minions-9e2c/dinner-roulette/settings/sandboxes
+      - generic: Sandboxes
+    - link "Cron Jobs":
+      - /url: /minions-9e2c/dinner-roulette/settings/cron-jobs
+      - generic: Cron Jobs
+    - link "Microfrontends":
+      - /url: /minions-9e2c/dinner-roulette/settings/microfrontends
+      - generic: Microfrontends
+    - link "Project Members":
+      - /url: /minions-9e2c/dinner-roulette/settings/project-members
+      - generic: Project Members
+    - link "Drains":
+      - /url: /minions-9e2c/dinner-roulette/settings/drains
+      - generic: Drains
+    - link "Alerts":
+      - /url: /minions-9e2c/dinner-roulette/settings/alerts
+      - generic: Alerts
+    - link "Tracing":
+      - /url: /minions-9e2c/dinner-roulette/settings/tracing
+      - generic: Tracing
+    - link "Security":
+      - /url: /minions-9e2c/dinner-roulette/settings/security
+      - generic: Security
+    - link "Networking":
+      - /url: /minions-9e2c/dinner-roulette/settings/networking
+      - generic: Networking
+    - link "Activity":
+      - /url: /minions-9e2c/dinner-roulette/settings/activity
+      - generic: Activity
+    - link "Advanced":
+      - /url: /minions-9e2c/dinner-roulette/settings/advanced
+      - generic: Advanced
+  - button "Avatar for caleb1234calvin-6132 caleb1234calvin-6132":
+    - img "Avatar for caleb1234calvin-6132":
+      - img "Avatar for caleb1234calvin-6132"
+    - generic: caleb1234calvin-6132
+  - button "24 unseen notifications":
+  - button:
+  - link "dinner-roulette":
+    - /url: /minions-9e2c/dinner-roulette
+    - generic: dinner-roulette
+  - button:
+  - link "Back to team view":
+    - /url: /minions-9e2c/~/settings/build-and-deployment
+  - navigation "Breadcrumb":
+    - link "Project Settings":
+      - /url: /minions-9e2c/dinner-roulette/settings
+      - generic: Project Settings
+    - generic: Build and Deployment
+  - button "Vercel Agent is available on Pro":
+    - generic: Agent
+  - heading "Framework Settings" [level=4]:
+    - link "Framework Settings":
+      - /url: "#framework-settings"
+      - generic: Framework Settings
+  - paragraph: When using a framework for a new project, it will be automatically detected. As a result, several project settings are automatically configured to achieve the best result. You can override them below.
+  - generic: Framework Preset
+  - combobox:
+    - searchbox "Framework Preset": TanStack Start
+    - button "Open menu":
+  - heading "Build Command" [level=5]
+  - textbox "Build Command":
+    - /placeholder: "`npm run build` or `vite build`"
+    - text: VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+  - heading "Override" [level=5]
+  - generic "Override Build Command":
+    - checkbox "Override Build Command" [checked]
+  - heading "Output Directory" [level=5]
+  - textbox "Output Directory" [disabled]:
+    - /placeholder: dist
+  - heading "Override" [level=5]
+  - generic "Override Output Directory":
+    - checkbox "Override Output Directory"
+  - heading "Install Command" [level=5]
+  - textbox "Install Command" [disabled]:
+    - /placeholder: "`yarn install`, `pnpm install`, `npm install`, or `bun install`"
+  - heading "Override" [level=5]
+  - generic "Override Install Command":
+    - checkbox "Override Install Command"
+  - heading "Development Command" [level=5]
+  - textbox "Development Command" [disabled]:
+    - /placeholder: vite
+  - heading "Override" [level=5]
+  - generic "Override Development Command":
+    - checkbox "Override Development Command"
+  - text: Learn more about
+  - link "Build and Development Settings":
+    - /url: /docs/deployments/configure-a-build#build-and-development-settings
+    - text: Build and Development Settings
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Root Directory" [level=4]:
+    - link "Root Directory":
+      - /url: "#root-directory"
+      - generic: Root Directory
+  - paragraph: The directory within your project, where your code is located. Leave this field empty if your code is not located in a subdirectory.
+  - textbox "Root Directory":
+    - /placeholder: ./
+  - paragraph:
+    - text: Include files outside the root directory in the
+    - link "Build Step":
+      - /url: /docs/deployments/build-step
+      - text: Build Step
+    - text: .
+  - generic "Enabled":
+    - paragraph: Enabled
+    - checkbox "Include files outside the root directory in the Build Step . Enabled" [checked]
+  - separator
+  - paragraph:
+    - link "Skip deployments":
+      - /url: /docs/monorepos#skipping-unaffected-projects
+      - text: Skip deployments
+    - text: when there are no changes to the root directory or its dependencies.
+  - generic "Enabled":
+    - paragraph: Enabled
+    - checkbox "Skip deployments when there are no changes to the root directory or its dependencies. Enabled" [checked] [disabled]
+  - paragraph:
+    - text: Learn more about
+    - link "Root Directory":
+      - /url: /docs/deployments/configure-a-build#root-directory
+      - text: Root Directory
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Ignored Build Step" [level=4]:
+    - link "Ignored Build Step":
+      - /url: "#ignored-build-step"
+      - generic: Ignored Build Step
+  - paragraph: Vercel skips builds for commits with a previously deployed SHA. Override with a shell command that exits 1 (build) or 0 (skip).
+  - generic: Behavior
+  - combobox "Behavior":
+    - option "Automatic" [selected]
+    - option "Only build production"
+    - option "Only build pre-production"
+    - option "Only build if there are changes"
+    - option "Only build if there are changes in a folder"
+    - option "Don’t build anything"
+    - option "Run my Bash script"
+    - option "Run my Node script"
+    - option "Custom"
+  - paragraph:
+    - text: Learn more about
+    - link "Ignored Build Step":
+      - /url: /docs/project-configuration/git-settings#ignored-build-step
+      - text: Ignored Build Step
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Node.js Version" [level=4]:
+    - link "Node.js Version":
+      - /url: "#node.js-version"
+      - generic: Node.js Version
+  - paragraph: The Node.js version used during builds and for Serverless Functions. Redeploy to apply changes.
+  - combobox:
+    - option "24.x" [selected]
+    - option "22.x"
+  - paragraph:
+    - text: Learn more about
+    - link "Node.js Version":
+      - /url: /docs/functions/serverless-functions/runtimes/node-js#node.js-version
+      - text: Node.js Version
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Build Machine" [level=4]:
+    - link "Build Machine":
+      - /url: "#build-machine"
+      - generic: Build Machine
+  - paragraph: Choose your build settings and resources.
+  - note:
+    - generic: Upgrade to the Pro Plan to set Elastic or Turbo as the build machine for this project.
+  - combobox:
+    - searchbox "Build machine source": Custom Machine
+    - button "Open menu":
+  - radiogroup "Build machine type":
+    - list:
+      - radio "Basic 2 vCPUs and 8 GB memory, cost-effective builds for smaller projects" [checked]
+      - generic: Basic
+      - paragraph: 2 vCPUs and 8 GB memory, cost-effective builds for smaller projects
+  - note:
+    - text: Your next deployment will build with a
+    - strong: Basic
+    - text: machine.
+  - text: Learn more about
+  - link "build machine types":
+    - /url: /docs/builds/managing-builds#build-machine-types
+    - text: build machine types
+  - text: and
+  - link "pricing":
+    - /url: /docs/builds/managing-builds#on-demand-concurrent-builds-pricing
+    - text: pricing
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "On-Demand Concurrent Builds" [level=4]:
+    - link "On-Demand Concurrent Builds":
+      - /url: "#on-demand-concurrent-builds"
+      - generic: On-Demand Concurrent Builds
+  - paragraph: Skip the build queue and build deployments immediately. Usage costs apply per build minute.
+  - radiogroup "On-Demand Concurrent Builds":
+    - list:
+      - radio "Run all builds immediately Skip the queue for all builds"
+      - generic: Run all builds immediately
+      - generic: Skip the queue for all builds
+      - radio "Run up to one build per branch New deployments within a branch are queued"
+      - generic: Run up to one build per branch
+      - generic: New deployments within a branch are queued
+      - radio "Disable on-demand concurrent builds Builds are queued, maximum of one at a time" [checked]
+      - generic: Disable on-demand concurrent builds
+      - generic: Builds are queued, maximum of one at a time
+  - paragraph:
+    - text: This feature is available on the
+    - link "Pro plan":
+      - /url: /pricing
+      - text: Pro plan
+  - heading "Deployment Checks" [level=4]:
+    - link "Deployment Checks":
+      - /url: "#deployment-checks"
+      - generic: Deployment Checks
+  - paragraph: No checks configured
+  - paragraph: Use events or statuses from your checks provider to determine when a deployment is promoted to Production.
+  - button "Add Checks":
+    - generic: Add Checks
+  - paragraph:
+    - text: Learn more about
+    - link "Deployment Checks":
+      - /url: /docs/deployment-checks
+      - text: Deployment Checks
+  - heading "Rolling Releases" [level=4]:
+    - link "Rolling Releases":
+      - /url: "#rolling-releases"
+      - generic: Rolling Releases
+  - paragraph: Roll out changes gradually by defining a traffic percentage for each stage.
+  - generic: Disabled
+  - checkbox "Disabled"
+  - paragraph:
+    - text: This feature is available on the
+    - link "Pro plan":
+      - /url: /pricing
+      - text: Pro plan
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Prioritize Production Builds" [level=4]:
+    - link "Prioritize Production Builds":
+      - /url: "#prioritize-production-builds"
+      - generic: Prioritize Production Builds
+  - paragraph: Run Production builds before Pre-Production builds.
+  - checkbox "Enabled" [checked]
+  - generic: Enabled
+  - paragraph:
+    - text: Learn more about
+    - link "Prioritize Production Builds":
+      - /url: /docs/deployments/concurrent-builds#prioritize-production-builds
+      - text: Prioritize Production Builds
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "OIDC Policies Link to OIDC Policies" [level=4]:
+    - generic: OIDC Policies
+    - link "Link to OIDC Policies":
+      - /url: "#oidc-cli-policies"
+  - paragraph: Configure policies that exchange OIDC tokens from external identity providers for VCR access tokens. Turborepo CLI policies are configured at the team level.
+  - list:
+    - button "0 VCR Policies":
+      - paragraph: 0 VCR Policies
+    - button "Add":
+      - generic: Add
+  - heading "Deployment Retention Policy" [level=4]:
+    - link "Deployment Retention Policy":
+      - /url: "#deployment-retention-policy"
+      - generic: Deployment Retention Policy
+  - paragraph:
+    - generic: Define a retention period for all Deployments for this Project. Deployments will be deleted after the defined time.
+  - paragraph: Canceled Deployments
+  - button "Select the deployment retention policy":
+    - paragraph: 30 days
+  - paragraph: Errored Deployments
+  - button "Select the deployment retention policy":
+    - paragraph: 30 days
+  - paragraph: Pre-Production Deployments
+  - button "Select the deployment retention policy":
+    - paragraph: 30 days
+  - paragraph: Production Deployments
+  - button "Select the deployment retention policy":
+    - paragraph: 30 days
+  - paragraph:
+    - text: Learn more about
+    - link "Deployment Retention":
+      - /url: /docs/security/deployment-retention
+      - text: Deployment Retention
+  - button "Save" [disabled]:
+    - generic: Save
+- alert

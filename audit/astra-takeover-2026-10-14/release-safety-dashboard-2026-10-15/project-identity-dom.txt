@@ -1,0 +1,284 @@
+- link "Skip to content":
+  - /url: "#geist-skip-nav"
+- main:
+  - link "Minions Hobby":
+    - /url: /minions-9e2c
+    - generic: Minions
+    - generic: Hobby
+  - button:
+  - button "Find F":
+    - generic: Find
+    - generic: F
+  - navigation:
+    - link "Overview":
+      - /url: /minions-9e2c/dinner-roulette
+      - generic: Overview
+    - link "Deployments":
+      - /url: /minions-9e2c/dinner-roulette/deployments
+      - generic: Deployments
+    - link "Logs":
+      - /url: /minions-9e2c/dinner-roulette/logs
+      - generic: Logs
+    - link "Analytics":
+      - /url: /minions-9e2c/dinner-roulette/analytics
+      - generic: Analytics
+    - link "Speed Insights":
+      - /url: /minions-9e2c/dinner-roulette/speed-insights
+      - generic: Speed Insights
+    - link "Observability":
+      - /url: /minions-9e2c/dinner-roulette/observability
+      - generic: Observability
+    - link "Firewall":
+      - /url: /minions-9e2c/dinner-roulette/firewall
+      - generic: Firewall
+    - link "CDN":
+      - /url: /minions-9e2c/dinner-roulette/cdn
+      - generic: CDN
+    - separator
+    - link "Environment Variables":
+      - /url: /minions-9e2c/dinner-roulette/settings/environment-variables
+      - generic: Environment Variables
+    - link "Domains":
+      - /url: /minions-9e2c/dinner-roulette/settings/domains
+      - generic: Domains
+    - link "Connect":
+      - /url: /minions-9e2c/dinner-roulette/connect
+      - generic: Connect
+    - link "Integrations":
+      - /url: /minions-9e2c/dinner-roulette/settings/integrations
+      - generic: Integrations
+    - link "Storage":
+      - /url: /minions-9e2c/dinner-roulette/stores
+      - generic: Storage
+    - link "Flags":
+      - /url: /minions-9e2c/dinner-roulette/flags
+      - generic: Flags
+    - link "Agent":
+      - /url: /minions-9e2c/dinner-roulette/agent
+      - generic: Agent
+    - link "AI Gateway":
+      - /url: /minions-9e2c/dinner-roulette/ai-gateway
+      - generic: AI Gateway
+    - link "Sandboxes":
+      - /url: /minions-9e2c/dinner-roulette/sandboxes
+      - generic: Sandboxes
+    - link "Workflows":
+      - /url: /minions-9e2c/dinner-roulette/workflows
+      - generic: Workflows
+    - link "Images":
+      - /url: /minions-9e2c/dinner-roulette/images
+      - generic: Images
+    - separator
+    - link "Usage":
+      - /url: /minions-9e2c/dinner-roulette/usage
+      - generic: Usage
+    - link "Support":
+      - /url: /minions-9e2c/dinner-roulette/support
+      - generic: Support
+    - link "Settings":
+      - /url: /minions-9e2c/dinner-roulette/settings
+      - generic: Settings
+    - button "Settings":
+      - generic: Settings
+    - link "General" [active]:
+      - /url: /minions-9e2c/dinner-roulette/settings/general
+      - generic: General
+    - link "Build and Deployment":
+      - /url: /minions-9e2c/dinner-roulette/settings/build-and-deployment
+      - generic: Build and Deployment
+    - link "Environments":
+      - /url: /minions-9e2c/dinner-roulette/settings/environments
+      - generic: Environments
+    - link "Git":
+      - /url: /minions-9e2c/dinner-roulette/settings/git
+      - generic: Git
+    - link "Deployment Protection":
+      - /url: /minions-9e2c/dinner-roulette/settings/deployment-protection
+      - generic: Deployment Protection
+    - link "Passport":
+      - /url: /minions-9e2c/dinner-roulette/settings/passport
+      - generic: Passport
+    - link "Functions":
+      - /url: /minions-9e2c/dinner-roulette/settings/functions
+      - generic: Functions
+    - link "Sandboxes":
+      - /url: /minions-9e2c/dinner-roulette/settings/sandboxes
+      - generic: Sandboxes
+    - link "Cron Jobs":
+      - /url: /minions-9e2c/dinner-roulette/settings/cron-jobs
+      - generic: Cron Jobs
+    - link "Microfrontends":
+      - /url: /minions-9e2c/dinner-roulette/settings/microfrontends
+      - generic: Microfrontends
+    - link "Project Members":
+      - /url: /minions-9e2c/dinner-roulette/settings/project-members
+      - generic: Project Members
+    - link "Drains":
+      - /url: /minions-9e2c/dinner-roulette/settings/drains
+      - generic: Drains
+    - link "Alerts":
+      - /url: /minions-9e2c/dinner-roulette/settings/alerts
+      - generic: Alerts
+    - link "Tracing":
+      - /url: /minions-9e2c/dinner-roulette/settings/tracing
+      - generic: Tracing
+    - link "Security":
+      - /url: /minions-9e2c/dinner-roulette/settings/security
+      - generic: Security
+    - link "Networking":
+      - /url: /minions-9e2c/dinner-roulette/settings/networking
+      - generic: Networking
+    - link "Activity":
+      - /url: /minions-9e2c/dinner-roulette/settings/activity
+      - generic: Activity
+    - link "Advanced":
+      - /url: /minions-9e2c/dinner-roulette/settings/advanced
+      - generic: Advanced
+  - button "Avatar for caleb1234calvin-6132 caleb1234calvin-6132":
+    - img "Avatar for caleb1234calvin-6132":
+      - img "Avatar for caleb1234calvin-6132"
+    - generic: caleb1234calvin-6132
+  - button "24 unseen notifications":
+  - button:
+  - link "dinner-roulette":
+    - /url: /minions-9e2c/dinner-roulette
+    - generic: dinner-roulette
+  - button:
+  - link "Back to team view":
+    - /url: /minions-9e2c/~/settings/general
+  - navigation "Breadcrumb":
+    - generic: Project Settings
+  - button "Vercel Agent is available on Pro":
+    - generic: Agent
+  - heading "Project Name" [level=4]:
+    - link "Project Name":
+      - /url: "#project-name"
+      - generic: Project Name
+  - paragraph: Used to identify your Project on the Dashboard, Vercel CLI, and in the URL of your Deployments.
+  - textbox "Project Name": dinner-roulette
+  - generic: vercel.com/minions-9e2c/
+  - text: Learn more about
+  - link "Project Name":
+    - /url: /docs/projects/overview#project-name
+    - text: Project Name
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Avatar" [level=4]:
+    - link "Avatar":
+      - /url: "#avatar"
+      - generic: Avatar
+  - paragraph: This is your project's avatar. Click it or drop an image to upload.
+  - button "Change project avatar":
+    - img "dinner-roulette":
+      - img "dinner-roulette"
+  - button "Upload project avatar"
+  - generic: An avatar is optional but recommended.
+  - button "Remove project avatar":
+  - heading "Project ID" [level=4]:
+    - link "Project ID":
+      - /url: "#project-id"
+      - generic: Project ID
+  - paragraph: Used when interacting with the Vercel API.
+  - generic: prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm
+  - button "Copy to clipboard":
+  - text: Learn more about
+  - link "Project ID":
+    - /url: /docs/api?query=api#endpoints/projects
+    - text: Project ID
+  - heading "Vercel Toolbar" [level=4]:
+    - link "Vercel Toolbar":
+      - /url: "#vercel-toolbar"
+      - generic: Vercel Toolbar
+  - paragraph: Enable the Vercel Toolbar on your Deployments.
+  - generic: Pre-Production Deployments
+  - combobox "Pre-Production Deployments":
+    - option "Default (controlled at the team level)" [selected]
+    - option "On"
+    - option "Off"
+  - generic: Production Deployments
+  - combobox "Production Deployments":
+    - option "Default (controlled at the team level)" [selected]
+    - option "On"
+    - option "Off"
+  - note:
+    - text: To use the toolbar in production your team members need the
+    - link "Chrome extension":
+      - /url: https://chromewebstore.google.com/detail/vercel/lahhiofdgnbcgmemekkmjnpifojdaelb
+    - text: or to enable the toolbar for that domain in the toolbar menu. Learn more about using the
+    - link "toolbar in production":
+      - /url: /docs/vercel-toolbar/in-production-and-localhost/add-to-production
+    - text: .
+  - text: Learn more about the
+  - link "Vercel Toolbar":
+    - /url: /docs/workflow-collaboration/vercel-toolbar
+    - text: Vercel Toolbar
+  - button "Save":
+    - generic: Save
+  - heading "Preview Deployment Suffix" [level=4]:
+    - link "Preview Deployment Suffix":
+      - /url: "#preview-deployment-suffix"
+      - generic: Preview Deployment Suffix
+  - paragraph:
+    - text: By default, the URL of every new Preview Deployment ends with
+    - code: .vercel.app
+    - text: . This setting allows you to choose your own custom domain in place of this suffix. This takes precedence over the
+    - link "team-level preview deployment suffix":
+      - /url: /minions-9e2c/~/settings
+    - text: .
+  - textbox "Preview deployment suffix" [disabled]:
+    - /placeholder: vercel.app
+  - generic: my-deployment.
+  - text: This feature is available on the
+  - link "Pro plan":
+    - /url: /pricing
+    - text: Pro plan
+  - text: for
+  - generic: $100 per month
+  - text: .
+  - button "Upgrade":
+    - generic: Upgrade
+  - heading "Data Preferences" [level=4]:
+    - link "Data Preferences":
+      - /url: "#data-preferences"
+      - generic: Data Preferences
+  - paragraph: Vercel may train on and share code and chat data with AI model providers for training purposes only. If you turn this off, we will not share data going forward for this project.
+  - checkbox "Improve models with this project’s data" [checked]
+  - generic: Improve models with this project’s data
+  - text: To change globally, open
+  - link "Team settings":
+    - /url: /minions-9e2c/~/settings#data-preferences
+  - button "Save" [disabled]:
+    - generic: Save
+  - heading "Transfer" [level=4]:
+    - generic: Transfer
+  - paragraph: Transfer your project to another team without downtime or workflow interruptions.
+  - text: Learn more about
+  - link "Transferring Projects":
+    - /url: /docs/projects/overview#transferring-a-project
+    - text: Transferring Projects
+  - button "Transfer":
+    - generic: Transfer
+  - heading "Pause Project" [level=4]:
+    - link "Pause Project":
+      - /url: "#pause-project"
+      - generic: Pause Project
+  - paragraph: Temporarily stop serving your Production Deployment so the project stops using metered resources. You can resume it at any time.
+  - text: Preview Deployments, settings, and data are unaffected.
+  - link "Learn more about pausing projects":
+    - /url: /docs/projects/managing-projects#pausing-a-project
+    - text: Learn more about pausing projects
+  - button "Pause Project":
+    - generic: Pause Project
+  - heading "Delete Project" [level=4]:
+    - link "Delete Project":
+      - /url: "#delete-project"
+      - generic: Delete Project
+  - paragraph: Permanently delete this project and all deployments, domains, environment variables, serverless functions, and settings.
+  - separator
+  - link "Visit Deployment":
+    - /url: https://dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app
+  - generic "dinner-roulette"
+  - generic: Last updated 12h ago
+  - button "Delete Project":
+    - generic: Delete Project
+- alert
