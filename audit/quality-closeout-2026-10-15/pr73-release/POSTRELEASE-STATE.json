@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-10-15T22:59:52.196Z",
+  "approval": {
+    "head": "0ea1e6500cbae97c94e9f123c08939ffefbf4090",
+    "tree": "7c12c5327af906348992e9b7d3282a11f830a202"
+  },
+  "merge": {
+    "sha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "merged": true,
+    "message": "Pull Request successfully merged"
+  },
+  "commit": {
+    "sha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "node_id": "C_kwDOUPp-qdoAKGVhZDIzMTljNDg2OTQ3OGY0Y2QxMjFlMjM3MGRiNGQ5NzM0ZDgzZWQ",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "author": {
+      "name": "caleb1234calvin-art",
+      "date": "2026-10-15T22:57:29Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "date": "2026-10-15T22:57:29Z"
+    },
+    "tree": {
+      "sha": "7c12c5327af906348992e9b7d3282a11f830a202",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/7c12c5327af906348992e9b7d3282a11f830a202"
+    },
+    "message": "Merge pull request #73 from caleb1234calvin-art/integration/result-directions-wrap-2026-10-15\n\nFix Result Directions label overflow on narrow screens",
+    "parents": [
+      {
+        "sha": "991978fe24ec165eeacd5500a26d66f35d86c560",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/991978fe24ec165eeacd5500a26d66f35d86c560",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/991978fe24ec165eeacd5500a26d66f35d86c560"
+      },
+      {
+        "sha": "0ea1e6500cbae97c94e9f123c08939ffefbf4090",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/0ea1e6500cbae97c94e9f123c08939ffefbf4090",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/0ea1e6500cbae97c94e9f123c08939ffefbf4090"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "verified_at": "2026-10-15T22:57:30Z"
+    }
+  },
+  "production": {
+    "result": {
+      "deployment": {
+        "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "name": "dinner-roulette",
+        "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app",
+        "type": "LAMBDAS",
+        "state": "READY",
+        "createdAt": 1792105052624,
+        "creator": {
+          "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+          "username": "caleb1234calvin-6132"
+        },
+        "project": {
+          "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+          "name": "dinner-roulette",
+          "framework": "tanstack-start"
+        },
+        "meta": {
+          "githubCommitRef": "main",
+          "githubCommitSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+          "githubCommitMessage": "Merge pull request #73 from caleb1234calvin-art/integration/result-directions-wrap-2026-10-15\n\nFix Result Directions label overflow on narrow screens",
+          "githubRepo": "dinner-roulette",
+          "githubOrg": "caleb1234calvin-art"
+        },
+        "alias": [
+          "pickforus.app",
+          "dinner-roulette-chi.vercel.app",
+          "www.pickforus.app",
+          "dinner-roulette-minions-9e2c.vercel.app",
+          "dinner-roulette-git-main-minions-9e2c.vercel.app"
+        ],
+        "target": "production",
+        "regions": [
+          "iad1"
+        ],
+        "buildingAt": 1792105053581,
+        "ready": 1792105064684,
+        "readyState": "READY",
+        "source": "git",
+        "aliasError": null
+      }
+    }
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792105064859
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308,
+      "updatedAt": 1792105064866
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792105064845
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792105064847
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792105064841
+    }
+  ],
+  "rollback": {
+    "result": {
+      "deployments": {
+        "pagination": {
+          "count": 3,
+          "next": 1792003092071,
+          "prev": 1792105052624
+        },
+        "deployments": [
+          {
+            "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+            "name": "dinner-roulette",
+            "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app",
+            "created": 1792105052624,
+            "state": "READY",
+            "target": "production",
+            "creator": {
+              "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+              "username": "caleb1234calvin-6132"
+            },
+            "meta": {
+              "githubCommitRef": "main",
+              "githubCommitSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+              "githubCommitMessage": "Merge pull request #73 from caleb1234calvin-art/integration/result-directions-wrap-2026-10-15\n\nFix Result Directions label overflow on narrow screens",
+              "githubRepo": "dinner-roulette",
+              "githubOrg": "caleb1234calvin-art"
+            },
+            "inspectorUrl": "https://vercel.com/minions-9e2c/dinner-roulette/8DBJFLQwkBGckTxM5RYPM63dLqS5",
+            "isRollbackCandidate": true
+          },
+          {
+            "id": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+            "name": "dinner-roulette",
+            "url": "dinner-roulette-qqjgngc9b-minions-9e2c.vercel.app",
+            "created": 1792046909533,
+            "state": "READY",
+            "target": "production",
+            "creator": {
+              "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+              "username": "caleb1234calvin-6132"
+            },
+            "meta": {
+              "githubCommitRef": "main",
+              "githubCommitSha": "991978fe24ec165eeacd5500a26d66f35d86c560",
+              "githubCommitMessage": "Merge pull request #72 from caleb1234calvin-art/integration/halloween-wave2-ten-2026-10-14\n\nDraft: adapt ten verified-source Halloween 2026 regional listings",
+              "githubRepo": "dinner-roulette",
+              "githubOrg": "caleb1234calvin-art"
+            },
+            "inspectorUrl": "https://vercel.com/minions-9e2c/dinner-roulette/72on94mDyDhNBbmN356bdXBsMqtY",
+            "isRollbackCandidate": true
+          },
+          {
+            "id": "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+            "name": "dinner-roulette",
+            "url": "dinner-roulette-oo4i2ckun-minions-9e2c.vercel.app",
+            "created": 1792003092071,
+            "state": "READY",
+            "target": "production",
+            "creator": {
+              "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+              "username": "caleb1234calvin-6132"
+            },
+            "meta": {
+              "githubCommitRef": "main",
+              "githubCommitSha": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
+              "githubCommitMessage": "Merge pull request #70 from caleb1234calvin-art/integration/regional-wave1-2026-10-14\n\nAdd twelve independently cleared regional seasonal records",
+              "githubRepo": "dinner-roulette",
+              "githubOrg": "caleb1234calvin-art"
+            },
+            "inspectorUrl": "https://vercel.com/minions-9e2c/dinner-roulette/J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+            "isRollbackCandidate": false
+          }
+        ]
+      }
+    }
+  }
+}
