@@ -1,0 +1,119 @@
+{
+  "observedAt": "2026-10-15T23:29:15.129Z",
+  "main": {
+    "sha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "tree": "7c12c5327af906348992e9b7d3282a11f830a202"
+  },
+  "current": {
+    "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+    "readyState": "READY",
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+      "githubCommitMessage": "Merge pull request #73 from caleb1234calvin-art/integration/result-directions-wrap-2026-10-15\n\nFix Result Directions label overflow on narrow screens",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+  },
+  "previous": {
+    "id": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "readyState": "READY",
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "991978fe24ec165eeacd5500a26d66f35d86c560",
+      "githubCommitMessage": "Merge pull request #72 from caleb1234calvin-art/integration/halloween-wave2-ten-2026-10-14\n\nDraft: adapt ten verified-source Halloween 2026 regional listings",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "url": "dinner-roulette-qqjgngc9b-minions-9e2c.vercel.app"
+  },
+  "aliases": [
+    {
+      "name": "pickforus.app",
+      "response": {
+        "alias": "pickforus.app",
+        "deployment": {
+          "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+          "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+        },
+        "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null,
+        "updatedAt": 1792105064859
+      }
+    },
+    {
+      "name": "www.pickforus.app",
+      "response": {
+        "alias": "www.pickforus.app",
+        "deployment": {
+          "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+          "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+        },
+        "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": "pickforus.app",
+        "redirectStatusCode": 308,
+        "updatedAt": 1792105064866
+      }
+    },
+    {
+      "name": "dinner-roulette-chi.vercel.app",
+      "response": {
+        "alias": "dinner-roulette-chi.vercel.app",
+        "deployment": {
+          "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+          "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+        },
+        "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null,
+        "updatedAt": 1792105064845
+      }
+    },
+    {
+      "name": "dinner-roulette-minions-9e2c.vercel.app",
+      "response": {
+        "alias": "dinner-roulette-minions-9e2c.vercel.app",
+        "deployment": {
+          "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+          "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+        },
+        "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null,
+        "updatedAt": 1792105064847
+      }
+    },
+    {
+      "name": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "response": {
+        "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+        "deployment": {
+          "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+          "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+        },
+        "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+        "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+        "redirect": null,
+        "redirectStatusCode": null,
+        "updatedAt": 1792105064841
+      }
+    }
+  ],
+  "ui": {
+    "buildCommand": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "buildCommandOverride": true,
+    "settingsReloaded": true,
+    "rollbackSelectorCurrent": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+    "rollbackSelectorPrevious": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "plan": "Hobby; earlier targets require Pro",
+    "actions": "Opened selector and Cancel only. Continue and Confirm never selected.",
+    "aliasQualification": "Previously reviewed rollback dialog listed three domains. Generated-alias recovery remains unproven; no rollback test or denied API retry.",
+    "settingsChanged": false
+  }
+}
