@@ -1,0 +1,98 @@
+{
+  "source": "991978fe24ec165eeacd5500a26d66f35d86c560",
+  "status": "DEFECT_REPRODUCED",
+  "providerCallsDuringReplay": 0,
+  "silentCountyAdoption": true,
+  "cases": [
+    {
+      "query": "Benton, Arkansas, United States",
+      "file": "benton-nominatim-search.json",
+      "request": "https://nominatim.openstreetmap.org/search?q=Benton%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=1",
+      "sourceType": "county",
+      "result": {
+        "lat": 36.3456186,
+        "lon": -94.2670404,
+        "label": "Benton County, Arkansas, United States",
+        "locality": "Benton County",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    },
+    {
+      "query": "72015, Arkansas, United States",
+      "file": "benton-postal.json",
+      "request": "https://nominatim.openstreetmap.org/search?q=72015%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=1",
+      "sourceType": "postcode",
+      "result": {
+        "lat": 34.5738199,
+        "lon": -92.5981433,
+        "label": "Benton, Arkansas, United States",
+        "locality": "Benton",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    },
+    {
+      "query": "111 South Market Street, Benton, Arkansas 72015, United States",
+      "file": "benton-address.json",
+      "request": "https://nominatim.openstreetmap.org/search?q=111+South+Market+Street%2C+Benton%2C+Arkansas+72015%2C+United+States&format=jsonv2&addressdetails=1&limit=1",
+      "sourceType": "place",
+      "result": {
+        "lat": 34.5632068,
+        "lon": -92.5882549,
+        "label": "Benton, Arkansas, United States",
+        "locality": "Benton",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    },
+    {
+      "query": "Benton County, Arkansas, United States",
+      "file": "benton-county-explicit.json",
+      "request": "https://nominatim.openstreetmap.org/search?q=Benton+County%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=1",
+      "sourceType": "county",
+      "result": {
+        "lat": 36.3456186,
+        "lon": -94.2670404,
+        "label": "Benton County, Arkansas, United States",
+        "locality": "Benton County",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    }
+  ],
+  "fiveCandidateQueryResults": [
+    {
+      "type": "county",
+      "osmType": "relation",
+      "osmId": 1818400,
+      "location": {
+        "lat": 36.3456186,
+        "lon": -94.2670404,
+        "label": "Benton County, Arkansas, United States",
+        "locality": "Benton County",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    },
+    {
+      "type": "town",
+      "osmType": "relation",
+      "osmId": 111083,
+      "location": {
+        "lat": 34.5645372,
+        "lon": -92.586828,
+        "label": "Benton, Arkansas, United States",
+        "locality": "Benton",
+        "region": "Arkansas",
+        "country": "United States",
+        "countryCode": "US"
+      }
+    }
+  ]
+}

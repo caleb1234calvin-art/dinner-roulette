@@ -1,0 +1,52 @@
+[
+  {
+    "file": "benton-nominatim-search.json",
+    "query": "Benton, Arkansas, United States",
+    "url": "https://nominatim.openstreetmap.org/search?q=Benton%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=1",
+    "status": 200,
+    "bytes": 578,
+    "sha256": "1c97a103eed1ad8b87bea302d4d3c178ad56ca116ee18440bf5aba9d5629f567",
+    "observedDuring": "2026-10-15 independent D3 session",
+    "timestampQualification": "Initial response timestamp not recorded; do not infer one from the later receipt."
+  },
+  {
+    "query": "Benton, Arkansas, United States",
+    "url": "https://nominatim.openstreetmap.org/search?q=Benton%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=5",
+    "accessedAt": "2026-10-15T21:33:56.178105+00:00",
+    "userAgent": "PickForUs/1.0 (quality review)",
+    "status": 200,
+    "file": "benton-candidates.json",
+    "bytes": 1194,
+    "sha256": "52ba6dfae310e84dd40e82fe622854e1b94bfb59a47b965866ea6d278cfcd01c"
+  },
+  {
+    "query": "72015, Arkansas, United States",
+    "url": "https://nominatim.openstreetmap.org/search?q=72015%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=5",
+    "accessedAt": "2026-10-15T21:34:00.142613+00:00",
+    "userAgent": "PickForUs/1.0 (quality review)",
+    "status": 200,
+    "file": "benton-postal.json",
+    "bytes": 601,
+    "sha256": "cb56e8fbef196bcc60792a0fb5a41b2bb298555b73171ba96fd6c8a8fe4741f8"
+  },
+  {
+    "query": "111 South Market Street, Benton, Arkansas 72015, United States",
+    "url": "https://nominatim.openstreetmap.org/search?q=111+South+Market+Street%2C+Benton%2C+Arkansas+72015%2C+United+States&format=jsonv2&addressdetails=1&limit=5",
+    "accessedAt": "2026-10-15T21:34:03.578118+00:00",
+    "userAgent": "PickForUs/1.0 (quality review)",
+    "status": 200,
+    "file": "benton-address.json",
+    "bytes": 676,
+    "sha256": "20f6a7024b0a40e8785e06b53ea86053b3548602f83f45be8861224037955cd4"
+  },
+  {
+    "query": "Benton County, Arkansas, United States",
+    "url": "https://nominatim.openstreetmap.org/search?q=Benton+County%2C+Arkansas%2C+United+States&format=jsonv2&addressdetails=1&limit=5",
+    "accessedAt": "2026-10-15T21:34:07.302558+00:00",
+    "userAgent": "PickForUs/1.0 (quality review)",
+    "status": 200,
+    "file": "benton-county-explicit.json",
+    "bytes": 578,
+    "sha256": "ffb2cc4b16ba03478c021ab19065855174a3535dddc66e675f864cfae0c0494f"
+  }
+]

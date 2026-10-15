@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-15",
+  "main": {
+    "sha": "991978fe24ec165eeacd5500a26d66f35d86c560",
+    "tree": "95f66498048590cbd30c623b17d15bf2d5b7cc73"
+  },
+  "production": {
+    "deployment": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "state": "READY"
+  },
+  "previous": {
+    "deployment": "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+    "state": "READY",
+    "source": "0344ccce79ce157196ff9e84b1aaf3e40802afc5"
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "build": {
+    "override": true,
+    "command": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "observed": "authenticated owner dashboard; save disabled; no changes"
+  },
+  "rollback": {
+    "operator": "owner caleb1234calvin-6132; no connector rollback permission inferred",
+    "eligiblePrevious": true,
+    "reviewAccessible": true,
+    "confirmControlEnabled": true,
+    "confirmed": false,
+    "listedDomains": [
+      "pickforus.app",
+      "www.pickforus.app",
+      "dinner-roulette-chi.vercel.app"
+    ],
+    "allFiveRecoveryProven": false
+  },
+  "mutations": {
+    "production": 0,
+    "settings": 0,
+    "rollback": 0,
+    "migrations": 0,
+    "signing": 0,
+    "play": 0
+  }
+}

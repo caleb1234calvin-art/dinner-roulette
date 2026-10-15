@@ -1,0 +1,141 @@
+diff --git a/audit/quality-closeout-2026-10-15/DIRECTIONS-WRAP-CANDIDATE.md b/audit/quality-closeout-2026-10-15/DIRECTIONS-WRAP-CANDIDATE.md
+new file mode 100644
+index 0000000..22b5932
+--- /dev/null
++++ b/audit/quality-closeout-2026-10-15/DIRECTIONS-WRAP-CANDIDATE.md
+@@ -0,0 +1,31 @@
++# Result Directions wrapping — bounded UI candidate
++
++Prepared October 15, 2026. Parent production is `991978fe24ec165eeacd5500a26d66f35d86c560`, tree `95f66498048590cbd30c623b17d15bf2d5b7cc73` (92 identities). This is a proposal, not a release.
++
++## Defect and correction
++
++At 320px, open a Result in any mode. The inherited full-label Directions control combines nowrap, 48px horizontal padding, wide letter spacing, icon and gap. PR72 original geometry measured 280px client width /315px scroll width (35px overflow), with card scrollWidth335 at viewport320. Severity: moderate usability/accessibility defect; the destination link still exists. The source is shared by Dinner, Nightlife and Date Night.
++
++The correction preserves the full visible label and URL behavior, permits natural text wrapping, keeps the icon unshrunk, and lets the control grow while retaining a56px minimum touch target. No catalog, provider, dates, placement, Directions destination, credentials, dependency, workflow or deployment-setting change.
++
++## Verification contract
++
++- Existing geometry keeps all92 identities,320/390/512 widths and six historical/current variants. Historical source variants remain intact. Current Result variants additionally require zero Directions/label horizontal overflow, a56px minimum height, a72px maximum height and viewport containment. Only a directly measured0px or16px Directions height increase may change the ordinary Result card; its width and all remaining card height must remain identical. Seasonal comparison thresholds remain0.5px/5px against the matching current ordinary control, with historical deltas retained.
++- Historical Phase4 whole-file hash test initially failed as expected because Result source intentionally changed. Its original receipt is unchanged. A narrowly pinned amendment checks the complete new file hash and reverses only the literal reviewed Directions classes; every original byte must then match the old receipt. This does not exempt the rest of the component.
++- Local TypeScript PASS; ESLint PASS with six inherited warnings; repository1244PASS/4SKIP, application71PASS after the receipt amendment; authenticated direct Vite production compilation PASS without migrations. Android static configuration/icon checks PASS; no signing.
++- Original local test failure and missing-browser failure are preserved outside this candidate in takeover evidence. Local browser geometry did not execute: Playwright Chromium was absent and its standard installer returned invalid/truncated ZIP downloads. This is an environment verification HOLD, not a geometry PASS.
++- Exact-head hosted CI, original artifact review, live mobile visuals and a reviewer independent of authoring remain required. Existing full PR workflows should run normally on draft creation; no thresholds or lanes are removed.
++
++## R1 geometry failure and bounded R2 correction
++
++Candidate R1 `6bac175a4224ba3ef996a44419abb7bbeb9c5777`, web run38786473498, geometry job116599634153 completed FAILURE. Original artifact11999362147 is preserved:452,097,308bytes, SHA256 `6a4b36e320e5ecbc2529b851773fc9511881deafc9bbdf2732afb8156fc72c25`, ZIP CRC PASS,6,288PNGs. All774 comparisons ran;184 errors were exactly the inherited “Ordinary matched card height is unchanged” assertion. The full Directions label intentionally adds16px at320/390. New overflow/label/touch/viewport assertions passed before each height assertion. This is a real failed gate, not a passing result.
++
++R2 records Directions height for old as well as current variants, requires the card-height difference to equal only the directly measured button-height difference (0or16px), bounds the current button to56–72px, and preserves all original seasonal limits, media/card invariants and scenario accounting. It compares seasonal content against a current-source ordinary control so the shared button correction is not misclassified as seasonal copy growth. The historical delta remains in each receipt. A replay of R1 metrics supports this decomposition but is not fresh browser execution; R2 still needs its own exact-head hosted run and independent review.
++
++Local R2 repository/application tests pass. A first build-proof capture omitted the auth flag and correctly failed its guard; that failed log is retained. Corrected capture/build/complete all used `VITE_AUTH_ENABLED=true` and succeeded without migrations. Local Chromium remains unavailable; do not use the R1 screenshots as proof of R2 harness execution.
++
++## Release safeguards
++
++`integration/**` deployment exclusion remains unchanged. Ordinary `npm run build` still chains migrations and must not be used. A release needs separate exact-head owner approval, fresh migration-free hosted-route confirmation and qualified rollback plan. Prior production remains READY, with J7T as the retained preceding deployment. Physical Android/WebView/GPS/PWA and original source/provider qualifications remain unresolved.
++
++Kansas City failed-core radial gating is a separately reproduced defect and is not repaired by this patch. Research queue and source revisions remain on the continuity branch. No merge, production deployment, rollback, migration, settings change or Play operation is authorized by this candidate.
+diff --git a/scripts/seasonal-card-layout-browser.mjs b/scripts/seasonal-card-layout-browser.mjs
+index f8fb931..d7e677e 100644
+--- a/scripts/seasonal-card-layout-browser.mjs
++++ b/scripts/seasonal-card-layout-browser.mjs
+@@ -165,6 +165,25 @@ try {
+             summary: el.querySelector("summary")?.getBoundingClientRect().toJSON() };
+         }, kind);
+         measured[variant] = geometry;
++        // Keep old-source Directions measurements as original failure evidence.
++        // Current variants must fit and may use at most two lines (72px total).
++        if (kind === "result") {
++          const directions = await card.getByRole("link", { name: /Directions · Google Maps/ }).evaluate(el => {
++            const box = el.getBoundingClientRect();
++            return { width: el.clientWidth, scrollWidth: el.scrollWidth, height: box.height,
++              left: box.left, right: box.right,
++              label: [...el.querySelectorAll("span")].map(label => ({ width: label.clientWidth, scrollWidth: label.scrollWidth })) };
++          });
++          geometry.directions = directions;
++          if (variant === "after" || variant.startsWith("current-")) {
++            assert.ok(directions.scrollWidth <= directions.width, "Directions fits without horizontal overflow");
++            assert.ok(directions.label.every(label => label.scrollWidth <= label.width), "Full Directions label remains readable");
++            assert.ok(directions.height >= 56, "Directions retains its 56px minimum touch target");
++            assert.ok(directions.height <= 72, "Directions uses at most two lines and bounded vertical space");
++            assert.ok(directions.left >= 0 && directions.right <= width, "Directions stays within the viewport");
++            assert.ok(geometry.scrollWidth <= geometry.width + 1, "Current result card fits the viewport");
++          }
++        }
+         await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
+         fs.writeFileSync(`${out}/current-measurement.json`, JSON.stringify({ id: row.id, kind, width, variant, measured }, null, 2));
+         if (variant === "after") {
+@@ -322,16 +341,33 @@ try {
+         }
+         await page.screenshot({ path: `${out}/${row.seasonalListing?.recordId ?? row.id}-${width}-${kind}-${variant}.png`, fullPage: true });
+       }
+-      const delta = measured.after.height - measured.ordinary.height;
+-      verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta, standardDelta: measured.after.height - measured.standard.height, percent: delta / measured.ordinary.height * 100 });
+-      assert.equal(measured["current-ordinary"].height, measured.ordinary.height, "Ordinary matched card height is unchanged");
+-      assert.equal(measured["current-standard"].height, measured.standard.height, "Short ordinary card height is unchanged");
++      const directionsHeightChange = (current, previous) => kind === "result"
++        ? measured[current].directions.height - measured[previous].directions.height : 0;
++      for (const [current, previous] of [["current-ordinary", "ordinary"], ["current-standard", "standard"]]) {
++        const buttonDelta = directionsHeightChange(current, previous);
++        assert.ok(buttonDelta === 0 || buttonDelta === 16, "Only the reviewed one-to-two-line Directions height change is allowed");
++        assert.equal(measured[current].width, measured[previous].width, "Ordinary card width is unchanged");
++        assert.equal(measured[current].height - measured[previous].height, buttonDelta,
++          "Ordinary card height is unchanged outside the exact measured Directions delta");
++      }
++      // Compare seasonal and ordinary cards rendered by the same current source.
++      // Retain historical deltas without charging the shared Directions correction
++      // to seasonal content or weakening the existing 0.5/5px seasonal limits.
++      const delta = measured.after.height - measured["current-ordinary"].height;
++      verdict.comparisons.push({ id: row.id, kind, width, ...measured, delta,
++        standardDelta: measured.after.height - measured["current-standard"].height,
++        historicalDelta: measured.after.height - measured.ordinary.height,
++        directionsHeightChange: directionsHeightChange("after", "before"),
++        percent: delta / measured["current-ordinary"].height * 100 });
+       assert.equal(measured.after.mediaHeight, measured.ordinary.mediaHeight);
+       assert.equal(measured.after.mediaClass, measured.ordinary.mediaClass);
+       assert.equal(measured.after.cardClass, measured.ordinary.cardClass);
+       if (delta > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} seasonal card exceeds matched ordinary by ${delta}px at ${width}: ${row.name}`);
+       if (["options", "plan", "plan-settle"].includes(kind) && measured.after.height - measured.standard.height > (kind === "options" ? 0.5 : 5)) verdict.errors.push(`Collapsed ${kind} exceeds short standard by ${measured.after.height - measured.standard.height}px at ${width}: ${row.name}`);
+-      assert.ok(measured.after.height <= measured.before.height);
++      const reviewedButtonDelta = directionsHeightChange("after", "before");
++      assert.ok(reviewedButtonDelta === 0 || reviewedButtonDelta === 16, "Seasonal Directions has the same bounded height correction");
++      assert.ok(measured.after.height - reviewedButtonDelta <= measured.before.height,
++        "Seasonal content does not grow beyond the exact reviewed Directions delta");
+       } catch (error) {
+         verdict.errors.push({ id: row.id, kind, width, message: error.stack });
+         if (!verdict.comparisons.some(item => item.id === row.id && item.kind === kind && item.width === width)) verdict.comparisons.push({ id: row.id, kind, width, ...measured, incomplete: true });
+diff --git a/scripts/seasonal-phase4-recovery.test.mjs b/scripts/seasonal-phase4-recovery.test.mjs
+index cab51ef..286a1ba 100644
+--- a/scripts/seasonal-phase4-recovery.test.mjs
++++ b/scripts/seasonal-phase4-recovery.test.mjs
+@@ -212,7 +212,16 @@ test("Branson's exact 17 dates survive November/DST as lifecycle Anything browse
+ test("all 52 previous V1 records, presentation copy, radial implementation and unchanged UI remain byte-bound to main", () => {
+   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
+   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
+-  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(occurrenceSourceBefore(path)).digest("hex"), hash, path);
++  for (const [path, hash] of Object.entries(baseline.files)) {
++    let source = occurrenceSourceBefore(path);
++    if (path === "src/components/result-overlay.tsx") {
++      // Explicit UI amendment: preserve the original receipt and prove that
++      // reversing only the reviewed Directions classes recovers every old byte.
++      assert.equal(createHash("sha256").update(source).digest("hex"), "a01c7409e9805588a11ea1f3b92a036348805568a9a11a90e98202753d542931", "Exact Directions-only UI amendment");
++      source = Buffer.from(source.toString().replace("className=\"h-auto min-h-14 w-full whitespace-normal py-3 text-center\" asChild><a href={mapsUrl} target=\"_blank\" rel=\"noopener noreferrer\"><MapPinned className=\"size-5 shrink-0\" /><span className=\"min-w-0 break-words tracking-kicker uppercase\">Directions", "className=\"w-full\" asChild><a href={mapsUrl} target=\"_blank\" rel=\"noopener noreferrer\"><MapPinned className=\"size-5\" /><span className=\"tracking-kicker uppercase\">Directions"));
++    }
++    assert.equal(createHash("sha256").update(source).digest("hex"), hash, path);
++  }
+   const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
+   assert.equal(Object.keys(baseline.presentations).length, 52);
+   const acceptedNextBytes = readFileSync("scripts/test-support/next-missouri-browser-projections.json");
+diff --git a/src/components/result-overlay.tsx b/src/components/result-overlay.tsx
+index e8722c9..888420f 100644
+--- a/src/components/result-overlay.tsx
++++ b/src/components/result-overlay.tsx
+@@ -120,7 +120,7 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
+           <div className={cn("grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4", seasonal ? "mt-2" : "mt-3")}><div className="min-w-0"><p className="text-sm text-muted">{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{mode === "date-night" ? ` · ${dateNightStatusLabel(dateNightRestaurant)}` : restaurant.hoursKnown ? ` · ${restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed"}` : ""}</p>{!restaurant.hoursKnown && !(mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length)) ? <p className="mt-1 text-sm text-subtle">Hours unconfirmed — verify before going.</p> : null}{restaurant.closingSoon ? <p className="mt-1 text-sm text-danger">Closing soon — verify before making the trip.</p> : null}<p className="mt-1 text-sm text-subtle">{restaurant.address}</p></div><RideshareQuickActions restaurant={restaurant} /></div>
+           {mode === "date-night" ? <SeasonalVisitNotes place={dateNightRestaurant} /> : null}
+           <div className={cn("rounded-xl bg-surface p-4 shadow-border", seasonal ? "mt-2" : "mt-5")}><div className="flex items-center gap-2"><Sparkles className="size-4 text-accent" /><p className="text-xs tracking-[0.18em] text-subtle uppercase">Why this pick?</p></div><div className="mt-3 flex flex-wrap gap-2">{whyReasons.map((reason) => <span key={reason} className="rounded-full bg-elevated px-3 py-1.5 text-xs text-muted">{reason}</span>)}</div></div>
+-          <div className="mt-6 space-y-2"><Button size="lg" className="w-full" asChild><a href={mapsUrl} target="_blank" rel="noopener noreferrer"><MapPinned className="size-5" /><span className="tracking-kicker uppercase">Directions · Google Maps ↗</span></a></Button>
++          <div className="mt-6 space-y-2"><Button size="lg" className="h-auto min-h-14 w-full whitespace-normal py-3 text-center" asChild><a href={mapsUrl} target="_blank" rel="noopener noreferrer"><MapPinned className="size-5 shrink-0" /><span className="min-w-0 break-words tracking-kicker uppercase">Directions · Google Maps ↗</span></a></Button>
+             <p className="px-2 text-center text-[11px] leading-relaxed text-subtle">Directions open an independent third-party mapping service. Verify destination details before travel.</p>
+             {mode === "date-night" && restaurant.website ? <Button size="lg" variant="secondary" className="w-full" asChild><a href={restaurant.website} target="_blank" rel="noopener noreferrer"><ExternalLink className="size-4" /><span className="tracking-kicker uppercase">{websiteLabel} ↗</span></a></Button> : null}
+             {mode === "date-night" && restaurant.website ? <p className="px-2 text-center text-[11px] leading-relaxed text-subtle">Opens the venue's external website. Hours, prices, tickets, and availability are controlled by the venue.</p> : null}

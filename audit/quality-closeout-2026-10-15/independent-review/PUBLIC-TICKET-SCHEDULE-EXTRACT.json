@@ -1,0 +1,220 @@
+{
+  "dark-hollows-tickets": {
+    "dateRange": null,
+    "minDate": "2026-10-15",
+    "maxDate": null,
+    "levels": [
+      {
+        "label": "Dark Hollows Ticket",
+        "dateRange": {
+          "start": "2026-10-16",
+          "end": "2026-10-24",
+          "dow": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ],
+          "exclude": []
+        },
+        "times": [
+          {
+            "time": 68400,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 69600,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 70800,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 72000,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 73200,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 74400,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 75600,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 76800,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 78000,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 79200,
+            "duration": 1200,
+            "active": true
+          },
+          {
+            "time": 80400,
+            "duration": 1200,
+            "active": true
+          }
+        ],
+        "activation": null,
+        "minDate": "2026-10-16",
+        "maxDate": "2026-10-24"
+      }
+    ],
+    "inventoryDates": [
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-23",
+      "2026-10-24"
+    ]
+  },
+  "acres-tickets": {
+    "dateRange": {
+      "start": "2026-09-18",
+      "end": "2026-11-07",
+      "dow": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "exclude": [
+        "2026-09-27",
+        "2026-10-01",
+        "2026-10-04",
+        "2026-10-08",
+        "2026-10-11",
+        "2026-10-15",
+        "2026-10-22",
+        "2026-11-05",
+        "2026-09-13",
+        "2026-09-17",
+        "2026-09-20",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26"
+      ]
+    },
+    "minDate": "2026-10-15",
+    "maxDate": "2026-11-07",
+    "levels": [
+      {
+        "label": "Zombie Purge",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Hells Gate Haunted House",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Knightmares Kurse Haunted House",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Combo Ticket - Both Haunt Attractions And More!",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Riot Room",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Hearse Ride",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "After Hours - Hells Gate Haunted House",
+        "dateRange": null,
+        "times": null,
+        "activation": {
+          "trigger": "a2d2b885-2642-5a3c-99e2-07d70fb29785"
+        },
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "After Hours - Knightmares Kurse Haunted House",
+        "dateRange": null,
+        "times": null,
+        "activation": {
+          "trigger": "a2d2b885-2642-5a3c-99e2-07d70fb29785"
+        },
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Extra 100 Paintballs",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Hell's Gate Fast Pass",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      },
+      {
+        "label": "Knightmare's Kurse Fast Pass",
+        "dateRange": null,
+        "times": null,
+        "activation": null,
+        "minDate": "2026-10-15",
+        "maxDate": null
+      }
+    ],
+    "inventoryDates": []
+  }
+}

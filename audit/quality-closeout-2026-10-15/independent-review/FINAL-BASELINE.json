@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-15T21:51:06.770Z",
+  "main": "991978fe24ec165eeacd5500a26d66f35d86c560",
+  "production": {
+    "id": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "readyState": "READY",
+    "source": "991978fe24ec165eeacd5500a26d66f35d86c560"
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ]
+}

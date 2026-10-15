@@ -1,0 +1,181 @@
+{
+  "createdAt": "2026-10-15T21:40:59.218403+00:00",
+  "scope": "D3 independent source/replay + selective seasonal research; no release acceptance or catalog promotion",
+  "files": [
+    {
+      "path": "D3-INDEPENDENT-INVESTIGATION.md",
+      "bytes": 7582,
+      "sha256": "29c6ac355660a486946ef06cf927a3d15226737692a98827190368e2b507452d"
+    },
+    {
+      "path": "D3-RAW-RECEIPTS.json",
+      "bytes": 2413,
+      "sha256": "7a9c7735b5a1197178a7045f80746b5f9722b866f2eedaac67f5da329841b64b"
+    },
+    {
+      "path": "D3-REPRODUCTION.json",
+      "bytes": 3149,
+      "sha256": "50acb63b118e3e57465ccd96a754e352da242a8e73c43b5c16240a5d9a2226ae"
+    },
+    {
+      "path": "PUBLIC-TICKET-SCHEDULE-EXTRACT.json",
+      "bytes": 4896,
+      "sha256": "303789ec2d18b12ae0ad2971eb2ac0c40ecb18f5b84604e34a4e7bb26a0be836"
+    },
+    {
+      "path": "QUEUE-DISPOSITION-R1.json",
+      "bytes": 16378,
+      "sha256": "125b0104114d4535e35e95cdd50b2fb77182cc9f84dfb47737654fece4e8e17f"
+    },
+    {
+      "path": "QUEUE-INDEPENDENT-R2.json",
+      "bytes": 21292,
+      "sha256": "ab5d52deb1623025ad9198a2e6fed12ad10ab2f297dda9a8d7bc2e9b5b223b24"
+    },
+    {
+      "path": "SEASONAL-INDEPENDENT-RECONCILIATION.md",
+      "bytes": 7826,
+      "sha256": "4c774f4fbcc86dc587e81c0f9d2d9efc8f43297137453d8e5b38c79b0ae441b0"
+    },
+    {
+      "path": "benton-address.json",
+      "bytes": 676,
+      "sha256": "20f6a7024b0a40e8785e06b53ea86053b3548602f83f45be8861224037955cd4"
+    },
+    {
+      "path": "benton-candidates.json",
+      "bytes": 1194,
+      "sha256": "52ba6dfae310e84dd40e82fe622854e1b94bfb59a47b965866ea6d278cfcd01c"
+    },
+    {
+      "path": "benton-county-explicit.json",
+      "bytes": 578,
+      "sha256": "ffb2cc4b16ba03478c021ab19065855174a3535dddc66e675f864cfae0c0494f"
+    },
+    {
+      "path": "benton-nominatim-search.json",
+      "bytes": 578,
+      "sha256": "1c97a103eed1ad8b87bea302d4d3c178ad56ca116ee18440bf5aba9d5629f567"
+    },
+    {
+      "path": "benton-postal.json",
+      "bytes": 601,
+      "sha256": "cb56e8fbef196bcc60792a0fb5a41b2bb298555b73171ba96fd6c8a8fe4741f8"
+    },
+    {
+      "path": "dark-hollows-calendar-2026.png",
+      "bytes": 86234,
+      "sha256": "c79ace36a32ed98cc7475706fd64afbffd51036908a67346ffae79b08bd3a047"
+    },
+    {
+      "path": "nominatim-receipts.json",
+      "bytes": 1886,
+      "sha256": "a18a023a83bed691664e030cd6b821b19b5b13ccd6d72fa9603d2fdd66d7e095"
+    },
+    {
+      "path": "reconcile-queue.py",
+      "bytes": 1669,
+      "sha256": "db6f94f287827fe90bfb566353e3c9942072625ed96ece8f3f37e5ec657d9c31"
+    },
+    {
+      "path": "reproduction/SOURCE-RECEIPT.json",
+      "bytes": 682,
+      "sha256": "093b4d611de093091816dddc7cc861cedbb47d3db79bd95dccb94e14d0727d74"
+    },
+    {
+      "path": "reproduction/package.json",
+      "bytes": 18,
+      "sha256": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae"
+    },
+    {
+      "path": "reproduction/reproduce-benton.mjs",
+      "bytes": 2101,
+      "sha256": "5e91dee8a4675b7f3c964fca87475637238e2b683d1af7f56e6ff57d0ccd8c08"
+    },
+    {
+      "path": "reproduction/src/lib/location/model.ts",
+      "bytes": 2550,
+      "sha256": "b6110d204ae746aa57d3412640533a78618c6200a6cd2bdb1f3876cea2a121e5"
+    },
+    {
+      "path": "reproduction/src/lib/restaurants/geocode.ts",
+      "bytes": 3720,
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e"
+    },
+    {
+      "path": "reproduction/src/lib/restaurants/types.ts",
+      "bytes": 3777,
+      "sha256": "f0733c28a6d34bb70fbf8f8f249373aa642660b2ac09d6319a134ac63b175a4f"
+    },
+    {
+      "path": "source-pages/SOURCE-RECEIPTS.json",
+      "bytes": 2255,
+      "sha256": "e4bd163f87502f201180e3891ecd845df3fa87ee32424fcbd5257783d76e4431"
+    },
+    {
+      "path": "source-pages/acres-official.html",
+      "bytes": 37781,
+      "sha256": "b1a646ddc5ac00223ed51bdcb2e1ea4f74ea6b44a882982b3aaed7eb09106914"
+    },
+    {
+      "path": "source-pages/acres-tickets-public-form.json",
+      "bytes": 69627,
+      "sha256": "967f2163718c8ac50709ceaa6ec325e6cf98dc0834048dbba575dc713281bde9"
+    },
+    {
+      "path": "source-pages/acres-tickets.html",
+      "bytes": 205486,
+      "sha256": "0acaa5a5f30bcf53213d5c7be4a9d286e726e0d2410438172cbefb36665b517c"
+    },
+    {
+      "path": "source-pages/camp-big-timber.html",
+      "bytes": 116934,
+      "sha256": "21443765ee75f8fab4ca3e5d93de311c097fe926fe9f931bd9a1693964fc6f6e"
+    },
+    {
+      "path": "source-pages/dark-hollows-official.html",
+      "bytes": 601257,
+      "sha256": "aed86e3c05223e1e9867cad4eae6c3e937e3920a31e9a43aebeabb23f53dce55"
+    },
+    {
+      "path": "source-pages/dark-hollows-tickets-public-form.json",
+      "bytes": 16141,
+      "sha256": "6f05596dfff82a46657f08501c3b1278d4b5a02cc23b636d13fd855fa2913e5c"
+    },
+    {
+      "path": "source-pages/dark-hollows-tickets.html",
+      "bytes": 148669,
+      "sha256": "df6a516233148a27b0810ea189c6dc4d8235534a5a7de6eed377c343da246199"
+    },
+    {
+      "path": "source-pages/guthrie-official-tickets.html",
+      "bytes": 33217,
+      "sha256": "78aef19bab3b8c84b75247a5280e8ea8ff4c8cbe619129e4077d9fb8d0ef18e2"
+    },
+    {
+      "path": "source-pages/guthrie-stubwire.html",
+      "bytes": 15994,
+      "sha256": "986072e9118f3933f7e6209b9240c59d756d5e335c532fa1dbd528360949c6db"
+    },
+    {
+      "path": "source-pages/royal-official.html",
+      "bytes": 51808,
+      "sha256": "f63920d9192f4e545a2fc8b68eecce741e93d812b7bbc8ff2d42a4c6ee921ccf"
+    },
+    {
+      "path": "source-pages/sinister-2026-calendar.png",
+      "bytes": 363069,
+      "sha256": "94d5266ffe938386be347ad63830047b4ba9cf65d59046e37e34b534e4886c68"
+    },
+    {
+      "path": "source-pages/sinister-hauntpay.html",
+      "bytes": 23871,
+      "sha256": "67fcbf82e89f070573401d3c0cc765dd39ed2bc3af51a5b4030c35f596beb9d1"
+    },
+    {
+      "path": "source-pages/sinister-source-receipt.json",
+      "bytes": 771,
+      "sha256": "461dff19c9bf0a5a11d0875364c6775dad38e81ac47286d49dc263da68a49f79"
+    }
+  ]
+}

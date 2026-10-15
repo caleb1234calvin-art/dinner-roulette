@@ -1,0 +1,174 @@
+{
+  "r1_failed": true,
+  "r1_errors": 184,
+  "r1_only_height_errors": true,
+  "r1_widths": {
+    "320": 92,
+    "390": 92
+  },
+  "r2_pass": true,
+  "r2_comparisons": 774,
+  "r2_errors": [],
+  "r2_proof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+      "files": 517
+    },
+    "startedAt": "2026-10-15T19:03:45.267Z",
+    "output": {
+      "sha256": "9c80df952932d165e9f0dc64edee6f78ba7b382a03c64583a1e420fcd0cbacdd",
+      "files": 193
+    },
+    "completedAt": "2026-10-15T19:03:48.791Z"
+  },
+  "compact_geometry_equal": true,
+  "compact_builds_verified": [
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-regional-wave1/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-location/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-validation-check-build-proof/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-hold-cleanup/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-phase4/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-two/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-astra/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-geometry/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-cumulative/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-date-night-radial/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-casino/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-next-missouri/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-ranked-holds/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-completeness-v1/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-ten/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    },
+    {
+      "path": "receipts/pr73-r2-casino-browser-evidence-seasonal-astra-extras/build-proof.json",
+      "status": "BUILT",
+      "auth": "true",
+      "source": {
+        "sha256": "e5c75fc455a3dde35754dd23c58d6fbb65e2f263bccb1419d88dbc28ac7f3b81",
+        "files": 517
+      }
+    }
+  ]
+}
