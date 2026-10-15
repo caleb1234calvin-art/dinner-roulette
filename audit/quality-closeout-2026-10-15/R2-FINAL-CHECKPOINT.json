@@ -1,0 +1,67 @@
+{
+  "verifiedAt": "2026-10-15T21:17:12.545Z",
+  "production": {
+    "id": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "url": "dinner-roulette-qqjgngc9b-minions-9e2c.vercel.app",
+    "readyState": "READY",
+    "aliases": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "sha": "991978fe24ec165eeacd5500a26d66f35d86c560"
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": "pickforus.app"
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null
+    }
+  ],
+  "rollback": {
+    "id": "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+    "state": "READY",
+    "sha": "0344ccce79ce157196ff9e84b1aaf3e40802afc5"
+  },
+  "main": "991978fe24ec165eeacd5500a26d66f35d86c560",
+  "mainTree": "95f66498048590cbd30c623b17d15bf2d5b7cc73",
+  "candidate": "0ea1e6500cbae97c94e9f123c08939ffefbf4090",
+  "candidateTree": "7c12c5327af906348992e9b7d3282a11f830a202",
+  "candidateParent": "6bac175a4224ba3ef996a44419abb7bbeb9c5777",
+  "reviewStatus": "No author-separated PR review; release HOLD",
+  "integrationContinuity": "51ab871ec79bedd8f6deaac62450af7b051fce53",
+  "releaseContinuity": "705cc715a85535542b76c494f258b57f0874f324",
+  "issueComment": 6202431458,
+  "latestDocumentationPreview": {
+    "id": "dpl_DA98JXdTgAPzM43H8yEgdGAg8VxT",
+    "source": "705cc715a85535542b76c494f258b57f0874f324",
+    "state": "ERROR",
+    "target": null,
+    "reason": "Vercel blocked continuity/release's @tanstack/react-start 1.168.49 for CVE-2026-102989; log requires 1.168.60 or later. Main and PR73 already use 1.168.60. No bypass or source/settings change."
+  },
+  "nextAction": "Author-separated review of PR73 exact head and evidence; fresh effective migration-free route/recovery qualification before owner release proposal. D2 KC selected-radius curated availability is next separate implementation scope.",
+  "ownerDecision": "No release approval requested while gates remain open.",
+  "scope": "This continuation completed CI/evidence/continuity. Live interaction results are the earlier October15 samples, not a new physical/mobile/provider PASS."
+}

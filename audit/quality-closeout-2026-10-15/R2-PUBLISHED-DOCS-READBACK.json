@@ -1,0 +1,89 @@
+{
+  "main": "991978fe24ec165eeacd5500a26d66f35d86c560 95f66498048590cbd30c623b17d15bf2d5b7cc73",
+  "candidate": "0ea1e6500cbae97c94e9f123c08939ffefbf4090 7c12c5327af906348992e9b7d3282a11f830a202 6bac175a4224ba3ef996a44419abb7bbeb9c5777",
+  "integrationContinuity": "51ab871ec79bedd8f6deaac62450af7b051fce53 5610157965ed332a03b1b3e4d07ece698d95af99 69de3a621a43585a7c116a9be6dbf0f75c2b8a4a",
+  "releaseContinuity": "705cc715a85535542b76c494f258b57f0874f324 b603ff850d0ecad46cf2d715a3ccd30311be9d4b 874582fe70035da4a2af05ae3d766bcef8d49908",
+  "checks": [
+    {
+      "path": "AI_CONTINUITY.md",
+      "bytes": 1197894,
+      "sha256": "4c90125e406a2b51a7f5d50dce8023108ef903c49f4b05c5dbe3638f6708e9e4",
+      "readback": "exact match"
+    },
+    {
+      "path": "RELEASE_CONTINUITY.md",
+      "bytes": 52981,
+      "sha256": "b502b0b8bd53a81731486e03c636677cb479da76bef21db80765947ef7ee8f8a",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/astra-takeover-2026-10-14/CLOSEOUT-DECISION-QUEUE.md",
+      "bytes": 9638,
+      "sha256": "4b269fc6900db4ffd050667d15611258e508709161ee70e3029dccedebf3dca0",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/DEFECT-TRIAGE-R1.md",
+      "bytes": 7055,
+      "sha256": "96cf678a92b71c252cf10f3b2e9357a43c9bda347c7e1f9e90436570c8bf63a3",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/EVIDENCE-PRESERVATION-R1.json",
+      "bytes": 8120,
+      "sha256": "71e45b0b7990260ac3061fa83d103bb19a4b46700c01eef2fab753e8938ece87",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/EVIDENCE-PRESERVATION-R2.json",
+      "bytes": 13294,
+      "sha256": "c7ea8ae4723a0854a4f1290c3bdce3cbd6a6229e4e580729f75da20ab8add38b",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/R2-ACCEPTANCE.md",
+      "bytes": 7459,
+      "sha256": "08c4a87b5f93ef7ee76549fc654996e5cd2c57ab3105ffb3c68a95b02b771163",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/R2-ARCHIVE-INTEGRITY.json",
+      "bytes": 25316,
+      "sha256": "9925369e692b61529d2ff15758068c187761db54c184fea544de94e37be5c529",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/R2-EVIDENCE-REVIEW.json",
+      "bytes": 19753,
+      "sha256": "768bcc000e3614682e7510ac6b7e782d9158603e99ffda07a458ad118958ef70",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/R2-HOSTED-STATE.json",
+      "bytes": 24871,
+      "sha256": "d78ad4980a664f185bcac9534b81d063b48b5f694d56699638daf520723fb69a",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/README.md",
+      "bytes": 14414,
+      "sha256": "45a17b64a4faf5642b91e15b176401387420500caa435cbaea23238b7df207ca",
+      "readback": "exact match"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/SOURCE-REFRESH-R1.md",
+      "bytes": 6136,
+      "sha256": "1b4a3f196ff165005a962f59416a8ac437475b42ef21c8d6755fc1d7374860c9",
+      "readback": "exact match"
+    },
+    {
+      "path": "docs/handoffs/active/ASTRA-HALLOWEEN-2026-CLOSEOUT-TAKEOVER.md",
+      "bytes": 32562,
+      "sha256": "3ceb454c7e99aace55f949b5d41688c501c1455c27a36f7b51cf546fc01985da",
+      "readback": "exact match"
+    }
+  ],
+  "originalAiHistoricalSuffixBytes": 1185450,
+  "originalAiHistoricalSuffixIntact": true,
+  "priorReleaseContinuitySuffixIntact": true
+}
