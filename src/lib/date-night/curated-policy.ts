@@ -29,6 +29,12 @@ export function getCuratedSeasonalPlace(id: string): DateNightPlace | undefined 
   return reviewed.get(id);
 }
 
+/** Saved discovery is independent of live patch coverage. The caller must still
+ * apply exact radius, category, lifecycle, date and Open Now eligibility. */
+export function getCuratedSeasonalPlaces(halloweenActive: boolean): DateNightPlace[] {
+  return [...reviewed.values()].filter(place => halloweenActive || place.seasonalListing?.visibility === "listing-lifecycle");
+}
+
 /** Cached/saved IDs never restore superseded coordinates or lose current policy.
  * Preserve negative provider lifecycle evidence; never resurrect a closed venue. */
 export function applyCuratedSeasonalPolicy(place: DateNightPlace): DateNightPlace {

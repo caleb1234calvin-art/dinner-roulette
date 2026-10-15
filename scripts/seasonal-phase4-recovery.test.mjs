@@ -1,4 +1,5 @@
 import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs";
+import { curatedRadiusSourceBefore } from "./test-support/curated-radius-source-before.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
@@ -212,7 +213,7 @@ test("Branson's exact 17 dates survive November/DST as lifecycle Anything browse
 test("all 52 previous V1 records, presentation copy, radial implementation and unchanged UI remain byte-bound to main", () => {
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
-  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(occurrenceSourceBefore(path)).digest("hex"), hash, path);
+  for (const [path, hash] of Object.entries(baseline.files)) assert.equal(createHash("sha256").update(curatedRadiusSourceBefore(path, occurrenceSourceBefore(path))).digest("hex"), hash, path);
   const { SEASONAL_PRESENTATIONS } = load("src/lib/date-night/seasonal-presentation-catalog.ts");
   assert.equal(Object.keys(baseline.presentations).length, 52);
   const acceptedNextBytes = readFileSync("scripts/test-support/next-missouri-browser-projections.json");

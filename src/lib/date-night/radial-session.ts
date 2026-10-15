@@ -1,10 +1,11 @@
 import { startDiscoveryRequest } from "../discovery/client-request";
-import { DATE_NIGHT_CACHE_TTL_MS, type DateNightAcquisition } from "./cache";
+import { DATE_NIGHT_CACHE_TTL_MS, failedDateNightAcquisition, type DateNightAcquisition } from "./cache";
+import { getCuratedSeasonalPlaces } from "./curated-policy";
 import { createDateNightRadialCache, clipDateNightRadius } from "./radial-cache";
 import { mergeDateNight } from "./identity";
 import { normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNightPatchCoverageRecord } from "./radial-plan";
-import type { ConcreteDateNightType, DateNightSearchResponse } from "./types";
+import type { ConcreteDateNightType, DateNightPlace, DateNightSearchResponse } from "./types";
 
 export const DATE_NIGHT_RADIAL_PAUSE_MS = 1000;
 export const DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS = 250;
@@ -40,6 +41,10 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
   let paused = false;
   let coreSettled = false;
   let displayOnly: DateNightSearchResponse | null = null;
+  // A bounded saved pool belongs to this location/semantic session. Destructive
+  // retirement mirrors cached positives: eviction of negative proof must never
+  // recreate a known closed identity from the unchanged static registry.
+  let savedPool: DateNightPlace[] = [];
   let error: string | null = null;
   const key = (patchId: string, type: ConcreteDateNightType) => `${patchId}/${type}`;
   const sameSignature = (a: DateNightAcquisition, b: DateNightAcquisition) => a.lat === b.lat && a.lon === b.lon &&
@@ -65,6 +70,23 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       visible = { ...displayOnly, venues,
         source: response ? venues.some(v => v.source !== "osm") ? "merged" : "live" : displayOnly.source,
         discovery: response?.discovery ?? displayOnly.discovery };
+    }
+    // Curated identities have their own reviewed location/date authority. A live
+    // core failure must not hide saved records inside the user-selected radius.
+    // This presentation-only composition never enters the provider proof cache.
+    // Retain core settlement/loading behavior and merge known negative evidence.
+    if (coreSettled || response) {
+      const negatives = [...negativeEvidence, ...(visible?.venues.filter(place => place.lifecycle) ?? [])];
+      if (negatives.length) savedPool = mergeDateNight(negatives, savedPool).filter(place => !place.lifecycle);
+      const saved = clipDateNightRadius(savedPool, query)
+        .filter(place => place.activityTypes.some(type => query!.activityTypes.includes(type)) ||
+          (!query!.halloweenActive && place.seasonalListing?.visibility === "listing-lifecycle"));
+      if (saved.length) {
+        const base = visible ?? failedDateNightAcquisition(query);
+        const venues = mergeDateNight([...(visible?.venues ?? []), ...negativeEvidence], saved);
+        visible = { ...base, venues, source: response || base.source !== "fallback" ? "merged" : "fallback",
+          ...(!response && base.source === "fallback" ? { warning: base.warning ?? "Using saved Date Night places while the live map is unavailable." } : {}) };
+      }
     }
     const hasFailure = coverage.failedPatchIds.length > 0;
     if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,
@@ -165,6 +187,7 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       if (!compatible) {
         cancel(); attempts = new Map(); failed = new Map(); passRequests = 0; consecutiveFailures = 0;
         paused = false; coreSettled = false; displayOnly = null; error = null;
+        savedPool = getCuratedSeasonalPlaces(query.halloweenActive);
       } else {
         for (const [id, at] of attempts) if (now() < at || now() - at >= DATE_NIGHT_CACHE_TTL_MS) attempts.delete(id);
         if (retry) {

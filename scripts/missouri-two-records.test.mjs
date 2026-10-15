@@ -81,6 +81,9 @@ for (const row of records) test(`actual component keeps ${row.id} qualified thro
  Object.defineProperty(globalThis,"document",{configurable:true,value:{body:{},documentElement:{classList:{contains:()=>true}}}});
  t.after(()=>{if(prior)Object.defineProperty(globalThis,"document",prior);else delete globalThis.document;});
  const store={location:{...row,label:row.name,source:"manual"},preferences:{},exclusions:[],sessionShown:[],dateNightFilters:{...DEFAULT_DATE_NIGHT_FILTERS,openNowOnly:false},spookySeasonEnabled:true,theme:"dark",markShown(){},excludeTonight(){},setDateNightFilters(patch){this.dateNightFilters={...this.dateNightFilters,...patch};}};
+ // Keep this per-record copy/expiry test isolated from other independently
+ // composed saved records; the full discovery pool is tested separately.
+ store.preferences[row.id]={favorite:true};store.dateNightFilters.favoritesOnly=true;
  const clock={value:at};
  const harness=dateNightComponentHarness({store,now:clock,search:async()=>({venues:[row],source:"merged"})});
  t.after(()=>harness.dispose());harness.render();let tree=await harness.settle();
