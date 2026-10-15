@@ -1,0 +1,288 @@
+{
+  "reviewKind": "Newly reconstructed independent runtime review from preserved originals; not the lost earlier report, not a test rerun",
+  "reviewedAt": "2026-10-15T01:12:40.550534+00:00",
+  "assessment": "PASS within controlled built-app browser evidence scope; release authorization remains HOLD",
+  "candidate": {
+    "commit": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+    "tree": "95f66498048590cbd30c623b17d15bf2d5b7cc73",
+    "parent": "0336b55a2a059423c8d5c0dc4f52f79b71bdcacc"
+  },
+  "regionalArchive": {
+    "file": "r3-casino-browser-evidence-seasonal-regional-wave1.zip",
+    "bytes": 266561009,
+    "sha256": "53914e2c11131b4b3bf279cdb9718954b49090ecba081e5233337e88fdeaab89",
+    "zipCRC": "PASS",
+    "members": {
+      "seasonal-regional-wave1/verdict.json": "e8592d816ba6a4e7aab7687d8a2ac0bc238d64f1070ff19ce53e15dc85b1ad4d",
+      "seasonal-wave2-ten/verdict.json": "e65e5c4ae7e29b43a9ec0f37f600c771567dabe0df82a254376510bd4a0de308",
+      "seasonal-regional-wave1/wave2-subpass.json": "cfa11447c91b4a21356a8271ef2a608b124d02c85aefe9aef13031f050c8b001",
+      "seasonal-wave2-ten/events.jsonl": "021dc58ecbe6a740d98dea8e87dd04a406c30d470bb0348ab75c75242747460b"
+    }
+  },
+  "sourceFingerprintRecomputed": {
+    "sha256": "4e95c845b35578ff2ebd2dfd20370f8be7c6d17d835cd326acad1c7c818bd071",
+    "files": 517
+  },
+  "oracleSha256": "7024f4159d20eb1e6799808792e93293ee3eb97df4d159262a5d24637ea98aaa",
+  "radiusOracleSha256": "2a49ffd42e700f2cfd79e8f9127b9f778548993fb9f3d39169f15acdb56412d0",
+  "wave2": {
+    "scenarioCount": 277,
+    "legacyRegionalScenarioCount": 317,
+    "acceptedIds": [
+      "date-night-ks26-walters",
+      "date-night-il26-w1-spook",
+      "date-night-il26-w1-boo",
+      "date-night-il26-w1-sonny-acres-haunted-experiences",
+      "date-night-il26-w1-hayride-horror-bayou",
+      "date-night-il26-w1-217",
+      "date-night-il26-w1-paintball",
+      "date-night-il26-w1-chitty",
+      "date-night-ks26-nightmare",
+      "date-night-ar26-royal"
+    ],
+    "perIdentityRequiredCases": [
+      "consumer-anything-category-320",
+      "consumer-anything-category-390",
+      "consumer-anything-category-512",
+      "open-now",
+      "ended",
+      "next-year",
+      "season-off",
+      "radius-exclusion",
+      "mixed-alias-toggle-cache",
+      "resume-expiry-options",
+      "resume-expiry-result",
+      "provider-failure",
+      "favorite-alias-cache-resume-unsave",
+      "negative-alias-beats-canonical-favorite",
+      "alias-exclusion-expiry-and-not-tonight",
+      "affirmed-favorites-direct-reload-expiry",
+      "qualified-night-plan",
+      "supported-category-matrix",
+      "negative-lifecycle-permanently-closed",
+      "negative-lifecycle-disused",
+      "history-choice-reload-expiry",
+      "explicit-nonseasonal-filter",
+      "pending-rpc-at-expiry",
+      "november5-expired-negative"
+    ],
+    "perIdentityRequiredCaseCount": 24,
+    "historicalReceipts": 32,
+    "radiusOrigins": 4,
+    "manualRelocations": 1,
+    "allScenariosPassed": true,
+    "assertionErrors": 0,
+    "pageErrors": 0,
+    "imageRequestFailures": 0,
+    "manualOnly": true,
+    "actualUiRadii": [
+      1,
+      15,
+      30,
+      50
+    ],
+    "independentOnlyRadius": 25,
+    "distancePairsIndependentlyRecomputed": 40,
+    "maximumDistanceDeltaMiles": 4.877875880993088e-11,
+    "literalMembershipSetsIndependentlyVerified": 20,
+    "actualRadiusObservationsVerified": 16,
+    "pendingRpcBoundariesVerified": 10,
+    "resumeWithoutRpcVerified": 20,
+    "literalOffIds": [
+      "date-night-ks26-walters",
+      "date-night-ks26-nightmare"
+    ],
+    "network": {
+      "interceptedProviderCalls": 1753,
+      "blockedServerRequests": [],
+      "forwardedExternalCalls": 0
+    },
+    "events": {
+      "intercepted-provider": 1753,
+      "intercepted-geocoder": 3
+    },
+    "consoleMessages": [
+      {
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600&display=swap",
+        "count": 349
+      },
+      {
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "https://grok.com/grok-app-builder/extensions.js",
+        "count": 349
+      },
+      {
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "url": "http://127.0.0.1:8099/_vercel/insights/script.js",
+        "count": 349
+      }
+    ]
+  },
+  "allBrowserEvidence": {
+    "integratedScenarios": 2030,
+    "casinoCheckStatements": 16,
+    "locationCheckStatements": 19,
+    "lanes": [
+      {
+        "archive": "r3-casino-browser-evidence-casino.zip",
+        "member": "verdict.json",
+        "sha256": "deb77df0f1607137ee472fe1383d8b3769d83075456c83c9fdb5d2e39a890f08",
+        "scenarios": 0,
+        "checkStatements": 16,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-date-night-radial.zip",
+        "member": "date-night-radial/verdict.json",
+        "sha256": "f8571e08d0221a12eeb36c402a65a28890775516a333df1afd87134999edc751",
+        "scenarios": 10,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-location.zip",
+        "member": "location/result.json",
+        "sha256": "7424e72c0a1eb1bb9e7473f058b4271095204fbdf718711a54eba4fc01cc6fb3",
+        "scenarios": 0,
+        "checkStatements": 19,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-astra-extras.zip",
+        "member": "seasonal-astra-extras/verdict.json",
+        "sha256": "4e0748237683d2b026c4ff531ad947482701e5e439abb7d3b77d3dca88a2460a",
+        "scenarios": 196,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-astra.zip",
+        "member": "seasonal-astra-eleven/verdict.json",
+        "sha256": "c41ca0362df8bfde799005fdbb93a0178b4921c5349eea19e633b36544cbccdd",
+        "scenarios": 220,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-completeness-v1.zip",
+        "member": "seasonal-completeness-v1/verdict.json",
+        "sha256": "25998a0a691490a38d6bec1f9f0907f18c99da4b517464298d30c50f583818e1",
+        "scenarios": 97,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-cumulative.zip",
+        "member": "seasonal-cumulative-15/verdict.json",
+        "sha256": "00f7cfeb8cb667cfa8f3d30114ee4615f0d2cfa40943a9e9da672f41ad8f509f",
+        "scenarios": 235,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-hold-cleanup.zip",
+        "member": "seasonal-hold-cleanup/verdict.json",
+        "sha256": "36926b50dd2c6639d1cb76e7752942bb243956879cd71efa9a9b3d8e7b65a470",
+        "scenarios": 69,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-next-missouri.zip",
+        "member": "seasonal-next-missouri-three/verdict.json",
+        "sha256": "4a36072ae43e71889b7bf8df297aa1d7909b5adfabbfd59b9544aba4db8eb36b",
+        "scenarios": 87,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-phase4.zip",
+        "member": "seasonal-phase4-recovery-seven/verdict.json",
+        "sha256": "fc07c9a137073b82d3d780e832a73526305c10b2120d797649425f4221cdb1b8",
+        "scenarios": 164,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-ranked-holds.zip",
+        "member": "seasonal-ranked-holds/verdict.json",
+        "sha256": "3c8c9481ea14262fb9e525666d18816b5d4d5c1e68f2eb5dd82ddcf6f7c4eeb8",
+        "scenarios": 178,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-regional-wave1.zip",
+        "member": "seasonal-regional-wave1/verdict.json",
+        "sha256": "e8592d816ba6a4e7aab7687d8a2ac0bc238d64f1070ff19ce53e15dc85b1ad4d",
+        "scenarios": 317,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-regional-wave1.zip",
+        "member": "seasonal-wave2-ten/verdict.json",
+        "sha256": "e65e5c4ae7e29b43a9ec0f37f600c771567dabe0df82a254376510bd4a0de308",
+        "scenarios": 277,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-ten.zip",
+        "member": "seasonal-ten-record/verdict.json",
+        "sha256": "054a088a63b1c481e9733131b517607432efb681cd8a2263fd5482654f5b7fd1",
+        "scenarios": 157,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      },
+      {
+        "archive": "r3-casino-browser-evidence-seasonal-two.zip",
+        "member": "missouri-two-records/verdict.json",
+        "sha256": "3993bcb21ea5beccb2ba2e5b825691748e139c6ef0fefa91adfda426008e2874",
+        "scenarios": 23,
+        "checkStatements": 0,
+        "passed": true,
+        "assertionErrors": 0,
+        "pageErrors": 0
+      }
+    ]
+  },
+  "limitations": [
+    "Review was reconstructed after temporary files were lost; retained original ZIP bytes and the exact candidate checkout are the reviewed inputs.",
+    "GitHub terminal job states were independently refreshed by the coordinator; this report reconstructs original artifact contents and source bindings, not a new execution.",
+    "Provider and geocoder responses were intercepted fixtures against a built local app/RPC. No live public-provider or KC 50-mile acceptance, physical Android/WebView/GPS acceptance, signing, Play upload, merge or deployment is established.",
+    "Zero page and assertion errors does not mean a clean console: intentionally blocked Google Fonts and Grok extension requests plus local Vercel analytics 404s occur.",
+    "25 miles is an independently measured filter of the 30-mile acquisition, not a supported UI journey.",
+    "Expired records can remain in acquired supersets without being selectable or rendered as eligible. OFF ordinary park aliases may remain with seasonal fields stripped; only Walters and Nightmare are new seasonal lifecycle identities allowed OFF.",
+    "External source freshness and inherited geometry clipping are reviewed separately; this runtime PASS does not resolve those qualifications or release controls."
+  ]
+}

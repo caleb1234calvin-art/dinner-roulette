@@ -1,3 +1,21 @@
+# CURRENT — ASTRA R3 TECHNICAL ACCEPTANCE COMPLETE; RELEASE HOLD (2026-10-15T01:14:34.555995+00:00)
+
+Production remains **82 identities**, main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`, tree `c7c49796abc809c4a00690cd282f69920e325bbc`; `dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` is READY. All five aliases were individually refreshed; www redirects 308 to apex. Previous AQ75 remains READY; rollback authority is unresolved.
+
+Sole PR #72 remains **OPEN / DRAFT / UNMERGED**, head `4b2498e067fd7e4a1816fc3732e2cc7e75415486`, tree `95f66498048590cbd30c623b17d15bf2d5b7cc73`, parent `0336b55a2a059423c8d5c0dc4f52f79b71bdcacc`, base main above. Exactly ten prospective additions would make 92; all 82 released identities are preserved.
+
+Exact-head web 38651496637 completed SUCCESS: all 16 lanes plus aggregate validate. Android 38651496774 completed SUCCESS; signing/upload SKIPPED. Repository 1,244 PASS + 4 inherited SKIP; app 71 PASS; separate casino 83 PASS. Original browser evidence verifies 2,030 integrated scenarios plus 16 casino / 19 location checks, including retained 317 regional and new 277 Wave 2 scenarios. Geometry has 774 tuples over 92 identities, 258 at each width 320/390/512, six variants and 6,288 PNGs. Static SSR geometry and integrated controlled-provider journeys are distinct; no public live-provider or physical-device acceptance is claimed.
+
+Source/copy remains **seven PASS / three qualified**, with restored Sonny/Hayride/Chitty guidance. Inaccessible Walters/217 supplementary sources, unlocated Boo ancillary bans and inherited 320px Directions clipping are disclosed. All 18 original R3 archives survived and were restored with size/SHA256/member-CRC verification: 1,382,516,154 bytes /13,745 entries /13,658 PNGs. A temporary workspace reset lost unpublished final reports; newly reconstructed independent receipts identify this recovery. Complete terminal regional console retrieval previously failed with Transport closed; original verdicts/server logs and terminal status remain available.
+
+**Decision packet:** `audit/astra-takeover-2026-10-14/R3-RELEASE-DECISION-PACKET.md`, with exact scope, per-job results, artifact digests, fresh controls, qualifications and controlled release procedure. Adjacent recovery reports preserve independent runtime and geometry/copy review. The technical proposal is ready; **release remains HOLD** for effective hosted migration-free build verification, supported rollback operator/path and separate explicit owner approval for this exact SHA/tree. KC 50-mile provider/core gating and physical Android/WebView/GPS/Play remain separate. No merge, deployment, rollback, migration, settings/secrets, signing or Play operation occurred.
+
+October 25 remains a proposed content freeze; 21 unselected research items remain a queue with no second candidate authorized. Dark Hollows October 23–24 remains time-sensitive. No background automation or global Halloween extension was created.
+
+Clerical timestamp correction: the prior 23:13 header and 23:11 observation label were projected labels; actual observations were 23:05–23:08 UTC, as corrected in Issue 71 comment 6180782586. Both complete prior histories follow **byte-for-byte unchanged** from `fea9674bd654f5b625e246c3b9191d942130f3ef`.
+
+---
+
 # CURRENT — ASTRA R3 CANDIDATE PUBLISHED; NEW EXACT-HEAD ACCEPTANCE RUNNING (2026-10-14, 23:13 UTC)
 
 - Sole PR #72 remains OPEN/DRAFT/UNMERGED at **`4b2498e067fd7e4a1816fc3732e2cc7e75415486`**, tree **`95f66498048590cbd30c623b17d15bf2d5b7cc73`**, direct parent `0336b55a2a059423c8d5c0dc4f52f79b71bdcacc`, base/released main `0344ccce79ce157196ff9e84b1aaf3e40802afc5`. Ten additions remain prospective (82→92), not released.

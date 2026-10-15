@@ -1,0 +1,30 @@
+{
+  "head": "4b2498e067fd7e4a1816fc3732e2cc7e75415486",
+  "jobId": 116151115464,
+  "logSha256": "24d9e6c0f25b85e2f2015017ce4b887131993d4351b54cc97b4ff32cbca4479d",
+  "logBytes": 3509845,
+  "status": "PASS",
+  "evidenceLines": [
+    "2026-10-14T23:02:09.1078915Z \u2716 6 problems (0 errors, 6 warnings)",
+    "2026-10-14T23:02:17.6010590Z # tests 83",
+    "2026-10-14T23:02:17.6011579Z # pass 83",
+    "2026-10-14T23:02:17.6012051Z # fail 0",
+    "2026-10-14T23:02:17.6013066Z # skipped 0",
+    "2026-10-14T23:02:19.4604895Z > node scripts/with-app-env.mjs vite build --mode development",
+    "2026-10-14T23:02:22.9309303Z \u001b[36;1mnode scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production\u001b[0m",
+    "2026-10-14T23:02:22.9374386Z   VITE_AUTH_ENABLED: true",
+    "2026-10-14T23:02:27.3325602Z ok 32 - SKILL.md and AGENTS.md name the marker path and bound this script uses # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-14T23:02:27.3340818Z ok 33 - the sections that own the brand-task prohibition never affirm a wait # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-14T23:02:27.3347046Z ok 34 - SKILL.md tells the pass to self-check with the flag this CLI accepts # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-14T23:03:39.1434389Z ok 1247 - every hand-over the og skill prints is one this script accepts # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-14T23:03:39.1437238Z # tests 1248",
+    "2026-10-14T23:03:39.1437548Z # pass 1244",
+    "2026-10-14T23:03:39.1437848Z # fail 0",
+    "2026-10-14T23:03:39.1438165Z # skipped 4",
+    "2026-10-14T23:03:39.6413408Z # tests 71",
+    "2026-10-14T23:03:39.6413755Z # pass 71",
+    "2026-10-14T23:03:39.6414135Z # fail 0",
+    "2026-10-14T23:03:39.6415073Z # skipped 0"
+  ],
+  "safeRoute": "Auth-enabled development and direct Vite production, no migration invocation. Hosted override remains unexposed."
+}
