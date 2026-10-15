@@ -1,3 +1,25 @@
+# CURRENT — Quality-first takeover, October 15, 2026
+
+PR #72 is **MERGED AND RELEASED**. Current verified main is `991978fe24ec165eeacd5500a26d66f35d86c560`, tree `95f66498048590cbd30c623b17d15bf2d5b7cc73`. Production `dpl_72on94mDyDhNBbmN356bdXBsMqtY` is READY with **92 curated source identities**; all five aliases were freshly verified. Do not repeat that release. Older pending/draft/82-production descriptions below are historical.
+
+**Owner revision:** October 25 is aspirational, not a mandatory freeze or release deadline. Prioritize correctness, reliability, usability, complete visitor information and evidence. Continue only useful, independently verified additions while their actual operating dates remain valid. Never extend source dates to match the project schedule.
+
+The next bounded candidate is **draft PR #73**, branch `integration/result-directions-wrap-2026-10-15`, head `6bac175a4224ba3ef996a44419abb7bbeb9c5777`, tree `1197f826e2dfd26a4e6c65646a40e4eba7309705`, parent exact current main. It addresses inherited 320px Result Directions overflow; provider/catalog changes are separate. **New release HOLD** until all applicable exact-head evidence and author-separated independent review are complete. No new merge, production action or rollback is authorized.
+
+Current evidence, live acceptance, defect dispositions, research inventory and precise next actions are maintained in **`audit/quality-closeout-2026-10-15/README.md` on `integration/continuity-refresh-2026-10-07`**, with LIVE-ACCEPTANCE-R1, DEFECT-TRIAGE-R1, SOURCE-REFRESH-R1, QUEUE-DISPOSITION-R1 and CONTROL-READBACK-R1 beside it. Read that checkpoint before treating any older status as current.
+
+Live samples cover KS/AR/OK/MO/IL; the KC 50-mile curated/provider gate persists. A Benton city/county resolution ambiguity was newly observed and recovered with ZIP 72015. Queue31 reconciles to 10 released / 21 held; no additional catalog record was promoted. Fixture browser results do not resolve live-provider or physical Android HOLDs.
+
+The prior 82-identity deployment `dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb` remains READY and listed as a rollback candidate; activation and all-alias restoration remain unexecuted/unapproved. Before any future release, freshly confirm the migration-free effective build route and rollback controls. Ordinary `npm run build` invokes migrations and must not be used as a deployment shortcut.
+
+Google Play identity verification is owner-reported complete and Create App accessible. This removes only an administrative blocker; signing/publication and full policy/privacy/security/WebView/content/IP/store/device audits remain a separate future workstream after Halloween priorities.
+
+Historical records below are preserved, including original failures and subsequent corrections. The complete AI history was restored after an initial transport-truncation mistake; see the audit erratum. This checkpoint does not claim every historical line of the large chronology was semantically reread.
+
+---
+
+## Historical checkpoints and original handoff (superseded where explicitly corrected above)
+
 # Remaining Halloween 2026 closeout queue
 
 This is a preserved decision queue, not authorization for another implementation PR or scheduled automation.

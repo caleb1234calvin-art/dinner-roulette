@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-15T18:48:39.721Z",
+  "main": {
+    "sha": "991978fe24ec165eeacd5500a26d66f35d86c560",
+    "tree": "95f66498048590cbd30c623b17d15bf2d5b7cc73"
+  },
+  "production": {
+    "id": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+    "status": "READY",
+    "source": "991978fe24ec165eeacd5500a26d66f35d86c560",
+    "url": "dinner-roulette-qqjgngc9b-minions-9e2c.vercel.app",
+    "curatedIdentities": 92
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_72on94mDyDhNBbmN356bdXBsMqtY",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "priorProduction": {
+    "id": "dpl_J7TNPFJG4GAnZqytXfrJDR5f8RAb",
+    "source": "0344ccce79ce157196ff9e84b1aaf3e40802afc5",
+    "status": "READY",
+    "curatedIdentities": 82,
+    "isRollbackCandidate": true,
+    "activation": "NOT AUTHORIZED; not executed; current dashboard eligibility and full alias restoration not freshly proven"
+  },
+  "candidate": {
+    "pr": 73,
+    "branch": "integration/result-directions-wrap-2026-10-15",
+    "sha": "6bac175a4224ba3ef996a44419abb7bbeb9c5777",
+    "tree": "1197f826e2dfd26a4e6c65646a40e4eba7309705",
+    "parent": "991978fe24ec165eeacd5500a26d66f35d86c560",
+    "draft": true,
+    "productionDeployment": "NONE"
+  },
+  "documentationPreview": {
+    "id": "dpl_4rG94M68kA26bg71j9hUdxK9mpYM",
+    "source": "3478dcfcb8167c035d341327b8967b5ca9253402",
+    "branch": "continuity/release",
+    "status": "ERROR",
+    "reason": "Vercel dependency security block for older branch @tanstack/react-start@1.168.49; main/candidate use 1.168.60. No bypass attempted."
+  },
+  "effectiveBuildQualification": "API project metadata does not expose effective build command. Prior owner dashboard evidence records migration-free override ON. Fresh production logs show Vite client/SSR; candidate CI uses explicit direct Vite command. Before a future production action, freshly reconfirm effective override and rollback controls.",
+  "mutationsNotPerformed": [
+    "merge",
+    "production deploy/promote",
+    "rollback",
+    "migration",
+    "credential/secret/settings change",
+    "Android upload signing",
+    "Google Play operation"
+  ]
+}
