@@ -1,0 +1,14 @@
+{
+  "tree": "aaa5fb5bac5dacad9ffbe6a8888e1b80cfd9e701",
+  "parent": "eb330bd1837a04d49c6e41c051c8ecc763f59104",
+  "inputs": {
+    "scripts/legal-support-browser.mjs": "18b694201abf4a9ca1538b9f5a8eb1589f119802b893f78f5caa029a2313b282",
+    "scripts/test-support/legal-notice-browser-harness.mjs": "f2ad07f9877efcbe5d18ffe11ec5f3854ad64daf52089fbda3157af5089e3667"
+  },
+  "verdict": "PASS bounded harness source review; hosted execution pending",
+  "limitations": [
+    "Notice fixture uses real component and compiled CSS but omits fixed bottom navigation.",
+    "Prior archived-history expansion not browser-certified.",
+    "No current browser PASS inferred from compilation or old artifacts."
+  ]
+}
