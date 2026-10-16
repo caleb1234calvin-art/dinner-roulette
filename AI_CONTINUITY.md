@@ -1,3 +1,31 @@
+# CURRENT — PR74 released; parallel development active — 2026-10-16 UTC
+
+PR74 had explicit owner approval for head `e5e1682f6c82c9a7d972e28bf9b9f94973a3d158` / tree `c36112156cd11baefb6671194f0d59b9c181c2a3`. Fresh exact candidate, unchanged main, successful checks, migration-free Override and supported rollback selector passed. The PR was marked ready and merged with an expected-head guard.
+
+Production main is **c3208d9fdc9a21d698efa9254be1286f5d3d2836**, exact approved tree **c36112156cd11baefb6671194f0d59b9c181c2a3**. READY deployment **dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6** serves dinner-roulette-fr47p5yy5-minions-9e2c.vercel.app. Root and a separate verifier independently checked all five aliases; www retains its 308 redirect to apex. All 92 curated identities and source rules remain intact.
+
+Author-separated production verdict: **QUALIFIED PASS**. Actual live KC nine stages return target counts 0/1/2/3/3 at 15/20/30/40/50 miles, shrink/grow 0/3, Open Now 0/3. The actual provider fallback omitted the outer targets; corrected client composition supplies them while truthfully reporting incomplete coverage. Actual Directions six cases pass at 320/390/512, with 72/72/56px heights. A separate controlled 14-stage probe passes relocation, cache reuse and source expiration. Ten deployed assets match the approved-source build byte-for-byte.
+
+The initial replay serialization-header error and automatic rejection over an unsolicited grok.com request are preserved. The successful safer replay blocks all non-app hosts before transmission; no bypass occurred. Physical Android/GPS/PWA, source field conditions, complete provider coverage, Maps route accuracy, inherited tight 390px spacing and rollback generated-alias recovery remain qualified.
+
+Approved-head web 38822722705 and unsigned Android 38822722711 remain SUCCESS: 1,253 repository plus 71 application tests PASS; four inherited skips, six web and 14 Android warnings; all 15 browser lanes; 2,030 scenario records, 35 casino/location checks and 774 geometry comparisons, counted separately. Existing unchanged-input original evidence is retained with precise identities; the full archives were not redundantly reopened this turn. Original failures remain failures.
+
+Effective Build Command Override remains ON: `VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. Actual build events confirm successful deployment. No migration or production configuration change occurred. After release, the owner-accessible Instant Rollback selector offers preceding READY deployment `dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5` / main `ead2319c4869478f4cd121e2370db4d9734d83ed`. Inspection was canceled without Continue. Hobby predecessor, retention and generated-alias qualifications persist; the denied rollback API was not retried. Rollback execution requires separate owner approval.
+
+Release packet `PICK-FOR-US-PR74-RELEASE-EVIDENCE-2026-10-16.zip`: 5,851,440 bytes; SHA256 `7de7dcc464461ffd7c6909ebaf2a9757dba1ebe9064043936ef109fe3cee41b9`; nine members; CRC/member hashes PASS; saved as `libfile_8f96ffd4e3a88191b1ccf7ce9458bbc8`. It includes the full independent production archive: 5,824,564 bytes; SHA256 `b8f7b035205e77cc3a7a1c34c80516a91527550d12f4a598c26eeaea5ebf953b`; 159 members. Prior candidate acceptance packet `1bccdde…` and all 18 original hosted archives remain preserved separately. See `audit/accelerated-development-2026-10-16/pr74-release/RELEASE-REPORT.md` for scope, original failure and evidence details.
+
+Parallel work now includes a D3 author and separate reviewer; three research groups covering 6/6/9 held records with cyclic author-separated clearance; independent catalog QA; and verification tooling. DRAFT PR75 is published at **91896a2b8c086b7d86b831c462e158fe04e6c00d**, tree **62f2615cb924f15ec7fc6cb5a160d1eb613ba605**, parent production `c3208d9…`. Its 19-file scope combines explicit manual geographic selection and associated validation with three read-only verification-packet files. All 15 existing browser lanes remain; the location lane adds dedicated D3 acceptance. Published-head acceptance is PENDING. Local predecessor 638006a results (1,260 repository plus 79 application PASS, four inherited skips, six lint warnings) are historical and are not transferred. Initial D3 keyboard focus behind the fixed Pick bar was preserved as a failure and corrected before publication. Root independently reviewed tooling; another worker reviews D3. No PR75 release approval exists.
+
+Research inventory at this checkpoint: 31 tracked, ten already released, 21 undergoing fresh review, zero newly cleared for release. All 21 are assigned concurrently. A blanket seasonal-OFF expansion in the first western proposal was rejected; later proposals preserve the Halloween layer. Catalog additions remain separate from D3 and released PR74. October 25 remains aspirational; verified evidence and seasonal usefulness govern.
+
+All prior AI continuity bytes below are preserved. Remote `continuity/release` remains `705cc715a85535542b76c494f258b57f0874f324`: writing that legacy branch would trigger an unrelated deployment. Its complete updated RELEASE_CONTINUITY proposal and apply patch are preserved on the excluded integration continuity branch. This publication qualification remains explicit.
+
+There is no authorization for PR75 or catalog release, rollback execution, migrations, production configuration or credential changes, Android signing or Play publication.
+
+---
+
+## Preserved previous continuity
+
 # Current checkpoint — PR #74 integration accepted; separate release approval required
 
 October 16, 2026 UTC closeout of the October 15 workstream. This header supersedes the pending snapshots below, all retained intact. **Author-separated independent QUALIFIED PASS. PR #74 remains DRAFT / UNMERGED / RELEASE HOLD.** No merge, deployment, rollback, migration, production configuration change, Android signing or Play publication was performed. October 25 remains aspirational.
