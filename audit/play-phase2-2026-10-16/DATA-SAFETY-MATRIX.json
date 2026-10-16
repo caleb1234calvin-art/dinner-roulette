@@ -1,0 +1,282 @@
+{
+  "title": "Pick For Us proposed Data safety decision matrix",
+  "prepared_at": "2026-10-16T09:09:00Z",
+  "status": "DRAFT_NOT_FOR_IMPORT_OR_SUBMISSION",
+  "main": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "candidate": "6b370a5202ffb531434d725f49aacbdc325f32c5",
+  "candidate_legal_status": "unreleased",
+  "candidate_effective_date": null,
+  "method": "Reuse hash-bound audit and observed evidence; targeted official documentation refresh; no Android trace or Console submission",
+  "owner_unknowns": [
+    "Final published variants and runtime provider-role basis",
+    "Final exact answer attestation; no renewed generic operational questionnaire"
+  ],
+  "known_owner_attestations": [
+    {
+      "message_id": "Sentinel_c86b35edf4408191867085e39aec7990",
+      "at": "2026-10-16T05:38:00Z",
+      "quote": "Right now, no, but it'll be something we work towards.",
+      "scope": "No separate copies/exports outside normal local storage, Vercel dashboards and Gmail; owner statement, not forensic proof",
+      "supplied_by": "Parent with prior report context"
+    },
+    {
+      "scope": "Personally handles support/privacy mail; delete after resolution subject to legitimate legal/security retention; mailbox bot access disabled",
+      "source": "../legal-publication-finalization-2026-10-16/PR77-FINAL-REPORT.md and frozen prepared policy"
+    }
+  ],
+  "rows": [
+    {
+      "id": "DS01",
+      "category": "Precise location",
+      "flow": "Unrounded returned GPS -> app server -> Nominatim / independent Overpass operators",
+      "proposed_collected": "Yes",
+      "proposed_shared": "Yes; no demonstrated exception",
+      "proposed_user_control": "Optional",
+      "proposed_ephemeral": "Unverified; do not claim Yes",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": [
+        "App functionality"
+      ],
+      "confidence": "High source; Android runtime not witnessed",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/location/controller.ts#L26-L51",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/restaurants/geocode.ts#L73-L85",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/restaurants/overpass.ts#L5-L20"
+      ],
+      "closure_needed": "Verify precise grant behavior, payloads, provider processing/retention. If valid exception later established, change Shared only; collection remains."
+    },
+    {
+      "id": "DS02",
+      "category": "Approximate location",
+      "flow": "Coarse GPS plus automatic analytics geography",
+      "proposed_collected": "Yes",
+      "proposed_shared": "Yes for optional coordinate transfers; Vercel role unresolved",
+      "proposed_user_control": "Required at combined category level because analytics is automatic",
+      "proposed_ephemeral": "No for retained analytics; location-provider path unverified",
+      "proposed_collection_purposes": [
+        "App functionality",
+        "Analytics"
+      ],
+      "proposed_sharing_purposes": {
+        "supported": [
+          "App functionality"
+        ],
+        "conditional": [
+          {
+            "purpose": "Analytics",
+            "condition": "Only if actual Vercel processing counts as sharing after role/exception assessment"
+          }
+        ]
+      },
+      "confidence": "High on observed country aggregates; medium on specific Android flows",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/location/controller.ts",
+        "../legal-support-remediation-2026-10-16/acceptance/VERCEL-PRIVACY-CONFIG-READBACK.md",
+        "https://vercel.com/docs/analytics/privacy-policy"
+      ],
+      "closure_needed": "Do not treat optional GPS as opt-out from automatic IP-derived geography. Confirm Vercel implementation and whether any other provider infers location."
+    },
+    {
+      "id": "DS03",
+      "category": "In-app search history",
+      "flow": "Entered place text -> app server -> Nominatim",
+      "proposed_collected": "Yes",
+      "proposed_shared": "Yes; no demonstrated exception",
+      "proposed_user_control": "Optional, subject to usable GPS/default alternative validation",
+      "proposed_ephemeral": "Unverified; do not claim Yes",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": [
+        "App functionality"
+      ],
+      "confidence": "High source",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/restaurants/geocode.ts#L54-L65",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/components/location-control.tsx"
+      ],
+      "closure_needed": "Validate all-user choice and final query retention. No stored history list is necessary for this category. Do not automatically call destination text personal Address."
+    },
+    {
+      "id": "DS04",
+      "category": "App interactions",
+      "flow": "Automatic production pageviews; Mode Selected instrumentation exists",
+      "proposed_collected": "Yes",
+      "proposed_shared": "HOLD: Vercel service-provider basis plausible but not established for all processing",
+      "proposed_user_control": "Required",
+      "proposed_ephemeral": "No",
+      "proposed_collection_purposes": [
+        "Analytics"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "High on pageviews, low on custom-event intake",
+      "evidence": [
+        "../legal-support-remediation-2026-10-16/acceptance/VERCEL-PRIVACY-CONFIG-READBACK.md",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/routes/__root.tsx",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/analytics.ts"
+      ],
+      "closure_needed": "No-events/upgrade dashboard does not certify Mode Selected intake. Confirm actual payload and relevant service role."
+    },
+    {
+      "id": "DS05",
+      "category": "Device or other IDs",
+      "flow": "Vercel request-derived visitor hash; potential Grok device/security cookies",
+      "proposed_collected": "Yes proposed for analytics visitor identification",
+      "proposed_shared": "HOLD; Yes if Grok identifying cookies are sent without a qualifying exception",
+      "proposed_user_control": "Required if automatic",
+      "proposed_ephemeral": "No for visitor session; Grok retention/purpose unresolved",
+      "proposed_collection_purposes": [
+        "Analytics"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "Medium mapping; no Android cookie trace",
+      "evidence": [
+        "https://vercel.com/docs/analytics/privacy-policy",
+        "../privacy-legal-support-2026-10-16/evidence/grok-extension.headers.sanitized",
+        "../privacy-legal-support-2026-10-16/evidence/grok-extension-retry-manifest.json"
+      ],
+      "closure_needed": "Resolve hash relationship to browser/device and cookie acceptance/retransmission; do not infer cookie purpose from name. Add Security only if substantiated; do not invent Advertising purpose or AAID collection."
+    },
+    {
+      "id": "DS06",
+      "category": "Diagnostics",
+      "flow": "Request/provider outcome, duration/mirror summaries in hosting logs",
+      "proposed_collected": "Yes proposed, qualified",
+      "proposed_shared": "HOLD pending Vercel role",
+      "proposed_user_control": "Required when the relevant operation runs",
+      "proposed_ephemeral": "No for retained request logs",
+      "proposed_collection_purposes": [
+        "Analytics",
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "Medium: logs observed, category boundary requires field review",
+      "evidence": [
+        "../legal-support-remediation-2026-10-16/acceptance/VERCEL-PRIVACY-CONFIG-READBACK.md",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/discovery/provider-chain.ts",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/discovery/hedged-provider.ts"
+      ],
+      "closure_needed": "Confirm user/device-related diagnostic fields versus solely server operational records. No crash-reporting SDK or crash logs asserted."
+    },
+    {
+      "id": "DS07",
+      "category": "Web browsing history",
+      "flow": "Potential external referrer/site-visit information in analytics/resource request headers",
+      "proposed_collected": "Conditional; do not select from mere own-app page routes",
+      "proposed_shared": "HOLD; recipient and exception depend on observed flow",
+      "proposed_user_control": "Required if automatic collection exists",
+      "proposed_ephemeral": "Unverified",
+      "proposed_collection_purposes": [
+        "Analytics"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "Medium provider-doc capability; runtime unresolved",
+      "evidence": [
+        "https://vercel.com/docs/analytics/privacy-policy",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/routes/__root.tsx"
+      ],
+      "closure_needed": "Capture actual referrer behavior; own-app interactions stay DS04. Do not infer all browsing history or arbitrary browsing access."
+    },
+    {
+      "id": "DS08",
+      "category": "IP / request metadata: classify by usage",
+      "flow": "Google Fonts request; Grok extension download; Vercel hosting requests",
+      "proposed_collected": "Off-device requests established; categories depend on usage",
+      "proposed_shared": "HOLD for applicable categories/role",
+      "proposed_user_control": "Automatic",
+      "proposed_ephemeral": "Unverified",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "High on request integration, medium/low on provider usage",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/routes/__root.tsx",
+        "https://fonts.googleblog.com/2022/11/your-privacy-and-google-fonts.html",
+        "../privacy-legal-support-2026-10-16/evidence/grok-extension.js"
+      ],
+      "closure_needed": "IP is not its own form category. Do not automatically double-count it as Device IDs or Location. Provider-wide ad-cookie lists/CSP destinations do not prove actual advertising data flow."
+    },
+    {
+      "id": "DS09",
+      "category": "Local favorites, ratings, visits/notes, exclusions, preferences, legal-notice dismissal",
+      "flow": "On-device store/session storage only in reviewed paths",
+      "proposed_collected": "No for local-only records",
+      "proposed_shared": "No for local-only records",
+      "proposed_user_control": "User-controlled locally",
+      "proposed_ephemeral": "Not applicable",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "High scoped source",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/store.ts",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/legal/releases.ts"
+      ],
+      "closure_needed": "Selected location reused for server requests remains DS01/02; evaluate Android backup/transfer separately. Reset does not erase all data."
+    },
+    {
+      "id": "DS10",
+      "category": "External destination/URL handoff",
+      "flow": "User opens Maps, rideshare or venue website",
+      "proposed_collected": "Do not add user physical Location solely for public venue coordinates",
+      "proposed_shared": "Proposed exception for expected user-directed destination transfer, conditional UI/runtime validation",
+      "proposed_user_control": "Optional",
+      "proposed_ephemeral": "Not established",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "High helper source; native dispatch untested",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/location/maps.ts",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/location/ride-target.ts"
+      ],
+      "closure_needed": "Validate exact handoff, no extra automatic source GPS or identifiers; external app independent collection differs from app-controlled resource loading."
+    },
+    {
+      "id": "DS11",
+      "category": "Email address / Emails / user attachments",
+      "flow": "PR77 mailto opens external email client with operator recipient and generic subject",
+      "proposed_collected": "No solely from mailto; conditional if app actually collects/transmits user content",
+      "proposed_shared": "No additional declaration solely from this mailto; reassess integrated upload/composition",
+      "proposed_user_control": "Optional if introduced",
+      "proposed_ephemeral": "No for actual retained support mail",
+      "proposed_collection_purposes": [
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "High source boundary; actual native mail-client experience untested",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/legal/support.ts",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/legal/documents.json"
+      ],
+      "closure_needed": "User-composed external email is disclosed in policy, but not evidence that Pick For Us transmits the sender/body. No support-bot processing assumed; personally managed Gmail deletion after resolution attested."
+    },
+    {
+      "id": "DS12",
+      "category": "Name / Email / User IDs from accounts",
+      "flow": "Dormant auth/OAuth/database scaffolding; no visible account creation",
+      "proposed_collected": "No affirmative selection on dormant code alone; conditional if reachable account flow exists",
+      "proposed_shared": "Conditional by actual provider flow",
+      "proposed_user_control": "Conditional",
+      "proposed_ephemeral": "Not established",
+      "proposed_collection_purposes": [
+        "Account management",
+        "App functionality"
+      ],
+      "proposed_sharing_purposes": "Resolve only if sharing applies",
+      "confidence": "Medium reachability-negative evidence",
+      "evidence": [
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/auth/server.ts",
+        "https://github.com/caleb1234calvin-art/dinner-roulette/blob/6b370a5202ffb531434d725f49aacbdc325f32c5/src/lib/auth/provider.tsx",
+        "../privacy-legal-support-2026-10-16/evidence/session.headers",
+        "../privacy-legal-support-2026-10-16/evidence/auth-ok.headers"
+      ],
+      "closure_needed": "Check deployed configuration and routes without creating accounts. Do not assert no historical records."
+    }
+  ]
+}
