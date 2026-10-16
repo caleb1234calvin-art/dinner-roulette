@@ -1,0 +1,648 @@
+{
+  "source_revision": "4010edf31e71a7350d891a98dd43f20535602abd",
+  "archive": {
+    "sha256": "970159ec45aeaf0aae9dcb4ed2967e1a60814b9d7aa7d7b08fb0f12fdd22c1fd",
+    "bytes": 6865787,
+    "entry_count": 8,
+    "crc_ok": true,
+    "unique_paths": true,
+    "safe_paths": true
+  },
+  "binaries": {
+    "PickForUs-unsigned.aab": {
+      "sha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+      "bytes": 3103485,
+      "entry_count": 430,
+      "crc_ok": true,
+      "unique_paths": true,
+      "safe_paths": true,
+      "config": {
+        "appId": "app.pickforus.android",
+        "appName": "Pick For Us",
+        "webDir": "native-web",
+        "server": {
+          "url": "https://dinner-roulette-chi.vercel.app",
+          "cleartext": false,
+          "errorPath": "index.html"
+        },
+        "android": {
+          "allowMixedContent": false,
+          "webContentsDebuggingEnabled": false
+        },
+        "plugins": {
+          "SystemBars": {
+            "insetsHandling": "native"
+          }
+        }
+      },
+      "manifest": {
+        "tag": "manifest",
+        "attrs": {
+          "package": "app.pickforus.android",
+          "{http://schemas.android.com/apk/res/android}versionCode": "1",
+          "{http://schemas.android.com/apk/res/android}versionName": "1.0.0",
+          "{http://schemas.android.com/apk/res/android}compileSdkVersion": "36",
+          "platformBuildVersionCode": "36",
+          "{http://schemas.android.com/apk/res/android}compileSdkVersionCodename": "16",
+          "platformBuildVersionName": "16"
+        },
+        "children": [
+          {
+            "tag": "uses-sdk",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}minSdkVersion": "24",
+              "{http://schemas.android.com/apk/res/android}targetSdkVersion": "36"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.INTERNET"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.ACCESS_COARSE_LOCATION"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.ACCESS_FINE_LOCATION"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-feature",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.hardware.location",
+              "{http://schemas.android.com/apk/res/android}required": "false"
+            },
+            "children": []
+          },
+          {
+            "tag": "permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+              "{http://schemas.android.com/apk/res/android}protectionLevel": "0x00000002"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            },
+            "children": []
+          },
+          {
+            "tag": "application",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}allowBackup": "false",
+              "{http://schemas.android.com/apk/res/android}appComponentFactory": "androidx.core.app.CoreComponentFactory",
+              "{http://schemas.android.com/apk/res/android}extractNativeLibs": "false",
+              "{http://schemas.android.com/apk/res/android}icon": "@mipmap/ic_launcher",
+              "{http://schemas.android.com/apk/res/android}label": "@string/app_name",
+              "{http://schemas.android.com/apk/res/android}roundIcon": "@mipmap/ic_launcher_round",
+              "{http://schemas.android.com/apk/res/android}supportsRtl": "true",
+              "{http://schemas.android.com/apk/res/android}theme": "@style/AppTheme",
+              "{http://schemas.android.com/apk/res/android}usesCleartextTraffic": "false"
+            },
+            "children": [
+              {
+                "tag": "activity",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}configChanges": "0x00001ff4",
+                  "{http://schemas.android.com/apk/res/android}exported": "true",
+                  "{http://schemas.android.com/apk/res/android}label": "@string/title_activity_main",
+                  "{http://schemas.android.com/apk/res/android}launchMode": "2",
+                  "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.MainActivity",
+                  "{http://schemas.android.com/apk/res/android}theme": "@style/AppTheme.NoActionBarLaunch"
+                },
+                "children": [
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "android.intent.action.MAIN"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "category",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "android.intent.category.LAUNCHER"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "provider",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}authorities": "app.pickforus.android.fileprovider",
+                  "{http://schemas.android.com/apk/res/android}exported": "false",
+                  "{http://schemas.android.com/apk/res/android}grantUriPermissions": "true",
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.core.content.FileProvider"
+                },
+                "children": [
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "android.support.FILE_PROVIDER_PATHS",
+                      "{http://schemas.android.com/apk/res/android}resource": "@xml/file_paths"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "provider",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}authorities": "app.pickforus.android.androidx-startup",
+                  "{http://schemas.android.com/apk/res/android}exported": "false",
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.startup.InitializationProvider"
+                },
+                "children": [
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.emoji2.text.EmojiCompatInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.lifecycle.ProcessLifecycleInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.ProfileInstallerInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "receiver",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}directBootAware": "false",
+                  "{http://schemas.android.com/apk/res/android}enabled": "true",
+                  "{http://schemas.android.com/apk/res/android}exported": "true",
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.ProfileInstallReceiver",
+                  "{http://schemas.android.com/apk/res/android}permission": "android.permission.DUMP"
+                },
+                "children": [
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.INSTALL_PROFILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.SKIP_FILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.SAVE_PROFILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "dex_files": [
+        "base/dex/classes.dex"
+      ],
+      "defined_classes": 5278,
+      "main_activity": "app.pickforus.android.MainActivity",
+      "legacy_class_definitions": [],
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "native_libraries": [],
+      "signature_files": [],
+      "launcher_images": [
+        "base/res/mipmap-mdpi-v4/ic_launcher.png",
+        "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-hdpi-v4/ic_launcher.png",
+        "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+      ],
+      "adaptive_icons": [
+        "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+      ],
+      "identity_resource_protobuf_hex": {
+        "app_name": "0a02081c12086170705f6e616d651a0032150a001211220f120d0a0b5069636b20466f72205573",
+        "custom_url_scheme": "0a0208241211637573746f6d5f75726c5f736368656d651a00321f0a00121b221912170a156170702e7069636b666f7275732e616e64726f6964",
+        "package_name": "0a020826120c7061636b6167655f6e616d651a00321f0a00121b221912170a156170702e7069636b666f7275732e616e64726f6964",
+        "title_activity_main": "0a02082912137469746c655f61637469766974795f6d61696e1a0032150a001211220f120d0a0b5069636b20466f72205573"
+      }
+    },
+    "PickForUs-debug.apk": {
+      "sha256": "7953b424b7224649bb4128b05dca83f91a19ced1542621c8ed2587a6893c491f",
+      "bytes": 4174814,
+      "entry_count": 427,
+      "crc_ok": true,
+      "unique_paths": true,
+      "safe_paths": true,
+      "config": {
+        "appId": "app.pickforus.android",
+        "appName": "Pick For Us",
+        "webDir": "native-web",
+        "server": {
+          "url": "https://dinner-roulette-chi.vercel.app",
+          "cleartext": false,
+          "errorPath": "index.html"
+        },
+        "android": {
+          "allowMixedContent": false,
+          "webContentsDebuggingEnabled": false
+        },
+        "plugins": {
+          "SystemBars": {
+            "insetsHandling": "native"
+          }
+        }
+      },
+      "manifest": {
+        "tag": "manifest",
+        "attrs": {
+          "{http://schemas.android.com/apk/res/android}versionCode": "1",
+          "{http://schemas.android.com/apk/res/android}versionName": "1.0.0",
+          "{http://schemas.android.com/apk/res/android}compileSdkVersion": "36",
+          "{http://schemas.android.com/apk/res/android}compileSdkVersionCodename": "16",
+          "package": "app.pickforus.android",
+          "platformBuildVersionCode": "36",
+          "platformBuildVersionName": "16"
+        },
+        "children": [
+          {
+            "tag": "uses-sdk",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}minSdkVersion": "24",
+              "{http://schemas.android.com/apk/res/android}targetSdkVersion": "36"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.INTERNET"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.ACCESS_COARSE_LOCATION"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.permission.ACCESS_FINE_LOCATION"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-feature",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "android.hardware.location",
+              "{http://schemas.android.com/apk/res/android}required": "false"
+            },
+            "children": []
+          },
+          {
+            "tag": "permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+              "{http://schemas.android.com/apk/res/android}protectionLevel": "0x00000002"
+            },
+            "children": []
+          },
+          {
+            "tag": "uses-permission",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            },
+            "children": []
+          },
+          {
+            "tag": "application",
+            "attrs": {
+              "{http://schemas.android.com/apk/res/android}theme": "@0x7f0e0005",
+              "{http://schemas.android.com/apk/res/android}label": "@0x7f0d001c",
+              "{http://schemas.android.com/apk/res/android}icon": "@0x7f0c0000",
+              "{http://schemas.android.com/apk/res/android}debuggable": "true",
+              "{http://schemas.android.com/apk/res/android}allowBackup": "false",
+              "{http://schemas.android.com/apk/res/android}supportsRtl": "true",
+              "{http://schemas.android.com/apk/res/android}extractNativeLibs": "false",
+              "{http://schemas.android.com/apk/res/android}usesCleartextTraffic": "false",
+              "{http://schemas.android.com/apk/res/android}roundIcon": "@0x7f0c0002",
+              "{http://schemas.android.com/apk/res/android}appComponentFactory": "androidx.core.app.CoreComponentFactory"
+            },
+            "children": [
+              {
+                "tag": "activity",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}theme": "@0x7f0e0007",
+                  "{http://schemas.android.com/apk/res/android}label": "@0x7f0d0029",
+                  "{http://schemas.android.com/apk/res/android}name": "app.pickforus.android.MainActivity",
+                  "{http://schemas.android.com/apk/res/android}exported": "true",
+                  "{http://schemas.android.com/apk/res/android}launchMode": "2",
+                  "{http://schemas.android.com/apk/res/android}configChanges": "0x00001ff4"
+                },
+                "children": [
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "android.intent.action.MAIN"
+                        },
+                        "children": []
+                      },
+                      {
+                        "tag": "category",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "android.intent.category.LAUNCHER"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "provider",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.core.content.FileProvider",
+                  "{http://schemas.android.com/apk/res/android}exported": "false",
+                  "{http://schemas.android.com/apk/res/android}authorities": "app.pickforus.android.fileprovider",
+                  "{http://schemas.android.com/apk/res/android}grantUriPermissions": "true"
+                },
+                "children": [
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "android.support.FILE_PROVIDER_PATHS",
+                      "{http://schemas.android.com/apk/res/android}resource": "@0x7f100001"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "provider",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.startup.InitializationProvider",
+                  "{http://schemas.android.com/apk/res/android}exported": "false",
+                  "{http://schemas.android.com/apk/res/android}authorities": "app.pickforus.android.androidx-startup"
+                },
+                "children": [
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.emoji2.text.EmojiCompatInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.lifecycle.ProcessLifecycleInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  },
+                  {
+                    "tag": "meta-data",
+                    "attrs": {
+                      "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.ProfileInstallerInitializer",
+                      "{http://schemas.android.com/apk/res/android}value": "androidx.startup"
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "receiver",
+                "attrs": {
+                  "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.ProfileInstallReceiver",
+                  "{http://schemas.android.com/apk/res/android}permission": "android.permission.DUMP",
+                  "{http://schemas.android.com/apk/res/android}enabled": "true",
+                  "{http://schemas.android.com/apk/res/android}exported": "true",
+                  "{http://schemas.android.com/apk/res/android}directBootAware": "false"
+                },
+                "children": [
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.INSTALL_PROFILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.SKIP_FILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.SAVE_PROFILE"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "intent-filter",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "tag": "action",
+                        "attrs": {
+                          "{http://schemas.android.com/apk/res/android}name": "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "dex_files": [
+        "classes.dex",
+        "classes2.dex",
+        "classes3.dex",
+        "classes4.dex",
+        "classes5.dex",
+        "classes6.dex"
+      ],
+      "defined_classes": 5288,
+      "main_activity": "app.pickforus.android.MainActivity",
+      "legacy_class_definitions": [],
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "native_libraries": [],
+      "apk_signing_block_present": true,
+      "signature_crypto_verified": false
+    }
+  },
+  "signing_guard_log_sha256": "00da0c757c3dc2519a92b4f04e977056068a9f98c4be3ab1e3b4986bab11f364",
+  "report": {
+    "artifact": "app-release.aab",
+    "sha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+    "bytes": 3103485,
+    "package": "app.pickforus.android",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "dexFiles": [
+      "base/dex/classes.dex"
+    ],
+    "mainActivity": "app.pickforus.android.MainActivity",
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED"
+  }
+}

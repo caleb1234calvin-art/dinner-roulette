@@ -1,3 +1,36 @@
+# PR #78 native artifact acceptance — 2026-10-16 18:56 UTC
+
+## CURRENT
+
+Exact candidate remains SHA4010edf31e71a7350d891a98dd43f20535602abd, tree f521ed3dbdabceeb924ad4da1ce88e42db41092c, sole parent c3208d9fdc9a21d698efa9254be1286f5d3d2836, branch integration/android-brand-identity-2026-10-16. Independent source and fresh compiled Android acceptance: PASS WITH QUALIFICATIONS.
+
+Android workflow 38949185071 completed SUCCESS; validation job117135940449 all21steps successful; protected signing job117137803080 skipped as intended. Source-revision and synthetic merge65b03d5d2437db15cd8762d00386fdf27498d842 bind the original artifacts to the exact reviewed candidate tree. Separate web workflow38949185059 is still running; completed jobs are green but overall web acceptance is PENDING.
+
+Independent original-archive validation:
+- Validation artifact12068290260: 6,865,787 bytes, SHA256970159ec45aeaf0aae9dcb4ed2967e1a60814b9d7aa7d7b08fb0f12fdd22c1fd.
+- Lint artifact12067766119: 24,051 bytes, SHA25653ec85f2ebef7189ca049484d37e80050308423a989ea5649883200368677d23.
+- Unsigned AAB: 3,103,485 bytes, SHA256ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a.
+- Debug APK: 4,174,814 bytes, SHA2567953b424b7224649bb4128b05dca83f91a19ced1542621c8ed2587a6893c491f.
+
+Raw manifest/DEX/config/resources/provider/permission inspection confirms app.pickforus.android in both binaries and no former namespace class definitions. AAB non-debuggable/unsigned, APK debuggable with signing block present but cryptographic signature not independently verified. Both retain remote HTTPS chi origin, not candidate web snapshots. Original archives/binaries have clean CRCs and safe unique paths; detailed reports are preserved alongside this checkpoint.
+
+Qualifications: 14 Android lint warnings/no errors; 37 Gradle NO-SOURCE tasks including all three native release unit-test tasks, therefore no native unit tests executed. Two lintVital tasks skipped; full lintRelease passed. Gradle233actionabletasks executed; missing-production-key release guard rejection verified before explicit unsigned validation build. No production signing or certificate entitlement established. Local/source tests remain1254repository+71application+17Python PASS, four inherited skips; web lint0errors/6warnings.
+
+PR #77 freshly confirmed unchanged/draft/unmerged by independent reviewer at6b370a5202ffb531434d725f49aacbdc325f32c5, tree520f545ec006041ef5694a138cfb65f7a897011c. Prepared legal policies remain unreleased/null. This gate did not change source or production.
+
+## NEXT
+
+Wait for terminal exact-head web38949185059 and collect actual evidence. Publish final combined technical disposition with clear independent-artifact scope and remaining device/distribution requirements. Do not rerun settled exact-input native work without a concrete defect or mutation.
+
+## HOLD
+
+Overall web CI remains PENDING. Physical/emulated installation, coexistence/old-data preservation, same-target updates, cold launch, native WebView/GPS/permissions/offline and external-link journeys remain unverified. Backup=false alone does not prove every Android12+ device-to-device transfer outcome.
+
+Console registration/eligibility, signing/certificates, Data safety, listing/content/geography/export and legal effective publication remain separate gates. No merge/deployment, package registration/app creation, upload, production signing credentials, Console declarations or agreement acceptance authorized. Previously recorded production baseline and rollback qualifications remain unchanged, not freshly re-inspected at this native gate.
+
+
+---
+
 # PR #78 Android brand identity — candidate freeze 2026-10-16 18:41 UTC
 
 ## CURRENT
