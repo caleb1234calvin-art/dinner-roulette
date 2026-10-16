@@ -1,3 +1,28 @@
+# PR78 owner phone observations — reconciliation 2026-10-16 22:30 UTC
+
+## CURRENT
+
+Owner-reported partial physical testing is recovered from original owner messages in the separate Advisor8 conversation, independently interpreted in the attached reconciliation receipt. These observations supersede blanket NOT RUN only for the specific reported steps; the original preparation ledger is retained unchanged.
+
+Uploaded APK independently matches exact PR78 debug bytes:4,174,814bytes SHA2567953b424b7224649bb4128b05dca83f91a19ced1542621c8ed2587a6893c491f, source4010edf31e71a7350d891a98dd43f20535602abd/tree f521ed3dbdabceeb924ad4da1ce88e42db41092c. Uploaded-file identity does NOT establish the installed phone package/hash/certificate. Phone model, Android/WebView and installed identity remain UNKNOWN.
+
+OWNER-REPORTED PARTIAL: installation/online launch, separate new state, old app still present with different theme, favorite/preference persistence after reopening, manual location/GPS allowance, Maps destination/origin and external return without lost progress. Generic DoorDash/rideshare screens are not destination-specific routing PASS. Denied/revoked and approximate-versus-precise permission cases remain unestablished.
+
+OWNER-REPORTED ISSUE / HOLD: offline cold launch stays black with no UI. Warm cached interaction partly worked while images failed. Owner reported clearing cache/data did not fix the problem and restarting the phone helped. This was a reported action, not our remediation instruction; affected app/data and post-clear old-data preservation remain unknown. Chrome loading after reconnection does not prove native recovery. ChatGPT also had trouble, but no common root cause or network/WebView/device attribution is established.
+
+Evidence: device/OWNER-PHONE-RECONCILIATION-2026-10-16.md and date-stamped OBSERVATION-LEDGER-2026-10-16-2229.csv. The initial OBSERVATION-LEDGER.csv remains historical NOT RUN preparation evidence. Original-message links and relevant observations are preserved; no full private conversation or uploaded APK is republished here.
+
+## NEXT
+
+Resolve installed package/model/OS/WebView and runtime binding before broad physical acceptance. Preserve the reported offline cold-launch/recovery issue for bounded diagnosis under explicit authority. Collect actual non-destructive observations; do not repeat data clearing/reinstall or attribute causality without evidence.
+
+## HOLD
+
+Overall physical acceptance remains HOLD. Post-clear data preservation unknown. Tablet SM-T220 remains deferred/NOT RUN. Rotation/accessibility, denied/revoked permissions, exact location modes, same-target update, comprehensive discovery and reboot persistence lack supported results. PR77 legal/support remains unpublished/NOT RUN. No source correction, production change or device operation was authorized or performed in this read-only reconciliation. All release/registration/signing/Play/effective-date boundaries remain intact; prior technical PASS is not physical PASS.
+
+
+---
+
 # PR78 controlled physical testing preparation — 2026-10-16 19:47 UTC
 
 ## CURRENT
