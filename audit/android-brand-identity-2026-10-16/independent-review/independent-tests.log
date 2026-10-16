@@ -1,0 +1,29 @@
+{
+  "appId": "app.pickforus.android",
+  "appName": "Pick For Us",
+  "versionCode": 1,
+  "versionName": "1.0.0",
+  "minSdk": 24,
+  "targetSdk": 36,
+  "compileSdk": 36,
+  "capacitor": "8.5.2"
+}
+✔ persistent Android identity, SDK, lockfile and approved artwork agree (12.150622ms)
+✔ native audit rejects package drift, insecure content and exposed WebView debugging (3.427266ms)
+✔ Android version parser accepts future releases and rejects invalid Play codes (0.558258ms)
+✔ Android workflow is artifact-only and does not regenerate the project or migrate (0.282955ms)
+✔ Settings does not advertise an Android artifact that has not been published (0.182118ms)
+✔ source identity audit rejects isolated package, path, resources and manifest drift (3.336836ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 138.512402
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.005s
+
+OK

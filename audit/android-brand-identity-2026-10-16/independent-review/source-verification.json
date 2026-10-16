@@ -1,0 +1,39 @@
+{
+  "base": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "stagedTree": "f521ed3dbdabceeb924ad4da1ce88e42db41092c",
+  "unchangedFiles": {
+    "android/version.properties": true,
+    "android/signing.gradle": true,
+    ".github/workflows/android-apk.yml": true,
+    "android/variables.gradle": true,
+    "android/app/src/main/AndroidManifest.xml": true,
+    "package.json": true,
+    "package-lock.json": true,
+    "native-web/index.html": true
+  },
+  "generatedCapacitorMatchesSource": true,
+  "generatedFallbackMatchesSource": true,
+  "previousArtifactParserSmokeOnly": {
+    "classes": 5278,
+    "expectedOldArtifactRejection": "MainActivity must be defined in the base module",
+    "notNewCandidateEvidence": true
+  },
+  "logSHA256": {
+    "auth-live-dev.log": "1817b6c1931cd9d4469cc740c9b4c98f43e49f596547fac3331a168046b75db3",
+    "sync.log": "b4b5b3ce2b43bfdd63fc92a9951078f93810ad03d9729d6a3051e0d3f56df58f",
+    "check-auth.log": "1817b6c1931cd9d4469cc740c9b4c98f43e49f596547fac3331a168046b75db3",
+    "test-after-build.log": "ecca64b76883a390bd827c93595a94a4d86a944be25ce8155828377d10b1c14d",
+    "dev-auth-loopback.log": "95f724b880f2fbf5fe8b5466c6f4dbc763eec0ec22b960f8162a229626740279",
+    "python-tests.log": "ecb2481fe4fc37e099494fd2eac56322269cfb68a6d7b32b8bde0a57efe94e8a",
+    "auth-live-dev-loopback.log": "0d259d86577572d82c9194002677021c465843f097d77ce4a69678f2fca66a97",
+    "lint.log": "6f8eef3cb10d2085edf1f30dd2e08884e398059073baebfe7911731813d03dfa",
+    "changed-lint.log": "7125f194612fcff2f454c05d848e7cb71facc1967b4d5017e25b34fdee3ba74f",
+    "android-check.log": "4cb72c80a2c772e0b64f141e3e1f25488f1d7958ad359d412c937910abf04a28",
+    "typecheck.log": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c",
+    "dev-auth.log": "a6c9e84743a16674bba4c26dd9c9363d17a85602326ea70654fed1aa5997e12d",
+    "test.log": "47fb4902f6f9230152a3e9746841384e5bbe686e2ebd03700e858b9494b197ed",
+    "web-build.log": "6c8178847cb190b91bc27eeab8338bec9d3689857c135078b1855140ebfbc2e5",
+    "audit-casinos.log": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1",
+    "auth-after-build.log": "1817b6c1931cd9d4469cc740c9b4c98f43e49f596547fac3331a168046b75db3"
+  }
+}

@@ -1,3 +1,39 @@
+# PR #78 Android brand identity — candidate freeze 2026-10-16 18:41 UTC
+
+## CURRENT
+
+Owner approval Sentinel_619ffee1c6808191822578a422f1f45c at 18:33:55 UTC selects app.pickforus.android as the intended permanent identity and authorizes isolated implementation/tests/independent validation/documentation only. It does not register or reserve the package.
+
+Draft PR #78: https://github.com/caleb1234calvin-art/dinner-roulette/pull/78
+Branch: integration/android-brand-identity-2026-10-16
+SHA: 4010edf31e71a7350d891a98dd43f20535602abd
+Tree: f521ed3dbdabceeb924ad4da1ce88e42db41092c
+Sole parent: c3208d9fdc9a21d698efa9254be1286f5d3d2836
+GitHub commit/tree/parent independently read back for this checkpoint. Scope: ten changed logical paths, including MainActivity Java rename, 460 additions/20 deletions as reported at freeze. Fresh main-based candidate, not a merge of PR #77.
+
+Local PASS: 1,254 repository tests with four inherited skips, 71 application tests, 17 Python compiled-manifest/DEX regression tests, typecheck, lint zero errors/six inherited warnings, migration-free authenticated production build, native sync, auth invariant, Android/icon checks and casino audit. Independent source review PASS against exact staged tree f521ed3; six independent Node Android regressions and 17 Python tests passed. Initial pre-build/auth failures remain preserved in source review and hashed logs.
+
+Source package identity is consistently app.pickforus.android across Capacitor, Gradle, Java path/package and resources. Runtime origin remains https://dinner-roulette-chi.vercel.app. Labels, version 1/1.0.0, SDK configuration, signing guard, workflows, dependencies, fallback assets and web behavior remain unchanged. Identity verifiers now cover compiled manifest, providers, permissions and actual DEX class definitions. Old package receipts are historical evidence only.
+
+Hosted exact-head CI and fresh native compiled-artifact acceptance are PENDING. Do not describe this as full implementation/release PASS or inherit native artifact PASS across package identity changes.
+
+PR #77 remains preserved at 6b370a5202ffb531434d725f49aacbdc325f32c5 / tree520f545ec006041ef5694a138cfb65f7a897011c; prepared owner-approved legal1.0 remains unreleased/null. Production baseline remains last verified main c3208d9fdc9a21d698efa9254be1286f5d3d2836, tree c36112156cd11baefb6671194f0d59b9c181c2a3, deployment dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY, 92 identities. No production mutation is authorized.
+
+## NEXT
+
+Wait for exact-head hosted checks. Independently inspect original native artifacts and logs against committed SHA/tree: manifest, DEX, resources/config, package/provider authorities, permissions, signer absence, byte hashes and archive integrity. Distinguish native test tasks marked NO-SOURCE from actually executed tests. Preserve failures and rerun only justified exact-head gates after any correction. Publish final acceptance checkpoint with actual PASS/HOLD evidence.
+
+## HOLD
+
+Physical/emulated installation, coexistence with the prior package, old-data preservation, same-target update, cold launch, WebView/GPS/permissions/offline/external-link acceptance remain untested. New ID is a separate installation/sandbox; no automatic existing-data transfer or in-place old-package update is promised. Backup=false does not establish all Android device-to-device transfer behavior.
+
+Global registration eligibility, complete prior history, overall developer verification, app-specific Console/testing/signing requirements and final Data safety/listing/geography/export decisions remain open. Current authenticated Personal account and empty visible inventory are verified only within the prior observation window. No app creation, package registration, production signing credentials, upload, merge, deployment, Play declarations or agreement acceptance is authorized.
+
+Actual legal publication date/status finalization and exact-successor revalidation require separate decisions. PR #75 remains separate; Halloween and PR #61 remain parked. “Radial discovery becomes an audit layer.” remains future intent.
+
+
+---
+
 # Authenticated Play Console checkpoint — 2026-10-16 18:30 UTC
 
 ## CURRENT
