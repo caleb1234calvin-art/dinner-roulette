@@ -1,3 +1,28 @@
+# PR78 controlled physical testing preparation — 2026-10-16 19:47 UTC
+
+## CURRENT
+
+Owner authorized controlled physical testing at19:43 for exact PR78 SHA4010edf31e71a7350d891a98dd43f20535602abd / treef521ed3dbdabceeb924ad4da1ce88e42db41092c using the already built debug APK. Phone testing only when safely operable; SM-T220 unavailable at work and deferred. All physical observations remain NOT RUN. No device installation, settings or permission changes have been performed by the assistant.
+
+Independent extraction/reverification confirms exact original debug APK4,174,814bytes SHA2567953b424b7224649bb4128b05dca83f91a19ced1542621c8ed2587a6893c491f, from artifact12068290260/run38949185071. Packageapp.pickforus.android, version1/1.0.0. New independent APK Signature Scheme v2 RSA-SHA256 signature and complete content-digest verification PASS; public debug certificate SHA256f4ca7e7367cb8dd20543c04748b9eea9a8a16050ddd44153cee841b8fea8cea3. This supplements earlier signature-block-only inspection; it is not apksigner execution, on-device installation or a production signing certificate.
+
+Root delivered this exact APK through Library at19:46, owner messageSentinel_97361b709ee08191b5b5cb2b2b2da222. No rebuild/new signing/credential creation occurred. Root requested phone model and Android version, instructed preservation of old app/data and stopping on update/replacement or permission/security prompts without disabling Play Protect/Auto Blocker.
+
+Concise checklist and32-row observation ledger are prepared under audit/android-brand-identity-2026-10-16/device/. Every phone/tablet row starts NOT RUN. Observe alongside installation, olddata preservation, denied/approximate/precise location, restart/persistence, existing external/support flows, offline recovery and accessibility/orientation. Record actual owner observations separately from assistant-witnessed results. Do not infer device PASS from automated tests or APK cryptographic verification.
+
+## NEXT
+
+Wait for owner phone/model/OS and safely performed observations. Evaluate each actual result, preserve redacted evidence and record PASS/FAIL/BLOCKED/NOT RUN accurately. Stop on identity conflicts, unexpected replacement, security prompts, crash or data-loss concerns; do not repair by clearing/uninstalling. Test tablet later when available.
+
+## HOLD
+
+PR77 legal/support/history/material-notice features are unpublished and NOT RUN in this APK/current-production lane. The shell loads current chi production, not PR77 branch content. Same-target update remains NOT RUN without an approved successor artifact; future debug-run signer continuity cannot be assumed. Final Play installation/signing/distribution remain NOT RUN.
+
+Production and source candidates are unchanged; all technical acceptance and existing warnings/limitations remain preserved below. No registration, upload, production signing, merge/deployment, legal effective date, Console declaration or agreement acceptance is authorized by this physical-test preparation.
+
+
+---
+
 # PR #78 final technical acceptance — 2026-10-16 19:34 UTC
 
 ## CURRENT
