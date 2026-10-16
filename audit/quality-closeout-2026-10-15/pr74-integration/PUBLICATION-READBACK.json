@@ -1,0 +1,77 @@
+{
+  "continuityCommit": "448abcfcea52b4cf89df42503957886701cbc8af",
+  "verifiedFiles": [
+    {
+      "path": "AI_CONTINUITY.md",
+      "bytes": 1227708,
+      "sha256": "dd491ff5163262c28ab93d6d487d6387023b1904324b7b4d91909bcd523b697e"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/OWNER-DECISION.md",
+      "bytes": 9742,
+      "sha256": "e9c91fdb3de0e5cb361cda869bc9d7a39b1774c305e7aebfdf2e96d076fcdef0"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/FINAL-ACCEPTANCE.json",
+      "bytes": 2258,
+      "sha256": "d196fcf6fccadb5a37f93cf0783cc2278599bf2834771b90fde3f31a391b6940"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/FINAL-PRODUCTION-BASELINE.json",
+      "bytes": 2103,
+      "sha256": "3931210da0b00d010eedbb7dbcb2af41901330439f66aff86ce242f13ab94eea"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/FINAL-HOSTED-WORKFLOWS.json",
+      "bytes": 4436,
+      "sha256": "ab5645fe829668313168b2039ff24739c9ed873b4b52aa8c26e23017f04bccb6"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/PR74-INTEGRATION-INDEPENDENT-REVIEW.md",
+      "bytes": 19089,
+      "sha256": "df4ffec1c220a38c2084114d612423146d3b9fd3e71ac25b9ac5adc9d1e8bd16"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/PR74-NEW-HEAD-HOSTED-REVIEW.md",
+      "bytes": 10839,
+      "sha256": "76164b7b51d3b81309c2b1b31c2710acf5e48800b818c184265b71a980e8e81c"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/NEW-ORIGINAL-PRESERVATION.json",
+      "bytes": 23656,
+      "sha256": "41f7e7729f51124272afadfe880636364292f191b85fac3a63981f14d758b033"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/PACKAGE-RECEIPT.json",
+      "bytes": 355,
+      "sha256": "86bdd61975b2515a80bd9822b1d2eb30804ae8eadd2b7cad6b14e800e3463139"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/CENTRAL-LIBRARY-RECEIPT.json",
+      "bytes": 690,
+      "sha256": "7e4bc308b866d8a0d5a554a483e72dc8491bf7e5b27a3e2376e2b107687f9ccd"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/RELEASE_CONTINUITY.proposed.md",
+      "bytes": 50989,
+      "sha256": "8c7808cd27c2a48d05ec37f7e16dd69d60dafa6fecb09da728d9a92927367af2"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/RELEASE_CONTINUITY.apply.patch",
+      "bytes": 30635,
+      "sha256": "5a5efefa413e47f27fdde66874db75d4d5269eb5f21e815e76cfd8f5be487697"
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/pr74-integration/CONTINUITY-INTEGRITY.final.json",
+      "bytes": 765,
+      "sha256": "dd3321eed1a34becf281b006917c25419c3514518c41ef2a0a95e17ce4fd13f3"
+    }
+  ],
+  "priorAiSuffixUnchanged": true,
+  "remoteReleasePublication": "HOLD; complete proposal and patch published on integration continuity branch",
+  "refs": {
+    "main": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "integration/kc-curated-radius-2026-10-15": "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158",
+    "continuity/release": "705cc715a85535542b76c494f258b57f0874f324"
+  }
+}
