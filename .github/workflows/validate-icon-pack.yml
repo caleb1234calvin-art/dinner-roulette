@@ -124,6 +124,7 @@ jobs:
           - seasonal-ranked-holds
           - seasonal-regional-wave1
           - geometry
+          - legal-support
 
     steps:
       - name: Check out repository
@@ -154,6 +155,13 @@ jobs:
 
       - name: Install Chromium for disposable local browser validation
         run: npx playwright install --with-deps chromium
+
+      - name: Verify Legal and Support routes, keyboard behavior and narrow layouts
+        if: matrix.suite == 'legal-support'
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+        run: node scripts/legal-support-browser.mjs
 
       - name: Exercise casino experience in local Chromium
         if: matrix.suite == 'casino'

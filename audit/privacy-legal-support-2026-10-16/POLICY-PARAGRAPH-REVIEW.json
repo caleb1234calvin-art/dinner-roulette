@@ -1,0 +1,522 @@
+{
+  "reviewedAtUtc": "2026-10-16T04:44:18.356966+00:00",
+  "reviewer": "independent review_legal_policy_claims",
+  "baselineCommit": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "auditCommit": "bb3f1436b0b21e03588ad4f2a2a3ff3e02f4bf31",
+  "status": "QUALIFIED PASS for reviewed draft text/source only; final candidate binding pending",
+  "inputs": [
+    {
+      "path": "privacy-legal-support-2026-10-16/legal-documents.json",
+      "bytes": 17873,
+      "sha256": "92d84c992a49c8152c89600000347efa7558f246e99aebee76028dc62447d024"
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/PRIVACY-DRAFT.md",
+      "bytes": 10822,
+      "sha256": "021bd1ee4cdce77d1b6e7dced26df2084ab0334a7fb25b82672cc191f00df8d0"
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/TERMS-DRAFT.md",
+      "bytes": 3759,
+      "sha256": "00e34d97f517bbf1e523318203346fa37271d2c98daaa6c832b1b0848f15febb"
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/PARAGRAPH-EVIDENCE-MAP.md",
+      "bytes": 7303,
+      "sha256": "0ba11d5da38b4a0187f69a1f50e5772586d7ccbb969bcf62168656f79624b758"
+    },
+    {
+      "path": "legal-support-candidate/src/components/settings-page.tsx",
+      "bytes": 9992,
+      "sha256": "9f5994ebf74297797df6ee5432f8394df6b6be2c9a6ebd9e806ccb722ae26436"
+    },
+    {
+      "path": "legal-support-candidate/src/components/legal-document-page.tsx",
+      "bytes": 2888,
+      "sha256": "b747c277d21552a0421a7244f9e6ddb443f9481f3732c54ec5bdb4adda9fbce8"
+    },
+    {
+      "path": "legal-support-candidate/src/components/startup-ident.tsx",
+      "bytes": 1459,
+      "sha256": "ea5191e21d1f1fa0e0559c38837ee072e6b7cd64a7a0011479b1cfef95e64502"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/legal/support.ts",
+      "bytes": 165,
+      "sha256": "99f01af3b316146116ed4c1b1fe281d4e808cae4a74c9314c666a77901867f53"
+    },
+    {
+      "path": "legal-support-candidate/src/routes/privacy.tsx",
+      "bytes": 318,
+      "sha256": "4b17c286a8e446aba85decd7204e19a100206a7f0270d61f1599b9e9d483e35b"
+    },
+    {
+      "path": "legal-support-candidate/src/routes/terms.tsx",
+      "bytes": 318,
+      "sha256": "8fa5f1b5ec7e94e1770245b917ec642d0d8b222d779aea154ea58e2c947b987b"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/store.ts",
+      "bytes": 10594,
+      "sha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/session-hints.ts",
+      "bytes": 602,
+      "sha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/location/maps.ts",
+      "bytes": 1182,
+      "sha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/email-password.ts",
+      "bytes": 442,
+      "sha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/provider.tsx",
+      "bytes": 593,
+      "sha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/server.ts",
+      "bytes": 12548,
+      "sha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/restaurants/geocode.ts",
+      "bytes": 3720,
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/restaurants/overpass.ts",
+      "bytes": 3359,
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c"
+    },
+    {
+      "path": "legal-support-candidate/src/routes/__root.tsx",
+      "bytes": 3020,
+      "sha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/analytics.ts",
+      "bytes": 416,
+      "sha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2"
+    },
+    {
+      "path": "legal-support-candidate/src/components/mode-home.tsx",
+      "bytes": 8025,
+      "sha256": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/discovery/provider-chain.ts",
+      "bytes": 4091,
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf"
+    },
+    {
+      "path": "legal-support-candidate/src/lib/discovery/hedged-provider.ts",
+      "bytes": 8398,
+      "sha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6"
+    },
+    {
+      "path": "legal-support-candidate/capacitor.config.json",
+      "bytes": 395,
+      "sha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78"
+    }
+  ],
+  "paragraphs": [
+    {
+      "document": "privacy",
+      "section": "scope",
+      "paragraph": 1,
+      "text": "Pick For Us helps you discover and choose restaurants, activities and seasonal destinations. Caustic Relay / Pick For Us is the support identity. For privacy questions, support or a deletion request, email causticrelay@gmail.com. You do not need an app account to email us.",
+      "sha256": "82cd86b39a8e08cd8c32f2c501a533f5afd4b2e2e5791801ba24f99898b85869",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "scope",
+      "paragraph": 2,
+      "text": "This draft covers the Pick For Us website and its Android experience, which loads the hosted website. Caustic Relay is the owner\u2019s personal brand, not a confirmed registered company. Legal operator details and applicable jurisdiction must be finalized before this draft takes effect.",
+      "sha256": "0740a2e5ab8f415c45cff9ac37215f8fd1f56f56ada818c79bdcf5b52d861dc2",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 1,
+      "text": "You can enter a place manually or request your device\u2019s location. Device location requires your browser or Android permission. The returned coordinates can be precise or approximate depending on your device, permission and conditions. Pick For Us does not deliberately round them before the location and nearby-place requests. The app requests device location when you choose that action; the current discovery feature does not request background location tracking.",
+      "sha256": "f445997ffa0586e9a34ba3fe57d89d7db83d745b764075530f37653ccb262f57",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 2,
+      "text": "Search text and coordinates are sent to Pick For Us servers to find and rank nearby places. The servers send entered search text or coordinates to OpenStreetMap Foundation\u2019s Nominatim service for place lookup, and coordinate/radius/category queries to Overpass services for venue discovery. The configured Overpass hosts are overpass.openstreetmap.fr, overpass.private.coffee, maps.mail.ru and overpass-api.de; retries or fallback can use more than one host. These are separate service operators, not all covered by the OpenStreetMap Foundation privacy policy.",
+      "sha256": "e6bf91d922dc18b46ccf1b9ed030d36a0b8155f96f22852c79a84a77a15f0fb0",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 3,
+      "text": "A manually entered place may be somewhere you want to visit rather than your current location. Avoid entering private information that is unnecessary for a place search. You can revoke device-location permission in your browser or Android settings and use manual search instead. Revocation does not erase a location already saved on this device.",
+      "sha256": "f2c657b06f7baa4268bbaebf2b2cd1c3e3fabc3ba7cfd54bae5ea9bbff382cad",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 1,
+      "text": "Pick For Us saves your selected search location, filters, favorites, ratings, visit history and notes, temporary exclusions, appearance, selected mode and seasonal preferences in browser or WebView storage. Venue identity records help apply current seasonal information to saved places. Tour status also uses session storage. This supports preferences and continuity between visits.",
+      "sha256": "d55ce5d5f2a994dcb7572a85f6b3b2a12a940b8b8ff06a616e5d23ebdd06db9b",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 2,
+      "text": "The main local store has no automatic time-based deletion for a saved location, favorites or preferences. Visit history keeps up to the latest 200 entries. Temporary exclusions stop applying after their expiry and are pruned when the app checks them. In-memory discovery caches have reuse limits; a cache reuse limit is not a promise that every copy is erased at that time.",
+      "sha256": "b764c7bf5295b67d37ece193ac601e4e06ae01e92b00065acbe4a97bdfa2cbdf",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 3,
+      "text": "The reviewed preference and history features use local storage rather than an account-based cloud synchronization feature. That does not mean all app data stays on the device: searches, hosting, analytics, external resources and email have the separate flows described here. Browser, operating-system backup or device-transfer behavior can also affect local data.",
+      "sha256": "0311f0a726be8faf719ac3171f93d47f9e8eff6ce9f638afd263f165a6caab1e",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 1,
+      "text": "Reset filters restores the Dinner and Date Night filter defaults. Clear all exclusions removes the current exclusion list. Show hint again resets the tour\u2019s session flag.",
+      "sha256": "8e4e0d1e8a4f40e09a1be900ef83573f830cd78be4efe20f9ac670914abee295",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 2,
+      "text": "The existing Clear favorites and history action also clears ratings, visits, exclusions, shown-result history and seasonal identity records, and resets filters, mode and the seasonal switch. It keeps your selected location and appearance. It does not delete support email, provider records, hosting logs or every item of browser storage.",
+      "sha256": "2fcad1ab52affa488fd4cfa93bce9a41d11f88094311f73743202a0b1fb43fa3",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 3,
+      "text": "You can use your browser\u2019s site-data controls or Android\u2019s app-storage controls to remove local data. These controls may sign you out of services and remove saved preferences, and cannot erase copies held by other providers. Web and Android storage can be separate; clear each relevant app or browser. For information held by the operator, contact causticrelay@gmail.com. A request does not automatically erase data from unrelated services.",
+      "sha256": "16b0f95e82b2650a80479e7e557d7fd2cb09dc671e17f3b8b864faf389e17e64",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 1,
+      "text": "The service is hosted on Vercel. Requests to load pages, resources and server functions expose technical request information to the hosting infrastructure, such as IP address, request path, time and browser or device information. Application diagnostics record request/provider outcomes. The reviewed diagnostic calls avoid raw search coordinates and query payloads, but that is not a guarantee about all hosting logs.",
+      "sha256": "8729c76facfeaf27e62f39523cc6929e08b297eeb1d3619f6c398d79c4721b4e",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 2,
+      "text": "The website includes Vercel Web Analytics and a custom mode-selection event. Vercel documents page and event statistics including URL/referrer information, approximate geographic information and device/browser details. Its documentation describes a request-derived visitor hash and no third-party cookies for that analytics product. The documented 24-hour visitor-session lifetime is not a promise that all analytics or hosting records are deleted within 24 hours.",
+      "sha256": "0b26c045b7d8d378c21b03e9dc630da56d8a4c6315a9d40788090c8666d470fa",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 3,
+      "text": "Project-specific logging, analytics intake, retention settings, log exports and any additional processors still require operational verification before this draft becomes final.",
+      "sha256": "ca251a10cb790d0c34af23df90ee4403b8123e8e6f4945bc3885970377a75258",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "resources",
+      "paragraph": 1,
+      "text": "The reviewed website requests Google Fonts. Loading an external resource exposes connection information such as IP address and request headers to that provider. Google describes its Fonts service separately from Google advertising products.",
+      "sha256": "828ed58d8b17df8e66e6f6e28ec695cff15cab5d48206f5b9757346a886d6922",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "resources",
+      "paragraph": 2,
+      "text": "The reviewed build also references a Grok app-builder extension script. Its actual production behavior, data recipients and retention must be verified or the dependency deliberately removed and tested before final publication. This website integration is separate from any AI access to the support mailbox.",
+      "sha256": "3649a48f5713000c3e016bacd86401a737c7934880924f9201088371d4b15db2",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "external",
+      "paragraph": 1,
+      "text": "If you open directions, rideshare, a venue website or another external service, that service receives the destination or link information needed for the action and handles further interactions under its own privacy policy. The reviewed directions helper sends the destination, not your device\u2019s starting GPS point. The external app may independently request your location or use information it already holds.",
+      "sha256": "2524a44a7d73f6c7664b9a1b37045e461bd3f199cf0abd3d2d4d97d85834d2fb",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "external",
+      "paragraph": 2,
+      "text": "Pick For Us does not control an external service\u2019s account, booking, purchase, payment or deletion process. Check that service\u2019s terms and privacy information before proceeding.",
+      "sha256": "e3ddf8e9357cf502d8f50c51477005aa1a1033b724947e0666326117a2608e32",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 1,
+      "text": "Contact Support opens your email application with causticrelay@gmail.com as the recipient and an optional subject. Pick For Us does not send the message for you. If an email application is unavailable, copy or type the displayed address into an email service you use.",
+      "sha256": "d98a1fbec5bb563831ac729c6d35baa3a348d81d943864fb598b31ee97cb8a3e",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 2,
+      "text": "If you send email, the operator and Gmail receive your email address, message, attachments and associated email information so your request can be handled. Send only information needed for your request; do not send passwords, payment-card details or unnecessary sensitive information.",
+      "sha256": "bb83eea0e613c1b9ea438d469a5a48d1de970aec557e8c9a570142832f65dc3f",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 3,
+      "text": "The owner manages support directly through Gmail. Support correspondence is kept until the request is resolved, then manually deleted from Gmail. Google\u2019s deletion process can retain messages in Trash and retain residual copies for its documented processing, backup or legal purposes. This is not a promise of immediate erasure from every system. Deleting local app data does not delete support correspondence. You can contact the same address with a deletion request.",
+      "sha256": "209e9e953869cad6afe7688f22f80832a82c044211212732e82b75d8cb0a2034",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "accounts",
+      "paragraph": 1,
+      "text": "The reviewed discovery interface does not require a visible sign-up or sign-in step, and local email/password sign-up is disabled in source. Authentication infrastructure exists on the server. Its reachable production features and any stored account records still need verification. This draft does not promise that no account data exists or that an account-deletion obligation is inapplicable.",
+      "sha256": "f281c66ec836c2a5c9af72990039dea2748b7e100775854dd6f2c0e897ac02b6",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 1,
+      "text": "Device-storage behavior is described above. Support-email retention is described above. Server, analytics and provider records have separate retention and deletion processes. Those operator-specific settings and criteria are still being verified; no across-the-board deletion deadline is promised in this draft.",
+      "sha256": "937ebae851e1daf9a46c4617dce1dd8e92a7f676419b21c6069482e0b117b546",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 2,
+      "text": "The reviewed app uses HTTPS for its configured external data requests. Android cleartext traffic and mixed content are disabled in the inspected configuration. No online service or device can guarantee absolute security. Infrastructure access controls, backups and processing locations require further operational confirmation.",
+      "sha256": "b2a3e4b9e615570413b06dca0c5d197fe204df2b54d5a403245ca683c7293217",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 3,
+      "text": "You may ask privacy questions or request access, correction or deletion at causticrelay@gmail.com. Applicable rights and any identity-verification or lawful-retention requirements depend on the operator and your jurisdiction. A request to the operator does not itself delete information independently held by an external service.",
+      "sha256": "ca0c197404ecc48b9123902531e789941f2f31af851910afe14784c758b6ba90",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "review",
+      "paragraph": 1,
+      "text": "This is a development draft, not a completed privacy-compliance declaration. Before it becomes effective, confirm the operator, audience and geographic scope; provider processing and transfers; account behavior; support-mail access; retention and deletion practices; and any consent or other lawful basis required for the intended distribution. No unsupported claim of anonymous-only data, no third-party sharing, no AI processing or immediate complete deletion is made.",
+      "sha256": "3d49ea28826f217096f95b9d951e86ddf112906fa4746cfa85bf5203cbff7cc2",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "changes",
+      "paragraph": 1,
+      "text": "This draft has not taken effect. The intended permanent policy path is /privacy on pickforus.app after an approved release. Final publication must include an effective date and preserve prior versions.",
+      "sha256": "6fee7bac130fbc6a5ac061bd39e2b8423b0d7f9fe4187877e7d412f909bbfc99",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "privacy",
+      "section": "changes",
+      "paragraph": 2,
+      "text": "Proposed change process: publish a dated summary of material changes, make a clear in-app notice available, and request fresh consent when required before the new processing begins. This process requires implementation and owner/legal review; continued use must not be treated as blanket consent to optional processing.",
+      "sha256": "044248f3441f4acb3c082dea560d9b73c7aa90e14082636a52cb32905f95616b",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "service",
+      "paragraph": 1,
+      "text": "Pick For Us helps you discover destinations and choose what to do. Caustic Relay / Pick For Us is the support identity. Contact causticrelay@gmail.com with questions. Caustic Relay is a personal brand. The legal operator details and jurisdiction must be confirmed before these terms take effect.",
+      "sha256": "86243f38ff785ac652d2921cbc9346b5a818d4022ec88ff0f1f74cc96aa471d1",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "service",
+      "paragraph": 2,
+      "text": "The app provides suggestions and planning information. It is not the operator of listed venues, a booking agent, an emergency service or a guarantee that a destination is suitable for you.",
+      "sha256": "287985e4bae845891e0a828f28bd8f089ddd0153b5dd4f0f5fa9237aaaab2ffb",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "listings",
+      "paragraph": 1,
+      "text": "Hours, admission, prices, restrictions, accessibility, weather and availability can change. Check important details with the venue before travelling or buying tickets. Seasonal listings apply only to their supported dates and may expire.",
+      "sha256": "3939780df687edd51a30d0d256011ef0f1bbe7c7d2d6c7b3588037884d971b44",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "listings",
+      "paragraph": 2,
+      "text": "Distances and map locations can be approximate. An address-derived point is not a verified entrance, parking space or rideshare drop-off. Follow the venue\u2019s arrival instructions and local safety rules. A displayed schedule is not necessarily an Open Now confirmation.",
+      "sha256": "84d14d73f6a49afbac45be32865e0c379b3a84a6a7adee3386de2cae0b328618",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "external",
+      "paragraph": 1,
+      "text": "Directions, rideshare, delivery, venue and ticket links open independent services. Their availability, transactions, charges, terms and privacy practices are their responsibility. Review them before proceeding.",
+      "sha256": "c0131aace0c784138759dd74be1ba76b0455329ed99cbd3e0bdb84fc322445e5",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "external",
+      "paragraph": 2,
+      "text": "Pick For Us is not affiliated with or endorsed by listed venues or third-party services unless expressly stated. Third-party names and trademarks identify their respective destinations or services.",
+      "sha256": "9581198ea014cfd226771f0d52cfc0599e0d0d8acfbcc94c95bff69d86cf51b7",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "responsible",
+      "paragraph": 1,
+      "text": "Follow applicable laws and the venue\u2019s age, access and safety requirements. Nightlife or casino discovery does not sell alcohol, accept wagers or provide gambling. Do not drive impaired.",
+      "sha256": "389981d6e12ba63db2ce3b3e5ba3678385448b90105671a4a6bcb47993b22e80",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "responsible",
+      "paragraph": 2,
+      "text": "Do not misuse the service, attempt unauthorized access, interfere with other users or submit unlawful or harmful content through support. These terms do not remove rights you have under applicable law.",
+      "sha256": "5911a066d9ac31357843aa23b9c8559f4dcfb567bc8206a0bd8d17488020159b",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "privacy",
+      "paragraph": 1,
+      "text": "The Privacy Policy explains data handling and available controls. Service terms, optional data-processing consent and Android/browser permissions are different choices. You can read these documents without accepting optional processing or using a prechecked consent box.",
+      "sha256": "8a1d007d2d7ca95eabbd78925c067349aae826a622f2bb0e8ca512a02e0fad2d",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "privacy",
+      "paragraph": 2,
+      "text": "You can email support without an app account. The support link prepares an email; it does not automatically send it. If your device has no email application, use the visible address in another email service.",
+      "sha256": "e2901cf0e471073ac99302cf48e1045536a35501ee9629015ee0e1d3b6fbccf1",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "availability",
+      "paragraph": 1,
+      "text": "Internet access and external providers are needed for parts of discovery. Results may be incomplete or unavailable during outages. Local favorites, history and preferences can be lost when browser or app data is cleared or a device is changed.",
+      "sha256": "a0b5fc0270fe577920e32708848df283d792da0700b0cd1414ea1a098b1693ea",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "availability",
+      "paragraph": 2,
+      "text": "A Google Play release is being prepared. No public Google Play listing or download availability is claimed by these terms.",
+      "sha256": "ad026fb1b37341d91cfb2671399ac3d12d19fdba7e8b883f86d32a404a1d58ee",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "changes",
+      "paragraph": 1,
+      "text": "This draft is not yet effective. Final terms will identify their version and effective date, with previous versions retained. Material changes should be described clearly in the app before taking effect. Any agreement or renewed consent required by applicable law must be handled separately and without prechecked controls.",
+      "sha256": "edfc3dd2394623c615f09ce9f9519b2c6fbf18bbc6115fe4f0911990256c6264",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    },
+    {
+      "document": "terms",
+      "section": "review",
+      "paragraph": 1,
+      "text": "Before publication, confirm the legal operator, audience, availability countries, applicable law, any enforceable acceptance mechanism and the final change-notice process. This draft intentionally does not invent an arbitration clause, liability cap, governing jurisdiction, mandatory age floor or waiver of consumer rights.",
+      "sha256": "06566f22a728eebf6f30b195ec03acb61af45cf1896d29551c14449acfc7d749",
+      "verdict": "QUALIFIED PASS \u2014 non-effective development draft",
+      "qualification": "Evidence-supported description or explicitly marked uncertainty/proposal. Does not close production policy publication or Play submission gate."
+    }
+  ],
+  "externalSourcesIndependentlyOpened": [
+    "https://vercel.com/docs/analytics/privacy-policy",
+    "https://fonts.googleblog.com/2022/11/your-privacy-and-google-fonts.html",
+    "https://osmfoundation.org/wiki/Privacy_Policy"
+  ],
+  "limitations": [
+    "No independent mailbox authorization/token audit or historical-copy deletion proof. Latest owner statements are operational attestations.",
+    "No live provider traffic payload capture or hosting retention/config verification.",
+    "No professional legal opinion, operator jurisdiction unresolved.",
+    "No physical Android or actual absent-email-client integration test.",
+    "Candidate SHA/tree not frozen yet. Final input hashes must be compared.",
+    "Production /privacy remains unimplemented; candidate URL/link does not close baseline privacy FAIL."
+  ]
+}
