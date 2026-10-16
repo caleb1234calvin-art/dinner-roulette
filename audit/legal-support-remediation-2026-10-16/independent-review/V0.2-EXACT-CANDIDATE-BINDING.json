@@ -1,0 +1,82 @@
+{
+  "sha": "3097fe21827723ac0828e65982237573e32fee9a",
+  "tree": "fbc0bb05b72dfd21a11f30223cf1d02ba560c5fa",
+  "parents": [
+    "4dab2cd77d3d35559394be10bd14b0568026e5f1"
+  ],
+  "changed_path_count": 10,
+  "all_remote_equal": true,
+  "paths": [
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/GROK-EXTENSION-STATIC-REVIEW.md",
+      "sha256": "91f526147bb60eb7d150e715e0c63616b8966b68172a252b6e77cfc883f00841",
+      "local_git_blob": "bde21472b7a4b2dbc1bbb5b5f6bd1560d20a94ad",
+      "remote_git_blob": "bde21472b7a4b2dbc1bbb5b5f6bd1560d20a94ad",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/GROK-PROVIDER-POLICY-SCOPE.md",
+      "sha256": "66eeb023aea003b3ac49f42ef1dfb422ebb159ae340df9c72b8959a5e8f52834",
+      "local_git_blob": "7767f79305f5359f91642c060832ce74d62de57a",
+      "remote_git_blob": "7767f79305f5359f91642c060832ce74d62de57a",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/IMPLEMENTATION.md",
+      "sha256": "9d8c50a6dce8ed0aca8ca45cd99650ddddd4ca4bc1b607c7dcff2e5b95cef6a4",
+      "local_git_blob": "d16716ff3d081a994b183c46de2a51592eeda6d9",
+      "remote_git_blob": "d16716ff3d081a994b183c46de2a51592eeda6d9",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/PRIVACY-DRAFT.md",
+      "sha256": "e97a5e22d3e8a9caab868ca1d623b72bd9d5daeb587edab5eeae5b119ed60790",
+      "local_git_blob": "96765c198903febc3f4051327dca8fbe358cdc6b",
+      "remote_git_blob": "96765c198903febc3f4051327dca8fbe358cdc6b",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/RETENTION-GATE-NARROWING.md",
+      "sha256": "bb7d7712becbb1712b6c48ba4c240eaf0b0d701b7e9d2031dcabd33c948a3dae",
+      "local_git_blob": "0be2fa7b74081125603187a0a90d17231d002d0e",
+      "remote_git_blob": "0be2fa7b74081125603187a0a90d17231d002d0e",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/TERMS-DRAFT.md",
+      "sha256": "3be7697dc2e88239b6e8c7cf8279f52534ebc28022a53bfb2ca7c104b9b9e2cc",
+      "local_git_blob": "7d51d3ef83ff0acc4205f65cb172121d016f3e56",
+      "remote_git_blob": "7d51d3ef83ff0acc4205f65cb172121d016f3e56",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/V0.2-INDEPENDENT-REVIEW.md",
+      "sha256": "3335562750fa6eb8c050291b9e88f66c0dfa10a51187dae44adedb4044a3e0a7",
+      "local_git_blob": "8f8c8ae50d96b3978a24b67602c0fc8386e2d554",
+      "remote_git_blob": "8f8c8ae50d96b3978a24b67602c0fc8386e2d554",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/V0.2-PARAGRAPH-COMPARISON.json",
+      "sha256": "55b1b3f02afbe24c716773f14578755d26dd7a0a3f975b62b0ca2145217ca4f7",
+      "local_git_blob": "983a1f5277e5606cee1b1882a96ea8d6837ebb03",
+      "remote_git_blob": "983a1f5277e5606cee1b1882a96ea8d6837ebb03",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/V0.2-REVIEW-APPENDIX.md",
+      "sha256": "dd2d1fb650318140490489fb7d5447f939353d8af45961e35d6242960b603693",
+      "local_git_blob": "bbe6da09f497973186f651933adf1ed0a9a62dbd",
+      "remote_git_blob": "bbe6da09f497973186f651933adf1ed0a9a62dbd",
+      "equal": true
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "sha256": "5555a578ce29b7182cc999db6c1ce3cb9973663a245cda30552379570a98d094",
+      "local_git_blob": "0bfe26f79ba9b94366525744b950958f3a272872",
+      "remote_git_blob": "0bfe26f79ba9b94366525744b950958f3a272872",
+      "equal": true
+    }
+  ],
+  "verdict": "QUALIFIED PASS source-text binding; current browser/CI acceptance pending"
+}

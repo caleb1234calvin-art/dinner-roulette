@@ -1,0 +1,155 @@
+{
+  "commit": {
+    "sha": "3097fe21827723ac0828e65982237573e32fee9a",
+    "node_id": "C_kwDOUPp-qdoAKDMwOTdmZTIxODI3NzIzYWMwODI4ZTY1OTgyMjM3NTczZTMyZmVlOWE",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/3097fe21827723ac0828e65982237573e32fee9a",
+    "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/3097fe21827723ac0828e65982237573e32fee9a",
+    "author": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-16T05:43:48Z"
+    },
+    "committer": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-16T05:43:48Z"
+    },
+    "tree": {
+      "sha": "fbc0bb05b72dfd21a11f30223cf1d02ba560c5fa",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/fbc0bb05b72dfd21a11f30223cf1d02ba560c5fa"
+    },
+    "message": "docs: reconcile v0.2 privacy drafts with confirmed operations and provider evidence",
+    "parents": [
+      {
+        "sha": "4dab2cd77d3d35559394be10bd14b0568026e5f1",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/4dab2cd77d3d35559394be10bd14b0568026e5f1",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/4dab2cd77d3d35559394be10bd14b0568026e5f1"
+      }
+    ],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "tree": {
+    "sha": "fbc0bb05b72dfd21a11f30223cf1d02ba560c5fa",
+    "truncated": false,
+    "tree": [
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/AUDIT-INPUTS.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1c642ff69fb8ab782d432787372cc9cc805c7209",
+        "size": 1048,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/1c642ff69fb8ab782d432787372cc9cc805c7209"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/GROK-EXTENSION-STATIC-REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bde21472b7a4b2dbc1bbb5b5f6bd1560d20a94ad",
+        "size": 4785,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/bde21472b7a4b2dbc1bbb5b5f6bd1560d20a94ad"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/GROK-PROVIDER-POLICY-SCOPE.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7767f79305f5359f91642c060832ce74d62de57a",
+        "size": 1787,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/7767f79305f5359f91642c060832ce74d62de57a"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/IMPLEMENTATION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d16716ff3d081a994b183c46de2a51592eeda6d9",
+        "size": 3119,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/d16716ff3d081a994b183c46de2a51592eeda6d9"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/INDEPENDENT-POLICY-REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b0cf783b70065487ed468d9049bc3e2a9505090f",
+        "size": 5395,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/b0cf783b70065487ed468d9049bc3e2a9505090f"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/PARAGRAPH-EVIDENCE-MAP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc628a36f28b358edf36e362e5bfe638f93a838b",
+        "size": 7303,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/bc628a36f28b358edf36e362e5bfe638f93a838b"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/POLICY-PARAGRAPH-REVIEW.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "254bce5e7f7e2b59436f5245973b96a3dc303bd0",
+        "size": 36893,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/254bce5e7f7e2b59436f5245973b96a3dc303bd0"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/PRIVACY-DRAFT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "96765c198903febc3f4051327dca8fbe358cdc6b",
+        "size": 10991,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/96765c198903febc3f4051327dca8fbe358cdc6b"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/RETENTION-GATE-NARROWING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0be2fa7b74081125603187a0a90d17231d002d0e",
+        "size": 6539,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/0be2fa7b74081125603187a0a90d17231d002d0e"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/TERMS-DRAFT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d51d3ef83ff0acc4205f65cb172121d016f3e56",
+        "size": 3224,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/7d51d3ef83ff0acc4205f65cb172121d016f3e56"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/V0.2-INDEPENDENT-REVIEW.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f8c8ae50d96b3978a24b67602c0fc8386e2d554",
+        "size": 4068,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/8f8c8ae50d96b3978a24b67602c0fc8386e2d554"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/V0.2-PARAGRAPH-COMPARISON.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "983a1f5277e5606cee1b1882a96ea8d6837ebb03",
+        "size": 24698,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/983a1f5277e5606cee1b1882a96ea8d6837ebb03"
+      },
+      {
+        "path": "audit/privacy-legal-support-2026-10-16/V0.2-REVIEW-APPENDIX.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbe6da09f497973186f651933adf1ed0a9a62dbd",
+        "size": 3974,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/bbe6da09f497973186f651933adf1ed0a9a62dbd"
+      },
+      {
+        "path": "src/lib/legal/documents.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bfe26f79ba9b94366525744b950958f3a272872",
+        "size": 17417,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/0bfe26f79ba9b94366525744b950958f3a272872"
+      }
+    ]
+  }
+}

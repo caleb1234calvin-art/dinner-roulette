@@ -1,0 +1,123 @@
+{
+  "at": "2026-10-16T05:56:00Z",
+  "candidate": "3097fe21827723ac0828e65982237573e32fee9a",
+  "tree": "fbc0bb05b72dfd21a11f30223cf1d02ba560c5fa",
+  "parent": "4dab2cd77d3d35559394be10bd14b0568026e5f1",
+  "branch": "integration/privacy-legal-support-2026-10-16",
+  "local": {
+    "repositoryPass": 1257,
+    "repositorySkip": 4,
+    "applicationPass": 71,
+    "typecheck": "PASS",
+    "lintErrors": 0,
+    "lintWarnings": 6,
+    "safeAuthenticatedBuild": "PASS"
+  },
+  "focusedBrowser": {
+    "run": 38857325213,
+    "artifact": 12028040632,
+    "checks": 20,
+    "status": "PASS",
+    "minimumTextContrast": 5.422676078301732,
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "189a02a9f97dc960464cae39fc5e5a1d0816b8144023e5d74305840812a8fd4e",
+        "files": 527
+      },
+      "startedAt": "2026-10-16T05:46:42.707Z",
+      "output": {
+        "sha256": "e4cff3fc72b9032ed5833c51f78b091123caab23bccb91a4b78f9bc8db600500",
+        "files": 202
+      },
+      "completedAt": "2026-10-16T05:46:46.585Z"
+    }
+  },
+  "android": {
+    "run": 38857325241,
+    "ci": "SUCCESS",
+    "artifact": 12027707501,
+    "sourceRevision": "3097fe21827723ac0828e65982237573e32fee9a",
+    "syntheticMergeName": "6124df5d220572a626f35db0230bf93498b02239",
+    "syntheticMergeTreeEqualsCandidate": true,
+    "bundle": {
+      "artifact": "app-release.aab",
+      "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+      "bytes": 3103535,
+      "package": "com.calebcalvin.pickforus",
+      "versionCode": 1,
+      "versionName": "1.0.0",
+      "minSdk": 24,
+      "compileSdk": 36,
+      "targetSdk": 36,
+      "debuggable": false,
+      "appLabel": "Pick For Us",
+      "allowBackup": false,
+      "cleartextTraffic": false,
+      "launcherImages": [
+        "base/res/mipmap-hdpi-v4/ic_launcher.png",
+        "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-mdpi-v4/ic_launcher.png",
+        "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+        "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+      ],
+      "adaptiveIcons": [
+        "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+        "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+      ],
+      "bundletool": "1.18.3",
+      "bundletoolValidation": "PASS",
+      "signing": "unsigned",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.INTERNET",
+        "com.calebcalvin.pickforus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "nativeLibraries": [],
+      "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+      "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+      "uploadSignatureVerified": false,
+      "playConsoleAcceptance": "NOT VERIFIED"
+    },
+    "lint": {
+      "Warning": 14
+    }
+  },
+  "broaderCI": "IN PROGRESS; no aggregate PASS claimed",
+  "limitations": [
+    "Focused browser external services mocked; no actual email delivery or native mail-client handoff test.",
+    "Hosted localhost policy routes are not production policy publication.",
+    "Unsigned native bundle loads separately mutable production website; does not embed candidate policy UI.",
+    "No complete WCAG or physical Android acceptance claimed.",
+    "Full other browser artifact inspection not yet performed."
+  ],
+  "archives": [
+    {
+      "id": 12028040632,
+      "bytes": 8389912,
+      "sha256": "af2d4f51b039954ca0d142680073b25d49ee2e3e27d9eb0e7e8df360635b6b27",
+      "members": 39,
+      "CRC": null
+    },
+    {
+      "id": 12027707501,
+      "bytes": 6866413,
+      "sha256": "c2213d64b8f76cea398ee59b00b25fa90b903fd581546bf2c119ab6ac2ce696e",
+      "members": 8,
+      "CRC": null
+    }
+  ]
+}
