@@ -22,3 +22,7 @@ These are draft documents, not effective legal terms or a completed privacy comp
 - Initial new focused link-protocol assertion was overly restrictive for documented mailto and exact relative legal links. Corrected assertion accepts only HTTPS, mailto and exact `/privacy` or `/terms` paths. Failed attempt preserved in local evidence; existing tests unchanged.
 - Local browser/socket restrictions prevent trustworthy HTTP/browser acceptance. Hosted CI must run the new legal-support matrix suite; no local browser PASS is claimed.
 - Full exact-head results, independent review and immutable IDs are recorded at the freeze/acceptance checkpoint, not inferred from prior PRs.
+
+## Reviewed v0.2 draft update
+
+The reviewed replacement disclosure text incorporates confirmed owner practices and bounded provider evidence. It removes stale audit-style caveats; no website, account, package, provider, consent or storage behavior is changed. These complete drafts remain explicitly not effective pending owner publication review and version/date decision. Previous v0.1 text is preserved in parent history. V0.2-INDEPENDENT-REVIEW.md and V0.2-REVIEW-APPENDIX.md supersede earlier overbroad naming/retention prerequisites; no incorporation or forensic SaaS-backup proof is required. Exact-head acceptance must bind the new text source.
