@@ -1,0 +1,15 @@
+# Independent final Legal & Support browser acceptance
+
+2026-10-16 07:49 UTC. Scoped exact-candidate browser acceptance: PASS.
+
+Remote commit independently fetched: `6b370a5202ffb531434d725f49aacbdc325f32c5`, tree `520f545ec006041ef5694a138cfb65f7a897011c`, sole parent `d076a67448357355e936e9568bc84fe5b5c92ca6`. Source correction independently reviewed in BLOCKED-STORAGE-FIX-BINDING.json.
+
+Original artifact 12032357950 independently inspected: 9,753,297 bytes; SHA256 `9a8f69c5f66f90cb25a82fcf0202342c08b6cd432325055e123f8c71beebf0c1`; 63 ZIP members; full CRC test clean. Verdict PASS with 33/33 checks, including 12 width/theme/storage cases and aggregate actual-component fixture. Authentication true. Independently recomputed source fingerprint: 535 files, `6d154773f601e6a075ac533d26e6b63525f9e672bc87e85622ed17bd4715c2b3`, matching proof/verdict. Output receipt is 202 files, `2bdcd3666792080bffbf50207468a62f57313c3f0d4c8e3e35dbe8f0d573609f`; reviewer did not independently reconstruct compiled output.
+
+Directly viewed current screenshots: notice-320-dark-blocked-visible, notice-320-light-storage-keyboard-focus, notice-390-dark-storage-visible, notice-390-light-blocked-visible, notice-512-dark-blocked-keyboard-focus, notice-512-light-storage-visible. All inspected notices show readable wrapping, version/effective date, material-change summary, history links, informational no-assent statement and usable dismissal control. Keyboard focus visible in inspected focused images. No new clipping observed.
+
+Also viewed native-resolution current full-document history crops at 320 dark privacy, 390 light terms and 512 light privacy. They explicitly display Version 1.0 prepared for publication, no effective date and no previous published versions. Updated request handling, changes and privacy qualifiers remain readable. The fixture's synthetic published 1.1 date is test-owned data, not the candidate's legal effective date.
+
+The current browser harness exercises both real legal routes with blocked/available storage and asserts no pageerrors, then actual notice layout, keyboard dismissal, reload, new-version reappearance and public history navigation. The concrete AppShell missing-persist crash is closed in this bounded current-head test. Earlier 14316 and d076 failures remain failures; the initial race-only hypothesis was insufficient and is preserved with its correction.
+
+Boundaries: the material-notice fixture uses actual component and compiled CSS with a simplified shell, without fixed bottom navigation. Actual public-document cases cover the normal shell separately. No previously published history snapshot exists, so populated archived-history expansion is not browser-certified. No full WCAG certification, actual native email handling, physical Android, production policy availability, effective legal publication or Play readiness is inferred. Other repository/Android/seasonal gates are reported separately by the coordinator. Owner must authorize eventual publication; exact effective-date source finalization and revalidation remain required.
