@@ -24,10 +24,15 @@ for (const seasonal of [false, true]) {
     assert.equal(status.notices[0].title, "Some live searches are unavailable");
     assert.equal(status.notices[0].body, result.warning);
     const text = textOf(status.tree);
-    assert.match(text, /1 activities match/);
+    assert.match(text, seasonal ? /10 activities match/ : /1 activities match/);
     if (seasonal) assert.match(text, /Seasonal map listings included; current-season schedules may be unconfirmed/);
     assert.doesNotMatch(text, /Live map unavailable; using saved places/);
-    h.button(status.tree, "Give us options").props.onClick();
+    // Isolate the live fixture for this action while independently composed
+    // saved candidates remain covered by the full-pool count above.
+    h.store.preferences = { current: { favorite: true } };
+    h.store.setDateNightFilters({ favoritesOnly: true });
+    assert.match(textOf(h.render()), /1 activities match/);
+    h.button(h.render(), "Give us options").props.onClick();
     assert.equal(h.overlay(h.render(), "OptionsOverlay").props.restaurants[0].id, "current");
     assert.equal(clock.pending, 0);
   });

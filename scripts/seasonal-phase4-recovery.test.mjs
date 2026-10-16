@@ -1,4 +1,5 @@
 import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs";
+import { curatedRadiusSourceBefore } from "./test-support/curated-radius-source-before.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
@@ -213,7 +214,7 @@ test("all 52 previous V1 records, presentation copy, radial implementation and u
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
   for (const [path, hash] of Object.entries(baseline.files)) {
-    let source = occurrenceSourceBefore(path);
+    let source = curatedRadiusSourceBefore(path, occurrenceSourceBefore(path));
     if (path === "src/components/result-overlay.tsx") {
       // Explicit UI amendment: preserve the original receipt and prove that
       // reversing only the reviewed Directions classes recovers every old byte.

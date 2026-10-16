@@ -417,7 +417,10 @@ test("actual DateNightHome: stale persisted unknown categories recover to Anythi
   assert.deepEqual(h.requests[0].args.data.activityTypes, normalizeDateNightActivityTypes(["anything"], true));
   resolveRequest(h);
   const state = await h.settle();
-  assert.match(textOf(state.tree), /1 activities match/);
+  assert.match(textOf(state.tree), /10 activities match/, "One live fixture plus nine current local curated identities");
+  h.store.preferences = { movie: { favorite: true } };
+  h.store.setDateNightFilters({ favoritesOnly: true });
+  assert.match(textOf(h.render()), /1 activities match/, "The original fixture remains eligible under the local preference filter");
   assert.equal(h.button(state.tree, "Anything").props["aria-pressed"], true);
   assert.throws(() => normalizeDateNightActivityTypes(["retired-category"], true), /Choose valid/);
 });
