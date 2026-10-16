@@ -1,3 +1,26 @@
+# PR78 later owner phone retest — 2026-10-16 23:28 UTC
+
+## CURRENT
+
+Read-only reconciliation of original owner messages adds later offline fallback/retry recovery observations. The original22:24 black-screen/cold-launch failure remains historical OWNER-REPORTED ISSUE/HOLD. Later attempts did not reproduce it; cause remains unknown and no permanent fix is established.
+
+OWNER-REPORTED:22:46 offline opening immediately showed the failure-to-load fallback instead of black.22:51:03 owner could not repeat the failure.22:51:45 owner explicitly reported full phone restart survived, reconnecting while still on the Try again screen and tapping Try again loaded immediately. This visible original statement has content_omitted=true; no unseen content is inferred. Independent reviewer viewed the supplied fallback screenshot, which establishes the screen/control appearance only.
+
+Owner reported VPN-off continued operation at22:38 and no VPN needed at22:40. VPN disconnected during the specific post-reboot trial was not explicitly reconfirmed. Temporal co-recovery of other apps does not establish a network/VPN/DNS/WebView/hardware cause.
+
+New dated ledger OBSERVATION-LEDGER-2026-10-16-2328.csv appends these bounded findings. Prior ledgers and black-screen evidence remain unchanged. OWNER-PHONE-RETEST-2026-10-16.md contains precise original-message links and limitations; raw conversation and screenshot are not republished here.
+
+## NEXT
+
+Retain issue history and collect missing device/installed identity and precise trial conditions if further acceptance is undertaken. Any recurrence should be documented without assuming cause or repeating destructive clearing. Tablet test remains a future owner intention, not completed execution.
+
+## HOLD
+
+Overall physical/release acceptance remains HOLD. Installed package/version/certificate, phone model/Android/WebView, post-clear data preservation and controlled post-reboot VPN state remain unknown. Uploaded APK byte identity remains verified but does not prove installed identity. No broad offline-support or permanent-resolution PASS. PR77 unpublished legal/support remains NOT RUN; SM-T220 remains deferred/unconfirmed. Source PR78 stays4010edf31e71a7350d891a98dd43f20535602abd/tree f521ed3dbdabceeb924ad4da1ce88e42db41092c with prior technical receipts retained. No source/device/production action occurred in this reconciliation; existing publication/signing/registration boundaries remain.
+
+
+---
+
 # PR78 owner phone observations — reconciliation 2026-10-16 22:30 UTC
 
 ## CURRENT
