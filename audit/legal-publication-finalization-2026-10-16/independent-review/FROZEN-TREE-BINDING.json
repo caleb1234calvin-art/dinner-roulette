@@ -1,0 +1,95 @@
+{
+  "tree": "7f46b739ef4394e962df8232a69fd7886dadcf8f",
+  "parent": "3097fe21827723ac0828e65982237573e32fee9a",
+  "commit": "eb330bd1837a04d49c6e41c051c8ecc763f59104",
+  "changed_paths": [
+    {
+      "path": "docs/legal/PUBLICATION.md",
+      "sha256": "14f3b2ca784f2df229df51a9e0d798786dbd919d5e779adde0950be260534496",
+      "working_equals_index": true
+    },
+    {
+      "path": "docs/legal/VALIDATION.md",
+      "sha256": "6cfee51e79f646c14ececeb4d8d9900a0795440f6ca8f864c0934e97c1957f20",
+      "working_equals_index": true
+    },
+    {
+      "path": "docs/legal/review-draft-v0.2.json",
+      "sha256": "5555a578ce29b7182cc999db6c1ce3cb9973663a245cda30552379570a98d094",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/check-legal-release.mjs",
+      "sha256": "8a15296a8ae16d17ea781e9c6c2be9cb08a18d9a5b16b1d9f9204bed6551a1a0",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/legal-release.test.mjs",
+      "sha256": "e2afc523ae20e3f8b9fdb6f0f493aee8b0404ce3097046bbfe1fddff54e7d308",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "sha256": "45d28179cc789a5bcc9546cf2cb9be932ccc6b1d560a09c9732f1478fd6e4373",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/legal-support.test.mjs",
+      "sha256": "24ef6c9f50d9ded86fbafaf7c43dfc1e1c7b6694986b701f71128b1371dc5b3c",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/test-runner.mjs",
+      "sha256": "ba740f959852a0cefdbd08bdcf865b604b79f77576715e84c077cea112936b87",
+      "working_equals_index": true
+    },
+    {
+      "path": "scripts/test-support/legal-notice-browser-harness.mjs",
+      "sha256": "be41f508277626b3bfd166d1a199a2310b46ba4da4e23adb017de296c784fea2",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/components/app-shell.tsx",
+      "sha256": "4409d0f0c960bea0654f6048fda6a4115da7049bfe1157c45856ae6ac435905b",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/components/legal-change-notice.tsx",
+      "sha256": "811dfd4d8c544f0736638c004f54f9cd989829c7115a29314c8dc07246c98afe",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/components/legal-document-page.tsx",
+      "sha256": "efd05ce670b94daeb5bf78ba137ee7f727df3d2724f97ff73285ef0601943b5b",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "sha256": "05966b88cc6f8077897bbe803b0d184b8d596364835a2310f200a8c731921468",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/lib/legal/history.json",
+      "sha256": "fd8c8d2405e928a2be2fb75648f509e72d38776cbdd8668e0b58e2201a773282",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/lib/legal/releases.test.ts",
+      "sha256": "01e03098dfea549c2fd8a8c9e9b79ad6a850b12a4bff20e724df4b44dea3a804",
+      "working_equals_index": true
+    },
+    {
+      "path": "src/lib/legal/releases.ts",
+      "sha256": "47391462343e74c8a0f170ec4f758e2fb2425c56a0170174ec7e39f4b32a56d2",
+      "working_equals_index": true
+    }
+  ],
+  "review_draft_exact_parent_bytes": true,
+  "verdict": "QUALIFIED PASS policy/source; exact hosted browser pending",
+  "prior_tree": "dd1b5de5e7b63dbf63af9d2602e435991f5dcdc9",
+  "docs_only_rebinding": "Independently diffed old/new trees: only docs/legal/VALIDATION.md branch name and final test/lint counts changed. Counts attributed to root execution; runtime bytes unchanged.",
+  "remote_tree_verified": "7f46b739ef4394e962df8232a69fd7886dadcf8f",
+  "remote_parents": [
+    "3097fe21827723ac0828e65982237573e32fee9a"
+  ]
+}
