@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { resolve } from 'node:path';
+import { writeFile } from 'node:fs/promises';
 import { rolldown } from 'rolldown';
 import ts from 'typescript';
 
@@ -34,7 +35,13 @@ export async function checkLegalNotice(browser, base, { output, visibleHit, text
     await context.route('**/_vercel/insights/**',route=>route.fulfill({status:200,body:''}));
     await context.route(/^https:\/\/(fonts\.(googleapis|gstatic)\.com|grok\.com)\//,route=>route.abort());
     const page=await context.newPage();
-    await page.goto(base+'/privacy');
+    const pageErrors=[];page.on('pageerror',error=>pageErrors.push(String(error)));
+    try {
+    for(const [path,title] of [['/privacy','Privacy Policy'],['/terms','Terms & Conditions']]) {
+      await page.goto(base+path,{waitUntil:'networkidle'});
+      await page.getByRole('heading',{level:1,name:title,exact:true}).waitFor({state:'visible',timeout:15000});
+      assert.deepEqual(pageErrors,[],`${path} must remain readable without browser-storage crashes`);
+    }
     const styles=await page.locator('link[rel=stylesheet]').evaluateAll(links=>links.map(link=>link.href).filter(href=>href.startsWith(location.origin)));
     const mount=async()=>{await page.goto(base+'/legal-notice-fixture');for(const url of styles) await page.addStyleTag({url});await page.addScriptTag({content:code});await page.evaluate(r=>window.renderLegalFixture(r),release);};
     await mount();
@@ -69,8 +76,17 @@ export async function checkLegalNotice(browser, base, { output, visibleHit, text
     assert.equal(await historyHeading.count(),1);
     await visibleHit(historyHeading);
     await page.goBack();
+    assert.deepEqual(pageErrors,[],'Notice and public legal navigation must not throw browser errors');
     onPass(`Material notice ${width}/${theme}/${blocked?"blocked storage":"available storage"}: visible overflow, 44px hit areas, contrast, keyboard dismissal, reload, new version and history link`,contrast);
-    await context.close();
+    } catch(error) {
+      const prefix=resolve(output,`notice-${width}-${theme}-${blocked?'blocked':'storage'}-failure`);
+      await Promise.allSettled([
+        page.screenshot({path:prefix+'.png',fullPage:true}),
+        page.content().then(html=>writeFile(prefix+'.html',html)),
+        writeFile(prefix+'.json',JSON.stringify({url:page.url(),width,theme,blocked,pageErrors,error:String(error)},null,2)+'\n'),
+      ]);
+      throw error;
+    } finally { await context.close(); }
   }
   return 'Actual material-notice component: 320/390/512px light/dark visible layout and accessibility, screenshots, keyboard dismissal, blocked storage, reload, new-version reappearance and history link';
 }

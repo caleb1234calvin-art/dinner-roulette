@@ -19,7 +19,8 @@ export function AppShell({ children }: { children: ReactNode }) {
   const theme = useAppStore((s) => s.theme);
 
   useEffect(() => {
-    void useAppStore.persist.rehydrate();
+    // Zustand omits its persistence API when browser storage is unavailable.
+    void useAppStore.persist?.rehydrate();
   }, []);
 
   useEffect(() => {
