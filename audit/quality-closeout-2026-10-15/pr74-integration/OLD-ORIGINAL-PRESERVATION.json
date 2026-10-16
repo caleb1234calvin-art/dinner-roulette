@@ -1,0 +1,153 @@
+{
+  "note": "Concatenate each listed part in order; verify whole size and SHA256; original ZIP itself is unchanged.",
+  "archives": [
+    {
+      "file": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip",
+      "size": 452115715,
+      "sha256": "4cbfd9c3740bbdf3c2badc5a29962d494234e44e53edf45fcd4fc76553a9953b",
+      "parts": [
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part001",
+          "size": 33554432,
+          "sha256": "cfe5f18b7976c0953f7c9d5d83150a673fe03d681d2017fd592d52864c543bb8",
+          "library_file_id": "libfile_468e5a7125e4819198063f04d7315113"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part002",
+          "size": 33554432,
+          "sha256": "f6b5ef46107a434d2534550586b8aedc144d29101936fa2dd34061575d4ef537",
+          "library_file_id": "libfile_1c6f4187f6808191aee9f7d9f486392a"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part003",
+          "size": 33554432,
+          "sha256": "8c6f8148c5f2d12f06ede8e1ea170628aab27bf0e8f2a1ba98aa6ea407de75ed",
+          "library_file_id": "libfile_28b4050b27f081919b4aa2389f644817"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part004",
+          "size": 33554432,
+          "sha256": "d4540435e88f53b3b8ebe97cfd24502f032b78e415f539062d088c3fb8279c97",
+          "library_file_id": "libfile_4ae09eb258288191bf3157997d6ee95a"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part005",
+          "size": 33554432,
+          "sha256": "62e9076e2985af35de1c6385d6aa44a1cf60d6419f83c8fe6c8380a2f8c0a582",
+          "library_file_id": "libfile_aa841b71da48819182202eb8fb325f20"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part006",
+          "size": 33554432,
+          "sha256": "848a5d116d03b1b82a1cc940ce154cedae21a2856426477d99f95a9e8ac01032",
+          "library_file_id": "libfile_d8cb5aa37b7c81918b3bfe9b85a0c307"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part007",
+          "size": 33554432,
+          "sha256": "cf2bc8a6aa212baa3448cea068dd66b604aeabad23faeb19cb69947dee1ed0c6",
+          "library_file_id": "libfile_4a76cebd8bbc81918e7ea25ff8936c00"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part008",
+          "size": 33554432,
+          "sha256": "a19f200b04a8e50e54cf6b12950053d13205b0c93a881f24bc1c9635ab1bd355",
+          "library_file_id": "libfile_6aa5765c97708191bd48b629539db479"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part009",
+          "size": 33554432,
+          "sha256": "717c895547c7de6a9c646a6843f8424aa772a63be3b3a0a6f2bde5b0602edf6e",
+          "library_file_id": "libfile_eff02b07fc748191a7e2780236251019"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part010",
+          "size": 33554432,
+          "sha256": "ef2eb3c9f2ae91195fd7c7dd7f92af8311b209f3f1d1e0b98c6a0e3360d673f3",
+          "library_file_id": "libfile_b64eb34720408191bf7983f2487298f1"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part011",
+          "size": 33554432,
+          "sha256": "06cf601ab68adcc93497c9dad7b2326e20bef947297cbd4825cd8eb6e9409f09",
+          "library_file_id": "libfile_684f1c3e72a881919363d29481ea76c9"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part012",
+          "size": 33554432,
+          "sha256": "ad5f7c934e398863ddea9b6e02c7be2e56f7a3d7d505dcd2871705667f3b0d93",
+          "library_file_id": "libfile_bb9c504183ac819182a5d9beca43aeee"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part013",
+          "size": 33554432,
+          "sha256": "7a4931abf2eaefb387325c57d5b65d38c2d29f40af4f7887531e0172ab3694b6",
+          "library_file_id": "libfile_b1f3f58c840c8191bcdc10f82389eff9"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-GEOMETRY-12009848627.zip.part014",
+          "size": 15908099,
+          "sha256": "97a305261cc1ae5bb06fa810e8c85eae1df63221e5571ccfec084bc46d699616",
+          "library_file_id": "libfile_560ce0dae0e88191ba05aae051415229"
+        }
+      ],
+      "reconstructedExactBytes": "PASS"
+    },
+    {
+      "file": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip",
+      "size": 266601202,
+      "sha256": "a00dc8344d0b557bfe6b71c5a039d30d03211ddf8e19401f48d7c2f1f0d44983",
+      "parts": [
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part001",
+          "size": 33554432,
+          "sha256": "b4fedc39fbdff396345acc7252d7d73d84b4a776f767c2976f3d4127f70a102c",
+          "library_file_id": "libfile_065052008a4c8191b89d6c700954cb5e"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part002",
+          "size": 33554432,
+          "sha256": "2597a99fb35c3a0b55c3705d0b641ec2d9f06023c9fbac4041eefd3cc58f840f",
+          "library_file_id": "libfile_63ffde8c3d68819189c99318df7c08e0"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part003",
+          "size": 33554432,
+          "sha256": "8b7076c0bc8f3a2956c823628925055a8ddff5e6ce3f5792627cb8ccfeb15f17",
+          "library_file_id": "libfile_05b2110d77508191affa9b6b683da83c"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part004",
+          "size": 33554432,
+          "sha256": "f834968121f4a86da7ce95f2099798a7532aa4fed728b8ea5e1a63e01b3102ff",
+          "library_file_id": "libfile_39864dace0f48191a923fad315137554"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part005",
+          "size": 33554432,
+          "sha256": "a50feec7d18a8b005afcf0192f91a4129b0a0cde47804f28d694ca915c3c56cc",
+          "library_file_id": "libfile_4beaa1b641088191bdce95b20735eb1d"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part006",
+          "size": 33554432,
+          "sha256": "9183fecdfa85ec37e0fc640bc8a3b2e27d515f561f59bea81c35aa57fc642ab2",
+          "library_file_id": "libfile_ec7d481988f0819184474feeb16b9e7b"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part007",
+          "size": 33554432,
+          "sha256": "e387eb895aa2fca078989ac6dbcdf486af3308c126e4efeb825b976dff88eb6d",
+          "library_file_id": "libfile_9795a7665d808191a76569db10f8727c"
+        },
+        {
+          "name": "PR74-ORIGINAL-HEAD-REGIONAL-12011402337.zip.part008",
+          "size": 31720178,
+          "sha256": "7cc17b38589a749bfdc1dd2ee16eb05832b0c78a6ceec4c2c0e29c63d92cc09c",
+          "library_file_id": "libfile_14a0018462c48191843dec7f4792cfe9"
+        }
+      ],
+      "reconstructedExactBytes": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "observedAt": "2026-10-16T00:05:34.847Z",
+  "main": {
+    "sha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "tree": "7c12c5327af906348992e9b7d3282a11f830a202"
+  },
+  "candidate": {
+    "sha": "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158",
+    "tree": "c36112156cd11baefb6671194f0d59b9c181c2a3",
+    "parents": [
+      "e25594063bc0de09aeb4e08c4912845f9f08fffa",
+      "ead2319c4869478f4cd121e2370db4d9734d83ed"
+    ]
+  },
+  "pr": {
+    "number": 74,
+    "headSha": "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158",
+    "baseSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "draft": true,
+    "merged": false,
+    "mergeable": true
+  },
+  "production": {
+    "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+    "readyState": "READY",
+    "gitSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app"
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "buildUi": {
+    "observedAt": "2026-10-16T00:05:34.847Z",
+    "reloaded": true,
+    "buildCommand": "VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production",
+    "overrideChecked": true,
+    "saveDisabled": true,
+    "changesMade": false
+  },
+  "releaseAuthorized": false
+}

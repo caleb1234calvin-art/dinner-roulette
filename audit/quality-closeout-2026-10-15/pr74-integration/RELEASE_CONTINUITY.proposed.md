@@ -1,3 +1,45 @@
+# Current checkpoint — PR #74 integration accepted; separate release approval required
+
+October 16, 2026 UTC closeout of the October 15 workstream. This header supersedes the pending snapshots below, all retained intact. **Author-separated independent QUALIFIED PASS. PR #74 remains DRAFT / UNMERGED / RELEASE HOLD.** No merge, deployment, rollback, migration, production configuration change, Android signing or Play publication was performed. October 25 remains aspirational.
+
+## Exact candidate and production baseline
+
+- PR #74 branch `integration/kc-curated-radius-2026-10-15`: head `e5e1682f6c82c9a7d972e28bf9b9f94973a3d158`, tree `c36112156cd11baefb6671194f0d59b9c181c2a3`. Ordered parents: original PR #74 `e25594063bc0de09aeb4e08c4912845f9f08fffa`, then accepted PR #73 main `ead2319c4869478f4cd121e2370db4d9734d83ed`.
+- Fresh read-only baseline at `2026-10-16T00:05:34Z`: main `ead2319c4869478f4cd121e2370db4d9734d83ed`, tree `7c12c5327af906348992e9b7d3282a11f830a202`; production `dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5`, READY, 92 curated identities. All five aliases individually bind to that deployment; www retains its 308 apex redirect. PR #73 remains the released application. PR #74 has not been released.
+- Nine-file diff versus current main: 217 additions / six deletions. The single Phase4 test conflict composes the exact KC radial-source wrapper before the intact Directions hash/reversal assertions. Original conflicted bytes are preserved. Result component, complete geometry harness, all 92 identities/source dates, provider/query/cache/eligibility implementation, dependencies/workflows/configuration remain unchanged.
+
+## Independent acceptance and original evidence
+
+Source reviewer `/root/pr74_independent_integration`, browser worker `/root/pr74_kc_browser` and hosted-evidence worker `/root/pr74_original_evidence` did not author the candidate or integration. Full reports, scoped diff, logs and identity receipts are under `audit/quality-closeout-2026-10-15/pr74-integration/`.
+
+- Exact-head local and hosted core: 1,253 repository PASS, four inherited skips, 71 application PASS; TypeScript and auth-enabled migration-free build/proof PASS; zero web lint errors/six inherited warnings. All four skips explicitly concern an absent external workspace OG documentation package; no new exemption was added. The six lint-warning files are unchanged from main.
+- Same nine-case D2 requirement freshly executed against accepted main: seven FAIL / two passing controls. Exact candidate: nine D2, 101 amended-file tests and five reviewer edge probes = 115 PASS. Exact geography, all-92 expiration, stale-origin negatives and cache TTL/eviction behavior are independently checked.
+- Independent hydrated KC browser: 14 stages PASS at 390px. Target counts at 15/20/30/40/50 miles: 0/1/2/3/3 versus zero throughout on current main. Conservative Open Now, shrinking/growing, actual manual-control relocation, source-bound client expiry and truthful incomplete-coverage warnings pass without extra outer requests.
+- Six seasonal/ordinary Directions cases PASS across 320/390/512: full label/accessibility name, focus, keyboard Details, touch dimensions, containment and unchanged Maps link destination/attributes. Heights remain 72/72/56px. The tight 390px visitor notice/Details spacing is inherited; no new overlap was established. Maps routing and physical arrival were not tested.
+- New-head web `38822722705` and unsigned Android `38822722711` completed SUCCESS. All 15 browser jobs, core checks and aggregate validation PASS; aggregate finished `2026-10-16T00:07:46Z`. There are 18 successful check runs and one intentional signing skip. Native validation retains 14 inherited lint warnings.
+- Original hosted verdicts confirm 2,030 scenario records, 35 casino/location checks and 774 geometry comparisons, kept as separate totals. All 18 new-head original archives were fully accessed and size/SHA-256/CRC checked: 1,381,897,374 bytes, 13,658 PNG members. Every web build proof binds the exact 520-file source fingerprint `18d6724e402478ded889815535bad3ba1fe48992716e258864099931c8232ba8`. Source capture independently reproduces it. Six old-head hosted archives and original failure packets were separately accessed; the other twelve old-head archives were not claimed reviewed.
+- All 774 geometry rows were independently recalculated: 92 identities, three widths, zero errors. Only the previously approved 16/16/0px height growth is allowed; other comparison bounds remain intact. Selected original pixels were actually viewed, not all PNGs. Original Android binaries and source-revision were checked; unchanged remote-URL wrapper bytes are not an embedded candidate web snapshot.
+- Original failures remain preserved: rejected negative-cache resurrection prototype without a falsely assigned published SHA; old before/oracle/setup failures; original PR #73 R1's 184 height-assertion failures in separate prior evidence; and root's new-head first full suite before compiled SSR prerequisites (15 setup/cascading teardown failures). Safe build followed by unchanged tests passed. No failed run was relabeled PASS.
+- The truncated Phase4 download was rejected, then retried through the same authorized URL and verified. Actual original archive bytes are saved intact or as complete ordered parts with reconstruction hashes. Manifests alone are not treated as screenshot preservation and no perpetual retention is promised. Central packet and separate browser/hosted/research save receipts record their hashes and artifact relationships.
+
+## Meaning, qualifications and release route
+
+The correction composes bounded reviewed saved records inside the selected radius independently of failed live-core patch coverage. It preserves provider request budgets, core-before-outer gating, cache ownership, lifecycle/date eligibility, radius limits and conservative Open Now. It does not fix provider availability, infer complete coverage, extend dates, add records, change D3 or revise inherited Result spacing. Known negative retirement persists within the location/Halloween/semantic session namespace; a replacement namespace can initialize a fresh pool, so this is not a global closure database.
+
+Controlled providers/clock/geocoder, fallback fonts and unsigned automation do not establish live-provider reliability, physical Android/WebView, GPS/field conditions or renewed source authority. These remain explicit qualifications for the owner.
+
+The hosted Build Command Override was freshly reloaded and confirmed ON with exactly `VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production`. Ordinary `npm run build` invokes migration and is not an equivalent route. No setting was changed. Owner Instant Rollback selector showed current 8DBJ… and preceding READY 72on… and was canceled without Continue/Confirm. Hobby limits and generated-alias rollback behavior remain qualified; prior denied API was not retried. After a future approved PR #74 release the intended recovery target would be current accepted 8DBJ…, whose eligibility must then be rechecked. Only the owner may operate rollback after separate explicit authorization.
+
+## Separate work and next action
+
+D3 Benton remains an isolated confirmed municipality/county ambiguity and remediation proposal, with implementation HOLD. Its geocode bytes are unchanged across the reproduced baseline, current main and PR #74; no Royal catalog relocation is justified. Seasonal inventory freshly reconciles at 31 tracked / 10 released / 21 held, zero promotions. Dark Hollows and Sinister remain HOLD after separate primary-source refresh; its report and preserved evidence are separate from PR #74.
+
+Remote `continuity/release` remains `705cc715a85535542b76c494f258b57f0874f324`. Publishing that legacy branch would trigger an unrelated deployment, which is not authorized. The complete updated `RELEASE_CONTINUITY.proposed.md` and `RELEASE_CONTINUITY.apply.patch` are preserved in this excluded integration audit; remote publication remains HOLD and is not claimed complete.
+
+**Next owner decision:** authorize or decline merging and deploying only head `e5e1682f6c82c9a7d972e28bf9b9f94973a3d158` / tree `c36112156cd11baefb6671194f0d59b9c181c2a3`, accepting the documented qualifications. Current instructions do not grant that approval. Before any later approved release, reverify exact head/tree, unchanged main, hosted gates, effective safe build route and rollback readiness. Verify the resulting production tree, READY state, all five aliases and affected KC/Directions behavior after deployment. No approval for rollback execution, migration, configuration changes, D3/research release, signing or Play is implied.
+
+---
+
 # Current checkpoint — PR #74 integrated with released PR #73; acceptance in progress
 
 October 15, 2026, 23:35 UTC. This header supersedes earlier candidate-state statements; all historical continuity below is retained unchanged. PR #74 is DRAFT / UNMERGED / RELEASE HOLD. No PR #74 release approval exists.

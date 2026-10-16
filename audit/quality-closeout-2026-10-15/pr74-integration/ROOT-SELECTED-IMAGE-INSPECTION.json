@@ -1,0 +1,29 @@
+{
+  "scope": "Three final independent controlled-browser screenshots; no claim to have viewed all screenshots. Inherited spacing is not a new PR74 defect.",
+  "images": [
+    {
+      "source": "pr74-kc-verifier/directions-evidence/date-night-390-notice-focus.png",
+      "file": "selected-images/date-night-390-notice-focus.png",
+      "bytes": 79536,
+      "sha256": "7d302912505e1c037e5b4189a7b7f108fe389a0fddde7e88b4378f5b375f5129",
+      "actuallyViewedBy": "root via view_image",
+      "observation": "390px notice/Details is tight with the focus outline immediately below the notice, but text remains readable; full Directions label is visible and contained."
+    },
+    {
+      "source": "pr74-kc-verifier/directions-evidence/date-night-320-directions.png",
+      "file": "selected-images/date-night-320-directions.png",
+      "bytes": 68027,
+      "sha256": "4e3519f8dd9727228f15d12b50c6b258fc63675d00e79dff2cb51f1ea1819dfd",
+      "actuallyViewedBy": "root via view_image",
+      "observation": "320px Directions label is fully readable on two lines; its focus outline and mapping disclaimer are visible."
+    },
+    {
+      "source": "pr74-kc-verifier/browser-evidence/candidate/radius-50-4-options.png",
+      "file": "selected-images/radius-50-4-options.png",
+      "bytes": 305653,
+      "sha256": "3818508974462c29c203c1d0b169ce24948726ffea2f820561cf541d7e3c21f0",
+      "actuallyViewedBy": "root via view_image",
+      "observation": "50-mile fixture Options visibly contains Exiled, Terror at the Ranch and Dark Nightmares; saved-place/incomplete-coverage notices remain visible."
+    }
+  ]
+}

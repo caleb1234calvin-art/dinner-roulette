@@ -1,0 +1,337 @@
+diff --git a/scripts/date-night-cache.test.mjs b/scripts/date-night-cache.test.mjs
+index fad05e7..a77fa41 100644
+--- a/scripts/date-night-cache.test.mjs
++++ b/scripts/date-night-cache.test.mjs
+@@ -417,7 +417,10 @@ test("actual DateNightHome: stale persisted unknown categories recover to Anythi
+   assert.deepEqual(h.requests[0].args.data.activityTypes, normalizeDateNightActivityTypes(["anything"], true));
+   resolveRequest(h);
+   const state = await h.settle();
+-  assert.match(textOf(state.tree), /1 activities match/);
++  assert.match(textOf(state.tree), /10 activities match/, "One live fixture plus nine current local curated identities");
++  h.store.preferences = { movie: { favorite: true } };
++  h.store.setDateNightFilters({ favoritesOnly: true });
++  assert.match(textOf(h.render()), /1 activities match/, "The original fixture remains eligible under the local preference filter");
+   assert.equal(h.button(state.tree, "Anything").props["aria-pressed"], true);
+   assert.throws(() => normalizeDateNightActivityTypes(["retired-category"], true), /Choose valid/);
+ });
+diff --git a/scripts/date-night-curated-radius.test.mjs b/scripts/date-night-curated-radius.test.mjs
+new file mode 100644
+index 0000000..2a8b72a
+--- /dev/null
++++ b/scripts/date-night-curated-radius.test.mjs
+@@ -0,0 +1,145 @@
++import assert from "node:assert/strict";
++import test from "node:test";
++import { appModuleLoader } from "./test-support/load-app-module.mjs";
++import { discoveryClock, deferred, flush } from "./test-support/discovery-clock.mjs";
++
++const load = appModuleLoader();
++const { createDateNightRadialSession } = load("src/lib/date-night/radial-session.ts");
++const { createDateNightRadialCache } = load("src/lib/date-night/radial-cache.ts");
++const { getCuratedSeasonalPlace } = load("src/lib/date-night/curated-policy.ts");
++const { decorateDateNight, eligibleDateNight } = load("src/lib/date-night/eligibility.ts");
++const { DEFAULT_DATE_NIGHT_FILTERS } = load("src/lib/date-night/types.ts");
++const { buildDateNightQueryPlan } = load("src/lib/date-night/query-plan.ts");
++const { searchDateNight } = load("src/lib/date-night/search.ts");
++const origin = { lat: 39.114053, lon: -94.627463, radiusMiles: 50, halloweenActive: true, activityTypes: ["haunted-house"] };
++const targets = ["date-night-ks26-exiled", "date-night-mo26-dark-nightmares-haunted-forest", "date-night-mo26-astra-terror-at-the-ranch"];
++const visit = new Date("2026-10-17T01:00:00Z");
++const ids = places => places.map(p => p.id);
++function setup(t, changes = {}, cacheOptions = {}) {
++  const clock = discoveryClock(t), cache = createDateNightRadialCache(cacheOptions);
++  const session = createDateNightRadialSession({ cache }), calls = [], states = [];
++  let query = { ...origin, ...changes };
++  const callbacks = { request(q, signal) { const pending = deferred(); calls.push({ q, signal, ...pending }); return pending.promise; }, onChange: state => states.push(state) };
++  const update = (changes = {}) => { query = { ...query, ...changes }; session.update(query, callbacks); };
++  const response = (call, venues = [], outcome = "failed") => ({ venues, source: outcome === "failed" ? "fallback" : "merged", patch: { id: call.q.patchId, version: "radial-v1" }, discovery: { partial: false, groups: buildDateNightQueryPlan(call.q.activityTypes, call.q.halloweenActive).map(g => ({ ...g, outcome })) } });
++  const eligible = (now = visit, extra = {}) => eligibleDateNight(decorateDateNight(states.at(-1).response?.venues ?? [], query, now), { ...DEFAULT_DATE_NIGHT_FILTERS, ...query, openNowOnly: false, ...extra }, query.halloweenActive, {}, [], now.getTime());
++  t.mock.method(console, "warn", () => {});
++  t.after(() => session.dispose());
++  update();
++  return { clock, cache, session, calls, states, update, response, eligible, get state() { return states.at(-1); } };
++}
++function containsTargets(places) { const found = ids(places); for (const id of targets) assert.ok(found.includes(id), `missing selected-radius curated identity ${id}`); }
++
++test("KC actual handler + controller: failed core retains selected-radius saved identities without outer acquisition", async t => {
++  const h = setup(t);
++  t.mock.method(globalThis, "fetch", async () => { throw new Error("controlled provider failure"); });
++  const data = { ...origin, spookySeasonEnabled: true, patchId: "radial-v1:core" };
++  delete data.halloweenActive;
++  const pending = searchDateNight({ data });
++  await h.clock.tick(15000);
++  const result = await pending;
++  assert.equal(result.source, "fallback");
++  assert.ok(targets.every(id => !ids(result.venues).includes(id)), "preserved server patch ownership isolates the inherited mechanism");
++  h.calls[0].resolve(result); await flush();
++  containsTargets(h.eligible());
++  assert.equal(h.state.coverage.continuousRadiusMiles, 0);
++  assert.equal(h.state.paused, true);
++  assert.match(h.state.response.warning, /saved|incomplete/i);
++  await h.clock.tick(100000);
++  assert.equal(h.calls.length, 1, "provider failure cannot cause outer attempts or retry loop");
++});
++
++test("15→50→15→50 recomputes exact selected radius without provider retry or false core proof", async t => {
++  const h = setup(t, { radiusMiles: 15 });
++  h.calls[0].resolve(h.response(h.calls[0])); await flush();
++  assert.ok(targets.every(id => !ids(h.eligible()).includes(id)));
++  h.update({ radiusMiles: 50 }); containsTargets(h.eligible());
++  h.update({ radiusMiles: 15 }); assert.ok(targets.every(id => !ids(h.eligible()).includes(id)));
++  h.update({ radiusMiles: 50 }); containsTargets(h.eligible());
++  assert.equal(h.calls.length, 1);
++  assert.equal(h.state.coverage.complete, false);
++});
++
++test("20/30/40-mile selections admit only the KC targets inside the actual distance and preserve stable IDs", async t => {
++  const h = setup(t, { radiusMiles: 15 });
++  h.calls[0].resolve(h.response(h.calls[0])); await flush();
++  for (const [radiusMiles, expected] of [[20, targets.slice(0, 1)], [30, targets.slice(0, 2)], [40, targets]]) {
++    h.update({ radiusMiles });
++    assert.deepEqual(ids(h.eligible()).filter(id => targets.includes(id)).sort(), [...expected].sort());
++    assert.equal(new Set(ids(h.eligible())).size, h.eligible().length);
++    assert.ok(h.eligible().every(p => p.distanceMiles <= radiusMiles));
++  }
++  assert.equal(h.calls.length, 1);
++});
++
++test("transport error and watchdog failure expose saved identities with honest incomplete coverage", async t => {
++  const h = setup(t);
++  h.calls[0].reject(new Error("controlled transport failure")); await flush();
++  containsTargets(h.eligible());
++  assert.equal(h.state.coverage.complete, false);
++  assert.match(h.state.response.warning, /saved|incomplete/i);
++  h.update({ lat: origin.lat + 0.001 });
++  await h.clock.tick(25000);
++  containsTargets(h.eligible());
++  assert.equal(h.calls.at(-1).signal.aborted, true);
++  assert.equal(h.state.coverage.complete, false);
++});
++
++test("relocation cancels old requests and rejects late saved records from a different origin", async t => {
++  const h = setup(t);
++  const old = h.calls[0];
++  h.update({ lat: 37.176447, lon: -94.310223 });
++  assert.equal(old.signal.aborted, true);
++  old.resolve(h.response(old, targets.map(getCuratedSeasonalPlace))); await flush();
++  assert.equal(h.state.response, null);
++  h.calls[1].resolve(h.response(h.calls[1])); await flush();
++  assert.ok(targets.every(id => !ids(h.eligible()).includes(id)));
++});
++
++test("saved-radius additions preserve source-bound expiry, conservative Open Now, seasonal off and type filters", async t => {
++  const h = setup(t);
++  h.calls[0].resolve(h.response(h.calls[0])); await flush();
++  containsTargets(h.eligible());
++  assert.ok(targets.every(id => !ids(h.eligible(visit, { openNowOnly: true })).includes(id)));
++  assert.ok(targets.every(id => !ids(h.eligible(new Date("2026-11-03T12:00:00Z"))).includes(id)));
++  for (const id of targets) {
++    const expiry = new Date(getCuratedSeasonalPlace(id).seasonalAvailability.listingExpiresAt);
++    assert.ok(!ids(h.eligible(expiry)).includes(id), `${id} expires at source bound`);
++  }
++  h.update({ activityTypes: ["movies"] });
++  assert.ok(targets.every(id => !ids(h.eligible()).includes(id)));
++  h.update({ halloweenActive: false, activityTypes: ["anything"] });
++  h.calls.at(-1).resolve(h.response(h.calls.at(-1))); await flush();
++  assert.ok(ids(h.eligible()).includes(targets[0]), "Exiled's reviewed listing-lifecycle visibility is intentionally independent of Spooky");
++  assert.ok(targets.slice(1).every(id => !ids(h.eligible()).includes(id)));
++});
++
++test("cached successful core still composes saved selected-radius candidates without pretending outer coverage", async t => {
++  const h = setup(t, { radiusMiles: 15 });
++  h.calls[0].resolve(h.response(h.calls[0], [], "succeeded-empty")); await flush();
++  h.update({ radiusMiles: 50 });
++  containsTargets(h.eligible());
++  assert.equal(h.state.coverage.continuousRadiusMiles, 15);
++  assert.equal(h.calls.length, 1);
++  await h.clock.tick(250);
++  assert.equal(h.calls.length, 2, "existing outer acquisition pacing is preserved");
++});
++
++test("negative provider lifecycle evidence dominates selected-radius saved identity", async t => {
++  const h = setup(t);
++  const closed = { ...getCuratedSeasonalPlace(targets[0]), lifecycle: "permanently-closed" };
++  h.calls[0].resolve(h.response(h.calls[0], [closed], "succeeded-nonempty")); await flush();
++  assert.ok(!ids(h.eligible()).includes(targets[0]));
++  for (const id of targets.slice(1)) assert.ok(ids(h.eligible()).includes(id));
++});
++
++test("evicting negative provider evidence cannot regenerate a known closed curated identity", async t => {
++  const h = setup(t, {}, { maxEntries: 2 });
++  const closed = { ...getCuratedSeasonalPlace(targets[0]), lifecycle: "permanently-closed" };
++  h.calls[0].resolve(h.response(h.calls[0], [closed], "succeeded-nonempty")); await flush();
++  for (let i = 0; i < 2; i++) {
++    await h.clock.tick(1000);
++    h.calls.at(-1).resolve(h.response(h.calls.at(-1), [], "succeeded-empty")); await flush();
++  }
++  assert.ok(!ids(h.eligible()).includes(targets[0]), "static saved composition must respect negative retirement after cache eviction");
++});
+diff --git a/scripts/date-night-partial-ui.test.mjs b/scripts/date-night-partial-ui.test.mjs
+index ebfcd87..b4d7149 100644
+--- a/scripts/date-night-partial-ui.test.mjs
++++ b/scripts/date-night-partial-ui.test.mjs
+@@ -24,10 +24,15 @@ for (const seasonal of [false, true]) {
+     assert.equal(status.notices[0].title, "Some live searches are unavailable");
+     assert.equal(status.notices[0].body, result.warning);
+     const text = textOf(status.tree);
+-    assert.match(text, /1 activities match/);
++    assert.match(text, seasonal ? /10 activities match/ : /1 activities match/);
+     if (seasonal) assert.match(text, /Seasonal map listings included; current-season schedules may be unconfirmed/);
+     assert.doesNotMatch(text, /Live map unavailable; using saved places/);
+-    h.button(status.tree, "Give us options").props.onClick();
++    // Isolate the live fixture for this action while independently composed
++    // saved candidates remain covered by the full-pool count above.
++    h.store.preferences = { current: { favorite: true } };
++    h.store.setDateNightFilters({ favoritesOnly: true });
++    assert.match(textOf(h.render()), /1 activities match/);
++    h.button(h.render(), "Give us options").props.onClick();
+     assert.equal(h.overlay(h.render(), "OptionsOverlay").props.restaurants[0].id, "current");
+     assert.equal(clock.pending, 0);
+   });
+diff --git a/scripts/missouri-two-records.test.mjs b/scripts/missouri-two-records.test.mjs
+index 073b24c..e3f8305 100644
+--- a/scripts/missouri-two-records.test.mjs
++++ b/scripts/missouri-two-records.test.mjs
+@@ -81,6 +81,9 @@ for (const row of records) test(`actual component keeps ${row.id} qualified thro
+  Object.defineProperty(globalThis,"document",{configurable:true,value:{body:{},documentElement:{classList:{contains:()=>true}}}});
+  t.after(()=>{if(prior)Object.defineProperty(globalThis,"document",prior);else delete globalThis.document;});
+  const store={location:{...row,label:row.name,source:"manual"},preferences:{},exclusions:[],sessionShown:[],dateNightFilters:{...DEFAULT_DATE_NIGHT_FILTERS,openNowOnly:false},spookySeasonEnabled:true,theme:"dark",markShown(){},excludeTonight(){},setDateNightFilters(patch){this.dateNightFilters={...this.dateNightFilters,...patch};}};
++ // Keep this per-record copy/expiry test isolated from other independently
++ // composed saved records; the full discovery pool is tested separately.
++ store.preferences[row.id]={favorite:true};store.dateNightFilters.favoritesOnly=true;
+  const clock={value:at};
+  const harness=dateNightComponentHarness({store,now:clock,search:async()=>({venues:[row],source:"merged"})});
+  t.after(()=>harness.dispose());harness.render();let tree=await harness.settle();
+diff --git a/scripts/seasonal-phase4-recovery.test.mjs b/scripts/seasonal-phase4-recovery.test.mjs
+index 286a1ba..6c5ab37 100644
+--- a/scripts/seasonal-phase4-recovery.test.mjs
++++ b/scripts/seasonal-phase4-recovery.test.mjs
+@@ -1,4 +1,5 @@
+ import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs";
++import { curatedRadiusSourceBefore } from "./test-support/curated-radius-source-before.mjs";
+ import assert from "node:assert/strict";
+ import test from "node:test";
+ import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
+@@ -213,7 +214,7 @@ test("all 52 previous V1 records, presentation copy, radial implementation and u
+   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
+   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
+   for (const [path, hash] of Object.entries(baseline.files)) {
+-    let source = occurrenceSourceBefore(path);
++    let source = curatedRadiusSourceBefore(path, occurrenceSourceBefore(path));
+     if (path === "src/components/result-overlay.tsx") {
+       // Explicit UI amendment: preserve the original receipt and prove that
+       // reversing only the reviewed Directions classes recovers every old byte.
+diff --git a/scripts/test-support/curated-radius-source-baseline.json b/scripts/test-support/curated-radius-source-baseline.json
+new file mode 100644
+index 0000000..31a8641
+--- /dev/null
++++ b/scripts/test-support/curated-radius-source-baseline.json
+@@ -0,0 +1,7 @@
++{
++  "path": "src/lib/date-night/radial-session.ts",
++  "baseCommit": "991978fe24ec165eeacd5500a26d66f35d86c560",
++  "beforeSha256": "423cc4d5c5959198ae00559a41d37fe3bed8f0aae4f6cb38ff94412cc59a1290",
++  "afterSha256": "a5a53c74faefaecd36d3303a755b079098c7ec0f9a497fd850a3111fc31115d3",
++  "beforeSource": "import { startDiscoveryRequest } from \"../discovery/client-request\";\nimport { DATE_NIGHT_CACHE_TTL_MS, type DateNightAcquisition } from \"./cache\";\nimport { createDateNightRadialCache, clipDateNightRadius } from \"./radial-cache\";\nimport { mergeDateNight } from \"./identity\";\nimport { normalizeDateNightActivityTypes } from \"./query-plan\";\nimport { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNightPatchCoverageRecord } from \"./radial-plan\";\nimport type { ConcreteDateNightType, DateNightSearchResponse } from \"./types\";\n\nexport const DATE_NIGHT_RADIAL_PAUSE_MS = 1000;\nexport const DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS = 250;\nexport const DATE_NIGHT_RADIAL_MIN_OUTER_START_MS = 1000;\nexport const DATE_NIGHT_RADIAL_FAILURE_LIMIT = 3;\nconst PARTIAL_WARNING = \"Some live date-night searches are unavailable. Showing available live results and saved places; coverage may be incomplete.\";\n\nexport interface DateNightRadialUpdate {\n  response: DateNightSearchResponse | null;\n  coverage: DateNightCoverageState;\n  loading: boolean;\n  expanding: boolean;\n  paused: boolean;\n  error: string | null;\n}\ntype Request = (query: DateNightAcquisition, signal: AbortSignal) => Promise<DateNightSearchResponse>;\n\n/** One mounted-session controller. No unbounded retry, parallel patch fan-out,\n * persistent coordinates, or selection/overlay state lives here. */\nexport function createDateNightRadialSession({ cache = createDateNightRadialCache(), now = Date.now } = {}) {\n  let query: DateNightAcquisition | undefined;\n  let request: Request;\n  let onChange: (state: DateNightRadialUpdate) => void;\n  let retryVersion = 0;\n  let inFlight: { query: DateNightAcquisition; types: ConcreteDateNightType[]; cleanup?: () => void } | undefined;\n  let timer: ReturnType<typeof setTimeout> | undefined;\n  // Monotonic admission deadline survives timer cancellation, compatible updates\n  // and explicit retries. Core is exempt; outer starts remain at least 1s apart.\n  let outerReadyAt = 0;\n  let attempts = new Map<string, number>();\n  let failed = new Map<string, Set<ConcreteDateNightType>>();\n  let passRequests = 0, consecutiveFailures = 0;\n  let paused = false;\n  let coreSettled = false;\n  let displayOnly: DateNightSearchResponse | null = null;\n  let error: string | null = null;\n  const key = (patchId: string, type: ConcreteDateNightType) => `${patchId}/${type}`;\n  const sameSignature = (a: DateNightAcquisition, b: DateNightAcquisition) => a.lat === b.lat && a.lon === b.lon &&\n    a.halloweenActive === b.halloweenActive && a.semanticVersion === b.semanticVersion;\n  const records = (): DateNightPatchCoverageRecord[] => [...failed].map(([id, types]) => ({ id,\n    completeActivityTypes: [], failedActivityTypes: [...types],\n    loadingActivityTypes: inFlight?.query.patchId === id ? inFlight.types : [],\n  })).concat(inFlight && !failed.has(inFlight.query.patchId!) ? [{ id: inFlight.query.patchId!,\n    completeActivityTypes: [], failedActivityTypes: [], loadingActivityTypes: inFlight.types }] : []);\n  const snapshot = () => cache.read(query!, records());\n  const candidates = (coverage: DateNightCoverageState) => coverage.patches.map(p => ({ ...p,\n    missingActivityTypes: p.missingActivityTypes.filter(type => !attempts.has(key(p.id, type))),\n  })).filter(p => p.missingActivityTypes.length);\n\n  const publish = () => {\n    if (!query || !onChange) return;\n    const { coverage, response, negativeEvidence } = snapshot();\n    let visible = response;\n    if (displayOnly) {\n      const venues = clipDateNightRadius(mergeDateNight([\n        ...(response?.venues ?? []), ...displayOnly.venues, ...negativeEvidence,\n      ], []), query);\n      visible = { ...displayOnly, venues,\n        source: response ? venues.some(v => v.source !== \"osm\") ? \"merged\" : \"live\" : displayOnly.source,\n        discovery: response?.discovery ?? displayOnly.discovery };\n    }\n    const hasFailure = coverage.failedPatchIds.length > 0;\n    if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,\n      discovery: { groups: visible.discovery?.groups ?? [], partial: true } };\n    const ready = Boolean(visible) || (coreSettled && !inFlight);\n    const expanding = !paused && Boolean(inFlight || timer || candidates(coverage).length);\n    onChange({ response: visible, coverage, loading: !ready && Boolean(inFlight),\n      expanding: ready && expanding, paused, error: visible ? null : error });\n  };\n  const cancel = () => {\n    const old = inFlight;\n    inFlight = undefined;\n    old?.cleanup?.();\n    clearTimeout(timer);\n    timer = undefined;\n    // Cancelled work stays missing, and may resume when explicitly needed.\n    if (old) for (const type of old.types) attempts.delete(key(old.query.patchId!, type));\n  };\n  const next = () => {\n    timer = undefined;\n    if (!query || inFlight || paused) return publish();\n    const { coverage } = snapshot();\n    const candidate = candidates(coverage)[0];\n    if (!candidate) return publish();\n    if (passRequests >= DATE_NIGHT_RADIAL_MAX_PATCHES) { paused = true; return publish(); }\n    // A failed/missing core cannot be bypassed by starting outer work.\n    if (candidate.innerMiles > 0 && coverage.patches[0]!.missingActivityTypes.length) {\n      paused = true;\n      return publish();\n    }\n    if (candidate.innerMiles > 0) {\n      const wait = outerReadyAt - performance.now();\n      if (wait > 0) { timer = setTimeout(next, wait); return publish(); }\n      outerReadyAt = performance.now() + DATE_NIGHT_RADIAL_MIN_OUTER_START_MS;\n    }\n    const flight = { query: { ...query, patchId: candidate.id, activityTypes: candidate.missingActivityTypes },\n      types: candidate.missingActivityTypes, cleanup: undefined as (() => void) | undefined };\n    inFlight = flight;\n    passRequests++;\n    for (const type of flight.types) attempts.set(key(candidate.id, type), now());\n    let degraded = false;\n    flight.cleanup = startDiscoveryRequest({ mode: \"date-night\",\n      request: signal => request(flight.query, signal),\n      onSuccess: result => {\n        if (inFlight !== flight) return;\n        cache.store(flight.query, result);\n        const after = snapshot().coverage.patches.find(p => p.id === candidate.id)!;\n        const missing = flight.types.filter(t => after.missingActivityTypes.includes(t));\n        degraded = missing.length > 0;\n        const failures = failed.get(candidate.id) ?? new Set<ConcreteDateNightType>();\n        for (const type of flight.types) {\n          if (missing.includes(type)) failures.add(type);\n          else failures.delete(type);\n        }\n        failed.set(candidate.id, failures);\n        if (!candidate.innerMiles) {\n          coreSettled = true;\n          // A legacy response can be displayed, but never becomes patch proof.\n          // Saved fallback rows from failed categories do not assert coverage.\n          displayOnly = !result.patch || result.source === \"fallback\" ? result : {\n            ...result, venues: result.venues.filter(v => v.source !== \"osm\" && v.activityTypes.some(t => missing.includes(t))),\n          };\n          if (!displayOnly.venues.length && result.patch && result.source !== \"fallback\") displayOnly = null;\n        }\n        error = null;\n      },\n      onError: failure => {\n        if (inFlight !== flight) return;\n        degraded = true;\n        const failures = failed.get(candidate.id) ?? new Set<ConcreteDateNightType>();\n        flight.types.forEach(t => failures.add(t));\n        failed.set(candidate.id, failures);\n        if (!candidate.innerMiles) coreSettled = true;\n        error = failure instanceof Error ? failure.message : \"Could not load date-night activities\";\n      },\n      onSettled: () => {\n        if (inFlight !== flight) return;\n        inFlight = undefined;\n        consecutiveFailures = degraded ? consecutiveFailures + 1 : 0;\n        const after = snapshot().coverage;\n        if ((!candidate.innerMiles && after.patches[0]!.missingActivityTypes.length) || consecutiveFailures >= DATE_NIGHT_RADIAL_FAILURE_LIMIT) paused = true;\n        const pause = degraded ? DATE_NIGHT_RADIAL_PAUSE_MS : DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS;\n        outerReadyAt = Math.max(outerReadyAt, performance.now() + pause);\n        if (!paused && candidates(after).length) timer = setTimeout(next, outerReadyAt - performance.now());\n        publish();\n      },\n    });\n    publish();\n  };\n  return {\n    update(acquisition: DateNightAcquisition, callbacks: { request: Request; onChange: typeof onChange; retryVersion?: number }) {\n      const compatible = query && sameSignature(query, acquisition);\n      const retry = callbacks.retryVersion !== undefined && callbacks.retryVersion !== retryVersion;\n      request = callbacks.request;\n      onChange = callbacks.onChange;\n      retryVersion = callbacks.retryVersion ?? 0;\n      query = { ...acquisition, activityTypes: normalizeDateNightActivityTypes(acquisition.activityTypes, acquisition.halloweenActive) };\n      if (!compatible) {\n        cancel(); attempts = new Map(); failed = new Map(); passRequests = 0; consecutiveFailures = 0;\n        paused = false; coreSettled = false; displayOnly = null; error = null;\n      } else {\n        for (const [id, at] of attempts) if (now() < at || now() - at >= DATE_NIGHT_CACHE_TTL_MS) attempts.delete(id);\n        if (retry) {\n          attempts.clear(); failed.clear(); passRequests = 0; consecutiveFailures = 0; paused = false; error = null;\n        }\n        const current = snapshot().coverage;\n        const needed = inFlight && current.patches.find(p => p.id === inFlight!.query.patchId);\n        const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);\n        if (inFlight && (!needed || !inFlight.types.every(t => requested.includes(t)))) cancel();\n        // A completed/smaller view may resume genuinely new, unattempted work.\n        // Failed categories remain attempted until explicit retry or TTL expiry.\n        if (passRequests < DATE_NIGHT_RADIAL_MAX_PATCHES && consecutiveFailures < DATE_NIGHT_RADIAL_FAILURE_LIMIT) paused = false;\n        if (!current.patches[0]!.missingActivityTypes.length) coreSettled = true;\n      }\n      if (!inFlight) { clearTimeout(timer); timer = undefined; next(); }\n      else publish();\n    },\n    dispose() { cancel(); query = undefined; },\n  };\n}\n\nexport function dateNightRadialProgress(coverage: DateNightCoverageState, expanding: boolean) {\n  const radius = coverage.continuousRadiusMiles;\n  if (coverage.complete) return `Loaded through ${coverage.selectedMaxRadiusMiles} miles`;\n  const prefix = radius ? `Loaded through ${radius} miles` : \"Nearby coverage is incomplete\";\n  if (expanding) return `${prefix} \u00b7 expanding toward ${coverage.selectedMaxRadiusMiles} miles\u2026`;\n  return `${prefix} \u00b7 ${radius ? \"some outer areas could not be loaded\" : \"some areas could not be loaded\"}`;\n}\n"
++}
+diff --git a/scripts/test-support/curated-radius-source-before.mjs b/scripts/test-support/curated-radius-source-before.mjs
+new file mode 100644
+index 0000000..a992164
+--- /dev/null
++++ b/scripts/test-support/curated-radius-source-before.mjs
+@@ -0,0 +1,18 @@
++import assert from "node:assert/strict";
++import { readFileSync } from "node:fs";
++import { createHash } from "node:crypto";
++const hash = bytes => createHash("sha256").update(bytes).digest("hex");
++const bytes = readFileSync(new URL("./curated-radius-source-baseline.json", import.meta.url));
++assert.equal(hash(bytes), "552cc61c35a4614dcd5db0a60d498704bec18fac0b3abcdb9456c78fdcbd4ad4");
++const amendment = JSON.parse(bytes);
++assert.equal(amendment.path, "src/lib/date-night/radial-session.ts");
++assert.equal(amendment.baseCommit, "991978fe24ec165eeacd5500a26d66f35d86c560");
++
++/** Preserve every historical byte receipt. Only the fully pinned D2 session
++ * source maps to its fully pinned original; all other input bytes pass through. */
++export function curatedRadiusSourceBefore(path, source) {
++  if (path !== amendment.path) return source;
++  assert.equal(hash(source), amendment.afterSha256, "Exact D2 session source");
++  assert.equal(hash(amendment.beforeSource), amendment.beforeSha256, "Exact pre-D2 session source");
++  return Buffer.from(amendment.beforeSource);
++}
+diff --git a/src/lib/date-night/curated-policy.ts b/src/lib/date-night/curated-policy.ts
+index 4499c6a..e3722db 100644
+--- a/src/lib/date-night/curated-policy.ts
++++ b/src/lib/date-night/curated-policy.ts
+@@ -29,6 +29,12 @@ export function getCuratedSeasonalPlace(id: string): DateNightPlace | undefined
+   return reviewed.get(id);
+ }
+ 
++/** Saved discovery is independent of live patch coverage. The caller must still
++ * apply exact radius, category, lifecycle, date and Open Now eligibility. */
++export function getCuratedSeasonalPlaces(halloweenActive: boolean): DateNightPlace[] {
++  return [...reviewed.values()].filter(place => halloweenActive || place.seasonalListing?.visibility === "listing-lifecycle");
++}
++
+ /** Cached/saved IDs never restore superseded coordinates or lose current policy.
+  * Preserve negative provider lifecycle evidence; never resurrect a closed venue. */
+ export function applyCuratedSeasonalPolicy(place: DateNightPlace): DateNightPlace {
+diff --git a/src/lib/date-night/radial-session.ts b/src/lib/date-night/radial-session.ts
+index 05bb0e0..d4c334a 100644
+--- a/src/lib/date-night/radial-session.ts
++++ b/src/lib/date-night/radial-session.ts
+@@ -1,10 +1,11 @@
+ import { startDiscoveryRequest } from "../discovery/client-request";
+-import { DATE_NIGHT_CACHE_TTL_MS, type DateNightAcquisition } from "./cache";
++import { DATE_NIGHT_CACHE_TTL_MS, failedDateNightAcquisition, type DateNightAcquisition } from "./cache";
++import { getCuratedSeasonalPlaces } from "./curated-policy";
+ import { createDateNightRadialCache, clipDateNightRadius } from "./radial-cache";
+ import { mergeDateNight } from "./identity";
+ import { normalizeDateNightActivityTypes } from "./query-plan";
+ import { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNightPatchCoverageRecord } from "./radial-plan";
+-import type { ConcreteDateNightType, DateNightSearchResponse } from "./types";
++import type { ConcreteDateNightType, DateNightPlace, DateNightSearchResponse } from "./types";
+ 
+ export const DATE_NIGHT_RADIAL_PAUSE_MS = 1000;
+ export const DATE_NIGHT_RADIAL_SUCCESS_PAUSE_MS = 250;
+@@ -40,6 +41,10 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
+   let paused = false;
+   let coreSettled = false;
+   let displayOnly: DateNightSearchResponse | null = null;
++  // A bounded saved pool belongs to this location/semantic session. Destructive
++  // retirement mirrors cached positives: eviction of negative proof must never
++  // recreate a known closed identity from the unchanged static registry.
++  let savedPool: DateNightPlace[] = [];
+   let error: string | null = null;
+   const key = (patchId: string, type: ConcreteDateNightType) => `${patchId}/${type}`;
+   const sameSignature = (a: DateNightAcquisition, b: DateNightAcquisition) => a.lat === b.lat && a.lon === b.lon &&
+@@ -66,6 +71,23 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
+         source: response ? venues.some(v => v.source !== "osm") ? "merged" : "live" : displayOnly.source,
+         discovery: response?.discovery ?? displayOnly.discovery };
+     }
++    // Curated identities have their own reviewed location/date authority. A live
++    // core failure must not hide saved records inside the user-selected radius.
++    // This presentation-only composition never enters the provider proof cache.
++    // Retain core settlement/loading behavior and merge known negative evidence.
++    if (coreSettled || response) {
++      const negatives = [...negativeEvidence, ...(visible?.venues.filter(place => place.lifecycle) ?? [])];
++      if (negatives.length) savedPool = mergeDateNight(negatives, savedPool).filter(place => !place.lifecycle);
++      const saved = clipDateNightRadius(savedPool, query)
++        .filter(place => place.activityTypes.some(type => query!.activityTypes.includes(type)) ||
++          (!query!.halloweenActive && place.seasonalListing?.visibility === "listing-lifecycle"));
++      if (saved.length) {
++        const base = visible ?? failedDateNightAcquisition(query);
++        const venues = mergeDateNight([...(visible?.venues ?? []), ...negativeEvidence], saved);
++        visible = { ...base, venues, source: response || base.source !== "fallback" ? "merged" : "fallback",
++          ...(!response && base.source === "fallback" ? { warning: base.warning ?? "Using saved Date Night places while the live map is unavailable." } : {}) };
++      }
++    }
+     const hasFailure = coverage.failedPatchIds.length > 0;
+     if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,
+       discovery: { groups: visible.discovery?.groups ?? [], partial: true } };
+@@ -165,6 +187,7 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
+       if (!compatible) {
+         cancel(); attempts = new Map(); failed = new Map(); passRequests = 0; consecutiveFailures = 0;
+         paused = false; coreSettled = false; displayOnly = null; error = null;
++        savedPool = getCuratedSeasonalPlaces(query.halloweenActive);
+       } else {
+         for (const [id, at] of attempts) if (now() < at || now() - at >= DATE_NIGHT_CACHE_TTL_MS) attempts.delete(id);
+         if (retry) {

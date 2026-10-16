@@ -1,0 +1,59 @@
+{
+  "closedAt": "2026-10-16T00:10:48.915956+00:00",
+  "candidateSha": "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158",
+  "candidateTree": "c36112156cd11baefb6671194f0d59b9c181c2a3",
+  "parents": [
+    "e25594063bc0de09aeb4e08c4912845f9f08fffa",
+    "ead2319c4869478f4cd121e2370db4d9734d83ed"
+  ],
+  "scope": {
+    "files": 9,
+    "insertions": 217,
+    "deletions": 6,
+    "curatedIdentities": 92,
+    "sourceDatesUnchanged": true
+  },
+  "validation": {
+    "repositoryPass": 1253,
+    "repositorySkip": 4,
+    "applicationPass": 71,
+    "independentFocusedPass": 115,
+    "currentMainD2BeforeFail": 7,
+    "currentMainD2BeforeControlPass": 2,
+    "candidateD2Pass": 9,
+    "hostedBrowserJobsPass": 15,
+    "hostedScenarioRecords": 2030,
+    "casinoAndLocationChecks": 35,
+    "geometryComparisons": 774,
+    "independentKcStages390px": 14,
+    "independentDirectionsCases320390512": 6,
+    "webLintWarnings": 6,
+    "androidLintWarnings": 14,
+    "typecheck": "PASS",
+    "migrationFreeAuthBuild": "PASS",
+    "unsignedAndroid": "PASS",
+    "signing": "SKIPPED"
+  },
+  "webRun": 38822722705,
+  "androidRun": 38822722711,
+  "newOriginalArchivesInspected": 18,
+  "newOriginalArchiveBytes": 1381897374,
+  "newOriginalPngMembers": 13658,
+  "oldHostedArchivesInspected": 6,
+  "oldHostedArtifactsTotal": 18,
+  "releaseStatus": "DRAFT / UNMERGED / RELEASE HOLD; separate exact SHA/tree owner approval required",
+  "remainingQualifications": [
+    "controlled providers/clock/geocoder and fallback fonts",
+    "live providers, physical Android/WebView, GPS and field operations not cleared",
+    "inherited 390px notice/Details tightness",
+    "source authority and source-bound expiration unchanged",
+    "negative retirement is scoped to a location/Halloween/semantic session namespace",
+    "rollback generated-alias behavior unproven; owner interface only after separate rollback approval",
+    "remote release-continuity publication held to avoid unrelated deployment"
+  ],
+  "noReleaseActionPerformed": true,
+  "independentVerdict": "QUALIFIED PASS",
+  "independentReportSha256": "df4ffec1c220a38c2084114d612423146d3b9fd3e71ac25b9ac5adc9d1e8bd16",
+  "newOriginalSavedWholeFilesOrParts": 52,
+  "hostedCompactLibraryId": "libfile_6d152bf6cdd08191a1171401c555757e"
+}

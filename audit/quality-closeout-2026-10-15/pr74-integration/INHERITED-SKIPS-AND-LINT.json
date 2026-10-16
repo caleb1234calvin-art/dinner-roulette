@@ -1,0 +1,20 @@
+{
+  "skippedTestRecords": [
+    "\ufe63 SKILL.md and AGENTS.md name the marker path and bound this script uses (0.084828ms) # External workspace OG documentation package is not installed in this checkout",
+    "\ufe63 the sections that own the brand-task prohibition never affirm a wait (0.047902ms) # External workspace OG documentation package is not installed in this checkout",
+    "\ufe63 SKILL.md tells the pass to self-check with the flag this CLI accepts (0.195996ms) # External workspace OG documentation package is not installed in this checkout",
+    "\ufe63 every hand-over the og skill prints is one this script accepts (0.625363ms) # External workspace OG documentation package is not installed in this checkout"
+  ],
+  "skippedCount": 4,
+  "webLintWarningCount": 6,
+  "affectedWarningFilesUnchangedFromMain": {
+    "audit/seasonal-discovery-coverage-audit-1-evidence/probe.mjs": true,
+    "scripts/test-support/slider-accessibility-fixture.tsx": true,
+    "src/components/ui/button.tsx": true,
+    "src/lib/auth/use-current-user.ts": true,
+    "src/lib/nightlife/casino-catalog-pass-16.ts": true,
+    "src/lib/nightlife/casino-catalog-pass-25.ts": true
+  },
+  "lintErrors": 0,
+  "note": "No test was skipped by PR74 integration. Four skips explicitly concern the absent external workspace OG documentation package. Full original logs retained."
+}
