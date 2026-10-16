@@ -1,0 +1,44 @@
+{
+  "verified_at_utc": "2026-10-16T02:13:06.335590+00:00",
+  "status": "COMPLETE",
+  "original_archives": 18,
+  "archive_library_files": 20,
+  "original_archive_bytes": 1382719584,
+  "all_original_archives_library_roundtrip_verified": true,
+  "final_receipt": {
+    "local_path": "/workspace/scratch/a0ea701c7b34/pr75-recovery-2026-10-16/PR75-ORIGINAL-EVIDENCE-PRESERVATION-RECEIPT.json",
+    "purpose": "replace_library_file",
+    "status": "succeeded",
+    "file_id": "file_00000000c7a881f5be11d78f1e66b24c",
+    "library_file_id": "libfile_49b5166777208191aed5858c16e557da",
+    "file_name": "PR75-ORIGINAL-EVIDENCE-PRESERVATION-RECEIPT.json",
+    "local_metadata_applied": true,
+    "path": "/PR75-ORIGINAL-EVIDENCE-PRESERVATION-RECEIPT.json",
+    "current_version_number": 1
+  },
+  "compact_packet": {
+    "local_path": "/workspace/scratch/a0ea701c7b34/pr75-recovery-2026-10-16/PR75-INDEPENDENT-RECOVERY-EVIDENCE-2026-10-16.zip",
+    "purpose": "create_library_file",
+    "status": "succeeded",
+    "file_id": "file_00000000d1ec81f5b40eef7cd88f95da",
+    "library_file_id": "libfile_7d575976247c8191bbca535429955d09",
+    "file_name": "PR75-INDEPENDENT-RECOVERY-EVIDENCE-2026-10-16.zip",
+    "local_metadata_applied": true,
+    "path": "/PR75-INDEPENDENT-RECOVERY-EVIDENCE-2026-10-16.zip",
+    "current_version_number": 0
+  },
+  "final_deliverable_checks": [
+    {
+      "file_name": "PR75-ORIGINAL-EVIDENCE-PRESERVATION-RECEIPT.json",
+      "bytes": 3229012,
+      "sha256": "107e9480588a7e739398ff91016997bfaf039c1f614446b03dbef57877604d2c",
+      "library_roundtrip_verified": true
+    },
+    {
+      "file_name": "PR75-INDEPENDENT-RECOVERY-EVIDENCE-2026-10-16.zip",
+      "bytes": 6433200,
+      "sha256": "38606a0c1e8c3932d9993056027b97f698c6ea20e0b3f05805ab18b27c0c2468",
+      "library_roundtrip_verified": true
+    }
+  ]
+}

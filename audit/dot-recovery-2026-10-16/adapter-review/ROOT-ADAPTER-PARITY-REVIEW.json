@@ -1,0 +1,40 @@
+{
+  "reviewer": "dot root, separate from R2 proposal author",
+  "scope": "Archived-source parity of revised Aura/Necrosis details only; no fresh venue verification, runtime or release acceptance",
+  "reviewedAt": "2026-10-16T01:53:02.541139+00:00",
+  "Aura": {
+    "sha256": "d678e6fd3367be79b250f16e2ac1ca6e7a5d586d878be1b8990dbe6be59ad330",
+    "verdict": "PASS_ARCHIVED_SOURCE_PARITY",
+    "findings": "Operator-attributed health advisories and specific bag/costume/temporary mobility-device restrictions match original FAQ. Not new medical advice. Previously cleared date facts remain inherited."
+  },
+  "NecrosisR2": {
+    "sha256": "d92ef4c9fafce284f14fe6902c4365d72783ef7af75c2ebae74f04499e7a8cd5",
+    "verdict": "BOUNDED_WORDING_CORRECTION_REQUIRED",
+    "findings": "Signed admission agreement and health declarations supported. Effects-risk list should be framed as operator warning rather than categorical current effect use. Requested exact wording: The operator warns of strobes, fog and darkness."
+  },
+  "sources": [
+    {
+      "path": "recover-twenty-record-batch/recovered/unpacked/CENTRAL-SIX-RESEARCH-R1/CENTRAL-SIX-RESEARCH-R1/source-pages/aura-faq.visible-text.txt",
+      "sha256": "3195f42f95f73b31c62599d562aa5357a661342c980aa9c2c005d22301fbcc9d"
+    },
+    {
+      "path": "recover-twenty-record-batch/recovered/unpacked/CENTRAL-SIX-RESEARCH-R1/CENTRAL-SIX-RESEARCH-R1/source-pages/necrosis-next-data.txt",
+      "sha256": "4afd581c577568f9ba17ca51977c191ed680b471d359492550fd01d66bf731b3"
+    },
+    {
+      "path": "recover-twenty-record-batch/recovered/unpacked/CENTRAL-SIX-RESEARCH-R1/CENTRAL-SIX-RESEARCH-R1/source-pages/necrosis-public-faq.json",
+      "sha256": "dca4c846b402f0e6587578fabb8f4dc3dd24e8d5a822457320d4e72d1a229d2f"
+    }
+  ],
+  "limits": [
+    "Archived-source parity only",
+    "Full candidate/type/build/browser/lifecycle review pending",
+    "No source-refetch or claim of fresh operator confirmation"
+  ],
+  "NecrosisR3": {
+    "sha256": "5ce397c7d3895bbebcb19e2b27218a2f777de686640216ed84a0ada78d071e3b",
+    "verdict": "PASS_ARCHIVED_SOURCE_PARITY",
+    "finding": "Verified exact requested single-sentence change; other fields and proposals unchanged. Operator-warning wording matches preserved admission-agreement risk list. Prior R2 correction retained."
+  },
+  "finalReviewedAt": "2026-10-16T01:53:41.610633+00:00"
+}

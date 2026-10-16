@@ -1,0 +1,104 @@
+{
+  "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+  "files": [
+    {
+      "path": "docs/verification-packet.md",
+      "blob": "d48402353c8a6fada10268d5d4ce41267fef0edd",
+      "bytes": 5381,
+      "sha256": "4f78e81e3eb823c51bc5ae1dccdb63055a0f004c921fb8f5946d7318d7db7396",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/verification-packet.mjs",
+      "blob": "3f23313c9bb91b172bb94dd3f82dbaca449b2f61",
+      "bytes": 10406,
+      "sha256": "ad56a44f3daf6ad2b4c16b3a14bd5d379b8d555387cb916e77fa1616e203f77f",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/verification-packet.test.mjs",
+      "blob": "428fd757111364ccc0bc84455d00129756e506c4",
+      "bytes": 7646,
+      "sha256": "11bfe2599a73301efd1e30ebc3f7ee0f508b669d804ff3722506692b725e921d",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/browser-build-proof.mjs",
+      "blob": "c951fe834e2089e916435168b8c433354ca552b5",
+      "bytes": 3677,
+      "sha256": "634b9c9000e07aa300a37c1df22fd9952377bb40702545b2904c441e35692e0c",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/browser-build-proof.test.mjs",
+      "blob": "8ce0b55103b9278fd3a9609f90d0c6e2470f9718",
+      "bytes": 1856,
+      "sha256": "5ba6fae092a02c1e1af1e99a8a69ed184ae891e0c90206eebd49c86b853356e8",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/components/location-control.tsx",
+      "blob": "288235cedcd6d925c43a3cdc6c2ec2e2fe7e5908",
+      "bytes": 7562,
+      "sha256": "843baae89dd2945ed98d6a047daa9e7395d274bf653c8497393d49352efaf11f",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/lib/location/controller.ts",
+      "blob": "35b5bbd522e66e7650d6479d384fdba7dd131968",
+      "bytes": 6078,
+      "sha256": "2cdad3a2276d0a7985551f9fdf733e93ef9ab5cf83d9c130d6975a8355ef0f39",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/lib/location/model.ts",
+      "blob": "174a090ec393e74f4d118ed496be651f37d6538f",
+      "bytes": 2779,
+      "sha256": "91ecf902c3ac0806e72473c374f0ad8c4ed2b776cfac302915e9360ef1ebd8c3",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "blob": "0c3980bdf9788ffa5a8c2c35362dced0fa3d09a0",
+      "bytes": 5292,
+      "sha256": "e490ba465bafc3ccfcf323e295119706a7ef8c1d26f33e4512eaa72bf3f3f8de",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/lib/restaurants/search.ts",
+      "blob": "8b74e613bc87d80dda454bb3ecd88f0648e57b89",
+      "bytes": 2667,
+      "sha256": "afb3d68c519e8f595da30f8e6132ae9e6ba6bc0a6cb4ae79db07f4b559881ab5",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/location-disambiguation-browser.mjs",
+      "blob": "0020bf2a6922b3253a7c78191e5f9de3f5d9b07b",
+      "bytes": 11129,
+      "sha256": "d8f2abf8eac9c40a1a85e575ed1d2302a6cd1f75b0619229df0b8c64a956dcd0",
+      "gitBlobVerified": true
+    },
+    {
+      "path": ".github/workflows/validate-icon-pack.yml",
+      "blob": "748ff19ee0aa2bbb5ca23896a144590683ca4701",
+      "bytes": 9686,
+      "sha256": "c98b4029fad4fcf8efb417cc9e58cbdd615573becb27de7e9d348ded0c2846c8",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "scripts/seasonal-card-layout-browser.mjs",
+      "blob": "d7e677e5af832f706a07b9c5d86457fa11808ded",
+      "bytes": 33087,
+      "sha256": "7dbd97fe09a39db0d30771b203cbd437ccc201283682784ccec00572fec96efc",
+      "gitBlobVerified": true
+    },
+    {
+      "path": "src/lib/location/location.test.ts",
+      "blob": "97ca38788a08a389ed7cacbbb36d71f9d9e08b2d",
+      "bytes": 22727,
+      "sha256": "094bc49c878492d3b74ed8e027a83d3150b957232a502595e3090ca6bded91bd",
+      "gitBlobVerified": true
+    }
+  ],
+  "note": "Connector source copies verified with Git blob hash. Initial transport added one newline; removed it and reran exact-byte focused tests."
+}

@@ -1,0 +1,44 @@
+{
+  "reviewer": "dot root; independent of PR75 implementation",
+  "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+  "tree": "62f2615cb924f15ec7fc6cb5a160d1eb613ba605",
+  "method": "Direct visual inspection of all six original archived PNGs through view_image; no new browser run",
+  "findings": [
+    "County and municipality full geography and place-type labels readable and wrapped inside choice cards at 320,390,512 widths.",
+    "Focused municipality choice has visible orange outline; choice text itself not visibly clipped.",
+    "Sticky mode navigation overlays chooser header/help in initial full-page captures and other location text in focused scrolled captures. Fixed action/navigation overlays other feed sections. Existing viewport/interaction evidence must qualify these captures; cannot claim global absence of occlusion from these images.",
+    "Screenshots alone do not prove live provider reliability, physical Android usability or all interaction states."
+  ],
+  "images": [
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/choices-320.png",
+      "bytes": 125942,
+      "sha256": "d754d3f27ac5e190760dc9d2121b24683a8b6f3705b32f2dbf276dc9cb2d0e4c"
+    },
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/choices-390.png",
+      "bytes": 126327,
+      "sha256": "844ebe1de1dde8943bcceed4003f5b1f290d2dbc023e7b857cc5b7a4ef503605"
+    },
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/choices-512.png",
+      "bytes": 128139,
+      "sha256": "472ae0db919baf2bba971ce3855bde58c2eda1faabab625840f2f97eec938fcc"
+    },
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/focus-320.png",
+      "bytes": 130250,
+      "sha256": "c081fdf78eca240b4ca00f6081ff7b7c7687d66df4b4bcbf5ed41423fd2dd246"
+    },
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/focus-390.png",
+      "bytes": 132472,
+      "sha256": "24da931801cc434e89c541b0c427e9c9cd9e1652f70c904e41898d6b5f37c63d"
+    },
+    {
+      "path": "pr75-recovery-2026-10-16/location/location-disambiguation/focus-512.png",
+      "bytes": 127944,
+      "sha256": "9134421016ff3c35a826cf2ef97c19b3d3dd237609cf8321be6e60700d74c9aa"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "observed_window_utc": "2026-10-16T01:39:20Z to 2026-10-16T01:41:15Z",
+  "method": "Read-only GitHub and Vercel connectors. No browser, mutation, rollback execution, migration, configuration, credential, signing or Play action.",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "github": {
+    "main": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "tree": "c36112156cd11baefb6671194f0d59b9c181c2a3",
+    "parents": [
+      "ead2319c4869478f4cd121e2370db4d9734d83ed",
+      "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158"
+    ],
+    "main_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "pr74": {
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/74",
+      "state": "closed",
+      "merged": true,
+      "head_sha": "e5e1682f6c82c9a7d972e28bf9b9f94973a3d158",
+      "merge_commit_sha": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+      "merged_at": "2026-10-16T01:07:38Z"
+    }
+  },
+  "production": {
+    "id": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+    "name": "dinner-roulette",
+    "url": "dinner-roulette-fr47p5yy5-minions-9e2c.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1792112860397,
+    "creator": {
+      "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+      "username": "caleb1234calvin-6132"
+    },
+    "project": {
+      "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "name": "dinner-roulette",
+      "framework": "tanstack-start"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+      "githubCommitMessage": "Merge pull request #74 from caleb1234calvin-art/integration/kc-curated-radius-2026-10-15\n\nfix: preserve curated discovery within the selected Kansas City radius (D2)",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "alias": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1792112861399,
+    "ready": 1792112876500,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "project": {
+    "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+    "name": "dinner-roulette",
+    "framework": "tanstack-start",
+    "accountId": "team_iBSXkvS9Z7tu8o8AtW0vlDt7",
+    "createdAt": 1788646871484,
+    "updatedAt": 1792112876911,
+    "nodeVersion": "24.x",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "url": "dinner-roulette-fr47p5yy5-minions-9e2c.vercel.app",
+      "createdAt": 1792112860397,
+      "readyState": "READY",
+      "target": "production"
+    },
+    "domains": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "ssoProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792112876660
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308,
+      "updatedAt": 1792112876663
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792112876642
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792112876648
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "projectId": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "redirect": null,
+      "redirectStatusCode": null,
+      "updatedAt": 1792112876646
+    }
+  ],
+  "source": {
+    "presentation_file": "src/lib/date-night/seasonal-presentation-catalog.ts",
+    "presentation_blob": "7be14a0b1911173a66991d488108a16f641e8336",
+    "entries": 92,
+    "unique": 92,
+    "catalog_comparison_base": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+    "files": 21,
+    "changes": [],
+    "qualification": "Static source identity and blob comparison, not a new runtime or field acceptance."
+  },
+  "previous_deployment_metadata": {
+    "id": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+    "name": "dinner-roulette",
+    "url": "dinner-roulette-5w6in9rf7-minions-9e2c.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1792105052624,
+    "creator": {
+      "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+      "username": "caleb1234calvin-6132"
+    },
+    "project": {
+      "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "name": "dinner-roulette",
+      "framework": "tanstack-start"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+      "githubCommitMessage": "Merge pull request #73 from caleb1234calvin-art/integration/result-directions-wrap-2026-10-15\n\nFix Result Directions label overflow on narrow screens",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "alias": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1792105053581,
+    "ready": 1792105064684,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "rollback_eligibility": {
+    "verified": false,
+    "error": {
+      "message": "Vercel API request failed (403: forbidden). You don't have permission to list the resource.",
+      "recovery": "Try an available mapped CLI fallback first for the same authorized action, with the same explicit team/project and the CLI's own credentials. If it succeeds, use its result. If it fails or no CLI fallback is available, No automatic fix is known from this response. Report the error to the user. Do not retry unchanged or assume re-authentication will fix it.",
+      "remediation": {
+        "actor": "unknown",
+        "action": "none"
+      },
+      "status": 403,
+      "code": "forbidden",
+      "operation": "GET /v7/deployments",
+      "action": "list",
+      "resource": "deploymentRollback",
+      "requestId": "sfo1:sfo1::s5r6t-1792114791008-d3ce0983d3f5"
+    },
+    "action_after_denial": "Stopped this permission-gated check; no retry or alternate-route bypass."
+  },
+  "reported_historical": {
+    "source_issue": "https://github.com/caleb1234calvin-art/dinner-roulette/issues/71#issuecomment-6205909635",
+    "release_report_url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/5fdea2bc7861462d504d0af8c795189d020fb805/audit/accelerated-development-2026-10-16/pr74-release/RELEASE-REPORT.md",
+    "rollback_receipt_url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/5fdea2bc7861462d504d0af8c795189d020fb805/audit/accelerated-development-2026-10-16/pr74-release/POSTDEPLOY-ROLLBACK.json",
+    "rollback_receipt": {
+      "currentDeployment": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "currentSha": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+      "supportedInterface": "Owner Vercel project overview Instant Rollback",
+      "precedingDeploymentOffered": "dpl_8DBJFLQwkBGckTxM5RYPM63dLqS5",
+      "precedingSha": "ead2319c4869478f4cd121e2370db4d9734d83ed",
+      "canceledWithoutContinue": true,
+      "qualifications": [
+        "Hobby supports immediately preceding deployment only",
+        "Generated-alias recovery remains unproven",
+        "Prior denied rollback API not retried",
+        "Owner must separately approve any rollback execution"
+      ],
+      "observedDateUtc": "2026-10-16",
+      "timePrecision": "During this release turn; no exact click timestamp retained"
+    },
+    "override": "Published release report states ON with VITE_AUTH_ENABLED=true node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production; not freshly exposed by connector.",
+    "continuity": {
+      "commit": "5fdea2bc7861462d504d0af8c795189d020fb805",
+      "blob": "28c562e18da282ecd5c1c4675a22b9fb37525fbe",
+      "bytes": 1233271,
+      "current_header_read": true
+    },
+    "qualifications": [
+      "Hobby immediate-predecessor restriction, retention and generated-alias recovery remain unproven by this refresh.",
+      "Physical Android/WebView/GPS/PWA, source freshness and field operations, provider complete coverage, Maps route correctness, inherited tight 390px spacing, and session-scoped negative lifecycle retirement remain prior qualifications.",
+      "Original archives and release smoke evidence were not rerun or rehashed in this independent baseline refresh."
+    ]
+  }
+}

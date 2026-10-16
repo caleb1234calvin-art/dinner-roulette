@@ -1,0 +1,20 @@
+[
+  {
+    "canonicalId": "date-night-il26-w1-clinton",
+    "originalRecordSha256": "ae00c074b37b69723f2ba19805845351aee0e4cd284b3ca3593774e3cf2e16b4",
+    "operation": "omit null optional property",
+    "path": "/seasonalAvailability/endsAt",
+    "originalValue": null,
+    "intendedEffect": "No endsAt asserted; preserve listingExpiresAt, expiryBasis, all source dates and every other field.",
+    "status": "PROPOSED_ADAPTER_REQUIRES_INDEPENDENT_REVIEW_AND_EXACT_CANDIDATE_TESTS"
+  },
+  {
+    "canonicalId": "date-night-il26-w1-13th-floor-chicago",
+    "originalRecordSha256": "ebe888ce2763a4f0b2e6b6b95009bc058af637d041f87f3e88385d23e4219ff1",
+    "operation": "omit null optional property",
+    "path": "/seasonalAvailability/endsAt",
+    "originalValue": null,
+    "intendedEffect": "No endsAt asserted; preserve listingExpiresAt, expiryBasis, all source dates and every other field.",
+    "status": "PROPOSED_ADAPTER_REQUIRES_INDEPENDENT_REVIEW_AND_EXACT_CANDIDATE_TESTS"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "path": "PickForUs-debug.apk",
+    "bytes": 4174862,
+    "sha256": "f7f4f10161ad00c3f33d7cf562a43601ee9d1064c3dd2f167392d482eb18ad40",
+    "zipCrc": null,
+    "entries": 427,
+    "jarSignatures": [],
+    "capacitorConfig": [
+      {
+        "appId": "com.calebcalvin.pickforus",
+        "appName": "Pick For Us",
+        "webDir": "native-web",
+        "server": {
+          "url": "https://dinner-roulette-chi.vercel.app",
+          "cleartext": false,
+          "errorPath": "index.html"
+        },
+        "android": {
+          "allowMixedContent": false,
+          "webContentsDebuggingEnabled": false
+        },
+        "plugins": {
+          "SystemBars": {
+            "insetsHandling": "native"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "path": "PickForUs-unsigned.aab",
+    "bytes": 3103535,
+    "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee",
+    "zipCrc": null,
+    "entries": 430,
+    "jarSignatures": [],
+    "capacitorConfig": [
+      {
+        "appId": "com.calebcalvin.pickforus",
+        "appName": "Pick For Us",
+        "webDir": "native-web",
+        "server": {
+          "url": "https://dinner-roulette-chi.vercel.app",
+          "cleartext": false,
+          "errorPath": "index.html"
+        },
+        "android": {
+          "allowMixedContent": false,
+          "webContentsDebuggingEnabled": false
+        },
+        "plugins": {
+          "SystemBars": {
+            "insetsHandling": "native"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "path": "SHA256SUMS",
+    "bytes": 195,
+    "sha256": "524ee30f07dbb62935216ed80d28e4de6915c944cb9b2483efa7f2ace924a25c"
+  },
+  {
+    "path": "android-bundle-verification.json",
+    "bytes": 1935,
+    "sha256": "3198da11a50628393059022f5996699530e2ec38e0606e5aa5bbe82d692ab4bd"
+  },
+  {
+    "path": "android-bundle-verification.manifest.xml",
+    "bytes": 3887,
+    "sha256": "4b3b1f769dd696780863cedd33b50027a2cd8edc055aedbb6ebe784c86db1c4c"
+  },
+  {
+    "path": "android-lint-summary.json",
+    "bytes": 2633,
+    "sha256": "6ec3a2bc4b6452d186c60591ac63d46be359ec92013fdf3b29eea9c0dd1fe6d9"
+  },
+  {
+    "path": "signing-guard.log",
+    "bytes": 1735,
+    "sha256": "8600f26d668ba584266eef3a4981609340e8dcd92b498108a3ea8cc4258965e8"
+  },
+  {
+    "path": "source-revision.txt",
+    "bytes": 41,
+    "sha256": "e7ff64e604e4835f9a46b37c80b7a36155a5cd641afd82082741f065d9320250"
+  }
+]

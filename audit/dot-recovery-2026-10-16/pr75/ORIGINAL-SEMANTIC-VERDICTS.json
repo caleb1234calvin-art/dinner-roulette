@@ -1,0 +1,289 @@
+{
+  "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+  "tree": "62f2615cb924f15ec7fc6cb5a160d1eb613ba605",
+  "summary": {
+    "archiveCount": 18,
+    "totalOriginalBytes": 1382719584,
+    "pngMembers": 13664,
+    "scenarioRecords": 2030,
+    "ordinaryCasinoLocationChecks": 35,
+    "d3NamedCheckInstances": 27
+  },
+  "verdicts": [
+    {
+      "artifactId": 12018048569,
+      "path": "extracted/12018048569/missouri-two-records/verdict.json",
+      "passed": true,
+      "scenarios": 23,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "217aa2171e5615ade6bbebf7f34472aa71218cabe694bfbfa3128110cd4dde03",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018164807,
+      "path": "extracted/12018164807/location/result.json",
+      "passed": true,
+      "scenarios": 0,
+      "checks": 19,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "74e6a3eb6f53626ead37bb522b9406f57839799ab7838dd2f4dab64046069ae2",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018164807,
+      "path": "extracted/12018164807/location-disambiguation/result.json",
+      "passed": true,
+      "scenarios": 0,
+      "checks": 3,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "74e6a3eb6f53626ead37bb522b9406f57839799ab7838dd2f4dab64046069ae2",
+        "files": 193
+      },
+      "d3NamedCheckInstances": 27
+    },
+    {
+      "artifactId": 12018254803,
+      "path": "extracted/12018254803/date-night-radial/verdict.json",
+      "passed": true,
+      "scenarios": 10,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "b8698129c36206fdbde55d2011d211026c73125f4d40fbfed96c3609fead9529",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018613195,
+      "path": "extracted/12018613195/seasonal-completeness-v1/verdict.json",
+      "passed": true,
+      "scenarios": 97,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "ad428d6fec7dfcdeade2fbd5a6d30506b003b856dfac71203554565fb4b9c864",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018714142,
+      "path": "extracted/12018714142/seasonal-astra-eleven/verdict.json",
+      "passed": true,
+      "scenarios": 220,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "4c5b5b5f140cc35a8e61ad34ec1a669d1653725abf969c8b40b08563fa18bb6a",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018756319,
+      "path": "extracted/12018756319/seasonal-hold-cleanup/verdict.json",
+      "passed": true,
+      "scenarios": 69,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "ff7859a9d77c1a783c35a271da346df88ace696ab678768f26d97eaa89e640ca",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018757844,
+      "path": "extracted/12018757844/seasonal-astra-extras/verdict.json",
+      "passed": true,
+      "scenarios": 196,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "e6ef192bcfd61ef5e21747ad7b0be3db13d68ff82e63c6e11838e85ef020afb3",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018821436,
+      "path": "extracted/12018821436/seasonal-next-missouri-three/verdict.json",
+      "passed": true,
+      "scenarios": 87,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "a10d5b25265349dae5e655c926c713b95a9bca20ed8b2c4ddc6f54fa4579f4fb",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018840413,
+      "path": "extracted/12018840413/verdict.json",
+      "passed": "no top-level boolean; checks and empty errors",
+      "scenarios": 0,
+      "checks": 16,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "6b5c0bdc01d4bf79241e06e75e718f7dc571f5354e3d59b9c415aed79817da4a",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12018962155,
+      "path": "extracted/12018962155/seasonal-ranked-holds/verdict.json",
+      "passed": true,
+      "scenarios": 178,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "71a5dff8fe02b053fecb3cff82ff15eeeb9a7d96a88f490bb31f7b1f5d39bb6e",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12019118367,
+      "path": "extracted/12019118367/seasonal-card-layout/verdict.json",
+      "passed": true,
+      "scenarios": 0,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "7f132e75b9bf878bab9cb74311a4122eebf65e53f636131fcb101d45509d08d3",
+        "files": 193
+      },
+      "geometry": {
+        "comparisons": 774,
+        "uniqueIdentities": 92,
+        "widths": [
+          320,
+          390,
+          512
+        ],
+        "independentlyRecalculatedErrors": [],
+        "scope": "numeric/card identity bounds; not a fresh browser or all-screenshot visual review"
+      }
+    },
+    {
+      "artifactId": 12019146664,
+      "path": "extracted/12019146664/seasonal-cumulative-15/verdict.json",
+      "passed": true,
+      "scenarios": 235,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "9f5e10d030ad8e4e45c9e7aef058cf2c570218af4e7ec7cbab2c8b6f524cf158",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12019285393,
+      "path": "extracted/12019285393/seasonal-ten-record/verdict.json",
+      "passed": true,
+      "scenarios": 157,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "386d55b788618e422c59277e1a6a10b709821d20b92ef388d455a52f2436b759",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12019544675,
+      "path": "extracted/12019544675/seasonal-regional-wave1/verdict.json",
+      "passed": true,
+      "scenarios": 317,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "4ad8af49d2c291cdadde8163601caee1ffa75bd312ed746f2aeaac0469f3a962",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12019544675,
+      "path": "extracted/12019544675/seasonal-wave2-ten/verdict.json",
+      "passed": true,
+      "scenarios": 277,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "4ad8af49d2c291cdadde8163601caee1ffa75bd312ed746f2aeaac0469f3a962",
+        "files": 193
+      }
+    },
+    {
+      "artifactId": 12019610182,
+      "path": "extracted/12019610182/seasonal-phase4-recovery-seven/verdict.json",
+      "passed": true,
+      "scenarios": 164,
+      "checks": 0,
+      "source": {
+        "sha256": "28384dcd6f4189898f477a156e59fc43d7a666673b9094fefc2bb099e29790a8",
+        "files": 524
+      },
+      "output": {
+        "sha256": "35d437481bf0103b50dd813f1c406aa4933216739673db854ff861d7a285dc1c",
+        "files": 193
+      }
+    }
+  ],
+  "acceptance": "All18 original archives and terminal hosted gates verified. Functional/tooling QUALIFIED PASS; full independent acceptance remains HOLD for unresolved chooser heading/help viewport visibility.",
+  "terminalCI": {
+    "web": "SUCCESS",
+    "unsignedAndroid": "SUCCESS",
+    "successfulJobs": 18,
+    "intentionalSigningSkips": 1,
+    "aggregateCompletedAt": "2026-10-16T02:08:30Z"
+  }
+}

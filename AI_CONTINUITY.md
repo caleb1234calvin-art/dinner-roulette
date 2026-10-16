@@ -1,3 +1,19 @@
+# CURRENT — DOT recovery complete; PR75 independent acceptance HOLD — 2026-10-16 UTC
+
+Production remains main `c3208d9fdc9a21d698efa9254be1286f5d3d2836`, tree `c36112156cd11baefb6671194f0d59b9c181c2a3`, READY `dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6`; all five aliases and 92 identities were freshly verified. Prior production smoke/Override/owner rollback-selector evidence was not rerun. Previous 8DB remains READY; current rollback eligibility was not verified after a read-only 403, and no bypass occurred.
+
+PR75 remains DRAFT / UNMERGED at `91896a2b8c086b7d86b831c462e158fe04e6c00d`, tree `62f2615cb924f15ec7fc6cb5a160d1eb613ba605`. Web 38834405444 and unsigned Android 38834405462 are SUCCESS: all 15 browser lanes and aggregate, 1,260 repository + 79 application PASS, four inherited skips; signing skipped. Original 18 archives (1,382,719,584 bytes) are size/hash/CRC verified and saved with full Library readback. Counts remain separate: 2,030 scenarios, 35 casino/location, 27 D3 checks, 774 geometry comparisons. Functional/tooling scoped QUALIFIED PASS; full independent acceptance HOLD only for chooser-heading/help viewport visibility. No actual choice-control failure is established. The exact NOT_RUN viewport probe is retained; do not repeat broad unchanged suites to resolve this narrow gap. Full regional job log was unavailable; original archives/verdicts/proofs/terminal metadata and aggregate log were inspected.
+
+The 20-attraction factual packet is recovered and verified, but no published implementation was found across 131 branches/latest PRs; do not invent a candidate SHA. Original 20 records / 16 accepted presentations are retained. Four central adapters now have bounded archived-source parity acceptance after independent correction/review; two null-to-omitted typed copies pass static review. Integration/runtime remains unrun. Inventory: 31 = 10 released + 20 factual-cleared/recovered + Acres HOLD; production 92, no promotions. Preserve Halloween-layer/OFF policy, conservative Open Now and source dates; five late-calendar records do not authorize discovery past the existing November 2 window. Dark Hollows last date October 24 remains time-sensitive.
+
+Read the single consolidated `audit/dot-recovery-2026-10-16/RECOVERY-REPORT.md`, exact receipts, original/derived/reviewed inputs and prioritized Astra directive. Final original-archive receipt: `libfile_49b5166777208191aed5858c16e557da` version 1, SHA256 `107e9480588a7e739398ff91016997bfaf039c1f614446b03dbef57877604d2c`; compact independent packet: `libfile_7d575976247c8191bbca535429955d09`, SHA256 `38606a0c1e8c3932d9993056027b97f698c6ea20e0b3f05805ab18b27c0c2468`. Original factual packet remains `libfile_2e07cc717864819197e4fe1441c36a0b`.
+
+Only deployment-excluded continuity documentation is published. Legacy `continuity/release` stays `705cc715a85535542b76c494f258b57f0874f324`; its updated full proposal/patch are in this audit. All 1,233,271 prior AI bytes follow unchanged. No source/candidate/main mutation, merge, deployment, rollback, migration, configuration, signing or Play action is authorized or performed. October 25 remains aspirational.
+
+---
+
+## Preserved previous continuity
+
 # CURRENT — PR74 released; parallel development active — 2026-10-16 UTC
 
 PR74 had explicit owner approval for head `e5e1682f6c82c9a7d972e28bf9b9f94973a3d158` / tree `c36112156cd11baefb6671194f0d59b9c181c2a3`. Fresh exact candidate, unchanged main, successful checks, migration-free Override and supported rollback selector passed. The PR was marked ready and merged with an expected-head guard.

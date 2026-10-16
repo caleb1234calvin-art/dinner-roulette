@@ -1,0 +1,35 @@
+{
+  "baseCommit": "5fdea2bc7861462d504d0af8c795189d020fb805",
+  "baseTree": "cad06ecb807cc1a75d57a214495bf1fa402c5fd4",
+  "branch": "integration/continuity-refresh-2026-10-07",
+  "deploymentExclusionBlob": "65925d91f882a10433e3eb43f53ed802914c969b",
+  "legacyBranchUnchangedAt": "705cc715a85535542b76c494f258b57f0874f324",
+  "AI": {
+    "before": {
+      "bytes": 1233271,
+      "sha256": "3c3a5951b022a6fa26459635e3178ec712a64605c68ca6e368dd25e29aad9fd7",
+      "gitBlobSha": "28c562e18da282ecd5c1c4675a22b9fb37525fbe"
+    },
+    "after": {
+      "bytes": 1236461,
+      "sha256": "98095e06ecfde909cf65056bdd92f50be78f4e3a041ce93cfef619b4eb0bff23",
+      "gitBlobSha": "b1c41ee0777737edb452275f67597e841877aebe"
+    },
+    "exactPriorSuffixPreserved": true
+  },
+  "releaseProposal": {
+    "before": {
+      "bytes": 56552,
+      "sha256": "b026cb0f08e8ece0bc9cbc2bc964a13cf1fb9a6f96016a5b8cd38df869e8cee4",
+      "gitBlobSha": "6d5e5f743feb8bd45172acdb9331e640632b0402"
+    },
+    "after": {
+      "bytes": 58069,
+      "sha256": "4750b133a494b99b307bdce535fdf4745112680164f9ea0158f0071ae7a56c6e",
+      "gitBlobSha": "a6a581a323430180cf56ef1a7fc7d8ad5e0a46bf"
+    },
+    "exactPriorSuffixPreserved": true,
+    "exactLegacySuffixPreserved": true
+  },
+  "scope": "Documentation/evidence only; main/candidate/source/configuration unchanged. Remote readback follows publication and is reported in Issue71."
+}

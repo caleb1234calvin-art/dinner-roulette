@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "title": "PR75 original hosted evidence preservation receipt",
+  "generated_at_utc": "2026-10-16T02:11:59.103872+00:00",
+  "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+  "tree": "62f2615cb924f15ec7fc6cb5a160d1eb613ba605",
+  "status": "COMPLETE",
+  "scope": "Exact original hosted artifact archives. No browser behavior was regenerated; no repository, source, production, or app state was changed. This is a preservation receipt, not an acceptance verdict.",
+  "summary": {
+    "original_archives": 18,
+    "library_files": 20,
+    "original_archive_bytes": 1382719584,
+    "max_part_bytes": 268435456,
+    "all_original_size_and_sha256_verified": true,
+    "all_library_roundtrip_size_and_sha256_verified": true,
+    "all_original_zip_member_crcs_verified": true,
+    "all_split_archive_reconstructions_verified": true
+  },
+  "reconstruction": {
+    "method": "Download all library_parts for an artifact; verify each listed SHA-256 and size; concatenate their exact raw bytes in ascending part order into original_archive_filename (do not unzip individual parts). Verify the reconstructed original SHA-256 and byte size, then unzip the archive. Whole ZIP files need no concatenation.",
+    "utility": "PR75-RECONSTRUCT-ORIGINALS.py",
+    "command": "python3 PR75-RECONSTRUCT-ORIGINALS.py PR75-ORIGINAL-EVIDENCE-PRESERVATION-RECEIPT.json /path/to/downloaded/parts /path/to/reconstructed"
+  },
+  "archives": [
+    {
+      "id": 12018048569,
+      "name": "casino-browser-evidence-seasonal-two",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 22641707,
+      "sha256": "4a026812466272971cd6dee629edc36df02a29c519bb234a6af62da0658f1492",
+      "members": 222,
+      "pngMembers": 217,
+      "original_archive_filename": "12018048569.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018048569-casino-browser-evidence-seasonal-two.zip",
+          "bytes": 22641707,
+          "sha256": "4a026812466272971cd6dee629edc36df02a29c519bb234a6af62da0658f1492",
+          "library_file_id": "libfile_4674bedef3988191899caf1c8ad71b54",
+          "file_id": "file_0000000088b081f59e587cb5aeb27553",
+          "library_path": "/PR75-91896A2-12018048569-casino-browser-evidence-seasonal-two.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018048569,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018048569",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018048569/zip",
+        "digest": "sha256:4a026812466272971cd6dee629edc36df02a29c519bb234a6af62da0658f1492",
+        "size_in_bytes": 22641707,
+        "created_at": "2026-10-16T01:20:34Z",
+        "expires_at": "2026-10-30T01:20:33Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:20:33Z"
+    },
+    {
+      "id": 12018164807,
+      "name": "casino-browser-evidence-location",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 1179882,
+      "sha256": "1f07f074080cdbb3d6545c9ca4b695fd1287f7871be228ed82528f2f17c18c83",
+      "members": 17,
+      "pngMembers": 10,
+      "original_archive_filename": "12018164807.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018164807-casino-browser-evidence-location.zip",
+          "bytes": 1179882,
+          "sha256": "1f07f074080cdbb3d6545c9ca4b695fd1287f7871be228ed82528f2f17c18c83",
+          "library_file_id": "libfile_92896a134824819184f935772f6449b4",
+          "file_id": "file_000000007cc8820c84c06be0accfacee",
+          "library_path": "/PR75-91896A2-12018164807-casino-browser-evidence-location.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018164807,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018164807",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018164807/zip",
+        "digest": "sha256:1f07f074080cdbb3d6545c9ca4b695fd1287f7871be228ed82528f2f17c18c83",
+        "size_in_bytes": 1179882,
+        "created_at": "2026-10-16T01:20:03Z",
+        "expires_at": "2026-10-30T01:20:03Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:20:03Z"
+    },
+    {
+      "id": 12018254803,
+      "name": "casino-browser-evidence-date-night-radial",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 3296329,
+      "sha256": "91d11e7fa37f5559c0f3f7a11876a68d2c04d998a749683722339c621f099e68",
+      "members": 15,
+      "pngMembers": 10,
+      "original_archive_filename": "12018254803.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018254803-casino-browser-evidence-date-night-radial.zip",
+          "bytes": 3296329,
+          "sha256": "91d11e7fa37f5559c0f3f7a11876a68d2c04d998a749683722339c621f099e68",
+          "library_file_id": "libfile_91d0e88a190c8191a74649b92905ded4",
+          "file_id": "file_00000000796c81f4841c21d3233b6fd1",
+          "library_path": "/PR75-91896A2-12018254803-casino-browser-evidence-date-night-radial.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018254803,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018254803",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018254803/zip",
+        "digest": "sha256:91d11e7fa37f5559c0f3f7a11876a68d2c04d998a749683722339c621f099e68",
+        "size_in_bytes": 3296329,
+        "created_at": "2026-10-16T01:20:28Z",
+        "expires_at": "2026-10-30T01:20:27Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:20:27Z"
+    },
+    {
+      "id": 12018424424,
+      "name": "PickForUs-Android-validation-3b6d66db81bb9dd23a738452a3674e6bec59feed",
+      "runId": 38834405462,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 6866410,
+      "sha256": "c8a54c272f9091a19b8a04c7adccb24e6b3be67fb5744aaa765a594887f811f6",
+      "members": 8,
+      "pngMembers": 0,
+      "original_archive_filename": "12018424424.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018424424-PickForUs-Android-validation-3b6d66db81bb9dd23a738452a3674e6bec59feed.zip",
+          "bytes": 6866410,
+          "sha256": "c8a54c272f9091a19b8a04c7adccb24e6b3be67fb5744aaa765a594887f811f6",
+          "library_file_id": "libfile_434c79480f588191987e408c989a7f12",
+          "file_id": "file_00000000bb8081f482049ceafae83dab",
+          "library_path": "/PR75-91896A2-12018424424-PickForUs-Android-validation-3b6d66db81bb9dd23a738452a3674e6bec59feed.zip"
+        }
+      ],
+      "githubExpiresAt": "See full original artifact metadata; not inferred"
+    },
+    {
+      "id": 12018613195,
+      "name": "casino-browser-evidence-seasonal-completeness-v1",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 58484834,
+      "sha256": "efa0f75e8f6140cf35f11b204c1609aeae46f89e02186f571d5c3a3409ce350b",
+      "members": 521,
+      "pngMembers": 516,
+      "original_archive_filename": "12018613195.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 2,
+          "file_name": "PR75-91896A2-12018613195-casino-browser-evidence-seasonal-completeness-v1.zip.part001",
+          "bytes": 33554432,
+          "sha256": "2279f279878161d609d2270eef439e7be79d4deea6ef90786b7d1fa34414b089",
+          "library_file_id": "libfile_907f1467dc3c8191ad7d54edf6a2c445",
+          "file_id": "file_00000000f62881f59c151a279123f90a",
+          "library_path": "/PR75-91896A2-12018613195-casino-browser-evidence-seasonal-completeness-v1.zip.part001"
+        },
+        {
+          "part": 2,
+          "part_count": 2,
+          "file_name": "PR75-91896A2-12018613195-casino-browser-evidence-seasonal-completeness-v1.zip.part002",
+          "bytes": 24930402,
+          "sha256": "4e531d696801dd669d51fb631211c11263bb70694b632aae776d5625867683d4",
+          "library_file_id": "libfile_13e9ace6e4b88191ac7234684053d3bf",
+          "file_id": "file_00000000e47c81f5a90e0c68ae0dad5a",
+          "library_path": "/PR75-91896A2-12018613195-casino-browser-evidence-seasonal-completeness-v1.zip.part002"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018613195,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018613195",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018613195/zip",
+        "digest": "sha256:efa0f75e8f6140cf35f11b204c1609aeae46f89e02186f571d5c3a3409ce350b",
+        "size_in_bytes": 58484834,
+        "created_at": "2026-10-16T01:26:07Z",
+        "expires_at": "2026-10-30T01:26:04Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:26:04Z"
+    },
+    {
+      "id": 12018627178,
+      "name": "PickForUs-Android-lint-3b6d66db81bb9dd23a738452a3674e6bec59feed",
+      "runId": 38834405462,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 24069,
+      "sha256": "2f9db4b35bf00351fdbd5c6db741e515da4581e72a06fbefb8b28e5718e5723f",
+      "members": 3,
+      "pngMembers": 0,
+      "original_archive_filename": "12018627178.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018627178-PickForUs-Android-lint-3b6d66db81bb9dd23a738452a3674e6bec59feed.zip",
+          "bytes": 24069,
+          "sha256": "2f9db4b35bf00351fdbd5c6db741e515da4581e72a06fbefb8b28e5718e5723f",
+          "library_file_id": "libfile_18ce036bec2081919a196fed30380b61",
+          "file_id": "file_000000004c20820cb9cb56a334179178",
+          "library_path": "/PR75-91896A2-12018627178-PickForUs-Android-lint-3b6d66db81bb9dd23a738452a3674e6bec59feed.zip"
+        }
+      ],
+      "githubExpiresAt": "See full original artifact metadata; not inferred"
+    },
+    {
+      "id": 12018714142,
+      "name": "casino-browser-evidence-seasonal-astra",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 94469760,
+      "sha256": "ad7e43435e15a3e3b73bf1cea9d7b812206559bfef54d01b97fc29d738eeef9b",
+      "members": 729,
+      "pngMembers": 724,
+      "original_archive_filename": "12018714142.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018714142-casino-browser-evidence-seasonal-astra.zip",
+          "bytes": 94469760,
+          "sha256": "ad7e43435e15a3e3b73bf1cea9d7b812206559bfef54d01b97fc29d738eeef9b",
+          "library_file_id": "libfile_9a7ad193e8fc8191998e800f9855799a",
+          "file_id": "file_0000000083b881f69b4cfc6e59b60fbd",
+          "library_path": "/PR75-91896A2-12018714142-casino-browser-evidence-seasonal-astra.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12018714142,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018714142",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018714142/zip",
+        "digest": "sha256:ad7e43435e15a3e3b73bf1cea9d7b812206559bfef54d01b97fc29d738eeef9b",
+        "size_in_bytes": 94469760,
+        "created_at": "2026-10-16T01:34:31Z",
+        "expires_at": "2026-10-30T01:34:26Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:34:26Z"
+    },
+    {
+      "id": 12018756319,
+      "name": "casino-browser-evidence-seasonal-hold-cleanup",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 20503286,
+      "sha256": "1561fc2319ef7798fc6e42f36c2a43f518ff402ba20844dc0bb0a273c1ca1ae0",
+      "members": 184,
+      "pngMembers": 179,
+      "original_archive_filename": "12018756319.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018756319-casino-browser-evidence-seasonal-hold-cleanup.zip",
+          "bytes": 20503286,
+          "sha256": "1561fc2319ef7798fc6e42f36c2a43f518ff402ba20844dc0bb0a273c1ca1ae0",
+          "library_file_id": "libfile_ec5b538f82248191906c94d5d449a85c",
+          "file_id": "file_0000000032f081f5b08125f1185dc44d",
+          "library_path": "/PR75-91896A2-12018756319-casino-browser-evidence-seasonal-hold-cleanup.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018756319,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018756319",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018756319/zip",
+        "digest": "sha256:1561fc2319ef7798fc6e42f36c2a43f518ff402ba20844dc0bb0a273c1ca1ae0",
+        "size_in_bytes": 20503286,
+        "created_at": "2026-10-16T01:23:11Z",
+        "expires_at": "2026-10-30T01:23:09Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:23:09Z"
+    },
+    {
+      "id": 12018757844,
+      "name": "casino-browser-evidence-seasonal-astra-extras",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 86656169,
+      "sha256": "1dd76b87a5d58ba2f455e0e62f9212a270b3ed811debcf86f13988def1ce27bb",
+      "members": 697,
+      "pngMembers": 692,
+      "original_archive_filename": "12018757844.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018757844-casino-browser-evidence-seasonal-astra-extras.zip",
+          "bytes": 86656169,
+          "sha256": "1dd76b87a5d58ba2f455e0e62f9212a270b3ed811debcf86f13988def1ce27bb",
+          "library_file_id": "libfile_7f452981e9688191be595f303e75f459",
+          "file_id": "file_0000000001fc81f6905e7139c164b911",
+          "library_path": "/PR75-91896A2-12018757844-casino-browser-evidence-seasonal-astra-extras.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12018757844,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018757844",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018757844/zip",
+        "digest": "sha256:1dd76b87a5d58ba2f455e0e62f9212a270b3ed811debcf86f13988def1ce27bb",
+        "size_in_bytes": 86656169,
+        "created_at": "2026-10-16T01:32:15Z",
+        "expires_at": "2026-10-30T01:32:11Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:32:11Z"
+    },
+    {
+      "id": 12018800790,
+      "name": "validation-check-build-proof",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 392,
+      "sha256": "8d08af38bd70516a4ac90cae267c1110d57ad300910eec9f9a7a2fc7dd895229",
+      "members": 1,
+      "pngMembers": 0,
+      "original_archive_filename": "12018800790.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018800790-validation-check-build-proof.zip",
+          "bytes": 392,
+          "sha256": "8d08af38bd70516a4ac90cae267c1110d57ad300910eec9f9a7a2fc7dd895229",
+          "library_file_id": "libfile_76d5ae3a48d8819197e411879cc35d2d",
+          "file_id": "file_00000000aa9481f682936ee067424ba9",
+          "library_path": "/PR75-91896A2-12018800790-validation-check-build-proof.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018800790,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018800790",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018800790/zip",
+        "digest": "sha256:8d08af38bd70516a4ac90cae267c1110d57ad300910eec9f9a7a2fc7dd895229",
+        "size_in_bytes": 392,
+        "created_at": "2026-10-16T01:20:48Z",
+        "expires_at": "2026-10-30T01:20:47Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:20:47Z"
+    },
+    {
+      "id": 12018821436,
+      "name": "casino-browser-evidence-seasonal-next-missouri",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 30294873,
+      "sha256": "b7ee11037da65a0fbee74713714d1e2d97b6edeecb078c118aa1ac56b26bcb3a",
+      "members": 286,
+      "pngMembers": 281,
+      "original_archive_filename": "12018821436.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018821436-casino-browser-evidence-seasonal-next-missouri.zip",
+          "bytes": 30294873,
+          "sha256": "b7ee11037da65a0fbee74713714d1e2d97b6edeecb078c118aa1ac56b26bcb3a",
+          "library_file_id": "libfile_6e4026eb8230819196d99ebf033e49e6",
+          "file_id": "file_00000000a74881f58522788a565a1217",
+          "library_path": "/PR75-91896A2-12018821436-casino-browser-evidence-seasonal-next-missouri.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018821436,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018821436",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018821436/zip",
+        "digest": "sha256:b7ee11037da65a0fbee74713714d1e2d97b6edeecb078c118aa1ac56b26bcb3a",
+        "size_in_bytes": 30294873,
+        "created_at": "2026-10-16T01:24:53Z",
+        "expires_at": "2026-10-30T01:24:50Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:24:50Z"
+    },
+    {
+      "id": 12018840413,
+      "name": "casino-browser-evidence-casino",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 217041,
+      "sha256": "b68d5e5cce08e4c85cd38093d391a1779e72633731ca7ce0c821dead81c60c46",
+      "members": 7,
+      "pngMembers": 4,
+      "original_archive_filename": "12018840413.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018840413-casino-browser-evidence-casino.zip",
+          "bytes": 217041,
+          "sha256": "b68d5e5cce08e4c85cd38093d391a1779e72633731ca7ce0c821dead81c60c46",
+          "library_file_id": "libfile_b23693996b908191adff1caedf4c4913",
+          "file_id": "file_00000000a51881f5834ac0840bb8c969",
+          "library_path": "/PR75-91896A2-12018840413-casino-browser-evidence-casino.zip"
+        }
+      ],
+      "github_artifact": {
+        "id": 12018840413,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018840413",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018840413/zip",
+        "digest": "sha256:b68d5e5cce08e4c85cd38093d391a1779e72633731ca7ce0c821dead81c60c46",
+        "size_in_bytes": 217041,
+        "created_at": "2026-10-16T01:19:28Z",
+        "expires_at": "2026-10-30T01:19:27Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:19:27Z"
+    },
+    {
+      "id": 12018962155,
+      "name": "casino-browser-evidence-seasonal-ranked-holds",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 77426449,
+      "sha256": "f9cab04aa9795dad0e03b27c2320ea5f703c3a0e048e332ac7b9c8c10dd93b8b",
+      "members": 586,
+      "pngMembers": 581,
+      "original_archive_filename": "12018962155.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12018962155-casino-browser-evidence-seasonal-ranked-holds.zip",
+          "bytes": 77426449,
+          "sha256": "f9cab04aa9795dad0e03b27c2320ea5f703c3a0e048e332ac7b9c8c10dd93b8b",
+          "library_file_id": "libfile_2244daa7837c8191a76e56ff24ed5092",
+          "file_id": "file_000000003e2881f682fca9a730df32e9",
+          "library_path": "/PR75-91896A2-12018962155-casino-browser-evidence-seasonal-ranked-holds.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12018962155,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018962155",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12018962155/zip",
+        "digest": "sha256:f9cab04aa9795dad0e03b27c2320ea5f703c3a0e048e332ac7b9c8c10dd93b8b",
+        "size_in_bytes": 77426449,
+        "created_at": "2026-10-16T01:33:14Z",
+        "expires_at": "2026-10-30T01:33:10Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:33:10Z"
+    },
+    {
+      "id": 12019118367,
+      "name": "casino-browser-evidence-geometry",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 452100192,
+      "sha256": "3a9358bb99da3c06144ea0384d9e51c70c88555486df97d3eb8051f939212108",
+      "members": 6291,
+      "pngMembers": 6288,
+      "original_archive_filename": "12019118367.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 2,
+          "file_name": "PR75-91896A2-12019118367-casino-browser-evidence-geometry.zip.part001",
+          "bytes": 268435456,
+          "sha256": "59ea8df1f109835f2305f2fae5aac77ec0e38275470e71e313b9069e2e2102c5",
+          "library_file_id": "libfile_8226783276fc81918a22cde77e517e89",
+          "file_id": "file_00000000002881f6bd1590f55374e778",
+          "library_path": "/PR75-91896A2-12019118367-casino-browser-evidence-geometry.zip.part001",
+          "version_number": 0
+        },
+        {
+          "part": 2,
+          "part_count": 2,
+          "file_name": "PR75-91896A2-12019118367-casino-browser-evidence-geometry.zip.part002",
+          "bytes": 183664736,
+          "sha256": "3f93f9ec6bab98947f3e491005edb795b5a808b06e3fd25db8742baeb19f1949",
+          "library_file_id": "libfile_4a0a0817922481918a8d2aee186ff545",
+          "file_id": "file_000000005e8881f6a283ba26416f6a47",
+          "library_path": "/PR75-91896A2-12019118367-casino-browser-evidence-geometry.zip.part002",
+          "version_number": 0
+        }
+      ],
+      "githubExpiresAt": "2026-10-30T01:42:35Z"
+    },
+    {
+      "id": 12019146664,
+      "name": "casino-browser-evidence-seasonal-cumulative",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 116123972,
+      "sha256": "fa5431c2c73eecd70142427a161f9cceb01ed348ea5ca19993b3eec1946d3f21",
+      "members": 944,
+      "pngMembers": 939,
+      "original_archive_filename": "12019146664.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12019146664-casino-browser-evidence-seasonal-cumulative.zip",
+          "bytes": 116123972,
+          "sha256": "fa5431c2c73eecd70142427a161f9cceb01ed348ea5ca19993b3eec1946d3f21",
+          "library_file_id": "libfile_2ab1c6aee8348191b0386a8fa20b01e0",
+          "file_id": "file_00000000633481f6bbc72f4af31f9c91",
+          "library_path": "/PR75-91896A2-12019146664-casino-browser-evidence-seasonal-cumulative.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12019146664,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019146664",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019146664/zip",
+        "digest": "sha256:fa5431c2c73eecd70142427a161f9cceb01ed348ea5ca19993b3eec1946d3f21",
+        "size_in_bytes": 116123972,
+        "created_at": "2026-10-16T01:32:46Z",
+        "expires_at": "2026-10-30T01:32:43Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:32:43Z"
+    },
+    {
+      "id": 12019285393,
+      "name": "casino-browser-evidence-seasonal-ten",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 77495157,
+      "sha256": "0674fb7b957d3a7d3a600e0af0809652df6585419b045a9b03de641f9d3ec87f",
+      "members": 598,
+      "pngMembers": 593,
+      "original_archive_filename": "12019285393.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12019285393-casino-browser-evidence-seasonal-ten.zip",
+          "bytes": 77495157,
+          "sha256": "0674fb7b957d3a7d3a600e0af0809652df6585419b045a9b03de641f9d3ec87f",
+          "library_file_id": "libfile_b7997c2bc1948191b455755aecc9877a",
+          "file_id": "file_00000000a53481f696a3c8aaaf2a1e45",
+          "library_path": "/PR75-91896A2-12019285393-casino-browser-evidence-seasonal-ten.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12019285393,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019285393",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019285393/zip",
+        "digest": "sha256:0674fb7b957d3a7d3a600e0af0809652df6585419b045a9b03de641f9d3ec87f",
+        "size_in_bytes": 77495157,
+        "created_at": "2026-10-16T01:29:10Z",
+        "expires_at": "2026-10-30T01:29:07Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:29:07Z"
+    },
+    {
+      "id": 12019544675,
+      "name": "casino-browser-evidence-seasonal-regional-wave1",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 266499671,
+      "sha256": "19f9f3e1248e059b14450114c62c9b7b41941ba02c93359e2c9e85278a853ec7",
+      "members": 2058,
+      "pngMembers": 2048,
+      "original_archive_filename": "12019544675.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12019544675-casino-browser-evidence-seasonal-regional-wave1.zip",
+          "bytes": 266499671,
+          "sha256": "19f9f3e1248e059b14450114c62c9b7b41941ba02c93359e2c9e85278a853ec7",
+          "library_file_id": "libfile_a1a1c5cfec3c8191abe2d66fa3d3a195",
+          "file_id": "file_000000000cec820ca0e8a20bd2f2036b",
+          "library_path": "/PR75-91896A2-12019544675-casino-browser-evidence-seasonal-regional-wave1.zip",
+          "version_number": 0
+        }
+      ],
+      "githubExpiresAt": "2026-10-30T02:08:11Z"
+    },
+    {
+      "id": 12019610182,
+      "name": "casino-browser-evidence-seasonal-phase4",
+      "runId": 38834405444,
+      "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+      "bytes": 68439391,
+      "sha256": "4653a570a46b756fc0324469142bdfcfda6fdd479ef90a6ac970cabc438222f5",
+      "members": 587,
+      "pngMembers": 582,
+      "original_archive_filename": "12019610182.zip",
+      "zip_member_crc_verification": "PASS: original archive ZipFile.testzip() returned None after streaming every member; Library round-trip SHA-256 matches those same original bytes.",
+      "library_roundtrip_verified": true,
+      "reconstruction_sha256_verified": true,
+      "library_parts": [
+        {
+          "part": 1,
+          "part_count": 1,
+          "file_name": "PR75-91896A2-12019610182-casino-browser-evidence-seasonal-phase4.zip",
+          "bytes": 68439391,
+          "sha256": "4653a570a46b756fc0324469142bdfcfda6fdd479ef90a6ac970cabc438222f5",
+          "library_file_id": "libfile_6d8eb2bbb9308191a5e020e66375e027",
+          "file_id": "file_00000000205c820d8f43c6b1d4448a6d",
+          "library_path": "/PR75-91896A2-12019610182-casino-browser-evidence-seasonal-phase4.zip",
+          "version_number": 0
+        }
+      ],
+      "github_artifact": {
+        "id": 12019610182,
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019610182",
+        "archive_download_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12019610182/zip",
+        "digest": "sha256:4653a570a46b756fc0324469142bdfcfda6fdd479ef90a6ac970cabc438222f5",
+        "size_in_bytes": 68439391,
+        "created_at": "2026-10-16T01:31:17Z",
+        "expires_at": "2026-10-30T01:31:13Z"
+      },
+      "githubExpiresAt": "2026-10-30T01:31:13Z"
+    }
+  ],
+  "fullReceipt": {
+    "libraryFileId": "libfile_49b5166777208191aed5858c16e557da",
+    "version": 1,
+    "bytes": 3229012,
+    "sha256": "107e9480588a7e739398ff91016997bfaf039c1f614446b03dbef57877604d2c",
+    "includes": "Exact full ZIP member size/CRC inventory, original identities and preservation checks"
+  },
+  "reconstructionUtility": {
+    "libraryFileId": "libfile_c0f128137a808191bfb2d8e7b2dc0f4a",
+    "name": "PR75-RECONSTRUCT-ORIGINALS.py"
+  }
+}
