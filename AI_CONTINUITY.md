@@ -1,3 +1,30 @@
+# Play listing v0.2 and scoped owner QA — 2026-10-16 23:57 UTC
+
+## CURRENT
+
+Listing preparation complete with independent source and metadata cross-review. Original owner copy is preserved verbatim separately from proposed minimal corrections. Owner directive Sentinel_fee5912b928081919111a524088fa637 at2026-10-16T23:49:02.951535Z is creative/preparation authority only; no listing submission or publication.
+
+Source-reviewed recommendation: title11/30characters, short80/80, full1804/4000. Corrections narrow manual entry to geographic location, history to explicitly logged choices, websites to Date Night where available, Nightlife atmosphere to chill-to-lively preference, storage to some preferences, and internet dependence to loading/refreshing. Short uses “up to four.” No account sync, offline reliability, universal coverage, booking or unpublished PR77 features advertised. Original owner draft remains unchanged; proposed corrections await owner review.
+
+Official asset plan reuses C13/C14 readiness work: existing icon inspection, export specs, feature graphic direction, six genuine phone shot priorities, rights/provenance and deferred tablet/other media. No finished feature graphic or listing screenshots created. Listing copy acceptance is not rights clearance or submission readiness. Owner principle preserved: “No lying or exaggerating. Reputation is hard to get back.”
+
+Direct owner QA confirmation advances only scoped OWNER-REPORTED observations: install/launch, original package and saved data preservation, independent preferences/reopen persistence, GPS/manual, Maps destination/return, permission rejection/recovery, rapid interactions/lifecycle, scoped layout/accessibility and interrupted-search Retry. General DoorDash/rideshare landing pages remain qualified. Display resizing improvement identified, reproduction/scope pending. Tablet NOT RUN. These are direct owner assertions, not independently instrumented device proofs; device/OS/WebView and installed binary/certificate binding remain unconfirmed.
+
+Original intermittent offline black/cross-application connectivity failure remains unresolved. Later owner-reported fallback, Retry, VPN cycles/reconnections/full restart successes are retained alongside it, with no cause or permanent-fix claim. New dated ledger preserves all earlier snapshots, including earlier post-clear uncertainty; latest owner saved-data confirmation is not retroactively substituted into earlier observation windows.
+
+Fresh root23:49: PR78 remains4010edf31e71a7350d891a98dd43f20535602abd/tree f521ed3dbdabceeb924ad4da1ce88e42db41092c; PR77 remains6b370a5202ffb531434d725f49aacbdc325f32c5/tree520f545ec006041ef5694a138cfb65f7a897011c, both draft/open/unmerged, basec3208d9fdc9a21d698efa9254be1286f5d3d2836. Productiondpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY/sourcec3208, five aliases unchanged. No source changes or repeated completed validation.
+
+## NEXT
+
+Owner review of minimally corrected listing copy. Gather approved genuine Android phone captures and icon/artwork provenance; finalize feature graphic/export checks. Continue scoped physical evidence only when safely authorized, including device identity, display resizing and deferred tablet. Maintain separate policy-date/release and Play decisions.
+
+## HOLD
+
+Play publication remains HOLD: final assets/rights, audience/rating/countries/locales, effective public policy, Data safety/native network evidence, physical-device limits, registration/signing/certificates and applicable Console gates. Existing support contactcausticrelay@gmail.com is confirmed; final public URLs/publication and actual listing entry are not complete. No Console edit, registration, signing, Play upload/listing submission, merge/deployment, effective policy date/publication or agreement acceptance authorized. PR77 legal1.0 remains unreleased/null. No broad physical PASS, full accessibility certification or permanent offline fix claimed. Halloween/PR61 parked.
+
+
+---
+
 # PR78 later owner phone retest — 2026-10-16 23:28 UTC
 
 ## CURRENT
