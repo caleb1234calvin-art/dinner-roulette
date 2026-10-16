@@ -1,3 +1,24 @@
+# Play account authentication outcome — 2026-10-16 18:21 UTC
+
+## CURRENT
+
+This checkpoint supersedes the pending CAPTCHA/authentication status below while preserving its history. Owner message Sentinel_ca20ecd72ca88191af29ae33853bcb30 (“Yes”) approved the current CAPTCHA at 18:11 UTC. Root completed the approved checkbox successfully and Google displayed the password page. The secure browser authentication request subsequently returned declined at 18:21 UTC, without a user-took-over result. No credentials were entered by the assistant; no authenticated brand-account Play Console inspection was completed. Root notified the owner in message Sentinel_f5d9d73f88ec8191999a74bab8319583.
+
+The intended account remains Caustic Relay / causticrelay@gmail.com, supported by the previously recorded owner screenshots. CAPTCHA completion is PASS. Authentication and live Console inspection remain HOLD following the declined secure sign-in request. No account type, verification completion, permissions, package history or registration availability is established by this outcome.
+
+PR #77 remains the previously verified prepared candidate 6b370a5202ffb531434d725f49aacbdc325f32c5, tree 520f545ec006041ef5694a138cfb65f7a897011c. Policies remain unreleased with null effective dates and owner content/procedure approval preserved. This is documentation of the authentication outcome, not a fresh source or production inspection.
+
+## NEXT
+
+Stop authentication retries. Resume sign-in only if the owner asks. If authorized authentication later succeeds, inspect the correct Console account read-only before resolving package identity/history and applicable Console requirements.
+
+## HOLD
+
+Secure authentication was declined. Do not treat elapsed time, the prior CAPTCHA approval or prior general permission as authority to retry the declined sign-in. All existing publication-date, exact-successor revalidation, separate deployment approval, native-device, Data safety, signing, listing and Play gates remain in force. No source, production, settings, credentials or Console state was changed by this checkpoint.
+
+
+---
+
 # Account identification checkpoint — pending authenticated inspection
 
 Checkpoint 2026-10-16 18:11 UTC. Stable HOLD: intended account identified; authorized authenticated inspection remains pending.
