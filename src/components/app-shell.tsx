@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import { applyTheme } from "@/lib/theme";
 import { useAppStore } from "@/lib/store";
 
+import { LegalChangeNotice } from "@/components/legal-change-notice";
+
 const NAV = [
   { to: "/", label: "Pick", icon: UtensilsCrossed },
   { to: "/favorites", label: "Favorites", icon: Heart },
@@ -27,7 +29,10 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-dvh bg-bg text-fg">
       <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col">
-        <div className="flex-1 pb-24">{children}</div>
+        <div className="flex-1 pb-24">
+          <LegalChangeNotice />
+          {children}
+        </div>
         <nav
           className="fixed inset-x-0 bottom-0 z-30 border-t border-border/80 bg-bg/95 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-sm"
           aria-label="Main"

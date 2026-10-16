@@ -1,9 +1,9 @@
 {
   "privacy": {
     "title": "Privacy Policy",
-    "version": "0.2 draft — October 16, 2026",
-    "status": "Draft for owner publication review. Not yet effective.",
-    "effectiveDate": "Not yet effective",
+    "version": "1.0",
+    "status": "unreleased",
+    "effectiveDate": null,
     "sections": [
       {
         "id": "scope",
@@ -37,7 +37,7 @@
         "id": "local",
         "title": "Data saved on your device",
         "paragraphs": [
-          "Pick For Us saves your selected search location, filters, favorites, ratings, visit history and notes, temporary exclusions, appearance, selected mode and seasonal preferences in browser or WebView storage. Venue identity records help apply current seasonal information to saved places. Tour status also uses session storage. This supports preferences and continuity between visits.",
+          "Pick For Us saves your selected search location, filters, favorites, ratings, visit history and notes, temporary exclusions, appearance, selected mode and seasonal preferences in browser or WebView storage. Venue identity records help apply current seasonal information to saved places. Tour status also uses session storage. This supports preferences and continuity between visits. The app also stores which material legal-change notice you have dismissed on this browser or device. This records notice visibility only, not agreement or consent.",
           "The main local store has no automatic time-based deletion for a saved location, favorites or preferences. Visit history keeps up to the latest 200 entries. Temporary exclusions stop applying after their expiry and are pruned when the app checks them. In-memory discovery caches have reuse limits; a cache reuse limit is not a promise that every copy is erased at that time.",
           "Your preferences and history are saved locally rather than synchronized through an app account. Searches, hosting, analytics, external resources and support email involve the separate data transfers explained in this policy. Your browser, operating system, backups or device-transfer settings may also affect copies of local data."
         ]
@@ -106,7 +106,7 @@
         "paragraphs": [
           "Contact Support opens your email application with causticrelay@gmail.com as the recipient and an optional subject. Pick For Us does not send the message for you. If an email application is unavailable, copy or type the displayed address into an email service you use.",
           "If you send email, the operator and Gmail receive your email address, message, attachments and associated email information so your request can be handled. Send only information needed for your request; do not send passwords, payment-card details or unnecessary sensitive information.",
-          "The owner manages support directly through Gmail. Support correspondence is kept until the request is resolved, then manually deleted from Gmail. Google’s deletion process can retain messages in Trash and retain residual copies for its documented processing, backup or legal purposes. This is not a promise of immediate erasure from every system. Deleting local app data does not delete support correspondence. You can contact the same address with a deletion request."
+          "The owner personally reviews and manages support and privacy requests through Gmail. Support correspondence is kept until the request is resolved, then manually deleted from Gmail, unless a legitimate legal or security obligation requires retention. Google’s deletion process can retain messages in Trash and retain residual copies for its documented processing, backup or legal purposes. This is not a promise of immediate erasure from every system. Deleting local app data does not delete support correspondence. You can contact the same address with a deletion request."
         ],
         "links": [
           {
@@ -130,27 +130,27 @@
         "id": "retention",
         "title": "Retention, deletion and security",
         "paragraphs": [
-          "Local preferences and saved places remain on your device until you clear them, subject to the storage behavior described above. Visit history keeps up to the latest 200 entries. Support email is kept until your request is resolved, then manually deleted from Gmail. Provider recovery, backup, security or legal processes may retain copies after a deletion action; deleting local app data does not delete information held by those services.",
+          "Local preferences and saved places remain on your device until you clear them, subject to the storage behavior described above. Visit history keeps up to the latest 200 entries. Support email is kept until your request is resolved, then manually deleted from Gmail, unless a legitimate legal or security obligation requires retention. Provider recovery, backup, security or legal processes may retain copies after a deletion action; deleting local app data does not delete information held by those services.",
           "The operator currently does not keep separate copies or exports of support emails, analytics or server logs outside Gmail and Vercel.",
           "Hosting, analytics, place-search and external-service providers maintain their own records. Their retention depends on the service, purpose, configuration and applicable obligations. A temporary cache limit, dashboard viewing window or analytics session limit is not a universal deletion deadline. We cannot promise immediate erasure of every provider copy. The provider links in this policy explain their published practices where available.",
           "Pick For Us uses HTTPS for its configured external requests. The Android configuration disables cleartext traffic and mixed content. No online service or device can guarantee absolute security.",
-          "For privacy questions or requests for access, correction or deletion of information held by the operator, email causticrelay@gmail.com. Information needed to locate a record and applicable retention requirements depend on the request. You may also need to contact an independent service directly about information it controls."
+          "For privacy questions or requests for access, correction or deletion of information held by the operator, email causticrelay@gmail.com. The owner personally reviews these requests and responds within applicable legal deadlines. We may ask for information reasonably needed to verify and locate your records. We will explain any applicable reason information must be retained. You may also need to contact an independent service directly about information it controls. No app account is needed to make a request."
         ]
       },
       {
         "id": "changes",
         "title": "Versions and changes",
         "paragraphs": [
-          "This is version 0.2, a draft dated October 16, 2026. It is not yet effective. The intended permanent policy address is https://pickforus.app/privacy. The publication version and effective date will be stated when an approved policy is released."
+          "The version and publication status appear at the top of this policy. Updated versions are published at https://pickforus.app/privacy, with previous published versions and clear change summaries available in the version history below. We give an in-app notice of material changes. Where a change requires new consent, we request it before introducing the relevant processing. Optional processing choices and device permissions remain separate from service terms. Dismissing a notice does not give consent or agreement."
         ]
       }
     ]
   },
   "terms": {
     "title": "Terms & Conditions",
-    "version": "0.2 draft — October 16, 2026",
-    "status": "Draft for owner publication review. Not yet effective.",
-    "effectiveDate": "Not yet effective",
+    "version": "1.0",
+    "status": "unreleased",
+    "effectiveDate": null,
     "sections": [
       {
         "id": "service",
@@ -214,7 +214,7 @@
         "id": "changes",
         "title": "Versions and changes",
         "paragraphs": [
-          "This is version 0.2, a draft dated October 16, 2026. It is not yet effective. The publication version and effective date will be stated when approved terms are released. Reading this draft does not grant optional data-processing consent or device permissions."
+          "The version and publication status appear at the top of these terms. Updated terms, clear change summaries and previous published versions are available in the version history below. We give an in-app notice of material changes. If a change requires your agreement, we ask for it separately before applying that change to you. Reading these terms or dismissing a notice does not grant agreement, optional data-processing consent or device permissions."
         ]
       }
     ]

@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { assertBrowserBuild } from './browser-build-proof.mjs';
+import { checkLegalNotice } from './test-support/legal-notice-browser-harness.mjs';
 
 // Run against the separately started, exact safe production preview. Never use a
 // production host: fixtures and destructive local-store controls are test-only.
@@ -13,6 +14,8 @@ assert.ok(['127.0.0.1', 'localhost'].includes(new URL(base).hostname));
 const output = process.env.LEGAL_BROWSER_OUTPUT || 'audit/browser-results/legal-support';
 await mkdir(output, { recursive: true });
 const proof = assertBrowserBuild();
+const legalHistory=JSON.parse(await readFile(new URL('../src/lib/legal/history.json',import.meta.url),'utf8'));
+const expectedStatus=legalHistory.current.status==='published' ? `Effective date: ${legalHistory.current.effectiveDate}` : 'Not yet published or effective';
 const checks = [];
 let browser;
 const server=spawn(process.execPath,['scripts/with-app-env.mjs','node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port',new URL(base).port || '8081','--strictPort'],{env:{...process.env,DATABASE_URL:''},stdio:['ignore','pipe','pipe']});
@@ -70,7 +73,11 @@ try {
         const response=await page.goto(base+path,{waitUntil:'networkidle'});assert.equal(response.status(),200);
         assert.equal(await page.getByRole('heading',{level:1,name:title,exact:true}).count(),1);
         assert.ok((await page.locator('main').innerText()).includes('causticrelay@gmail.com'));
-        assert.ok((await page.locator('main').innerText()).includes('Version'));
+        assert.ok((await page.locator('main').innerText()).includes('Version '+legalHistory.current.version));
+        assert.ok((await page.locator('main').innerText()).includes(expectedStatus));
+        assert.equal(await page.getByRole('heading',{name:'Version history',exact:true}).count(),1);
+        if(!legalHistory.previous.length) assert.ok((await page.locator('#version-history').innerText()).includes('No previous published versions'));
+        if(legalHistory.current.changeType!=='material'||legalHistory.current.status!=='published') assert.equal(await page.getByRole('complementary',{name:'Legal updates'}).count(),0);
         assert.equal(await page.locator('input[type=checkbox]').count(),0);
         await overflow(page);
         const links=page.locator('main nav a[href^="#"]');
@@ -115,7 +122,8 @@ try {
     }
   }
   const noJs=await browser.newContext({javaScriptEnabled:false});const p=await noJs.newPage();
-  for(const path of ['/privacy','/terms']) {const r=await p.goto(base+path);assert.equal(r.status(),200);assert.ok((await p.locator('main').innerText()).includes('causticrelay@gmail.com'));assert.equal(await p.locator('video[src*="CAUSTIC_RELAY"]').count(),0);pass(path+' without JavaScript');}
+  for(const path of ['/privacy','/terms']) {const r=await p.goto(base+path);assert.equal(r.status(),200);assert.ok((await p.locator('main').innerText()).includes('causticrelay@gmail.com'));assert.equal(await p.locator('video[src*="CAUSTIC_RELAY"]').count(),0);assert.ok((await p.locator('#version-history').innerText()).includes(legalHistory.current.status==='published'?'Published':'Prepared for publication'));pass(path+' without JavaScript');}
   await noJs.close();
+  pass(await checkLegalNotice(browser, base));
 } catch(error) { checks.push({name:'terminal failure',status:'FAIL',error:String(error),stack:error.stack});process.exitCode=1; }
 finally { await browser?.close();server.kill('SIGTERM');await writeFile(resolve(output,'server.log'),serverLog);await writeFile(resolve(output,'verdict.json'),JSON.stringify({at:new Date().toISOString(),status:process.exitCode?'FAIL':'PASS',buildProof:proof,checks,limitations:['Mocked external analytics/fonts/Grok requests; no real email delivery or installed Android mail-client verification.','Local preview route accessibility is not public production publication.','Physical Android and operational privacy facts remain separate gates.']},null,2)+'\n'); }

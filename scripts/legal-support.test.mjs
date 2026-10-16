@@ -3,14 +3,16 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 const read = (file) => readFileSync(new URL(`../${file}`, import.meta.url), 'utf8');
 
-test('public legal routes render full versioned draft documents without an authentication gate', () => {
+test('public legal routes render full versioned documents without an authentication gate', () => {
   const documents = JSON.parse(read('src/lib/legal/documents.json'));
   for (const id of ['privacy', 'terms']) {
     const route = read(`src/routes/${id}.tsx`);
     assert.ok(route.includes(`createFileRoute("/${id}")`));
     assert.ok(!/beforeLoad|requireAuth|signIn/.test(route));
-    assert.ok(documents[id].version && documents[id].effectiveDate);
-    assert.match(documents[id].status, /draft/i);
+    const current = JSON.parse(read("src/lib/legal/history.json")).current;
+    assert.equal(documents[id].version, current.version);
+    assert.equal(documents[id].status, current.status);
+    assert.equal(documents[id].effectiveDate, current.effectiveDate);
     assert.ok(documents[id].sections.length >= 4);
     assert.equal(new Set(documents[id].sections.map(s => s.id)).size, documents[id].sections.length);
     for (const section of documents[id].sections) {
