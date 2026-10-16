@@ -1,0 +1,89 @@
+{
+  "retrievedAt": "2026-10-16T04:39:29.853Z",
+  "source": "read-only GitHub branch/main + PR75 GET; Vercel get_deployment + list_aliases/get_alias",
+  "main": {
+    "sha": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "tree": "c36112156cd11baefb6671194f0d59b9c181c2a3"
+  },
+  "pr75": {
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "91896a2b8c086b7d86b831c462e158fe04e6c00d",
+    "base": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "auto_merge": null
+  },
+  "production": {
+    "id": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+    "name": "dinner-roulette",
+    "url": "dinner-roulette-fr47p5yy5-minions-9e2c.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1792112860397,
+    "creator": {
+      "uid": "vJzqOIJ7PLOtgdkmemscyDMC",
+      "username": "caleb1234calvin-6132"
+    },
+    "project": {
+      "id": "prj_Duz6oRktFrLVIMK1DfAxZyxQCCwm",
+      "name": "dinner-roulette",
+      "framework": "tanstack-start"
+    },
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+      "githubCommitMessage": "Merge pull request #74 from caleb1234calvin-art/integration/kc-curated-radius-2026-10-15\n\nfix: preserve curated discovery within the selected Kansas City radius (D2)",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "alias": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1792112861399,
+    "ready": 1792112876500,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "aliases": [
+    {
+      "alias": "pickforus.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "www.pickforus.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "redirect": "pickforus.app",
+      "redirectStatusCode": 308
+    },
+    {
+      "alias": "dinner-roulette-chi.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "redirect": null,
+      "redirectStatusCode": null
+    },
+    {
+      "alias": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "deploymentId": "dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6",
+      "redirect": null,
+      "redirectStatusCode": null
+    }
+  ],
+  "scope": "Baseline inspection only. No mutation; no PR75 acceptance rerun; production health/browser smoke not retested."
+}

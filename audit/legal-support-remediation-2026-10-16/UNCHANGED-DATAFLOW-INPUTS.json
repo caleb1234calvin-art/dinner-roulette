@@ -1,0 +1,90 @@
+{
+  "baseline": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "scope": "working-copy comparison, rebind final candidate before acceptance",
+  "files": [
+    {
+      "path": "src/lib/store.ts",
+      "baselineSha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e",
+      "candidateWorkingCopySha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/analytics.ts",
+      "baselineSha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2",
+      "candidateWorkingCopySha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/session-hints.ts",
+      "baselineSha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc",
+      "candidateWorkingCopySha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/date-night/identity-receipts.ts",
+      "baselineSha256": "2f04732177c382327d962590b97ad49150969bfecb2d20c09f314054afd697c3",
+      "candidateWorkingCopySha256": "2f04732177c382327d962590b97ad49150969bfecb2d20c09f314054afd697c3",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "baselineSha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "candidateWorkingCopySha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "baselineSha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "candidateWorkingCopySha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/location/controller.ts",
+      "baselineSha256": "0f84b7d7608b35ce9eafddbe3430b9a9719731f061e6394be4f8ae1f108797f5",
+      "candidateWorkingCopySha256": "0f84b7d7608b35ce9eafddbe3430b9a9719731f061e6394be4f8ae1f108797f5",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/location/maps.ts",
+      "baselineSha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c",
+      "candidateWorkingCopySha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/server.ts",
+      "baselineSha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "candidateWorkingCopySha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/email-password.ts",
+      "baselineSha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "candidateWorkingCopySha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "unchanged": true
+    },
+    {
+      "path": "src/lib/auth/provider.tsx",
+      "baselineSha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "candidateWorkingCopySha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "unchanged": true
+    },
+    {
+      "path": "src/routes/__root.tsx",
+      "baselineSha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4",
+      "candidateWorkingCopySha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4",
+      "unchanged": true
+    },
+    {
+      "path": "capacitor.config.json",
+      "baselineSha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "candidateWorkingCopySha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/grok-pwa-shared.mjs",
+      "baselineSha256": "992bc8e14c369a70ba804b0f0d7c3f147e165969a0ede62c121ddccf5466e372",
+      "candidateWorkingCopySha256": "992bc8e14c369a70ba804b0f0d7c3f147e165969a0ede62c121ddccf5466e372",
+      "unchanged": true
+    }
+  ]
+}

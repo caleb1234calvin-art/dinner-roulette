@@ -1,0 +1,136 @@
+{
+  "sha": "3d388a796ea63bee7fd0a2dbea54961889044a44",
+  "tree": "37fb1f9632dd0e71d71b061e283ea22360790804",
+  "parent": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "independentCommitAndTreeRead": true,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".github/workflows/validate-icon-pack.yml",
+      "remoteBlob": "845751612fbfe76b920c0fd0303dec5442a293e4",
+      "localBlob": "845751612fbfe76b920c0fd0303dec5442a293e4",
+      "sha256": "32a0cbc87cfbbaea5e906f9acfc5f7799ab51d24f57855598bd278ab74fbb49f",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/AUDIT-INPUTS.json",
+      "remoteBlob": "1c642ff69fb8ab782d432787372cc9cc805c7209",
+      "localBlob": "1c642ff69fb8ab782d432787372cc9cc805c7209",
+      "sha256": "d33ca68d777b2459f7141dece79e18bbb8512c5e04010a7420c0dfa79da85e9e",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/IMPLEMENTATION.md",
+      "remoteBlob": "e0553339a35bf2196b16f8fdd2809f9786811af7",
+      "localBlob": "e0553339a35bf2196b16f8fdd2809f9786811af7",
+      "sha256": "7c0b0533204e3adad02c06ce89880e4209a37643208c53473bad1265adc63762",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/INDEPENDENT-POLICY-REVIEW.md",
+      "remoteBlob": "b0cf783b70065487ed468d9049bc3e2a9505090f",
+      "localBlob": "b0cf783b70065487ed468d9049bc3e2a9505090f",
+      "sha256": "0766ca025ae8a41bd085cbd80cad2861912411617b3fc882b34a8525f6ce4501",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/PARAGRAPH-EVIDENCE-MAP.md",
+      "remoteBlob": "bc628a36f28b358edf36e362e5bfe638f93a838b",
+      "localBlob": "bc628a36f28b358edf36e362e5bfe638f93a838b",
+      "sha256": "0ba11d5da38b4a0187f69a1f50e5772586d7ccbb969bcf62168656f79624b758",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/POLICY-PARAGRAPH-REVIEW.json",
+      "remoteBlob": "254bce5e7f7e2b59436f5245973b96a3dc303bd0",
+      "localBlob": "254bce5e7f7e2b59436f5245973b96a3dc303bd0",
+      "sha256": "f2325fc9ea93cca82968c0646e47cc98041f9017c7fbce667be443900b831a9f",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/PRIVACY-DRAFT.md",
+      "remoteBlob": "5d89548068c448847316366ed1915f5845ff3d31",
+      "localBlob": "5d89548068c448847316366ed1915f5845ff3d31",
+      "sha256": "021bd1ee4cdce77d1b6e7dced26df2084ab0334a7fb25b82672cc191f00df8d0",
+      "equal": true
+    },
+    {
+      "path": "audit/privacy-legal-support-2026-10-16/TERMS-DRAFT.md",
+      "remoteBlob": "eb7782eda4627463457c6cdbb2530e2671a5b616",
+      "localBlob": "eb7782eda4627463457c6cdbb2530e2671a5b616",
+      "sha256": "00e34d97f517bbf1e523318203346fa37271d2c98daaa6c832b1b0848f15febb",
+      "equal": true
+    },
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "remoteBlob": "98a7c4de777e133fe4614ca303cdf16713b8cda8",
+      "localBlob": "98a7c4de777e133fe4614ca303cdf16713b8cda8",
+      "sha256": "480d527a69290036fa9b83efd70ec6f786b03194aac92e020ba87c0027d027b7",
+      "equal": true
+    },
+    {
+      "path": "scripts/legal-support.test.mjs",
+      "remoteBlob": "125848d2b89a53440f51ca7396322d4f0a23703c",
+      "localBlob": "125848d2b89a53440f51ca7396322d4f0a23703c",
+      "sha256": "88e7cdfb2be77c1ac685edaf7c6e373fdf87bbc682ce2769ca256e1f94fd017d",
+      "equal": true
+    },
+    {
+      "path": "src/components/legal-document-page.tsx",
+      "remoteBlob": "4ed83699a47bc06132af0eef54079b6384678fd1",
+      "localBlob": "4ed83699a47bc06132af0eef54079b6384678fd1",
+      "sha256": "b747c277d21552a0421a7244f9e6ddb443f9481f3732c54ec5bdb4adda9fbce8",
+      "equal": true
+    },
+    {
+      "path": "src/components/settings-page.tsx",
+      "remoteBlob": "619e7760fd7f9022d89fdbe67f4d9bf117398a61",
+      "localBlob": "619e7760fd7f9022d89fdbe67f4d9bf117398a61",
+      "sha256": "9f5994ebf74297797df6ee5432f8394df6b6be2c9a6ebd9e806ccb722ae26436",
+      "equal": true
+    },
+    {
+      "path": "src/components/startup-ident.tsx",
+      "remoteBlob": "c90c00921cacb7a579ae3c4a549575cf74532aac",
+      "localBlob": "c90c00921cacb7a579ae3c4a549575cf74532aac",
+      "sha256": "ea5191e21d1f1fa0e0559c38837ee072e6b7cd64a7a0011479b1cfef95e64502",
+      "equal": true
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "remoteBlob": "f13b8f95fc721e855014694ff40ea49f412ad57d",
+      "localBlob": "f13b8f95fc721e855014694ff40ea49f412ad57d",
+      "sha256": "92d84c992a49c8152c89600000347efa7558f246e99aebee76028dc62447d024",
+      "equal": true
+    },
+    {
+      "path": "src/lib/legal/support.ts",
+      "remoteBlob": "e95fb887973e4997f8059c0f9a4be1c9a17ead55",
+      "localBlob": "e95fb887973e4997f8059c0f9a4be1c9a17ead55",
+      "sha256": "99f01af3b316146116ed4c1b1fe281d4e808cae4a74c9314c666a77901867f53",
+      "equal": true
+    },
+    {
+      "path": "src/routeTree.gen.ts",
+      "remoteBlob": "a14ef98feb6bc13537c04d878108fa250410c076",
+      "localBlob": "a14ef98feb6bc13537c04d878108fa250410c076",
+      "sha256": "d0525da50a53b4e6dd2fc9bc98187f62e0041bfe3268a617bac90e0d78e26f9a",
+      "equal": true
+    },
+    {
+      "path": "src/routes/privacy.tsx",
+      "remoteBlob": "e07f7c809c29a0b54b9036add1f9fe94add17026",
+      "localBlob": "e07f7c809c29a0b54b9036add1f9fe94add17026",
+      "sha256": "4b17c286a8e446aba85decd7204e19a100206a7f0270d61f1599b9e9d483e35b",
+      "equal": true
+    },
+    {
+      "path": "src/routes/terms.tsx",
+      "remoteBlob": "59542c3cb45a541fef8a73b3f590c52c06e3546c",
+      "localBlob": "59542c3cb45a541fef8a73b3f590c52c06e3546c",
+      "sha256": "8fa5f1b5ec7e94e1770245b917ec642d0d8b222d779aea154ea58e2c947b987b",
+      "equal": true
+    }
+  ],
+  "allEqual": true
+}

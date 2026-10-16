@@ -1,0 +1,152 @@
+{
+  "candidateSha": "3d388a796ea63bee7fd0a2dbea54961889044a44",
+  "tree": "37fb1f9632dd0e71d71b061e283ea22360790804",
+  "parent": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "basis": "Candidate author reports connector publication; local unchanged review bytes independently compared. Remote blob binding requires connector identity/readback receipts.",
+  "comparisons": [
+    {
+      "path": "privacy-legal-support-2026-10-16/legal-documents.json",
+      "reviewedSha256": "92d84c992a49c8152c89600000347efa7558f246e99aebee76028dc62447d024",
+      "currentSha256": "92d84c992a49c8152c89600000347efa7558f246e99aebee76028dc62447d024",
+      "equal": true
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/PRIVACY-DRAFT.md",
+      "reviewedSha256": "021bd1ee4cdce77d1b6e7dced26df2084ab0334a7fb25b82672cc191f00df8d0",
+      "currentSha256": "021bd1ee4cdce77d1b6e7dced26df2084ab0334a7fb25b82672cc191f00df8d0",
+      "equal": true
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/TERMS-DRAFT.md",
+      "reviewedSha256": "00e34d97f517bbf1e523318203346fa37271d2c98daaa6c832b1b0848f15febb",
+      "currentSha256": "00e34d97f517bbf1e523318203346fa37271d2c98daaa6c832b1b0848f15febb",
+      "equal": true
+    },
+    {
+      "path": "privacy-legal-support-2026-10-16/PARAGRAPH-EVIDENCE-MAP.md",
+      "reviewedSha256": "0ba11d5da38b4a0187f69a1f50e5772586d7ccbb969bcf62168656f79624b758",
+      "currentSha256": "0ba11d5da38b4a0187f69a1f50e5772586d7ccbb969bcf62168656f79624b758",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/components/settings-page.tsx",
+      "reviewedSha256": "9f5994ebf74297797df6ee5432f8394df6b6be2c9a6ebd9e806ccb722ae26436",
+      "currentSha256": "9f5994ebf74297797df6ee5432f8394df6b6be2c9a6ebd9e806ccb722ae26436",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/components/legal-document-page.tsx",
+      "reviewedSha256": "b747c277d21552a0421a7244f9e6ddb443f9481f3732c54ec5bdb4adda9fbce8",
+      "currentSha256": "b747c277d21552a0421a7244f9e6ddb443f9481f3732c54ec5bdb4adda9fbce8",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/components/startup-ident.tsx",
+      "reviewedSha256": "ea5191e21d1f1fa0e0559c38837ee072e6b7cd64a7a0011479b1cfef95e64502",
+      "currentSha256": "ea5191e21d1f1fa0e0559c38837ee072e6b7cd64a7a0011479b1cfef95e64502",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/legal/support.ts",
+      "reviewedSha256": "99f01af3b316146116ed4c1b1fe281d4e808cae4a74c9314c666a77901867f53",
+      "currentSha256": "99f01af3b316146116ed4c1b1fe281d4e808cae4a74c9314c666a77901867f53",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/routes/privacy.tsx",
+      "reviewedSha256": "4b17c286a8e446aba85decd7204e19a100206a7f0270d61f1599b9e9d483e35b",
+      "currentSha256": "4b17c286a8e446aba85decd7204e19a100206a7f0270d61f1599b9e9d483e35b",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/routes/terms.tsx",
+      "reviewedSha256": "8fa5f1b5ec7e94e1770245b917ec642d0d8b222d779aea154ea58e2c947b987b",
+      "currentSha256": "8fa5f1b5ec7e94e1770245b917ec642d0d8b222d779aea154ea58e2c947b987b",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/store.ts",
+      "reviewedSha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e",
+      "currentSha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/session-hints.ts",
+      "reviewedSha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc",
+      "currentSha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/location/maps.ts",
+      "reviewedSha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c",
+      "currentSha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/email-password.ts",
+      "reviewedSha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "currentSha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/provider.tsx",
+      "reviewedSha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "currentSha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/auth/server.ts",
+      "reviewedSha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "currentSha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/restaurants/geocode.ts",
+      "reviewedSha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "currentSha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/restaurants/overpass.ts",
+      "reviewedSha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "currentSha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/routes/__root.tsx",
+      "reviewedSha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4",
+      "currentSha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/analytics.ts",
+      "reviewedSha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2",
+      "currentSha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/components/mode-home.tsx",
+      "reviewedSha256": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288",
+      "currentSha256": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/discovery/provider-chain.ts",
+      "reviewedSha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf",
+      "currentSha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/src/lib/discovery/hedged-provider.ts",
+      "reviewedSha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6",
+      "currentSha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6",
+      "equal": true
+    },
+    {
+      "path": "legal-support-candidate/capacitor.config.json",
+      "reviewedSha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "currentSha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "equal": true
+    }
+  ]
+}
