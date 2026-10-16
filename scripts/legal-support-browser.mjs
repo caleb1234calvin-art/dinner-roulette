@@ -29,6 +29,28 @@ async function visibleHit(locator) {
   });
   assert.ok(geometry.visible, JSON.stringify(geometry)); return geometry;
 }
+// WCAG normal-text contrast: verify actual computed foreground/background,
+// not a screenshot impression or inherited theme-token assumption.
+async function textContrast(page, selector) {
+  const values = await page.locator(selector).evaluateAll(elements => {
+    const canvas = document.createElement('canvas'); canvas.width=canvas.height=1;
+    const context = canvas.getContext('2d', {willReadFrequently:true});
+    const rgba = color => {context.clearRect(0,0,1,1);context.fillStyle=color;context.fillRect(0,0,1,1);return [...context.getImageData(0,0,1,1).data];};
+    const luminance = rgb => rgb.slice(0,3).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
+    return elements.filter(el=>el.textContent.trim()).map(el=>{
+      const over=(front,back)=>{const a=front[3]/255,b=back[3]/255,out=a+b*(1-a);return out?[...front.slice(0,3).map((v,i)=>(v*a+back[i]*b*(1-a))/out),out*255]:[0,0,0,0];};
+      let foreground=rgba(getComputedStyle(el).color),parent=el,background=[0,0,0,0];
+      while(parent){const style=getComputedStyle(parent);if(Number(style.opacity)!==1 || style.backgroundImage!=='none')throw new Error('Unsupported opacity/gradient in contrast check');background=over(background,rgba(style.backgroundColor));if(background[3]>=255-1e-6)break;parent=parent.parentElement;}
+      if(background[3]<255-1e-6)throw new Error('No opaque background for contrast check');
+      foreground=over(foreground,background);
+      const a=luminance(foreground),b=luminance(background);
+      return {text:el.textContent.trim().slice(0,70),ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};
+    });
+  });
+  assert.ok(values.length>0);
+  for(const value of values)assert.ok(value.ratio>=4.5,JSON.stringify(value));
+  return {textContrastCount:values.length,minimumTextContrast:Math.min(...values.map(v=>v.ratio))};
+}
 async function overflow(page) { assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)); }
 try {
   const start=Date.now();
@@ -62,7 +84,9 @@ try {
         const back=page.getByRole('link',{name:'Back to Settings',exact:true});await back.focus();
         assert.ok(await back.evaluate(el=>el===document.activeElement));await visibleHit(back);await page.screenshot({path:resolve(output,`${width}-${theme}-${path.slice(1)}-focused-viewport.png`)});await back.press('Tab');assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='A'));await page.keyboard.press('Shift+Tab');assert.ok(await back.evaluate(el=>el===document.activeElement));await back.press('Enter');
         await page.waitForURL('**/settings');
-        pass(`${width}/${theme}${path} public route, anchors, keyboard return`);
+        await page.goto(base+path,{waitUntil:'networkidle'});
+        const contrast=await textContrast(page,'main p, main a, main h1, main h2');
+        pass(`${width}/${theme}${path} public route, anchors, keyboard return`,contrast);
         await page.goto(base+path,{waitUntil:'networkidle'});await page.screenshot({path:resolve(output,`${width}-${theme}-${path.slice(1)}.png`),fullPage:true});
       }
       await page.goto(base+'/settings',{waitUntil:'networkidle'});
@@ -82,7 +106,10 @@ try {
       assert.deepEqual(state.preferences,{});assert.deepEqual(state.visits,[]);assert.deepEqual(state.sessionShown,[]);assert.equal(state.theme,theme);assert.deepEqual(state.location,{label:'Springfield fixture, Missouri',lat:37.2089,lon:-93.2923,source:'manual'});
       await page.reload({waitUntil:'networkidle'});await overflow(page);const reloaded=await page.evaluate(()=>JSON.parse(localStorage.getItem('pick-for-us-v1')).state);assert.deepEqual(reloaded.preferences,{});assert.deepEqual(reloaded.visits,[]);assert.deepEqual(reloaded.location,state.location);assert.equal(reloaded.theme,theme);
       for(const name of ['Include unknown prices','Never recommend 1-star places','Stretch radius if needed']) assert.equal(await page.getByRole('switch',{name,exact:true}).count(),1);
-      pass(`${width}/${theme} Settings links, mailto no-handler fallback, reset scope, switch names`);
+      const contrast=await textContrast(page,'section[aria-labelledby] p, section[aria-labelledby] a, section[aria-labelledby] h2, section[aria-label="About Pick For Us"] p');
+      await support.hover();await page.waitForTimeout(250);await textContrast(page,'section[aria-labelledby="support-heading"] a');
+      await support.focus();await textContrast(page,'section[aria-labelledby="support-heading"] a');
+      pass(`${width}/${theme} Settings links, mailto no-handler fallback, reset scope, switch names`,contrast);
       await page.screenshot({path:resolve(output,`${width}-${theme}-settings.png`),fullPage:true});
       await context.close();
     }

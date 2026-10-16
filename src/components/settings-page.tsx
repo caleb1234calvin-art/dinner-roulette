@@ -40,29 +40,29 @@ export function SettingsPage() {
     <section className="mt-8" aria-labelledby="legal-heading">
       <h2 id="legal-heading" className="text-sm text-muted">Legal &amp; Privacy</h2>
       <div className="mt-3 space-y-2 rounded-xl bg-surface p-4 shadow-border">
-        <Link to="/privacy" className="flex min-h-11 items-center rounded-md text-sm font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Privacy Policy</Link>
-        <Link to="/terms" className="flex min-h-11 items-center rounded-md text-sm font-medium text-accent underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Terms &amp; Conditions</Link>
-        <p className="text-xs leading-relaxed text-subtle">Read how discovery works, how information is handled, and the choices available to you. These documents are drafts for review in this nonproduction candidate.</p>
+        <Link to="/privacy" className="flex min-h-11 items-center rounded-md text-sm font-medium text-fg underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Privacy Policy</Link>
+        <Link to="/terms" className="flex min-h-11 items-center rounded-md text-sm font-medium text-fg underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Terms &amp; Conditions</Link>
+        <p className="text-xs leading-relaxed text-muted">Read how discovery works, how information is handled, and the choices available to you. These documents are drafts for review in this nonproduction candidate.</p>
       </div>
     </section>
     <section className="mt-8" aria-labelledby="support-heading">
       <h2 id="support-heading" className="text-sm text-muted">Support</h2>
       <div className="mt-3 space-y-3 rounded-xl bg-surface p-4 shadow-border">
         <p className="text-sm text-fg">Caustic Relay / Pick For Us</p>
-        <Button asChild className="w-full"><a href={SUPPORT_MAILTO}>Contact Support</a></Button>
-        <p className="text-xs leading-relaxed text-subtle">Opens your email app. If nothing opens, copy the address below into your email service. No Pick For Us account is needed.</p>
+        <Button asChild variant="secondary" className="w-full"><a href={SUPPORT_MAILTO}>Contact Support</a></Button>
+        <p className="text-xs leading-relaxed text-muted">Opens your email app. If nothing opens, copy the address below into your email service. No Pick For Us account is needed.</p>
         <p className="select-text break-all text-sm text-fg">{SUPPORT_EMAIL}</p>
-        <p className="text-xs leading-relaxed text-subtle">For support or privacy requests. Please do not email passwords, payment details, or other sensitive information.</p>
+        <p className="text-xs leading-relaxed text-muted">For support or privacy requests. Please do not email passwords, payment details, or other sensitive information.</p>
       </div>
     </section>
     <section className="mt-8 space-y-3" aria-labelledby="data-heading">
       <h2 id="data-heading" className="text-sm text-muted">Data on this device</h2>
-      <p className="text-xs leading-relaxed text-subtle">Reset filters restores Dinner and Date Night filters. Clear favorites and history also removes ratings, visits, exclusions and shown-pick history, and resets filters, the selected mode and the seasonal toggle.</p>
+      <p className="text-xs leading-relaxed text-muted">Reset filters restores Dinner and Date Night filters. Clear favorites and history also removes ratings, visits, exclusions and shown-pick history, and resets filters, the selected mode and the seasonal toggle.</p>
       <Button variant="secondary" className="w-full" onClick={resetFilters}>Reset filters</Button>
       <Button variant="danger" className="w-full" onClick={resetAllData}>Clear favorites and history</Button>
-      <p className="text-xs leading-relaxed text-subtle">Your saved search location, appearance and tour preference stay on this device. These controls do not delete support emails or information held by hosting, analytics or other services. See the Privacy Policy for storage and deletion details.</p>
+      <p className="text-xs leading-relaxed text-muted">Your saved search location, appearance and tour preference stay on this device. These controls do not delete support emails or information held by hosting, analytics or other services. See the Privacy Policy for storage and deletion details.</p>
     </section>
-    <section className="mt-8 border-t border-border pt-4" aria-label="About Pick For Us"><p className="text-xs text-subtle">Pick For Us · By Caustic Relay</p></section>
+    <section className="mt-8 border-t border-border pt-4" aria-label="About Pick For Us"><p className="text-xs text-muted">Pick For Us · By Caustic Relay</p></section>
   </main>;
 }
 
