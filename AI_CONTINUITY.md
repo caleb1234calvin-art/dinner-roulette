@@ -1,3 +1,19 @@
+# CURRENT — Google Play compliance investigation HOLD — 2026-10-16 UTC
+
+Google Play submission readiness is **HOLD**. Fifty requirement-to-evidence rows cover the seven owner-supplied official sources, detailed policy cross-references, current Android packaging, hosted behavior, content/listing, signing contracts and export questions. One confirmed **FAIL against a pre-submission criterion** is the incomplete in-app privacy policy (consolidated P0 submission blocker; no existing Play publication/contract breach or security incident established). Private Console declarations, runtime/provider retention facts, final signed artifact and device acceptance remain HOLD. No casino/gambling, IP or export-law violation was established. Full evidence and priorities: `audit/play-compliance-2026-10-16/README.md`, `REQUIREMENTS-MATRIX.md` and JSON, source inventory, owner decisions and independent acceptance plan.
+
+Audited main remains `c3208d9fdc9a21d698efa9254be1286f5d3d2836`, tree `c36112156cd11baefb6671194f0d59b9c181c2a3`. Provider readback at 02:59:40 UTC verifies READY `dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6`; prior five-alias and 92-identity evidence is retained, not recast as new production smoke. Target API 36 passes the inspected current requirement. The historical unsigned AAB at PR75 head has 55 matching native/build/npm inputs; this is bounded input parity, not a newly built main release or authorization to upload.
+
+Preferred brand-only package is `app.pickforus.android` only after the owner's exact decision, domain/brand control, private availability and first-registration/history checks. Current `com.calebcalvin.pickforus` is valid. No source/identity correction was made because accurate privacy text needs real operational facts and identity is an owner decision. Already-authorized isolated corrections can proceed after necessary facts are established, with independent acceptance before any later release decision.
+
+PR75 remains DRAFT / UNMERGED at `91896a2b8c086b7d86b831c462e158fe04e6c00d`, tree `62f2615cb924f15ec7fc6cb5a160d1eb613ba605`, with unchanged chooser-heading/help viewport-visibility HOLD and preserved NOT_RUN probe. Its prior functional/tooling qualified acceptance and original archives are unchanged. The recovered 20-record factual packet and four reviewed central adapters remain preserved; runtime integration is unrun. Halloween additions are optional and parked; no backlog restart, record promotion or broad test repeat occurred.
+
+No legal acceptance, Console declaration, production signing credential generation/use, AAB upload, Play release, source merge, deployment, migration, production setting change or rollback was performed or newly authorized. Only documentation on the deployment-excluded integration continuity route is published. Legacy `continuity/release` remains untouched; this audit carries forward the complete latest release proposal. All previous history follows byte-for-byte unchanged.
+
+---
+
+## Preserved previous continuity
+
 # CURRENT — DOT recovery complete; PR75 independent acceptance HOLD — 2026-10-16 UTC
 
 Production remains main `c3208d9fdc9a21d698efa9254be1286f5d3d2836`, tree `c36112156cd11baefb6671194f0d59b9c181c2a3`, READY `dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6`; all five aliases and 92 identities were freshly verified. Prior production smoke/Override/owner rollback-selector evidence was not rerun. Previous 8DB remains READY; current rollback eligibility was not verified after a read-only 403, and no bypass occurred.

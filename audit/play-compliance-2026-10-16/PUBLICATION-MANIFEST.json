@@ -1,0 +1,149 @@
+{
+  "base_commit": "c6345aa2fd3d6df3076cab11b9ca9eaa4bb3407a",
+  "base_tree": "3d9cda68210feebee231b2ecaee2bfd8c39fdecb",
+  "branch": "integration/continuity-refresh-2026-10-07",
+  "docs_only": true,
+  "deploy_exclusion_verified": "vercel.json git.deploymentEnabled integration/** false",
+  "files": [
+    {
+      "path": "AI_CONTINUITY.md",
+      "bytes": 1239468,
+      "sha256": "a0eb10b9c5b31b5afa14c9aea40d0635083c3addbb17bc83b0878ba83bd6de56",
+      "git_blob_sha": "bcb4df7ecb5e916f6bbba5e38d1385e74d546f12"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/AAB-INSPECTION.json",
+      "bytes": 3313,
+      "sha256": "8624560b53662eeceeba76b851244522afedac179cc2e945d965a21ab60aad36",
+      "git_blob_sha": "787a4cc12454a73bf2b623a4973316116cc38cd3"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/ACCEPTANCE-PLAN.md",
+      "bytes": 2887,
+      "sha256": "d840b5b0d81c8e66b7958f81ee8421f7f6a6a7baeb238417cddcb8766a171c90",
+      "git_blob_sha": "58d2a5284bc63ae0d64bfa69527adf64acaea5a1"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/ANDROID-WORKFLOW-RECEIPT.json",
+      "bytes": 404,
+      "sha256": "c010dbc2c17f1c1d9a1589d71cb47130702fd72cd8c43b17eed91c9ee147a5aa",
+      "git_blob_sha": "1b65971a678c27efcefa40919a4de89f5a5c97d5"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/BASELINE-RECEIPT.json",
+      "bytes": 448,
+      "sha256": "1ce1d0d0d6fd68ee264f134a2cb4fafae2c786b89d168723f79448d3842c2a25",
+      "git_blob_sha": "68e504c7efda011ea4f9abe9743f914c0467d494"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/CONTINUITY-INTEGRITY.json",
+      "bytes": 924,
+      "sha256": "e6a42982f2fb817f8dc0498e16a559db62bcce00d8e579336da05cb35f02cac1",
+      "git_blob_sha": "618a82ba687fb3c4918378d5136a5a689e1aa6b7"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/DATA-FLOW-INVENTORY.md",
+      "bytes": 3401,
+      "sha256": "52ec20ffc3641fecb3c3fac662581eefec1ead916afc0856736291374eab53bd",
+      "git_blob_sha": "34c97780db68cb287af74761ad726fb9ac56477e"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/DECLARATION-EVIDENCE.md",
+      "bytes": 3603,
+      "sha256": "b86794344a57caf81aba1a2b92dfdf5143424248ff50fa2aca55309fc75176ad",
+      "git_blob_sha": "e8f35450ab7d990119be265712040f188f31ac23"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/EVIDENCE-INDEX.json",
+      "bytes": 44440,
+      "sha256": "42eded8f934d1ee1173e0e6eb5f4f2745a4739bff2267b6db862e5dfa1c61757",
+      "git_blob_sha": "55c718f420c711add1106d74b238e3af9d9cb232"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/FINAL-SNAPSHOT-RECEIPT.json",
+      "bytes": 4606,
+      "sha256": "526d3b347bd60ee9e7a31119eea52c1c9a8258228c531e7ffb631d925e1a2a3c",
+      "git_blob_sha": "e12c678a2fd21b448662c0a6bca4bdc0bcace010"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/INDEPENDENT-ACCEPTANCE.md",
+      "bytes": 4430,
+      "sha256": "f264234bd5b152e2303bad38e11170d3341426e78f1d288ec574fbae7a8025a4",
+      "git_blob_sha": "a5e86b4f139888adb234b00b2376135bf9d9c427"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/INDEPENDENT-REVIEW.md",
+      "bytes": 3553,
+      "sha256": "936e778a953904d6794a0693de75027b3dba89a06026f6a2260b09205f1c4d85",
+      "git_blob_sha": "49f2ae0a45e55bff9731095c731afa1649a1691e"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/NATIVE-INPUT-EQUIVALENCE.json",
+      "bytes": 23045,
+      "sha256": "d75e3a68d3340dc7b3da18fe3cf3525aec2a412c70882d1399be3a0b46c94552",
+      "git_blob_sha": "ca67d463d3fcfc20e97fbd5286f97a60d182567c"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/OWNER-DECISIONS.md",
+      "bytes": 2242,
+      "sha256": "d9cbcad7a9a3645d337fcff758c2633535677a7da2e8b9228002aa8935791bf4",
+      "git_blob_sha": "23ff8a7f37a1eb92d7039d272663217c88004150"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/PACKAGE-IDENTITY-DECISION.md",
+      "bytes": 3959,
+      "sha256": "432000fd67504ee0c2eaf7614721155b02cfb7821366effd43a32d883ce74aae",
+      "git_blob_sha": "f5464b72e88bcd7573fc11a4bdd8bd54e9181331"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/README.md",
+      "bytes": 7223,
+      "sha256": "1f3afb4ba627e454bd66ee2fcf6224abd79a75cde8d3c8a6b996e180db982591",
+      "git_blob_sha": "3ed1084761c3fcc177772c45941628583cbb3627"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/RELEASE_CONTINUITY.apply.patch",
+      "bytes": 40778,
+      "sha256": "fced5bbc94a0282713a913db044f899fc43519c4c225222cead6d4dbf51dd3f4",
+      "git_blob_sha": "3bf683e18f7fec6b77291a8d1160bb3ca4fc1a82"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/RELEASE_CONTINUITY.proposed.md",
+      "bytes": 61076,
+      "sha256": "e065c86095dbe1a024e77954312e81eef6b80e3a4c8fd7470643608d907fc84c",
+      "git_blob_sha": "8d18df19c7c8587083f3e1894272c0c46d51785b"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/REMEDIATION-PLAN.md",
+      "bytes": 3737,
+      "sha256": "4232c4545e127056d8f1f07b41e0f6f370688c9148057071649298cf9c0d532a",
+      "git_blob_sha": "ba43408187814156028ae515a9287b3c27c49cb7"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/REQUIREMENTS-MATRIX.json",
+      "bytes": 110605,
+      "sha256": "8f48f559b2a63cfd585107195233e134adefe9a4c18c8453bce6cccad01d7964",
+      "git_blob_sha": "a25a9b210b00ec31dfe0bcd5bef9694dcc8e2f87"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/REQUIREMENTS-MATRIX.md",
+      "bytes": 96142,
+      "sha256": "bcbfb1d50c9ad9d87aebba725e97a5e2d2179ee2fb755984a980aa0544b950d7",
+      "git_blob_sha": "1f940f6d865e9f7b6dcdf79256ec71664f60572a"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/SOURCE-INVENTORY.json",
+      "bytes": 34657,
+      "sha256": "27e42113377a8ea7bfe2ce882f27e099997cae9d1496032268587f48ad5f4a4f",
+      "git_blob_sha": "b9836daa9e1bebe290fb66c2bdb6b2175d6aeca1"
+    },
+    {
+      "path": "audit/play-compliance-2026-10-16/SOURCE-INVENTORY.md",
+      "bytes": 13737,
+      "sha256": "cf08b55d5ad545599dac435dd24dec6c5175a324a22aeed5790d06812282b82d",
+      "git_blob_sha": "ce3d5728a2e22640d31431bd47cfcb9cb6c07801"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "frozen_report_receipt_sha256": "526d3b347bd60ee9e7a31119eea52c1c9a8258228c531e7ffb631d925e1a2a3c"
+}

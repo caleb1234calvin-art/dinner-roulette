@@ -1,0 +1,681 @@
+{
+  "retrieval_date_utc": "2026-10-16",
+  "required_sources": [
+    {
+      "id": "S1",
+      "url": "https://play.google/developer-content-policy/",
+      "title": "Developer Policy Center",
+      "kind": "Policy index with linked operative policies",
+      "retrieval": "Exact official URL retrieved; applicable detailed clauses followed",
+      "version": "No document-specific revision/effective date exposed",
+      "sections": "Restricted Content; User Data; Permissions; SDKs; Metadata; Ratings; Spam and Functionality",
+      "qualification": "The index is not itself a substitute for each detailed policy clause.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Independent primary-source review; exact seven-source check 03:07:57–03:08:04 UTC, with source-specific limits recorded"
+    },
+    {
+      "id": "S2",
+      "url": "https://playacademy.exceedlms.com/student/activity/7239-comply-with-google-play-store-listing-policies",
+      "title": "Comply with Google Play store listing policies",
+      "kind": "Educational course",
+      "retrieval": "Public landing page retrieved; Log In To Launch; authenticated course content unavailable",
+      "version": "Landing-page publication date April 14, 2025",
+      "sections": "Landing page/course description only",
+      "qualification": "No claim of course completion or full module review. Optional P3 education gap, not an independently established release prerequisite.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Independent primary-source review; exact seven-source check 03:07:57–03:08:04 UTC, with source-specific limits recorded"
+    },
+    {
+      "id": "S3",
+      "url": "https://support.google.com/googleplay/android-developer/answer/6320428",
+      "title": "Provide advance notice to the Google Play app review team",
+      "kind": "Scoped operational guidance",
+      "retrieval": "Exact official URL retrieved",
+      "version": "No document-specific revision/effective date exposed",
+      "sections": "Advance notice for supporting documentation and listed regulated/official cases",
+      "qualification": "Not general pre-approval. IP permission documents, government/healthcare, Korea game ratings, accessibility and nonprofit/authority evidence are conditional examples; casino venue discovery is not automatically a casino-style game.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Independent primary-source review; exact seven-source check 03:07:57–03:08:04 UTC, with source-specific limits recorded"
+    },
+    {
+      "id": "S4",
+      "url": "https://developer.android.com/guide/app-bundle",
+      "title": "About Android App Bundles",
+      "kind": "Technical documentation",
+      "retrieval": "Exact official URL retrieved",
+      "version": "Last updated June 24, 2026",
+      "sections": "Publishing format; delivery/optimization; compressed download restrictions",
+      "qualification": "Bundle format/validation does not establish signing, policy compliance, Play acceptance or actual hosted runtime.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Independent primary-source review; exact seven-source check 03:07:57–03:08:04 UTC, with source-specific limits recorded"
+    },
+    {
+      "id": "S5",
+      "url": "https://play.google/play-app-signing-terms/",
+      "title": "Play App Signing Terms of Service",
+      "kind": "Contract",
+      "retrieval": "Exact official URL retrieved in full",
+      "version": "Effective August 1, 2021",
+      "sections": "Preamble; 1.1–1.3; 2.1–2.2; 3.1; 4.1",
+      "qualification": "Service-specific terms prevail in a service conflict. Actual accepted versions/notices unknown. No acceptance occurred.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Exact live signing-terms URL independently retrieved 2026-10-16T03:04:46Z; full extracted page."
+    },
+    {
+      "id": "S6",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9842756?hl=en",
+      "title": "Use Play App Signing",
+      "kind": "Operational guidance",
+      "retrieval": "Exact live English route blocked by Google error/anti-bot response; official no-query English and en-GB live pages succeeded; exact-URL indexed text independently corroborated",
+      "version": "No page revision date shown; search crawl date is not an effective date",
+      "sections": "Core concepts; setup; API providers; key management and recovery",
+      "qualification": "Current hybrid/Android 17 guidance differs from March 2026 Android Studio guide. Actual app enrollment and certificates control applicability; no hybrid state inferred.",
+      "alternate_urls": [
+        "https://support.google.com/googleplay/android-developer/answer/9842756",
+        "https://support.google.com/googleplay/android-developer/answer/9842756?hl=en-GB"
+      ],
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Exact-URL primary search result returned full indexed content 2026-10-16T03:03:52Z; direct live open at 03:04:46Z failed. This is not represented as successful direct retrieval."
+    },
+    {
+      "id": "S7",
+      "url": "https://support.google.com/googleplay/android-developer/answer/113770?hl=en",
+      "title": "Export compliance",
+      "kind": "General guidance",
+      "retrieval": "Exact official URL retrieved",
+      "version": "No document-specific revision/effective date exposed",
+      "sections": "Developer responsibility; encryption and external cryptographic calls",
+      "qualification": "No product classification, exemption, license or filing conclusion follows merely from HTTPS, open-source libraries or Google availability.",
+      "retrieval_date_utc": "2026-10-16",
+      "locale": "English (signing alternate also en-GB)",
+      "independent_corroboration": "Independent primary-source review; exact seven-source check 03:07:57–03:08:04 UTC, with source-specific limits recorded"
+    }
+  ],
+  "supplemental_sources": [
+    {
+      "id": "academy-listing",
+      "url": "https://playacademy.exceedlms.com/student/activity/7239-comply-with-google-play-store-listing-policies",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "April 14, 2025 publication date; authenticated module unavailable",
+      "capture_path": "policies/academy-listing.raw.txt",
+      "sha256": "da79a7b979300e4d7e1029531de60ddcb587a09b6f4f2fb93b574cbd76a07594",
+      "scope": "Public landing page only"
+    },
+    {
+      "id": "ads",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9857753?hl=en",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/ads.raw.txt",
+      "sha256": "01755126e595b5705d0c122aa508b6f9830c218094cb6ca99bf11afd3cdadbea",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "advance-notice",
+      "url": "https://support.google.com/googleplay/android-developer/answer/6320428",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/advance-notice.raw.txt",
+      "sha256": "5eb2b5dfb9acb6f449c59bb5c32d2e3d2213d499cf6a81157dba084621371df4",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "age-restricted",
+      "url": "https://support.google.com/googleplay/android-developer/answer/16302250",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/age-restricted.raw.txt",
+      "sha256": "e99b8bd9884df3b5fd1844bb2190e07876d11f8c67dfb55ccbda924e261eefc2",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "content-rating",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9898843",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/content-rating.raw.txt",
+      "sha256": "606fdeada6e0c0c603c3360be03cbc7c1bfe6711652854c09be7d5e25865d225",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "families",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9893335",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/families.raw.txt",
+      "sha256": "12b8489e1928bcbd98e00a0ee48922a50fcec2b604357cd83ab889eb6c2a799d",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "gambling",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9877032",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/gambling.raw.txt",
+      "sha256": "65a1aeee557dd90ce287474d8a944d982ba88945fd35e0373ef38d8ca1f40513",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "inappropriate-content",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9878810",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/inappropriate-content.raw.txt",
+      "sha256": "11be5fcc9b1be492f1e4ef88c9bfc08a4de5c015e230f0db309cdea977524939",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "intellectual-property",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9888072?hl=en",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/intellectual-property.raw.txt",
+      "sha256": "047da2a44b33d6ded5be1d11752a13b09f63f328d64fdfb04117639c22768701",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "metadata",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9898842",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/metadata.raw.txt",
+      "sha256": "8f8fc2ffe69b372b038532cffd5812b86752549cce1a8f401f191dba93204f57",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "policy-center",
+      "url": "https://play.google/developer-content-policy/",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/policy-center.raw.txt",
+      "sha256": "9f289c1a467e2b6ee2bfa16630fe353079be23516a464f4d8eb418c9cecca1b6",
+      "scope": "Official page extraction"
+    },
+    {
+      "id": "target-audience",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9867159",
+      "retrieved_date_utc": "2026-10-16",
+      "version": "Public official page as returned on retrieval date; no document-specific effective-date version exposed",
+      "capture_path": "policies/target-audience.raw.txt",
+      "sha256": "5a5df4b8c74acfde8f7ee12356edc8c28ad671e0ef9bd9f6150452a5956df1e4",
+      "scope": "Official page extraction"
+    },
+    {
+      "url": "https://developer.android.com/guide/app-bundle",
+      "title": "About Android App Bundles",
+      "updated": "2026-06-24",
+      "provision": "Introduction; compressed download size restriction"
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/11926878",
+      "title": "Target API level requirements for Google Play apps",
+      "updated": null,
+      "effective": "2026-08-31",
+      "provision": "New apps and app updates; API 36 for ordinary Android apps"
+    },
+    {
+      "url": "https://developer.android.com/studio/publish/app-signing",
+      "title": "Sign your app",
+      "updated": "2026-03-06",
+      "provision": "Play App Signing; upload key; Working with API providers"
+    },
+    {
+      "url": "https://developer.android.com/build/configure-app-module",
+      "title": "Configure the app module",
+      "updated": "2026-02-26",
+      "provision": "Set the application ID; syntax and permanence"
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9859152",
+      "title": "Create and set up your app",
+      "updated": null,
+      "provision": "Manage your app and app bundles; package permanence and versionCode"
+    },
+    {
+      "url": "https://developer.android.com/guide/practices/page-sizes",
+      "title": "Support 16 KB page sizes",
+      "updated": "2026-10-16",
+      "provision": "Check if your app is impacted"
+    },
+    {
+      "url": "https://developer.android.com/google/play/requirements/64-bit",
+      "title": "Support 64-bit architectures",
+      "updated": null,
+      "provision": "Assess your app; no packaged native libraries"
+    },
+    {
+      "url": "https://capacitorjs.com/docs/config",
+      "title": "Capacitor Configuration",
+      "version": "v8",
+      "provision": "server.url, server.allowNavigation, server.errorPath; appId"
+    },
+    {
+      "url": "https://capacitorjs.com/docs/updating/8-0",
+      "title": "Updating from Capacitor 7 to Capacitor 8",
+      "version": "v8",
+      "provision": "Android; project variables; Gradle/AGP; Node"
+    },
+    {
+      "url": "https://developer.android.com/build/releases/agp-8-13-0-release-notes",
+      "title": "Android Gradle Plugin 8.13.0",
+      "updated": "2026-10-08",
+      "provision": "Compatibility"
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/risks/file-providers",
+      "title": "Improperly Exposed Directories to FileProvider",
+      "updated": "2024-09-24",
+      "provision": "Share narrow path ranges; avoid external-path sensitive data"
+    },
+    {
+      "url": "https://developer.android.com/identity/data/autobackup",
+      "title": "Back up user data with Auto Backup",
+      "updated": null,
+      "provision": "Enable and disable backup; Android 12+ device transfer"
+    },
+    {
+      "url": "https://developer.android.com/training/app-links/configure-assetlinks",
+      "title": "Configure website associations and dynamic rules",
+      "updated": null,
+      "provision": "package_name and SHA-256 certificate fingerprints"
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/risks/android-exported",
+      "title": "android:exported",
+      "updated": "2024-09-24",
+      "provision": "Overview; Mitigations"
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/risks/insecure-webview-native-bridges",
+      "title": "WebView Native bridges",
+      "updated": "2024-10-15",
+      "provision": "Only load web content over HTTPS; validate untrusted content"
+    },
+    {
+      "url": "https://developer.android.com/guide/topics/manifest/uses-permission-element",
+      "title": "uses-permission",
+      "updated": "2025-02-10",
+      "provision": "Hardware filtering; runtime permission grant"
+    },
+    {
+      "id": "SIGNING_TERMS",
+      "url": "https://play.google/play-app-signing-terms/",
+      "effective": "2021-08-01",
+      "locale": "English, British spelling",
+      "status": "Exact URL success",
+      "kind": "contract",
+      "retrieval_date_utc": "2026-10-16",
+      "first_retrieved_utc": "02:59:37",
+      "sections": "preamble; 1.1–1.3; 2.1–2.2; 3.1; 4.1",
+      "coverage": "Full 31-line extracted page",
+      "conflict": "Service terms prevail over Agreement for Service conflicts"
+    },
+    {
+      "id": "DDA",
+      "url": "https://play.google/developer-distribution-agreement.html",
+      "linked_url": "https://play.google.com/about/developer-distribution-agreement.html",
+      "effective": "2025-09-15",
+      "locale": "English",
+      "status": "Exact current redirect target success",
+      "kind": "contract",
+      "retrieval_date_utc": "2026-10-16",
+      "first_retrieved_utc": "02:59:37",
+      "sections": "1–16 full text reviewed; material 2, 4, 11, 15, 16.5",
+      "coverage": "Full 166-line extracted page",
+      "conflict": "16.1 English controls; Console notices/addenda unreviewed"
+    },
+    {
+      "id": "SIGNING_HELP",
+      "url": "https://support.google.com/googleplay/android-developer/answer/9842756?hl=en",
+      "alternate_url": "https://support.google.com/googleplay/android-developer/answer/9842756",
+      "second_alternate_url": "https://support.google.com/googleplay/android-developer/answer/9842756?hl=en-GB",
+      "effective": null,
+      "locale": "English and en-GB",
+      "status": "Exact direct open failed Google sorry/500; official English no-query and en-GB live succeeded. Independent search indexed exact-URL content, two-week crawl age, not live open.",
+      "kind": "operational guidance",
+      "retrieval_date_utc": "2026-10-16",
+      "first_success_utc": "03:00:08",
+      "en_GB_success_utc": "03:03:47",
+      "sections": "Core concepts; Set up; Register with API providers; Manage keys; Best practices",
+      "conflict": "Current Android17/hybrid text differs from Android Studio March2026 guide; actual app enrollment unknown"
+    },
+    {
+      "id": "EXPORT_HELP",
+      "url": "https://support.google.com/googleplay/android-developer/answer/113770?hl=en",
+      "effective": null,
+      "locale": "English",
+      "status": "Exact URL success",
+      "kind": "general guidance",
+      "retrieval_date_utc": "2026-10-16",
+      "first_retrieved_utc": "02:59:37",
+      "coverage": "Full 84-line extracted page",
+      "conflict": "General explanation, not legal classification"
+    },
+    {
+      "id": "EAR74017",
+      "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-740/section-740.17",
+      "locale": "English",
+      "status": "Success",
+      "kind": "independent regulation; eCFR authoritative but unofficial",
+      "retrieval_date_utc": "2026-10-16",
+      "title_current_through": "2026-10-14",
+      "title_last_amended": "2026-09-24",
+      "sections": "(b), (d), (e)(3) and definition",
+      "conflict": "Exact reporting scope narrower than simplified mass-market overview; no app classification established"
+    },
+    {
+      "id": "EAR74215",
+      "url": "https://www.ecfr.gov/current/title-15/subtitle-B/chapter-VII/subchapter-C/part-742/section-742.15",
+      "locale": "English",
+      "status": "Success",
+      "kind": "independent regulation; eCFR authoritative but unofficial",
+      "retrieval_date_utc": "2026-10-16",
+      "title_current_through": "2026-10-14",
+      "title_last_amended": "2026-09-24",
+      "sections": "(a), (b)(1), (b)(2)",
+      "conflict": "(b)(2) notification specifically non-standard cryptography; BIS overview broader"
+    },
+    {
+      "id": "BIS_OVERVIEW",
+      "url": "https://media.bis.gov/learn-support/encryption-controls/encryption-items-not-subject-to-ear",
+      "effective": null,
+      "locale": "English",
+      "status": "Success",
+      "kind": "agency guidance",
+      "retrieval_date_utc": "2026-10-16",
+      "conflict": "Broad notification summary versus 742.15(b)(2)"
+    },
+    {
+      "id": "BIS_MASS_MARKET",
+      "url": "https://media.bis.gov/learn-support/encryption-controls/mass-market",
+      "effective": null,
+      "locale": "English",
+      "status": "Success",
+      "kind": "agency guidance",
+      "retrieval_date_utc": "2026-10-16",
+      "conflict": "Broad annual report summary versus 740.17(e)(3) specific scope"
+    },
+    {
+      "id": "OFAC_PROGRAMS",
+      "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+      "locale": "English",
+      "status": "Success",
+      "kind": "agency program index, not app-specific determination",
+      "retrieval_date_utc": "2026-10-16",
+      "conflict": null
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/11926878?hl=en",
+      "title": "Target API level requirements for Google Play apps",
+      "section": "Starting August 31, 2026; App update requirements",
+      "observed": "API 36 for new ordinary mobile apps/updates. Existing app availability floor differs.",
+      "publishedVersion": "No explicit page revision date shown; operative deadline August 31, 2026."
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9877032?hl=en",
+      "title": "Real-Money Gambling, Games, and Contests",
+      "section": "Gambling Apps; Other Real-Money Games; Ads",
+      "observed": "Licensing/facilitation and gambling-ad conditions have scoped triggers.",
+      "publishedVersion": "No explicit page revision date shown."
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/9899034?hl=en",
+      "title": "Spam",
+      "section": "Webviews and Affiliate Spam",
+      "observed": "Unauthorized website wrapping and affiliate-primary purpose; no all-WebViews ban.",
+      "publishedVersion": "No explicit page revision date shown."
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/10144311?hl=en",
+      "title": "User Data",
+      "section": "Privacy Policy; Prominent Disclosure & Consent; Account Deletion",
+      "observed": "In-app policy link OR text; contact and retention/deletion required; consent and account deletion triggers require contextual review.",
+      "publishedVersion": "No explicit page revision date shown."
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/10787469?hl=en",
+      "title": "Provide information for Google Play's Data safety section",
+      "section": "Data collection; Data sharing; Which developers need to complete",
+      "observed": "Controlled WebView collection in scope; service-provider sharing exception; internal-only track exception; main ephemeral clause conflicts with later FAQ.",
+      "publishedVersion": "Page changelog not treated as a reliable last-revision date."
+    },
+    {
+      "url": "https://developer.android.com/privacy-and-security/risks/file-providers?hl=en",
+      "title": "Improperly Exposed Directories to FileProvider",
+      "section": "Mitigations",
+      "publishedVersion": "Page reports last updated 2024-09-24 UTC",
+      "retrievedAtUTC": "2026-10-16T03:05:06Z",
+      "retrievalDetail": "Primary Android Developers search result."
+    },
+    {
+      "url": "https://developer.android.com/identity/data/autobackup?hl=en",
+      "title": "Back up user data with Auto Backup",
+      "section": "Enable and disable backup",
+      "publishedVersion": "No page revision date independently checked",
+      "retrievedAtUTC": "2026-10-16T03:05:06Z",
+      "retrievalDetail": "Primary Android Developers search result."
+    },
+    {
+      "url": "https://support.google.com/googleplay/android-developer/answer/16558241",
+      "title": "Permissions and APIs that Access Sensitive Information",
+      "section": "Notice of upcoming changes; Location Permissions",
+      "publishedVersion": "Location-button change explicitly effective January 27, 2027; no whole-page revision date",
+      "retrievedAtUTC": "2026-10-16T03:13:11Z",
+      "retrievalDetail": "Independent exact open/find; future date must not be applied as current audit requirement."
+    }
+  ],
+  "conflicts_and_version_limits": [
+    "Policy pages usually lack immutable revision dates. Retrieval date is recorded separately; index crawl dates and search crawl dates are not policy-effective dates.",
+    "Data Safety main collection guidance and later FAQ use inconsistent ephemeral-processing wording. Resolve exact behavior/form rather than invent a no-data exemption.",
+    "Exact English signing-help live retrieval failed; successful official locale/no-query retrieval and indexed evidence are distinctly labeled.",
+    "Signing help describes current Android 17/hybrid concepts; the Android Studio guide shows March 6, 2026 and earlier Android 13 rotation guidance. Do not infer this account’s enrollment.",
+    "DDA is effective September 15, 2025; signing terms August 1, 2021 supplement it. English and service-specific conflict provisions apply as stated; actual owner acceptance/addenda are unreviewed.",
+    "BIS overview descriptions are broader than current 15 CFR 742.15(b)(2) and 740.17(e)(3) scope. eCFR title current through October 14, 2026, title last amended September 24, 2026; these are not individual-clause amendment dates. No app classification is assigned.",
+    "The location guidance notes a change effective January 27, 2027. It is prospective and was not applied as an October 2026 violation."
+  ],
+  "local_capture_archive": {
+    "name": "OFFICIAL-SOURCE-CAPTURES.local-only.zip",
+    "bytes": 177329,
+    "sha256": "deab9952caabdf197de221d1878e64fe7d23100ea972d0b52c796211a9ddecb1",
+    "member_count": 27,
+    "crc_verified": true,
+    "distribution": "Local-only; source quotations are not republished"
+  },
+  "capture_hash_index": [
+    {
+      "capture": "content/ip-ads-target.raw.txt",
+      "bytes": 18918,
+      "sha256": "144c949b97c616c49e03bd4c8349a7bcb8423d57e517218a9a66df2400228dab",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/ip-ads.raw.txt",
+      "bytes": 22741,
+      "sha256": "7138697b9ac0e0a3f51652a86f2eefe21a58c893781b5e48d8bb43a4ccd7320d",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/academy-listing.raw.txt",
+      "bytes": 2150,
+      "sha256": "da79a7b979300e4d7e1029531de60ddcb587a09b6f4f2fb93b574cbd76a07594",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/ads.raw.txt",
+      "bytes": 15000,
+      "sha256": "01755126e595b5705d0c122aa508b6f9830c218094cb6ca99bf11afd3cdadbea",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/advance-notice.raw.txt",
+      "bytes": 4144,
+      "sha256": "5eb2b5dfb9acb6f449c59bb5c32d2e3d2213d499cf6a81157dba084621371df4",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/age-restricted.raw.txt",
+      "bytes": 3669,
+      "sha256": "e99b8bd9884df3b5fd1844bb2190e07876d11f8c67dfb55ccbda924e261eefc2",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/content-rating.raw.txt",
+      "bytes": 6073,
+      "sha256": "606fdeada6e0c0c603c3360be03cbc7c1bfe6711652854c09be7d5e25865d225",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/families.raw.txt",
+      "bytes": 21447,
+      "sha256": "12b8489e1928bcbd98e00a0ee48922a50fcec2b604357cd83ab889eb6c2a799d",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/gambling.raw.txt",
+      "bytes": 15819,
+      "sha256": "65a1aeee557dd90ce287474d8a944d982ba88945fd35e0373ef38d8ca1f40513",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/inappropriate-content.raw.txt",
+      "bytes": 20241,
+      "sha256": "11be5fcc9b1be492f1e4ef88c9bfc08a4de5c015e230f0db309cdea977524939",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/intellectual-property.raw.txt",
+      "bytes": 7976,
+      "sha256": "047da2a44b33d6ded5be1d11752a13b09f63f328d64fdfb04117639c22768701",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/metadata.raw.txt",
+      "bytes": 8066,
+      "sha256": "8f8fc2ffe69b372b038532cffd5812b86752549cce1a8f401f191dba93204f57",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/policy-center.raw.txt",
+      "bytes": 20535,
+      "sha256": "9f289c1a467e2b6ee2bfa16630fe353079be23516a464f4d8eb418c9cecca1b6",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policies/target-audience.raw.txt",
+      "bytes": 18112,
+      "sha256": "5a5df4b8c74acfde8f7ee12356edc8c28ad671e0ef9bd9f6150452a5956df1e4",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/policy-crossrefs.raw.txt",
+      "bytes": 36271,
+      "sha256": "435ee83968ae6cb15c26c080323249343e4e949633239e9d4f86277a58205866",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "content/required-sources.raw.txt",
+      "bytes": 26574,
+      "sha256": "dbd96dfbfbb5716ff22606ba53f9116e8c8c8fdcbfa9c3ac61490390512235ae",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/dda.txt",
+      "bytes": 39663,
+      "sha256": "df04b0fb0e3e3d04278148b3aab29bdf3941da5cf8618dedd58038f380f8dab9",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/ear-740-17.txt",
+      "bytes": 34519,
+      "sha256": "c15a393b1cbc8017103b6ce7c51fd1aeffccd0b42319cb1a5798a0c759197c2f",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/ear-742-15.txt",
+      "bytes": 12489,
+      "sha256": "96f6765885ebc66e008669b456c648762a39464f764bc0ff66a1a4ce035b26d3",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/export-help.txt",
+      "bytes": 3713,
+      "sha256": "a41dcb781dea9abc7d8962e185d7fceb314c4367ebbc726cab47bb2c8a1ba02c",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/signing-help-and-android-guide.txt",
+      "bytes": 33767,
+      "sha256": "4fcbf5f6e645e7be6a37f52b982b9b8502db17dabe5f0f061f87efe05e780647",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/signing-help-en-gb.txt",
+      "bytes": 16092,
+      "sha256": "4aad4d8968ef1c71b8cd5467ae8056f7d7bb02ce471484ec40253278a5de8433",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "contracts/retrieval-captures/signing-terms.txt",
+      "bytes": 3384,
+      "sha256": "a80d7e53b151af8c6e9a86fb91d9e8ae45641a27dcae432e1d84175591e6ed15",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "packaging/official-crossrefs-retrieval.txt",
+      "bytes": 34999,
+      "sha256": "f1068a0501fba7221fad92e6333957438ac6f0979a9af2e8989970bb6d13eb2d",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "packaging/official-required-retrieval.txt",
+      "bytes": 32130,
+      "sha256": "1076b0009813a5ab536a9fc66bd797ec11655241c079e6c3d16eaeffecf6350f",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "privacy/policy/data-safety-retrieved.txt",
+      "bytes": 36054,
+      "sha256": "89eff5ed87deaf2d5cfcc63083b6702c1a2c8833360fcc2bd69050c120c80d81",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    },
+    {
+      "capture": "privacy/policy/initial-google-policies.txt",
+      "bytes": 37999,
+      "sha256": "e87985a57edb54232c38fb723b7862d5233c6375068895d18ee27b9c650a4832",
+      "retrieval_date_utc": "2026-10-16",
+      "distribution": "Local research archive only; not included in published report or user attachment"
+    }
+  ]
+}

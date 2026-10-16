@@ -1,0 +1,127 @@
+{
+  "reviewed_at_utc": "2026-10-16T03:20:10Z",
+  "review_scope": "Independent final document consistency and snapshot integrity; separate from report authorship",
+  "audit_document_verdict": "ACCEPTED",
+  "submission_readiness": "HOLD",
+  "audited_source_commit": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "audited_tree": "c36112156cd11baefb6671194f0d59b9c181c2a3",
+  "row_count": 50,
+  "counts": {
+    "FAIL": 1,
+    "HOLD": 34,
+    "QUALIFIED PASS": 8,
+    "NOT APPLICABLE": 2,
+    "PASS": 5
+  },
+  "checks": {
+    "json_parse": "PASS",
+    "relative_markdown_links": "PASS",
+    "matrix_count_consistency": "PASS",
+    "source_specific_signing_retrieval_timestamps": "PASS",
+    "independent_acceptance_copy": "PASS"
+  },
+  "closed_document_tidyups": [
+    "S5 and S6 use correct distinct independent-retrieval times and distinguish indexed text from failed direct live retrieval.",
+    "All relative Markdown links resolve, including independent review and acceptance.",
+    "Final audit review status reflects accepted substantive conclusions with residual submission HOLD."
+  ],
+  "limits": [
+    "No new runtime, device, private Console or final signed-artifact evidence is created by this document acceptance.",
+    "The one established privacy-content defect and remaining applicable P1 gates require independent closure before a submission recommendation.",
+    "This receipt does not authorize contract acceptance, credentials, declarations, upload, code change, merge or deployment."
+  ],
+  "files": [
+    {
+      "path": "AAB-INSPECTION.json",
+      "bytes": 3313,
+      "sha256": "8624560b53662eeceeba76b851244522afedac179cc2e945d965a21ab60aad36"
+    },
+    {
+      "path": "ACCEPTANCE-PLAN.md",
+      "bytes": 2887,
+      "sha256": "d840b5b0d81c8e66b7958f81ee8421f7f6a6a7baeb238417cddcb8766a171c90"
+    },
+    {
+      "path": "ANDROID-WORKFLOW-RECEIPT.json",
+      "bytes": 404,
+      "sha256": "c010dbc2c17f1c1d9a1589d71cb47130702fd72cd8c43b17eed91c9ee147a5aa"
+    },
+    {
+      "path": "BASELINE-RECEIPT.json",
+      "bytes": 448,
+      "sha256": "1ce1d0d0d6fd68ee264f134a2cb4fafae2c786b89d168723f79448d3842c2a25"
+    },
+    {
+      "path": "DATA-FLOW-INVENTORY.md",
+      "bytes": 3401,
+      "sha256": "52ec20ffc3641fecb3c3fac662581eefec1ead916afc0856736291374eab53bd"
+    },
+    {
+      "path": "DECLARATION-EVIDENCE.md",
+      "bytes": 3603,
+      "sha256": "b86794344a57caf81aba1a2b92dfdf5143424248ff50fa2aca55309fc75176ad"
+    },
+    {
+      "path": "EVIDENCE-INDEX.json",
+      "bytes": 44440,
+      "sha256": "42eded8f934d1ee1173e0e6eb5f4f2745a4739bff2267b6db862e5dfa1c61757"
+    },
+    {
+      "path": "INDEPENDENT-ACCEPTANCE.md",
+      "bytes": 4430,
+      "sha256": "f264234bd5b152e2303bad38e11170d3341426e78f1d288ec574fbae7a8025a4"
+    },
+    {
+      "path": "INDEPENDENT-REVIEW.md",
+      "bytes": 3553,
+      "sha256": "936e778a953904d6794a0693de75027b3dba89a06026f6a2260b09205f1c4d85"
+    },
+    {
+      "path": "NATIVE-INPUT-EQUIVALENCE.json",
+      "bytes": 23045,
+      "sha256": "d75e3a68d3340dc7b3da18fe3cf3525aec2a412c70882d1399be3a0b46c94552"
+    },
+    {
+      "path": "OWNER-DECISIONS.md",
+      "bytes": 2242,
+      "sha256": "d9cbcad7a9a3645d337fcff758c2633535677a7da2e8b9228002aa8935791bf4"
+    },
+    {
+      "path": "PACKAGE-IDENTITY-DECISION.md",
+      "bytes": 3959,
+      "sha256": "432000fd67504ee0c2eaf7614721155b02cfb7821366effd43a32d883ce74aae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7223,
+      "sha256": "1f3afb4ba627e454bd66ee2fcf6224abd79a75cde8d3c8a6b996e180db982591"
+    },
+    {
+      "path": "REMEDIATION-PLAN.md",
+      "bytes": 3737,
+      "sha256": "4232c4545e127056d8f1f07b41e0f6f370688c9148057071649298cf9c0d532a"
+    },
+    {
+      "path": "REQUIREMENTS-MATRIX.json",
+      "bytes": 110605,
+      "sha256": "8f48f559b2a63cfd585107195233e134adefe9a4c18c8453bce6cccad01d7964"
+    },
+    {
+      "path": "REQUIREMENTS-MATRIX.md",
+      "bytes": 96142,
+      "sha256": "bcbfb1d50c9ad9d87aebba725e97a5e2d2179ee2fb755984a980aa0544b950d7"
+    },
+    {
+      "path": "SOURCE-INVENTORY.json",
+      "bytes": 34657,
+      "sha256": "27e42113377a8ea7bfe2ce882f27e099997cae9d1496032268587f48ad5f4a4f"
+    },
+    {
+      "path": "SOURCE-INVENTORY.md",
+      "bytes": 13737,
+      "sha256": "cf08b55d5ad545599dac435dd24dec6c5175a324a22aeed5790d06812282b82d"
+    }
+  ],
+  "manifest_digest_method": "SHA-256 of UTF-8 canonical JSON file array with sorted keys and compact separators; receipt is outside the bound deliverable directory.",
+  "files_manifest_sha256": "e66544652cc24194c12b1d7c380f3f81ba7ab2f87990713ddda0e8212b559e74"
+}

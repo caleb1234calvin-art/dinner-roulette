@@ -1,0 +1,973 @@
+{
+  "commit": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "unique_text_files": 82,
+  "files": [
+    {
+      "path": "package.json",
+      "git_blob_sha": "e49aaca989bf9fafed68714fdb7f036785c1a226",
+      "sha256": "6d966eda6ff732719e17862d97ca822a8574926f2fbe5edaaae1cf45607aebf0",
+      "bytes": 3973,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/package.json",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "LEGAL.md",
+      "git_blob_sha": "39a72f6df4b3d7eff2403707597772bcd84546c2",
+      "sha256": "d743b2e7e718baf5579bb3b14127372380fd97b7a93eae6296835e49131c5999",
+      "bytes": 7616,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/LEGAL.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "ANDROID_RELEASE.md",
+      "git_blob_sha": "2f7680168b99d7040acfeb69a0616a741d81796d",
+      "sha256": "8a96e71ef62d1268884bc9e271575a0da2ec3ac7ac5fdb7f59c08d58234c5109",
+      "bytes": 13288,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/ANDROID_RELEASE.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/nightlife/types.ts",
+      "git_blob_sha": "1fc24a2fa3fac96029e6469955a85ed4f7abe058",
+      "sha256": "8651c123e5b1334c1f52c952a06c6884c10fb76ca662dc207f0b15fdb76ea8a8",
+      "bytes": 3494,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/nightlife/types.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/lib/nightlife/discovery-policy.ts",
+      "git_blob_sha": "56395ff3e9449f97d6d9901fa12a680e83eed452",
+      "sha256": "2c67b9f9312044e3d6594b6ea3f1a341c791eb15344265b1f26d14688aa3d931",
+      "bytes": 9300,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/nightlife/discovery-policy.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/components/result-overlay.tsx",
+      "git_blob_sha": "888420fc814b94836ebef5b3489474c1918eb831",
+      "sha256": "a01c7409e9805588a11ea1f3b92a036348805568a9a11a90e98202753d542931",
+      "bytes": 16313,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/result-overlay.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/options-overlay.tsx",
+      "git_blob_sha": "dea4344a679791aa0668c1d492dca01d66427547",
+      "sha256": "c54df8dd9b56f7b098f8894d5e8d907c4395a3f3b45f1a323712e59aacc1e812",
+      "bytes": 8150,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/options-overlay.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/settings-page.tsx",
+      "git_blob_sha": "6a75c2f92beeb8f54e28609bc5aa3a1ff0cc97e2",
+      "sha256": "28b243ebac7baaea0dde0ac153aa6f6bf46a8dea4d34eb16c205247e55c9ce32",
+      "bytes": 8865,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/settings-page.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/mode-home.tsx",
+      "git_blob_sha": "204f77ecf59fc821c5ceba964d8300790ca3ca6c",
+      "sha256": "7b618b46f890fbe1063c968439aa90f344549f38f911b3154881ae4653951288",
+      "bytes": 8025,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/mode-home.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/nightlife/search.ts",
+      "git_blob_sha": "0e033e71d63391bc9d3c9f1bab9d82dcbdc1297d",
+      "sha256": "b7061b1ebc8ba0c6a897bab31b9914c3a11cebe21bc286666760eb795e9bc2d2",
+      "bytes": 14829,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/nightlife/search.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/nightlife/casino-catalog.ts",
+      "git_blob_sha": "e988a1a0b1f39acd726dcaa4d6de9bc5fabb5142",
+      "sha256": "84d83a91bdae6cba79af9fde6228479349ffc67f9470b0069a422114b2a89d3d",
+      "bytes": 15591,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/nightlife/casino-catalog.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/components/nightlife-home.tsx",
+      "git_blob_sha": "211981dfef0e87ab4c096435fce00475cb4c9e6c",
+      "sha256": "84680a951e7266263467d55099f7ac5dc3572a4b8774d4c92870bcce1319d352",
+      "bytes": 12082,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/nightlife-home.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/restaurants/image-overrides.ts",
+      "git_blob_sha": "5bf4b9c3cb83e4394f3733dfd82e5ae613e026c9",
+      "sha256": "cbaca65fd866311fec24493b48949173abca34b1103c0e30f5305d03d8dfc297",
+      "bytes": 799,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/restaurants/image-overrides.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "public/date-night-icons/README.md",
+      "git_blob_sha": "fa65b571d41dd0d9d00930534ad24f67d0af16d6",
+      "sha256": "c5dec738f1e4962a3708e636286e17ad7c77918632da9833e5157d41b0ca4553",
+      "bytes": 301,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/public/date-night-icons/README.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "public/dinner-icons/README.md",
+      "git_blob_sha": "d51545d8ded64957bfd31bf4400e9060bedc43cd",
+      "sha256": "91d6d9d8a636883c53d28a74226a0429bf3d5dec0474cd0d4ee0aafa3fb4bf4f",
+      "bytes": 822,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/public/dinner-icons/README.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "public/dinner-icons/dark/README.md",
+      "git_blob_sha": "39a194a265967f9c0a7a6a01867da3aff109819d",
+      "sha256": "74dd62d4b3efbafdd3a08cd8bdf5b097f2f8217df81678380dacaf8d7e3d750b",
+      "bytes": 650,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/public/dinner-icons/dark/README.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "scripts/android-icons.py",
+      "git_blob_sha": "4f0ab90db62402472e138f228c1f52fd7a7197a0",
+      "sha256": "e3667970430faa27d53a760c81a7a125f75dfdffb75d2266c384738e5d5c33bd",
+      "bytes": 6170,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/scripts/android-icons.py",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/components/rideshare-quick-actions.tsx",
+      "git_blob_sha": "3fbcbcc6dc8c610360b54f738ae20a07b5058e64",
+      "sha256": "05b17eb74a40c2ef1c465aa18941db17f49c4e867a694b16b947dd9fe8777484",
+      "bytes": 2071,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/rideshare-quick-actions.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/location/maps.ts",
+      "git_blob_sha": "2f0950420f9fa90735005b28c795ca5cac105ee2",
+      "sha256": "63b378e90362dfa484e02da537b26897672d98a827365a3e2abb6fe9bd55671c",
+      "bytes": 1182,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/location/maps.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/routes/__root.tsx",
+      "git_blob_sha": "708a9ddd97989b22982964b35b008eff5da83f5c",
+      "sha256": "adb861ffe08f42c51d709abc75a64ca4fe57a1f18941e8b8328d6cc0709589c4",
+      "bytes": 3020,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/routes/__root.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/favorites-page.tsx",
+      "git_blob_sha": "da2e38f5957f5328b1bcc77703ef690b020e1f7e",
+      "sha256": "c2efb384f19bb401471b5a96c6defa91387307b1c593a8d559986463bb943e57",
+      "bytes": 6885,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/favorites-page.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/components/startup-ident.tsx",
+      "git_blob_sha": "0e789b3a3098980db8cfca56468c56c476bb3ae4",
+      "sha256": "a8fe83dcfffb159d76904d53db7dba240f906218815ba73d0befec65658ae518",
+      "bytes": 1154,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/startup-ident.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "native-android/README.md",
+      "git_blob_sha": "eaaf60e27227a5998d2cebf3a4aa558a4b468262",
+      "sha256": "65a4258303d206ab0ae5664ba442825d76632fb58a30ac508edbc634ec961f14",
+      "bytes": 1708,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/native-android/README.md",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/components/date-night-home.tsx",
+      "git_blob_sha": "c2c0838b45c1e59b66f63a8834d16e3d19eba669",
+      "sha256": "cf5b4a2e9b903c81d6de8afb68fd665907715e20b690b2258f947e526c1ce300",
+      "bytes": 21711,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/date-night-home.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/date-night-plan-overlay.tsx",
+      "git_blob_sha": "3fb0524d32444dd01223e08a10880b866c2759e0",
+      "sha256": "85c1c962f2c26dce10c079471ccab83f7a9696865b681360a7740a08d8d37690",
+      "bytes": 7570,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/date-night-plan-overlay.tsx",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/types.ts",
+      "git_blob_sha": "70552cebe4c8892a46fef36abcb8647d57fd86d3",
+      "sha256": "e57153b401a721a01998a53de1e30e33fb7450a8280896934415eb9d5374bff0",
+      "bytes": 4086,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/types.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/icons.ts",
+      "git_blob_sha": "fca1d9369ce50dee4b5572188eea1099bfc497d1",
+      "sha256": "6977b2853615c9c1dc2a66518eca7438ccc44b5c58721da6db7d54cc6ee08b1d",
+      "bytes": 6744,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/icons.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "src/lib/store.ts",
+      "git_blob_sha": "549d0b122a3a9a7d79fefca3e78ab7a251d4c522",
+      "sha256": "d34c3c50de7716c19f0fa992606dc3f7e8437656d8d75f480374325895eaa68e",
+      "bytes": 10594,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/store.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json",
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/location/ride-target.ts",
+      "git_blob_sha": "9d70073c0eb26b97feed4a237f0d867be2f19698",
+      "sha256": "2695af21a047b48cf033d29eabbd68575aafef10483a333556895a96a8b3de48",
+      "bytes": 1624,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/location/ride-target.ts",
+      "source_receipts": [
+        "content/SOURCE-INDEX.json"
+      ]
+    },
+    {
+      "path": "android/app/src/main/AndroidManifest.xml",
+      "git_blob_sha": "c23fca393793616af379946ff30d5aa93a53e0ad",
+      "sha256": "9e1637c9853ada5c684463dec0d6c4361b55cd3842104d1c35e81bec4afcb9a5",
+      "bytes": 1919,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/src/main/AndroidManifest.xml",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "android/app/src/main/java/com/calebcalvin/pickforus/MainActivity.java",
+      "git_blob_sha": "abfd626964051d71a978c4e1a87cdae21576f81b",
+      "sha256": "53b26f09f5a827c77b50dab17e36049d4b344ddacb92083b0adef1597c79739c",
+      "bytes": 129,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/src/main/java/com/calebcalvin/pickforus/MainActivity.java",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "capacitor.config.json",
+      "git_blob_sha": "14b8a3eef4ce8e418e80243723b3b07ac91739ea",
+      "sha256": "344a3fb58f0ff52777fb6037bd1f2afaaf13951d6f42809f51ed2f035d2b9a78",
+      "bytes": 395,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/capacitor.config.json",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "native-web/index.html",
+      "git_blob_sha": "eb4ea32962c1e3785982105b5711a089fb7a9eea",
+      "sha256": "bbbb4470354e0191642e4701caf872de76cc14e9566705fe4edc591fb6b877ac",
+      "bytes": 647,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/native-web/index.html",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "scripts/grok-pwa-shared.mjs",
+      "git_blob_sha": "e01e0c999457cc78fbc36dc544d740b9663b3287",
+      "sha256": "992bc8e14c369a70ba804b0f0d7c3f147e165969a0ede62c121ddccf5466e372",
+      "bytes": 18928,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/scripts/grok-pwa-shared.mjs",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/app-shell.tsx",
+      "git_blob_sha": "34fc9990aec932f23df809df357d23d9b4f458e0",
+      "sha256": "8c3e25f9efdfb564dd953bb71acb068544860460ae81ac330eac9c768b113d7f",
+      "bytes": 2017,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/app-shell.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/location-control.tsx",
+      "git_blob_sha": "b8cdacd19239b1713e87e3f87ed12f842bef6be0",
+      "sha256": "b99db281c8f3ffc5f821558729fba3dd00ac275c128f086dfbaa6ce5321d6b5a",
+      "bytes": 5087,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/location-control.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/pick-home.tsx",
+      "git_blob_sha": "9020e5947a773413b00edc6b7c226f898f2cd2ae",
+      "sha256": "4996846980f4535a862fa6b84d10137d1b7b11149621a6c17b41db85abbf89a5",
+      "bytes": 20051,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/pick-home.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/components/preview-host-bridge.tsx",
+      "git_blob_sha": "98cb15d443328b2fdb5d9ae9e3bdab0eff453612",
+      "sha256": "e4277e80ce127e7305057fb280d03d0703c5c7115b17d2e2aecf000e4867555e",
+      "bytes": 668,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/components/preview-host-bridge.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/analytics.ts",
+      "git_blob_sha": "8d7809e79c271b12d3f49250b5860575c8419e9d",
+      "sha256": "9572cb5b49ef589600717582d0540ff9a48bfa8298bd1021b68b341a5e6612c2",
+      "bytes": 416,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/analytics.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/client.ts",
+      "git_blob_sha": "d3b267d3de8b9d5e31545ee56ed7a3ff240c601d",
+      "sha256": "4bca649afb627b11231a7b31acfcffe9323efddebc05944b2d769d2b8589294f",
+      "bytes": 9714,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/client.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/email-password.ts",
+      "git_blob_sha": "3abb01461af8b6c8293e9a996ec639b7009843a8",
+      "sha256": "9b1da7c786e48adfa9a6f7c485bcf5817cf2075a601d8726a965f11171910354",
+      "bytes": 442,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/email-password.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/provider.tsx",
+      "git_blob_sha": "4dd72618670f44c166ff93da6020a71ab8046f05",
+      "sha256": "4cbbc7f8cc1765788ad65455a33f64dcdafc6fe4ed1d13f90ccfa0ba4c13d1f3",
+      "bytes": 593,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/provider.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/server.ts",
+      "git_blob_sha": "66d94be9eb10e78fe46e2da2e7d950eef82580d0",
+      "sha256": "e0544cadbfa1a09c3cb4cf2a0ec187dbbb2831aebf7de887a3c858abdd72ca43",
+      "bytes": 12548,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/server.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/cache.ts",
+      "git_blob_sha": "86476965b170d8c8c1aa89e78ea945160febb41e",
+      "sha256": "06e5311699c6f16b7a969bbdf95b9db3d0c7ca669de21fd9f6ca580b9a216a80",
+      "bytes": 12678,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/cache.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/identity-receipts.ts",
+      "git_blob_sha": "362d25383212d04bd7ace2dac8c32721bfc93733",
+      "sha256": "2f04732177c382327d962590b97ad49150969bfecb2d20c09f314054afd697c3",
+      "bytes": 4046,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/identity-receipts.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/provider-evidence.ts",
+      "git_blob_sha": "b509bf6cba31618158cacb1c57fd7a467dbfc05d",
+      "sha256": "b346700484c6f8136aa03c3e29a13257c847f59915c9da1ae8de39134de33b4a",
+      "bytes": 4115,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/provider-evidence.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/query-plan.ts",
+      "git_blob_sha": "bf1ddb312f3fe6a7181bb904e1804f513f03298f",
+      "sha256": "208e29b22a462542e123ba43916e57a26dfc22c07c05cb5dcb673aa3e517218e",
+      "bytes": 4350,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/query-plan.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/radial-cache.ts",
+      "git_blob_sha": "29838a5515e5fb26c664296de6454e3f01556d17",
+      "sha256": "47a6575b65086cec0d35e5273cc004ae173fd1f1776594888ab613f8ba6551cf",
+      "bytes": 3182,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/radial-cache.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/radial-session.ts",
+      "git_blob_sha": "d4c334ac948448b3a76dcf276c5329ef4b4d032f",
+      "sha256": "a5a53c74faefaecd36d3303a755b079098c7ec0f9a497fd850a3111fc31115d3",
+      "bytes": 12606,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/radial-session.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/date-night/search.ts",
+      "git_blob_sha": "dc99ef4c85e565ddd3523b8edbb8cd051814a8df",
+      "sha256": "76506102c20bd30bc5dd965675470f0c3c3a5b6beb4b16215ba43bfe06709ac6",
+      "bytes": 13275,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/date-night/search.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/discovery/client-request.ts",
+      "git_blob_sha": "2c57aa5c915e7b20494f6c9142a060832eae12ee",
+      "sha256": "88eb962d39fab52460eb41bfe0b268fcf93e6f4dfc276380d62fd04eb838a861",
+      "bytes": 1430,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/discovery/client-request.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/discovery/hedged-provider.ts",
+      "git_blob_sha": "dbee612ab04c713a8c964ba0300f995f72f0578c",
+      "sha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6",
+      "bytes": 8398,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/discovery/hedged-provider.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/discovery/provider-chain.ts",
+      "git_blob_sha": "cf5b200e3dec9e802ae5b825fbf516fb576cc7bf",
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf",
+      "bytes": 4091,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/discovery/provider-chain.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/location/controller.ts",
+      "git_blob_sha": "9b2f993ae373b4680beb88ac977800d0c65813e1",
+      "sha256": "0f84b7d7608b35ce9eafddbe3430b9a9719731f061e6394be4f8ae1f108797f5",
+      "bytes": 4980,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/location/controller.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/location/model.ts",
+      "git_blob_sha": "1ea006621ded9bb880a94bd1655d54c8a5e3fcd1",
+      "sha256": "b6110d204ae746aa57d3412640533a78618c6200a6cd2bdb1f3876cea2a121e5",
+      "bytes": 2550,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/location/model.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/preview-host-bridge.ts",
+      "git_blob_sha": "ef40a5e8c789a49d7f927894396cf7b96b078dd7",
+      "sha256": "3d3144d8da9eb395b863375a2ac9c02061ff08b318a49a56e66d3277e1b945ac",
+      "bytes": 8723,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/preview-host-bridge.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "git_blob_sha": "fea1a4e87672830dd3ec6d9309489eb0eeb167ab",
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e",
+      "bytes": 3720,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/restaurants/geocode.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "git_blob_sha": "19ebddf6276d9509ec7e7de8f8ccd27f238a98df",
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c",
+      "bytes": 3359,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/restaurants/overpass.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/restaurants/search.ts",
+      "git_blob_sha": "a2b17f32b8c3143c48305bb999688487314ab5ca",
+      "sha256": "f52368b9bbca1ec79a30ec1a16964190118cdbee679f1d3c6bb32a91a01f3b65",
+      "bytes": 2660,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/restaurants/search.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/restaurants/types.ts",
+      "git_blob_sha": "23d7613a539aad07cd27cd174383edbfb73ea3a2",
+      "sha256": "f0733c28a6d34bb70fbf8f8f249373aa642660b2ac09d6319a134ac63b175a4f",
+      "bytes": 3777,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/restaurants/types.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/lib/session-hints.ts",
+      "git_blob_sha": "f3eb78b457af0caef29aedb3cdc5bf89bc034650",
+      "sha256": "81e0fe5ac048a74fb017b1617e718fc7a96f4acfa5f7ac00351d3970be4b81cc",
+      "bytes": 602,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/session-hints.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/routeTree.gen.ts",
+      "git_blob_sha": "e6c8c16f8d785cf4a83818b7495d73fc232cde82",
+      "sha256": "4f0ecbb466c7682c1d48012b2d223d098e55ca64f4200ce7affae814db85cc8a",
+      "bytes": 3592,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/routeTree.gen.ts",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "src/routes/index.tsx",
+      "git_blob_sha": "492e4a948728697205a4fdcf95eac01ab6a02dc1",
+      "sha256": "1a63640ce23d9d62f60e2f1aecff873991134106890a5376c0fe9fd9d7a92c19",
+      "bytes": 218,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/routes/index.tsx",
+      "source_receipts": [
+        "privacy/source-inventory.json"
+      ]
+    },
+    {
+      "path": "android/variables.gradle",
+      "git_blob_sha": "ee4ba41c46f546910a153b2938cad859cd7cd86e",
+      "sha256": "83d502c9ed8fcf1dd4791482067abeedbebae49fafe9cd14a8a1f5891deb0d88",
+      "bytes": 498,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/variables.gradle",
+      "source_receipts": [
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "android/version.properties",
+      "git_blob_sha": "cb6f9727a673d2ce08c74439aad3e1181f1b0f86",
+      "sha256": "ff2318c74b691337f9362664a824e4e7050ce4302610534075273c3671649a71",
+      "bytes": 111,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/version.properties",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "android/app/src/main/res/values/strings.xml",
+      "git_blob_sha": "73f6424b32a20b7eede3cb334ca243225b054efd",
+      "sha256": "f5636fca22eda5124eefbafa11348d35d0e76c3a77e199014a8bbac03812b191",
+      "bytes": 312,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/src/main/res/values/strings.xml",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "android/app/src/main/res/xml/file_paths.xml",
+      "git_blob_sha": "bd0c4d80d0473953333d5adb0d38ac713d0d648b",
+      "sha256": "a46ed43ef65c90cb6778f4581decf3556e3f0055aad8f36d69dae16f9a0e99aa",
+      "bytes": 213,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/src/main/res/xml/file_paths.xml",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "android/signing.gradle",
+      "git_blob_sha": "c71040698da63220a0f23fd14052e1b2e0291be7",
+      "sha256": "5225ae45ced4370dbf95e1eacd8c14b9699d9bb39f1dfafd20194ad8aa58e827",
+      "bytes": 2023,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/signing.gradle",
+      "source_receipts": [
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "android/build.gradle",
+      "git_blob_sha": "f5a03243af718a30aead5be40b29b15aad6cb97e",
+      "sha256": "694a806557cdc878a36c2c208b3f76322d1698e9a7e3749e62a9c078cf5f02b5",
+      "bytes": 576,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/build.gradle",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "android/gradle/wrapper/gradle-wrapper.properties",
+      "git_blob_sha": "9cd375732640bf2137b785006653553cad19b0ff",
+      "sha256": "30a334bb3269975c707a7004c2217ed8ea3bbbe121b2826248e41b44f62147d4",
+      "bytes": 340,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/gradle/wrapper/gradle-wrapper.properties",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "android/app/capacitor.build.gradle",
+      "git_blob_sha": "bbfb44fad11c913927ea1a9851a85b82bbd9814a",
+      "sha256": "7051cadfdbc532197d2cfd4f8a11684d81367f23cf7952e5a208f7b6aa0833e0",
+      "bytes": 370,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/capacitor.build.gradle",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "scripts/check-android.mjs",
+      "git_blob_sha": "b6d255e56f3ef076d297f1f1265adf8e053afcee",
+      "sha256": "37d223b9af2275fd6b5c22a2f0a3530434fe7c14cc922362a11b75cd6b483cb8",
+      "bytes": 3760,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/scripts/check-android.mjs",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "scripts/android-release.test.mjs",
+      "git_blob_sha": "29b7e2316ecfc31160c604624df87297f85de6ab",
+      "sha256": "7d9c223dc81187095235874f0a38c2a9efd21a0e1390d9092f6eda96a1068e2a",
+      "bytes": 2321,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/scripts/android-release.test.mjs",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": ".github/workflows/android-apk.yml",
+      "git_blob_sha": "87c062e8863be67527e18906301d859bb1d51843",
+      "sha256": "8f6735487e1f793c0b120abca4a8c3171ba17a34a094a93e0304bee7a4637f8a",
+      "bytes": 8396,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/.github/workflows/android-apk.yml",
+      "source_receipts": [
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "package-lock.json",
+      "git_blob_sha": "1eaa6a78dc119ae889ca371632fa91136be1139a",
+      "sha256": "462f09bd3fda35cf30646b2f343cd8d2a65340a63b59222b5f9d57084d9aa4b3",
+      "bytes": 302347,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/package-lock.json",
+      "source_receipts": [
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "android/app/build.gradle",
+      "git_blob_sha": "2bd47ef74ef465baf96a5969650c59a163b123bf",
+      "sha256": "cd8225c795820fadf71ddee3dcdc5f3b3a7996f3deafa3eda399a81044860c21",
+      "bytes": 2400,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/android/app/build.gradle",
+      "source_receipts": [
+        "packaging/source-receipts.json",
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "scripts/verify-android-bundle.py",
+      "git_blob_sha": "d84e6760a8328b35d7e0236e034ade0b233d5ca0",
+      "sha256": "cf22b2bde53eaa1e22b2436ef7c50952c7031ec2edd5cddfc3b2069a1c4725e2",
+      "bytes": 7673,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/scripts/verify-android-bundle.py",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "native-android/test_bundle_inspection.py",
+      "git_blob_sha": "97b57ac0af6fe380a984e0ded98a102abddb1770",
+      "sha256": "7171ffd5e3b3f838035ea8894772f32f6f85e091be629b5d38a0cc9d68314b03",
+      "bytes": 2032,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/native-android/test_bundle_inspection.py",
+      "source_receipts": [
+        "packaging/source-receipts.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/verify.server.ts",
+      "git_blob_sha": "2bf5acc72dd13134b1ec86781aa7591e1b2dca5c",
+      "sha256": "42a7d5c1b17027ba004d6524a7f7bb4827b908d75ee3c3aefc940fa9c891c2ee",
+      "bytes": 3874,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/verify.server.ts",
+      "source_receipts": [
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/gate-identity.server.ts",
+      "git_blob_sha": "8371ca6f0a05fa1cb280db8329833d444bae23a1",
+      "sha256": "af3dc9e48dd8b9a0745490bc4a1b62f10b11cb600f3e946e26248e8fcdf21253",
+      "bytes": 5772,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/gate-identity.server.ts",
+      "source_receipts": [
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/gate-session.server.ts",
+      "git_blob_sha": "224c9653923daaca70dbec5a53fc51a3ef62ed97",
+      "sha256": "68aa500523ca2f0ad5c7ba34372c10aa1851a9774f8567c6b7781af5dd6cf204",
+      "bytes": 11980,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/gate-session.server.ts",
+      "source_receipts": [
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    },
+    {
+      "path": "src/lib/auth/popup.server.ts",
+      "git_blob_sha": "9e686ae29e2b0463b7868ce755dd066479ebe8a3",
+      "sha256": "81f8833d9ab639f76b86f4bb23fed42a04cec4b0c6d90b7a67425a9232c9bb4a",
+      "bytes": 6133,
+      "url": "https://github.com/caleb1234calvin-art/dinner-roulette/blob/c3208d9fdc9a21d698efa9254be1286f5d3d2836/src/lib/auth/popup.server.ts",
+      "source_receipts": [
+        "contracts/SOURCE-INVENTORY.json"
+      ]
+    }
+  ],
+  "visually_inspected_asset_receipts": [
+    {
+      "source": "public/grok_1789340968434.jpg",
+      "github_blob_sha": "6b7d75de3f02e44e033a8e1c8b48305473e9f646",
+      "sha256": "07206881481c867f326759bc6f187df9fda0f24ad90cd3eb5640293ec343774f",
+      "bytes": 257826,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/grok_1788913461447.jpg",
+      "github_blob_sha": "04290ea888bb776fd4d9d133ddfca516471952f0",
+      "sha256": "562573e5384bc8c39a64e6e3497a8872c4bc5c222a2181f79f37cabe0cfa54dc",
+      "bytes": 284185,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/date-night-icons/grok_1788905208616.jpg",
+      "github_blob_sha": "9347651f255c3c68bef66da00e0a5e1ff148f912",
+      "sha256": "4a8e20a095f7e40840551cb5723b40854a1dad6bafda1287b48d64113d03fb32",
+      "bytes": 451483,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/date-night-icons/grok_1788909448716.jpg",
+      "github_blob_sha": "c7d585bc016d03cf37b44cb66c4434d723214ba4",
+      "sha256": "96d777515d23b6941746db34feac2a3dca9ce54ea3ff113db7ffed45e93dc77b",
+      "bytes": 224942,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/brand/pick-for-us-icon-master.jpg",
+      "github_blob_sha": "47a7fdd716a6b467e1592961452ccbe94b02d66d",
+      "sha256": "12afcedace4aacb19109e561fc70af76076ece7d4997348021422a9396e865d5",
+      "bytes": 494490,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/grok_1789340971434.jpg",
+      "github_blob_sha": "55b2905dc4512f3f4ad633c791edbca9dbbe4dae",
+      "sha256": "34915ec8a945f6d898b103896ca4c9a1ad3f6f96069bc7d57719855ed894ba62",
+      "bytes": 263060,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/date-night-icons/grok_1788905199846.jpg",
+      "github_blob_sha": "fec7d8692ea7b673c623c2d878412c42b7a71273",
+      "sha256": "f9fcb33683f59a0e3d81caeadd32042997318c43aea20ae70e1a71e6d37572b6",
+      "bytes": 419002,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/grok_1789340974874.jpg",
+      "github_blob_sha": "a5f908bab45810ff34e162f5efc56e0bfa20bfbd",
+      "sha256": "386e2c11b14bcc4be8fa6ddab040dbbcfd4b772da027ffb5cf5fd8f2946624be",
+      "bytes": 251019,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/grok_1789340964876.jpg",
+      "github_blob_sha": "fad66a33963f456dbb40757b3400d8abb49a26c5",
+      "sha256": "a7be80ed07264b0f968c675013ced89d7fe46ecce980d491d2b3952a151b5c74",
+      "bytes": 256836,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    },
+    {
+      "source": "public/grok_1789341445435.jpg",
+      "github_blob_sha": "74bb07e444c4308169b74498b1cfdaff95074583",
+      "sha256": "68c54517e46a1e0b61950a1e156fffcbf9dae7a449aaddc19b73220860f2fc47",
+      "bytes": 224053,
+      "git_blob_verified": true,
+      "visual_inspection_date_utc": "2026-10-16",
+      "visually_inspected": true,
+      "rights_verified": false,
+      "note": "No obvious third-party venue logo or prohibited imagery observed in this sample. Visual appearance does not prove copyright/trademark rights."
+    }
+  ],
+  "limitations": "No source duplicates, compiled bytecode caches, complete copyrighted policy captures or production secrets are included."
+}
