@@ -1,0 +1,23 @@
+{
+  "run": 38949185059,
+  "coreJob": 117135939420,
+  "head": "4010edf31e71a7350d891a98dd43f20535602abd",
+  "logSha256": "4e1a0e50c731c8f43cc08e1d1dd314e3d0a395bb20fc3f781a7b1bebaadfea5f",
+  "testCounts": {
+    "auditRegression": 83,
+    "repositoryPass": 1254,
+    "repositorySkip": 4,
+    "applicationPass": 71,
+    "failures": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "typecheck": "PASS",
+  "developmentBuild": "PASS",
+  "migrationFreeProductionBuild": "PASS",
+  "authEnabled": true,
+  "dinnerIconAssets": 30,
+  "buildProofArtifact": 12067258748
+}

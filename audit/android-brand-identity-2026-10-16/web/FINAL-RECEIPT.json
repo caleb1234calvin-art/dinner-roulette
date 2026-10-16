@@ -1,0 +1,43 @@
+{
+  "head": "4010edf31e71a7350d891a98dd43f20535602abd",
+  "tree": "f521ed3dbdabceeb924ad4da1ce88e42db41092c",
+  "run": 38949185059,
+  "runUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38949185059",
+  "conclusion": "success",
+  "jobs": 17,
+  "originalArchives": 16,
+  "archiveDigestChecks": "all match GitHub SHA256",
+  "zipIntegrity": "PASS all",
+  "buildSourceBinding": {
+    "files": 520,
+    "sha256": "5e920a77d68455735e0379d5c2cd705ee4fb9aefe5982e6406486943a8c465b7",
+    "method": "exact HEAD git archive, independently recomputed repository build-proof algorithm"
+  },
+  "authEnabled": true,
+  "scenarioCount": 2030,
+  "checkCount": 35,
+  "geometryComparisons": 774,
+  "ineligiblePlanControls": 19,
+  "coreTests": {
+    "repositoryPass": 1254,
+    "repositorySkip": 4,
+    "applicationPass": 71,
+    "auditRegressionPass": 83,
+    "failures": 0
+  },
+  "fullLint": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "webFailedOrIncompleteGates": [],
+  "limits": [
+    "Browser tests use local production-mode builds and deterministic provider fixtures; no live-production acceptance claimed.",
+    "PNG integrity checked; no exhaustive human visual review of every screenshot.",
+    "Native artifacts/device and Play eligibility are separate lanes; no native download duplicated.",
+    "No source or external-state changes made."
+  ],
+  "logEvidence": [
+    "logs/core-117135939420.log",
+    "logs/aggregate-117156808100.log"
+  ]
+}
