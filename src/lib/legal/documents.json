@@ -1,0 +1,228 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "version": "0.1 draft — October 16, 2026",
+    "status": "Draft for review. Not yet effective. Operational details identified below must be confirmed before publication.",
+    "effectiveDate": "Not yet effective",
+    "sections": [
+      {
+        "id": "scope",
+        "title": "Who we are and how to contact us",
+        "paragraphs": [
+          "Pick For Us helps you discover and choose restaurants, activities and seasonal destinations. Caustic Relay / Pick For Us is the support identity. For privacy questions, support or a deletion request, email causticrelay@gmail.com. You do not need an app account to email us.",
+          "This draft covers the Pick For Us website and its Android experience, which loads the hosted website. Caustic Relay is the owner’s personal brand, not a confirmed registered company. Legal operator details and applicable jurisdiction must be finalized before this draft takes effect."
+        ],
+        "links": [
+          {
+            "label": "Email privacy and support",
+            "url": "mailto:causticrelay@gmail.com?subject=Pick%20For%20Us%20privacy%20request"
+          }
+        ]
+      },
+      {
+        "id": "location",
+        "title": "Location and place searches",
+        "paragraphs": [
+          "You can enter a place manually or request your device’s location. Device location requires your browser or Android permission. The returned coordinates can be precise or approximate depending on your device, permission and conditions. Pick For Us does not deliberately round them before the location and nearby-place requests. The app requests device location when you choose that action; the current discovery feature does not request background location tracking.",
+          "Search text and coordinates are sent to Pick For Us servers to find and rank nearby places. The servers send entered search text or coordinates to OpenStreetMap Foundation’s Nominatim service for place lookup, and coordinate/radius/category queries to Overpass services for venue discovery. The configured Overpass hosts are overpass.openstreetmap.fr, overpass.private.coffee, maps.mail.ru and overpass-api.de; retries or fallback can use more than one host. These are separate service operators, not all covered by the OpenStreetMap Foundation privacy policy.",
+          "A manually entered place may be somewhere you want to visit rather than your current location. Avoid entering private information that is unnecessary for a place search. You can revoke device-location permission in your browser or Android settings and use manual search instead. Revocation does not erase a location already saved on this device."
+        ],
+        "links": [
+          {
+            "label": "OpenStreetMap Foundation privacy policy",
+            "url": "https://osmfoundation.org/wiki/Privacy_Policy"
+          }
+        ]
+      },
+      {
+        "id": "local",
+        "title": "Data saved on your device",
+        "paragraphs": [
+          "Pick For Us saves your selected search location, filters, favorites, ratings, visit history and notes, temporary exclusions, appearance, selected mode and seasonal preferences in browser or WebView storage. Venue identity records help apply current seasonal information to saved places. Tour status also uses session storage. This supports preferences and continuity between visits.",
+          "The main local store has no automatic time-based deletion for a saved location, favorites or preferences. Visit history keeps up to the latest 200 entries. Temporary exclusions stop applying after their expiry and are pruned when the app checks them. In-memory discovery caches have reuse limits; a cache reuse limit is not a promise that every copy is erased at that time.",
+          "The reviewed preference and history features use local storage rather than an account-based cloud synchronization feature. That does not mean all app data stays on the device: searches, hosting, analytics, external resources and email have the separate flows described here. Browser, operating-system backup or device-transfer behavior can also affect local data."
+        ]
+      },
+      {
+        "id": "controls",
+        "title": "Your local data controls",
+        "paragraphs": [
+          "Reset filters restores the Dinner and Date Night filter defaults. Clear all exclusions removes the current exclusion list. Show hint again resets the tour’s session flag.",
+          "The existing Clear favorites and history action also clears ratings, visits, exclusions, shown-result history and seasonal identity records, and resets filters, mode and the seasonal switch. It keeps your selected location and appearance. It does not delete support email, provider records, hosting logs or every item of browser storage.",
+          "You can use your browser’s site-data controls or Android’s app-storage controls to remove local data. These controls may sign you out of services and remove saved preferences, and cannot erase copies held by other providers. Web and Android storage can be separate; clear each relevant app or browser. For information held by the operator, contact causticrelay@gmail.com. A request does not automatically erase data from unrelated services."
+        ]
+      },
+      {
+        "id": "hosting",
+        "title": "Hosting, diagnostics and analytics",
+        "paragraphs": [
+          "The service is hosted on Vercel. Requests to load pages, resources and server functions expose technical request information to the hosting infrastructure, such as IP address, request path, time and browser or device information. Application diagnostics record request/provider outcomes. The reviewed diagnostic calls avoid raw search coordinates and query payloads, but that is not a guarantee about all hosting logs.",
+          "The website includes Vercel Web Analytics and a custom mode-selection event. Vercel documents page and event statistics including URL/referrer information, approximate geographic information and device/browser details. Its documentation describes a request-derived visitor hash and no third-party cookies for that analytics product. The documented 24-hour visitor-session lifetime is not a promise that all analytics or hosting records are deleted within 24 hours.",
+          "Project-specific logging, analytics intake, retention settings, log exports and any additional processors still require operational verification before this draft becomes final."
+        ],
+        "links": [
+          {
+            "label": "Vercel Analytics privacy information",
+            "url": "https://vercel.com/docs/analytics/privacy-policy"
+          },
+          {
+            "label": "Vercel privacy notice",
+            "url": "https://vercel.com/legal/privacy-notice"
+          }
+        ]
+      },
+      {
+        "id": "resources",
+        "title": "Fonts and other external resources",
+        "paragraphs": [
+          "The reviewed website requests Google Fonts. Loading an external resource exposes connection information such as IP address and request headers to that provider. Google describes its Fonts service separately from Google advertising products.",
+          "The reviewed build also references a Grok app-builder extension script. Its actual production behavior, data recipients and retention must be verified or the dependency deliberately removed and tested before final publication. This website integration is separate from any AI access to the support mailbox."
+        ],
+        "links": [
+          {
+            "label": "Google Fonts privacy explanation",
+            "url": "https://fonts.googleblog.com/2022/11/your-privacy-and-google-fonts.html"
+          }
+        ]
+      },
+      {
+        "id": "external",
+        "title": "Directions and other external services",
+        "paragraphs": [
+          "If you open directions, rideshare, a venue website or another external service, that service receives the destination or link information needed for the action and handles further interactions under its own privacy policy. The reviewed directions helper sends the destination, not your device’s starting GPS point. The external app may independently request your location or use information it already holds.",
+          "Pick For Us does not control an external service’s account, booking, purchase, payment or deletion process. Check that service’s terms and privacy information before proceeding."
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Support correspondence",
+        "paragraphs": [
+          "Contact Support opens your email application with causticrelay@gmail.com as the recipient and an optional subject. Pick For Us does not send the message for you. If an email application is unavailable, copy or type the displayed address into an email service you use.",
+          "If you send email, the operator and Gmail receive your email address, message, attachments and associated email information so your request can be handled. Send only information needed for your request; do not send passwords, payment-card details or unnecessary sensitive information.",
+          "The owner manages support directly through Gmail. Support correspondence is kept until the request is resolved, then manually deleted from Gmail. Google’s deletion process can retain messages in Trash and retain residual copies for its documented processing, backup or legal purposes. This is not a promise of immediate erasure from every system. Deleting local app data does not delete support correspondence. You can contact the same address with a deletion request."
+        ],
+        "links": [
+          {
+            "label": "Google privacy policy",
+            "url": "https://policies.google.com/privacy"
+          },
+          {
+            "label": "Google retention information",
+            "url": "https://policies.google.com/technologies/retention"
+          }
+        ]
+      },
+      {
+        "id": "accounts",
+        "title": "Accounts",
+        "paragraphs": [
+          "The reviewed discovery interface does not require a visible sign-up or sign-in step, and local email/password sign-up is disabled in source. Authentication infrastructure exists on the server. Its reachable production features and any stored account records still need verification. This draft does not promise that no account data exists or that an account-deletion obligation is inapplicable."
+        ]
+      },
+      {
+        "id": "retention",
+        "title": "Retention, deletion and security",
+        "paragraphs": [
+          "Device-storage behavior is described above. Support-email retention is described above. Server, analytics and provider records have separate retention and deletion processes. Those operator-specific settings and criteria are still being verified; no across-the-board deletion deadline is promised in this draft.",
+          "The reviewed app uses HTTPS for its configured external data requests. Android cleartext traffic and mixed content are disabled in the inspected configuration. No online service or device can guarantee absolute security. Infrastructure access controls, backups and processing locations require further operational confirmation.",
+          "You may ask privacy questions or request access, correction or deletion at causticrelay@gmail.com. Applicable rights and any identity-verification or lawful-retention requirements depend on the operator and your jurisdiction. A request to the operator does not itself delete information independently held by an external service."
+        ]
+      },
+      {
+        "id": "review",
+        "title": "Items still awaiting confirmation",
+        "paragraphs": [
+          "This is a development draft, not a completed privacy-compliance declaration. Before it becomes effective, confirm the operator, audience and geographic scope; provider processing and transfers; account behavior; support-mail access; retention and deletion practices; and any consent or other lawful basis required for the intended distribution. No unsupported claim of anonymous-only data, no third-party sharing, no AI processing or immediate complete deletion is made."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Versions and changes",
+        "paragraphs": [
+          "This draft has not taken effect. The intended permanent policy path is /privacy on pickforus.app after an approved release. Final publication must include an effective date and preserve prior versions.",
+          "Proposed change process: publish a dated summary of material changes, make a clear in-app notice available, and request fresh consent when required before the new processing begins. This process requires implementation and owner/legal review; continued use must not be treated as blanket consent to optional processing."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "version": "0.1 draft — October 16, 2026",
+    "status": "Draft for owner and legal review. Not yet effective.",
+    "effectiveDate": "Not yet effective",
+    "sections": [
+      {
+        "id": "service",
+        "title": "About Pick For Us",
+        "paragraphs": [
+          "Pick For Us helps you discover destinations and choose what to do. Caustic Relay / Pick For Us is the support identity. Contact causticrelay@gmail.com with questions. Caustic Relay is a personal brand. The legal operator details and jurisdiction must be confirmed before these terms take effect.",
+          "The app provides suggestions and planning information. It is not the operator of listed venues, a booking agent, an emergency service or a guarantee that a destination is suitable for you."
+        ]
+      },
+      {
+        "id": "listings",
+        "title": "Check before you go",
+        "paragraphs": [
+          "Hours, admission, prices, restrictions, accessibility, weather and availability can change. Check important details with the venue before travelling or buying tickets. Seasonal listings apply only to their supported dates and may expire.",
+          "Distances and map locations can be approximate. An address-derived point is not a verified entrance, parking space or rideshare drop-off. Follow the venue’s arrival instructions and local safety rules. A displayed schedule is not necessarily an Open Now confirmation."
+        ]
+      },
+      {
+        "id": "external",
+        "title": "Independent services",
+        "paragraphs": [
+          "Directions, rideshare, delivery, venue and ticket links open independent services. Their availability, transactions, charges, terms and privacy practices are their responsibility. Review them before proceeding.",
+          "Pick For Us is not affiliated with or endorsed by listed venues or third-party services unless expressly stated. Third-party names and trademarks identify their respective destinations or services."
+        ]
+      },
+      {
+        "id": "responsible",
+        "title": "Responsible use",
+        "paragraphs": [
+          "Follow applicable laws and the venue’s age, access and safety requirements. Nightlife or casino discovery does not sell alcohol, accept wagers or provide gambling. Do not drive impaired.",
+          "Do not misuse the service, attempt unauthorized access, interfere with other users or submit unlawful or harmful content through support. These terms do not remove rights you have under applicable law."
+        ]
+      },
+      {
+        "id": "privacy",
+        "title": "Privacy and support",
+        "paragraphs": [
+          "The Privacy Policy explains data handling and available controls. Service terms, optional data-processing consent and Android/browser permissions are different choices. You can read these documents without accepting optional processing or using a prechecked consent box.",
+          "You can email support without an app account. The support link prepares an email; it does not automatically send it. If your device has no email application, use the visible address in another email service."
+        ],
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "url": "/privacy"
+          },
+          {
+            "label": "Contact Support",
+            "url": "mailto:causticrelay@gmail.com?subject=Pick%20For%20Us%20support"
+          }
+        ]
+      },
+      {
+        "id": "availability",
+        "title": "Availability and local data",
+        "paragraphs": [
+          "Internet access and external providers are needed for parts of discovery. Results may be incomplete or unavailable during outages. Local favorites, history and preferences can be lost when browser or app data is cleared or a device is changed.",
+          "A Google Play release is being prepared. No public Google Play listing or download availability is claimed by these terms."
+        ]
+      },
+      {
+        "id": "changes",
+        "title": "Versions and changes",
+        "paragraphs": [
+          "This draft is not yet effective. Final terms will identify their version and effective date, with previous versions retained. Material changes should be described clearly in the app before taking effect. Any agreement or renewed consent required by applicable law must be handled separately and without prechecked controls."
+        ]
+      },
+      {
+        "id": "review",
+        "title": "Owner and legal review",
+        "paragraphs": [
+          "Before publication, confirm the legal operator, audience, availability countries, applicable law, any enforceable acceptance mechanism and the final change-notice process. This draft intentionally does not invent an arbitration clause, liability cap, governing jurisdiction, mandatory age floor or waiver of consumer rights."
+        ]
+      }
+    ]
+  }
+}
