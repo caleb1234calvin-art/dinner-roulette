@@ -124,6 +124,6 @@ try {
   const noJs=await browser.newContext({javaScriptEnabled:false});const p=await noJs.newPage();
   for(const path of ['/privacy','/terms']) {const r=await p.goto(base+path);assert.equal(r.status(),200);assert.ok((await p.locator('main').innerText()).includes('causticrelay@gmail.com'));assert.equal(await p.locator('video[src*="CAUSTIC_RELAY"]').count(),0);assert.ok((await p.locator('#version-history').innerText()).includes(legalHistory.current.status==='published'?'Published':'Prepared for publication'));pass(path+' without JavaScript');}
   await noJs.close();
-  pass(await checkLegalNotice(browser, base));
+  pass(await checkLegalNotice(browser, base, { output, visibleHit, textContrast, overflow, onPass: pass }));
 } catch(error) { checks.push({name:'terminal failure',status:'FAIL',error:String(error),stack:error.stack});process.exitCode=1; }
 finally { await browser?.close();server.kill('SIGTERM');await writeFile(resolve(output,'server.log'),serverLog);await writeFile(resolve(output,'verdict.json'),JSON.stringify({at:new Date().toISOString(),status:process.exitCode?'FAIL':'PASS',buildProof:proof,checks,limitations:['Mocked external analytics/fonts/Grok requests; no real email delivery or installed Android mail-client verification.','Local preview route accessibility is not public production publication.','Physical Android and operational privacy facts remain separate gates.']},null,2)+'\n'); }
