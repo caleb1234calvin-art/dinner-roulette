@@ -12,6 +12,14 @@ export interface GeographicLocation extends Coordinates {
   locality?: string;
 }
 
+/** Manual results retain provider geography and identity until the user chooses. */
+export interface LocationCandidate extends GeographicLocation {
+  id: string;
+  placeType: string;
+  county?: string;
+  postalCode?: string;
+}
+
 export function isCoordinates(value: unknown): value is Coordinates {
   if (!value || typeof value !== "object") return false;
   const { lat, lon } = value as Coordinates;

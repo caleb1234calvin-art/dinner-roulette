@@ -8,7 +8,7 @@ import {
 } from "./model.ts";
 import { geocodeQuery, locationFromNominatim, reverseGeocode } from "../restaurants/geocode.ts";
 import { createLocationController, getDeviceCoordinates } from "./controller.ts";
-import type { GeographicLocation } from "./model.ts";
+import type { GeographicLocation, LocationCandidate } from "./model.ts";
 import type { SearchLocation } from "../restaurants/types.ts";
 import type { LocationStatus } from "./controller.ts";
 
@@ -21,6 +21,7 @@ const toronto = {
   country: "Canada",
   countryCode: "CA",
 };
+const torontoCandidate = { ...toronto, id: "toronto", placeType: "city" };
 const cities = [
   {
     query: "Joplin, Missouri, USA",
@@ -88,7 +89,14 @@ for (const city of cities) {
         },
       ]);
     });
-    assert.deepEqual(await geocodeQuery(`  ${city.query}  `), {
+    const candidates = await geocodeQuery(`  ${city.query}  `);
+    assert.equal(candidates.length, 1);
+    const { id, placeType, county, postalCode, ...resolved } = candidates[0];
+    assert.ok(id);
+    assert.equal(placeType, "place");
+    assert.equal(county, undefined);
+    assert.equal(postalCode, undefined);
+    assert.deepEqual(resolved, {
       lat: city.lat,
       lon: city.lon,
       label: `${city.city}, ${city.region}, ${city.country}`,
@@ -154,7 +162,7 @@ test("manual input preserves international addresses and postal codes without a 
 
 test("no-result, provider errors and malformed payloads are distinct from valid places", async (t) => {
   const response = t.mock.method(globalThis, "fetch", async () => Response.json([]));
-  assert.equal(await geocodeQuery("No such place"), null);
+  assert.deepEqual(await geocodeQuery("No such place"), []);
   response.mock.mockImplementation(async () => new Response("unavailable", { status: 503 }));
   await assert.rejects(geocodeQuery("Toronto, Canada"), /unavailable/);
   response.mock.mockImplementation(async () => Response.json({ unexpected: true }));
@@ -270,15 +278,17 @@ function deferred<T>() {
 function harness(overrides: Partial<Parameters<typeof createLocationController>[0]> = {}) {
   const locations: SearchLocation[] = [];
   const statuses: LocationStatus[] = [];
+  const choices: LocationCandidate[][] = [];
   const controller = createLocationController({
     getCoordinates: async () => toronto,
     reverse: async () => toronto,
-    lookup: async () => toronto,
+    lookup: async () => [torontoCandidate],
+    onCandidates: (next) => choices.push(next),
     onLocation: (next) => locations.push(next),
     onStatus: (next) => statuses.push(next),
     ...overrides,
   });
-  return { controller, locations, statuses };
+  return { controller, locations, statuses, choices };
 }
 
 test("GPS commits before reverse resolves and preserves exact coordinates even if the label point differs", async () => {
@@ -321,6 +331,7 @@ test("a newer manual choice wins over a delayed GPS callback", async () => {
   const h = harness({ getCoordinates: () => gps.promise });
   const pending = h.controller.device();
   await h.controller.manual("Toronto, Ontario, Canada");
+  h.controller.choose(torontoCandidate);
   gps.resolve({ ...toronto, lat: 49 });
   await pending;
   assert.equal(h.locations.length, 1);
@@ -334,15 +345,16 @@ test("manual editing and unmount invalidate stale reverse and manual completions
   await Promise.resolve();
   h.controller.cancel();
   await h.controller.manual("Toronto, Canada");
+  h.controller.choose(torontoCandidate);
   reverse.resolve({ ...toronto, label: "Stale GPS" });
   await pending;
   assert.equal(h.locations.at(-1)?.source, "manual");
   assert.notEqual(h.locations.at(-1)?.label, "Stale GPS");
-  const lookup = deferred<GeographicLocation>();
+  const lookup = deferred<LocationCandidate[]>();
   const unmounted = harness({ lookup: () => lookup.promise });
   const late = unmounted.controller.manual("Toronto");
   unmounted.controller.invalidate();
-  lookup.resolve(toronto);
+  lookup.resolve([torontoCandidate]);
   await late;
   assert.equal(unmounted.locations.length, 0);
   assert.equal(unmounted.statuses.length, 1);
@@ -353,7 +365,7 @@ test("manual no-result and invalid input retain active location and allow retry"
   const h = harness({
     lookup: async () => {
       if (++attempts === 1) throw new Error("Couldn't find that place");
-      return toronto;
+      return [torontoCandidate];
     },
   });
   await h.controller.manual(" ");
@@ -363,6 +375,7 @@ test("manual no-result and invalid input retain active location and allow retry"
   assert.equal(h.locations.length, 0);
   assert.match(h.statuses.at(-1)?.error ?? "", /Couldn't find/);
   await h.controller.manual("Toronto, Canada");
+  h.controller.choose(torontoCandidate);
   assert.equal(h.locations[0].countryCode, "CA");
   assert.equal(h.statuses.at(-1)?.error, null);
 });
@@ -404,4 +417,167 @@ test("cancelling a pending GPS request permits retry without reviving stale call
   assert.equal(calls, 2);
   assert.equal(h.locations.at(-1)?.lat, toronto.lat);
   assert.equal(h.locations.at(-1)?.label, toronto.label);
+});
+
+
+// D3: captured public Nominatim geography. County and municipality are distinct
+// legitimate destinations; provider ranking must not decide the user's intent.
+const bentonCounty = {
+  osm_type: "relation", osm_id: 1818400, lat: "36.3456186", lon: "-94.2670404",
+  addresstype: "county", name: "Benton County",
+  display_name: "Benton County, Arkansas, United States",
+  address: { county: "Benton County", state: "Arkansas", country: "United States", country_code: "us" },
+};
+const bentonTown = {
+  osm_type: "relation", osm_id: 111083, lat: "34.5645372", lon: "-92.5868280",
+  addresstype: "town", name: "Benton",
+  display_name: "Benton, Saline County, Arkansas, 72015, United States",
+  address: { town: "Benton", county: "Saline County", state: "Arkansas", postcode: "72015", country: "United States", country_code: "us" },
+};
+
+test("D3 county-first provider response preserves both full geographic choices", async (t) => {
+  t.mock.method(globalThis, "fetch", async (input: URL | RequestInfo) => {
+    const url = new URL(String(input));
+    assert.equal(url.searchParams.get("q"), "Benton, Arkansas, United States");
+    assert.equal(url.searchParams.get("limit"), "5", "Request alternatives instead of silently accepting the first county");
+    assert.equal(url.searchParams.has("countrycodes"), false);
+    return Response.json([bentonCounty, bentonTown]);
+  });
+  const choices = await geocodeQuery("Benton, Arkansas, United States");
+  assert.ok(Array.isArray(choices), "Manual lookup returns candidates, not an automatically chosen point");
+  assert.equal(choices.length, 2);
+  assert.equal(choices[0].label, bentonCounty.display_name);
+  assert.equal(choices[0].placeType, "county");
+  assert.equal(choices[1].label, bentonTown.display_name);
+  assert.equal(choices[1].county, "Saline County");
+  assert.equal(choices[1].postalCode, "72015");
+  assert.equal(choices[1].placeType, "town");
+  assert.equal(choices[1].id, "osm:relation:111083");
+  assert.equal(choices[1].lat, 34.5645372);
+});
+
+test("D3 manual result cannot silently replace the active location", async (t) => {
+  t.mock.method(globalThis, "fetch", async () => Response.json([bentonCounty, bentonTown]));
+  const h = harness({ lookup: geocodeQuery });
+  await h.controller.manual("Benton, Arkansas, United States");
+  assert.equal(h.locations.length, 0, "Even one result is a proposed location until explicitly chosen");
+});
+
+
+test("D3 ranking, same-name geography and duplicate provider identities never auto-select", async (t) => {
+  const response = t.mock.method(globalThis, "fetch", async () => Response.json([bentonTown, bentonCounty, bentonTown]));
+  let candidates = await geocodeQuery("Benton, Arkansas, United States");
+  assert.equal(candidates.length, 2, "Only duplicate OSM identity is removed");
+  assert.equal(candidates[0].id, "osm:relation:111083");
+  const h = harness({ lookup: async () => candidates });
+  await h.controller.manual("Benton, Arkansas, United States");
+  assert.equal(h.locations.length, 0);
+  assert.deepEqual(h.choices.at(-1), candidates);
+  h.controller.choose({ ...torontoCandidate, id: "not-a-returned-candidate" });
+  assert.equal(h.locations.length, 0);
+  h.controller.choose(candidates[0]);
+  assert.equal(h.locations.length, 1);
+  assert.equal(h.locations[0].lat, 34.5645372);
+  assert.equal(h.locations[0].label, bentonTown.display_name);
+  h.controller.choose(candidates[1]);
+  assert.equal(h.locations.length, 1, "Old buttons cannot recommit after selection");
+  response.mock.mockImplementation(async () => Response.json([bentonCounty]));
+  candidates = await geocodeQuery("Benton County, Arkansas, United States");
+  const county = harness({ lookup: async () => candidates });
+  await county.controller.manual("Benton County, Arkansas, United States");
+  assert.equal(county.locations.length, 0);
+  county.controller.choose(candidates[0]);
+  assert.equal(county.locations[0].lat, 36.3456186, "Explicit county intent remains usable");
+});
+
+test("D3 address, postcode, non-Latin geography and invalid hits remain distinct", async (t) => {
+  t.mock.method(globalThis, "fetch", async () => Response.json([
+    { lat: "34.5632068", lon: "-92.5882549", addresstype: "house", display_name: "111, South Market Street, Benton, Saline County, Arkansas, 72015, United States" },
+    { lat: "34.5738199", lon: "-92.5981433", addresstype: "postcode", display_name: "72015, Benton, Saline County, Arkansas, United States" },
+    { lat: "35.68", lon: "139.76", addresstype: "city", display_name: "東京都, 日本", address: { city: "東京都", country: "日本", country_code: "jp" } },
+    { ...bentonTown, lat: "NaN" },
+    { ...bentonCounty, lat: "91" },
+  ]));
+  const candidates = await geocodeQuery("東京都, 日本");
+  assert.equal(candidates.length, 3);
+  assert.match(candidates[0].label, /^111, South Market Street/);
+  assert.equal(candidates[0].placeType, "house");
+  assert.match(candidates[1].label, /^72015/);
+  assert.notEqual(candidates[0].id, candidates[1].id);
+  assert.equal(candidates[2].countryCode, "JP");
+  assert.equal(candidates[2].label, "東京都, 日本");
+});
+
+test("D3 cancel, query editing, unmount and newer lookup invalidate every pending choice", async () => {
+  for (const action of ["cancel", "invalidate"] as const) {
+    const h = harness();
+    await h.controller.manual("Toronto");
+    h.controller[action]();
+    h.controller.choose(torontoCandidate);
+    assert.equal(h.locations.length, 0);
+  }
+  const old = deferred<LocationCandidate[]>();
+  let calls = 0;
+  const newer = { ...torontoCandidate, id: "newer", label: "Newer place", lat: 49 };
+  const h = harness({ lookup: async () => ++calls === 1 ? old.promise : [newer] });
+  const pending = h.controller.manual("Old query");
+  await h.controller.manual("New query");
+  old.resolve([torontoCandidate]);
+  await pending;
+  assert.deepEqual(h.choices.at(-1), [newer]);
+  h.controller.choose(torontoCandidate);
+  assert.equal(h.locations.length, 0);
+  h.controller.choose(newer);
+  assert.equal(h.locations[0].lat, 49);
+});
+
+test("D3 GPS supersedes a pending choice and late manual results; failed GPS retains old area", async () => {
+  const h = harness();
+  await h.controller.manual("Toronto");
+  await h.controller.device();
+  h.controller.choose(torontoCandidate);
+  assert.equal(h.locations.length, 2);
+  assert.ok(h.locations.every((item) => item.source === "geo"));
+  assert.deepEqual(h.choices.at(-1), []);
+  const late = deferred<LocationCandidate[]>();
+  const inflight = harness({ lookup: () => late.promise });
+  const pending = inflight.controller.manual("Toronto");
+  await inflight.controller.device();
+  late.resolve([torontoCandidate]);
+  await pending;
+  assert.deepEqual(inflight.choices.at(-1), []);
+  assert.equal(inflight.locations.at(-1)?.source, "geo");
+  const failed = harness({ getCoordinates: async () => { throw new Error("denied"); } });
+  await failed.controller.manual("Toronto");
+  await failed.controller.device();
+  failed.controller.choose(torontoCandidate);
+  assert.equal(failed.locations.length, 0);
+  assert.deepEqual(failed.choices.at(-1), []);
+});
+
+test("D3 malformed, empty and failed lookups retain old location without selectable stale results", async () => {
+  for (const results of [[], [{ ...torontoCandidate, lat: NaN }], [{ ...torontoCandidate, id: "" }]]) {
+    const h = harness({ lookup: async () => results });
+    await h.controller.manual("query");
+    assert.equal(h.locations.length, 0);
+    assert.deepEqual(h.choices.at(-1), []);
+    assert.match(h.statuses.at(-1)?.error ?? "", /Couldn't find/);
+  }
+  const h = harness({ lookup: async () => { throw new Error("Location lookup timed out"); } });
+  await h.controller.manual("query");
+  assert.equal(h.locations.length, 0);
+  assert.match(h.statuses.at(-1)?.error ?? "", /timed out/);
+});
+
+
+test("D3 an old displayed choice cannot select a newer result with the same OSM identity", async () => {
+  const newer = { ...torontoCandidate, lat: 49, label: "Updated provider point" };
+  let calls = 0;
+  const h = harness({ lookup: async () => [++calls === 1 ? torontoCandidate : newer] });
+  await h.controller.manual("first");
+  await h.controller.manual("second");
+  h.controller.choose(torontoCandidate);
+  assert.equal(h.locations.length, 0);
+  h.controller.choose(newer);
+  assert.equal(h.locations[0].lat, 49);
 });

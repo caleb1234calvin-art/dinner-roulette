@@ -24,7 +24,7 @@ test("global manual origins retain final-pass casino identities and routing thro
     { name: "Pahrump", state: "Nevada", lat: 36.208, lon: -115.983, count: 5, target: "casino-catalog-nv-terribles-pahrump" },
     { name: "Pawnee", state: "Oklahoma", lat: 36.338, lon: -96.804, count: 2, target: "casino-catalog-ok-pawnee-trading-post" },
   ]) {
-    const location = await lookupLocation({ data: { query: `${origin.name}, ${origin.state}, USA` } });
+    const [location] = await lookupLocation({ data: { query: `${origin.name}, ${origin.state}, USA` } });
     assert.equal(location.countryCode, "US");
     const result = await searchNightlife({ data: { ...location, radiusMiles: 10 } });
     assert.equal(result.venues.length, origin.count);

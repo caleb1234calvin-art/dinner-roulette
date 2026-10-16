@@ -127,7 +127,11 @@ try {
         await deniedPage.getByRole("button", { name: "Use my location", exact: true }).click();
         await deniedPage.getByRole("alert").filter({ hasText: "Location permission was denied. You can enter a location manually." }).waitFor({ timeout: 15000 });
         await deniedPage.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Reno, Nevada");
-        await deniedPage.getByRole("button", { name: "Set location", exact: true }).click();
+        await deniedPage.getByRole("button", { name: "Find location", exact: true }).click();
+        const renoChoice = deniedPage.getByRole("button", { name: /^Use Reno, .*Nevada.*United States Place type: city$/ });
+        await renoChoice.waitFor();
+        assert.equal(await renoChoice.count(), 1, "Require the intended Reno municipality");
+        await renoChoice.click();
         await deniedPage.getByRole("status").filter({ hasText: "Location set to" }).waitFor({ timeout: 20000 });
         const after = await deniedPage.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);
         assert.equal(after.source, "manual"); assert.equal(after.countryCode, "US");

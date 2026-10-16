@@ -1341,7 +1341,8 @@ try {
         const toggle = section.getByRole("button", { name: "Change location", exact: true });
         if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
         await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(location.label);
-        await page.getByRole("button", { name: "Set location", exact: true }).click();
+        await page.getByRole("button", { name: "Find location", exact: true }).click();
+        await section.getByRole("button", { name: `Use ${location.label} Place type: place`, exact: true }).click();
         await section.getByText(location.label, { exact: true }).waitFor();
         await ready(page);
         await waitFor(async () => test.rpc.length > before, "Manual state relocation must acquire its new coordinate signature");
@@ -1388,7 +1389,8 @@ try {
         const toggle = section.getByRole("button", { name: "Change location", exact: true });
         if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
         await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(location.label);
-        await page.getByRole("button", { name: "Set location", exact: true }).click();
+        await page.getByRole("button", { name: "Find location", exact: true }).click();
+        await section.getByRole("button", { name: `Use ${location.label} Place type: place`, exact: true }).click();
         await section.getByText(location.label, { exact: true }).waitFor();
         await ready(page);
         await waitFor(async () => test.rpc.length > before, "Manual state relocation must acquire its new coordinate signature");

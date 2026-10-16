@@ -118,7 +118,14 @@ test("all five actual compiled application POST functions succeed through the cl
   assert.equal(restaurants.source, "live");
   assert.ok(restaurants.restaurants.some((place) => place.name === "Transport Fixture Restaurant"));
   for (const [name, data] of [["lookupLocation", { query: "Toronto, Ontario" }], ["lookupReverseLocation", location]]) {
-    const result = await rpc(app, name, data);
+    const response = await rpc(app, name, data);
+    if (name === "lookupLocation") {
+      assert.ok(Array.isArray(response), "Manual RPC returns choices for explicit confirmation");
+      assert.equal(response.length, 1, "This fixture has exactly one candidate");
+      assert.equal(typeof response[0].id, "string");
+      assert.equal(response[0].placeType, "place");
+    }
+    const result = name === "lookupLocation" ? response[0] : response;
     assert.equal(result.lat, location.lat);
     assert.equal(result.lon, location.lon);
     assert.equal(result.label, "Toronto, Ontario, Canada");

@@ -58,7 +58,7 @@ export const lookupLocation = createServerFn({ method: "POST" })
   })
   .handler(async ({ data }) => {
     const result = await geocodeQuery(data.query);
-    if (!result) throw new Error("Couldn't find that place. Try adding the region and country.");
+    if (!result.length) throw new Error("Couldn't find that place. Try adding the region and country.");
     return result;
   });
 
