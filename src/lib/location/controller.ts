@@ -4,7 +4,7 @@ import {
   normalizeLocationQuery,
   requireCoordinates,
 } from "./model.ts";
-import type { Coordinates, GeographicLocation } from "./model.ts";
+import type { Coordinates, GeographicLocation, LocationCandidate } from "./model.ts";
 import type { SearchLocation } from "../restaurants/types";
 
 export interface LocationStatus {
@@ -57,27 +57,43 @@ export function getDeviceCoordinates(
 export function createLocationController(deps: {
   getCoordinates: () => Promise<Coordinates>;
   reverse: (coordinates: Coordinates) => Promise<GeographicLocation>;
-  lookup: (query: string) => Promise<GeographicLocation>;
+  lookup: (query: string) => Promise<LocationCandidate[]>;
+  onCandidates: (candidates: LocationCandidate[]) => void;
   onLocation: (location: SearchLocation) => void;
   onStatus: (status: LocationStatus) => void;
 }) {
   let request = 0;
   let deviceRequest: number | undefined;
+  let pending: { request: number; candidates: LocationCandidate[] } | undefined;
   const invalidate = () => {
     request += 1;
+    pending = undefined;
   };
   const cancel = () => {
     invalidate();
+    deps.onCandidates([]);
     deps.onStatus(IDLE_LOCATION_STATUS);
   };
   return {
     invalidate,
     cancel,
+    choose(candidate: LocationCandidate) {
+      if (!pending || pending.request !== request) return;
+      // Object membership binds this action to the displayed request, even if a
+      // later query returns the same stable OSM identity at a different point.
+      if (!pending.candidates.includes(candidate)) return;
+      invalidate();
+      deps.onCandidates([]);
+      deps.onLocation({ ...candidate, source: "manual" });
+      deps.onStatus({ busy: null, message: `Location set to ${candidate.label}.`, error: null });
+    },
     async device() {
       // Prevent duplicate native requests even before React renders the busy state.
       if (deviceRequest === request) return;
       const id = ++request;
       deviceRequest = id;
+      pending = undefined;
+      deps.onCandidates([]);
       deps.onStatus({ busy: "geo", message: "Finding your location…", error: null });
       try {
         const coordinates = requireCoordinates(await deps.getCoordinates());
@@ -116,14 +132,18 @@ export function createLocationController(deps: {
     },
     async manual(query: string) {
       const id = ++request;
+      pending = undefined;
+      deps.onCandidates([]);
       deps.onStatus({ busy: "manual", message: "Finding that location…", error: null });
       try {
-        const result = await deps.lookup(normalizeLocationQuery(query));
+        const results = await deps.lookup(normalizeLocationQuery(query));
         if (id !== request) return;
-        if (!isGeographicLocation(result))
+        if (!Array.isArray(results) || !results.length || results.some((item) =>
+          !isGeographicLocation(item) || typeof item.id !== "string" || !item.id || typeof item.placeType !== "string" || !item.placeType))
           throw new Error("Couldn't find that place. Try adding the region and country.");
-        deps.onLocation({ ...result, source: "manual" });
-        deps.onStatus({ busy: null, message: `Location set to ${result.label}.`, error: null });
+        pending = { request: id, candidates: results };
+        deps.onCandidates(results);
+        deps.onStatus({ busy: null, message: "Choose a location below. Your search area has not changed.", error: null });
       } catch (error) {
         if (id !== request) return;
         deps.onStatus({

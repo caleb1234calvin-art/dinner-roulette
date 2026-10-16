@@ -138,7 +138,8 @@ try {
     const toggle = section.getByRole("button", { name: "Change location" });
     if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
     await page.getByRole("textbox", { name: inputName }).fill(label);
-    await page.getByRole("button", { name: "Set location", exact: true }).click();
+    await page.getByRole("button", { name: "Find location", exact: true }).click();
+    await section.getByRole("button", { name: `Use ${label} Place type: place`, exact: true }).click();
     await waitFor(
       () => section.getByText(label, { exact: true }).isVisible(),
       `Manual location did not set ${label}`,
@@ -170,7 +171,7 @@ try {
   results.push("390px mobile layout fits without horizontal overflow");
   await section.getByRole("button", { name: "Change location" }).click();
   await page.getByRole("textbox", { name: inputName }).fill("Invalid location fixture");
-  await page.getByRole("button", { name: "Set location", exact: true }).click();
+  await page.getByRole("button", { name: "Find location", exact: true }).click();
   await page
     .getByRole("alert")
     .filter({ hasText: /Couldn't find/ })
