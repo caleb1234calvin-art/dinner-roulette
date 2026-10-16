@@ -1,3 +1,34 @@
+# Authenticated Play Console checkpoint — 2026-10-16 18:30 UTC
+
+## CURRENT
+
+Root completed owner-authorized sign-in retry and read-only Console inspection at 18:27–18:29 UTC using the dot cloud browser. The earlier declined sign-in remains historical evidence; the owner subsequently requested another attempt. No credentials or one-time codes are retained in this checkpoint.
+
+PASS: account context and authenticated access are resolved for Caustic Relay / causticrelay@gmail.com. Home and Account details explicitly identify a Personal developer account. Current Home shows Create your first app with no app rows. Package names shows the registration introduction and no registered-package rows. These are bounded current-inventory observations, not proof of exhaustive historical absence or global package availability. Verified contact indicators are visible; they do not establish an overall developer-verification completion verdict.
+
+Sanitized evidence: audit/play-phase2-2026-10-16/AUTHENTICATED-CONSOLE-READBACK.md. Private legal name/address/phone and authentication secrets are excluded. No account/app creation, package registration, signing, upload, declaration, agreement acceptance or settings edit occurred.
+
+The existing prepared legal candidate remains PR #77, SHA 6b370a5202ffb531434d725f49aacbdc325f32c5, tree 520f545ec006041ef5694a138cfb65f7a897011c, parent d076a67448357355e936e9568bc84fe5b5c92ca6. Policies remain owner-approved in content/procedure, unreleased, with null effective dates. Previous exact-head technical acceptance remains preserved. No package migration candidate has been created. This Console checkpoint is not a fresh source/production inspection; the last verified production baseline below remains c3208d9fdc9a21d698efa9254be1286f5d3d2836 / dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY, 92 identities.
+
+## NEXT
+
+Independent interpretation PASS is recorded in audit/play-phase2-2026-10-16/review/CONSOLE-ACCESS-ADDENDUM-1829.md. The reviewer independently checked source and official policy but did not separately witness the browser session. Absolute historical absence is not a prerequisite to making a conditional target-ID decision.
+
+Obtain the owner's final target package-ID decision on app.pickforus.android before implementing the bounded migration candidate. Account/app creation and package registration remain separate approval-gated actions. After an authorized app exists, inspect its actual testing, signing and declaration requirements rather than infer them from account type alone.
+
+## HOLD
+
+- Global availability/reservation of app.pickforus.android remains unverified.
+- Current empty inventory does not prove no historical app/upload or prior signing identity ever existed.
+- Overall developer verification completion, account creation date and applicable app-specific testing/signing gates remain unverified.
+- Final package-ID approval and migration implementation/validation are outstanding.
+- Physical-device/network acceptance and final Data safety, listing, age/content, geography, signing/certificates and export decisions remain open.
+- Actual legal publication date/status finalization, exact-successor revalidation and separate deployment approval remain mandatory.
+- PR #75 stays separate; Halloween and PR #61 remain parked. “Radial discovery becomes an audit layer.” remains future intent only.
+
+
+---
+
 # Play account authentication outcome — 2026-10-16 18:21 UTC
 
 ## CURRENT
