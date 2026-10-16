@@ -1,0 +1,73 @@
+{
+  "commit": {
+    "sha": "4dab2cd77d3d35559394be10bd14b0568026e5f1",
+    "node_id": "C_kwDOUPp-qdoAKDRkYWIyY2Q3N2QzZDM1NTU5Mzk0YmUxMGJkMTRiMDU2ODAyNmU1ZjE",
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/4dab2cd77d3d35559394be10bd14b0568026e5f1",
+    "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/4dab2cd77d3d35559394be10bd14b0568026e5f1",
+    "author": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-16T05:22:08Z"
+    },
+    "committer": {
+      "name": "caleb1234calvin-art",
+      "email": "caleb1234calvin@gmail.com",
+      "date": "2026-10-16T05:22:08Z"
+    },
+    "tree": {
+      "sha": "e98c22a1f26e8b06f282334a257e8094292b20b1",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/trees/e98c22a1f26e8b06f282334a257e8094292b20b1"
+    },
+    "message": "fix: meet legal and support text contrast with browser regression checks",
+    "parents": [
+      {
+        "sha": "3d388a796ea63bee7fd0a2dbea54961889044a44",
+        "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/commits/3d388a796ea63bee7fd0a2dbea54961889044a44",
+        "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/commit/3d388a796ea63bee7fd0a2dbea54961889044a44"
+      }
+    ],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "tree": "e98c22a1f26e8b06f282334a257e8094292b20b1",
+  "truncated": false,
+  "files": [
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e5e984db4a1509bf634de6c97844523f29ee937",
+      "size": 11579,
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/4e5e984db4a1509bf634de6c97844523f29ee937"
+    },
+    {
+      "path": "src/components/legal-document-page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c2296b07e9953ff39df5a5c6e9f8509ef996f14",
+      "size": 2872,
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/3c2296b07e9953ff39df5a5c6e9f8509ef996f14"
+    },
+    {
+      "path": "src/components/settings-page.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5e7c987e77e6bf710c5e14a4f55135652e80b42",
+      "size": 9998,
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/a5e7c987e77e6bf710c5e14a4f55135652e80b42"
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f13b8f95fc721e855014694ff40ea49f412ad57d",
+      "size": 17873,
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/git/blobs/f13b8f95fc721e855014694ff40ea49f412ad57d"
+    }
+  ]
+}

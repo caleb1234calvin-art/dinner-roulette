@@ -1,0 +1,61 @@
+{
+  "candidate": "4dab2cd77d3d35559394be10bd14b0568026e5f1",
+  "tree": "e98c22a1f26e8b06f282334a257e8094292b20b1",
+  "parent": "3d388a796ea63bee7fd0a2dbea54961889044a44",
+  "finding": "New legal/support normal small text reused insufficient-contrast inherited colors; original browser checks did not assert contrast.",
+  "original_ratios": {
+    "dark_link": 4.081112246157806,
+    "light_link": 4.133753852102133,
+    "light_subtle_surface": 3.6267765009333557,
+    "light_subtle_background": 3.3903287883666735,
+    "dark_subtle_surface": 4.347648397822747,
+    "dark_support_button": 3.9996765608298115,
+    "light_support_button": 4.051427337465015
+  },
+  "local_results": {
+    "repository_pass": 1257,
+    "repository_skips": 4,
+    "application_pass": 71,
+    "typecheck": "PASS",
+    "lint_errors": 0,
+    "lint_warnings": 6,
+    "migration_free_auth_build": "PASS",
+    "browser": "PENDING exact-head hosted run38855425876"
+  },
+  "preserved_failed_attempts": [
+    "original automated browser20PASS lacked contrast coverage; source/screenshot accessibility acceptance FAIL",
+    "first root build invocation vite unavailable on direct PATH; corrected explicit node_modules path without source mutation"
+  ],
+  "files": [
+    {
+      "name": "legal-contrast-build.log",
+      "size": 53,
+      "sha256": "228f4286903d69afd6d2837c29849134ba956e64c59eaf69619a0524753f514c"
+    },
+    {
+      "name": "legal-contrast-lint-final.log",
+      "size": 1911,
+      "sha256": "9a1aa4902ebd3f2bf0971dce1d109659858cc71d0c0f665152e20847edca2832"
+    },
+    {
+      "name": "legal-contrast-build-final.log",
+      "size": 11765,
+      "sha256": "31f9372a82422919384ba797349c34e3e2c6ac3d1e1a267680f2f096ad3abb1d"
+    },
+    {
+      "name": "legal-contrast-build-retry.log",
+      "size": 11765,
+      "sha256": "9020cdd4c64fccc9e865ff5451962788647f8967eae061cefc27169e77234c9d"
+    },
+    {
+      "name": "legal-contrast-lint.log",
+      "size": 1911,
+      "sha256": "9a1aa4902ebd3f2bf0971dce1d109659858cc71d0c0f665152e20847edca2832"
+    },
+    {
+      "name": "legal-contrast-tests.log",
+      "size": 849273,
+      "sha256": "66940feb9e0ef9f9b93b61b1a9add3c3a5304d70b268a450ad3c984ed5e06fce"
+    }
+  ]
+}

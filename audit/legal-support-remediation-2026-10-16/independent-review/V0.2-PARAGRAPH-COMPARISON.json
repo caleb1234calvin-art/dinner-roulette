@@ -1,0 +1,375 @@
+{
+  "reviewed_at": "2026-10-16T05:40:00Z",
+  "input_hashes": {
+    "legal-documents.json": "92d84c992a49c8152c89600000347efa7558f246e99aebee76028dc62447d024",
+    "legal-documents-v0.2.json": "5555a578ce29b7182cc999db6c1ce3cb9973663a245cda30552379570a98d094",
+    "PRIVACY-DRAFT-v0.2.md": "e97a5e22d3e8a9caab868ca1d623b72bd9d5daeb587edab5eeae5b119ed60790",
+    "TERMS-DRAFT-v0.2.md": "3be7697dc2e88239b6e8c7cf8279f52534ebc28022a53bfb2ca7c104b9b9e2cc",
+    "V0.2-REVIEW-APPENDIX.md": "dd2d1fb650318140490489fb7d5447f939353d8af45961e35d6242960b603693"
+  },
+  "paragraphs": [
+    {
+      "document": "privacy",
+      "section": "scope",
+      "paragraph": 1,
+      "text": "Pick For Us helps you discover and choose restaurants, activities and seasonal destinations. It is operated under the personal brand Caustic Relay. This Privacy Policy covers pickforus.app and the Pick For Us Android experience, which loads the hosted website. For privacy questions, support or a deletion request, email causticrelay@gmail.com. You do not need an app account to contact us.",
+      "sha256": "0bb2687bd41a08030091940f78d19f34410b569eae7b3d2ef3172f5bc6cd5354",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 1,
+      "text": "You can enter a place manually or request your device\u2019s location. Device location requires your browser or Android permission. The returned coordinates can be precise or approximate depending on your device, permission and conditions. Pick For Us does not deliberately round them before the location and nearby-place requests. The app requests device location when you choose that action; the discovery feature does not request background location tracking.",
+      "sha256": "b99861b43dc60a4cd203ed0949db947463efdba7dd07ca54fc9c5290079de43b",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 2,
+      "text": "Search text and coordinates are sent to Pick For Us servers to find and rank nearby places. The servers send entered search text or coordinates to OpenStreetMap Foundation\u2019s Nominatim service for place lookup, and coordinate/radius/category queries to Overpass services for venue discovery. The configured Overpass hosts are overpass.openstreetmap.fr, overpass.private.coffee, maps.mail.ru and overpass-api.de; retries or fallback can use more than one host. These are separate service operators, not all covered by the OpenStreetMap Foundation privacy policy.",
+      "sha256": "e6bf91d922dc18b46ccf1b9ed030d36a0b8155f96f22852c79a84a77a15f0fb0",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "location",
+      "paragraph": 3,
+      "text": "A manually entered place may be somewhere you want to visit rather than your current location. Avoid entering private information that is unnecessary for a place search. You can revoke device-location permission in your browser or Android settings and use manual search instead. Revocation does not erase a location already saved on this device.",
+      "sha256": "f2c657b06f7baa4268bbaebf2b2cd1c3e3fabc3ba7cfd54bae5ea9bbff382cad",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 1,
+      "text": "Pick For Us saves your selected search location, filters, favorites, ratings, visit history and notes, temporary exclusions, appearance, selected mode and seasonal preferences in browser or WebView storage. Venue identity records help apply current seasonal information to saved places. Tour status also uses session storage. This supports preferences and continuity between visits.",
+      "sha256": "d55ce5d5f2a994dcb7572a85f6b3b2a12a940b8b8ff06a616e5d23ebdd06db9b",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 2,
+      "text": "The main local store has no automatic time-based deletion for a saved location, favorites or preferences. Visit history keeps up to the latest 200 entries. Temporary exclusions stop applying after their expiry and are pruned when the app checks them. In-memory discovery caches have reuse limits; a cache reuse limit is not a promise that every copy is erased at that time.",
+      "sha256": "b764c7bf5295b67d37ece193ac601e4e06ae01e92b00065acbe4a97bdfa2cbdf",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "local",
+      "paragraph": 3,
+      "text": "Your preferences and history are saved locally rather than synchronized through an app account. Searches, hosting, analytics, external resources and support email involve the separate data transfers explained in this policy. Your browser, operating system, backups or device-transfer settings may also affect copies of local data.",
+      "sha256": "f698987364b99c79980308ec7406930e013f1855fbfbcc564eb263dedcc7746b",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 1,
+      "text": "Reset filters restores the Dinner and Date Night filter defaults. Clear all exclusions removes the current exclusion list. Show hint again resets the tour\u2019s session flag.",
+      "sha256": "8e4e0d1e8a4f40e09a1be900ef83573f830cd78be4efe20f9ac670914abee295",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 2,
+      "text": "The Clear favorites and history action also clears ratings, visits, exclusions, shown-result history and seasonal identity records, and resets filters, mode and the seasonal switch. It keeps your selected location and appearance. It does not delete support email, provider records, hosting logs or every item of browser storage.",
+      "sha256": "03f3c9c30b677f6aa96bc3d8163a3083ac9eda1e3499a93be02f1cf4985cbdd0",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "controls",
+      "paragraph": 3,
+      "text": "You can use your browser\u2019s site-data controls or Android\u2019s app-storage controls to remove local data. These controls may sign you out of services and remove saved preferences, and cannot erase copies held by other providers. Web and Android storage can be separate; clear each relevant app or browser. For information held by the operator, contact causticrelay@gmail.com. A request does not automatically erase data from unrelated services.",
+      "sha256": "16b0f95e82b2650a80479e7e557d7fd2cb09dc671e17f3b8b864faf389e17e64",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 1,
+      "text": "Pick For Us is hosted on Vercel. Loading pages, resources and server functions sends technical request information to the hosting infrastructure, including information such as IP address, request path, time and browser details. The app also records diagnostic information about request and provider outcomes to help investigate failures. These diagnostic messages are designed to avoid raw search coordinates and query payloads; the searches themselves still send the information described in Location and place searches.",
+      "sha256": "c38b77e656d7035220af328f77b136d6296790199c4a7eb46ea2ebf5d4d94bbb",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 2,
+      "text": "We use Vercel Web Analytics to understand visits and improve the service. It provides aggregate page-view statistics and information such as visited URLs, referring sites, approximate geographic information and browser or device characteristics. The app also contains a mode-selection event; whether that event is collected depends on the available analytics features and configuration. Vercel describes this analytics product as using a request-derived visitor identifier rather than third-party tracking cookies. Its 24-hour visitor-session window does not mean all analytics records are erased after 24 hours.",
+      "sha256": "eeee7e39fb3a378c74cdfe78e23cd1382e112a03aab7279f05ad853bf224afe7",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "hosting",
+      "paragraph": 3,
+      "text": "Vercel processes hosting and analytics information according to its applicable service policies and retention practices. We use this information to operate, secure and troubleshoot Pick For Us and understand usage. The information available in a dashboard may cover a shorter period than a provider's security, backup or other records.",
+      "sha256": "c28b7e7c60808621de72610b6fb949377226ece4841c43ea667616efee9b6d84",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "resources",
+      "paragraph": 1,
+      "text": "The website loads fonts from Google Fonts. These requests give Google ordinary connection information, such as IP address and request headers. Google describes the Fonts service separately from its advertising products.",
+      "sha256": "e2815bd7035d41b1b0a4b8ca96a14cd9c3e412469a5bb0af3defe96c03912743",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "resources",
+      "paragraph": 2,
+      "text": "The website also loads a Grok app-builder resource used for project branding and remix features. Downloading it gives Grok and its delivery infrastructure ordinary web request information. The response can offer device or security cookies; your browser's cookie settings affect whether they are accepted or sent. When a project identifier is supplied, the resource can send that identifier to Grok's app-builder service to check whether a remix link should appear. This integration is separate from support email.",
+      "sha256": "693642b68dec060865a624e40d13092ade910ce664b8ecb5c86ca32905020540",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "external",
+      "paragraph": 1,
+      "text": "If you open directions, rideshare, a venue website or another external service, that service receives the destination or link information needed for the action and handles further interactions under its own privacy policy. The directions helper sends the destination, not your device\u2019s starting GPS point. The external app may independently request your location or use information it already holds.",
+      "sha256": "afe3d10860147795864a52a4c164b6e871a1c6a9c2c85159bd9ba04f9da13c7f",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "external",
+      "paragraph": 2,
+      "text": "Pick For Us does not control an external service\u2019s account, booking, purchase, payment or deletion process. Check that service\u2019s terms and privacy information before proceeding.",
+      "sha256": "e3ddf8e9357cf502d8f50c51477005aa1a1033b724947e0666326117a2608e32",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 1,
+      "text": "Contact Support opens your email application with causticrelay@gmail.com as the recipient and an optional subject. Pick For Us does not send the message for you. If an email application is unavailable, copy or type the displayed address into an email service you use.",
+      "sha256": "d98a1fbec5bb563831ac729c6d35baa3a348d81d943864fb598b31ee97cb8a3e",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 2,
+      "text": "If you send email, the operator and Gmail receive your email address, message, attachments and associated email information so your request can be handled. Send only information needed for your request; do not send passwords, payment-card details or unnecessary sensitive information.",
+      "sha256": "bb83eea0e613c1b9ea438d469a5a48d1de970aec557e8c9a570142832f65dc3f",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "support",
+      "paragraph": 3,
+      "text": "The owner manages support directly through Gmail. Support correspondence is kept until the request is resolved, then manually deleted from Gmail. Google\u2019s deletion process can retain messages in Trash and retain residual copies for its documented processing, backup or legal purposes. This is not a promise of immediate erasure from every system. Deleting local app data does not delete support correspondence. You can contact the same address with a deletion request.",
+      "sha256": "209e9e953869cad6afe7688f22f80832a82c044211212732e82b75d8cb0a2034",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "accounts",
+      "paragraph": 1,
+      "text": "You can use the current discovery features without creating an app account. Favorites, history and preferences are stored on your device as described above. If you have previously provided account information or have a question about information held by the operator, contact causticrelay@gmail.com so we can review your request.",
+      "sha256": "ba0a55d5b1b5ebfffb0d352058ed4f4937c29a22709625b37f2364115ffb6226",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 1,
+      "text": "Local preferences and saved places remain on your device until you clear them, subject to the storage behavior described above. Visit history keeps up to the latest 200 entries. Support email is kept until your request is resolved, then manually deleted from Gmail. Provider recovery, backup, security or legal processes may retain copies after a deletion action; deleting local app data does not delete information held by those services.",
+      "sha256": "b869317a49a0e835e34755cdb835502c435dc9be1df10a642cc331e73f549e6c",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 2,
+      "text": "The operator currently does not keep separate copies or exports of support emails, analytics or server logs outside Gmail and Vercel.",
+      "sha256": "9c706359962d110b286d3eee95279ad148e2cad7ffd4ee17f95323c7947c0bff",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 3,
+      "text": "Hosting, analytics, place-search and external-service providers maintain their own records. Their retention depends on the service, purpose, configuration and applicable obligations. A temporary cache limit, dashboard viewing window or analytics session limit is not a universal deletion deadline. We cannot promise immediate erasure of every provider copy. The provider links in this policy explain their published practices where available.",
+      "sha256": "2a882e7d9e9eebeca4542d8eebb9a62e2996e8205d552159ebf3abfbead64606",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 4,
+      "text": "Pick For Us uses HTTPS for its configured external requests. The Android configuration disables cleartext traffic and mixed content. No online service or device can guarantee absolute security.",
+      "sha256": "aedf0c59256da86d602bf25e2add4d76a3e88276523c0085ef6949fd0d887684",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "retention",
+      "paragraph": 5,
+      "text": "For privacy questions or requests for access, correction or deletion of information held by the operator, email causticrelay@gmail.com. Information needed to locate a record and applicable retention requirements depend on the request. You may also need to contact an independent service directly about information it controls.",
+      "sha256": "d54188a3a86a248ccaac7e00924aa2addb0a6fa6ce59b005c1da584bc44fa12d",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "privacy",
+      "section": "changes",
+      "paragraph": 1,
+      "text": "This is version 0.2, a draft dated October 16, 2026. It is not yet effective. The intended permanent policy address is https://pickforus.app/privacy. The publication version and effective date will be stated when an approved policy is released.",
+      "sha256": "1dfbb633a96fd325a4f452e23cb7facf1f7e74d7283f43996e19494c109050c2",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "service",
+      "paragraph": 1,
+      "text": "Pick For Us helps you discover destinations and choose what to do. It is operated under the personal brand Caustic Relay. Contact causticrelay@gmail.com with questions.",
+      "sha256": "8eee5208d665145a2221cb71ef79ea11e13d50f763cafd225640c7b0b37efcd2",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "service",
+      "paragraph": 2,
+      "text": "The app provides suggestions and planning information. It is not the operator of listed venues, a booking agent, an emergency service or a guarantee that a destination is suitable for you.",
+      "sha256": "287985e4bae845891e0a828f28bd8f089ddd0153b5dd4f0f5fa9237aaaab2ffb",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "listings",
+      "paragraph": 1,
+      "text": "Hours, admission, prices, restrictions, accessibility, weather and availability can change. Check important details with the venue before travelling or buying tickets. Seasonal listings apply only to their supported dates and may expire.",
+      "sha256": "3939780df687edd51a30d0d256011ef0f1bbe7c7d2d6c7b3588037884d971b44",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "listings",
+      "paragraph": 2,
+      "text": "Distances and map locations can be approximate. An address-derived point is not a verified entrance, parking space or rideshare drop-off. Follow the venue\u2019s arrival instructions and local safety rules. A displayed schedule is not necessarily an Open Now confirmation.",
+      "sha256": "84d14d73f6a49afbac45be32865e0c379b3a84a6a7adee3386de2cae0b328618",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "external",
+      "paragraph": 1,
+      "text": "Directions, rideshare, delivery, venue and ticket links open independent services. Their availability, transactions, charges, terms and privacy practices are their responsibility. Review them before proceeding.",
+      "sha256": "c0131aace0c784138759dd74be1ba76b0455329ed99cbd3e0bdb84fc322445e5",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "external",
+      "paragraph": 2,
+      "text": "Pick For Us is not affiliated with or endorsed by listed venues or third-party services unless expressly stated. Third-party names and trademarks identify their respective destinations or services.",
+      "sha256": "9581198ea014cfd226771f0d52cfc0599e0d0d8acfbcc94c95bff69d86cf51b7",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "responsible",
+      "paragraph": 1,
+      "text": "Follow applicable laws and the venue\u2019s age, access and safety requirements. Nightlife or casino discovery does not sell alcohol, accept wagers or provide gambling. Do not drive impaired.",
+      "sha256": "389981d6e12ba63db2ce3b3e5ba3678385448b90105671a4a6bcb47993b22e80",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "responsible",
+      "paragraph": 2,
+      "text": "Do not misuse the service, attempt unauthorized access, interfere with other users or submit unlawful or harmful content through support. These terms do not remove rights you have under applicable law.",
+      "sha256": "5911a066d9ac31357843aa23b9c8559f4dcfb567bc8206a0bd8d17488020159b",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "privacy",
+      "paragraph": 1,
+      "text": "The Privacy Policy explains data handling and available controls. Service terms, optional data-processing consent and Android/browser permissions are different choices. You can read these documents without accepting optional processing or using a prechecked consent box.",
+      "sha256": "8a1d007d2d7ca95eabbd78925c067349aae826a622f2bb0e8ca512a02e0fad2d",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "privacy",
+      "paragraph": 2,
+      "text": "You can email support without an app account. The support link prepares an email; it does not automatically send it. If your device has no email application, use the visible address in another email service.",
+      "sha256": "e2901cf0e471073ac99302cf48e1045536a35501ee9629015ee0e1d3b6fbccf1",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "availability",
+      "paragraph": 1,
+      "text": "Internet access and external providers are needed for parts of discovery. Results may be incomplete or unavailable during outages. Local favorites, history and preferences can be lost when browser or app data is cleared or a device is changed.",
+      "sha256": "a0b5fc0270fe577920e32708848df283d792da0700b0cd1414ea1a098b1693ea",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "availability",
+      "paragraph": 2,
+      "text": "A Google Play release is being prepared. No public Google Play listing or download availability is claimed by these terms.",
+      "sha256": "ad026fb1b37341d91cfb2671399ac3d12d19fdba7e8b883f86d32a404a1d58ee",
+      "unchanged_text": true,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    },
+    {
+      "document": "terms",
+      "section": "changes",
+      "paragraph": 1,
+      "text": "This is version 0.2, a draft dated October 16, 2026. It is not yet effective. The publication version and effective date will be stated when approved terms are released. Reading this draft does not grant optional data-processing consent or device permissions.",
+      "sha256": "d6730797c0177b255f3367270015eb598cb998d8dac6e919d87aa20baab80bce",
+      "unchanged_text": false,
+      "verdict": "QUALIFIED PASS \u2014 non-effective draft"
+    }
+  ],
+  "unchanged_paragraph_count": 21,
+  "changed_or_new_paragraph_count": 19,
+  "status": "Independent source-text review; not yet integrated or bound to successor Git identity; no functional CI transfer."
+}

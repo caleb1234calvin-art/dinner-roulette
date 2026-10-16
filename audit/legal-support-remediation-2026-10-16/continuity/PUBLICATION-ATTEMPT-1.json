@@ -1,0 +1,137 @@
+{
+  "attemptedAt": "2026-10-16T05:18:49Z",
+  "status": "HOLD: user cancelled update_ref; readback confirms branch unchanged",
+  "branch": "integration/continuity-refresh-2026-10-07",
+  "expectedHead": "9bbeaf0a2b39bd6b8cb9a7d7237184cc7cae6d99",
+  "unpublishedCommit": "2e68c415609d7682ced0888cbc2d443f09ccd76e",
+  "tree": "9ba2dad82423f3f99e7defc6bdb32083adb86a8a",
+  "blobs": [
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/TERMS-DRAFT.md",
+      "result": {
+        "sha": "eb7782eda4627463457c6cdbb2530e2671a5b616"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/README.md",
+      "result": {
+        "sha": "35a15f90984631c9c4ab7b0f60254b8d38703598"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/PRIVACY-DRAFT.md",
+      "result": {
+        "sha": "5d89548068c448847316366ed1915f5845ff3d31"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/PUBLIC-OBSERVATION-MANIFEST.json",
+      "result": {
+        "sha": "c0e3b2e1878cc17b0e1dedbf73ab58aa9514b4f9"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/COMPLIANCE-DELTA.md",
+      "result": {
+        "sha": "280efc6d0f2a953d697a9fa94fcf9b15354ea6b7"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/LOCAL-VALIDATION-MANIFEST.json",
+      "result": {
+        "sha": "70333d95418c6a2306e0c1c871820cae014f5263"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/UNCHANGED-DATAFLOW-INPUTS.json",
+      "result": {
+        "sha": "afe63dcda80c420d13b30bde7d25f11f9eaed1ad"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/legal-documents.json",
+      "result": {
+        "sha": "f13b8f95fc721e855014694ff40ea49f412ad57d"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/PARAGRAPH-EVIDENCE-MAP.md",
+      "result": {
+        "sha": "c1904b2f3e68e564d9a805b307aaeab69276d6ce"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/OPERATIONAL-DECISIONS-AND-RELEASE-GATES.md",
+      "result": {
+        "sha": "9f4a8a15433184d1680c1d364b7b3c289591c4d7"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/acceptance/LIVE-OBSERVATION.md",
+      "result": {
+        "sha": "5389ab23899178a114a3c514295650a94a11db22"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/acceptance/TARGETED-ACCEPTANCE-PLAN.md",
+      "result": {
+        "sha": "1c97e8ae87d2687a794361f6754bd6f26314bf7c"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/acceptance/VERCEL-PRIVACY-CONFIG-READBACK.md",
+      "result": {
+        "sha": "fe71374f78978676426bf29e49d038890054dbf1"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/acceptance/BASELINE-READBACK.json",
+      "result": {
+        "sha": "a53c514f88192f09909385ff5a300d090f9da638"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/independent-review/POLICY-PARAGRAPH-REVIEW.json",
+      "result": {
+        "sha": "254bce5e7f7e2b59436f5245973b96a3dc303bd0"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/independent-review/INDEPENDENT-POLICY-REVIEW.md",
+      "result": {
+        "sha": "77e47413a59511e71241aded6f465b5430913f99"
+      }
+    },
+    {
+      "path": "AI_CONTINUITY.md",
+      "result": {
+        "sha": "20596b10310aa5fc022f8d69865ca38668134b66"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/RELEASE_CONTINUITY.proposed.md",
+      "result": {
+        "sha": "16e46941df35b316052d9c21ea12bc2aa9e28ea0"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/independent-review/FINAL-INPUT-BINDING.json",
+      "result": {
+        "sha": "964a7cfda565c29293219f17a5705014cc2f72a2"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/independent-review/EXACT-CANDIDATE-BINDING.json",
+      "result": {
+        "sha": "47b6bb3255b9d701661c5a6b712c381dadfa5b47"
+      }
+    },
+    {
+      "path": "audit/legal-support-remediation-2026-10-16/independent-review/REMOTE-TREE-BINDING.json",
+      "result": {
+        "sha": "ef41cf8a5dc75de6685b2d31e0b941dc443b50ef"
+      }
+    }
+  ],
+  "newFinding": "Original candidate3d388 accessibility contrast failure discovered independently after checkpoint prepared; successor correction underway."
+}
