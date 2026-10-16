@@ -63,7 +63,11 @@ export async function checkLegalNotice(browser, base, { output, visibleHit, text
     await page.evaluate(r=>window.renderLegalFixture({...r,version:'1.2'}),release);await notice.waitFor({state:'visible'});
     await notice.getByRole('link',{name:'Privacy policy and history'}).click();
     await page.waitForURL('**/privacy#version-history');
-    assert.equal(await page.getByRole('heading',{name:'Version history',exact:true}).count(),1);
+    // URL readiness is not rendered-content readiness for streamed/hydrated routes.
+    const historyHeading=page.getByRole('heading',{name:'Version history',exact:true});
+    await historyHeading.waitFor({state:'visible',timeout:15000});
+    assert.equal(await historyHeading.count(),1);
+    await visibleHit(historyHeading);
     await page.goBack();
     onPass(`Material notice ${width}/${theme}/${blocked?"blocked storage":"available storage"}: visible overflow, 44px hit areas, contrast, keyboard dismissal, reload, new version and history link`,contrast);
     await context.close();
