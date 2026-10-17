@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-17T06:29:23.373534+00:00",
+  "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+  "tree": "ae48488aefb4a19881a4b895f0bf758709efecc4",
+  "parent": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "branch": "integration/dated-legal-preparation-2026-10-19",
+  "pr": 81,
+  "status": "Local exact-head checks PASS; fresh hosted browser and compiled Android evidence pending",
+  "checks": {
+    "repository": {
+      "total": 1278,
+      "pass": 1274,
+      "skips": 4,
+      "fail": 0
+    },
+    "application": {
+      "pass": 74,
+      "fail": 0
+    },
+    "pythonNative": {
+      "pass": 17
+    },
+    "typecheck": "PASS",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeAuthenticatedBuild": "PASS",
+    "legalPreparedMetadata": "PASS",
+    "publicationGuard": "Expected rejection of unreleased source even with tentative date and explicit zone supplied",
+    "authInvariant": "Unit tests and exact build resolution sign-in ON PASS; no live dev-server agreement claimed",
+    "casinoAudits": "PASS",
+    "androidSourceAndIcons": "PASS"
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8",
+      "files": 542
+    },
+    "startedAt": "2026-10-17T06:27:56.732Z",
+    "output": {
+      "sha256": "f216cd64f6ddbc5aca075d7a08577f135a282988862c440e8a85ab3a7446ea60",
+      "files": 198
+    },
+    "completedAt": "2026-10-17T06:27:59.639Z"
+  },
+  "limitations": [
+    "Local Chromium failed before page assertions: sandbox socket() Operation not permitted; original verdict/server log retained. Hosted acceptance required.",
+    "Initial aggregate ran before compiled SSR build and failed 15 build-dependent tests; preserved prefreeze-test.log. After safe build complete aggregate passed without source workaround.",
+    "Initial Python discovery used wrong scripts directory and found zero tests, exit5; preserved python-wrong-discovery-path.log. Correct native-android discovery passed17.",
+    "Publication guard is operational, not automatic enforcement on every deployment; no source date or status is activated by the clock.",
+    "Tentative date2026-10-19 is date-only planning, no approved release timezone; later actual date/timezone confirmation and separately authorized finalized-source/release remain required."
+  ]
+}

@@ -1,0 +1,45 @@
+# Independent dated preparation browser review
+
+Final scoped verdict: PASS for fresh legal/support and affected-footer browser acceptance at PR81 head7098b4cb… (completed 2026-10-17 06:53 UTC). No prior candidate PASS is transferred. Full-run completion and unrelated suites are separately coordinated, not certified by this bounded review.
+
+Candidate draft PR81 https://github.com/caleb1234calvin-art/dinner-roulette/pull/81, head `7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94`, tree `ae48488aefb4a19881a4b895f0bf758709efecc4`. Exact source independently bound through GitHub Git commit/full recursive tree and pristine tracked-source fingerprint `10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8` (542 files). Source/API/CLI review is separate in SOURCE-REVIEW.md.
+
+## Legal and support — completed 2026-10-17 06:34 UTC
+
+Original artifact `12092363375`, workflow `39009957607`, `casino-browser-evidence-legal-support`: 11,195,777 bytes, SHA256 `af9ebddb3a4df720372e22b4bc01304bf7f39acaaf41ab43268cbdbf2420af98`, 75 ZIP members. Independently fetched GitHub artifact metadata confirms source head and expected bytes/digest. Independently recomputed SHA256, checked full ZIP CRC and safe/unique member paths, hashed every member and checked auth-enabled BUILT source proofs. Full integrity/pixel decoding passes all 72 PNGs. This is distinct from actual visual inspection of 16 original PNGs.
+
+Fresh verdict: 33/33 checks PASS. Covers 320/390/512 light/dark public privacy/terms, complete version history/anchors, keyboard back navigation, header/history exact proposed-date text and absence of published/effective-date labels, Settings links/mailto no-handler fallback/scoped synthetic reset, no-JavaScript reading, and actual material-notice component with available/blocked storage, dismissal, reload, next-version reappearance and permanent history links. Minimum recorded contrast 5.422676:1. Build output receipt `2b61ce358ecdec753b6c35bd1e2a36918770eb9941c058abbea034e406c61f31`, 198 files, is a CI proof observation; reviewer did not rebuild compiled output.
+
+Actually viewed 12 new current-policy screenshots: header and dedicated history viewport at 320 dark privacy, 320 light terms, 390 dark terms, 390 light privacy, 512 dark privacy and 512 light terms. The repeated version1.0 not-yet-published/effective statement and October19 proposal with readiness/separate-release condition are readable. History says Prepared for publication and No previous published versions. The narrow email wraps inside the viewport rather than overflowing; current proposal causes no observed clipping. Back-to-Settings keyboard outlines visible. Lower footer content partly below a viewport in history screenshots is ordinary scroll content; footer-fit acceptance is reported separately below.
+
+Also viewed three original actual-component notice examples (320 dark blocked storage, 390 light keyboard focus, 512 dark available storage) and 320 light support screenshot. Notices are explicitly synthetic version1.1 November2 test fixtures; their dates are not the source's effective date. Wrapping, links, informational no-assent copy and dismissal remain readable. The component fixture uses a simplified shell; real route screenshots exercise the actual shell separately.
+
+Future release checklist item: Settings currently correctly says the documents are drafts in this nonproduction candidate. Eventual published-source finalization must update/condition that Settings copy too; metadata-only changes would leave a contradictory draft description. No change to the current frozen preparation candidate is requested.
+
+## Boundaries and preserved history
+
+Originals are fresh CI Chromium evidence, not an interactive review on the user's device. No production policy publication, legal effectiveness, actual Android/WebView/tablet, native mail handler, real email delivery, live providers, complete WCAG/assistive-technology certification or Play readiness follows. No populated prior published archive exists, so its expanded browser rendering is not covered. Proposal remains tentative, not a deadline or activation timer; later authorized final metadata/source validation and separate release approval remain required.
+
+Local browser launch failed before page assertions because sandbox socket access was unavailable; implementer retains the original failure. Earlier date-guard findings, wrong-cwd focused test invocation and all predecessor failures are preserved rather than relabeled as passes. No source/remote/production/device mutations by this reviewer.
+
+Detailed legal evidence: legal-original/archive-receipt.json, github-artifact.json, PNG-INTEGRITY.json and ACTUALLY-VIEWED-PNGS.json.
+
+## Native certificate qualification — 2026-10-17 06:39 UTC
+
+At the planner's follow-up, independently parsed the original fresh PR81 Android ZIP member as well. Original ZIP SHA256 `304772cc192cdfb741ce356f6b7b819028eae74ad0ce996a8b16bdb87f77df0e` passes full CRC; debug APK `9e6aa52142c437ff6d5a6a23fe5f4540d0cecd1b38a99ac976ce3a3081ef9d23`, 4,174,814 bytes, has certificate SHA256 `8cfa88a13c4eee4f68d28a0808a9b5172de24ca720bc8697b6ecec1365f88606`. PR78, PR80 and PR81 all have distinct signing certificates and public keys. This reviewer checked original archive/hash, APK v2 structure and certificate/public-key consistency with an independently written parser; the planner separately performed cryptographic signature/content-digest validation. This is neither apksigner nor on-device installation verification.
+
+Preserve the current installation and saved data; these same-package debug artifacts must not be treated as ordinary interchangeable updates. No uninstall, overwrite bypass, re-signing, credential changes or package changes are authorized. Testing a later authorized website in the existing PR78 wrapper would be bounded web-runtime testing, not exact PR80/PR81 native physical certification. Official background: https://developer.android.com/studio/publish/app-signing. New evidence: INDEPENDENT-PR81-APK-CERTIFICATE-COMPARISON.json; earlier PR78/PR80 report remains unchanged.
+
+## Footer evidence and affected-route review — completed 2026-10-17 06:53 UTC
+
+Original artifact12092239121 from the same fresh workflow: 51,296,571 bytes, SHA256 `d3c471239852bc0b645a34713c13d67aef7f3a838277aa28ed2e91f904850c1c`, 727 ZIP members. Independently fetched GitHub metadata confirms exact head/size/digest. Original archive passes full SHA256/CRC/safe-unique-path/member-hash verification. Auth-enabled source proof matches the independently reconstructed542-file fingerprint. Before/after bindings show exact frozen head/tree and clean tracked status. All720 PNGs passed integrity/pixel decoding.
+
+Fresh harness verdict350/350 PASS, no errors:160 actual-route cases,170 actual-source portal fixtures and20 CDP safe-area simulations. This is fresh automated evidence, not manual inspection of every case. The unchanged harness is scope-limited: controlled providers/discovery and synthetic portal data/callbacks;40 discovery RPC attempts blocked, zero escaped. It has no universal raster decode-readiness telemetry. Prior focused eight-case artwork decode evidence is not transferred or represented as newly rerun.
+
+Affected legal-route subset independently inspected in results:20/20 privacy/terms cases across320×844,390×844,512×844,768×1024,1024×768, both themes. Minimum footer contrast12.7610548:1; minimum bottom-nav gap15px; link height44px; all links hit-test true, no horizontal overflow, focus outline2px. All legal pages correctly omit artwork credit because no qualifying artwork is rendered. Targets remain /privacy, /terms and the established support mailto.
+
+Actually viewed12 original footer PNGs: dark privacy and light terms at all five viewport pairs, plus320 light privacy and1024 dark terms keyboard-focus frames. Copy/links are readable, footer stays in normal scroll flow above navigation, no clipping observed.320px Support wraps to its own centered row; tablet-width pages remain centered. These samples directly cover the affected longer legal metadata/history pages; portal artwork visibility is not certified by this sample.
+
+Final actual visual count28 original PNGs:16 legal/support/notice +12 footer. Across both originals792 PNGs integrity-decoded; this is not a claim that792 were manually viewed. Complete original-member hashes and per-view PNG hashes/dimensions/observations are preserved in legal-original and footer-original. Detailed footer measurements: footer-original/AFFECTED-MEASUREMENTS.json.
+
+Source/affected-browser scope is complete. No merge, deployment, signing, registration, publication, settings/security change, migration, device modification or Play action was performed. October19 remains tentative and non-effective. Later finalization still requires actual-date/timezone owner confirmation, published metadata with proposal cleared, accurate Settings copy, fresh exact-source validation and separate explicit release approval.

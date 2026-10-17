@@ -149,3 +149,7 @@ Plan prepared. No current website deployment or physical acceptance result is cl
 - [Previously delivered PR78 native run](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/38949185071)
 
 - [Android app-signing and update continuity reference](https://developer.android.com/studio/publish/app-signing)
+
+## PR81 artifact update — 2026-10-17 06:38 UTC
+
+The dated successor now exists at `7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94`. Its full release acceptance is tracked separately and is not asserted here. Bounded inspection of its retained original native artifact found another distinct development signer: certificate SHA-256 `8cfa88a13c4eee4f68d28a0808a9b5172de24ca720bc8697b6ecec1365f88606`, APK SHA-256 `9e6aa52142c437ff6d5a6a23fe5f4540d0cecd1b38a99ac976ce3a3081ef9d23`. Full v2 signature/content-digest checks passed; source binding, ZIP CRCs, unchanged remote-origin/security config and unchanged unsigned AAB hash were verified. See PR81-SIGNATURE-ADDENDUM.md. The no-install-over/data-preservation condition applies to PR81 as well; no physical or publication result follows.

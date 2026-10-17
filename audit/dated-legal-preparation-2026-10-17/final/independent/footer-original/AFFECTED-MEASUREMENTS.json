@@ -1,0 +1,31 @@
+{
+  "checks": 350,
+  "statusCounts": {
+    "PASS": 350
+  },
+  "actualRouteCases": 160,
+  "portalFixtureCases": 170,
+  "safeAreaCases": 20,
+  "affectedLegalRouteCases": 20,
+  "affectedLegalRouteMinContrast": 12.76105479515793,
+  "affectedLegalRouteMinNavGap": 15,
+  "affectedLegalRouteMinLinkHeight": 44,
+  "affectedLegalRouteAllLinksHit": true,
+  "affectedLegalRouteNoHorizontalOverflow": true,
+  "affectedLegalRouteFocusWidth": [
+    "2px"
+  ],
+  "affectedLegalRouteExpectedCredit": [
+    false
+  ],
+  "affectedLegalRouteLegalTargets": [
+    "/privacy",
+    "/terms",
+    "mailto:causticrelay@gmail.com?subject=Pick%20For%20Us%20support"
+  ],
+  "totalBlockedDiscovery": 40,
+  "totalEscapedDiscovery": 0,
+  "allSourceVerified": true,
+  "allPngIntegrityDecoded": 720,
+  "actuallyViewedOriginalPngs": 12
+}

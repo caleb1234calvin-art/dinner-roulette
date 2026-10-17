@@ -4,20 +4,20 @@
   "source_head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
   "source_tree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
   "continuity": "47bb767fd1c2e9c369bb1e6b9c3a89a7bb296cb0",
-  "final_dated_successor": "PENDING separate preparation and independent validation",
+  "final_dated_successor": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94 exists; full release acceptance tracked separately, not claimed in this bounded artifact addendum",
   "physical_status": "NOT RUN on new hosted candidate; earlier evidence not transferred",
   "production_changed": false,
   "new_native_artifact_built_or_signed": false,
   "report_files": [
     {
       "path": "RELEASE-AND-DEVICE-PLAN.md",
-      "bytes": 24318,
-      "sha256": "68a811179e2dc8e8da0ea32f23fed1467a8c9abe6dea9edcedfdbb285b0c3e4d"
+      "bytes": 25103,
+      "sha256": "31f5a29823344ba9d92a2d392aa30407872fb088b1e1da747657e142ef55083f"
     },
     {
       "path": "OWNER-SESSION-CARD.md",
-      "bytes": 2876,
-      "sha256": "47c54dfcc3dd88e620307afa64831d84c6f50bd63192b02e5e064b3f1452dc45"
+      "bytes": 2869,
+      "sha256": "5480b59ab89ae7f79f7ff4fcf5d6c58939e26b64bfe811af685e4ea3fb9a0489"
     },
     {
       "path": "PHYSICAL-OBSERVATION-LEDGER.csv",
@@ -33,7 +33,33 @@
       "path": "source-evidence/pr80-signature/signature-verification.json",
       "bytes": 912,
       "sha256": "29b3848597667de3a4fdae54bd2c8839dec479612177258df4c7981b55432588"
+    },
+    {
+      "path": "PR81-SIGNATURE-ADDENDUM.md",
+      "bytes": 3275,
+      "sha256": "c8d206b07a884db96c0db35edb7d29e9b509414df861d461bdd141a33bd9aa22"
+    },
+    {
+      "path": "source-evidence/pr81-signature/artifact-binding.json",
+      "bytes": 717,
+      "sha256": "c67eb89e9bce81144581530b29a859798dc40835d9f62e97a35e2c28baff74d3"
+    },
+    {
+      "path": "source-evidence/pr81-signature/signature-verification.json",
+      "bytes": 912,
+      "sha256": "01f63e2595006820197ebf6ffd04ff7edeb431b1a2c3914d291d3f5b38bf1419"
+    },
+    {
+      "path": "source-evidence/pr81-signature/apk-capacitor-config.json",
+      "bytes": 391,
+      "sha256": "63da0c6a51320c71299fa4a4c569767a480a793c392dfb02978568aa431814ce"
+    },
+    {
+      "path": "source-evidence/pr81-signature/three-candidate-signature-comparison.json",
+      "bytes": 889,
+      "sha256": "edee7219d2792280bc76edc8f12cfaba0577d86ef8d6a2feaa2b37a3794cd139"
     }
   ],
-  "independent_signature_comparison": "/workspace/scratch/a0ea701c7b34/dated-legal-independent-2026-10-17/INDEPENDENT-APK-CERTIFICATE-COMPARISON.json"
+  "independent_signature_comparison": "/workspace/scratch/a0ea701c7b34/dated-legal-independent-2026-10-17/INDEPENDENT-APK-CERTIFICATE-COMPARISON.json",
+  "updated_at_utc": "2026-10-17T06:38:00Z"
 }

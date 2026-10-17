@@ -1,3 +1,31 @@
+## CURRENT — 2026-10-17 07:12 UTC: PR81 dated preparation independently verified; actual publication remains HOLD
+
+### CURRENT
+- Draft PR81 https://github.com/caleb1234calvin-art/dinner-roulette/pull/81 remains open/unmerged on integration/dated-legal-preparation-2026-10-19. Exact head 7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94; tree ae48488aefb4a19881a4b895f0bf758709efecc4; sole parent preserved PR80 29bec315b919535c9aeb3f7e8b1c9e3fa638e80d.
+- PASS for nonproduction preparation. Privacy and Terms version 1.0 remain unreleased, effective dates null. Proposed October 19 is conditional on readiness and separate release approval, with no chosen timezone, activation timer or deadline.
+- Fresh web39009957607 all19 jobs SUCCESS; Android39009957533 SUCCESS, protected signing SKIPPED. Exact-head 1,274 repository PASS/four inherited skips;74 application;17 Python; typecheck;lint0errors/6warnings;safe authenticated migration-free build PASS.
+- Independent complete source binding and 82 adversarial date controls plus17 focused Node tests PASS. Fresh browser totals:2,020 seasonal,10 ordinary Date Night,16 casino,19 location,33 legal,350 footer,774 geometry,19 negative Plan controls PASS. No fresh eight-case artwork-decode rerun is claimed.
+- All20 fresh original archives verified:1,546,414,119 bytes/14,547 members, including18 web originals1,539,524,280 bytes. Size/GitHub digest/CRC/safe unique paths/member hashes/source bindings checked.14,450 PNGs decoded for integrity; independent affected review actually viewed28 originals across legal/support/history/notice and footer. These are separate scopes.
+- Lossless full manifest published under final/artifacts/verified-originals.json.gz:593,630bytes SHA2563190d458e46c2a55eb91095197c8bf85b853899d6cfb115a3ad45ee12561436d; reconstructed3,586,993bytes SHA2562f5d5b554959840822ab0a12355364fb5d289750eb245c8d2cea26e65086b3e0. Raw original archives retained locally and currently hosted; GitHub originals expire October31, not guaranteed permanent retention.
+- Final report/evidence: audit/dated-legal-preparation-2026-10-17/final/. Controlled publication/phone/tablet plan and36-case all-NOT-RUN ledger remain under release-plan/.
+- Fresh07:11 readback: PR81 exact head above, draft/open/unmerged, base main c3208d9fdc9a21d698efa9254be1286f5d3d2836. Apex resolves dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY/sourcec3208, five expected alias bindings, aliasError null.92 identities unchanged. No production mutation.
+
+### NEXT
+Owner confirms actual publication date and IANA timezone/window when ready. Prepare a separately authorized finalized successor: synchronize published status/effective dates, clear proposed date, and update or condition Settings draft wording and every affected publication-state label. This is NOT a metadata-only finalization. Revalidate the exact resulting source, run the actual-day guard immediately before publication, and obtain a separate exact-source merge/deployment decision. Guard is an operator check, not automatic deployment enforcement or evidence of authorization.
+
+Website/legal release can precede Play, with attended public-route and controlled physical checks. Existing installed wrappers load the same hosted production origin, so web publication affects them too. The actual candidate's unpublished footer/policies cannot be certified by installing a production-origin wrapper before publication. If pre-publication combined physical acceptance is required, a separately authorized isolated arrangement is needed.
+
+### HOLD / preserved qualifications
+- October19 is tentative, never a backdating instruction. If actual date/readiness changes, HOLD, revise and revalidate. No current effective policies, deployment, merge, rollback, signing, package registration, Play upload/declarations or agreement acceptance authorized.
+- New PR81 debug APK SHA2569e6aa52142c437ff6d5a6a23fe5f4540d0cecd1b38a99ac976ce3a3081ef9d23 is4,174,814bytes with certificate8cfa88a13c4eee4f68d28a0808a9b5172de24ca720bc8697b6ecec1365f88606. PR78/80/81 debug certificates differ despite same package/version. Original archive, certificate/public key and cryptographic signature/content digest reviewed with separate attribution. No ordinary update/install-over claim; no uninstall/data-wipe workaround. AAB unchanged ac5623cf… does not turn debug APKs into interchangeable signed updates.
+- Android14 inherited lint warnings; native unit tasks NO-SOURCE. Remote wrapper does not embed candidate web. Existing PR78 wrapper may support bounded future hosted-web observations with exact native/web provenance, not exact PR81 native/update acceptance. All36 new phone/tablet cases NOT RUN; no prior physical PASS transfer. Original intermittent offline/cross-app failure remains unresolved.
+- Controlled Chromium/scoped contrast/focus checks do not certify live providers, universal image readiness, native email handling or full WCAG. Archived published-version browser history is not exercised because no published prior version exists.
+- Preserve initial pre-build test failure, wrong-path Python/wrong-cwd review failures, local browser socket NOT RUN, corrected prefreeze date/zone guard findings and all prior source/CI histories.
+- Fresh supported rollback eligibility/permissions and five-alias restore coverage remain required; READY is insufficient, prior403 cannot be bypassed. Rollback cannot erase an actual policy publication and may restore old missing-policy routes.
+- Contextual attribution/legal sufficiency, final feature graphic and real Android store screenshots, signing/certificates/Console registration, Data safety, audience/territories/export/Play remain separate gates. PR61 and optional Halloween work remain parked. Future design intent: "Radial discovery becomes an audit layer."
+
+---
+
 ## CURRENT — 2026-10-17 06:27 UTC: PR81 conditional dated preparation frozen; hosted acceptance PENDING
 
 Owner directive Sentinel_520e5b8d65dc819184b2b5239a9a0164 (2026-10-17 06:19:31 UTC) authorizes a nonproduction dated successor to PR80. October 19, 2026 is tentative and conditional on readiness and a separate deployment decision, not a deadline or current publication. Historical checkpoint 47bb767fd1c2e9c369bb1e6b9c3a89a7bb296cb0 and all prior evidence remain below.

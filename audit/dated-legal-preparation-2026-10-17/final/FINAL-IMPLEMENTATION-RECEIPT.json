@@ -1,0 +1,342 @@
+{
+  "checkedAt": "2026-10-17T07:11:09.323059+00:00",
+  "status": "PASS for nonproduction dated preparation; publication and deployment HOLD",
+  "pr": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/81",
+  "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+  "tree": "ae48488aefb4a19881a4b895f0bf758709efecc4",
+  "parent": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "branch": "integration/dated-legal-preparation-2026-10-19",
+  "paths": [
+    "docs/legal/PUBLICATION.md",
+    "scripts/check-legal-release.mjs",
+    "scripts/legal-release.test.mjs",
+    "scripts/legal-support-browser.mjs",
+    "src/lib/legal/documents.json",
+    "src/lib/legal/history.json",
+    "src/lib/legal/releases.test.ts",
+    "src/lib/legal/releases.ts"
+  ],
+  "diffStat": "8 files changed, 157 insertions(+), 21 deletions(-)",
+  "worktreeStatus": "",
+  "webRun": 39009957607,
+  "androidRun": 39009957533,
+  "webJobs": 19,
+  "webStatus": "SUCCESS",
+  "androidStatus": "SUCCESS; protected signing SKIPPED",
+  "localValidation": {
+    "checkedAt": "2026-10-17T06:29:23.373534+00:00",
+    "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+    "tree": "ae48488aefb4a19881a4b895f0bf758709efecc4",
+    "parent": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+    "branch": "integration/dated-legal-preparation-2026-10-19",
+    "pr": 81,
+    "status": "PASS on exact frozen source; hosted validation separately completed in this receipt",
+    "checks": {
+      "repository": {
+        "total": 1278,
+        "pass": 1274,
+        "skips": 4,
+        "fail": 0
+      },
+      "application": {
+        "pass": 74,
+        "fail": 0
+      },
+      "pythonNative": {
+        "pass": 17
+      },
+      "typecheck": "PASS",
+      "lint": {
+        "errors": 0,
+        "inheritedWarnings": 6
+      },
+      "safeAuthenticatedBuild": "PASS",
+      "legalPreparedMetadata": "PASS",
+      "publicationGuard": "Expected rejection of unreleased source even with tentative date and explicit zone supplied",
+      "authInvariant": "Unit tests and exact build resolution sign-in ON PASS; no live dev-server agreement claimed",
+      "casinoAudits": "PASS",
+      "androidSourceAndIcons": "PASS"
+    },
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8",
+        "files": 542
+      },
+      "startedAt": "2026-10-17T06:27:56.732Z",
+      "output": {
+        "sha256": "f216cd64f6ddbc5aca075d7a08577f135a282988862c440e8a85ab3a7446ea60",
+        "files": 198
+      },
+      "completedAt": "2026-10-17T06:27:59.639Z"
+    },
+    "limitations": [
+      "Local Chromium failed before page assertions: sandbox socket() Operation not permitted; original verdict/server log retained. Hosted acceptance required.",
+      "Initial aggregate ran before compiled SSR build and failed 15 build-dependent tests; preserved prefreeze-test.log. After safe build complete aggregate passed without source workaround.",
+      "Initial Python discovery used wrong scripts directory and found zero tests, exit5; preserved python-wrong-discovery-path.log. Correct native-android discovery passed17.",
+      "Publication guard is operational, not automatic enforcement on every deployment; no source date or status is activated by the clock.",
+      "Tentative date2026-10-19 is date-only planning, no approved release timezone; later actual date/timezone confirmation and separately authorized finalized-source/release remain required."
+    ]
+  },
+  "browser": {
+    "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+    "source": {
+      "sha256": "10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8",
+      "files": 542
+    },
+    "checkedAt": "2026-10-17T07:10:03.586345+00:00",
+    "totals": {
+      "seasonalScenarios": 2020,
+      "ordinaryDateNightScenarios": 10,
+      "casinoChecks": 16,
+      "locationChecks": 19,
+      "legalChecks": 33,
+      "footerChecks": 350,
+      "focusedDecodeChecks": 0,
+      "geometryComparisons": 774,
+      "negativePlanControls": 19
+    },
+    "rows": [
+      {
+        "artifactId": 12092072951,
+        "name": "casino-browser-evidence-casino",
+        "verdictPath": "verdict.json",
+        "status": "PASS",
+        "scenarios": 0,
+        "checks": 16,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12091994847,
+        "name": "casino-browser-evidence-location",
+        "verdictPath": "location/result.json",
+        "status": "PASS",
+        "scenarios": 0,
+        "checks": 19,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092801164,
+        "name": "casino-browser-evidence-seasonal-two",
+        "verdictPath": "missouri-two-records/verdict.json",
+        "status": "PASS",
+        "scenarios": 23,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092139579,
+        "name": "casino-browser-evidence-date-night-radial",
+        "verdictPath": "date-night-radial/verdict.json",
+        "status": "PASS",
+        "scenarios": 10,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092363375,
+        "name": "casino-browser-evidence-legal-support",
+        "verdictPath": "legal-support/verdict.json",
+        "status": "PASS",
+        "scenarios": 0,
+        "checks": 33,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092368525,
+        "name": "casino-browser-evidence-seasonal-next-missouri",
+        "verdictPath": "seasonal-next-missouri-three/verdict.json",
+        "status": "PASS",
+        "scenarios": 87,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092224753,
+        "name": "casino-browser-evidence-seasonal-hold-cleanup",
+        "verdictPath": "seasonal-hold-cleanup/verdict.json",
+        "status": "PASS",
+        "scenarios": 69,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092551818,
+        "name": "casino-browser-evidence-seasonal-completeness-v1",
+        "verdictPath": "seasonal-completeness-v1/verdict.json",
+        "status": "PASS",
+        "scenarios": 97,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092737353,
+        "name": "casino-browser-evidence-seasonal-phase4",
+        "verdictPath": "seasonal-phase4-recovery-seven/verdict.json",
+        "status": "PASS",
+        "scenarios": 164,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092636934,
+        "name": "casino-browser-evidence-seasonal-ten",
+        "verdictPath": "seasonal-ten-record/verdict.json",
+        "status": "PASS",
+        "scenarios": 157,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092304543,
+        "name": "casino-browser-evidence-seasonal-astra",
+        "verdictPath": "seasonal-astra-eleven/verdict.json",
+        "status": "PASS",
+        "scenarios": 220,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092293335,
+        "name": "casino-browser-evidence-seasonal-ranked-holds",
+        "verdictPath": "seasonal-ranked-holds/verdict.json",
+        "status": "PASS",
+        "scenarios": 178,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092976895,
+        "name": "casino-browser-evidence-seasonal-cumulative",
+        "verdictPath": "seasonal-cumulative-15/verdict.json",
+        "status": "PASS",
+        "scenarios": 235,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12091979357,
+        "name": "casino-browser-evidence-seasonal-astra-extras",
+        "verdictPath": "seasonal-astra-extras/verdict.json",
+        "status": "PASS",
+        "scenarios": 196,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092239121,
+        "name": "casino-browser-evidence-unified-footer",
+        "verdictPath": "unified-footer/results.json",
+        "status": "PASS",
+        "scenarios": 0,
+        "checks": 350,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092254617,
+        "name": "casino-browser-evidence-geometry",
+        "verdictPath": "seasonal-card-layout/verdict.json",
+        "status": "PASS",
+        "scenarios": 0,
+        "checks": 0,
+        "comparisons": 774
+      },
+      {
+        "artifactId": 12092494636,
+        "name": "casino-browser-evidence-seasonal-regional-wave1",
+        "verdictPath": "seasonal-regional-wave1/verdict.json",
+        "status": "PASS",
+        "scenarios": 317,
+        "checks": 0,
+        "comparisons": 0
+      },
+      {
+        "artifactId": 12092494636,
+        "name": "casino-browser-evidence-seasonal-regional-wave1",
+        "verdictPath": "seasonal-wave2-ten/verdict.json",
+        "status": "PASS",
+        "scenarios": 277,
+        "checks": 0,
+        "comparisons": 0
+      }
+    ],
+    "scope": "Original current-source controlled-browser artifacts. Passed fixture evidence is not live-provider or physical Android acceptance."
+  },
+  "originals": {
+    "checkedAt": "2026-10-17T07:10:03.780366+00:00",
+    "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+    "source": {
+      "sha256": "10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8",
+      "files": 542
+    },
+    "count": 20,
+    "bytes": 1546414119,
+    "members": 14547,
+    "web": {
+      "count": 18,
+      "bytes": 1539524280,
+      "members": 14536
+    },
+    "native": {
+      "count": 2,
+      "bytes": 6889839
+    },
+    "pngIntegrityDecoded": 14450,
+    "independentActualPngViews": 28,
+    "manifest": {
+      "rawBytes": 3586993,
+      "rawSha256": "2f5d5b554959840822ab0a12355364fb5d289750eb245c8d2cea26e65086b3e0",
+      "gzipBytes": 593630,
+      "gzipSha256": "3190d458e46c2a55eb91095197c8bf85b853899d6cfb115a3ad45ee12561436d",
+      "exactReconstruction": "PASS"
+    },
+    "expiresAt": [
+      "2026-10-31T06:28:15Z",
+      "2026-10-31T06:28:22Z",
+      "2026-10-31T06:29:15Z",
+      "2026-10-31T06:29:21Z",
+      "2026-10-31T06:29:27Z",
+      "2026-10-31T06:30:33Z",
+      "2026-10-31T06:30:34Z",
+      "2026-10-31T06:32:31Z",
+      "2026-10-31T06:32:53Z",
+      "2026-10-31T06:33:35Z",
+      "2026-10-31T06:34:33Z",
+      "2026-10-31T06:38:28Z",
+      "2026-10-31T06:39:43Z",
+      "2026-10-31T06:39:51Z",
+      "2026-10-31T06:40:22Z",
+      "2026-10-31T06:42:38Z",
+      "2026-10-31T06:42:45Z",
+      "2026-10-31T06:47:52Z",
+      "2026-10-31T06:51:35Z",
+      "2026-10-31T07:08:07Z"
+    ],
+    "scope": "Fresh hosted original archives retained locally and currently on GitHub. All sizes, GitHub SHA256, ZIP CRC, unique safe paths, member hashes, source bindings and PNG integrity decoded. No indefinite retention guarantee; GitHub originals expire October31. Integrity decoding is not full visual review."
+  },
+  "independentReview": {
+    "source": "dated-legal-independent-2026-10-17/SOURCE-REVIEW.md",
+    "browser": "dated-legal-independent-2026-10-17/BROWSER-REVIEW.md",
+    "sourceControls": 82,
+    "focusedNodeTests": 17,
+    "actualPngsViewed": 28,
+    "scope": "Fresh source and affected legal/footer; no full repeated native/source audit or physical acceptance"
+  },
+  "nativeSignature": "dated-release-plan-2026-10-17/PR81-SIGNATURE-ADDENDUM.md",
+  "prBodyReadback": "Exact full body matches; draft/open/unmerged and head verified",
+  "laterFinalization": [
+    "Confirm actual publication date and explicit IANA time zone with owner.",
+    "Set matching published status/effectiveDate and clear proposedPublicationDate in all three metadata records.",
+    "Update or condition Settings draft description.",
+    "Validate exact finalized source, including operational day/date/zone guard; no automatic deployment enforcement.",
+    "Obtain separate explicit merge/deployment approval. Preserve physical/signing/registration/Play gates."
+  ],
+  "notes": [
+    "Original pre-build aggregate failure, local browser pre-launch socket failure, wrong-path zero-test Python invocation and independent review findings retained.",
+    "Main and PR80 unchanged in final-remote-heads.txt.",
+    "No newly claimed focused eight-case artwork decode rerun.",
+    "All20 hosted originals retained locally and currently on GitHub; expiry October31, no indefinite guarantee."
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "head": "7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94",
+  "source": {
+    "sha256": "10d55b73ddefb45e885a525fc6726ed409aef3d9febfaaf311868df730f883e8",
+    "files": 542
+  },
+  "checkedAt": "2026-10-17T07:10:03.586345+00:00",
+  "totals": {
+    "seasonalScenarios": 2020,
+    "ordinaryDateNightScenarios": 10,
+    "casinoChecks": 16,
+    "locationChecks": 19,
+    "legalChecks": 33,
+    "footerChecks": 350,
+    "focusedDecodeChecks": 0,
+    "geometryComparisons": 774,
+    "negativePlanControls": 19
+  },
+  "rows": [
+    {
+      "artifactId": 12092072951,
+      "name": "casino-browser-evidence-casino",
+      "verdictPath": "verdict.json",
+      "status": "PASS",
+      "scenarios": 0,
+      "checks": 16,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12091994847,
+      "name": "casino-browser-evidence-location",
+      "verdictPath": "location/result.json",
+      "status": "PASS",
+      "scenarios": 0,
+      "checks": 19,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092801164,
+      "name": "casino-browser-evidence-seasonal-two",
+      "verdictPath": "missouri-two-records/verdict.json",
+      "status": "PASS",
+      "scenarios": 23,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092139579,
+      "name": "casino-browser-evidence-date-night-radial",
+      "verdictPath": "date-night-radial/verdict.json",
+      "status": "PASS",
+      "scenarios": 10,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092363375,
+      "name": "casino-browser-evidence-legal-support",
+      "verdictPath": "legal-support/verdict.json",
+      "status": "PASS",
+      "scenarios": 0,
+      "checks": 33,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092368525,
+      "name": "casino-browser-evidence-seasonal-next-missouri",
+      "verdictPath": "seasonal-next-missouri-three/verdict.json",
+      "status": "PASS",
+      "scenarios": 87,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092224753,
+      "name": "casino-browser-evidence-seasonal-hold-cleanup",
+      "verdictPath": "seasonal-hold-cleanup/verdict.json",
+      "status": "PASS",
+      "scenarios": 69,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092551818,
+      "name": "casino-browser-evidence-seasonal-completeness-v1",
+      "verdictPath": "seasonal-completeness-v1/verdict.json",
+      "status": "PASS",
+      "scenarios": 97,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092737353,
+      "name": "casino-browser-evidence-seasonal-phase4",
+      "verdictPath": "seasonal-phase4-recovery-seven/verdict.json",
+      "status": "PASS",
+      "scenarios": 164,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092636934,
+      "name": "casino-browser-evidence-seasonal-ten",
+      "verdictPath": "seasonal-ten-record/verdict.json",
+      "status": "PASS",
+      "scenarios": 157,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092304543,
+      "name": "casino-browser-evidence-seasonal-astra",
+      "verdictPath": "seasonal-astra-eleven/verdict.json",
+      "status": "PASS",
+      "scenarios": 220,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092293335,
+      "name": "casino-browser-evidence-seasonal-ranked-holds",
+      "verdictPath": "seasonal-ranked-holds/verdict.json",
+      "status": "PASS",
+      "scenarios": 178,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092976895,
+      "name": "casino-browser-evidence-seasonal-cumulative",
+      "verdictPath": "seasonal-cumulative-15/verdict.json",
+      "status": "PASS",
+      "scenarios": 235,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12091979357,
+      "name": "casino-browser-evidence-seasonal-astra-extras",
+      "verdictPath": "seasonal-astra-extras/verdict.json",
+      "status": "PASS",
+      "scenarios": 196,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092239121,
+      "name": "casino-browser-evidence-unified-footer",
+      "verdictPath": "unified-footer/results.json",
+      "status": "PASS",
+      "scenarios": 0,
+      "checks": 350,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092254617,
+      "name": "casino-browser-evidence-geometry",
+      "verdictPath": "seasonal-card-layout/verdict.json",
+      "status": "PASS",
+      "scenarios": 0,
+      "checks": 0,
+      "comparisons": 774
+    },
+    {
+      "artifactId": 12092494636,
+      "name": "casino-browser-evidence-seasonal-regional-wave1",
+      "verdictPath": "seasonal-regional-wave1/verdict.json",
+      "status": "PASS",
+      "scenarios": 317,
+      "checks": 0,
+      "comparisons": 0
+    },
+    {
+      "artifactId": 12092494636,
+      "name": "casino-browser-evidence-seasonal-regional-wave1",
+      "verdictPath": "seasonal-wave2-ten/verdict.json",
+      "status": "PASS",
+      "scenarios": 277,
+      "checks": 0,
+      "comparisons": 0
+    }
+  ],
+  "scope": "Original current-source controlled-browser artifacts. Passed fixture evidence is not live-provider or physical Android acceptance."
+}

@@ -5,7 +5,7 @@ Use this only after the exact website release is separately approved, published 
 ## Before you start
 
 - Test while stationary and free to stop. Phone first; Galaxy Tab A7 Lite SM-T220 when available.
-- Do not install the PR80 debug APK over the existing new-package app. Its signing certificate differs from the previously delivered PR78 APK. Do not uninstall or clear data to get around a conflict.
+- Do not install the PR80 or PR81 debug APK over the existing new-package app. PR78, PR80 and PR81 have different signing certificates. Do not uninstall or clear data to get around a conflict.
 - Prefer the existing confirmed wrapper for the new hosted footer/legal checks. Record its actual provenance separately from the new website commit. It loads the live website; it does not contain the unpublished candidate.
 - Record model, Android/WebView version, time, selected app/build evidence and website release/date. No serial number or precise location is needed.
 
