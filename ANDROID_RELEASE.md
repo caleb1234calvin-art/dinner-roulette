@@ -3,7 +3,37 @@
 Phase B prepares buildable native source and release artifacts. It does **not**
 authorize a main merge, Vercel deployment, Play upload, or publication.
 
-## Validated Phase B result — 2026-09-21
+## Android identity candidate — 2026-10-16
+
+The owner approved `app.pickforus.android` as the intended permanent Android ID
+under the Caustic Relay developer brand. This isolated candidate is based on
+main `c3208d9fdc9a21d698efa9254be1286f5d3d2836`. Public app label remains
+**Pick For Us**. The historical Phase B receipt below describes the former ID;
+it is not validation evidence for the new package.
+
+This ID creates a **separate installation**, not an in-place update of
+`com.calebcalvin.pickforus`. Existing favorites, history, settings, WebView storage
+and permission grants stay in the old application's sandbox. Do not uninstall
+or clear the old app. No automatic data transfer is implemented or promised.
+The hosted HTTPS runtime, storage schema/key, version 1/1.0.0, SDKs, permissions,
+backup/cleartext/debugging protections, dependencies and signing guards are unchanged.
+The renamed custom URL scheme resource does not add a deep-link intent filter.
+
+Source checks now bind Capacitor, namespace/applicationId, Java class/path,
+identity resources, launcher and provider. Compiled bundle checks additionally
+validate resolved activity/provider identities and the exact signature-only
+receiver permission. Negative fixtures guard legacy identity regressions.
+Artifact-only CI must validate this candidate before any release claim.
+Local/CI automation is not physical Android/WebView acceptance; alongside-install,
+old-data preservation and same-target update acceptance remain separate device gates.
+
+The personal Caustic Relay Console inventory was empty at the owner's check;
+global package eligibility and registration/signing entitlement remain unverified.
+No package registration, signing credentials, Play upload/declarations/agreements,
+merge, deployment or legal publication is authorized by this change. PR77 stays
+separate and frozen, with legal status unreleased and effective dates null.
+
+## Historical validated Phase B result — 2026-09-21
 
 Unsigned native validation is complete at **`5aee90acbb44ab5d48b25cb1dac39db84cefcfbf`**.
 [Android CI Run 35 passed](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/35654077135):
@@ -43,7 +73,7 @@ or Play upload has occurred.
 
 | Setting | Value |
 | --- | --- |
-| Application / namespace | `com.calebcalvin.pickforus` |
+| Application / namespace | `app.pickforus.android` |
 | Public label | Pick For Us |
 | First Play version | `versionName=1.0.0`, `versionCode=1` |
 | Minimum / compile / target SDK | 24 / 36 / 36 |
