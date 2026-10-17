@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 
 const STARTUP_IDENT_SRC = "/brand/CAUSTIC_RELAY_ident-2.mp4";
 
@@ -7,6 +8,8 @@ const BROADCAST_BARS =
 
 export function StartupIdent() {
   const [visible, setVisible] = useState(true);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  const isLegalPage = /^\/(privacy|terms)\/?$/.test(pathname);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -14,7 +17,8 @@ export function StartupIdent() {
     }
   }, []);
 
-  if (!visible) return null;
+  // Public legal documents must remain readable without JavaScript or video playback.
+  if (!visible || isLegalPage) return null;
 
   return (
     <div

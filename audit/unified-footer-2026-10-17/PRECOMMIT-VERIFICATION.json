@@ -1,0 +1,50 @@
+{
+  "base": "6b370a5202ffb531434d725f49aacbdc325f32c5",
+  "review": "Independent pre-commit source review PASS after 3 corrections; final commit identity bound by published Git tree, not inherited prior candidate evidence.",
+  "localTests": {
+    "repositoryPassed": 1269,
+    "repositorySkipped": 4,
+    "applicationPassed": 73,
+    "focusedPassed": 50,
+    "typecheck": "PASS",
+    "lint": "0 errors / 6 inherited warnings",
+    "safeAuthBuild": "PASS"
+  },
+  "browser": "NOT RUN locally; socket/process reachability limitation. 350-case hosted harness prepared; acceptance HOLD until exact-head execution and independent inspection.",
+  "files": {
+    ".github/workflows/validate-icon-pack.yml": "aeefaa1b2269e6f71d82920f87b97dcfafd5f96f23d5e864c6550f7614f99baf",
+    "scripts/legal-support-browser.mjs": "afa75be2e209afc6b6c562c883e74a41608d47090893f00f8398b542f109950d",
+    "scripts/seasonal-phase4-recovery.test.mjs": "9336c52ce97a593b13ccf47545fabdc25e12a262dfa4cc8348ba888ae0999e5e",
+    "scripts/unified-footer.test.mjs": "887cccce4b01ec0720d0e1afaf1f2c03725d5fb11816f687463c1540052477cd",
+    "scripts/unified-footer-browser.mjs": "dffb4470919d8d460702fcfebbdeb40e1c73aa973318639c2d2b3788cc2edfee",
+    "src/components/app-shell.tsx": "4bca7164dc02f3744dc04d0ae892e07b279160945ebbeea9273deb57581ca62e",
+    "src/components/date-night-plan-overlay.tsx": "f598d3551d937291219a57e0962386fca381eec53413dc1abc6700cd0078f13d",
+    "src/components/legal-document-page.tsx": "2c5bb3c9f85c29ea42041f125294cfd1d4d72b3b22f6834b40201993038d16e1",
+    "src/components/options-overlay.tsx": "e7546c7dffe4e2f2e293c18fa631d277a0e0f9372e7efcfd81979b65d252dbbf",
+    "src/components/result-overlay.tsx": "63c7d6798c8efe6bbdfcaaeda67c4cf25d2c5e4d58fea1925df8596850569d89",
+    "src/components/page-footer.tsx": "efca195b1b2c2f18b50e8829f9392032be2d9da7c862aa5af665fc5250d6f188",
+    "src/components/unified-footer.tsx": "cb247975888e117cc13dd1bed98ac16dd88c4e39097777c7f355f2f87fca989a",
+    "src/lib/artwork/owner-attested-assets.json": "aabcd8bceac6c36a1e01242605a485b5baecd6b3b7662fb8c0139bf0dbc06c60",
+    "src/lib/artwork/attribution.ts": "3bde1739a074b08c7e05f59f9e6a9588d7720b752ce71cdb1291b21c35f06d68",
+    "scripts/test-support/load-app-module.mjs": "b532fda77927ff7674c30e4a32dcd9e8b431159f65040ea295f7f5a833cae959",
+    "scripts/load-app-module-json.test.mjs": "fecb014019fdbcee1fe0e9bc277a895708b098ba82f17670a2b6bbadbecd387d"
+  },
+  "preservedAttempts": {
+    "footer-focused.log": "27c4d2e1bc6d95315d732e6871885a3c2d9694e36c08a9d538f658a46e48f5e5",
+    "footer-alltests.log": "3f42bba2146da85e4910ba1b60bdb2383b167183a2c764da279894a1c648214a",
+    "footer-alltests-r2.log": "16377c82f31dcf8e8ffe04bc91ed86906a137b2d56f6b14f9ad41b1a9c46db8e",
+    "footer-alltests-r3.log": "ddd91779030c5dd20bf7c968064e094bc596582a2ad358dd37cf89569ab2d09e"
+  },
+  "supersededCandidate": {
+    "head": "4a9ef5ed943d71e6ab8ed46e4f1cf74165d1dd57",
+    "tree": "a742d1f718737d4ae10b153a57c25b3469dc0db0",
+    "reason": "Independent post-freeze inspection found footer workflow step omitted VITE_AUTH_ENABLED required by build-proof assertion. Workflow-only env correction; application source unchanged. Initial runs preserved 38996865502 / 38996869963. Paired harness-only improvements assert keyboard focus-visible and use actual mode/Halloween host classes."
+  },
+  "subsequentHarnessCorrection": {
+    "head": "c546a98ea788c6821d0b18ff83a3df7a70068feb",
+    "tree": "31bb2d058c6bd96bdc66355fed740e12165c0816",
+    "webRun": 38997061459,
+    "androidRun": 38997063584,
+    "reason": "Geometry harness could not load new JSON attribution manifest. Added JSON-data namespace support with two regression tests; no production change. Footer harness now blocks same-origin server RPC before dispatch, records blocked calls, asserts no escaped completed RPC. Earlier home layout fixtures lacked provider isolation and are not live-provider acceptance. Initial 4a9ef5e geometry artifact12087407816: SHA256392206966fc17730d3210b67ef28e4e63130a30055824b944a80c1f36491df0a, zero comparisons. Corrected-head geometry artifact12087558021 retained with same pre-render blocker. New exact-head validation required."
+  }
+}

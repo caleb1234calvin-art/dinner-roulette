@@ -1,4 +1,4 @@
-package com.calebcalvin.pickforus;
+package app.pickforus.android;
 
 import com.getcapacitor.BridgeActivity;
 

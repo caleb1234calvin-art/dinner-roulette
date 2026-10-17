@@ -1,3 +1,4 @@
+import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { cn } from "@/lib/utils";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
@@ -149,6 +150,7 @@ export function DateNightPlanOverlay({
             {validPlan ? "Plan a different night" : "Try the plan again"}
           </Button>
         </div>
+        <div className="pb-[max(0.5rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={validPlan ? plan.slice(0, 2).map((place) => getDateNightIcon({ activityTypes: place.activityTypes, cuisineLabel: place.cuisineLabel })) : []} /></div>
       </div>
     </div>,
     document.body,
