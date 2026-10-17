@@ -1,3 +1,37 @@
+# Play artwork provenance and store-asset preparation — 2026-10-17 UTC
+
+## CURRENT
+
+Owner directive Sentinel_01f49b9804a481919e8b241083eccd26 (01:17:22 UTC) authorizes documentation and asset preparation. Verbatim artwork attestation and subsequent clarification are preserved in audit/play-assets-2026-10-17/OWNER-ARTWORK-ATTESTATION.md. Owner identifies the standalone Grok app, text prompts developed through ChatGPT under creative direction, review/modifications, no supplied internet-image references and unavailable original prompts. September 5 through about October 10, 2026 is an approximate window; October 10 is a deliberately generous outer bound, not a remembered generation date. This is owner-attested provenance, not independently proven exclusive copyright ownership.
+
+Official September 1 and September 11 consumer terms and currently served commercial guidance support commercial use conditionally. Attribution placement and permission interpretation remain a release-review HOLD, not a confirmed violation. No automatic requirement to contact the provider separately or label every tiny icon is asserted. Current October 12 terms are not backdated. Historical versions, guideline scope, third-party obligations and copyright qualifications are documented separately.
+
+Existing artwork is preserved. Independent inventory binds 130 public media files to PR78 and unchanged production-source assets. Nine fresh visual samples and ten attributed earlier reviews are distinguished from metadata-only inventory. No specific infringement concern was observed in the fresh sample; no comprehensive rights/trademark clearance follows. Platform resources, vectors, videos/audio, fonts/dependency icons and remote media remain separately scoped.
+
+Store preparation now includes a 130-row asset-rights ledger, icon export requirements, a 1024×500 feature-graphic brief and six actual Android screenshot instructions with capture-record template. No replacement artwork, finished feature graphic or six captured screenshots were produced. Corrected listing v0.2 remains pending owner approval (title 11, short 80, full 1804 characters).
+
+Fresh 01:19 UTC GitHub/Vercel readback: main c3208d9fdc9a21d698efa9254be1286f5d3d2836 unchanged; production dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY/source main, all five expected aliases listed, aliasError null. PR78 remains draft/open/unmerged at 4010edf31e71a7350d891a98dd43f20535602abd/tree f521ed3dbdabceeb924ad4da1ce88e42db41092c. PR77 remains draft/open/unmerged at 6b370a5202ffb531434d725f49aacbdc325f32c5/tree 520f545ec006041ef5694a138cfb65f7a897011c, approved legal content unreleased with null effective dates. Previous exact-head technical acceptance remains source-bound; no tests rerun for this documentation-only checkpoint.
+
+## NEXT
+
+1. Review contextual Grok attribution and permission interpretation for selected public artwork, without inventing a provider-contact workflow.
+2. Follow the genuine-phone capture guide; retain originals and record actual device/runtime provenance. Select and approve final six images and feature graphic before public use.
+3. Verify exact icon/export color/format/metadata and final selected third-party assets; preserve surviving originals and any voluntarily supplied edit files.
+4. Owner reviews corrected listing v0.2. Separate release/legal-date/signing/Console decisions remain later gates.
+
+## HOLD
+
+- Final selected asset rights/attribution and export acceptance; original prompts and exact per-file dates/edit history unavailable, no exclusive-rights guarantee.
+- Actual listing screenshots/feature graphic and owner final copy/media approval pending; tablet NOT RUN.
+- Original intermittent offline black-screen/cross-application failure remains unresolved alongside later owner-reported recovery successes; no established cause or permanent VPN fix. Scoped owner QA is not independent full physical certification.
+- Package registration/eligibility, signing/certificates, Data safety and Console declarations, audience/rating/territories/export obligations and separate distribution approval.
+- PR77 actual publication-date finalization, exact-source revalidation and separate deployment approval; production privacy deficiency remains until authorized effective-policy publication.
+- No source/main/production/settings/signing/Play/agreement action taken. PR75 remains separate; Halloween and PR61 parked. “Radial discovery becomes an audit layer.” remains future intent only.
+
+Complete prior continuity follows unchanged.
+
+---
+
 # Play listing v0.2 and scoped owner QA — 2026-10-16 23:57 UTC
 
 ## CURRENT

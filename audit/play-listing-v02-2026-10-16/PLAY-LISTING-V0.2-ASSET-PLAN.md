@@ -100,3 +100,7 @@ L5. Best practices for your store listing — App descriptions; title; graphics;
 L6. Intellectual Property — Full Policy; Unauthorized Use of Copyrighted Content; Trademark Infringement. No page-specific revision date displayed. https://support.google.com/googleplay/android-developer/answer/9888072?hl=en
 
 Do not confuse retrieval/crawl dates with an effective-policy revision. L2 explicitly separates required upload conditions from recommendations affecting promotional eligibility. Its general screenshot maximum and separate large-screen guidance differ; this phone-first plan avoids inventing a tablet requirement or applying XR file-size limits to phone images.
+
+## 2026-10-17 provenance and preparation update
+
+Owner-attested standalone Grok creation workflow and approximate September 5 through conservative about October 10, 2026 window are now preserved in ../play-assets-2026-10-17/OWNER-ARTWORK-ATTESTATION.md. The earlier unknown-origin text above is retained as historical evidence. See that package's ASSET-RIGHTS-LEDGER.md/CSV, GROK-TERMS-REVIEW.md, ASSET-REVIEW.md, FEATURE-GRAPHIC-BRIEF.md and SIX-PHONE-SCREENSHOTS.md for current bounded evidence and practical preparation. Conditional commercial-use support does not establish exclusive ownership; contextual attribution/permission interpretation and final asset acceptance remain HOLD. Corrected listing v0.2 still awaits owner approval. No new image or actual screenshot is claimed.
