@@ -1,3 +1,30 @@
+## CURRENT — 2026-10-17 06:27 UTC: PR81 conditional dated preparation frozen; hosted acceptance PENDING
+
+Owner directive Sentinel_520e5b8d65dc819184b2b5239a9a0164 (2026-10-17 06:19:31 UTC) authorizes a nonproduction dated successor to PR80. October 19, 2026 is tentative and conditional on readiness and a separate deployment decision, not a deadline or current publication. Historical checkpoint 47bb767fd1c2e9c369bb1e6b9c3a89a7bb296cb0 and all prior evidence remain below.
+
+### CURRENT
+- Draft PR81: https://github.com/caleb1234calvin-art/dinner-roulette/pull/81 ; branch integration/dated-legal-preparation-2026-10-19.
+- Exact head 7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94; tree ae48488aefb4a19881a4b895f0bf758709efecc4; sole parent PR80 29bec315b919535c9aeb3f7e8b1c9e3fa638e80d.
+- Eight changed paths, 157 additions/21 deletions. Both version 1.0 policies/history retain unreleased status and null effective dates; proposedPublicationDate 2026-10-19 is explicitly conditional. Full policy content, consent flags, footer and Android source remain unchanged.
+- Publication guard now requires an explicit authorized actual date/timezone and same real local calendar day. It is an operator check, not an automatic deployment lock. No clock-triggered publication or backdating.
+- Local preparation: 1,274 repository PASS / four skips; 74 application PASS; typecheck PASS; lint zero errors/six inherited warnings; authenticated migration-free build PASS. Independent prefreeze source review PASS, 82 adversarial date controls plus 17 focused checks PASS. Frozen remote binding and fresh hosted acceptance remain pending. Prior PR80 results are historical, not transferred.
+- Pre-freeze bare timezone and empty-option bugs were corrected before freeze; original findings retained. Premature pre-build test and wrong-cwd review failures remain history; local browser socket failure is NOT RUN, not browser PASS.
+- Source/evidence and controlled release/device plan: audit/dated-legal-preparation-2026-10-17/. All 36 new-release physical observations start NOT RUN.
+- Last verified main c3208d9fdc9a21d698efa9254be1286f5d3d2836 / tree c36112156cd11baefb6671194f0d59b9c181c2a3; production dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY with 92 identities. No mutation authorized or performed. Original PR77/78/79/80 preserved.
+
+### NEXT
+Complete fresh exact-head hosted browser/native acceptance and independent artifact review, then publish final checkpoint. Confirm the eventual actual publication date/timezone; finalize published metadata only under separate authority and revalidate that exact source. Request a separate exact-source merge/deployment decision. A website release can precede Play, but it also reaches existing remote-web wrappers; plan attended public-route and physical acceptance.
+
+### HOLD
+- No current effective policies, merge, deploy, rollback, signing, registration, Play submission/declarations or agreements authorized.
+- Actual publication metadata must match the actual approved date; if readiness/date changes, HOLD, revise and revalidate. October 19 does not self-activate.
+- Newly verified PR80 debug certificate bc77407bc7fcf569fe70481bff0c301d1b48c6129e51e052f3adca088113ee18 differs from delivered PR78 f4ca7e7367cb8dd20543c04748b9eea9a8a16050ddd44153cee841b8fea8cea3 with the same package/version. Do not install over, uninstall or erase data to bypass signer conflict. A successor APK needs its own inspection. Existing wrapper may support source-qualified hosted-web tests after authorized publication, not exact new native/update acceptance.
+- Phone/tablet combined physical acceptance NOT RUN; original intermittent offline incident remains unresolved. Prior owner observations are preserved, not copied into this ledger.
+- Fresh rollback eligibility/permission and five-alias restore coverage remain unproved; READY alone is insufficient and prior 403 must not be bypassed. Current FMS production may become the previous target only after fresh verification. A rollback cannot erase actual policy publication history and may restore the old missing-policy deficiency.
+- Attribution/legal sufficiency, final store assets and actual Android screenshots, signing/Console/distribution/export/Data safety/audience gates remain separately unresolved. PR61 and optional Halloween expansion remain parked. Future design intent: "Radial discovery becomes an audit layer."
+
+---
+
 # PR80 consolidated nonproduction acceptance — 2026-10-17 05:57 UTC
 
 ## CURRENT

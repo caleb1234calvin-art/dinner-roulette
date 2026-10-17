@@ -1,0 +1,20 @@
+{
+  "apk": "/workspace/scratch/a0ea701c7b34/dated-release-plan-2026-10-17/source-evidence/pr80-signature/PickForUs-debug.apk",
+  "bytes": 4174814,
+  "sha256": "8a46e4aebfb7b8a432ff3286c4652788beb3cf0a30194b81d86c67a47c8a3ff1",
+  "scheme": "APK Signature Scheme v2",
+  "algorithm": "RSA PKCS1 v1.5 with SHA256 (0x0103)",
+  "signatureVerified": true,
+  "apkContentDigestVerified": true,
+  "signerCount": 1,
+  "certificate": {
+    "subject": "C=US,O=Android,CN=Android Debug",
+    "issuer": "C=US,O=Android,CN=Android Debug",
+    "sha256": "bc77407bc7fcf569fe70481bff0c301d1b48c6129e51e052f3adca088113ee18",
+    "sha1": "bf6debc62114d8c5c735ec3698150682d34cce2d",
+    "serialNumber": "1",
+    "validFrom": "2026-10-17 05:05:41+00:00",
+    "validUntil": "2056-10-09 05:05:41+00:00"
+  },
+  "method": "Independent direct signing-block parsing and cryptography verification, not apksigner or on-device installation."
+}

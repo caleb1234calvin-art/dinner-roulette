@@ -1,0 +1,36 @@
+{
+  "pr78": {
+    "source": "/workspace/scratch/a0ea701c7b34/android-brand-identity-review/pr78-12068290260.zip",
+    "apk_sha256": "7953b424b7224649bb4128b05dca83f91a19ced1542621c8ed2587a6893c491f",
+    "bytes": 4174814,
+    "v2_cert_sha256": "f4ca7e7367cb8dd20543c04748b9eea9a8a16050ddd44153cee841b8fea8cea3",
+    "certificate_subject": "C=US,O=Android,CN=Android Debug",
+    "public_key_sha256": "f506adcbe3f591870fe8c898b93103d9a5a9bacbd04fec019057288f5b49d074",
+    "signing_block_ids": [
+      "0x7109871a",
+      "0x42726577"
+    ],
+    "trailing_empty_signed_fields": 1,
+    "certificate_parse": "Independent length-prefixed APK v2 parser; certificate/public-key consistency checked. This step is not cryptographic APK signature or on-device verification.",
+    "archive_sha256": "970159ec45aeaf0aae9dcb4ed2967e1a60814b9d7aa7d7b08fb0f12fdd22c1fd"
+  },
+  "pr80": {
+    "source": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090581502-PickForUs-Android-validation-49bc7d874e8b944fb619fa113c5c90f124e0c4e3.zip",
+    "apk_sha256": "8a46e4aebfb7b8a432ff3286c4652788beb3cf0a30194b81d86c67a47c8a3ff1",
+    "bytes": 4174814,
+    "v2_cert_sha256": "bc77407bc7fcf569fe70481bff0c301d1b48c6129e51e052f3adca088113ee18",
+    "certificate_subject": "C=US,O=Android,CN=Android Debug",
+    "public_key_sha256": "07938987b7e29bfa2c8c6bd6984ca1716f79d43309f36aa657ef302e5b8cffbc",
+    "signing_block_ids": [
+      "0x7109871a",
+      "0x42726577"
+    ],
+    "trailing_empty_signed_fields": 1,
+    "certificate_parse": "Independent length-prefixed APK v2 parser; certificate/public-key consistency checked. This step is not cryptographic APK signature or on-device verification.",
+    "archive_sha256": "2812ea6fc9ac772536fbf87c38617c78b10d6029c703e2e2beecb5a25da99f83"
+  },
+  "finding": "Original PR78 and PR80 debug APKs have different v2 signing certificates and public keys. Existing same-package install cannot be treated as an ordinary interchangeable update; preserve user data and do not uninstall/bypass.",
+  "scope": "No device inspection/install/uninstall, new key/signature, production mutation or user-data write occurred.",
+  "methodology_history": "Initial in-memory parser expected exactly three signed-data fields and stopped on an extra empty field. Both APKs contain the same zero-length trailing field; the corrected independent parser explicitly checks that any trailing fields are empty. No APK bytes or prior verification records were changed.",
+  "reference": "https://developer.android.com/studio/publish/app-signing"
+}

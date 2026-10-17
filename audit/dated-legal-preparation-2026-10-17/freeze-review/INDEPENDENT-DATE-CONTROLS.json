@@ -1,0 +1,372 @@
+{
+  "at": "2026-10-17T06:25:53.359Z",
+  "root": "/workspace/scratch/a0ea701c7b34/dated-legal-candidate",
+  "head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "reviewedChangedFiles": [
+    {
+      "path": "docs/legal/PUBLICATION.md",
+      "sha256": "5e9309626fb35120ef4377d2be64021cb2c3ff18c48ae366debe6e6cd339b342"
+    },
+    {
+      "path": "scripts/check-legal-release.mjs",
+      "sha256": "c6c9a8073b12b4ed3577367cb034e3fc48743ab42dbd06ae6544e8d83ec35860"
+    },
+    {
+      "path": "scripts/legal-release.test.mjs",
+      "sha256": "7ac386828f008ccccbc4803c3641868634520328878b80d163fe5009e6a13e68"
+    },
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "sha256": "704fc9c3fc3c6d5cd26726075cf90dafb211d50254c42ee65577ef46866eb6ac"
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "sha256": "79f4caa1b3736224fa327dceee1698cfad946256014ecb83f8f1c4f9b2485954"
+    },
+    {
+      "path": "src/lib/legal/history.json",
+      "sha256": "2504ccec9eb64fbe1bea6023c6c75189d8fa04da64ec5530742b573b679cb510"
+    },
+    {
+      "path": "src/lib/legal/releases.test.ts",
+      "sha256": "01ef2de55d62cc839c66a5f15305df48debb6f82851832e988b0567e04ce9d9f"
+    },
+    {
+      "path": "src/lib/legal/releases.ts",
+      "sha256": "5652da85399dd5e32bcd86557d731ff764d4d375611b758b8a0089d2b4d6eb0d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "tentative status/date/version and synchronized proposal",
+      "status": "PASS"
+    },
+    {
+      "name": "proposal does not activate at 2000-01-01T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "proposal does not activate at 2026-10-19T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "proposal does not activate at 2099-12-31T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-11-01 before",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-11-01 start",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-11-01 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-11-01 end",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-03-08 before",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-03-08 start",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-03-08 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "America/Chicago 2026-03-08 end",
+      "status": "PASS"
+    },
+    {
+      "name": "UTC 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "UTC 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "UTC 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "UTC 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Kiritimati 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Kiritimati 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Kiritimati 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Kiritimati 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Pago_Pago 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Pago_Pago 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Pago_Pago 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "Pacific/Pago_Pago 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "Asia/Kolkata 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "Asia/Kolkata 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "Asia/Kolkata 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "Asia/Kolkata 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone  ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone CST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone PST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone EST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone IST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone GMT",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone Invalid/Zone",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone +05:00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone -05:00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone  America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing zone America/Chicago ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 42",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-2-19",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-02-29",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-02-30",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-13-01",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-00-01",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-32",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-20",
+      "status": "PASS"
+    },
+    {
+      "name": "valid leap calendar day",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy effective-date mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms effective-date mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy proposed-date mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms proposed-date mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject retained proposal on published metadata",
+      "status": "PASS"
+    },
+    {
+      "name": "reject publication requiring requiresPrivacyConsent",
+      "status": "PASS"
+    },
+    {
+      "name": "reject publication requiring requiresTermsAgreement",
+      "status": "PASS"
+    },
+    {
+      "name": "published material informational notice unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "published archive snapshot stays complete and separately immutable",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI (metadata only)",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --authorized-date=",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication-time-zone=",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --authorized-date=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication-time-zone=America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication --publication",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --now=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication --authorized-date=2026-10-19 --authorized-date=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication --publication-time-zone=UTC --publication-time-zone=UTC",
+      "status": "PASS"
+    },
+    {
+      "name": "CLI --publication --authorized-date=2026-10-19 --publication-time-zone=America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "full policy JSON differs only by proposed date",
+      "status": "PASS"
+    },
+    {
+      "name": "full history JSON differs only by proposed date",
+      "status": "PASS"
+    },
+    {
+      "name": "archive/notices/footer/routes/release exclusions unchanged",
+      "status": "PASS"
+    }
+  ],
+  "passed": 82,
+  "total": 82,
+  "scope": "Independent read-only code/API/CLI tests; no browser, publication, production mutation or deployment. In-memory fixtures cannot authorize actual release."
+}

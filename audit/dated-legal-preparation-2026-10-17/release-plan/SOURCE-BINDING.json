@@ -1,0 +1,47 @@
+{
+  "prepared_at_utc": "2026-10-17",
+  "source_head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "source_tree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
+  "continuity": "47bb767fd1c2e9c369bb1e6b9c3a89a7bb296cb0",
+  "files": [
+    {
+      "path": "capacitor.config.json",
+      "sha256": "63da0c6a51320c71299fa4a4c569767a480a793c392dfb02978568aa431814ce"
+    },
+    {
+      "path": "ANDROID_RELEASE.md",
+      "sha256": "507dc3226130ff275bd0d762c0d90f386193b189cd8e56c776dd052b19a408ab"
+    },
+    {
+      "path": "docs/legal/PUBLICATION.md",
+      "sha256": "14f3b2ca784f2df229df51a9e0d798786dbd919d5e779adde0950be260534496"
+    },
+    {
+      "path": "scripts/check-legal-release.mjs",
+      "sha256": "8a15296a8ae16d17ea781e9c6c2be9cb08a18d9a5b16b1d9f9204bed6551a1a0"
+    },
+    {
+      "path": "src/lib/legal/history.json",
+      "sha256": "fd8c8d2405e928a2be2fb75648f509e72d38776cbdd8668e0b58e2201a773282"
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "sha256": "05966b88cc6f8077897bbe803b0d184b8d596364835a2310f200a8c731921468"
+    },
+    {
+      "path": "src/components/legal-document-page.tsx",
+      "sha256": "2c5bb3c9f85c29ea42041f125294cfd1d4d72b3b22f6834b40201993038d16e1"
+    },
+    {
+      "path": "src/components/legal-change-notice.tsx",
+      "sha256": "811dfd4d8c544f0736638c004f54f9cd989829c7115a29314c8dc07246c98afe"
+    },
+    {
+      "path": "src/components/unified-footer.tsx",
+      "sha256": "cb247975888e117cc13dd1bed98ac16dd88c4e39097777c7f355f2f87fca989a"
+    }
+  ],
+  "physical_result": "NOT RUN",
+  "production_mutation": false,
+  "signing_or_build_mutation": false
+}

@@ -1,0 +1,39 @@
+{
+  "purpose": "Conditional website/legal publication and bounded physical acceptance plan",
+  "prepared_at_utc": "2026-10-17T06:25:00Z",
+  "source_head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "source_tree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
+  "continuity": "47bb767fd1c2e9c369bb1e6b9c3a89a7bb296cb0",
+  "final_dated_successor": "PENDING separate preparation and independent validation",
+  "physical_status": "NOT RUN on new hosted candidate; earlier evidence not transferred",
+  "production_changed": false,
+  "new_native_artifact_built_or_signed": false,
+  "report_files": [
+    {
+      "path": "RELEASE-AND-DEVICE-PLAN.md",
+      "bytes": 24318,
+      "sha256": "68a811179e2dc8e8da0ea32f23fed1467a8c9abe6dea9edcedfdbb285b0c3e4d"
+    },
+    {
+      "path": "OWNER-SESSION-CARD.md",
+      "bytes": 2876,
+      "sha256": "47c54dfcc3dd88e620307afa64831d84c6f50bd63192b02e5e064b3f1452dc45"
+    },
+    {
+      "path": "PHYSICAL-OBSERVATION-LEDGER.csv",
+      "bytes": 3849,
+      "sha256": "51fe583d3d9951584fb3806c5d181c777b21e203f7b117b987f60ac56ee40c39"
+    },
+    {
+      "path": "SOURCE-BINDING.json",
+      "bytes": 1623,
+      "sha256": "f3469d96b631392051719fd962e36e1633aa34bb658e773ef90514f0977dab3d"
+    },
+    {
+      "path": "source-evidence/pr80-signature/signature-verification.json",
+      "bytes": 912,
+      "sha256": "29b3848597667de3a4fdae54bd2c8839dec479612177258df4c7981b55432588"
+    }
+  ],
+  "independent_signature_comparison": "/workspace/scratch/a0ea701c7b34/dated-legal-independent-2026-10-17/INDEPENDENT-APK-CERTIFICATE-COMPARISON.json"
+}

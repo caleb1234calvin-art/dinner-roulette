@@ -1,0 +1,25 @@
+{
+  "stage": "uncommitted eight-file predecessor-based first draft",
+  "predecessor": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "findings": [
+    {
+      "id": "bare-zone-abbreviations",
+      "observations": {
+        "CST": "America/Chicago",
+        "PST": "America/Los_Angeles",
+        "EST": "America/Panama",
+        "IST": "Asia/Calcutta"
+      },
+      "result": "Accepted by Intl plus first-draft regex despite ambiguity; require explicit Area/Location or UTC"
+    },
+    {
+      "id": "empty-options-without-publication",
+      "observations": [
+        "--authorized-date= exits 0",
+        "--publication-time-zone= exits 0"
+      ],
+      "result": "Truthy-option check mistakes supplied empty value for absent; require undefined checks"
+    }
+  ],
+  "status": "Reported to implementer before freeze, pending correction. Historical first-draft findings are preserved."
+}
