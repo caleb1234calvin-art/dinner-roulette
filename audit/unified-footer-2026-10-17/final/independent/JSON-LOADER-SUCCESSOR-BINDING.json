@@ -1,0 +1,92 @@
+{
+  "commit": "efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2",
+  "tree": "0af83ad58fe87e701b7970475d43d73b77246361",
+  "parent": "c546a98ea788c6821d0b18ff83a3df7a70068feb",
+  "remoteReadback": "12 unchanged paths independently fetched at exact successor; identical blob IDs",
+  "reviewedPaths": [
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "remoteBlob": "ca75d95b769d129a08e400fb754c8cc453430671",
+      "sha256": "afa75be2e209afc6b6c562c883e74a41608d47090893f00f8398b542f109950d",
+      "localBlob": "ca75d95b769d129a08e400fb754c8cc453430671",
+      "committedBlob": "ca75d95b769d129a08e400fb754c8cc453430671"
+    },
+    {
+      "path": "scripts/seasonal-phase4-recovery.test.mjs",
+      "remoteBlob": "a535eefca93f5adef1153f8519eec2ddc012d23f",
+      "sha256": "9336c52ce97a593b13ccf47545fabdc25e12a262dfa4cc8348ba888ae0999e5e",
+      "localBlob": "a535eefca93f5adef1153f8519eec2ddc012d23f",
+      "committedBlob": "a535eefca93f5adef1153f8519eec2ddc012d23f"
+    },
+    {
+      "path": "scripts/unified-footer.test.mjs",
+      "remoteBlob": "716be62d3173dbb81a68f8de1aae31f412a67962",
+      "sha256": "887cccce4b01ec0720d0e1afaf1f2c03725d5fb11816f687463c1540052477cd",
+      "localBlob": "716be62d3173dbb81a68f8de1aae31f412a67962",
+      "committedBlob": "716be62d3173dbb81a68f8de1aae31f412a67962"
+    },
+    {
+      "path": "src/components/app-shell.tsx",
+      "remoteBlob": "cfaf66b54e500ac1a59923496d2ee2582819b902",
+      "sha256": "4bca7164dc02f3744dc04d0ae892e07b279160945ebbeea9273deb57581ca62e",
+      "localBlob": "cfaf66b54e500ac1a59923496d2ee2582819b902",
+      "committedBlob": "cfaf66b54e500ac1a59923496d2ee2582819b902"
+    },
+    {
+      "path": "src/components/date-night-plan-overlay.tsx",
+      "remoteBlob": "559437f0f2dd022b4db95568974724be10aae67c",
+      "sha256": "f598d3551d937291219a57e0962386fca381eec53413dc1abc6700cd0078f13d",
+      "localBlob": "559437f0f2dd022b4db95568974724be10aae67c",
+      "committedBlob": "559437f0f2dd022b4db95568974724be10aae67c"
+    },
+    {
+      "path": "src/components/legal-document-page.tsx",
+      "remoteBlob": "8b43345dda6ff7c9db299b87571eef3b2eb8b842",
+      "sha256": "2c5bb3c9f85c29ea42041f125294cfd1d4d72b3b22f6834b40201993038d16e1",
+      "localBlob": "8b43345dda6ff7c9db299b87571eef3b2eb8b842",
+      "committedBlob": "8b43345dda6ff7c9db299b87571eef3b2eb8b842"
+    },
+    {
+      "path": "src/components/options-overlay.tsx",
+      "remoteBlob": "c10243e7d8ba20abae1ace0ff1c56f61e8bbff94",
+      "sha256": "e7546c7dffe4e2f2e293c18fa631d277a0e0f9372e7efcfd81979b65d252dbbf",
+      "localBlob": "c10243e7d8ba20abae1ace0ff1c56f61e8bbff94",
+      "committedBlob": "c10243e7d8ba20abae1ace0ff1c56f61e8bbff94"
+    },
+    {
+      "path": "src/components/page-footer.tsx",
+      "remoteBlob": "fcc5f6d2fc31756410dc49b4f32b038d9ea096ff",
+      "sha256": "efca195b1b2c2f18b50e8829f9392032be2d9da7c862aa5af665fc5250d6f188",
+      "localBlob": "fcc5f6d2fc31756410dc49b4f32b038d9ea096ff",
+      "committedBlob": "fcc5f6d2fc31756410dc49b4f32b038d9ea096ff"
+    },
+    {
+      "path": "src/components/result-overlay.tsx",
+      "remoteBlob": "587ebe6505e655dd62eb41381f2b012c6ea8b3f2",
+      "sha256": "63c7d6798c8efe6bbdfcaaeda67c4cf25d2c5e4d58fea1925df8596850569d89",
+      "localBlob": "587ebe6505e655dd62eb41381f2b012c6ea8b3f2",
+      "committedBlob": "587ebe6505e655dd62eb41381f2b012c6ea8b3f2"
+    },
+    {
+      "path": "src/components/unified-footer.tsx",
+      "remoteBlob": "e781b4f0dc5ec2776695897bb241ae7dc0e7ddea",
+      "sha256": "cb247975888e117cc13dd1bed98ac16dd88c4e39097777c7f355f2f87fca989a",
+      "localBlob": "e781b4f0dc5ec2776695897bb241ae7dc0e7ddea",
+      "committedBlob": "e781b4f0dc5ec2776695897bb241ae7dc0e7ddea"
+    },
+    {
+      "path": "src/lib/artwork/attribution.ts",
+      "remoteBlob": "c994641871fcd402ec05ab91f53f933e21618efa",
+      "sha256": "3bde1739a074b08c7e05f59f9e6a9588d7720b752ce71cdb1291b21c35f06d68",
+      "localBlob": "c994641871fcd402ec05ab91f53f933e21618efa",
+      "committedBlob": "c994641871fcd402ec05ab91f53f933e21618efa"
+    },
+    {
+      "path": "src/lib/artwork/owner-attested-assets.json",
+      "remoteBlob": "fe8c628b0da4d6c96a8afb784df9041dd8d1a9a8",
+      "sha256": "aabcd8bceac6c36a1e01242605a485b5baecd6b3b7662fb8c0139bf0dbc06c60",
+      "localBlob": "fe8c628b0da4d6c96a8afb784df9041dd8d1a9a8",
+      "committedBlob": "fe8c628b0da4d6c96a8afb784df9041dd8d1a9a8"
+    }
+  ]
+}

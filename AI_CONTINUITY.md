@@ -1,3 +1,44 @@
+# PR 79 final nonproduction acceptance — 2026-10-17 04:06 UTC
+
+## CURRENT
+
+VERIFIED NONPRODUCTION CANDIDATE: Draft PR 79 https://github.com/caleb1234calvin-art/dinner-roulette/pull/79 remains efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2, tree 0af83ad58fe87e701b7970475d43d73b77246361, parent c546a98ea788c6821d0b18ff83a3df7a70068feb. Branch integration/unified-legal-footer-2026-10-17 targets preserved PR 77 branch/ancestor6b370a. Eighteen changed paths relative to PR 77. No source mutation after freeze. Owner's long footer wording, scoped artwork credit and inherited unreleased legal routes are implemented.
+
+Exact-head web 38997800977 completed SUCCESS (all 19 jobs including aggregate, independently refreshed by root04:04:55); Android 38997804439 SUCCESS. Local/full repository1269 + application73 PASS, four documented skips; typecheck PASS, lint 0errors/6inherited warnings, authenticated migration-free build PASS. Browser totals:2020seasonal scenarios,10ordinary Date Night,16casino,19location,33legal,350dedicated footer,774geometry comparisons and19negative Plan controls PASS. Independent source review binds12 unchanged application paths and96 artwork hashes; changed harness inputs were separately reviewed/revalidated.
+
+All18 current web original archives, total1538782992bytes, were independently checked for size/SHA 256/CRC/member hashes and exact542-file source fingerprint573f96fa96471d330df0bff93c3362d8f1a0771c3a2d9f2c7d55ec03e042a28f. Original native archives were independently checked separately. Evidence manifests, original IDs/hashes, terminal results and independent reviews are preserved under audit/unified-footer-2026-10-17/final. The complete3.5MB member manifest is preserved losslessly as gzip with original/reconstructed SHA 256 receipt; this is evidence packaging, not rerunning behavior.
+
+Footer acceptance:350/350 cases, no errors;160actual-route,170actual-source portal fixtures,20safe-area cases at320/390/512/768/1024 widths in both themes. Minimum text contrast12.761:1, link targets44px, route/navgap15px, portalbottomgap15.578125px, emulated34pxsafearea gap23px; no tested overflow/obstruction. Forty discovery RPCs blocked, zero escaped.23footer/portal PNGs plus6legal crops actually viewed by independent reviewer; this is not all-PNG manual inspection or full WCAG/device acceptance.
+
+Original portal captures showed some blank raster slots without decode telemetry. No lazy-loading cause or product defect was established. Separate evidence-only branch integration/footer-artwork-verification-2026-10-17, commit e823bd6e5216c15c4028c696fa5023db598b8664/tree 01592ebcf475444388f6c995b4cf1c3c5724054c, pinned immutable efb440 application checkout. Run38999646360 passed8/8 focused Options/Plan cases: imageHTTP200, successful decode/positive natural dimensions, no failedimage requests, existing footer assertions retained. Originalartifact 12088661797 SHA 57dbb7407409f76468d14bcb77348b5c93acdf62f8680fed8a94ef8de2bd73ba,1772379bytes/31members verified. Affected-variant readiness gap closed without application change; original capture cause remains unproved.
+
+Geometry original12088407443:475249625bytes SHA 50d55e94f6e42b07dc9030fdc2b12b0392fcd67aff9144734226b7c5dfdffb49,6291members; independent verdict and representative samples PASS. Final regional original12088529836:287733924bytes SHAd17ae14b87c503774bbed67e0b4ef3849798b60901c2e62d7785646d6fac489b,2058members;317regional+277wave 2 scenarios and subpass PASS, controlled providers, independent image/readability samples PASS.
+
+Android automated evidence is inherited legacy package com.calebcalvin.pickforus, remote URL https://dinner-roulette-chi.vercel.app, not a package embedding PR 79's unpublished footer. PR 78 app.pickforus.android remains separate. Unsigned AAB SHA 4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee has no signatures/native.so; manifest/security/signing guard checked.14inherited Android lint warnings remain; signed-upload/Play/physical acceptance not established.
+
+Historical4a9 authenv and JSONgeometry failures, c546 geometry failure and eventual350footer PASS with unisolated same-origin RPC remain preserved. Later success does not overwrite those attempts. No source defect is inferred from harness-startup errors.
+
+Production freshly refreshed04:05:01: main/sourcec3208d9fdc9a21d698efa9254be1286f5d3d2836, deploymentdpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY, all five expected aliases and aliasError null.92identities unchanged. Historical rollbackdpl_8DBJFLQwkBGckTxM5RYPM63dLqS5 retained; no fresh restore-eligibility claim or rollback action.
+
+## NEXT
+
+Owner decision on release integration/order across PR 77 legal, PR 79 footer and separate PR 78 package identity. Legal actual publication date must first be explicitly selected/finalized in a resulting exact candidate and revalidated; deployment requires separate approval. Do not merge this undated prepared policy as effective publication.
+
+After authorized validated integration is actually published, owner checks the real Android experience and captures the final store screenshots. Current CI previews are fixture/evidence images, not public listing captures. Continue final graphic/media preparation only within authorized scope.
+
+## HOLD
+
+- No merge/deploy/legal effective date/signing/package registration/Console submission/agreement authorization. Policies remain approved-content v1.0, unreleased/null dates; production privacy deficiency remains until effective publication/public URL acceptance.
+- Contextual attribution/permission sufficiency is not automatically established by implemented credit; no exclusive-rights or legal guarantee.
+- Physical Android/WebView/native mail handler/screen-reader and tablet acceptance; original intermittent offline/cross-app failure unresolved despite later scoped owner-reported successes.
+- Provider reachability/coverage not proven by controlled fixtures; external email delivery/transactions not exercised. Safe-area simulation is not physical native evidence.
+- Final store screenshots, feature graphic, media selection, final Data safety/ratings/audience/territories/export, signing/certificates and Play approval remain separate.
+- PR 75 preserved separate. Halloween and PR 61 remain parked; “Radial discovery becomes an audit layer.” remains future intent.
+
+Prior continuity and failure history follow unchanged.
+
+---
+
 # PR79 JSON-loader and controlled-transport correction — 2026-10-17 03:12 UTC
 
 ## CURRENT

@@ -1,0 +1,96 @@
+[
+  {
+    "archive": "/workspace/scratch/a0ea701c7b34/attachments/d3263836-09d4-4543-a3e4-788aa734a524/pr79-efb-android-lint.zip",
+    "bytes": 24069,
+    "sha256": "2e1088794b15760494bce9942debece8ce1880e1d11fa16afe57b3452efece18",
+    "members": [
+      {
+        "path": "lint-results-release.txt",
+        "bytes": 8382,
+        "crc32": "3fedf1cf",
+        "sha256": "1b1ae0f37901c0ff57349ed73ae663ff9f8f9e1799fd1bfeaefe24e3d101c29e"
+      },
+      {
+        "path": "lint-results-release.html",
+        "bytes": 95754,
+        "crc32": "c6b239ba",
+        "sha256": "2d36ba32300a6b3c09cb8e025192291df8cdc345e88be515e8f2ff5024f389d6"
+      },
+      {
+        "path": "lint-results-release.xml",
+        "bytes": 15166,
+        "crc32": "748ef87e",
+        "sha256": "aedcde8abb3fab5fc2f4a0b22314e043add4f0595be1b52bed59ae71d25fab7c"
+      }
+    ]
+  },
+  {
+    "archive": "/workspace/scratch/a0ea701c7b34/attachments/f1089a50-359c-44af-bb3e-c7a61f8e83d5/pr79-efb-android-validation.zip",
+    "bytes": 6866412,
+    "sha256": "f29a1ce5f9303946a0d3380469656a5a33aa8b02701d39cfd3fb3e70fc714d4d",
+    "members": [
+      {
+        "path": "PickForUs-unsigned.aab",
+        "bytes": 3103535,
+        "crc32": "85849ed5",
+        "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee"
+      },
+      {
+        "path": "SHA256SUMS",
+        "bytes": 195,
+        "crc32": "8302cf79",
+        "sha256": "26b5fc9ed1528df5aaaa574783dd64923f70f71712d6626f46ff53d86117e5de"
+      },
+      {
+        "path": "PickForUs-debug.apk",
+        "bytes": 4174862,
+        "crc32": "b8ca119c",
+        "sha256": "40f0b37b507731f0d5c8d56b5f8799b0715c049a182eded4c331da348cdaf97d"
+      },
+      {
+        "path": "android-bundle-verification.json",
+        "bytes": 1935,
+        "crc32": "03810a80",
+        "sha256": "3198da11a50628393059022f5996699530e2ec38e0606e5aa5bbe82d692ab4bd"
+      },
+      {
+        "path": "android-bundle-verification.manifest.xml",
+        "bytes": 3887,
+        "crc32": "c929bd71",
+        "sha256": "4b3b1f769dd696780863cedd33b50027a2cd8edc055aedbb6ebe784c86db1c4c"
+      },
+      {
+        "path": "android-lint-summary.json",
+        "bytes": 2633,
+        "crc32": "a078b551",
+        "sha256": "6ec3a2bc4b6452d186c60591ac63d46be359ec92013fdf3b29eea9c0dd1fe6d9"
+      },
+      {
+        "path": "signing-guard.log",
+        "bytes": 1735,
+        "crc32": "e7b1b485",
+        "sha256": "937bd9afe1487e75b5367d9ab55afb8b514995de33388f0524605f79b1555ae6"
+      },
+      {
+        "path": "source-revision.txt",
+        "bytes": 41,
+        "crc32": "c9679231",
+        "sha256": "3cae96482edc2da1550264ae0b6203d743b828bfa05d8aa22eec01a7911f5be7"
+      }
+    ],
+    "internal_hashes": "PASS",
+    "sum_path_mapping": [
+      {
+        "sum_path": "artifacts/PickForUs-unsigned.aab",
+        "archive_path": "PickForUs-unsigned.aab",
+        "sha256": "4cead0e51c28e90e5a0d42149e3952690d19a4f61f05bae1cacf55c6c3b5e4ee"
+      },
+      {
+        "sum_path": "artifacts/PickForUs-debug.apk",
+        "archive_path": "PickForUs-debug.apk",
+        "sha256": "40f0b37b507731f0d5c8d56b5f8799b0715c049a182eded4c331da348cdaf97d"
+      }
+    ],
+    "source": "efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2"
+  }
+]

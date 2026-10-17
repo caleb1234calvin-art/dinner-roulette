@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_BEFORE_TEST_EXECUTION",
+  "date": "2026-10-17",
+  "attempts": [
+    {"method":"Playwright Chromium headless via exec_command", "sandbox":"use_default", "result":"launch failed", "error":"chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)"},
+    {"method":"same local Chromium preflight after approved escalation", "sandbox":"require_escalated", "result":"launch failed", "error":"chrome/browser/process_singleton_posix.cc:297 Check failed: . socket() failed: Operation not permitted (1)"}
+  ],
+  "browserCasesExecuted": 0,
+  "browserCasesPassed": 0,
+  "decision": "No further local Chromium launch retries or workaround. Use existing authorized hosted CI browser validation and independent artifact inspection if local cloud-browser route is unavailable."
+}

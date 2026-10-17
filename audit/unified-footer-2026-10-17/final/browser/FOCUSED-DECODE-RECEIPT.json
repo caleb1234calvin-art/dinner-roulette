@@ -1,0 +1,42 @@
+{
+  "artifactId": 12088661797,
+  "workflowRun": 38999646360,
+  "evidenceCommit": "e823bd6e5216c15c4028c696fa5023db598b8664",
+  "candidateHead": "efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2",
+  "archivePath": "/workspace/scratch/a0ea701c7b34/attachments/22f586bc-e448-48d9-bccf-b673325da5f9/pr79-efb-focused-artwork-decode.zip",
+  "archiveSHA256": "57dbb7407409f76468d14bcb77348b5c93acdf62f8680fed8a94ef8de2bd73ba",
+  "bytes": 1772379,
+  "members": 31,
+  "CRC": "PASS",
+  "casesPass": 8,
+  "casesFail": 0,
+  "actuallyViewed": [
+    {
+      "path": "/workspace/scratch/a0ea701c7b34/unified-footer-independent-2026-10-17/efb-focused-decode/results/portal-320x844-light-options-date-night-raster-decoded-top.png",
+      "sha256": "5395fae87e3596b1177ed3732e3f7b1a728db4118b15547da05ba2b52b254791",
+      "dimensions": [
+        320,
+        844
+      ],
+      "observation": "Actual raster artwork visibly rendered; footer and card content unobstructed."
+    },
+    {
+      "path": "/workspace/scratch/a0ea701c7b34/unified-footer-independent-2026-10-17/efb-focused-decode/results/portal-390x844-dark-plan-date-night-mixed-decoded-top.png",
+      "sha256": "c87a0b3623fccc568fe3d327bbd774ac80025b59fd14598d6fb8766dc9f58778",
+      "dimensions": [
+        390,
+        844
+      ],
+      "observation": "Actual raster artwork visibly rendered; footer and card content unobstructed."
+    },
+    {
+      "path": "/workspace/scratch/a0ea701c7b34/unified-footer-independent-2026-10-17/efb-focused-decode/results/portal-390x844-dark-options-date-night-raster-bottom.png",
+      "sha256": "eef3fdc73cd95963fa223576716f0503f3d4068a441738ed58eb4ea5c2c8c387",
+      "dimensions": [
+        390,
+        844
+      ],
+      "observation": "Actual raster artwork visibly rendered; footer and card content unobstructed."
+    }
+  ]
+}
