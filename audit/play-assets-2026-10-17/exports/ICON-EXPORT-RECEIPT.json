@@ -1,0 +1,23 @@
+{
+  "source_head": "4010edf31e71a7350d891a98dd43f20535602abd",
+  "source_icon_sha256": "4d71389437dc6339ed31ae413e189f5d8a6abe966296333f58c9f1facd202be9",
+  "master_sha256": "12afcedace4aacb19109e561fc70af76076ece7d4997348021422a9396e865d5",
+  "output_sha256": "4463f7849a13240995bd80b80a48abfaf27bb18c5e2804cb332dc66ee45e9ff9",
+  "output_bytes": 408170,
+  "dimensions": [
+    512,
+    512
+  ],
+  "mode": "RGBA",
+  "bits_per_channel": 8,
+  "icc_description": "sRGB",
+  "icc_bytes": 456,
+  "icc_sha256": "12afb4d9953adee0607d347daee5b78b18d6b3cab2d572b88970703f5edb37bc",
+  "pixel_equality": true,
+  "all_chunk_crcs_valid": true,
+  "original_chunks_preserved": true,
+  "original_files_unchanged": true,
+  "publication_status": "HOLD: final selection and contextual attribution review; no upload authorized",
+  "method": "Insert exact master sRGB ICC in new PNG iCCP chunk, retain all original chunks verbatim; no pixel changes",
+  "preliminary_attempt": "Stopped before output write on invalid raw-byte sRGB assertion; corrected to parsed ICC description."
+}

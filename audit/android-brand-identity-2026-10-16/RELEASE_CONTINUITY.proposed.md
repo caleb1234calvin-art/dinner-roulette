@@ -1,3 +1,34 @@
+# Approved listing wording and verified icon export — 2026-10-17 02:23 UTC
+
+## CURRENT
+
+Owner message Sentinel_aa4fd59dcad88191a082cb1c3d213b61 (02:13:16 UTC) approves the independently reviewed, accuracy-corrected Google Play listing v0.2 as the final wording draft, preserving its warm tone and all six accuracy corrections. Exact wording is unchanged: title 11 characters, short 80, full 1804 excluding terminal newline. Stored short SHA256 66f7e5de123fcf57327fad5448d510878abacbc8dfe2d8179c4eb2abf910ab2c; full ca950d668755f8b47b377fd241f0041fbafcd856d2ffdce9651e1e0787cbeb6a. Owner wording approval is now complete; public listing submission remains unauthorized.
+
+The unified dark footer is approved as a future visual reference, including independent-service disclosures, Privacy Policy, Terms, Support and appropriately scoped Grok artwork attribution. Original owner text describing black bottom area/small gray-white text and persistent artwork credit on screens containing generated artwork was recovered with exact conversation links. The actual visual attachment remains unrecovered/content omitted; no fresh visual-reference inspection is claimed. Footer implementation remains unauthorized, and contextual attribution sufficiency is not established by design approval.
+
+One offline candidate Play icon export is independently verified: 512×512 RGBA, 8 bits/channel, fully opaque, 408170 bytes; SHA256 4463f7849a13240995bd80b80a48abfaf27bb18c5e2804cb332dc66ee45e9ff9. It adds only the exact 456-byte sRGB ICC profile from the existing approved master. All original PNG chunks are preserved byte-for-byte, all CRCs valid, and decoded pixels identical to the unchanged source icon. Full-size/64px visual review PASS. Initial invalid raw-byte profile assertion stopped before output; parsed ICC correction and failed-attempt history preserved. No app/icon-source replacement occurred.
+
+Evidence lives under audit/play-assets-2026-10-17, including owner approval and exports. Existing feature brief and six genuine-phone capture guide remain current; no finished feature graphic or actual six screenshot set is claimed. Prior owner provenance, historical terms, media inventory and conditional commercial-use findings remain intact.
+
+PR78 stays 4010edf31e71a7350d891a98dd43f20535602abd/tree f521ed3dbdabceeb924ad4da1ce88e42db41092c. PR77 stays 6b370a5202ffb531434d725f49aacbdc325f32c5/tree 520f545ec006041ef5694a138cfb65f7a897011c, legal status unreleased/null dates. Last fresh 01:19 baseline main c3208d9fdc9a21d698efa9254be1286f5d3d2836 / production dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY with expected five aliases remains the inspected baseline; no source or production mutation was performed in this preparation.
+
+## NEXT
+
+Collect genuine phone captures using the approved development artifact and capture guide; prepare/select the final feature graphic and approve final media. Preserve originals, metadata, actual hosted runtime/device provenance and uncertainty. Future footer implementation requires separate authority and exact-source validation.
+
+## HOLD
+
+- Actual footer visual-reference recovery, layout/accessibility and contextual attribution/permission interpretation; no claim a single footer automatically fulfills all obligations.
+- Final public media selection/approval, actual screenshot set and feature graphic; tablet NOT RUN.
+- Original intermittent offline/cross-application failure and full physical certification remain unresolved despite later scoped owner-reported successes.
+- Package registration/eligibility, production signing, upload, Console declarations/submission, agreements, effective-policy dates and merge/deployment remain unauthorized.
+- Existing source-bound technical acceptance is preserved without rerunning unchanged source tests. Production privacy deficiency and other Play gates remain as previously documented.
+- PR75 remains separate; Halloween and PR61 parked. “Radial discovery becomes an audit layer.” remains future intent.
+
+Complete prior continuity follows unchanged.
+
+---
+
 # Play artwork provenance and store-asset preparation — 2026-10-17 UTC
 
 ## CURRENT
