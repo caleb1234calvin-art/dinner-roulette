@@ -97,9 +97,9 @@ try {
         await page.goto(base+path,{waitUntil:'networkidle'});await page.screenshot({path:resolve(output,`${width}-${theme}-${path.slice(1)}.png`),fullPage:true});
       }
       await page.goto(base+'/settings',{waitUntil:'networkidle'});
-      await page.getByRole('link',{name:'Privacy Policy',exact:true}).click();await page.waitForURL('**/privacy');
+      await page.locator('main').getByRole('link',{name:'Privacy Policy',exact:true}).click();await page.waitForURL('**/privacy');
       await page.getByRole('link',{name:'Back to Settings',exact:true}).click();
-      await page.getByRole('link',{name:'Terms & Conditions',exact:true}).click();await page.waitForURL('**/terms');
+      await page.locator('main').getByRole('link',{name:'Terms & Conditions',exact:true}).click();await page.waitForURL('**/terms');
       await page.getByRole('link',{name:'Back to Settings',exact:true}).click();
       const support=page.getByRole('link',{name:'Contact Support',exact:true});const uri=await support.getAttribute('href');
       assert.equal(new URL(uri).pathname,'causticrelay@gmail.com');assert.equal(new URL(uri).protocol,'mailto:');assert.ok(new URL(uri).searchParams.get('subject'));

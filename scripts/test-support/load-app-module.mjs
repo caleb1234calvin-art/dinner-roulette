@@ -28,6 +28,13 @@ export function appModuleLoader({ requestSignal = new AbortController().signal }
     const module = { exports: {} };
     modules.set(file, module);
     const source = readFileSync(file, "utf8");
+    if (file.endsWith(".json")) {
+      // JSON is data, not TypeScript. Expose a default namespace compatible
+      // with both direct .default reads and TypeScript's __importDefault.
+      const value = JSON.parse(source);
+      module.exports = { ...value, __esModule: true, default: value };
+      return module.exports;
+    }
     const { outputText } = ts.transpileModule(source, {
       compilerOptions: {
         module: ts.ModuleKind.CommonJS,

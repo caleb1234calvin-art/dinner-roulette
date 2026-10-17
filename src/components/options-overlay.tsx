@@ -1,3 +1,4 @@
+import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
 import { dateNightStatusLabel } from "@/lib/date-night/availability";
@@ -27,6 +28,7 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
   mode?: ResultMode;
 }) {
   const [mounted, setMounted] = useState(false);
+  const theme = useAppStore((s) => s.theme);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const halloween = mode === "date-night" && isHalloweenDateNightActive(spookySeasonEnabled);
 
@@ -46,6 +48,7 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
           {restaurants.map((restaurant) => <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />)}
         </div>
         <div className="mt-4"><Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}><Shuffle className="size-4" /><span className="tracking-kicker uppercase">Shuffle options</span></Button></div>
+        <div className="pb-[max(0.5rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={restaurants.map((restaurant) => mode === "date-night" ? getDateNightIcon({ activityTypes: (restaurant as DecoratedDateNightPlace).activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : mode === "nightlife" ? nightlifeArtwork((restaurant as DecoratedNightlifePlace).venueTypes ?? []) : dinnerRestaurantIcon(restaurant, theme))} /></div>
       </div>
     </div>,
     document.body,
