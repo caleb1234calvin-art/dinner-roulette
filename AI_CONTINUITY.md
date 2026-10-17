@@ -1,3 +1,21 @@
+# PR79 JSON-loader and controlled-transport correction — 2026-10-17 03:12 UTC
+
+## CURRENT
+
+Draft PR79 exact head efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2, tree 0af83ad58fe87e701b7970475d43d73b77246361, parent c546a98ea788c6821d0b18ff83a3df7a70068feb; 18 changed paths relative to underlying PR77. Application/runtime source remains unchanged from initial footer implementation. Exact-head web38997800977 and Android38997804439 are queued/PENDING.
+
+This bounded successor fixes shared test-loader JSON imports (seven-line loader change plus two regression tests) and isolates provider RPC transport in all three footer browser contexts. Root/independent review accepted the loader correction; local full validation now1269 repository +73 application tests PASS, four skips, 50 focused tests PASS. Earlier c546 browser work allowed same-origin RPC and is therefore historical limited evidence, not fully controlled fixture acceptance or live-provider acceptance. No supported cancellation route was available; no canceled-job result is invented.
+
+Initial 4a9 execution failures are now observed and preserved: geometry artifact12087407816, 2229 bytes, SHA256392206966fc17730d3210b67ef28e4e63130a30055824b944a80c1f36491df0a, two valid ZIP members, failed JSON support before any geometry comparison; footer artifact12087985028, 718 bytes, SHA2569029430e068705016db8844bfa190dab5a27e1cfc4ddee5a7b87aa9b3d254d62, two valid members, failed missing VITE_AUTH_ENABLED before any browser case. The auth environment was corrected in c546. Small original archives are preserved under audit/unified-footer-2026-10-17/historical-failures on this documentation branch.
+
+## NEXT / HOLD
+
+Verify exact efb440 hosted suites and original evidence; no PASS transfer from changed harness heads. Preserve initial failures and c546 transport limitation. PR79 remains nonproduction and not verified-ready. PR77/PR78 remain separately preserved; legal dates null/unreleased. All source integration/release-order, actual Android, final screenshot, attribution and Play gates remain unchanged. No merge/deploy/signing/registration/Console authority. Production baseline remains mainc3208 / FMS2 READY, unchanged by this work.
+
+Prior continuity follows unchanged.
+
+---
+
 # PR79 harness-only successor — 2026-10-17 03:00 UTC
 
 ## CURRENT
