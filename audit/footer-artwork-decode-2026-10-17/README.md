@@ -1,0 +1,7 @@
+# Focused footer artwork decode evidence
+
+This evidence-only branch does not change PR #79 or production. It tests immutable application head `efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2`, tree `0af83ad58fe87e701b7970475d43d73b77246361`, source fingerprint `573f96fa96471d330df0bff93c3362d8f1a0771c3a2d9f2c7d55ec03e042a28f` (542 files).
+
+The independently reviewed 350-case footer run passed layout, attribution, keyboard, links and safe-area assertions. Some synthetic Options/Plan screenshots had blank artwork slots; that harness did not await image decoding. The cause was unestablished, and lazy-loading was not supported by the affected source. This follow-up adds explicit decode and natural-size assertions and image transport diagnostics for eight Options/Plan cases at 320/390 in both themes. It preserves the actual components, compiled CSS, footer assertions and provider isolation. It does not claim live-provider or physical Android acceptance.
+
+The workflow checks out the candidate and evidence separately, builds the unchanged candidate using the authenticated migration-free route, runs this diagnostic outside the candidate tree, and preserves original results/screenshots. It has read-only contents permission and no signing, secrets, deployment or production mutation. Integration branches remain Vercel deployment-disabled. Results remain pending until the original archive is inspected.

@@ -1,0 +1,62 @@
+name: Focused footer artwork decode evidence
+on:
+  push:
+    branches: [integration/footer-artwork-verification-2026-10-17]
+    paths:
+      - .github/workflows/footer-artwork-decode.yml
+      - audit/footer-artwork-decode-2026-10-17/**
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: candidate
+    env:
+      VITE_AUTH_ENABLED: "true"
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2
+          path: candidate
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: evidence
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: candidate/package-lock.json
+      - name: Verify pinned source and install dependencies
+        run: |
+          test "$(git rev-parse HEAD)" = efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2
+          test "$(git rev-parse HEAD^{tree})" = 0af83ad58fe87e701b7970475d43d73b77246361
+          npm ci --no-audit --no-fund
+      - name: Authenticated migration-free build of unchanged candidate
+        run: |
+          node scripts/browser-build-proof.mjs capture
+          node scripts/with-app-env.mjs node node_modules/vite/bin/vite.js build --mode production
+          node scripts/browser-build-proof.mjs complete
+      - run: npx playwright install --with-deps chromium
+      - name: Verify actual portal artwork decode and footer
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/results"
+          node scripts/with-app-env.mjs node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 8083 --strictPort > "$GITHUB_WORKSPACE/results/preview.log" 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for n in $(seq 1 60); do curl -fsS http://127.0.0.1:8083/privacy > /dev/null && break; sleep 1; done
+          FOOTER_REPO="$GITHUB_WORKSPACE/candidate" FOOTER_URL=http://127.0.0.1:8083 FOOTER_OUT="$GITHUB_WORKSPACE/results" node "$GITHUB_WORKSPACE/evidence/audit/footer-artwork-decode-2026-10-17/verify.mjs"
+      - name: Preserve original focused evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: footer-artwork-decode-efb440
+          path: |
+            results/
+            candidate/audit/browser-results/build-proof.json
+          if-no-files-found: warn
+          retention-days: 14
