@@ -281,6 +281,8 @@ jobs:
       - name: Unified footer rendered acceptance
         if: matrix.suite == 'unified-footer'
         env:
+          VITE_AUTH_ENABLED: "true"
+          CI: "true"
           FOOTER_REPO: .
           FOOTER_URL: http://127.0.0.1:8083
           FOOTER_OUT: audit/browser-results/unified-footer

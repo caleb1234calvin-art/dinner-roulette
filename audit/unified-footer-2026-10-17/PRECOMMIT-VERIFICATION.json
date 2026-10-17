@@ -12,11 +12,11 @@
   },
   "browser": "NOT RUN locally; socket/process reachability limitation. 350-case hosted harness prepared; acceptance HOLD until exact-head execution and independent inspection.",
   "files": {
-    ".github/workflows/validate-icon-pack.yml": "dbc69b5a97d8dbd21c3fd658a2863cf0d743bcc4a6f92b789b4c8d35256a7c0e",
+    ".github/workflows/validate-icon-pack.yml": "aeefaa1b2269e6f71d82920f87b97dcfafd5f96f23d5e864c6550f7614f99baf",
     "scripts/legal-support-browser.mjs": "afa75be2e209afc6b6c562c883e74a41608d47090893f00f8398b542f109950d",
     "scripts/seasonal-phase4-recovery.test.mjs": "9336c52ce97a593b13ccf47545fabdc25e12a262dfa4cc8348ba888ae0999e5e",
     "scripts/unified-footer.test.mjs": "887cccce4b01ec0720d0e1afaf1f2c03725d5fb11816f687463c1540052477cd",
-    "scripts/unified-footer-browser.mjs": "d0ef63719183a5ccaa92f2724cdefd0bae824798fe1df0b75de8c393ee86981a",
+    "scripts/unified-footer-browser.mjs": "b2cab23be64ed6b2bb1ba3bd56420a9adf9fe27126fd494cf267a8e03ddcd27a",
     "src/components/app-shell.tsx": "4bca7164dc02f3744dc04d0ae892e07b279160945ebbeea9273deb57581ca62e",
     "src/components/date-night-plan-overlay.tsx": "f598d3551d937291219a57e0962386fca381eec53413dc1abc6700cd0078f13d",
     "src/components/legal-document-page.tsx": "2c5bb3c9f85c29ea42041f125294cfd1d4d72b3b22f6834b40201993038d16e1",
@@ -32,5 +32,10 @@
     "footer-alltests.log": "3f42bba2146da85e4910ba1b60bdb2383b167183a2c764da279894a1c648214a",
     "footer-alltests-r2.log": "16377c82f31dcf8e8ffe04bc91ed86906a137b2d56f6b14f9ad41b1a9c46db8e",
     "footer-alltests-r3.log": "ddd91779030c5dd20bf7c968064e094bc596582a2ad358dd37cf89569ab2d09e"
+  },
+  "supersededCandidate": {
+    "head": "4a9ef5ed943d71e6ab8ed46e4f1cf74165d1dd57",
+    "tree": "a742d1f718737d4ae10b153a57c25b3469dc0db0",
+    "reason": "Independent post-freeze inspection found footer workflow step omitted VITE_AUTH_ENABLED required by build-proof assertion. Workflow-only env correction; application source unchanged. Initial runs preserved 38996865502 / 38996869963. Paired harness-only improvements assert keyboard focus-visible and use actual mode/Halloween host classes."
   }
 }

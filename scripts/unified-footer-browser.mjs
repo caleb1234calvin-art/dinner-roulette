@@ -57,7 +57,7 @@ async function checkPortalFixtures(browser){
   const context=await browser.newContext({viewport,reducedMotion:variant==='spin'?'no-preference':'reduce'});const page=await context.newPage();page.setDefaultTimeout(12000);const pageErrors=[];page.on('pageerror',e=>pageErrors.push(String(e)));
   const fixtureURL=base+'/__footer-browser-fixture';
   await context.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());
-  await context.route(fixtureURL,route=>route.fulfill({contentType:'text/html',body:`<!doctype html><html data-theme="${theme}"><head><style>${fixture.css}</style></head><body class="bg-bg text-fg"><div id="fixture"></div></body></html>`}));
+  await context.route(fixtureURL,route=>route.fulfill({contentType:'text/html',body:`<!doctype html><html data-theme="${theme}" class="${mode==='nightlife'?'nightlife-active':mode==='date-night'?'date-night-active':''} ${variant==='halloween'?'halloween-date-night-active':''}"><head><style>${fixture.css}</style></head><body class="bg-bg text-fg"><div id="fixture"></div></body></html>`}));
   try{
    await page.goto(fixtureURL);await page.addScriptTag({content:fixture.js});const rows=variant==='empty'?[]:variant==='svg'?[fixtureRow(1),fixtureRow(2,'pumpkin-patch')]:variant==='raster'?[fixtureRow(1,'escape-room'),fixtureRow(2,'park')]:[fixtureRow(1),fixtureRow(2,'park')];
    if(variant==='no-category')for(const row of rows)row.venueTypes=[];
@@ -80,7 +80,7 @@ async function checkPortalFixtures(browser){
    if(kind==='result'&&mode==='nightlife')assert.ok((await scrollRoot.innerText()).includes('Pick For Us does not sell alcohol, accept wagers, or provide gambling services.'));
    result.contrast=await contrast(page);for(const v of result.contrast)assert.ok(v.ratio>=4.5);
    const links=page.locator('footer a');for(const link of await links.all()){const hit=await link.evaluate(el=>{const r=el.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return{height:r.height,hit:hit===el||el.contains(hit)}});assert.ok(hit.height>=44&&hit.hit)}
-   await page.screenshot({path:path.join(out,id+'-bottom.png')});await links.first().focus();assert.ok(await links.first().evaluate(el=>el===document.activeElement));await page.screenshot({path:path.join(out,id+'-focus.png')});
+   await page.screenshot({path:path.join(out,id+'-bottom.png')});await page.keyboard.press('Tab');await links.first().focus();assert.ok(await links.first().evaluate(el=>el===document.activeElement));result.focus=await links.first().evaluate(el=>({style:getComputedStyle(el).outlineStyle,width:getComputedStyle(el).outlineWidth,color:getComputedStyle(el).outlineColor}));assert.equal(result.focus.style,'solid');assert.ok(parseFloat(result.focus.width)>=2);await page.screenshot({path:path.join(out,id+'-focus.png')});
    await links.first().press('Tab');assert.ok(await links.nth(1).evaluate(el=>el===document.activeElement));await links.nth(1).press('Tab');assert.ok(await links.nth(2).evaluate(el=>el===document.activeElement));
    const control=kind==='options'?page.getByRole('button',{name:'Shuffle options',exact:true}):kind==='plan'?page.getByRole('button',{name:'Plan a different night',exact:true}):page.getByRole('button',{name:'Not tonight',exact:false});
    await control.click();assert.ok((await page.evaluate(()=>window.footerFixtureActions)).includes(kind==='options'?'shuffle':kind==='plan'?'replan':'not-tonight'));
@@ -152,7 +152,7 @@ for(const viewport of sizes)for(const theme of ['light','dark'])for(const [name,
  result.contrast=await contrast(page);assert.ok(result.contrast.length);for(const v of result.contrast)assert.ok(v.ratio>=4.5,'Footer contrast '+JSON.stringify(v));
  await page.screenshot({path:path.join(out,id+'-bottom.png')});
  if(['favorites-empty','history-long','privacy'].includes(name))await page.screenshot({path:path.join(out,id+'-full.png'),fullPage:true});
- const links=page.locator('footer a');await links.first().focus();for(let i=0;i<await links.count();i++){assert.ok(await links.nth(i).evaluate(el=>el===document.activeElement),'Keyboard order');if(i===0){result.focus=await links.nth(i).evaluate(el=>{const s=getComputedStyle(el);return {outline:s.outline,boxShadow:s.boxShadow}});await page.screenshot({path:path.join(out,id+'-focus.png')})}await page.keyboard.press('Tab')}
+ const links=page.locator('footer a');await page.keyboard.press('Tab');await links.first().focus();for(let i=0;i<await links.count();i++){assert.ok(await links.nth(i).evaluate(el=>el===document.activeElement),'Keyboard order');if(i===0){result.focus=await links.nth(i).evaluate(el=>{const s=getComputedStyle(el);return {outline:s.outline,outlineStyle:s.outlineStyle,outlineWidth:s.outlineWidth,boxShadow:s.boxShadow}});assert.equal(result.focus.outlineStyle,'solid');assert.ok(parseFloat(result.focus.outlineWidth)>=2);await page.screenshot({path:path.join(out,id+'-focus.png')})}await page.keyboard.press('Tab')}
  if(route==='/privacy'||route==='/terms'){const text=await page.locator('main').innerText();assert.ok(text.includes('Not yet published or effective'));assert.ok(text.includes('No previous published versions'));}
  if(name==='settings'){
   for(const [href,title] of [['/privacy','Privacy Policy'],['/terms','Terms & Conditions']]){
