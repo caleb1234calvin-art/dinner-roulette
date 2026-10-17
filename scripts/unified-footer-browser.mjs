@@ -18,11 +18,17 @@ const copy=["Pick For Us","by Caustic Relay","Independent application. Not affil
 const artworkManifest=JSON.parse(fs.readFileSync(path.join(repo,'src/lib/artwork/owner-attested-assets.json'),'utf8'));
 const attestedImages=new Set(artworkManifest.assets.map(a=>a.src));
 const git=(...a)=>execFileSync('git',a,{cwd:repo,encoding:'utf8'}).trim();
-const binding={head:git('rev-parse','HEAD'),tree:git('rev-parse','HEAD^{tree}'),status:git('status','--porcelain'),base,repo,at:new Date().toISOString()};
+const binding={head:git('rev-parse','HEAD'),tree:git('rev-parse','HEAD^{tree}'),status:git('status','--porcelain'),base,repo,layoutTransport:'Browser external requests and same-origin /_serverFn/ RPC blocked before dispatch; home discovery is an explicit failure-state fixture, not live provider acceptance.',at:new Date().toISOString()};
 fs.writeFileSync(path.join(out,'binding-before.json'),JSON.stringify(binding,null,2));
 const browser=await chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,args:['--no-sandbox','--disable-dev-shm-usage']});
 const sizes=[{width:320,height:844},{width:390,height:844},{width:512,height:844},{width:768,height:1024},{width:1024,height:768}];
 const cases=[['favorites-empty','/favorites','dinner',0],['favorites-long','/favorites','dinner',20],['history-empty','/history','dinner',0],['history-long','/history','dinner',20],['settings','/settings','dinner',0],['dinner','/','dinner',0],['date-night','/','date-night',0],['nightlife','/','nightlife',0],['privacy','/privacy','dinner',0],['terms','/terms','dinner',0],['history-raster','/history','dinner',1],['favorites-svg','/favorites','dinner',1],['favorites-duplicate-suppressed-raster','/favorites','dinner',2],['history-svg','/history','dinner',1],['favorites-unknown-label','/favorites','dinner',1],['history-unknown-label','/history','dinner',1]];
+async function isolateLayoutTransport(route, blockedDiscovery){
+ const url=new URL(route.request().url());
+ if(url.origin!==new URL(base).origin)return route.abort('blockedbyclient');
+ if(/^\/_serverFn(?:\/|$)/.test(url.pathname)){blockedDiscovery.push({path:url.pathname,method:route.request().method()});return route.abort('blockedbyclient');}
+ return route.continue();
+}
 async function geometry(page){return page.evaluate(()=>{
  const f=document.querySelector('footer'),n=document.querySelector('nav[aria-label="Main"]');
  const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right}};
@@ -56,7 +62,7 @@ async function checkPortalFixtures(browser){
   const id=`portal-${viewport.width}x${viewport.height}-${theme}-${kind}-${mode}-${variant}`,result={id,viewport,theme,kind,mode,variant,fixture:true,status:'FAIL'};
   const context=await browser.newContext({viewport,reducedMotion:variant==='spin'?'no-preference':'reduce'});const page=await context.newPage();page.setDefaultTimeout(12000);const pageErrors=[];page.on('pageerror',e=>pageErrors.push(String(e)));
   const fixtureURL=base+'/__footer-browser-fixture';
-  await context.route('**/*',route=>new URL(route.request().url()).origin===new URL(base).origin?route.continue():route.abort());
+  const blockedDiscovery=[],escapedDiscovery=[];context.on('requestfinished',request=>{if(/^\/_serverFn(?:\/|$)/.test(new URL(request.url()).pathname))escapedDiscovery.push({url:request.url(),method:request.method()})});await context.route('**/*',route=>isolateLayoutTransport(route,blockedDiscovery));
   await context.route(fixtureURL,route=>route.fulfill({contentType:'text/html',body:`<!doctype html><html data-theme="${theme}" class="${mode==='nightlife'?'nightlife-active':mode==='date-night'?'date-night-active':''} ${variant==='halloween'?'halloween-date-night-active':''}"><head><style>${fixture.css}</style></head><body class="bg-bg text-fg"><div id="fixture"></div></body></html>`}));
   try{
    await page.goto(fixtureURL);await page.addScriptTag({content:fixture.js});const rows=variant==='empty'?[]:variant==='svg'?[fixtureRow(1),fixtureRow(2,'pumpkin-patch')]:variant==='raster'?[fixtureRow(1,'escape-room'),fixtureRow(2,'park')]:[fixtureRow(1),fixtureRow(2,'park')];
@@ -85,9 +91,9 @@ async function checkPortalFixtures(browser){
    const control=kind==='options'?page.getByRole('button',{name:'Shuffle options',exact:true}):kind==='plan'?page.getByRole('button',{name:'Plan a different night',exact:true}):page.getByRole('button',{name:'Not tonight',exact:false});
    await control.click();assert.ok((await page.evaluate(()=>window.footerFixtureActions)).includes(kind==='options'?'shuffle':kind==='plan'?'replan':'not-tonight'));
    const legalTarget=theme==='light'?'/privacy':'/terms';await page.locator(`footer a[href="${legalTarget}"]`).click();await page.waitForURL('**'+legalTarget);await page.getByRole('heading',{level:1,name:theme==='light'?'Privacy Policy':'Terms & Conditions',exact:true}).waitFor();result.legalExit=legalTarget;
-   assert.deepEqual(pageErrors,[]);result.status='PASS';
+   assert.deepEqual(pageErrors,[]);assert.deepEqual(escapedDiscovery,[],'No discovery RPC may complete against the server in a controlled layout fixture');result.status='PASS';
   }catch(e){result.error=String(e);result.pageErrors=pageErrors;errors.push({id,error:String(e)});await page.screenshot({path:path.join(out,id+'-failure.png')}).catch(()=>{});}
-  checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
+  result.blockedDiscovery=blockedDiscovery;result.escapedDiscovery=escapedDiscovery;checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
  }
 }
 async function checkSafeArea(browser){
@@ -95,16 +101,16 @@ async function checkSafeArea(browser){
   const id=`safe-area-${viewport.width}x${viewport.height}-${theme}-${route==='/'?'dinner':'favorites'}`,result={id,viewport,theme,route,simulatedSafeAreaBottom:34,status:'FAIL'};
   const context=await browser.newContext({viewport,reducedMotion:'reduce'}),page=await context.newPage();page.setDefaultTimeout(12000);
   await context.addInitScript(theme=>{sessionStorage.setItem('dinner-roulette-hint-seen','1');localStorage.setItem('pick-for-us-v1',JSON.stringify({state:{theme,homeMode:'dinner',preferences:{},visits:[]},version:0}))},theme);
-  await context.route('**/*',r=>new URL(r.request().url()).origin===new URL(base).origin?r.continue():r.abort());
+  const blockedDiscovery=[],escapedDiscovery=[];context.on('requestfinished',request=>{if(/^\/_serverFn(?:\/|$)/.test(new URL(request.url()).pathname))escapedDiscovery.push({url:request.url(),method:request.method()})});await context.route('**/*',route=>isolateLayoutTransport(route,blockedDiscovery));
   try{
    const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setSafeAreaInsetsOverride',{insets:{top:0,left:0,right:0,bottom:34}});
    await page.goto(base+route,{waitUntil:'networkidle'});await page.locator('footer').waitFor();await page.evaluate(()=>scrollTo(0,document.documentElement.scrollHeight));
    result.geometry=await geometry(page);result.navPadding=await page.locator('nav[aria-label="Main"]').evaluate(el=>getComputedStyle(el).paddingBottom);
    assert.equal(result.navPadding,'34px','CDP safe-area override must actually affect CSS');assert.ok(result.geometry.footer.bottom<=result.geometry.nav.y);
    for(const link of result.geometry.links)assert.ok(link.hit,'Safe-area overlay obstruction');assert.ok(result.geometry.scrollWidth<=viewport.width);
-   await page.screenshot({path:path.join(out,id+'.png')});result.status='PASS';
+   await page.screenshot({path:path.join(out,id+'.png')});assert.deepEqual(escapedDiscovery,[],'No discovery RPC may complete against the server in a controlled layout fixture');result.status='PASS';
   }catch(e){result.error=String(e);errors.push({id,error:String(e)});await page.screenshot({path:path.join(out,id+'-failure.png')}).catch(()=>{});}
-  checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
+  result.blockedDiscovery=blockedDiscovery;result.escapedDiscovery=escapedDiscovery;checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
  }
 }
 
@@ -112,7 +118,7 @@ try{
 for(const viewport of sizes)for(const theme of ['light','dark'])for(const [name,route,mode,count] of cases){
  const id=`${viewport.width}x${viewport.height}-${theme}-${name}`;
  const context=await browser.newContext({viewport,reducedMotion:'reduce'});
- await context.route('**/*',r=>{const u=new URL(r.request().url());if(u.origin!==new URL(base).origin)return r.abort();return r.continue()});
+ const blockedDiscovery=[],escapedDiscovery=[];context.on('requestfinished',request=>{if(/^\/_serverFn(?:\/|$)/.test(new URL(request.url()).pathname))escapedDiscovery.push({url:request.url(),method:request.method()})});await context.route('**/*',route=>isolateLayoutTransport(route,blockedDiscovery));
  await context.addInitScript(({theme,mode,count,name})=>{
  sessionStorage.setItem('dinner-roulette-hint-seen','1');
  const prefs={},visits=[];for(let i=0;i<count;i++){const id='footer-fixture-'+i;prefs[id]={restaurantId:id,name:'Fixture restaurant '+String(i).padStart(2,'0'),favorite:true,cuisineLabel:'American'};visits.push({id:'v'+i,restaurantId:id,restaurantName:'Fixture restaurant '+i,date:'2026-10-16T12:00:00Z',cuisineLabel:'American'})}
@@ -160,9 +166,9 @@ for(const viewport of sizes)for(const theme of ['light','dark'])for(const [name,
   }
   result.footerLinkNavigation='Privacy and Terms activated successfully';
  }
- assert.deepEqual(pageErrors,[]);result.status='PASS';
+ assert.deepEqual(pageErrors,[]);assert.deepEqual(escapedDiscovery,[],'No discovery RPC may complete against the server in a controlled layout fixture');result.status='PASS';
  }catch(e){result.error=String(e);result.pageErrors=pageErrors;errors.push({id,error:String(e)});await page.screenshot({path:path.join(out,id+'-failure.png'),fullPage:true}).catch(()=>{});}
- checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
+ result.blockedDiscovery=blockedDiscovery;result.escapedDiscovery=escapedDiscovery;checks.push(result);fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({binding,buildProof,checks,errors},null,2));console.log(result.status,id,result.error||'');await context.close();
 }
 await checkPortalFixtures(browser);
 await checkSafeArea(browser);

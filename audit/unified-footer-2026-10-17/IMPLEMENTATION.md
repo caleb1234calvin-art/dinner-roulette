@@ -30,3 +30,7 @@ Existing Legal browser Settings-link locators were scoped to main because the ne
 Local browser process/socket restrictions and preview connection refusal remain infrastructure limitations, not browser acceptance. Exact-head hosted browser evidence is required. Local logs are preserved in the separate unified-footer-validation evidence directory; original failed attempts are not relabeled PASS.
 
 The draft PR targets PR77's `integration/legal-publication-v1-2026-10-16` branch to display only footer changes. Existing validation workflow adds this exact footer branch to its push trigger, so the dependent PR still gets exact-head validation without changing repository settings or permissions. Existing Android pull-request validation remains unsigned; no signing workflow is requested.
+
+## Hosted harness follow-up
+
+Initial geometry execution stopped before any comparisons because the generic test module loader treated JSON as TypeScript. A minimal JSON-data namespace branch plus two actual-module/default-import regression tests resolves that harness limitation; production code and geometry assertions are unchanged. The rendered footer harness now blocks same-origin server RPC before dispatch as well as external browser traffic and records/guards those calls. Home cases are controlled discovery-failure layout fixtures, not live provider reliability evidence. All retained functional suites still run independently. Prior heads, logs, failures and partial runs remain preserved; no prior-browser PASS transfers automatically.
