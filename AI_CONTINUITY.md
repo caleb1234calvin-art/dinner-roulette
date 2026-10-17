@@ -1,3 +1,23 @@
+## CURRENT — 2026-10-17 18:56 UTC: scoped owner tablet/PWA observations; frozen release unchanged
+
+Owner source Sentinel_313a16f3a4f48191b88acdd93e2270b1, October17 report; exact test timestamps unspecified. Documentation and read-only analysis only.
+
+CURRENT: Owner reports SM-T220 portrait good and landscape functional/uncropped but a narrow phone-style central column wastes width. Nonblocking future improvement Issue83: https://github.com/caleb1234calvin-art/dinner-roulette/issues/83 . Read-only code diagnosis finds repeated max-w-lg caps in production and PR82; this is consistent inference, not independent device reproduction. No implementation.
+
+Historical black-screen incident was not reproduced in this session, but remains UNRESOLVED with no established cause/permanent fix. General completion of reasonably available checks has unspecified case mapping. Tablet installed context/native and hosted identity/OS/browser/exact test time remain unknown.
+
+Separate OWNER-REPORTED PWA smoke: actual Google result discovery, browser-offered install, successful standalone launch without ordinary address bar, ad blocker enabled. This does not establish native/Play acceptance, broad blocker compatibility, installed mechanism or which device/browser/source. Do not assume the PWA observation used the tablet context.
+
+Eight additive owner-ledger rows and separate seven-case PWA track: audit/owner-tablet-pwa-2026-10-17/. Existing36-row exact-new-release ledger remains unchanged NOT RUN. Current tablet-unavailable assumption is superseded, historical records retained. Unpublished footer/effective legal pages/final native update/Play remain NOT RUN.
+
+Fresh18:52: mainc3208d9fdc9a21d698efa9254be1286f5d3d2836; PR82 exactcf18ff1c5a56ecf59f8006d4f7c83fb289f393df draft/open/unmerged; productionFMS READY/sourcec3208/five expected alias metadata/noerror. Frozen approved tree6300c1061a790d84447bb92166f340aec895757b unchanged.
+
+NEXT: After actual authorized web publication and delivery confirmation, arrange second owner phone/tablet/PWA session based on availability. Check live footer/legal/support/core flows, PWA update/persistence/offline/coexistence and orientation with actual context/source. This is an OPEN postacceptance action, not an appointment, schedule or automatic release.
+
+HOLD: October19 Chicago exact conditional authority and all safeguards unchanged. These observations are not release-day preflight or all36-case PASS. Preserve original offline issue, signer incompatibility, physical/Play/recovery qualifications. No source/main/deploy/date/APK/data/security mutation. Landscape enhancement remains future work outside frozen PR82.
+
+---
+
 ## CURRENT — 2026-10-17 17:58 UTC: owner conditional exact PR82 release authority recorded; TODAY HOLD
 
 Owner Sentinel_0801fec560888191bd3f442b4cc61b8f at17:57:11.929192UTC authorizes only PR82 cf18ff1c5a56ecf59f8006d4f7c83fb289f393df/tree6300c1061a790d84447bb92166f340aec895757b website/legal release on2026-10-19 America/Chicago, strictly subject to all mandatory safeguards. Verbatim excerpts and bounded interpretation preserved at audit/publication-source-2026-10-17/authorization/OWNER-CONDITIONAL-RELEASE.md.
