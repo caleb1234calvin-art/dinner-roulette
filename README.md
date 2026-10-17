@@ -17,6 +17,13 @@ starts with fresh browser-local favorites, history and settings. Existing data
 remains on the legacy origin in the same browser/profile; no transfer or sync
 is provided, and the `pick-for-us-v1` key/schema remains unchanged.
 
+The isolated Android identity candidate uses `app.pickforus.android`, with the
+same Pick For Us label under Caustic Relay. It continues loading the legacy HTTPS
+runtime above. Changing package ID creates a separate installation and app-local
+storage; it does not update old-ID installs or transfer their saved data. Keep old
+installs/data intact. Registration, Play eligibility, signing, upload and physical
+device acceptance remain separate gates; see `ANDROID_RELEASE.md`.
+
 The final head injector and client navigation share route-aware canonical/OG
 metadata. `/` is indexable on the apex and legacy serving host; `/settings`,
 `/history` and `/favorites` use their own clean apex canonical and

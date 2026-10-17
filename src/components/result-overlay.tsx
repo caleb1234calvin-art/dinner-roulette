@@ -1,3 +1,4 @@
+import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalIdentityPreference, seasonalFavoriteToggleIds } from "@/lib/date-night/identity-preferences";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
@@ -129,7 +130,8 @@ export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotT
             {mode === "nightlife" ? <div className="mt-4 rounded-xl bg-surface p-3 text-center text-xs leading-relaxed text-subtle shadow-border"><div className="flex items-center justify-center gap-2"><MoonStar className="size-4" />Nightlife and casino information is for discovery only.</div><p className="mt-2">Verify admission, age rules, hours, and local requirements directly with the venue. Pick For Us does not sell alcohol, accept wagers, or provide gambling services.</p></div> : null}
             {restaurant.phone ? <Button variant="ghost" className="w-full" asChild><a href={`tel:${restaurant.phone}`}><Phone className="size-4" />Call venue</a></Button> : null}
           </div>
-        </div></>}
+        </div>
+        <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={[mode === "nightlife" && nightlifeIcon ? nightlifeIcon : mode === "date-night" ? dateNightIcon : visual.src]} /></div></>}
     </div></div>, document.body,
   );
 }
