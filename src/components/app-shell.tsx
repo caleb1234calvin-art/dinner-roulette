@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { applyTheme } from "@/lib/theme";
 import { useAppStore } from "@/lib/store";
 
+import { PageFooter } from "@/components/page-footer";
 import { LegalChangeNotice } from "@/components/legal-change-notice";
 
 const NAV = [
@@ -30,9 +31,10 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-dvh bg-bg text-fg">
       <div className="mx-auto flex min-h-dvh w-full max-w-lg flex-col">
-        <div className="flex-1 pb-24">
+        <div className="flex flex-1 flex-col" style={{ paddingBottom: `calc(${pathname === "/" ? "16rem" : "5rem"} + env(safe-area-inset-bottom, 0px))` }}>
           <LegalChangeNotice />
           {children}
+          <div className="mt-auto px-4"><PageFooter pathname={pathname} /></div>
         </div>
         <nav
           className="fixed inset-x-0 bottom-0 z-30 border-t border-border/80 bg-bg/95 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-sm"

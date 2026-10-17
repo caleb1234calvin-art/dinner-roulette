@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature/dinner-icon-pack-1
+      - integration/unified-legal-footer-2026-10-17
       - integration/active-work-pass-1
   pull_request:
     branches:
@@ -125,6 +126,7 @@ jobs:
           - seasonal-regional-wave1
           - geometry
           - legal-support
+          - unified-footer
 
     steps:
       - name: Check out repository
@@ -275,6 +277,19 @@ jobs:
           CI: "true"
           VITE_AUTH_ENABLED: "true"
         run: node scripts/seasonal-card-layout-browser.mjs
+
+      - name: Unified footer rendered acceptance
+        if: matrix.suite == 'unified-footer'
+        env:
+          FOOTER_REPO: .
+          FOOTER_URL: http://127.0.0.1:8083
+          FOOTER_OUT: audit/browser-results/unified-footer
+        run: |
+          node scripts/with-app-env.mjs node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 8083 --strictPort > /tmp/footer-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true; cp /tmp/footer-preview.log audit/browser-results/unified-footer-preview.log' EXIT
+          for n in $(seq 1 60); do curl -fsS http://127.0.0.1:8083/privacy > /dev/null && break; sleep 1; done
+          node scripts/unified-footer-browser.mjs
 
       - name: Preserve browser evidence
         if: always()

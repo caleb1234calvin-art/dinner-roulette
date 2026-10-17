@@ -148,7 +148,7 @@ export function LegalDocumentPage({ documentId }: { documentId: "privacy" | "ter
           ))
         )}
       </section>
-      <footer className="mt-8 border-t border-border pt-4 text-sm leading-7 text-muted">
+      <section aria-label="Policy contact" className="mt-8 border-t border-border pt-4 text-sm leading-7 text-muted">
         <p>
           Support and privacy:{" "}
           <a className="break-all text-fg underline" href={`mailto:${SUPPORT_EMAIL}`}>
@@ -156,7 +156,7 @@ export function LegalDocumentPage({ documentId }: { documentId: "privacy" | "ter
           </a>
         </p>
         <p>Caustic Relay / Pick For Us</p>
-      </footer>
+      </section>
     </main>
   );
 }
