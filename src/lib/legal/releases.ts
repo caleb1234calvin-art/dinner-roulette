@@ -10,12 +10,14 @@ export type LegalDocument = {
   version: string;
   status: string;
   effectiveDate: string | null;
+  proposedPublicationDate?: string | null;
   sections: LegalSection[];
 };
 export type LegalRelease = {
   version: string;
   status: string;
   effectiveDate: string | null;
+  proposedPublicationDate?: string | null;
   changeType: string;
   summary: string[];
   requiresPrivacyConsent: boolean;
@@ -35,8 +37,15 @@ export function materialNotice(release: LegalRelease, dismissedVersion: string |
     release.version !== dismissedVersion
   );
 }
-export function publicationLabel(release: { status: string; effectiveDate: string | null }) {
+export function publicationLabel(release: {
+  status: string;
+  effectiveDate: string | null;
+  proposedPublicationDate?: string | null;
+}) {
   return release.status === "published" && release.effectiveDate
     ? `Effective date: ${release.effectiveDate}`
-    : "Not yet published or effective. The effective date will be set for the authorized publication.";
+    : "Not yet published or effective. The effective date will be set for the authorized publication." +
+        (release.proposedPublicationDate
+          ? ` Proposed publication date: ${release.proposedPublicationDate}, subject to readiness and separate release approval.`
+          : "");
 }

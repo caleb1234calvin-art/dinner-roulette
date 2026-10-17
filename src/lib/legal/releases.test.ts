@@ -38,3 +38,15 @@ test("material notices repeat until dismissed and new versions show again; clari
   assert.equal(materialNotice({ ...material, effectiveDate: null }, null), false);
   assert.equal(materialNotice({ ...material, changeType: "clarification" }, null), false);
 });
+
+test("proposed publication is conditional planning metadata, never an effective date or notice trigger", () => {
+  const proposed = { ...initial, proposedPublicationDate: "2026-10-19" };
+  assert.equal(materialNotice(proposed, null), false);
+  assert.equal(materialNotice({ ...proposed, changeType: "material" }, null), false);
+  assert.equal(proposed.status, "unreleased");
+  assert.equal(proposed.effectiveDate, null);
+  assert.equal(publicationLabel(proposed),
+    "Not yet published or effective. The effective date will be set for the authorized publication." +
+    " Proposed publication date: 2026-10-19, subject to readiness and separate release approval.");
+  assert.ok(!publicationLabel(proposed).includes("Effective date:"));
+});

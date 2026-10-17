@@ -16,6 +16,19 @@ await mkdir(output, { recursive: true });
 const proof = assertBrowserBuild();
 const legalHistory=JSON.parse(await readFile(new URL('../src/lib/legal/history.json',import.meta.url),'utf8'));
 const expectedStatus=legalHistory.current.status==='published' ? `Effective date: ${legalHistory.current.effectiveDate}` : 'Not yet published or effective';
+async function checkPublicationText(page) {
+  const main=await page.locator('main').innerText();
+  const historyText=await page.locator('#version-history').innerText();
+  assert.ok(main.includes(expectedStatus));assert.ok(historyText.includes(expectedStatus));
+  if(legalHistory.current.proposedPublicationDate) {
+    const proposed=`Proposed publication date: ${legalHistory.current.proposedPublicationDate}, subject to readiness and separate release approval.`;
+    assert.equal(main.split(proposed).length-1,2,'Proposed date must appear in document metadata and history');
+    assert.ok(historyText.includes(proposed));
+    assert.ok(!main.includes('Effective date:'));
+    assert.ok(!historyText.includes(`Version ${legalHistory.current.version} · Published`));
+    assert.ok(historyText.includes('Prepared for publication'));
+  }
+}
 const checks = [];
 let browser;
 const server=spawn(process.execPath,['scripts/with-app-env.mjs','node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port',new URL(base).port || '8081','--strictPort'],{env:{...process.env,DATABASE_URL:''},stdio:['ignore','pipe','pipe']});
@@ -75,6 +88,7 @@ try {
         assert.ok((await page.locator('main').innerText()).includes('causticrelay@gmail.com'));
         assert.ok((await page.locator('main').innerText()).includes('Version '+legalHistory.current.version));
         assert.ok((await page.locator('main').innerText()).includes(expectedStatus));
+        await checkPublicationText(page);
         assert.equal(await page.getByRole('heading',{name:'Version history',exact:true}).count(),1);
         if(!legalHistory.previous.length) assert.ok((await page.locator('#version-history').innerText()).includes('No previous published versions'));
         if(legalHistory.current.changeType!=='material'||legalHistory.current.status!=='published') assert.equal(await page.getByRole('complementary',{name:'Legal updates'}).count(),0);
@@ -87,6 +101,7 @@ try {
           assert.ok(box && box.y>=0 && box.y+box.height<=844,`Anchor heading outside viewport: ${href}`);
           await visibleHit(heading);
         }
+        await page.screenshot({path:resolve(output,`${width}-${theme}-${path.slice(1)}-history-viewport.png`)});
         await page.goto(base+path,{waitUntil:'networkidle'});
         const back=page.getByRole('link',{name:'Back to Settings',exact:true});await back.focus();
         assert.ok(await back.evaluate(el=>el===document.activeElement));await visibleHit(back);await page.screenshot({path:resolve(output,`${width}-${theme}-${path.slice(1)}-focused-viewport.png`)});await back.press('Tab');assert.ok(await page.evaluate(()=>document.activeElement?.tagName==='A'));await page.keyboard.press('Shift+Tab');assert.ok(await back.evaluate(el=>el===document.activeElement));await back.press('Enter');
@@ -122,7 +137,7 @@ try {
     }
   }
   const noJs=await browser.newContext({javaScriptEnabled:false});const p=await noJs.newPage();
-  for(const path of ['/privacy','/terms']) {const r=await p.goto(base+path);assert.equal(r.status(),200);assert.ok((await p.locator('main').innerText()).includes('causticrelay@gmail.com'));assert.equal(await p.locator('video[src*="CAUSTIC_RELAY"]').count(),0);assert.ok((await p.locator('#version-history').innerText()).includes(legalHistory.current.status==='published'?'Published':'Prepared for publication'));pass(path+' without JavaScript');}
+  for(const path of ['/privacy','/terms']) {const r=await p.goto(base+path);assert.equal(r.status(),200);assert.ok((await p.locator('main').innerText()).includes('causticrelay@gmail.com'));assert.equal(await p.locator('video[src*="CAUSTIC_RELAY"]').count(),0);assert.ok((await p.locator('#version-history').innerText()).includes(legalHistory.current.status==='published'?'Published':'Prepared for publication'));await checkPublicationText(p);pass(path+' without JavaScript');}
   await noJs.close();
   pass(await checkLegalNotice(browser, base, { output, visibleHit, textContrast, overflow, onPass: pass }));
 } catch(error) { checks.push({name:'terminal failure',status:'FAIL',error:String(error),stack:error.stack});process.exitCode=1; }
