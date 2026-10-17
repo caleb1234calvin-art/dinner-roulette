@@ -17,6 +17,15 @@ const checks=[]; const errors=[];
 const copy=["Pick For Us","by Caustic Relay","Independent application. Not affiliated with or endorsed by listed venues, delivery services, rideshare providers, mapping services or other third parties unless expressly stated.","External services maintain their own availability, transactions, terms and privacy practices.","Privacy Policy","Terms & Conditions","Support"];
 const artworkManifest=JSON.parse(fs.readFileSync(path.join(repo,'src/lib/artwork/owner-attested-assets.json'),'utf8'));
 const attestedImages=new Set(artworkManifest.assets.map(a=>a.src));
+const legalHistory=JSON.parse(fs.readFileSync(path.join(repo,'src/lib/legal/history.json'),'utf8'));
+assert.deepEqual(
+ {version:legalHistory.current.version,status:legalHistory.current.status,effectiveDate:legalHistory.current.effectiveDate,publicationTimeZone:legalHistory.current.publicationTimeZone,proposedPublicationDate:legalHistory.current.proposedPublicationDate},
+ {version:'1.0',status:'published',effectiveDate:'2026-10-19',publicationTimeZone:'America/Chicago',proposedPublicationDate:null},
+ 'Footer acceptance must use the finalized publication-source tuple',
+);
+const expectedLegalPublication=legalHistory.current.status==='published'
+ ? `Effective date: ${legalHistory.current.effectiveDate} (${legalHistory.current.publicationTimeZone})`
+ : 'Not yet published or effective';
 const git=(...a)=>execFileSync('git',a,{cwd:repo,encoding:'utf8'}).trim();
 const binding={head:git('rev-parse','HEAD'),tree:git('rev-parse','HEAD^{tree}'),status:git('status','--porcelain'),base,repo,layoutTransport:'Browser external requests and same-origin /_serverFn/ RPC blocked before dispatch; home discovery is an explicit failure-state fixture, not live provider acceptance.',at:new Date().toISOString()};
 fs.writeFileSync(path.join(out,'binding-before.json'),JSON.stringify(binding,null,2));
@@ -159,7 +168,12 @@ for(const viewport of sizes)for(const theme of ['light','dark'])for(const [name,
  await page.screenshot({path:path.join(out,id+'-bottom.png')});
  if(['favorites-empty','history-long','privacy'].includes(name))await page.screenshot({path:path.join(out,id+'-full.png'),fullPage:true});
  const links=page.locator('footer a');await page.keyboard.press('Tab');await links.first().focus();for(let i=0;i<await links.count();i++){assert.ok(await links.nth(i).evaluate(el=>el===document.activeElement),'Keyboard order');if(i===0){result.focus=await links.nth(i).evaluate(el=>{const s=getComputedStyle(el);return {outline:s.outline,outlineStyle:s.outlineStyle,outlineWidth:s.outlineWidth,boxShadow:s.boxShadow}});assert.equal(result.focus.outlineStyle,'solid');assert.ok(parseFloat(result.focus.outlineWidth)>=2);await page.screenshot({path:path.join(out,id+'-focus.png')})}await page.keyboard.press('Tab')}
- if(route==='/privacy'||route==='/terms'){const text=await page.locator('main').innerText();assert.ok(text.includes('Not yet published or effective'));assert.ok(text.includes('No previous published versions'));}
+ if(route==='/privacy'||route==='/terms'){
+  const text=await page.locator('main').innerText();
+  assert.equal(text.split(expectedLegalPublication).length-1,2,'Source-bound publication label must appear in document metadata and history');
+  if(legalHistory.current.status==='published')assert.ok(!/Not yet published|Prepared for publication|Proposed publication date|drafts for review/.test(text));
+  assert.ok(text.includes('No previous published versions'));
+ }
  if(name==='settings'){
   for(const [href,title] of [['/privacy','Privacy Policy'],['/terms','Terms & Conditions']]){
    await page.locator(`footer a[href="${href}"]`).click();await page.waitForURL('**'+href);await page.getByRole('heading',{level:1,name:title,exact:true}).waitFor();await page.goto(base+'/settings',{waitUntil:'networkidle'});

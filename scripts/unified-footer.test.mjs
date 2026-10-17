@@ -36,3 +36,13 @@ test('route and overlay coverage explicit, with safe area clearance and finalize
  const mapping=read('src/components/page-footer.tsx');assert.match(mapping,/pathname === "\/favorites"/);assert.match(mapping,/pathname === "\/history"/);
  const docs=JSON.parse(read('src/lib/legal/documents.json'));for(const id of ['privacy','terms']){assert.equal(docs[id].version,'1.0');assert.equal(docs[id].status,'published');assert.equal(docs[id].effectiveDate,'2026-10-19');assert.equal(docs[id].publicationTimeZone,'America/Chicago');assert.equal(docs[id].proposedPublicationDate,null);}
 });
+
+test('footer browser publication checks bind source metadata and reject stale prepared copy',()=>{
+ const browser=read('scripts/unified-footer-browser.mjs');
+ assert.ok(browser.includes("src/lib/legal/history.json"));
+ assert.ok(browser.includes("text.split(expectedLegalPublication).length-1,2"));
+ assert.ok(browser.includes("legalHistory.current.effectiveDate"));
+ assert.ok(browser.includes("legalHistory.current.publicationTimeZone"));
+ assert.ok(browser.includes("Not yet published|Prepared for publication|Proposed publication date|drafts for review"));
+ assert.ok(!browser.includes("assert.ok(text.includes('Not yet published or effective'))"));
+});
