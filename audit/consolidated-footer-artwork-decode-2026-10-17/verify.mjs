@@ -13,7 +13,7 @@ const base=process.env.FOOTER_URL || 'http://127.0.0.1:8085';
 assert.ok(['127.0.0.1','localhost'].includes(new URL(base).hostname));
 const {assertBrowserBuild}=await import(pathToFileURL(path.join(repo,"scripts/browser-build-proof.mjs")));
 const buildProof=assertBrowserBuild(repo);
-assert.equal(buildProof.source.sha256,'573f96fa96471d330df0bff93c3362d8f1a0771c3a2d9f2c7d55ec03e042a28f');assert.equal(buildProof.source.files,542);
+assert.equal(buildProof.source.sha256,'5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84');assert.equal(buildProof.source.files,542);
 fs.writeFileSync(path.join(out,"build-proof.json"), JSON.stringify(buildProof,null,2));
 const checks=[]; const errors=[];
 const copy=["Pick For Us","by Caustic Relay","Independent application. Not affiliated with or endorsed by listed venues, delivery services, rideshare providers, mapping services or other third parties unless expressly stated.","External services maintain their own availability, transactions, terms and privacy practices.","Privacy Policy","Terms & Conditions","Support"];
@@ -21,7 +21,7 @@ const artworkManifest=JSON.parse(fs.readFileSync(path.join(repo,'src/lib/artwork
 const attestedImages=new Set(artworkManifest.assets.map(a=>a.src));
 const git=(...a)=>execFileSync('git',a,{cwd:repo,encoding:'utf8'}).trim();
 const binding={head:git('rev-parse','HEAD'),tree:git('rev-parse','HEAD^{tree}'),status:git('status','--porcelain'),base,repo,layoutTransport:'Browser external requests and same-origin /_serverFn/ RPC blocked before dispatch; home discovery is an explicit failure-state fixture, not live provider acceptance.',at:new Date().toISOString()};
-assert.equal(binding.head,'efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2');assert.equal(binding.tree,'0af83ad58fe87e701b7970475d43d73b77246361');assert.equal(binding.status,'');
+assert.equal(binding.head,'29bec315b919535c9aeb3f7e8b1c9e3fa638e80d');assert.equal(binding.tree,'de43c3ee90ad31e5de678737be1eed61b6eb6d01');assert.equal(binding.status,'');
 fs.writeFileSync(path.join(out,'binding-before.json'),JSON.stringify(binding,null,2));
 const browser=await chromium.launch({headless:true,executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,args:['--no-sandbox','--disable-dev-shm-usage']});
 const sizes=[{width:320,height:844},{width:390,height:844}];
