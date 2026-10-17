@@ -1,0 +1,37 @@
+{
+  "currentCandidate": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "groups": {
+    "39004750065": {
+      "archives": 18,
+      "bytes": 1538579874,
+      "members": 14524
+    },
+    "39004829965": {
+      "archives": 1,
+      "bytes": 772,
+      "members": 2
+    },
+    "39004750057": {
+      "archives": 2,
+      "bytes": 6889844,
+      "members": 11
+    },
+    "39005040693": {
+      "archives": 1,
+      "bytes": 1772162,
+      "members": 31
+    }
+  },
+  "originalManifest": {
+    "name": "verified-originals.json",
+    "bytes": 3594255,
+    "sha256": "49f602e3e0da9df24aa03792f42db943e5d0e5897b8a71ed7f42fd483309cf3e"
+  },
+  "losslessCompressedManifest": {
+    "name": "verified-originals.json.gz",
+    "bytes": 594936,
+    "sha256": "18e5756e358abea429629829123e345f9bed6976255d14b6b8cb8747701ff030",
+    "roundTrip": "PASS"
+  },
+  "scope": "Original byte hashes, ZIP CRC and safe unique member paths verified; every member hashed. Failed evidence-only predecessor is separately preserved. No indefinite retention guarantee."
+}

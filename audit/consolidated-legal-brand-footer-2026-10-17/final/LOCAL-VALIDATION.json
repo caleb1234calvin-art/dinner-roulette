@@ -1,0 +1,132 @@
+{
+  "scope": "Fresh NONPRODUCTION consolidated candidate. Local checks do not claim hosted/physical device acceptance.",
+  "head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "tree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
+  "parent": "efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2",
+  "branch": "integration/legal-brand-footer-2026-10-17",
+  "status": "",
+  "checkedAt": "2026-10-17T05:05:34.546477+00:00",
+  "checks": {
+    "repository": {
+      "pass": 1270,
+      "skips": 4,
+      "fail": 0
+    },
+    "application": {
+      "pass": 73,
+      "fail": 0
+    },
+    "python": {
+      "pass": 17,
+      "fail": 0
+    },
+    "typecheck": "PASS",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeAuthenticatedBuild": "PASS",
+    "casinoAudit": "PASS",
+    "nativeSourceAndIcons": "PASS",
+    "nativeSyncTrackedDiff": "PASS no tracked diff with physical node_modules",
+    "legalPrepared": "PASS",
+    "legalPublicationGuard": "Expected rejection; both version1.0 unreleased and null effectiveDate"
+  },
+  "buildProof": {
+    "schemaVersion": 1,
+    "status": "BUILT",
+    "authFlag": "true",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "startedAt": "2026-10-17T05:03:10.918Z",
+    "output": {
+      "sha256": "5d8c99d51bc96e18d5a8a37d216fa509657ad4cc67b35128a3ff5b51aa7a2e72",
+      "files": 198
+    },
+    "completedAt": "2026-10-17T05:03:13.984Z"
+  },
+  "preservedPreparationIncidents": [
+    "Local d8a205abbcb893d66dbc427a16f1ba135c5ee8b4 identical-tree commit was not pushed: direct HTTPS push lacked credentials; authoritative connector-created remote commit is29bec315.",
+    "Initial native sync with linked node_modules rewrote generated dependency path; generated file restored and physical dependencies copied; rerun succeeded without tracked diff.",
+    "Python tests produced ignored __pycache__ beneath scripts; cache removed before exact-head build fingerprint. No tracked source changed."
+  ],
+  "logs": [
+    {
+      "name": "android-check.log",
+      "bytes": 521,
+      "sha256": "4cb72c80a2c772e0b64f141e3e1f25488f1d7958ad359d412c937910abf04a28"
+    },
+    {
+      "name": "android-sync-physical-deps.log",
+      "bytes": 430,
+      "sha256": "ffd19ba0c1e9859e26670a03c1342872b33a3469503c853696b1e96f0e4379f0"
+    },
+    {
+      "name": "android-sync.log",
+      "bytes": 430,
+      "sha256": "baad6414c747098e9beeb69b407184b044be7b3bb24789f7a54a9c76ee9a60a2"
+    },
+    {
+      "name": "audit-casinos.log",
+      "bytes": 5014,
+      "sha256": "2d0803767ef2020413d2ab49d14b9ed18486816127b5ab7f357f2bd3dcb944d1"
+    },
+    {
+      "name": "build.log",
+      "bytes": 11212,
+      "sha256": "63e0f74ff0e31f475b3a7f04df98087522c5252e4aa1a70604ff0a615d106e5e"
+    },
+    {
+      "name": "exact-head-build.log",
+      "bytes": 11212,
+      "sha256": "0c5d959df38354856c147bd3e274791ef8e409d01f1fec787ab27e7e9e48ceb6"
+    },
+    {
+      "name": "exact-head-lint.log",
+      "bytes": 1953,
+      "sha256": "0d11e160d3b64d5b6ce2b5970488e8278369ccc6ed50d9952b2253b963ee3c59"
+    },
+    {
+      "name": "exact-head-test.log",
+      "bytes": 850685,
+      "sha256": "9414c8df96d08382f366dedcbdf0fa02908341d52f59a7904a2047db6379f8bb"
+    },
+    {
+      "name": "exact-head-typecheck.log",
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    },
+    {
+      "name": "legal-prepared.log",
+      "bytes": 66,
+      "sha256": "b99d1365b307c3f2dc04adadca1ca2956416d508b2a5ef55217bf08f2dc976ef"
+    },
+    {
+      "name": "legal-publication-hold.log",
+      "bytes": 862,
+      "sha256": "786d7a98ebe7e60656d5abd9e2db2352a57735d77aa0a53e6f95503cc74c2e1b"
+    },
+    {
+      "name": "lint.log",
+      "bytes": 1953,
+      "sha256": "0d11e160d3b64d5b6ce2b5970488e8278369ccc6ed50d9952b2253b963ee3c59"
+    },
+    {
+      "name": "npm-test.log",
+      "bytes": 850797,
+      "sha256": "e336528f56c1f0af8109cbe52129c98cf94aa0daed3f46eb9d8121729802e02f"
+    },
+    {
+      "name": "python-tests.log",
+      "bytes": 116,
+      "sha256": "9eb929715e09dab33093165c3270151a1a39b215b1f2fde18923d4ace385fd8d"
+    },
+    {
+      "name": "typecheck.log",
+      "bytes": 336,
+      "sha256": "fd701089501caed8921791099b43b18612be047d31390a24cf66a22b1fb8267c"
+    }
+  ]
+}

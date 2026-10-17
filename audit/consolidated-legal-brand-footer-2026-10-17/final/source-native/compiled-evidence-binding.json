@@ -1,0 +1,32 @@
+{
+  "result": "PASS WITH QUALIFICATIONS",
+  "run_id": 39004750057,
+  "run_attempt": 1,
+  "head": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "head_tree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
+  "validation_job": 117314809153,
+  "validation_steps": 21,
+  "validation_steps_success": true,
+  "signing_job": 117315552672,
+  "signing_conclusion": "skipped",
+  "source_revision_in_original": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "synthetic_merge": "49bc7d874e8b944fb619fa113c5c90f124e0c4e3",
+  "synthetic_merge_parents": [
+    "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d"
+  ],
+  "native_unit_tests_executed": false,
+  "no_source_task_count": 37,
+  "job_log_sha256": "0b48b286652b213e29091b1a816e63342fd96cc00db8dd52c3c63439957cee0d",
+  "repository_tests": {
+    "total": 1274,
+    "pass": 1270,
+    "skip": 4,
+    "fail": 0
+  },
+  "app_tests": {
+    "pass": 73,
+    "fail": 0
+  },
+  "python_tests": 17
+}

@@ -1,0 +1,146 @@
+{
+  "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091517467-casino-browser-evidence-seasonal-regional-wave1.zip",
+  "archiveSHA256": "99799bcb1075e52cee6fc4cd37503866452d306a5d652f0d1d878775463e2ff3",
+  "bytes": 287610350,
+  "candidateHead": "29bec315b919535c9aeb3f7e8b1c9e3fa638e80d",
+  "candidateTree": "de43c3ee90ad31e5de678737be1eed61b6eb6d01",
+  "source": {
+    "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+    "files": 542
+  },
+  "verdicts": [
+    {
+      "path": "seasonal-regional-wave1/verdict.json",
+      "passed": true,
+      "errors": [],
+      "network": {
+        "interceptedProviderCalls": 1928,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      },
+      "publicProviderCalls": 0,
+      "regionalAcceptance": {
+        "acceptedIds": [
+          "date-night-ok26-w1-annabelle",
+          "date-night-ar26-warehouse",
+          "date-night-ar26-asylum",
+          "date-night-ks26-louisburg",
+          "date-night-ks26-exiled",
+          "date-night-ok26-w1-psycho",
+          "date-night-ar26-river",
+          "date-night-ok26-w1-roots",
+          "date-night-ok26-w1-castle",
+          "date-night-ar26-hollow",
+          "date-night-ok26-w1-plantation",
+          "date-night-ar26-magic"
+        ],
+        "expectedScenarioCount": 317,
+        "actualScenarioCount": 317,
+        "expiredNovember5Controls": 12,
+        "negativeLifecycleControls": 24,
+        "actualUiRadii": [
+          1,
+          15,
+          30,
+          50
+        ],
+        "independentRadiusOnly": 25,
+        "manualLocationOnly": true,
+        "historicalReceiptControls": 32
+      },
+      "scenariosCount": 317,
+      "scenariosStatusCounts": {
+        "True": 317
+      }
+    },
+    {
+      "path": "seasonal-regional-wave1/wave2-subpass.json",
+      "passed": true,
+      "code": 0,
+      "signal": null,
+      "legacyScenarioCount": 317
+    },
+    {
+      "path": "seasonal-wave2-ten/verdict.json",
+      "passed": true,
+      "errors": [],
+      "network": {
+        "interceptedProviderCalls": 1765,
+        "blockedServerRequests": [],
+        "forwardedExternalCalls": 0
+      },
+      "publicProviderCalls": 0,
+      "wave2Acceptance": {
+        "acceptedIds": [
+          "date-night-ks26-walters",
+          "date-night-il26-w1-spook",
+          "date-night-il26-w1-boo",
+          "date-night-il26-w1-sonny-acres-haunted-experiences",
+          "date-night-il26-w1-hayride-horror-bayou",
+          "date-night-il26-w1-217",
+          "date-night-il26-w1-paintball",
+          "date-night-il26-w1-chitty",
+          "date-night-ks26-nightmare",
+          "date-night-ar26-royal"
+        ],
+        "literalOffIds": [
+          "date-night-ks26-walters",
+          "date-night-ks26-nightmare"
+        ],
+        "expectedScenarioCount": 277,
+        "actualScenarioCount": 277,
+        "perRecordScenarios": [
+          "consumer-anything-category-320",
+          "consumer-anything-category-390",
+          "consumer-anything-category-512",
+          "open-now",
+          "ended",
+          "next-year",
+          "season-off",
+          "radius-exclusion",
+          "mixed-alias-toggle-cache",
+          "resume-expiry-options",
+          "resume-expiry-result",
+          "provider-failure",
+          "favorite-alias-cache-resume-unsave",
+          "negative-alias-beats-canonical-favorite",
+          "alias-exclusion-expiry-and-not-tonight",
+          "affirmed-favorites-direct-reload-expiry",
+          "qualified-night-plan",
+          "supported-category-matrix",
+          "negative-lifecycle-permanently-closed",
+          "negative-lifecycle-disused",
+          "history-choice-reload-expiry",
+          "explicit-nonseasonal-filter",
+          "pending-rpc-at-expiry",
+          "november5-expired-negative"
+        ],
+        "widths": [
+          320,
+          390,
+          512
+        ],
+        "historicalReceiptControls": 32,
+        "expiredNovember5Controls": 10,
+        "negativeLifecycleControls": 20,
+        "actualUiRadii": [
+          1,
+          15,
+          30,
+          50
+        ],
+        "independentRadiusOnly": 25,
+        "manualLocationOnly": true,
+        "oracleSha256": "7024f4159d20eb1e6799808792e93293ee3eb97df4d159262a5d24637ea98aaa",
+        "radiusOracleSha256": "2a49ffd42e700f2cfd79e8f9127b9f778548993fb9f3d39169f15acdb56412d0",
+        "publicProviderAcceptance": false
+      },
+      "scenariosCount": 277,
+      "scenariosStatusCounts": {
+        "True": 277
+      }
+    }
+  ],
+  "CRC": "PASS",
+  "memberCount": 2058
+}

@@ -1,0 +1,669 @@
+[
+  {
+    "suite": "suite-casino",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-casino-browser-evidence-casino.zip",
+    "archiveSHA256": "4e4f1c2bde73ddf982189180b2037dcd67693177c5da13dfa3e3a6a97c4efa34",
+    "bytes": 297760,
+    "members": 7,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "verdict.json",
+        "errors": [],
+        "checksCount": 16,
+        "checksStatusCounts": {
+          "string-check": 16
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-date-night-radial",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-casino-browser-evidence-date-night-radial.zip",
+    "archiveSHA256": "b206a658a3144eedfc53fb2ed2bff27320f0293c985a1949a79e72325ecebf34",
+    "bytes": 3536151,
+    "members": 15,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "date-night-radial/verdict.json",
+        "passed": true,
+        "errors": [],
+        "publicProviderCalls": 0,
+        "scenariosCount": 10,
+        "scenariosStatusCounts": {
+          "True": 10
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-geometry",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091012918-casino-browser-evidence-geometry.zip",
+    "archiveSHA256": "411b74281f991c51dc36268d94ba99fdf9b37db5f2925b6bc1b68c47c1ff6b5b",
+    "bytes": 475251674,
+    "members": 6291,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-card-layout/verdict.json",
+        "passed": true,
+        "errors": [],
+        "ineligiblePlanControls": [
+          "date-night-mo26-096-meramec-spooktacular",
+          "date-night-mo26-046-pets-and-pumpkins",
+          "date-night-mo26-farrington-haunted-hayride",
+          "date-night-mo26-mid-america-fright-fest",
+          "date-night-mo26-116-sam-baker-halloween-bash",
+          "date-night-mo26-019-james-river-joplin-party",
+          "date-night-mo26-031-silver-dollar-city-harvest",
+          "date-night-mo26-034-boone-historical-haunts",
+          "date-night-mo26-115-bollinger-trick-or-treat",
+          "date-night-mo26-delta-haunted-river-float",
+          "date-night-mo26-012-witches-day-out",
+          "date-night-mo26-028-nevada-oktoberfest",
+          "date-night-mo26-074-osage-beach-fall-festival",
+          "date-night-mo26-084-mcwilliams",
+          "date-night-mo26-071-pomme-de-terror",
+          "date-night-mo26-astra-branson-ghoster",
+          "date-night-mo26-astra-tunnel-of-terror-ballwin",
+          "date-night-mo26-astra-tunnel-of-terror-ofallon",
+          "date-night-mo26-phase4-carolyns-pumpkin-patch"
+        ],
+        "wave2Geometry": {
+          "acceptedIds": [
+            "date-night-ks26-walters",
+            "date-night-il26-w1-spook",
+            "date-night-il26-w1-boo",
+            "date-night-il26-w1-sonny-acres-haunted-experiences",
+            "date-night-il26-w1-hayride-horror-bayou",
+            "date-night-il26-w1-217",
+            "date-night-il26-w1-paintball",
+            "date-night-il26-w1-chitty",
+            "date-night-ks26-nightmare",
+            "date-night-ar26-royal"
+          ],
+          "widths": [
+            320,
+            390,
+            512
+          ],
+          "variants": [
+            "standard",
+            "ordinary",
+            "current-standard",
+            "current-ordinary",
+            "before",
+            "after"
+          ],
+          "expectedComparisons": 90,
+          "completedComparisons": 90
+        },
+        "regionalGeometry": {
+          "acceptedIds": [
+            "date-night-ok26-w1-annabelle",
+            "date-night-ar26-warehouse",
+            "date-night-ar26-asylum",
+            "date-night-ks26-louisburg",
+            "date-night-ks26-exiled",
+            "date-night-ok26-w1-psycho",
+            "date-night-ar26-river",
+            "date-night-ok26-w1-roots",
+            "date-night-ok26-w1-castle",
+            "date-night-ar26-hollow",
+            "date-night-ok26-w1-plantation",
+            "date-night-ar26-magic"
+          ],
+          "widths": [
+            320,
+            390,
+            512
+          ],
+          "variants": [
+            "standard",
+            "ordinary",
+            "current-standard",
+            "current-ordinary",
+            "before",
+            "after"
+          ],
+          "expectedComparisons": 108,
+          "completedComparisons": 108
+        },
+        "comparisonsCount": 774,
+        "comparisonsStatusCounts": {
+          "unspecified": 774
+        },
+        "widthCounts": {
+          "320": 258,
+          "390": 258,
+          "512": 258
+        },
+        "kindCounts": {
+          "options": 276,
+          "result": 276,
+          "plan": 219,
+          "plan-settle": 3
+        },
+        "incompleteCount": 0
+      }
+    ]
+  },
+  {
+    "suite": "suite-legal-support",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12089684713-casino-browser-evidence-legal-support.zip",
+    "archiveSHA256": "7e770045de6196606f3e8ee13116a84b8b2ef4c1bc4a669b5e38242b459c8004",
+    "bytes": 10184406,
+    "members": 63,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "legal-support/verdict.json",
+        "status": "PASS",
+        "checksCount": 33,
+        "checksStatusCounts": {
+          "PASS": 33
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-location",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-casino-browser-evidence-location.zip",
+    "archiveSHA256": "23b07a2266378a4a8091b499494641be4aba84be5780c73b31cb028428c72406",
+    "bytes": 527458,
+    "members": 8,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": []
+  },
+  {
+    "suite": "suite-seasonal-astra",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091017010-casino-browser-evidence-seasonal-astra.zip",
+    "archiveSHA256": "b63e416d243f6ab82bc251b1544bd99075c488ee16af859a58c74ffa35c9bdec",
+    "bytes": 102791329,
+    "members": 729,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-astra-eleven/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 1024,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 220,
+        "scenariosStatusCounts": {
+          "True": 220
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-astra-extras",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091430180-casino-browser-evidence-seasonal-astra-extras.zip",
+    "archiveSHA256": "1c06d8bbd9f7a67575d3e81c53fce41d1a8804c9d1147b25415cdc8bafe4ff40",
+    "bytes": 95006559,
+    "members": 697,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-astra-extras/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 882,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 196,
+        "scenariosStatusCounts": {
+          "True": 196
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-completeness-v1",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090318937-casino-browser-evidence-seasonal-completeness-v1.zip",
+    "archiveSHA256": "f0179231d4ad80e3c17eaba1b674d54a15e963ac9c39a0adbff3e2f91123e84d",
+    "bytes": 63094968,
+    "members": 521,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-completeness-v1/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 512,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 97,
+        "scenariosStatusCounts": {
+          "True": 97
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-cumulative",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090822721-casino-browser-evidence-seasonal-cumulative.zip",
+    "archiveSHA256": "6151dd3158b4be9e19736e3f85f2cd4d63491a5966d8b172408b1746c807194c",
+    "bytes": 126576507,
+    "members": 944,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-cumulative-15/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 1301,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 235,
+        "scenariosStatusCounts": {
+          "True": 235
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-hold-cleanup",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090891211-casino-browser-evidence-seasonal-hold-cleanup.zip",
+    "archiveSHA256": "d8c6ff58dea5f0f74e7424fe94fb51e6a3935561d93c444480e4ee64121505f1",
+    "bytes": 22749853,
+    "members": 184,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-hold-cleanup/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 196,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 69,
+        "scenariosStatusCounts": {
+          "True": 69
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-next-missouri",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090895658-casino-browser-evidence-seasonal-next-missouri.zip",
+    "archiveSHA256": "b7f9367f5dae98966ba8760b59def157f250b2459b2cb363bdd9c5fb403fcd22",
+    "bytes": 33230299,
+    "members": 286,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-next-missouri-three/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 305,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 87,
+        "scenariosStatusCounts": {
+          "True": 87
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-phase4",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090543443-casino-browser-evidence-seasonal-phase4.zip",
+    "archiveSHA256": "e9414381846dd56778f5d2287f412fd785b7efe1b17d61198d58e3146188f7eb",
+    "bytes": 74482541,
+    "members": 587,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-phase4-recovery-seven/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 700,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 164,
+        "scenariosStatusCounts": {
+          "True": 164
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-ranked-holds",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091280302-casino-browser-evidence-seasonal-ranked-holds.zip",
+    "archiveSHA256": "25ab7780dfb1f3b2ffc5737a094cffed581aa32ea6a1642f66b9de42a2053353",
+    "bytes": 83794952,
+    "members": 586,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-ranked-holds/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 804,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 178,
+        "scenariosStatusCounts": {
+          "True": 178
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-regional-wave1",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091517467-casino-browser-evidence-seasonal-regional-wave1.zip",
+    "archiveSHA256": "99799bcb1075e52cee6fc4cd37503866452d306a5d652f0d1d878775463e2ff3",
+    "bytes": 287610350,
+    "members": 2058,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-regional-wave1/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 1928,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "regionalAcceptance": {
+          "acceptedIds": [
+            "date-night-ok26-w1-annabelle",
+            "date-night-ar26-warehouse",
+            "date-night-ar26-asylum",
+            "date-night-ks26-louisburg",
+            "date-night-ks26-exiled",
+            "date-night-ok26-w1-psycho",
+            "date-night-ar26-river",
+            "date-night-ok26-w1-roots",
+            "date-night-ok26-w1-castle",
+            "date-night-ar26-hollow",
+            "date-night-ok26-w1-plantation",
+            "date-night-ar26-magic"
+          ],
+          "expectedScenarioCount": 317,
+          "actualScenarioCount": 317,
+          "expiredNovember5Controls": 12,
+          "negativeLifecycleControls": 24,
+          "actualUiRadii": [
+            1,
+            15,
+            30,
+            50
+          ],
+          "independentRadiusOnly": 25,
+          "manualLocationOnly": true,
+          "historicalReceiptControls": 32
+        },
+        "scenariosCount": 317,
+        "scenariosStatusCounts": {
+          "True": 317
+        }
+      },
+      {
+        "path": "seasonal-regional-wave1/wave2-subpass.json",
+        "passed": true,
+        "code": 0,
+        "signal": null,
+        "legacyScenarioCount": 317
+      },
+      {
+        "path": "seasonal-wave2-ten/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 1765,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "wave2Acceptance": {
+          "acceptedIds": [
+            "date-night-ks26-walters",
+            "date-night-il26-w1-spook",
+            "date-night-il26-w1-boo",
+            "date-night-il26-w1-sonny-acres-haunted-experiences",
+            "date-night-il26-w1-hayride-horror-bayou",
+            "date-night-il26-w1-217",
+            "date-night-il26-w1-paintball",
+            "date-night-il26-w1-chitty",
+            "date-night-ks26-nightmare",
+            "date-night-ar26-royal"
+          ],
+          "literalOffIds": [
+            "date-night-ks26-walters",
+            "date-night-ks26-nightmare"
+          ],
+          "expectedScenarioCount": 277,
+          "actualScenarioCount": 277,
+          "perRecordScenarios": [
+            "consumer-anything-category-320",
+            "consumer-anything-category-390",
+            "consumer-anything-category-512",
+            "open-now",
+            "ended",
+            "next-year",
+            "season-off",
+            "radius-exclusion",
+            "mixed-alias-toggle-cache",
+            "resume-expiry-options",
+            "resume-expiry-result",
+            "provider-failure",
+            "favorite-alias-cache-resume-unsave",
+            "negative-alias-beats-canonical-favorite",
+            "alias-exclusion-expiry-and-not-tonight",
+            "affirmed-favorites-direct-reload-expiry",
+            "qualified-night-plan",
+            "supported-category-matrix",
+            "negative-lifecycle-permanently-closed",
+            "negative-lifecycle-disused",
+            "history-choice-reload-expiry",
+            "explicit-nonseasonal-filter",
+            "pending-rpc-at-expiry",
+            "november5-expired-negative"
+          ],
+          "widths": [
+            320,
+            390,
+            512
+          ],
+          "historicalReceiptControls": 32,
+          "expiredNovember5Controls": 10,
+          "negativeLifecycleControls": 20,
+          "actualUiRadii": [
+            1,
+            15,
+            30,
+            50
+          ],
+          "independentRadiusOnly": 25,
+          "manualLocationOnly": true,
+          "oracleSha256": "7024f4159d20eb1e6799808792e93293ee3eb97df4d159262a5d24637ea98aaa",
+          "radiusOracleSha256": "2a49ffd42e700f2cfd79e8f9127b9f778548993fb9f3d39169f15acdb56412d0",
+          "publicProviderAcceptance": false
+        },
+        "scenariosCount": 277,
+        "scenariosStatusCounts": {
+          "True": 277
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-ten",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12091161290-casino-browser-evidence-seasonal-ten.zip",
+    "archiveSHA256": "c8c3dd6b3acfe9f20a62877421448f13c053375b49836107c28f63edc48833c4",
+    "bytes": 83938833,
+    "members": 598,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "seasonal-ten-record/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 862,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 157,
+        "scenariosStatusCounts": {
+          "True": 157
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-seasonal-two",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-casino-browser-evidence-seasonal-two.zip",
+    "archiveSHA256": "6e9dd5d320b5ffae34080f38fa87f5c582429d6996b9c74ff6f642146d78e562",
+    "bytes": 24462283,
+    "members": 222,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "missouri-two-records/verdict.json",
+        "passed": true,
+        "errors": [],
+        "network": {
+          "interceptedProviderCalls": 98,
+          "blockedServerRequests": [],
+          "forwardedExternalCalls": 0
+        },
+        "publicProviderCalls": 0,
+        "scenariosCount": 23,
+        "scenariosStatusCounts": {
+          "True": 23
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-unified-footer",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-12090653565-casino-browser-evidence-unified-footer.zip",
+    "archiveSHA256": "aaaedb18e7e3a9125c4a2c892b9f6a1fdd8b5d8409a087bb52890245e9743e50",
+    "bytes": 51043559,
+    "members": 727,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": [
+      {
+        "path": "unified-footer/results.json",
+        "errors": [],
+        "checksCount": 350,
+        "checksStatusCounts": {
+          "PASS": 350
+        }
+      }
+    ]
+  },
+  {
+    "suite": "suite-validation-check-build-proof",
+    "archive": "/workspace/scratch/a0ea701c7b34/consolidated-release-validation/artifacts/pr80-validation-check-build-proof.zip",
+    "archiveSHA256": "0605c0c0a460e97f4fb954ed2a05d8166e9b426cc0a6f0b7ce55456668b25a06",
+    "bytes": 392,
+    "members": 1,
+    "CRC": "PASS",
+    "source": {
+      "sha256": "5eaf48127e44d83b6c5a97ef76bec131874dcc99908f272196f584a90997af84",
+      "files": 542
+    },
+    "verdicts": []
+  }
+]

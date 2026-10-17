@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "route": 160,
+    "portal": 170,
+    "safeArea": 20
+  },
+  "statuses": {
+    "PASS": 350
+  },
+  "viewports": [
+    [
+      320,
+      844
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      512,
+      844
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      1024,
+      768
+    ]
+  ],
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "minContrast": 12.76105479515793,
+  "contrastSamples": 2610,
+  "minRouteNavGap": 15,
+  "minPortalBottomGap": 15.578125,
+  "minSafeAreaNavGap": 23,
+  "safeAreaNavPadding": [
+    "34px"
+  ],
+  "minRouteLinkTarget": 44,
+  "minFocusWidth": 2.0,
+  "blockedRPCs": 40,
+  "escapedRPCs": 0,
+  "creditPresent": 150,
+  "creditAbsent": 180,
+  "errors": []
+}
