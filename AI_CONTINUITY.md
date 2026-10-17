@@ -1,3 +1,19 @@
+# Footer reference recovered — 2026-10-17 02:33 UTC
+
+## CURRENT
+
+The actual owner-approved dark footer reference was recovered and fully viewed by root at 02:32:28 UTC, after checkpoint da9527caf5b1a6597b62e3a030721e8dca8e10d7. The prior unrecovered statement remains accurate historically and is superseded here. Owner image 1792203048766.jpeg, Library libfile_be518c32f76c8191b56eb2c83771b1ae, 147053 bytes, 1536×1195, SHA256 053ba11e10ad87cf9ae350fffd6f5928416cedf4c045991fcb40fbd817bef9ee shows the dark rounded independent-service disclosure panel, Privacy Policy/Terms/Support links, “Visual artwork created with Grok” and Caustic Relay creative-direction/refinement credit. Exact visible wording and provenance are preserved in audit/play-assets-2026-10-17/OWNER-LISTING-AND-DESIGN-APPROVAL.md.
+
+Approved listing v0.2 wording and verified pixel-identical sRGB icon export remain unchanged. All seven files in prior checkpoint were fully read back, including remote PNG bytes via git show with exact SHA256 match. PR77/PR78 source and production remain untouched.
+
+## NEXT / HOLD
+
+Use the recovered image as the approved future design reference only. Implementation, actual link/contrast/accessibility acceptance, contextual attribution sufficiency, final media selection and all release/Play actions still require their existing gates and separate authority. No implemented UI, physical-device or legal-compliance PASS follows from visual reference inspection. Genuine screenshots and final feature graphic remain outstanding.
+
+Prior continuity follows unchanged.
+
+---
+
 # Approved listing wording and verified icon export — 2026-10-17 02:23 UTC
 
 ## CURRENT

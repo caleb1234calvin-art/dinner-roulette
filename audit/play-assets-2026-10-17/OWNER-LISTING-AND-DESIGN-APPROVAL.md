@@ -33,3 +33,19 @@ Root independently recovered the following original owner text from the separate
 - Earlier design approval at 02:10:59 UTC: https://chatgpt.com/c/6ad113a3-0b44-83e8-b4ec-f2509b331ed0?messageId=bbb21227-9a80-4c0d-a21d-9704d9caa3a5
 
 The actual visual attachment is unrecovered/content omitted. These are recovered textual design instructions, not a fresh visual inspection of the reference. The direct 02:13 owner directive controls the approved scope including Privacy, Terms and Support. Exact layout, readability/accessibility and contextual attribution acceptance must be checked in a separately authorized future implementation. A footer must not erase material operational warnings needed near specific actions.
+
+## Dated visual-reference recovery: 2026-10-17 02:32:28 UTC
+
+After checkpoint da9527caf5b1a6597b62e3a030721e8dca8e10d7 was published, root recovered and fully viewed the actual owner-supplied reference. The earlier unrecovered status remains accurate for its checkpoint and is superseded by this addendum.
+
+Library file `libfile_be518c32f76c8191b56eb2c83771b1ae`; filename `1792203048766.jpeg`; 147053 bytes; 1536×1195; SHA256 `053ba11e10ad87cf9ae350fffd6f5928416cedf4c045991fcb40fbd817bef9ee`.
+
+Observed: black/dark rounded panel, gray text; Pick For Us left and by Caustic Relay right. The panel says:
+
+> Independent application. Not affiliated with or endorsed by listed venues, delivery services, rideshare providers or mapping services unless expressly stated.
+
+> External services have their own terms, availability and privacy practices.
+
+A divider precedes Privacy Policy, Terms & Conditions and Support links. Another divider precedes centered “Visual artwork created with Grok” and “Creative direction and refinements by Caustic Relay”.
+
+This is visual-reference inspection only. No footer was implemented, no links were exercised, and no contrast/accessibility, physical-device or attribution-compliance PASS is established by viewing the reference. The owner-approved future direction remains separate from implementation authority and final contextual review. The image is retained as an owner-supplied design reference, not an actual app screenshot.
