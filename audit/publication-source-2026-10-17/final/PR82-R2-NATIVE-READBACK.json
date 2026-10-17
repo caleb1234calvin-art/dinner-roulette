@@ -1,0 +1,159 @@
+{
+  "head": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+  "apk": {
+    "source": "/workspace/scratch/a0ea701c7b34/publication-source-validation/r2/artifacts/pr82-r2-12094098284-PickForUs-Android-validation-510cef023f5e567aaa591353d6adc9ecd7bb7b44.zip",
+    "apk_sha256": "70cc0814daff34ce92b70dc7ef504028459133c209bd340c1afbf7ee38bf19e5",
+    "bytes": 4174814,
+    "v2_cert_sha256": "c01405fe55fe6a549e36853aa8b8985ad1e737d6e24fcf7fed3cf64f604eec89",
+    "certificate_subject": "C=US,O=Android,CN=Android Debug",
+    "public_key_sha256": "e4e93e8db35513314245b07a145ea72885e544714ee49a43b698ec717c7c5ade",
+    "signing_block_ids": [
+      "0x7109871a",
+      "0x42726577"
+    ],
+    "trailing_empty_signed_fields": 1,
+    "certificate_parse": "Author reused the prior reviewer length-prefixed APK v2 parser; certificate/public-key consistency checked. This step is not independent current-source review, cryptographic APK signature or on-device verification.",
+    "priorCertificateHashes": [
+      "f4ca7e7367cb8dd20543c04748b9eea9a8a16050ddd44153cee841b8fea8cea3",
+      "bc77407bc7fcf569fe70481bff0c301d1b48c6129e51e052f3adca088113ee18",
+      "8cfa88a13c4eee4f68d28a0808a9b5172de24ca720bc8697b6ecec1365f88606",
+      "a5c9eddfd3b5ceffda88800fb6e80c8814f7f22836ba0849c76bcc3117ef089c"
+    ]
+  },
+  "aab": {
+    "sha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+    "bytes": 3103485
+  },
+  "lint": {
+    "counts": {
+      "Warning": 14
+    },
+    "issues": [
+      {
+        "id": "ManifestOrder",
+        "severity": "Warning",
+        "message": "`<uses-permission>` tag appears after `<application>` tag"
+      },
+      {
+        "id": "AndroidGradlePluginVersion",
+        "severity": "Warning",
+        "message": "A newer version of Gradle than 8.14.3 is available: 8.14.6"
+      },
+      {
+        "id": "DataExtractionRules",
+        "severity": "Warning",
+        "message": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.layout.activity_main` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.xml.config` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.package_name` appears to be unused"
+      },
+      {
+        "id": "UnusedResources",
+        "severity": "Warning",
+        "message": "The resource `R.string.custom_url_scheme` appears to be unused"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "IconLauncherShape",
+        "severity": "Warning",
+        "message": "Launcher icons should not fill every pixel of their square region; see the design guide for details"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive icon is missing a monochrome tag"
+      },
+      {
+        "id": "MonochromeLauncherIcon",
+        "severity": "Warning",
+        "message": "The application adaptive roundIcon is missing a monochrome tag"
+      }
+    ]
+  },
+  "bundleVerification": {
+    "artifact": "app-release.aab",
+    "sha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+    "bytes": 3103485,
+    "package": "app.pickforus.android",
+    "versionCode": 1,
+    "versionName": "1.0.0",
+    "minSdk": 24,
+    "compileSdk": 36,
+    "targetSdk": 36,
+    "debuggable": false,
+    "appLabel": "Pick For Us",
+    "allowBackup": false,
+    "cleartextTraffic": false,
+    "launcherImages": [
+      "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+    ],
+    "adaptiveIcons": [
+      "base/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "base/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    ],
+    "dexFiles": [
+      "base/dex/classes.dex"
+    ],
+    "mainActivity": "app.pickforus.android.MainActivity",
+    "bundletool": "1.18.3",
+    "bundletoolValidation": "PASS",
+    "signing": "unsigned",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.INTERNET",
+      "app.pickforus.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "nativeLibraries": [],
+    "pageSizeAssessment": "No packaged native .so libraries; no ELF alignment requirement applies",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "uploadSignatureVerified": false,
+    "playConsoleAcceptance": "NOT VERIFIED"
+  },
+  "scope": "Author fresh-original readback only. Same-package debug signer differs from PR78, PR80, PR81 and PR82 R1; no install/update interchangeability or data-wipe workaround. Unchanged production-origin wrapper does not embed candidate web."
+}

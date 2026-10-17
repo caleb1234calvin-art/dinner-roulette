@@ -1,0 +1,4505 @@
+{
+  "total_count": 19,
+  "jobs": [
+    {
+      "id": 117346203252,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2dA",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203252",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203252",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:55:20Z",
+      "name": "checks",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:00Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:13Z"
+        },
+        {
+          "name": "Typecheck",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:13Z",
+          "completed_at": "2026-10-17T07:54:17Z"
+        },
+        {
+          "name": "ESLint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:17Z",
+          "completed_at": "2026-10-17T07:54:22Z"
+        },
+        {
+          "name": "Casino audit regression tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:22Z",
+          "completed_at": "2026-10-17T07:54:27Z"
+        },
+        {
+          "name": "Audit curated casino catalog",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:27Z",
+          "completed_at": "2026-10-17T07:54:28Z"
+        },
+        {
+          "name": "Build development bundle",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:28Z",
+          "completed_at": "2026-10-17T07:54:31Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:31Z",
+          "completed_at": "2026-10-17T07:54:33Z"
+        },
+        {
+          "name": "Repository and application tests",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:33Z",
+          "completed_at": "2026-10-17T07:55:17Z"
+        },
+        {
+          "name": "Verify Dinner icon packs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-17T07:55:17Z",
+          "completed_at": "2026-10-17T07:55:17Z"
+        },
+        {
+          "name": "Preserve check build proof",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-17T07:55:17Z",
+          "completed_at": "2026-10-17T07:55:18Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-17T07:55:18Z",
+          "completed_at": "2026-10-17T07:55:18Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-17T07:55:18Z",
+          "completed_at": "2026-10-17T07:55:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-17T07:55:18Z",
+          "completed_at": "2026-10-17T07:55:18Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203252",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001248,
+      "runner_name": "GitHub Actions 1000001248",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203291,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2mw",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203291",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203291",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:01:31Z",
+      "name": "Browser (seasonal-completeness-v1)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:00Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:08Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:08Z",
+          "completed_at": "2026-10-17T07:54:19Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:19Z",
+          "completed_at": "2026-10-17T07:54:22Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:22Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:26Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:01:26Z",
+          "completed_at": "2026-10-17T08:01:29Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:01:29Z",
+          "completed_at": "2026-10-17T08:01:29Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:01:29Z",
+          "completed_at": "2026-10-17T08:01:29Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:01:29Z",
+          "completed_at": "2026-10-17T08:01:29Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203291",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001247,
+      "runner_name": "GitHub Actions 1000001247",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203294,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2ng",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203294",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203294",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:09:28Z",
+      "name": "Browser (seasonal-astra-extras)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:00Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:05Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:05Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:16Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:16Z",
+          "completed_at": "2026-10-17T07:54:20Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:20Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:21Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:09:21Z",
+          "completed_at": "2026-10-17T08:09:26Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:09:26Z",
+          "completed_at": "2026-10-17T08:09:26Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:09:26Z",
+          "completed_at": "2026-10-17T08:09:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:09:26Z",
+          "completed_at": "2026-10-17T08:09:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203294",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001249,
+      "runner_name": "GitHub Actions 1000001249",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203302,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2pg",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203302",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203302",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:55:09Z",
+      "name": "Browser (location)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:02Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:09Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:09Z",
+          "completed_at": "2026-10-17T07:54:18Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:18Z",
+          "completed_at": "2026-10-17T07:54:22Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:22Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:54:44Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:44Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:05Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T07:55:05Z",
+          "completed_at": "2026-10-17T07:55:07Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T07:55:07Z",
+          "completed_at": "2026-10-17T07:55:07Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T07:55:07Z",
+          "completed_at": "2026-10-17T07:55:07Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T07:55:07Z",
+          "completed_at": "2026-10-17T07:55:07Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203302",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001254,
+      "runner_name": "GitHub Actions 1000001254",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203309,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2rQ",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203309",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203309",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:07:40Z",
+      "name": "Browser (seasonal-cumulative)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:00Z",
+          "completed_at": "2026-10-17T07:54:02Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:05Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:05Z",
+          "completed_at": "2026-10-17T07:54:05Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:05Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:12Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:12Z",
+          "completed_at": "2026-10-17T07:54:14Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:14Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T07:54:34Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:34Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:07:34Z",
+          "completed_at": "2026-10-17T08:07:38Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:07:38Z",
+          "completed_at": "2026-10-17T08:07:38Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:07:38Z",
+          "completed_at": "2026-10-17T08:07:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:07:38Z",
+          "completed_at": "2026-10-17T08:07:38Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203309",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001250,
+      "runner_name": "GitHub Actions 1000001250",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203316,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2tA",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203316",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203316",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:54:53Z",
+      "name": "Browser (casino)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:05Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:05Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:15Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:15Z",
+          "completed_at": "2026-10-17T07:54:19Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:19Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:50Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T07:54:50Z",
+          "completed_at": "2026-10-17T07:54:51Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T07:54:51Z",
+          "completed_at": "2026-10-17T07:54:51Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T07:54:51Z",
+          "completed_at": "2026-10-17T07:54:51Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T07:54:51Z",
+          "completed_at": "2026-10-17T07:54:51Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203316",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001253,
+      "runner_name": "GitHub Actions 1000001253",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203320,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2uA",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203320",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203320",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:06:54Z",
+      "name": "Browser (seasonal-phase4)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:02Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:10Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:10Z",
+          "completed_at": "2026-10-17T07:54:19Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:19Z",
+          "completed_at": "2026-10-17T07:54:23Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:23Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:47Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:06:47Z",
+          "completed_at": "2026-10-17T08:06:51Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:06:51Z",
+          "completed_at": "2026-10-17T08:06:51Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:06:51Z",
+          "completed_at": "2026-10-17T08:06:51Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:06:51Z",
+          "completed_at": "2026-10-17T08:06:51Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203320",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001252,
+      "runner_name": "GitHub Actions 1000001252",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203330,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2wg",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203330",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203330",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:59:14Z",
+      "name": "Browser (seasonal-hold-cleanup)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:08Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:08Z",
+          "completed_at": "2026-10-17T07:54:16Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:16Z",
+          "completed_at": "2026-10-17T07:54:20Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:20Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:54:43Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-17T07:54:43Z",
+          "completed_at": "2026-10-17T07:59:09Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:59:09Z",
+          "completed_at": "2026-10-17T07:59:09Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:59:09Z",
+          "completed_at": "2026-10-17T07:59:09Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T07:59:09Z",
+          "completed_at": "2026-10-17T07:59:09Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T07:59:09Z",
+          "completed_at": "2026-10-17T07:59:09Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T07:59:09Z",
+          "completed_at": "2026-10-17T07:59:11Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T07:59:11Z",
+          "completed_at": "2026-10-17T07:59:11Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T07:59:11Z",
+          "completed_at": "2026-10-17T07:59:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T07:59:11Z",
+          "completed_at": "2026-10-17T07:59:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203330",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001251,
+      "runner_name": "GitHub Actions 1000001251",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203341,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2zQ",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203341",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203341",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:59:16Z",
+      "completed_at": "2026-10-17T08:14:28Z",
+      "name": "Browser (unified-footer)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:59:17Z",
+          "completed_at": "2026-10-17T07:59:18Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:59:18Z",
+          "completed_at": "2026-10-17T07:59:21Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:59:21Z",
+          "completed_at": "2026-10-17T07:59:21Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:59:21Z",
+          "completed_at": "2026-10-17T07:59:28Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:59:28Z",
+          "completed_at": "2026-10-17T07:59:39Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:59:39Z",
+          "completed_at": "2026-10-17T07:59:43Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:59:43Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:00:10Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-17T08:00:10Z",
+          "completed_at": "2026-10-17T08:14:21Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:14:21Z",
+          "completed_at": "2026-10-17T08:14:24Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:14:24Z",
+          "completed_at": "2026-10-17T08:14:25Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:14:25Z",
+          "completed_at": "2026-10-17T08:14:25Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:14:25Z",
+          "completed_at": "2026-10-17T08:14:25Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203341",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001264,
+      "runner_name": "GitHub Actions 1000001264",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203376,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD28A",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203376",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203376",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:06:36Z",
+      "name": "Browser (seasonal-ten)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:02Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:07Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:07Z",
+          "completed_at": "2026-10-17T07:54:10Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:10Z",
+          "completed_at": "2026-10-17T07:54:20Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:20Z",
+          "completed_at": "2026-10-17T07:54:24Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:24Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T07:54:45Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:45Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:28Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:06:28Z",
+          "completed_at": "2026-10-17T08:06:32Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:06:32Z",
+          "completed_at": "2026-10-17T08:06:33Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:06:33Z",
+          "completed_at": "2026-10-17T08:06:33Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:06:33Z",
+          "completed_at": "2026-10-17T08:06:33Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203376",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001257,
+      "runner_name": "GitHub Actions 1000001257",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203377,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD28Q",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203377",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203377",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:56:07Z",
+      "name": "Browser (date-night-radial)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:02Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:02Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:09Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:09Z",
+          "completed_at": "2026-10-17T07:54:16Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:16Z",
+          "completed_at": "2026-10-17T07:54:20Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:20Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:03Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T07:56:03Z",
+          "completed_at": "2026-10-17T07:56:05Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T07:56:05Z",
+          "completed_at": "2026-10-17T07:56:05Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T07:56:05Z",
+          "completed_at": "2026-10-17T07:56:05Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T07:56:05Z",
+          "completed_at": "2026-10-17T07:56:05Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203377",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001256,
+      "runner_name": "GitHub Actions 1000001256",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203380,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD29A",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203380",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203380",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:54Z",
+      "completed_at": "2026-10-17T08:08:52Z",
+      "name": "Browser (seasonal-ranked-holds)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:56Z",
+          "completed_at": "2026-10-17T07:54:57Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:57Z",
+          "completed_at": "2026-10-17T07:55:00Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:55:00Z",
+          "completed_at": "2026-10-17T07:55:00Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:55:00Z",
+          "completed_at": "2026-10-17T07:55:03Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:55:03Z",
+          "completed_at": "2026-10-17T07:55:15Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:55:15Z",
+          "completed_at": "2026-10-17T07:55:18Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:55:18Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T07:55:40Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-17T07:55:40Z",
+          "completed_at": "2026-10-17T08:08:45Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:08:45Z",
+          "completed_at": "2026-10-17T08:08:45Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:08:45Z",
+          "completed_at": "2026-10-17T08:08:45Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:08:45Z",
+          "completed_at": "2026-10-17T08:08:45Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:08:45Z",
+          "completed_at": "2026-10-17T08:08:49Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:08:49Z",
+          "completed_at": "2026-10-17T08:08:49Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:08:49Z",
+          "completed_at": "2026-10-17T08:08:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:08:50Z",
+          "completed_at": "2026-10-17T08:08:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203380",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001260,
+      "runner_name": "GitHub Actions 1000001260",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203385,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD2-Q",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203385",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203385",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:56:09Z",
+      "completed_at": "2026-10-17T08:19:45Z",
+      "name": "Browser (geometry)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:56:10Z",
+          "completed_at": "2026-10-17T07:56:10Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:56:10Z",
+          "completed_at": "2026-10-17T07:56:14Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:56:14Z",
+          "completed_at": "2026-10-17T07:56:14Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:56:14Z",
+          "completed_at": "2026-10-17T07:56:15Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:56:15Z",
+          "completed_at": "2026-10-17T07:56:25Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:56:25Z",
+          "completed_at": "2026-10-17T07:56:29Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:56:29Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T07:56:52Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-17T07:56:52Z",
+          "completed_at": "2026-10-17T08:19:22Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:19:22Z",
+          "completed_at": "2026-10-17T08:19:22Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:19:22Z",
+          "completed_at": "2026-10-17T08:19:44Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:19:44Z",
+          "completed_at": "2026-10-17T08:19:44Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:19:44Z",
+          "completed_at": "2026-10-17T08:19:44Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:19:44Z",
+          "completed_at": "2026-10-17T08:19:44Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203385",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001262,
+      "runner_name": "GitHub Actions 1000001262",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203403,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD3Cw",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203403",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203403",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T07:56:34Z",
+      "name": "Browser (seasonal-two)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:08Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:08Z",
+          "completed_at": "2026-10-17T07:54:15Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:15Z",
+          "completed_at": "2026-10-17T07:54:19Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:19Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:54:39Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:39Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:30Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T07:56:30Z",
+          "completed_at": "2026-10-17T07:56:32Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T07:56:32Z",
+          "completed_at": "2026-10-17T07:56:32Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T07:56:32Z",
+          "completed_at": "2026-10-17T07:56:32Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T07:56:32Z",
+          "completed_at": "2026-10-17T07:56:32Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203403",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001255,
+      "runner_name": "GitHub Actions 1000001255",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203419,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD3Gw",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203419",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203419",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:53:59Z",
+      "completed_at": "2026-10-17T08:01:03Z",
+      "name": "Browser (seasonal-next-missouri)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:00Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:04Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:04Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:16Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:16Z",
+          "completed_at": "2026-10-17T07:54:20Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:20Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T07:54:41Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-17T07:54:41Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:00:59Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:00:59Z",
+          "completed_at": "2026-10-17T08:01:01Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:01:01Z",
+          "completed_at": "2026-10-17T08:01:01Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:01:01Z",
+          "completed_at": "2026-10-17T08:01:02Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:01:02Z",
+          "completed_at": "2026-10-17T08:01:02Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203419",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001258,
+      "runner_name": "GitHub Actions 1000001258",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203430,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD3Jg",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203430",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203430",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:54:00Z",
+      "completed_at": "2026-10-17T08:08:24Z",
+      "name": "Browser (seasonal-astra)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:01Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:54:01Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:06Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:54:06Z",
+          "completed_at": "2026-10-17T07:54:08Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:54:08Z",
+          "completed_at": "2026-10-17T07:54:15Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:54:15Z",
+          "completed_at": "2026-10-17T07:54:19Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:54:19Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T07:54:46Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-17T07:54:46Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:17Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:08:17Z",
+          "completed_at": "2026-10-17T08:08:21Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:08:21Z",
+          "completed_at": "2026-10-17T08:08:21Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:08:21Z",
+          "completed_at": "2026-10-17T08:08:21Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:08:21Z",
+          "completed_at": "2026-10-17T08:08:21Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203430",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001259,
+      "runner_name": "GitHub Actions 1000001259",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203435,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD3Kw",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203435",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203435",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:55:11Z",
+      "completed_at": "2026-10-17T08:42:50Z",
+      "name": "Browser (seasonal-regional-wave1)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:55:12Z",
+          "completed_at": "2026-10-17T07:55:13Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:55:13Z",
+          "completed_at": "2026-10-17T07:55:17Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:55:17Z",
+          "completed_at": "2026-10-17T07:55:17Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:55:17Z",
+          "completed_at": "2026-10-17T07:55:20Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:55:20Z",
+          "completed_at": "2026-10-17T07:55:27Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:55:27Z",
+          "completed_at": "2026-10-17T07:55:31Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:55:31Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T07:55:51Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-17T07:55:51Z",
+          "completed_at": "2026-10-17T08:42:36Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:42:36Z",
+          "completed_at": "2026-10-17T08:42:36Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:42:36Z",
+          "completed_at": "2026-10-17T08:42:36Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:42:36Z",
+          "completed_at": "2026-10-17T08:42:47Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:42:47Z",
+          "completed_at": "2026-10-17T08:42:47Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:42:47Z",
+          "completed_at": "2026-10-17T08:42:48Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:42:48Z",
+          "completed_at": "2026-10-17T08:42:48Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203435",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001261,
+      "runner_name": "GitHub Actions 1000001261",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117346203463,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUmD3Rw",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117346203463",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117346203463",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T07:53:58Z",
+      "started_at": "2026-10-17T07:56:36Z",
+      "completed_at": "2026-10-17T08:00:55Z",
+      "name": "Browser (legal-support)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T07:56:37Z",
+          "completed_at": "2026-10-17T07:56:38Z"
+        },
+        {
+          "name": "Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T07:56:38Z",
+          "completed_at": "2026-10-17T07:56:42Z"
+        },
+        {
+          "name": "Record validated commit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T07:56:42Z",
+          "completed_at": "2026-10-17T07:56:42Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T07:56:43Z",
+          "completed_at": "2026-10-17T07:56:49Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T07:56:49Z",
+          "completed_at": "2026-10-17T07:57:00Z"
+        },
+        {
+          "name": "Build production-mode bundle without database migrations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T07:57:00Z",
+          "completed_at": "2026-10-17T07:57:04Z"
+        },
+        {
+          "name": "Install Chromium for disposable local browser validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T07:57:04Z",
+          "completed_at": "2026-10-17T07:57:32Z"
+        },
+        {
+          "name": "Verify Legal and Support routes, keyboard behavior and narrow layouts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-17T07:57:32Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise casino experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise country-aware location flow in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Regress ordinary Date Night progressive loading and local controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise integrated two-record seasonal experience in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise seasonal listing completeness V1 in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise reviewed ten-record seasonal batch in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise cumulative fifteen-record seasonal additions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise eleven Astra additions and all previous seasonal receipts in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise additional independently cleared Astra records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise seven independently cleared Phase 4 recovery records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise independently cleared next Missouri records in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise independently cleared Missouri HOLD resolutions in local Chromium",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 20,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Ranked Missouri HOLD browser regression",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 21,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Exercise exact independently cleared regional twelve",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 22,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Compare seasonal and standard card geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 23,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Unified footer rendered acceptance",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 24,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:50Z"
+        },
+        {
+          "name": "Preserve browser evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-17T08:00:50Z",
+          "completed_at": "2026-10-17T08:00:52Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-17T08:00:52Z",
+          "completed_at": "2026-10-17T08:00:53Z"
+        },
+        {
+          "name": "Post Check out repository",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 50,
+          "started_at": "2026-10-17T08:00:53Z",
+          "completed_at": "2026-10-17T08:00:53Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 51,
+          "started_at": "2026-10-17T08:00:53Z",
+          "completed_at": "2026-10-17T08:00:53Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117346203463",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001263,
+      "runner_name": "GitHub Actions 1000001263",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117355106328,
+      "run_id": 39015345296,
+      "workflow_name": "Validate Dinner Integration",
+      "head_branch": "integration/legal-publication-source-2026-10-19",
+      "run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUPp-qc8AAAAbUujQGA",
+      "head_sha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+      "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/jobs/117355106328",
+      "html_url": "https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/39015345296/job/117355106328",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T08:42:50Z",
+      "started_at": "2026-10-17T08:42:53Z",
+      "completed_at": "2026-10-17T08:42:57Z",
+      "name": "validate",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T08:42:54Z",
+          "completed_at": "2026-10-17T08:42:54Z"
+        },
+        {
+          "name": "Require all validation jobs to pass",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T08:42:54Z",
+          "completed_at": "2026-10-17T08:42:54Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T08:42:54Z",
+          "completed_at": "2026-10-17T08:42:54Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/check-runs/117355106328",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001266,
+      "runner_name": "GitHub Actions 1000001266",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

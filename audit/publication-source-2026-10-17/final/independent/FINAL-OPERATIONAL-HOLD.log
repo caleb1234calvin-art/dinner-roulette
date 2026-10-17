@@ -1,0 +1,25 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Publication HOLD: not the authorized calendar day in the supplied time zone; stop and reconfirm
++ actual - expected
+
++ '2026-10-17'
+- '2026-10-19'
+            ^
+
+    at validateLegalRelease (file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:67:12)
+    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:84:3
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '2026-10-17',
+  expected: '2026-10-19',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

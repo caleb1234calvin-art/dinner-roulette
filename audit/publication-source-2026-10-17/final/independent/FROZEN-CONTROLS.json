@@ -1,0 +1,520 @@
+{
+  "at": "2026-10-17T07:55:21.382Z",
+  "root": "/workspace/scratch/a0ea701c7b34/publication-source-r2-candidate",
+  "head": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+  "reviewedChangedFiles": [
+    {
+      "path": "docs/legal/PUBLICATION.md",
+      "sha256": "dfc60ece0e35d628ac52c1bf04ce7e5f69f025845019cd6314f7c3fc5341e835"
+    },
+    {
+      "path": "scripts/check-legal-release.mjs",
+      "sha256": "11a99ce79cef872709b34fe8f25b0a8ccfaabe06fa78ade2f741fee8af3dc359"
+    },
+    {
+      "path": "scripts/legal-release.test.mjs",
+      "sha256": "a6caf1f30a1c00d237fa41da19ddf7c0ccdb4b9b8e46d0d46a7e5a9b194b2472"
+    },
+    {
+      "path": "scripts/legal-support-browser.mjs",
+      "sha256": "bbac9320ec9248d49ec84373be9bb7c0419ecd2f144d7b4e0846d3d74fe1d705"
+    },
+    {
+      "path": "scripts/legal-support.test.mjs",
+      "sha256": "58cdd96842a708bad107430536e03a2b9a7081321e7a377707b3d75e78694e8e"
+    },
+    {
+      "path": "scripts/unified-footer-browser.mjs",
+      "sha256": "a55e6769e76d3ac227eef23b39b740c8923231f3fb47d561de4db44e283af66c"
+    },
+    {
+      "path": "scripts/unified-footer.test.mjs",
+      "sha256": "a90765beb7dfaae3329bda56c251aaf8bef2edf6eb4f315bc74f895b38813adb"
+    },
+    {
+      "path": "src/components/settings-page.tsx",
+      "sha256": "9721f7eef7284e8caa2eb2e2ebb228093590546aea5e9bef2e4744632fe3de84"
+    },
+    {
+      "path": "src/lib/legal/documents.json",
+      "sha256": "02d8c23d2f770446c3ac83f271bd42955c97b1229729b54cd6fd5dbe5aa2faac"
+    },
+    {
+      "path": "src/lib/legal/history.json",
+      "sha256": "ca17113ef98ea9763411e20dd93d3b5cef9fec7949feac8de1e6a2677b433d82"
+    },
+    {
+      "path": "src/lib/legal/releases.test.ts",
+      "sha256": "d688332a27c150c6efc0e3e90ceeb66a369964d94fc24c2c59a5b2e32fb7ffa5"
+    },
+    {
+      "path": "src/lib/legal/releases.ts",
+      "sha256": "c2d93402feb158e75dbf1d3d66e213fda72780e599982a2f3463f7d2bfc9f64d"
+    }
+  ],
+  "checks": [
+    {
+      "name": "finalized source metadata agrees across both policies and history",
+      "status": "PASS"
+    },
+    {
+      "name": "source validation is not date approval at 2000-01-01T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "source validation is not date approval at 2026-10-17T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "source validation is not date approval at 2026-10-19T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "source validation is not date approval at 2099-12-31T12:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-11-01 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-11-01 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-11-01 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-11-01 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-03-08 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-03-08 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-03-08 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: America/Chicago 2026-03-08 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: UTC 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: UTC 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: UTC 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: UTC 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Kiritimati 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Kiritimati 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Kiritimati 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Kiritimati 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Pago_Pago 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Pago_Pago 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Pago_Pago 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Pacific/Pago_Pago 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Asia/Kolkata 2026-10-19 before",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Asia/Kolkata 2026-10-19 start",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Asia/Kolkata 2026-10-19 end-minus-one",
+      "status": "PASS"
+    },
+    {
+      "name": "fixture-only boundary: Asia/Kolkata 2026-10-19 end",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone  ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone CST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone PST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone EST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone IST",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone GMT",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone Invalid/Zone",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone +05:00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone -05:00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone  America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/ambiguous/missing CLI zone America/Chicago ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date undefined",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date null",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 42",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date ",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-2-19",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-02-29",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-02-30",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-13-01",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-00-01",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-00",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-32",
+      "status": "PASS"
+    },
+    {
+      "name": "reject invalid/mismatched authorized date 2026-10-20",
+      "status": "PASS"
+    },
+    {
+      "name": "valid leap calendar day fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI zone must match source zone even when dates agree",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy effectiveDate mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy proposedPublicationDate mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy publicationTimeZone mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy status mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject privacy version mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms effectiveDate mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms proposedPublicationDate mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms publicationTimeZone mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms status mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject terms version mismatch",
+      "status": "PASS"
+    },
+    {
+      "name": "reject retained synchronized proposal on published metadata",
+      "status": "PASS"
+    },
+    {
+      "name": "reject publication requiring requiresPrivacyConsent",
+      "status": "PASS"
+    },
+    {
+      "name": "reject publication requiring requiresTermsAgreement",
+      "status": "PASS"
+    },
+    {
+      "name": "unreleased next-version metadata does not become effective by clock",
+      "status": "PASS"
+    },
+    {
+      "name": "published material informational notice semantics unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "complete prior snapshot survives new current text",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI (source metadata only)",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --authorized-date=",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication-time-zone=",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --authorized-date=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication-time-zone=America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication --publication",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --now=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication --authorized-date=2026-10-19 --authorized-date=2026-10-19",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication --publication-time-zone=UTC --publication-time-zone=UTC",
+      "status": "PASS"
+    },
+    {
+      "name": "real CLI --publication --authorized-date=2026-10-19 --publication-time-zone=America/Chicago",
+      "status": "PASS"
+    },
+    {
+      "name": "complete policy content unchanged apart from authorized metadata",
+      "status": "PASS"
+    },
+    {
+      "name": "history preserves version, summary, obligations, archive",
+      "status": "PASS"
+    },
+    {
+      "name": "review archive, notice, footer, public routes, security and deployment exclusions unchanged",
+      "status": "PASS"
+    }
+  ],
+  "cliRuns": [
+    {
+      "args": [],
+      "status": 0,
+      "stdout": "Legal source metadata valid; not a publication approval.\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--publication"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: A calendar date must be an ISO YYYY-MM-DD string\n+ actual - expected\n\n+ 'undefined'\n- 'string'\n\n    at calendarDate (file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:6:10)\n    at validateLegalRelease (file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:61:5)\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:84:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 'undefined',\n  expected: 'string',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--authorized-date="
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Publication date/time zone options require --publication\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:83:10\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication-time-zone="
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Publication date/time zone options require --publication\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:83:10\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--authorized-date=2026-10-19"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Publication date/time zone options require --publication\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:83:10\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication-time-zone=America/Chicago"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Publication date/time zone options require --publication\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:83:10\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication",
+        "--publication"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ true\n- undefined\n\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:78:43\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: true,\n  expected: undefined,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--now=2026-10-19"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:81\n    else throw new Error(`Unknown legal release option: ${arg}`);\n               ^\n\nError: Unknown legal release option: --now=2026-10-19\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:81:16\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication",
+        "--authorized-date=2026-10-19",
+        "--authorized-date=2026-10-19"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ '2026-10-19'\n- undefined\n\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:79:61\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '2026-10-19',\n  expected: undefined,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication",
+        "--publication-time-zone=UTC",
+        "--publication-time-zone=UTC"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'UTC' !== undefined\n\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:80:67\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'UTC',\n  expected: undefined,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "args": [
+        "--publication",
+        "--authorized-date=2026-10-19",
+        "--publication-time-zone=America/Chicago"
+      ],
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Publication HOLD: not the authorized calendar day in the supplied time zone; stop and reconfirm\n+ actual - expected\n\n+ '2026-10-17'\n- '2026-10-19'\n            ^\n\n    at validateLegalRelease (file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:67:12)\n    at file:///workspace/scratch/a0ea701c7b34/publication-source-r2-candidate/scripts/check-legal-release.mjs:84:3\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: '2026-10-17',\n  expected: '2026-10-19',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    }
+  ],
+  "passed": 91,
+  "total": 91,
+  "operationalReleaseStatus": "HOLD until 2026-10-19 America/Chicago plus separate exact-source release authorization; fixture successes are unit controls only.",
+  "scope": "Independent source/API/CLI controls. No current publication, deployment, production change, device installation, or physical-device PASS."
+}

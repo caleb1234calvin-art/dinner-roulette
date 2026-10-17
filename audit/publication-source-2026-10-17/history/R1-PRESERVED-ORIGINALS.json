@@ -1,0 +1,58 @@
+{
+  "revision": "R1",
+  "head": "9e84b3ef5c5870774e6f7dbfbe1c2c1afa03668a",
+  "workflowConclusion": "FAILURE",
+  "archives": 20,
+  "archiveBytes": 1559543904,
+  "pngIntegrityDecoded": 14476,
+  "files": [
+    {
+      "path": "publication-source-validation/artifacts/verified-originals.json",
+      "bytes": 3597570,
+      "sha256": "3d63fc8d19e2b8af7387e61a8784ef1bb6bf53e08769845259b06789b89ec4e7",
+      "gzipPath": "publication-source-validation/artifacts/verified-originals.json.gz",
+      "gzipBytes": 593710,
+      "gzipSha256": "54f72534129daf6d1371835f3a79bddfe9a031bfa321664143878e9602ac046e"
+    },
+    {
+      "path": "publication-source-validation/artifacts/download-index.json",
+      "bytes": 18807,
+      "sha256": "9e6fe8dd7c3d3889700c644b139061e5b48ab180f05fbc4ec09b69fa0964f4ec",
+      "gzipPath": "publication-source-validation/artifacts/download-index.json.gz",
+      "gzipBytes": 2624,
+      "gzipSha256": "79881db9dbcc1fa0ad5357a73e1ce1c8d2507a333716095e51a18174d7db7f88"
+    },
+    {
+      "path": "publication-source-validation/artifacts/png-integrity.json",
+      "bytes": 16663,
+      "sha256": "6f87a95d5d36ff8e4b5a26ca59c0b626df4911498cfeb119a5d553f520567a84",
+      "gzipPath": "publication-source-validation/artifacts/png-integrity.json.gz",
+      "gzipBytes": 2227,
+      "gzipSha256": "4a1d5385b05a7028013dedc7c68c26343e03543a8c244e35c9c33877c0278d1c"
+    },
+    {
+      "path": "publication-source-validation/hosted-core-original.log",
+      "bytes": 3528061,
+      "sha256": "6486f4579766f19e6970e0ea350894d3fdd5496b6274b95110157198cead43a2",
+      "gzipPath": "publication-source-validation/hosted-core-original.log.gz",
+      "gzipBytes": 432117,
+      "gzipSha256": "d12e8b6d33522916b43c3220b6fd9f933b9246e16ab41e3859c590401140329f"
+    },
+    {
+      "path": "publication-source-validation/hosted-android-original.log",
+      "bytes": 2130578,
+      "sha256": "2b14919515c76023b304b147a6b777e4ef3a9d7679e240d78219f55a4630feec",
+      "gzipPath": "publication-source-validation/hosted-android-original.log.gz",
+      "gzipBytes": 293463,
+      "gzipSha256": "bddfab83298919dd3226927066942fac8227401a99a187710ec1307dfe79c5a7"
+    },
+    {
+      "path": "publication-source-validation/hosted-footer-failed-original.log",
+      "bytes": 115567,
+      "sha256": "182b657517e0019c8233ddb5e1ea6e2525266d565c5206cf496052d5ea7fdf88",
+      "gzipPath": "publication-source-validation/hosted-footer-failed-original.log.gz",
+      "gzipBytes": 21594,
+      "gzipSha256": "abbc3dd4458d5ab98e858ab9b1ff9d48b68a911ccf0c9046e0a452e277a46b29"
+    }
+  ]
+}

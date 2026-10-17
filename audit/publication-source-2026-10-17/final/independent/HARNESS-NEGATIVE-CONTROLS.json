@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "valid",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "accept"
+    },
+    {
+      "name": "valid",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "accept"
+    },
+    {
+      "name": "one-label",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "one-label",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "three-labels",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "three-labels",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "wrong-date",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "wrong-date",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "wrong-zone",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "wrong-zone",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "missing-history",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "missing-history",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Not yet published",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Not yet published",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Prepared for publication",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Prepared for publication",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Proposed publication date",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale Proposed publication date",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale drafts for review",
+      "route": "/privacy",
+      "status": "PASS",
+      "expected": "reject"
+    },
+    {
+      "name": "stale drafts for review",
+      "route": "/terms",
+      "status": "PASS",
+      "expected": "reject"
+    }
+  ],
+  "passed": 20,
+  "scope": "Extracted exact changed assertion block with synthetic page text; not browser acceptance."
+}
