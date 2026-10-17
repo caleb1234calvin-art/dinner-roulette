@@ -6,18 +6,19 @@ import { validateLegalRelease } from './check-legal-release.mjs';
 const read = file => JSON.parse(readFileSync(new URL('../src/lib/legal/' + file, import.meta.url), 'utf8'));
 const documents = read('documents.json');
 const history = read('history.json');
+// Injected dates below are unit-test fixtures, never operational release approval.
 const publicationOptions = { publication:true, authorizedDate:'2026-11-01', publicationTimeZone:'America/Chicago', now:new Date('2026-11-01T12:00:00Z') };
 function published(version='1.0') {
   const h = structuredClone(history), d = structuredClone(documents);
-  Object.assign(h.current,{version,status:'published',effectiveDate:'2026-11-01',proposedPublicationDate:null});
-  for (const doc of Object.values(d)) Object.assign(doc,{version,status:'published',effectiveDate:'2026-11-01',proposedPublicationDate:null});
+  Object.assign(h.current,{version,status:'published',effectiveDate:'2026-11-01',proposedPublicationDate:null,publicationTimeZone:'America/Chicago'});
+  for (const doc of Object.values(d)) Object.assign(doc,{version,status:'published',effectiveDate:'2026-11-01',proposedPublicationDate:null,publicationTimeZone:'America/Chicago'});
   return {h,d};
 }
-test('prepared 1.0 passes metadata checks but fails publication; draft is not published history', () => {
+test('finalized 1.0 passes source checks; an unreleased fixture still fails publication', () => {
   validateLegalRelease(history, documents);
   const h=structuredClone(history),d=structuredClone(documents);
-  h.current.status='unreleased';h.current.effectiveDate=null;
-  for(const doc of Object.values(d)) { doc.status='unreleased';doc.effectiveDate=null; }
+  h.current.status='unreleased';h.current.effectiveDate=null;h.current.publicationTimeZone=null;
+  for(const doc of Object.values(d)) { doc.status='unreleased';doc.effectiveDate=null;doc.publicationTimeZone=null; }
   assert.throws(() => validateLegalRelease(h,d,publicationOptions), /Publication HOLD/);
 });
 test('explicit publication requires exact synchronized real calendar dates', () => {
@@ -40,23 +41,36 @@ test('notice is not sufficient for changes needing consent or agreement', () => 
   }
 });
 
-test('tentative dates stay synchronized, real and separate from effective publication', () => {
-  assert.equal(history.current.status,'unreleased');
-  assert.equal(history.current.effectiveDate,null);
-  assert.equal(history.current.proposedPublicationDate,'2026-10-19');
+test('finalized source synchronizes intended 1.0 date and zone without retaining proposals', () => {
+  assert.equal(history.current.status,'published');
+  assert.equal(history.current.effectiveDate,'2026-10-19');
+  assert.equal(history.current.publicationTimeZone,'America/Chicago');
+  assert.equal(history.current.proposedPublicationDate,null);
   assert.equal(history.current.version,'1.0');
   validateLegalRelease(history,documents);
-  for(const value of ['2026-02-30','2026-1-19',42]) {
-    const h=structuredClone(history),d=structuredClone(documents);
-    h.current.proposedPublicationDate=value;
-    for(const doc of Object.values(d)) doc.proposedPublicationDate=value;
+  const d=structuredClone(documents);d.privacy.publicationTimeZone='UTC';
+  assert.throws(()=>validateLegalRelease(history,d));
+  for (const value of [null,'CST','Invalid/Zone']) {
+    const {h,d}=published();h.current.publicationTimeZone=value;
+    for(const doc of Object.values(d))doc.publicationTimeZone=value;
     assert.throws(()=>validateLegalRelease(h,d));
   }
-  const d=structuredClone(documents);d.privacy.proposedPublicationDate='2026-10-20';
-  assert.throws(()=>validateLegalRelease(history,d));
   const current=published();current.h.current.proposedPublicationDate='2026-10-19';
   for(const doc of Object.values(current.d)) doc.proposedPublicationDate='2026-10-19';
   assert.throws(()=>validateLegalRelease(current.h,current.d),/cannot retain a proposed/);
+});
+
+test('unreleased proposal fixtures remain synchronized and separate from effective publication', () => {
+  const h=structuredClone(history),d=structuredClone(documents);
+  for(const record of [h.current,...Object.values(d)])Object.assign(record,{status:'unreleased',effectiveDate:null,publicationTimeZone:null,proposedPublicationDate:'2026-10-19'});
+  validateLegalRelease(h,d);
+  for(const value of ['2026-02-30','2026-1-19',42]) {
+    const badH=structuredClone(h),badD=structuredClone(d);
+    for(const record of [badH.current,...Object.values(badD)])record.proposedPublicationDate=value;
+    assert.throws(()=>validateLegalRelease(badH,badD));
+  }
+  d.privacy.proposedPublicationDate='2026-10-20';
+  assert.throws(()=>validateLegalRelease(h,d));
 });
 
 test('publication requires exact authorized date and explicit valid IANA time zone', () => {
@@ -67,7 +81,7 @@ test('publication requires exact authorized date and explicit valid IANA time zo
     {publicationTimeZone:'Invalid/Zone'}, {publicationTimeZone:'-05:00'},
     {publicationTimeZone:'CST'}, {publicationTimeZone:'PST'},
     {publicationTimeZone:'EST'}, {publicationTimeZone:'IST'},
-    {authorizedDate:'2026-11-02'},
+    {authorizedDate:'2026-11-02'}, {publicationTimeZone:'UTC'},
   ]) assert.throws(()=>validateLegalRelease(h,d,{...publicationOptions,...override}));
 });
 
@@ -80,6 +94,7 @@ test('publication day guard rejects before or after the authorized date at local
     validateLegalRelease(h,d,{...options,now:new Date(now)});
   for(const now of ['2026-10-19T04:59:59.999Z','2026-10-20T05:00:00Z'])
     assert.throws(()=>validateLegalRelease(h,d,{...options,now:new Date(now)}),/not the authorized calendar day/);
+  h.current.publicationTimeZone='UTC';for(const doc of Object.values(d))doc.publicationTimeZone='UTC';
   validateLegalRelease(h,d,{...options,publicationTimeZone:'UTC',now:new Date('2026-10-19T00:00:00Z')});
   assert.throws(()=>validateLegalRelease(h,d,{...options,publicationTimeZone:'UTC',now:new Date('2026-10-20T00:00:00Z')}),/not the authorized calendar day/);
 });

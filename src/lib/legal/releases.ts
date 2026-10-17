@@ -11,6 +11,7 @@ export type LegalDocument = {
   status: string;
   effectiveDate: string | null;
   proposedPublicationDate?: string | null;
+  publicationTimeZone?: string | null;
   sections: LegalSection[];
 };
 export type LegalRelease = {
@@ -18,6 +19,7 @@ export type LegalRelease = {
   status: string;
   effectiveDate: string | null;
   proposedPublicationDate?: string | null;
+  publicationTimeZone?: string | null;
   changeType: string;
   summary: string[];
   requiresPrivacyConsent: boolean;
@@ -41,9 +43,10 @@ export function publicationLabel(release: {
   status: string;
   effectiveDate: string | null;
   proposedPublicationDate?: string | null;
+  publicationTimeZone?: string | null;
 }) {
   return release.status === "published" && release.effectiveDate
-    ? `Effective date: ${release.effectiveDate}`
+    ? `Effective date: ${release.effectiveDate}` + (release.publicationTimeZone ? ` (${release.publicationTimeZone})` : "")
     : "Not yet published or effective. The effective date will be set for the authorized publication." +
         (release.proposedPublicationDate
           ? ` Proposed publication date: ${release.proposedPublicationDate}, subject to readiness and separate release approval.`

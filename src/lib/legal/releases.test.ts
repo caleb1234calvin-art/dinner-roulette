@@ -50,3 +50,10 @@ test("proposed publication is conditional planning metadata, never an effective 
     " Proposed publication date: 2026-10-19, subject to readiness and separate release approval.");
   assert.ok(!publicationLabel(proposed).includes("Effective date:"));
 });
+
+// This is a source-rendering fixture, not evidence of live publication.
+test("finalized publication labels include the bound time zone without draft or tentative copy", () => {
+  const release = { ...initial, status: "published", effectiveDate: "2026-10-19", publicationTimeZone: "America/Chicago", proposedPublicationDate: null };
+  assert.equal(publicationLabel(release), "Effective date: 2026-10-19 (America/Chicago)");
+  assert.equal(materialNotice(release, null), false);
+});

@@ -30,9 +30,9 @@ test('footer uses approved scoped copy and real legal/support destinations',()=>
  assert.match(source,/hasAttestedArtwork\(artworkSources\)/);
  assert.ok(!/position:\s*fixed|className="fixed|play\.google\.com|Effective date/.test(source));
 });
-test('route and overlay coverage explicit, with safe area clearance and no change to legal publication state',()=>{
+test('route and overlay coverage explicit, with safe area clearance and finalized legal source metadata',()=>{
  const shell=read('src/components/app-shell.tsx');assert.match(shell,/PageFooter pathname=\{pathname\}/);assert.match(shell,/env\(safe-area-inset-bottom, 0px\)/);
  for(const path of ['result-overlay','options-overlay','date-night-plan-overlay'])assert.match(read(`src/components/${path}.tsx`),/UnifiedFooter artworkSources=/);
  const mapping=read('src/components/page-footer.tsx');assert.match(mapping,/pathname === "\/favorites"/);assert.match(mapping,/pathname === "\/history"/);
- const docs=JSON.parse(read('src/lib/legal/documents.json'));for(const id of ['privacy','terms']){assert.equal(docs[id].version,'1.0');assert.equal(docs[id].status,'unreleased');assert.equal(docs[id].effectiveDate,null);}
+ const docs=JSON.parse(read('src/lib/legal/documents.json'));for(const id of ['privacy','terms']){assert.equal(docs[id].version,'1.0');assert.equal(docs[id].status,'published');assert.equal(docs[id].effectiveDate,'2026-10-19');assert.equal(docs[id].publicationTimeZone,'America/Chicago');assert.equal(docs[id].proposedPublicationDate,null);}
 });

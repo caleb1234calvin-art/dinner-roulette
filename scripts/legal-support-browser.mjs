@@ -15,11 +15,16 @@ const output = process.env.LEGAL_BROWSER_OUTPUT || 'audit/browser-results/legal-
 await mkdir(output, { recursive: true });
 const proof = assertBrowserBuild();
 const legalHistory=JSON.parse(await readFile(new URL('../src/lib/legal/history.json',import.meta.url),'utf8'));
-const expectedStatus=legalHistory.current.status==='published' ? `Effective date: ${legalHistory.current.effectiveDate}` : 'Not yet published or effective';
+const expectedStatus=legalHistory.current.status==='published' ? `Effective date: ${legalHistory.current.effectiveDate} (${legalHistory.current.publicationTimeZone})` : 'Not yet published or effective';
 async function checkPublicationText(page) {
   const main=await page.locator('main').innerText();
   const historyText=await page.locator('#version-history').innerText();
   assert.ok(main.includes(expectedStatus));assert.ok(historyText.includes(expectedStatus));
+  if(legalHistory.current.status==='published') {
+    assert.equal(main.split(expectedStatus).length-1,2,'Effective date and source time zone must appear in metadata and history');
+    assert.ok(historyText.includes(`Version ${legalHistory.current.version} · Published`));
+    assert.ok(!/Not yet published|Prepared for publication|Proposed publication date|drafts for review/.test(main));
+  }
   if(legalHistory.current.proposedPublicationDate) {
     const proposed=`Proposed publication date: ${legalHistory.current.proposedPublicationDate}, subject to readiness and separate release approval.`;
     assert.equal(main.split(proposed).length-1,2,'Proposed date must appear in document metadata and history');
@@ -116,6 +121,12 @@ try {
       await page.getByRole('link',{name:'Back to Settings',exact:true}).click();
       await page.locator('main').getByRole('link',{name:'Terms & Conditions',exact:true}).click();await page.waitForURL('**/terms');
       await page.getByRole('link',{name:'Back to Settings',exact:true}).click();
+      const legalSection=page.locator('section[aria-labelledby="legal-heading"]');
+      const legalCopy=await legalSection.innerText();
+      assert.ok(legalCopy.includes(expectedStatus));
+      if(legalHistory.current.status==='published')assert.ok(!/drafts for review|Not yet published|Proposed publication date/.test(legalCopy));
+      await visibleHit(legalSection.locator('p'));await overflow(page);
+      await page.screenshot({path:resolve(output,`${width}-${theme}-settings-legal-viewport.png`)});
       const support=page.getByRole('link',{name:'Contact Support',exact:true});const uri=await support.getAttribute('href');
       assert.equal(new URL(uri).pathname,'causticrelay@gmail.com');assert.equal(new URL(uri).protocol,'mailto:');assert.ok(new URL(uri).searchParams.get('subject'));
       await support.evaluate(el=>el.addEventListener('click',event=>event.preventDefault())); // Simulate no external protocol handler; no email is sent.

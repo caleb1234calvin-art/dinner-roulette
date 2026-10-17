@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import history from "@/lib/legal/history.json";
+import { publicationLabel } from "@/lib/legal/releases";
 import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/legal/support";
 import { Check, Moon, Smartphone, Sparkles, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -42,7 +44,7 @@ export function SettingsPage() {
       <div className="mt-3 space-y-2 rounded-xl bg-surface p-4 shadow-border">
         <Link to="/privacy" className="flex min-h-11 items-center rounded-md text-sm font-medium text-fg underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Privacy Policy</Link>
         <Link to="/terms" className="flex min-h-11 items-center rounded-md text-sm font-medium text-fg underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-accent">Terms &amp; Conditions</Link>
-        <p className="text-xs leading-relaxed text-muted">Read how discovery works, how information is handled, and the choices available to you. These documents are drafts for review in this nonproduction candidate.</p>
+        <p className="text-xs leading-relaxed text-muted">Read how discovery works, how information is handled, and the choices available to you. {publicationLabel(history.current)}</p>
       </div>
     </section>
     <section className="mt-8" aria-labelledby="support-heading">

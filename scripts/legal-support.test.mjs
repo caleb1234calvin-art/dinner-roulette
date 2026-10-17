@@ -13,6 +13,7 @@ test('public legal routes render full versioned documents without an authenticat
     assert.equal(documents[id].version, current.version);
     assert.equal(documents[id].status, current.status);
     assert.equal(documents[id].effectiveDate, current.effectiveDate);
+    assert.equal(documents[id].publicationTimeZone, current.publicationTimeZone);
     assert.ok(documents[id].sections.length >= 4);
     assert.equal(new Set(documents[id].sections.map(s => s.id)).size, documents[id].sections.length);
     for (const section of documents[id].sections) {
@@ -53,4 +54,10 @@ test('legal support changes introduce no forced or prechecked acceptance and no 
   assert.ok(!settings.includes('play.google.com/store/apps/details'));
   assert.ok(!/checkbox|defaultChecked|acceptTerms|acceptPrivacy/.test(page));
   assert.ok(!read('src/lib/legal/support.ts').includes('fetch('));
+});
+
+test('Settings publication copy uses synchronized metadata without hard-coded draft wording', () => {
+  const settings=read('src/components/settings-page.tsx');
+  assert.ok(settings.includes('publicationLabel(history.current)'));
+  assert.ok(!settings.includes('These documents are drafts for review'));
 });
