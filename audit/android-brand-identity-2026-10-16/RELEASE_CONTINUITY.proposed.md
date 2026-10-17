@@ -1,3 +1,21 @@
+# PR79 harness-only successor — 2026-10-17 03:00 UTC
+
+## CURRENT
+
+Draft PR79 now has head c546a98ea788c6821d0b18ff83a3df7a70068feb, tree 31bb2d058c6bd96bdc66355fed740e12165c0816, parent 4a9ef5ed943d71e6ab8ed46e4f1cf74165d1dd57; PR77 exact 6b370a remains the underlying application ancestor/base. Branch integration/unified-legal-footer-2026-10-17 remains deployment-disabled. Application source is unchanged from the initial footer freeze.
+
+Postfreeze inspection found a CI wiring defect: the footer exercise step lacked VITE_AUTH_ENABLED=true although its assertion requires it; the earlier build-step environment did not carry across steps. Minimal successor adds that workflow environment and assertion-preserving browser-harness fidelity corrections for keyboard focus-visible modality and host mode classes, plus verification metadata. Source reviewer is rebinding the unchanged application paths. No observed failing hosted execution is claimed solely from this preflight discovery.
+
+Initial 4a9ef5e and web38996865502 / Android38996869963 remain historical attempts. Initial create-commit transport disconnect occurred before any branch ref write; a safe retry published the successor. Exact successor hosted CI is PENDING; no prior-head hosted PASS transfers. Earlier local/source results remain explicitly scoped to their inputs.
+
+## NEXT / HOLD
+
+Complete exact successor CI and independent rendered/artifact acceptance; preserve any failures. No verified-ready declaration yet. PR77/PR78 remain preserved separately; legal dates null/unreleased, no merge/deployment/registration/signing/Play authority. Final store screenshots await validated integration, separate approved publication and actual owner Android capture. All prior physical, attribution, legal and production qualifications remain unchanged.
+
+Prior continuity follows unchanged.
+
+---
+
 # PR79 unified footer candidate freeze — 2026-10-17 02:57 UTC
 
 ## CURRENT
