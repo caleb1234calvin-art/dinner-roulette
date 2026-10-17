@@ -1,3 +1,34 @@
+# PR79 unified footer candidate freeze — 2026-10-17 02:57 UTC
+
+## CURRENT
+
+Owner directive Sentinel_e6da623987508191930a8def2a393615 (02:38:28 UTC) authorizes isolated nonproduction footer implementation with PR77 legal routes and validation. Draft PR79 https://github.com/caleb1234calvin-art/dinner-roulette/pull/79 is frozen at 4a9ef5ed943d71e6ab8ed46e4f1cf74165d1dd57, tree a742d1f718737d4ae10b153a57c25b3469dc0db0, sole parent 6b370a5202ffb531434d725f49aacbdc325f32c5. Branch integration/unified-legal-footer-2026-10-17 targets the PR77 branch; 16 changed paths relative to that parent. Remote complete tree equals local source. PR77 and PR78 remain preserved separately, unmerged.
+
+Local exact-source results: 1267 repository tests and 73 application tests PASS, four documented skips; typecheck PASS; lint zero errors/six inherited warnings; authenticated migration-free build PASS. Independent precommit source review PASS includes 96 asset hashes and 48 focused tests. These are not hosted/browser acceptance. Planned new browser coverage is 350 cases plus retained suites; exact-head hosted CI is PENDING.
+
+Local browser execution was NOT RUN because server socket binding was denied. A cloud connection attempt refused the unavailable server; this is server readiness/infrastructure evidence, not proof that the cloud browser itself cannot perform testing. Preserve all local failed attempts and reviewer qualifications in candidate audit/unified-footer-2026-10-17 evidence and local unified-footer-validation logs.
+
+Current owner wording governs the footer, not merely the earlier mockup. Legal version1.0 remains unreleased with null effective dates. Footer disclosure/attribution implementation does not automatically establish legal compliance. No package identity changes are included; PR78 remains a separate dependency/release-order decision.
+
+Fresh baseline at 02:41 UTC: main c3208d9fdc9a21d698efa9254be1286f5d3d2836; production dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY/source main with five expected aliases and no alias error. PR77 6b370a5202ffb531434d725f49aacbdc325f32c5 and PR78 4010edf31e71a7350d891a98dd43f20535602abd remain draft/open/unmerged. No production mutation occurred.
+
+## NEXT
+
+Complete exact-head hosted validation and independent rendered review, including footer/legal navigation, responsive layout, keyboard/accessibility, preserved near-action qualifiers and unchanged artwork/runtime behavior. Preserve failed evidence and make only authorized bounded corrections if required. Update this checkpoint at terminal acceptance; do not declare verified-ready while hosted gates remain pending.
+
+## HOLD
+
+- PR79 exact-head hosted browser/geometry/retained-suite and applicable Android acceptance pending.
+- Integration/release order across PR77 legal, PR79 footer and PR78 Android identity requires owner decision after validation; no merge/deploy is authorized.
+- Legal effective dates remain null/unreleased; finalization and exact-source revalidation require separate authority.
+- Final store screenshots are HOLD until the validated integration is separately approved and published, then the owner captures actual Android behavior. Current preparation images cannot represent unpublished functionality.
+- Contextual attribution/legal sufficiency, physical-device and unresolved original offline incident, tablet NOT RUN, final media, registration/signing/Console/Play gates remain preserved.
+- No source/main/production/settings/signing/Play/agreement action is authorized by this documentation checkpoint. Halloween and PR61 remain parked; “Radial discovery becomes an audit layer.” remains future intent.
+
+Complete prior continuity follows unchanged.
+
+---
+
 # Footer reference recovered — 2026-10-17 02:33 UTC
 
 ## CURRENT
