@@ -1,3 +1,24 @@
+## CURRENT — 2026-10-17 07:29 UTC: PR82 finalized publication-source freeze; hosted validation PENDING
+
+Owner directive Sentinel_feea67db3c988191801e4552ea9d8068 (07:22:36 UTC) confirms October 19, 2026, America/Chicago and authorizes isolated final publication-source preparation and validation, not actual publication.
+
+### CURRENT
+Draft PR82 head 9e84b3ef5c5870774e6f7dbfbe1c2c1afa03668a; tree c897ee704ac9cb84011d1e54027b9d3e2a29a12a; sole parent preserved PR81 7098b4cbf0e27761fdbb9a9cc1e64f3aef963c94. Eleven reviewed paths synchronize version1.0 source status/effectiveDate2026-10-19/timezoneAmerica/Chicago, clear proposal, and make Settings/policy/history labels consistent. This nonproduction source uses published-state metadata but does not establish actual live publication. Full policy text/consent decisions, footer, Android, origin, catalogs and production settings remain unchanged.
+
+Local preparation1,276repository PASS/four skips,75application,17Python;typecheck/lint0errors6warnings/safe authenticated migration-free build PASS. Independent prefreeze91controls+24focused checks PASS. Fresh frozen-head hosted/native/rendered acceptance PENDING; no prior PASS transferred. Inherited footer test's unreleased/null expectation was narrowly corrected; original failure retained. Initial standalone auth probe lacked running server, not sign-in-disagreement proof.
+
+Actual operational publication guard today rejects October19 publication: expected HOLD. Authorized day is October19 05:00UTC inclusive through October20 05:00UTC exclusive. Fixture successes do not override the real clock or authorize release. Guard remains operator check, not automatic deployment enforcement.
+
+Fresh07:23 reads: mainc3208d9fdc9a21d698efa9254be1286f5d3d2836; apexFMS READY/sourcec3208 with five expected aliases/no aliasError;92identities. Historical rollback8DB READY/sourceead2319 is availability metadata only, not eligibility/current routing. Previous canonical e5d0dc7 and all source/evidence histories preserved.
+
+### NEXT
+Complete fresh exact-head CI, original artifact and independent affected rendered review. Record final candidate/source identity. On the actual authorized day, repeat operational guard and fresh production/source/build/rollback preflight, then obtain separate explicit exact-source merge/deployment authorization. Date/zone/source drift requires HOLD and renewed validation/decision.
+
+### HOLD
+No merge/deploy/live effective policy publication/rollback/signing/registration/Play/agreements authorized. All36 new physical cases remain NOT RUN; remote production wrapper cannot certify unpublished web. PR78/80/81 development certificate mismatch and no uninstall/data-wipe bypass preserved; successor artifact requires its own binding. Original offline incident unresolved. Five-alias rollback restore eligibility, physical/native/email/tablet, attribution/legal sufficiency and final store assets/screenshots/Play gates remain separate. PR61 parked; future intent: "Radial discovery becomes an audit layer."
+
+---
+
 ## CURRENT — 2026-10-17 07:12 UTC: PR81 dated preparation independently verified; actual publication remains HOLD
 
 ### CURRENT
