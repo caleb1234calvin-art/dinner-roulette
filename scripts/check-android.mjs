@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-export const APP_ID = "com.calebcalvin.pickforus";
+export const APP_ID = "app.pickforus.android";
 export const APP_NAME = "Pick For Us";
 const read = (path) => readFileSync(resolve(root, path), "utf8");
 
@@ -30,6 +30,45 @@ export function parseAndroidVersion(text) {
   return { versionCode: code, versionName: values.versionName };
 }
 
+export function validateSourceIdentity({ gradle, manifest, strings, javaSources }) {
+  for (const key of ["namespace", "applicationId"]) {
+    const values = [...gradle.matchAll(new RegExp(`^\\s*${key}\\s*=\\s*"([^"\\n]+)"`, "gm"))];
+    assert.deepEqual(values.map((match) => match[1]), [APP_ID], `${key} must match the permanent identity exactly once`);
+  }
+  const expectedPath = `android/app/src/main/java/${APP_ID.replaceAll(".", "/")}/MainActivity.java`;
+  assert.deepEqual(Object.keys(javaSources).sort(), [expectedPath], "Only the target MainActivity source may exist");
+  assert.match(javaSources[expectedPath], new RegExp(`^package ${APP_ID.replaceAll(".", "\\.")};`, "m"), "Java package must match its path");
+  assert.match(javaSources[expectedPath], /public class MainActivity extends BridgeActivity/);
+  for (const name of ["package_name", "custom_url_scheme"]) {
+    const values = [...strings.matchAll(new RegExp(`<string name="${name}">([^<]+)</string>`, "g"))];
+    assert.deepEqual(values.map((match) => match[1]), [APP_ID], `${name} must match the permanent identity`);
+  }
+  const activities = [...manifest.matchAll(/<activity\b[^>]*>[\s\S]*?<\/activity>/g)].map((match) => match[0]);
+  assert.equal(activities.length, 1, "Exactly one launcher activity is expected");
+  assert.match(activities[0], /android:name="\.MainActivity"/);
+  assert.match(activities[0], /android:exported="true"/);
+  assert.match(activities[0], /android.intent.action.MAIN/);
+  assert.match(activities[0], /android.intent.category.LAUNCHER/);
+  const providers = [...manifest.matchAll(/<provider\b[^>]*>/g)].map((match) => match[0]);
+  assert.equal(providers.length, 1);
+  assert.match(providers[0], /android:name="androidx.core.content.FileProvider"/);
+  assert.ok(providers[0].includes('android:authorities="${applicationId}.fileprovider"'), "FileProvider must derive its authority from applicationId");
+  assert.match(providers[0], /android:exported="false"/);
+  assert.match(providers[0], /android:grantUriPermissions="true"/);
+  const permissions = [...manifest.matchAll(/<uses-permission\b[^>]*android:name="([^"]+)"/g)].map((match) => match[1]).sort();
+  assert.deepEqual(permissions, ["android.permission.ACCESS_COARSE_LOCATION", "android.permission.ACCESS_FINE_LOCATION", "android.permission.INTERNET"]);
+  assert.match(manifest, /android:allowBackup="false"/);
+}
+
+function readJavaSources(directory = "android/app/src/main/java") {
+  return Object.fromEntries(readdirSync(resolve(root, directory), { recursive: true, withFileTypes: true })
+    .filter((entry) => entry.isFile() && /\.(java|kt)$/.test(entry.name))
+    .map((entry) => {
+      const path = resolve(entry.parentPath, entry.name).slice(root.length);
+      return [path, read(path)];
+    }));
+}
+
 export function checkAndroid() {
   validateNativeConfig(JSON.parse(read("capacitor.config.json")));
   const manifest = read("android/app/src/main/AndroidManifest.xml");
@@ -40,7 +79,7 @@ export function checkAndroid() {
   assert.ok(!manifest.includes("ACCESS_BACKGROUND_LOCATION"));
   assert.match(manifest, /android:exported="true"/);
   const app = read("android/app/build.gradle");
-  assert.ok(app.includes(`namespace = "${APP_ID}"`) && app.includes(`applicationId = "${APP_ID}"`));
+  validateSourceIdentity({ gradle: app, manifest, strings: read("android/app/src/main/res/values/strings.xml"), javaSources: readJavaSources() });
   assert.match(app, /debuggable = false/);
   assert.ok(!app.includes("signingConfigs.debug"), "A release must never use the debug key");
   const vars = read("android/variables.gradle");

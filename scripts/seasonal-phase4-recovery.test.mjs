@@ -215,6 +215,32 @@ test("all 52 previous V1 records, presentation copy, radial implementation and u
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
   for (const [path, hash] of Object.entries(baseline.files)) {
     let source = curatedRadiusSourceBefore(path, occurrenceSourceBefore(path));
+    // Authorized unified footer addition: reverse only the exact added lines,
+    // then retain every historical byte/hash assertion (including Directions).
+    if (["src/components/result-overlay.tsx", "src/components/options-overlay.tsx", "src/components/date-night-plan-overlay.tsx"].includes(path)) {
+      let text = source.toString();
+      assert.ok(text.startsWith('import { UnifiedFooter } from "@/components/unified-footer";\n'), path);
+      text = text.replace('import { UnifiedFooter } from "@/components/unified-footer";\n', "");
+      const reviewedFooterLines = {
+        "src/components/result-overlay.tsx": "        <div className=\"px-4 pb-[max(1rem,env(safe-area-inset-bottom))]\"><UnifiedFooter artworkSources={[mode === \"nightlife\" && nightlifeIcon ? nightlifeIcon : mode === \"date-night\" ? dateNightIcon : visual.src]} /></div></>}",
+        "src/components/options-overlay.tsx": "        <div className=\"pb-[max(0.5rem,env(safe-area-inset-bottom))]\"><UnifiedFooter artworkSources={restaurants.map((restaurant) => mode === \"date-night\" ? getDateNightIcon({ activityTypes: (restaurant as DecoratedDateNightPlace).activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : mode === \"nightlife\" ? nightlifeArtwork((restaurant as DecoratedNightlifePlace).venueTypes ?? []) : dinnerRestaurantIcon(restaurant, theme))} /></div>",
+        "src/components/date-night-plan-overlay.tsx": "        <div className=\"pb-[max(0.5rem,env(safe-area-inset-bottom))]\"><UnifiedFooter artworkSources={validPlan ? plan.slice(0, 2).map((place) => getDateNightIcon({ activityTypes: place.activityTypes, cuisineLabel: place.cuisineLabel })) : []} /></div>"
+};
+      const footerLines = [reviewedFooterLines[path]];
+      assert.equal(text.split("\n").filter(line => line.includes("<UnifiedFooter artworkSources=")).length, 1, path);
+      assert.ok(text.split("\n").includes(footerLines[0]), "Exact reviewed footer-only addition: " + path);
+      if (path.endsWith("result-overlay.tsx")) {
+        assert.ok(footerLines[0].endsWith("</div></>}"));
+        text = text.replace("        </div>\n" + footerLines[0], "        </div></>}");
+      } else {
+        text = text.replace(footerLines[0] + "\n", "");
+      }
+      if (path.endsWith("options-overlay.tsx")) {
+        // Only the new top-level selector; OptionCard's original selector stays.
+        text = text.replace('  const theme = useAppStore((s) => s.theme);\n  const spookySeasonEnabled', '  const spookySeasonEnabled');
+      }
+      source = Buffer.from(text);
+    }
     if (path === "src/components/result-overlay.tsx") {
       // Explicit UI amendment: preserve the original receipt and prove that
       // reversing only the reviewed Directions classes recovers every old byte.
