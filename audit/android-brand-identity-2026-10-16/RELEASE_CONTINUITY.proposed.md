@@ -1,3 +1,22 @@
+## CURRENT — 2026-10-17 17:58 UTC: owner conditional exact PR82 release authority recorded; TODAY HOLD
+
+Owner Sentinel_0801fec560888191bd3f442b4cc61b8f at17:57:11.929192UTC authorizes only PR82 cf18ff1c5a56ecf59f8006d4f7c83fb289f393df/tree6300c1061a790d84447bb92166f340aec895757b website/legal release on2026-10-19 America/Chicago, strictly subject to all mandatory safeguards. Verbatim excerpts and bounded interpretation preserved at audit/publication-source-2026-10-17/authorization/OWNER-CONDITIONAL-RELEASE.md.
+
+### CURRENT
+Fresh17:57 read-only state: exact PR82 head/tree/parent9e84b3 unchanged, draft/open/unmerged; mainc3208d9fdc9a21d698efa9254be1286f5d3d2836; apex dpl_FMS2SBg4ymuDwU4avpywV6yB5vg6 READY/sourcec3208, five expected alias metadata bindings, aliasErrornull. Historical rollback8DB READY/sourceead2319 remains availability metadata only. No source, main, production, settings or device mutation. Technical preparation PASS remains historical exact-source evidence; this is NOT release-day preflight PASS.
+
+### NEXT
+Actively execute the verified release procedure only on authorized October19 America/Chicago, within05:00UTC Oct19 inclusive to05:00UTC Oct20 exclusive. Recheck genuine-clock guard and every mandatory source/build/CI/production/alias/protection/recovery safeguard. Source/date drift, missing evidence or any mandatory failure means STOP/HOLD. No automatic release is scheduled.
+
+### HOLD / RECOVERY LIMIT
+Today is October17; no merge/deploy or live policy publication now. Owner separately authorizes bounded immediate rollback only for confirmed critical regression, serious legal/privacy misrepresentation, broken essential functionality or material production outage introduced by this release, to the exact previously verified READY target via the already verified supported route. Fresh target/route/eligibility/expected recovery behavior must be verified before mutation. If not verifiable, STOP/request decision; no alternate deployment, code fix, database/security/infrastructure change or speculative remediation.
+
+READY/historical aliases do not establish five-alias rollback behavior; prior403 preserved. Current FMS may become the prior target only after fresh verification; historical8DB is not automatic substitution. Actual publication history survives rollback.
+
+No new unprotected-main waiver expressly granted; prior waivers are nonstanding. Follow mandatory procedure and report a genuine unresolved waiver/protection gate without inferring approval. Android signing/Play/registration/agreements, physical changes and all prior qualification gates remain separate. All36 new physical cases NOT RUN. Prior failed evidence and checkpoints retained below.
+
+---
+
 ## CURRENT — 2026-10-17 08:47 UTC: PR82 final publication-source validation PASS; operational release HOLD
 
 Exact draft PR82 https://github.com/caleb1234calvin-art/dinner-roulette/pull/82 on integration/legal-publication-source-2026-10-19: head cf18ff1c5a56ecf59f8006d4f7c83fb289f393df; tree6300c1061a790d84447bb92166f340aec895757b; sole parent9e84b3ef5c5870774e6f7dbfbe1c2c1afa03668a. PR81 and all predecessors preserved. R2 changes two test paths only after R1's20 stale-unpublished footer failures; application/policy metadata unchanged.
