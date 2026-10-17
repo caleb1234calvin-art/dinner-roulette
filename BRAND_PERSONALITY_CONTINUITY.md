@@ -224,3 +224,105 @@ The old brand/icon task branches were intentionally pruned after this master was
 
 ## Future rule
 Update this master whenever Mordax mythology, hidden-game structure, branding, voice, personality, icon semantics or naming policy changes. Temporary implementation branches are fine during active work, but durable lore and design decisions belong here rather than in one-off task branches.
+
+## October 16, 2026 — Owner-approved definitive canon clarification
+
+Status: owner-approved fictional canon and deferred design concepts only. This entry preserves the historical material above and supersedes conflicting earlier interpretations as identified below. It does not describe implemented features or authorize publication.
+
+Current public identity for this clarification: **Pick For Us**, a **Caustic Relay** product. The earlier Pick For Me / Dinner Roulette naming and rebrand examples remain historical records, not current naming instructions.
+
+### Mordax — definitive nature
+
+Mordax is Caustic Relay's permanent mascot and the silent embodiment of choice and consequence.
+
+He is closer to an invariant force of nature than a conventional character. His rules remain consistent across every fictional reality.
+
+- Mordax does not act until acted upon.
+- He never narrates, commands, persuades or judges.
+- He exists at the threshold of choice and consequence.
+- Deliberate interaction creates the conditions for his response.
+- Once the choice is resolved and its consequence occurs, he fades.
+- His disappearance is itself part of that consequence.
+- He leaves a mark, but his manifestation does not persist after its threshold ends.
+- Another choice may create a new threshold.
+
+**What's done is done.**
+
+### The three knocks
+
+Every future Caustic Relay application may conceal Mordax within its About Developer page.
+
+The ordinary page contains the invitation:
+
+> If you want into my world, all you have to do is knock.
+
+Three taps trigger a brief snap, contrasting color inversion and deliberate reveal.
+
+Mordax then silently presents:
+
+> Enter my world?
+
+Choices: **Yes**, **No**, or **dismiss without answering**.
+
+There is no pressure, automatic navigation or permanent penalty for refusing. He remains while the choice is present and disappears when resolved. The invitation and choice are interface text, not speech, narration, persuasion or judgment from Mordax.
+
+### Welcome to My World
+
+Choosing Yes reveals:
+
+- Heading: **Welcome to My World**
+- Subtitle: **New theme unlocked in Settings**
+- A truthful, detailed developer account explaining the development journey, AI-assisted workflow, tools, problems solved and verified milestones.
+- A visually separated short fictional story fragment representing one perspective of an evolving cross-application universe.
+- Permanent access to the optional **Eldritch Psychedelia** theme.
+
+The theme unlock does not force theme activation. Factual developer history and fictional story material remain clearly distinguishable. The persistent unlock is a consequence or mark; it does not mean Mordax's manifestation persists after the threshold ends.
+
+### Eldritch Psychedelia
+
+A highly personal visual interpretation of the existing application, designed for the creator and anyone who enjoys that aesthetic.
+
+Retain familiar functionality and layouts while adding:
+
+- Vibrant crimson, deep purple and neon green.
+- Translucent neon-glass navigation and panels.
+- Animated cosmic-horror background artwork.
+- Eye of Providence motifs that track the last pointer or touch location and occasionally blink.
+- Ambient background tentacles and runes.
+- Organic, inverted-color goo splotches on glass interactions.
+- Optional future unusual sounds and clicking animations.
+
+The interface should feel like the living boundary between fictional realities.
+
+**Mordax is exempt from ambient animation.** He never follows the pointer or reacts independently. He responds only when directly acted upon.
+
+Preserve functional accessibility, readable content, reduced-motion alternatives and optional sound.
+
+### Earlier interpretations superseded or constrained
+
+The earlier text is retained as history, not silently rewritten. Apply the following clarification wherever it conflicts:
+
+- **“Mordax — current mythology”:** the earlier combined definition of chaos, choice, restraint and consequence is superseded as his definitive nature by the silent embodiment of choice and consequence. The earlier quoted first-person lines (“You are here because you chose to be.” / “You did not discover me. You assembled the conditions in which I could appear.”) remain conceptual history, not dialogue or narration for Mordax. Deliberate choice creating the conditions for a response remains compatible.
+- **“Mordax manifestation model”:** the attention-scaled existence rule (“The more you choose Mordax, the more he exists.”) and progression into a persistently occupied chamber no longer define his nature or duration. His manifestation lasts only for its threshold, then fades after resolution and consequence. A lasting mark or theme unlock is distinct from a lasting manifestation.
+- **Startup ident and “Mordax sprite”:** earlier startup-animation and autonomous-looking slithering/background-sighting ideas cannot establish an exception to the new rule. Do not implement unsolicited Mordax reactions, pointer-following or ambient animation. This documentation change does not alter any existing application behavior.
+- **“Physical manifestation / merch canon” and “Recurring Mordax patch-note/status device”:** earlier containment, maintenance, escape, recapture and activity framing cannot override his invariant rules or imply that he acts independently. These passages remain historical fictional concepts, not evidence of real events or an implementation mandate. Any future use must be reconciled with this definitive canon.
+- **“Hidden-game / secret-layer concept”, “Distributed brand-story architecture” and “Puzzle structure and failure states”:** earlier app-specific locks, creed/chamber destinations, failure pages and cross-app redirects do not replace the newly specified optional About Developer three-knock entry and Yes/No/dismiss choice. In this experience, declining or dismissing must not force navigation, pressure participation or impose a permanent penalty. Other earlier puzzle and minigame ideas remain deferred and must satisfy the new rules before any separate implementation decision.
+- **Historical naming:** the original master title, naming state and rebrand examples are retained for provenance. Current public naming is Pick For Us under Caustic Relay, as stated above.
+
+### Continuity boundaries and next action
+
+These are **owner-approved fictional canon and deferred design concepts, not implemented features**.
+
+- Preserve the existing continuity history.
+- Do not merge or deploy this experience.
+- Do not interrupt Google Play readiness.
+- Do not change effective legal dates.
+- Do not publish the hidden experience.
+- No runtime implementation, asset production, release or Play submission is authorized by this continuity entry.
+- Future implementation requires a separately bounded decision and validation, including accessibility and truthful separation of factual developer history from fiction.
+
+Current: this dated clarification is the controlling canon where it supersedes the historical interpretations above.
+
+Next: preserve it for later design work while Google Play readiness remains the active product priority.
+
+Hold: the hidden experience, optional theme, fictional fragments and related effects remain deferred.
