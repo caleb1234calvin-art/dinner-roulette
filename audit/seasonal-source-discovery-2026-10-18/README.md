@@ -69,3 +69,7 @@ Added `scripts/seasonal-source-pipeline.mjs` plus offline integration fixtures. 
 ## Seasonal relevance guard (October 18)
 
 The pure triage now requires an explicit recognized seasonal activity hint and a 2026 event-date window overlapping September 1–November 2 to advance to *awaiting-independent-review*. Unrelated concerts and other nonseasonal events remain HOLD even when their structured metadata is complete. A source-level category hint does not suffice. This is a conservative research filter, not a claim that an event is verified or open. Independent review must still reconcile scope, address, operating calendar, source permissions, and preexisting identities. Exact-head CI remains required for this revision; previous PASS does not transfer.
+
+## Cache isolation / redirect guard (October 18)
+
+Prototype responses are cloned at cache reads, concurrent response handoffs and final return, so caller mutation cannot corrupt later cached research facts. Custom transports reporting a redirected response or off-source final URL are rejected. Additional fixture tests cover both. This is not a complete SSRF control: any future real transport must enforce DNS resolution and public-IP egress checks, redirect refusal and deployment-level restrictions. Live crawl remains disabled. Exact-head tests for this amendment are not yet confirmed.
