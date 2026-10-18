@@ -9,7 +9,9 @@ on:
       - scripts/seasonal-source-discovery.test.mjs
       - scripts/seasonal-source-registry.test.mjs
       - scripts/seasonal-source-triage.mjs
-      - scripts/seasonal-source-triage.test.mjs
+      - scripts/seasonal-source-triage.test.mjs scripts/seasonal-source-pipeline.test.mjs
+      - scripts/seasonal-source-pipeline.mjs
+      - scripts/seasonal-source-pipeline.test.mjs
       - audit/seasonal-source-discovery-2026-10-18/source-registry.json
       - .github/workflows/seasonal-source-pilot.yml
 permissions:
