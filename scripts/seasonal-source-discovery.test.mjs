@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import test from "node:test";
 import { setImmediate as nextTurn } from "node:timers/promises";
 import { createSeasonalDiscoveryPilot, extractSeasonalProposals, readResearchRegistry } from "./seasonal-source-discovery.mjs";
@@ -318,4 +319,46 @@ test("bounded malformed markup cannot repeatedly rescan the remaining document",
   const [proposal] = extractSeasonalProposals(nested, source, "2026-10-18T12:00:00Z");
   assert.equal(proposal.publishable, false);
   assert.equal(proposal.proposedName.length, 160);
+});
+
+
+test("capture hashes bind exact UTF-8 bytes while JSON-LD pointers bind observed fields", () => {
+  const firstBlock = '<script type="application/ld+json">invalid json</script>';
+  const record = { "@type": "Event", name: "Fixture Haunted House", startDate: "2026-10-23T19:00:00-05:00",
+    endDate: "2026-10-31T23:30:00-05:00", eventStatus: "https://schema.org/EventCancelled",
+    location: { address: { streetAddress: "14 Example Road", addressLocality: "Joplin", addressRegion: "MO" } },
+  };
+  const html = "İ" + firstBlock + '<script type="application/ld+json">' +
+    JSON.stringify({ "@graph": [{ mainEntity: [record] }] }) + "</script>";
+  const [proposal] = extractSeasonalProposals(html, source, "2026-10-18T12:00:00Z");
+  assert.equal(proposal.evidence.capture.sha256, createHash("sha256").update(html).digest("hex"));
+  assert.equal(proposal.evidence.capture.utf8Bytes, Buffer.byteLength(html));
+  assert.equal(proposal.evidence.capture.authenticity, "unverified-caller-input");
+  assert.equal(proposal.evidence.jsonLdBlockIndex, 1);
+  assert.equal(proposal.evidence.nodePointer, "/@graph/0/mainEntity/0");
+  assert.equal(proposal.evidence.fieldProvenance.startDate.jsonPointer, "/@graph/0/mainEntity/0/startDate");
+  assert.equal(proposal.evidence.fieldProvenance.startDate.observedValue, "2026-10-23T19:00:00-05:00");
+  assert.equal(proposal.evidence.fieldProvenance.startDate.normalizedValue, "2026-10-23");
+  assert.equal(proposal.evidence.fieldProvenance.endDate.observedValue, "2026-10-31T23:30:00-05:00");
+  assert.equal(proposal.evidence.fieldProvenance.eventStatus.observedValue, record.eventStatus);
+  assert.equal(proposal.lifecycleConfidence, "source-stated-unverified");
+  assert.equal(proposal.evidence.fieldProvenance.address.components.streetAddress.jsonPointer,
+    "/@graph/0/mainEntity/0/location/address/streetAddress");
+  assert.equal(proposal.publishable, false);
+  const [changed] = extractSeasonalProposals(html + " ", source, "2026-10-18T12:00:00Z");
+  assert.notEqual(changed.evidence.capture.sha256, proposal.evidence.capture.sha256);
+});
+
+test("omitted lifecycle and date fields stay unknown without fabricated provenance", () => {
+  const html = markup.replace('"endDate":"2026-10-31",', "");
+  const [proposal] = extractSeasonalProposals(html, source, "2026-10-18T12:00:00Z");
+  assert.equal(proposal.lifecycleConfidence, "unknown");
+  assert.equal(proposal.eventStatus, null);
+  assert.equal(proposal.endDate, null);
+  assert.equal(proposal.evidence.fieldProvenance.endDate, undefined);
+  assert.equal(proposal.evidence.fieldProvenance.eventStatus, undefined);
+  const [fallback] = extractSeasonalProposals("<title>Haunted House</title>", source, "2026-10-18T12:00:00Z");
+  assert.equal(fallback.evidence.capture.sha256.length, 64);
+  assert.equal(fallback.evidence.fieldProvenance.title.htmlElement, "title");
+  assert.equal(fallback.evidence.fieldProvenance.startDate, undefined);
 });

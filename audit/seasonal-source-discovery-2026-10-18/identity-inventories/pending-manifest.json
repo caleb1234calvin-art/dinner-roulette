@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "kind": "pending",
+  "repository": "caleb1234calvin-art/dinner-roulette",
+  "sourceRevision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+  "sourceTree": "c928c1d20b2a25d1d0ccd27def53b087ec574e56",
+  "sourcePath": "audit/dot-recovery-2026-10-16/twenty-records/EXACT-TWENTY-FACTUAL-RECORDS.json",
+  "sourceBlobs": [
+    {
+      "path": "audit/dot-recovery-2026-10-16/RECOVERY-REPORT.md",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "d8ce11eea64df9bbf5d7a754e7188c00555139e3",
+      "sha256": "d55e9e99b2aff829c772e8eacc1f10914bb4106839abd4a2ab3e0d1581c558f7",
+      "bytes": 21898
+    },
+    {
+      "path": "audit/dot-recovery-2026-10-16/adapter-review/REVIEW-VERDICTS.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "b261d7bd23ac95d0f5ed8a6b4ac4403856a47fe0",
+      "sha256": "070daf966507b3e6da4aadeb5dcc3d9d36157b6e7f5cc788ed24078d820190f8",
+      "bytes": 10408
+    },
+    {
+      "path": "audit/dot-recovery-2026-10-16/twenty-records/EXACT-TWENTY-FACTUAL-RECORDS.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "0873da518909d0038b75fc4e5aab4f1e5f8f20c5",
+      "sha256": "fa07910cb7bff208ed95b3a306834ee6dc6f1d750b1cecdf9af8f6c08d9fa33c",
+      "bytes": 78727
+    },
+    {
+      "path": "audit/dot-recovery-2026-10-16/twenty-records/RECOVERY-VERIFICATION.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "82adc5c08279382356cad266a5dd97820ed73349",
+      "sha256": "29da3c2eeb428eec839fb78d8f599e8af385d5717c0e3e9a9f6fac28abfbb5d8",
+      "bytes": 6240
+    },
+    {
+      "path": "audit/dot-recovery-2026-10-16/twenty-records/TWENTY-RECORD-RECOVERY-LEDGER.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "0d4584fb0be7205271c55cfea49452ead09164c2",
+      "sha256": "09f3cedc0f9d3c9f0bc6629d7e379ef8aca835eda203c112b096a12e3edea82e",
+      "bytes": 49015
+    },
+    {
+      "path": "audit/quality-closeout-2026-10-15/independent-review/QUEUE-INDEPENDENT-R2.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "17ee8db562029a982324cbcf11004a00a3bf6fc4",
+      "sha256": "ab5d52deb1623025ad9198a2e6fed12ad10ab2f297dda9a8d7bc2e9b5b223b24",
+      "bytes": 21292
+    },
+    {
+      "path": "audit/regional-wave1-2026-10-13/future-implementation-queue.json",
+      "revision": "d0f09d4c20938a40dab70c96bc8bd53ba598bebd",
+      "gitBlob": "c2d6972034333f9bcc6d14eb376bb222841eed6b",
+      "sha256": "30b7ff57633bae9e0335c56c7a042360ecb4fa3754b5b388c072ac80d5cb902e",
+      "bytes": 475442
+    }
+  ],
+  "expectedCount": 20,
+  "negativeCount": 1,
+  "recordsSha256": "05e29fb263d8d1690bd7da827cc375bf70ee0bc5bf0832c3da106c89e2f8a316",
+  "negativeRecordsSha256": "522f962733137f6b7c8f532587bdd0b8a5c6d77a6c9433a3d444f2b0f862ccf0",
+  "inventorySha256": "40ad23f72507b220f5790ce6ffc96e527271c51cbc69849a6a59a860de615982",
+  "observedAt": "2026-10-18T13:41:16.000Z",
+  "expiresAt": "2026-10-18T19:41:16.000Z",
+  "completeness": "complete",
+  "factualFreshness": "not-established",
+  "runtimeApproval": false,
+  "canonicalization": "UTF-8 JSON.stringify with recursively lexicographically sorted object keys; arrays keep stored order; no whitespace or trailing newline",
+  "limitations": [
+    "Identity exclusion/collision review only. Complete record membership does not mean complete aliases worldwide, fresh factual clearance, active operation, runtime integration or release approval.",
+    "Six-hour observation receipt lifetime is a conservative fail-closed review bound, not a promise sources remain unchanged. Replacing this bound requires a newly reviewed manifest and module anchor.",
+    "All explicit historical aliases found in bounded recovered authority sources are retained as collision leads, not automatic merge proof.",
+    "Provider/session-specific permanent-closure and disuse evidence was not observed by this read-only source recovery; preserve such evidence if supplied by other verified data.",
+    "All published expired identities remain represented. Acres HOLD is not a permanent-closure claim."
+  ]
+}

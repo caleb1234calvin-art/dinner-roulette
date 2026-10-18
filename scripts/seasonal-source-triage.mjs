@@ -34,7 +34,7 @@ function publicIdentity(record) {
 }
 
 /** Distinct-sounding venues can share one physical site; do not automatically merge.
- * A matching name OR a matching full address creates a manual-review hold.
+ * A matching name, retained exact alias OR full address creates a manual-review hold.
  * All match identities are untrusted inputs and must be independently assessed. */
 function possibleMatches(proposal, existing, pending) {
   const candidate = publicIdentity(proposal);
@@ -45,11 +45,17 @@ function possibleMatches(proposal, existing, pending) {
       const compared = publicIdentity(record);
       const nameMatch = !!candidate.name && candidate.name === compared.name;
       const addressMatch = !!candidate.address && candidate.address === compared.address;
-      if (!nameMatch && !addressMatch) continue;
+      const matchedAlias = !nameMatch && candidate.name && Array.isArray(record?.aliases)
+        ? record.aliases.slice(0, 50).find(alias => typeof alias === "string" &&
+          alias.length <= 320 && normalized(alias) === candidate.name)
+        : undefined;
+      if (!nameMatch && !addressMatch && !matchedAlias) continue;
       results.push({
         source,
         id: compared.id,
-        basis: nameMatch && addressMatch ? "name-and-address" : nameMatch ? "name" : "address",
+        basis: nameMatch ? (addressMatch ? "name-and-address" : "name")
+          : matchedAlias ? (addressMatch ? "alias-and-address" : "alias") : "address",
+        ...(matchedAlias ? { matchedAlias } : {}),
       });
       if (results.length >= 20) return results;
     }
@@ -95,6 +101,8 @@ export function triageSeasonalProposals(proposals, {
       reasons.push("malformed-research-concerns");
     if (Array.isArray(concerns) && concerns.includes("conflicting-structured-events"))
       reasons.push("conflicting-structured-events");
+    if (Array.isArray(concerns) && concerns.includes("bounded-parser-incomplete"))
+      reasons.push("bounded-parser-incomplete");
     if (hasDates && todayLocalDate && end < todayLocalDate) reasons.push("ended-before-local-day");
     if (matches.length) reasons.push("possible-existing-identity");
 

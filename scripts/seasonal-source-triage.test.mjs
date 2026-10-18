@@ -49,6 +49,34 @@ test("same operator name at two addresses remains ambiguous, not auto-merged", (
   assert.equal(result.triage.possibleMatches[0].basis, "name");
 });
 
+test("exact retained aliases only add an identity hold and preserve the canonical ID", () => {
+  const record = { id: "canonical", name: "Different canonical name",
+    address: "Different address", aliases: [null, {}, "Hallow's Eve and Haunted Trail"] };
+  const [result] = triageSeasonalProposals([candidate], { pending: [record] });
+  assert.equal(result.triage.status, "hold-for-research");
+  assert.deepEqual(result.triage.possibleMatches, [{ source: "pending", id: "canonical",
+    basis: "alias", matchedAlias: "Hallow's Eve and Haunted Trail" }]);
+  assert.equal(result.proposedName, candidate.proposedName);
+  assert.equal(result.publishable, false);
+  const [sameAddress] = triageSeasonalProposals([candidate], {
+    pending: [{ ...record, address: candidate.proposedAddress }],
+  });
+  assert.equal(sameAddress.triage.possibleMatches[0].basis, "alias-and-address");
+  const [canonical] = triageSeasonalProposals([candidate], {
+    pending: [{ ...record, name: candidate.proposedName }],
+  });
+  assert.deepEqual(canonical.triage.possibleMatches, [{ source: "pending", id: "canonical", basis: "name" }]);
+});
+
+test("partial or malformed alias inputs do not invent an identity match", () => {
+  for (const aliases of ["Hallow's Eve and Haunted Trail", {}, ["Hallow's Eve"], [null, 7]]) {
+    const [result] = triageSeasonalProposals([candidate], {
+      published: [{ id: "other", name: "Other name", aliases }],
+    });
+    assert.deepEqual(result.triage.possibleMatches, []);
+  }
+});
+
 test("a title-only page and unknown dates cannot masquerade as seasonal evidence", () => {
   const [result] = triageSeasonalProposals([{
     ...candidate, proposedAddress: null,

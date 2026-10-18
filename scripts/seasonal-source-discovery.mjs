@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const REGISTRY_PATH = "audit/seasonal-source-discovery-2026-10-18/source-registry.json";
 const MAX_HTML_BYTES = 512_000;
@@ -158,6 +159,7 @@ function jsonLdBlocks(html) {
   const blocks = [];
   let cursor = 0;
   let scanned = 0;
+  let incomplete = false;
   while (scanned < MAX_JSON_LD_BLOCKS) {
     const start = lower.indexOf("<script", cursor);
     if (start === -1) break;
@@ -165,8 +167,9 @@ function jsonLdBlocks(html) {
     if (!/[\s>]/.test(lower[cursor] || "")) continue;
     // Do not restart an unbounded [^>]* match at every malformed opening tag.
     const openEnd = nextTagBoundary(lower, cursor);
-    if (openEnd === -1) break;
+    if (openEnd === -1) { incomplete = true; break; }
     if (lower[openEnd] === "<") {
+      incomplete = true;
       cursor = openEnd;
       continue;
     }
@@ -178,14 +181,20 @@ function jsonLdBlocks(html) {
       if (lower[closeEnd] === ">") break;
       close = lower.indexOf("</script", close + 8);
     }
-    if (close === -1) break;
+    if (close === -1) { incomplete = true; break; }
     cursor = closeEnd + 1;
     const attributes = html.slice(start + 7, openEnd);
     if (!jsonLdTypeAttribute(attributes)) continue;
     scanned++;
-    if (close - openEnd - 1 <= 64_000) blocks.push(html.slice(openEnd + 1, close));
+    if (close - openEnd - 1 <= 64_000) blocks.push({
+      text: html.slice(openEnd + 1, close), blockIndex: scanned - 1,
+    });
+    else incomplete = true;
   }
-  return blocks;
+  // Do not scan a thirteenth block merely to prove it exists. Any remaining
+  // capture after reaching the block cap is conservatively incomplete.
+  if (scanned === MAX_JSON_LD_BLOCKS && cursor < html.length) incomplete = true;
+  return { blocks, incomplete };
 }
 
 function isoDate2026(value) {
@@ -213,29 +222,48 @@ function discoveryHints(input) {
   return hints;
 }
 
-function collectNodes(node, result, depth = 0) {
-  if (!node || depth > 4 || result.length >= 50) return;
+function collectNodes(node, result, blockIndex, coverage, pointer = "", depth = 0) {
+  if (!node || typeof node !== "object") return;
+  if (depth > 4 || result.length >= 50) { coverage.incomplete = true; return; }
   if (Array.isArray(node)) {
-    for (const value of node.slice(0, 50)) collectNodes(value, result, depth + 1);
+    if (node.length > 50) coverage.incomplete = true;
+    for (const [index, value] of node.slice(0, 50).entries())
+      collectNodes(value, result, blockIndex, coverage, pointer + "/" + index, depth + 1);
     return;
   }
-  if (typeof node !== "object") return;
-  if (node["@type"]) result.push(node);
-  if (node["@graph"]) collectNodes(node["@graph"], result, depth + 1);
-  if (node.mainEntity) collectNodes(node.mainEntity, result, depth + 1);
+  if (node["@type"]) result.push({ node, blockIndex, pointer });
+  if (node["@graph"])
+    collectNodes(node["@graph"], result, blockIndex, coverage, pointer + "/@graph", depth + 1);
+  if (node.mainEntity)
+    collectNodes(node.mainEntity, result, blockIndex, coverage, pointer + "/mainEntity", depth + 1);
+}
+
+function fieldEvidence(pointer, value, normalizedValue, normalization) {
+  const observedValue = typeof value === "string" ? value.slice(0, 320) : null;
+  return { jsonPointer: pointer, observedValue,
+    observedType: value === null ? "null" : Array.isArray(value) ? "array" : typeof value,
+    observedValueTruncated: typeof value === "string" && value.length > 320,
+    normalizedValue, normalization };
 }
 
 export function extractSeasonalProposals(html, source, checkedAt) {
   if (typeof html !== "string" || Buffer.byteLength(html, "utf8") > MAX_HTML_BYTES) return [];
+  const capture = {
+    sha256: createHash("sha256").update(html, "utf8").digest("hex"),
+    utf8Bytes: Buffer.byteLength(html, "utf8"),
+    sourceUrl: source.url, checkedAt, authenticity: "unverified-caller-input",
+  };
   const nodes = [];
-  for (const block of jsonLdBlocks(html)) {
-    try { collectNodes(JSON.parse(block), nodes); } catch { /* malformed LD is not evidence */ }
+  const coverage = jsonLdBlocks(html);
+  for (const block of coverage.blocks) {
+    try { collectNodes(JSON.parse(block.text), nodes, block.blockIndex, coverage); }
+    catch { coverage.incomplete = true; /* malformed LD cannot establish full coverage */ }
   }
   const proposals = [];
   const seen = new Set();
   const eventVariants = new Map();
   let rejectedOutOfSeason = false;
-  for (const node of nodes) {
+  for (const { node, blockIndex, pointer } of nodes) {
     const types = (Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]])
       .filter(x => typeof x === "string").map(x => x.toLowerCase());
     if (!types.some(x => /(?:^|\/)event$|(?:^|\/)place$|(?:^|\/)touristattraction$/.test(x))) continue;
@@ -266,6 +294,28 @@ export function extractSeasonalProposals(html, source, checkedAt) {
     if (startDate) fields.push("startDate");
     if (endDate) fields.push("endDate");
     if (node.eventStatus != null) fields.push("eventStatus");
+    const fieldProvenance = {
+      name: fieldEvidence(pointer + (node.name ? "/name" : "/location/name"),
+        node.name || node.location?.name, name, "plain-text-trim-and-bound"),
+    };
+    if (address) {
+      const rawAddress = node.location?.address ?? node.address;
+      const addressPointer = pointer + (node.location?.address != null ? "/location/address" : "/address");
+      fieldProvenance.address = typeof rawAddress === "string"
+        ? fieldEvidence(addressPointer, rawAddress, address, "plain-text-trim-and-bound")
+        : { jsonPointer: addressPointer, normalizedValue: address,
+          normalization: "join-observed-address-components",
+          components: Object.fromEntries(["streetAddress", "addressLocality", "addressRegion", "postalCode"]
+            .filter(key => typeof rawAddress?.[key] === "string")
+            .map(key => [key, fieldEvidence(addressPointer + "/" + key, rawAddress[key],
+              flatText(rawAddress[key], 100), "plain-text-trim-and-bound")])) };
+    }
+    if (startDate) fieldProvenance.startDate = fieldEvidence(pointer + "/startDate",
+      node.startDate, startDate, "validated-literal-local-date");
+    if (endDate) fieldProvenance.endDate = fieldEvidence(pointer + "/endDate",
+      node.endDate, endDate, "validated-literal-local-date");
+    if (node.eventStatus != null) fieldProvenance.eventStatus = fieldEvidence(pointer + "/eventStatus",
+      node.eventStatus, eventStatus, "observed-status-not-operator-verification");
     proposals.push({
       sourceId: source.id,
       sourceUrl: source.url,
@@ -274,11 +324,13 @@ export function extractSeasonalProposals(html, source, checkedAt) {
       startDate,
       endDate,
       eventStatus,
+      lifecycleConfidence: eventStatus === null ? "unknown" : "source-stated-unverified",
       activityHints: discoveryHints(name),
       verified: false,
       publishable: false,
       openNowEligible: false,
-      evidence: { format: "json-ld", checkedAt, fields },
+      evidence: { format: "json-ld", checkedAt, fields, capture: { ...capture },
+        jsonLdBlockIndex: blockIndex, nodePointer: pointer, fieldProvenance },
     });
   }
   // Inspect every bounded node before truncation so later conflicting copies
@@ -288,6 +340,8 @@ export function extractSeasonalProposals(html, source, checkedAt) {
       (proposal.proposedAddress || "").toLowerCase(), proposal.startDate]);
     proposal.researchConcerns = eventVariants.get(identity).size > 1
       ? ["conflicting-structured-events"] : [];
+    if (coverage.incomplete || proposals.length > MAX_PROPOSALS)
+      proposal.researchConcerns.push("bounded-parser-incomplete");
   }
   if (proposals.length || rejectedOutOfSeason) return proposals.slice(0, MAX_PROPOSALS);
   const title = htmlTitle(html);
@@ -295,8 +349,11 @@ export function extractSeasonalProposals(html, source, checkedAt) {
     sourceId: source.id, sourceUrl: source.url, proposedName: title,
     proposedAddress: null, startDate: null, endDate: null,
     activityHints: discoveryHints(title),
+    researchConcerns: coverage.incomplete ? ["bounded-parser-incomplete"] : [],
     verified: false, publishable: false, openNowEligible: false,
-    evidence: { format: "page-title-only", checkedAt, fields: ["title"] },
+    evidence: { format: "page-title-only", checkedAt, fields: ["title"], capture,
+      fieldProvenance: { title: { htmlElement: "title", normalizedValue: title,
+        normalization: "plain-text-trim-and-bound" } } },
   }] : [];
 }
 
