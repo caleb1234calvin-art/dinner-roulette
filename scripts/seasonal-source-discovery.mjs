@@ -189,8 +189,8 @@ export function createSeasonalDiscoveryPilot({
     // Future server-only adapters must enforce DNS/egress and destination policy.
     if (typeof fetchImpl !== "function") return { status: "transport-not-configured", proposals: [] };
     const saved = cache.get(sourceId);
-    if (saved && now() < saved.until) return { status: "cached", proposals: saved.proposals };
-    if (inFlight.has(sourceId)) return inFlight.get(sourceId);
+    if (saved && now() < saved.until) return { status: "cached", proposals: structuredClone(saved.proposals) };
+    if (inFlight.has(sourceId)) return structuredClone(await inFlight.get(sourceId));
     const operation = (async () => {
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), 6000);
@@ -199,11 +199,18 @@ export function createSeasonalDiscoveryPilot({
           method: "GET", redirect: "error", signal: controller.signal,
           headers: { Accept: "text/html,application/xhtml+xml" },
         });
+        // Defensive: a custom transport must not silently follow redirects or
+        // substitute an off-source final destination. Its own egress/DNS policy
+        // remains a separate prerequisite for any real network use.
+        if (response.redirected || (response.url && response.url !== url))
+          return { status: "upstream-redirect-rejected", proposals: [] };
         if (!response.ok) return { status: "upstream-http-error", proposals: [] };
         const html = await readBoundedHtml(response);
         const checkedAt = new Date(now()).toISOString();
         const proposals = extractSeasonalProposals(html, source, checkedAt);
-        cache.set(sourceId, { proposals, until: now() + Math.max(1, Math.min(ttlMs, CACHE_TTL_MS)) });
+        // Cache keeps an isolated snapshot; consumers cannot poison later reads.
+        cache.set(sourceId, { proposals: structuredClone(proposals),
+          until: now() + Math.max(1, Math.min(ttlMs, CACHE_TTL_MS)) });
         return { status: "fresh", proposals };
       } catch {
         return { status: "fetch-error", proposals: [] };
@@ -212,7 +219,7 @@ export function createSeasonalDiscoveryPilot({
       }
     })();
     inFlight.set(sourceId, operation);
-    try { return await operation; } finally { inFlight.delete(sourceId); }
+    try { return structuredClone(await operation); } finally { inFlight.delete(sourceId); }
   }
   return { discover };
 }
