@@ -25,7 +25,8 @@ function trustedSourceUrl(value) {
     const url = new URL(value);
     if (url.protocol !== "https:" || url.username || url.password || url.port ||
       url.hash || !/^[a-z0-9.-]+$/i.test(url.hostname) ||
-      /^(localhost|.*\.localhost|.*\.local)$/i.test(url.hostname) ||
+      !url.hostname.includes(".") || url.hostname.endsWith(".") ||
+      /^(localhost|.*\.(?:localhost|local|internal|home|test|invalid|example))$/i.test(url.hostname) ||
       /^\d+\.\d+\.\d+\.\d+$/.test(url.hostname) ||
       url.hostname.includes("..")) return null;
     return url.href;
@@ -117,6 +118,7 @@ export function extractSeasonalProposals(html, source, checkedAt) {
   }
   const proposals = [];
   const seen = new Set();
+  let rejectedOutOfSeason = false;
   for (const node of nodes) {
     if (proposals.length >= MAX_PROPOSALS) break;
     const types = (Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]])
@@ -125,7 +127,13 @@ export function extractSeasonalProposals(html, source, checkedAt) {
     const name = flatText(node.name || node.location?.name);
     if (!name) continue;
     const startDate = isoDate2026(node.startDate);
-    const endDate = isoDate2026(node.endDate) ?? startDate;
+    const explicitEnd = isoDate2026(node.endDate);
+    // A known non-2026 date is not an unknown date; refuse stale/future records.
+    if ((node.startDate && !startDate) || (node.endDate && !explicitEnd)) {
+      rejectedOutOfSeason = true;
+      continue;
+    }
+    const endDate = explicitEnd ?? startDate;
     if (startDate && endDate && endDate < startDate) continue;
     const address = addressText(node.location?.address ?? node.address);
     const dedup = [name.toLowerCase(), address.toLowerCase(), startDate || ""].join("|");
@@ -149,7 +157,7 @@ export function extractSeasonalProposals(html, source, checkedAt) {
       evidence: { format: "json-ld", checkedAt, fields },
     });
   }
-  if (proposals.length) return proposals;
+  if (proposals.length || rejectedOutOfSeason) return proposals;
   const title = htmlTitle(html);
   return title ? [{
     sourceId: source.id, sourceUrl: source.url, proposedName: title,
@@ -164,7 +172,7 @@ export function extractSeasonalProposals(html, source, checkedAt) {
  * No source is enabled in the checked-in registry. Callers cannot supply URLs. */
 export function createSeasonalDiscoveryPilot({
   registry = readResearchRegistry(),
-  fetchImpl = globalThis.fetch,
+  fetchImpl = null,
   now = () => Date.now(),
   ttlMs = CACHE_TTL_MS,
 } = {}) {
@@ -177,6 +185,9 @@ export function createSeasonalDiscoveryPilot({
     if (!verifiedFetchClearance(registry, source)) return { status: "blocked-by-policy", proposals: [] };
     const url = trustedSourceUrl(source.url);
     if (!url) return { status: "invalid-source-url", proposals: [] };
+    // No built-in transport: enabling a registry is never enough to start crawling.
+    // Future server-only adapters must enforce DNS/egress and destination policy.
+    if (typeof fetchImpl !== "function") return { status: "transport-not-configured", proposals: [] };
     const saved = cache.get(sourceId);
     if (saved && now() < saved.until) return { status: "cached", proposals: saved.proposals };
     if (inFlight.has(sourceId)) return inFlight.get(sourceId);
