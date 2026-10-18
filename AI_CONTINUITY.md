@@ -1,3 +1,15 @@
+## CURRENT — 2026-10-18 13:38 UTC: PR84 offline R2 scoped milestone; broader acceptance PENDING
+
+DraftPR84 now b99fad7c6b43613569e157c9f151e6d3f1447321/treeecc4d9196a5bcc4aff18dfa92a1e63b8ecf65cbf, sole parent422bf4f352987d5d450ca14b7ef5898e7f300a66. Five-file bounded correction independently accepted for OFFLINE prototype scope only.43source fixtures plus same six previously failing independent probes PASS; ESLintclean; adversarial parser inputs bounded. Reviewed R2diffSHA256965a2a0dcf38b591a845b8689a258c28611b5f55ace4c0da25c6769d3ff48b95. Rejected first proposal and its Unicode/malformed concerns preserved, not relabeled.
+
+Fresh13:37 CI: mock39132253379SUCCESS43/43, checkout synthetic1a082634f07f2f9acca0bd8fdc7fafeea9cc2e11 treeequal to head (parentsmainc3208+b99fad7). Web39132253312 andAndroid39132253351 IN_PROGRESS. No overall acceptance or transfer of old head PASS. Source-policy0/3HOLD unchanged; all operators remain blocked.
+
+NEXT: continue bounded transport and provenance/inventory work, then freeze/review/test resulting exact successor. Transport code remains separate/untracked and is NOT included in this R2 acceptance. Evidence at audit/seasonal-source-discovery-2026-10-18/milestone1-r2/.
+
+HOLD: No live retrieval rights, runtime integration, venue publication, merge/deploy, source-bypass/outreach/FrightMaps or Play authorization. Technical fixture acceptance is not real-source factual/permission acceptance. PR82 exactcf18ff1/tree6300 October19Chicago conditional release authority and all safeguards preserved unchanged. No automatic release or production mutation.
+
+---
+
 ## CURRENT — 2026-10-18 13:30 UTC: PR84 autonomous nonproduction work active; source-policy gate HOLD
 
 Owner directive Sentinel_24ca0891806881918c4ada1c935616f1 authorizes bounded nonproduction PR84 discovery development, corrections/tests/research/CI/documentation through independent acceptance. No merge, deployment, runtime publication, PR82 changes, credentials/settings/Play/operator outreach/FrightMaps/restricted crawling.

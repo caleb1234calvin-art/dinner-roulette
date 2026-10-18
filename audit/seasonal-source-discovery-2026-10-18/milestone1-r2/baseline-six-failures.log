@@ -1,0 +1,134 @@
+✖ explicit end date only (2.835794ms)
+✖ known cancellation stays held (0.746827ms)
+✖ conflicting date rows stay held in both orders (4.238709ms)
+✖ mutable source cannot relabel or cache completed old fetch (3.947366ms)
+✖ invalid review day blocks fetch (0.920952ms)
+✖ abort-ignoring transport settles at deadline and never caches late response (7.25655ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.250408
+
+✖ failing tests:
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:14:1
+✖ explicit end date only (2.835794ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '2026-10-23'
+  - null
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:14:111)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '2026-10-23',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:15:1
+✖ known cancellation stays held (0.746827ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'awaiting-independent-review'
+  - 'hold-for-research'
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:15:127)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'awaiting-independent-review',
+    expected: 'hold-for-research',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:16:1
+✖ conflicting date rows stay held in both orders (4.238709ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(rows.every(row=>row.triage.status==='hold-for-research'))
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:16:238)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:17:1
+✖ mutable source cannot relabel or cache completed old fetch (3.947366ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:17:409)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:18:1
+✖ invalid review day blocks fetch (0.920952ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'fresh'
+  - 'blocked-by-policy'
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:18:291)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'fresh',
+    expected: 'blocked-by-policy',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../pr84-recovery-evidence/hardening-repro.test.mjs:19:1
+✖ abort-ignoring transport settles at deadline and never caches late response (7.25655ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///workspace/shared/pr84-recovery-evidence/hardening-repro.test.mjs:19:524)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
