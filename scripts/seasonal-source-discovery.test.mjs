@@ -89,6 +89,12 @@ test("incomplete LD or out-of-season dates are never treated as confirmed operat
   assert.equal(rows[0].evidence.format, "page-title-only");
   assert.equal(rows[0].startDate, null);
   assert.equal(rows[0].verified, false);
-  assert.equal(extractSeasonalProposals(markup.replaceAll("2026-10", "2027-10"), source,
-    "2026-10-18T00:00:00Z")[0].startDate, null);
+  assert.deepEqual(extractSeasonalProposals(markup.replaceAll("2026-10", "2027-10"), source,
+    "2026-10-18T00:00:00Z"), []);
+});
+
+test("explicit transport is required even for test-only cleared registry", async () => {
+  const pilot = createSeasonalDiscoveryPilot({ registry: cleared() });
+  assert.deepEqual(await pilot.discover(source.id),
+    { status: "transport-not-configured", proposals: [] });
 });
