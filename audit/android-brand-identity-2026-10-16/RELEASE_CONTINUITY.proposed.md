@@ -1,3 +1,17 @@
+## CURRENT — 2026-10-18 13:59 UTC: PR84 foundation milestone; service and hosted acceptance PENDING
+
+Published PR84 head98915d0eee7b3ec0096f6148d13e7fa551b2bdca/treec834d3954033297e1e3ce428416ce12591dbdf2f, parentb99fad7c6b43613569e157c9f151e6d3f1447321. Seventeen immutable file readbacks match independent R4 review.87/87 local focused fixtures PASS; five identical reproduction corrections PASS; all17source hashes unchanged during review. Exact-head hosted CI remains pending. This is bounded offline foundation acceptance, not service/runtime/live-source acceptance.
+
+Independent31inventory source bindings verified:92published identities and20pending records. Seven published identities are expired at the exact13:41UTC observation but remain identity/exclusion inventory. No pending record expired at that instant; all20factual freshness reviews are due/overdue. Factual clearance/operating schedules/release eligibility were not recertified. Acres HOLD overrides older READY research without implying closure.
+
+Rejected integration proposals for unused aliases and cancellation hidden beyond parser caps are preserved and corrected before publication; caps were not broadened. Evidence: audit/seasonal-source-discovery-2026-10-18/foundation-r4/. ReportSHA256cfb9048a6fadad5a888c1951c12ecef6783cac88df1e4620b139c146585e4340.
+
+NEXT: separately implement/review service orchestration, then freeze and validate the resulting exact source. Do not transfer foundation or earlier CI PASS to a changed successor.
+
+HOLD: all three real operator sources remain blocked (0/3rights clearance). No live collection, venue import/runtime publication, merge/deploy/outreach/FrightMaps/restricted crawl/Play. Independent service work is outside this checkpoint. PR82 exact conditional October19Chicago release authority and all mandatory safeguards remain unchanged. No production mutation or new maintenance scope.
+
+---
+
 ## CURRENT — 2026-10-18 13:38 UTC: PR84 offline R2 scoped milestone; broader acceptance PENDING
 
 DraftPR84 now b99fad7c6b43613569e157c9f151e6d3f1447321/treeecc4d9196a5bcc4aff18dfa92a1e63b8ecf65cbf, sole parent422bf4f352987d5d450ca14b7ef5898e7f300a66. Five-file bounded correction independently accepted for OFFLINE prototype scope only.43source fixtures plus same six previously failing independent probes PASS; ESLintclean; adversarial parser inputs bounded. Reviewed R2diffSHA256965a2a0dcf38b591a845b8689a258c28611b5f55ace4c0da25c6769d3ff48b95. Rejected first proposal and its Unicode/malformed concerns preserved, not relabeled.

@@ -1,0 +1,96 @@
+{
+  "head": "98915d0eee7b3ec0096f6148d13e7fa551b2bdca",
+  "tree": "c834d3954033297e1e3ce428416ce12591dbdf2f",
+  "parent": "b99fad7c6b43613569e157c9f151e6d3f1447321",
+  "readbacks": [
+    {
+      "path": ".github/workflows/seasonal-source-pilot.yml",
+      "sha": "bbd89b946f8e81d581a7c9410b6316b7f78268c3",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/README.md",
+      "sha": "d68784a603af99283bcb593f29d13d9ff1006b27",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-discovery.mjs",
+      "sha": "62ba7047fff36e21523be63accddff881863061d",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-discovery.test.mjs",
+      "sha": "1d335bdfa964fc4dabb8f2c99a286b4362a30b92",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-pipeline.mjs",
+      "sha": "c656c21cb966dd61395123a55b98506112e934d2",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-pipeline.test.mjs",
+      "sha": "b305459f2c0b8d8af0ea3a4963da8947e793bdfb",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-transport.mjs",
+      "sha": "d489b6fd5d632698cfaef1566c0b50c2d77331b7",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-transport.test.mjs",
+      "sha": "364eccc6138a8b415169c42861e8f54fd1ab1b79",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-identities.mjs",
+      "sha": "880f4d023354517956905fd7c7eaf76f5efa8d79",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-identities.test.mjs",
+      "sha": "35145cba9095f04a373679b1396bbef0cdc86514",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/identity-inventories/published-inventory.json",
+      "sha": "24d09a336a29c0e1c73b8b7341ae0f94c3ce4e5a",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/identity-inventories/published-manifest.json",
+      "sha": "749400852890e207ba2026264e77a0dcc15eacb3",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/identity-inventories/pending-inventory.json",
+      "sha": "bc55e0502fd664b0c634a0353130944320cb58e9",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/identity-inventories/pending-manifest.json",
+      "sha": "3a83b2d8178e1190268d8d4bf55f880008aa113f",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/identity-inventories/README.md",
+      "sha": "ec16c0f1e3d241ba55ecb84dcb9ad98b6f1eefd6",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-triage.mjs",
+      "sha": "fe176bcc2682d207f659331e525f3afa59cf2036",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-triage.test.mjs",
+      "sha": "c497cb0b677852182da8c8049ab136740dd02494",
+      "equal": true
+    }
+  ],
+  "base": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "draft": true,
+  "state": "open",
+  "merged": false
+}
