@@ -1,3 +1,21 @@
+## CURRENT — 2026-10-18 13:30 UTC: PR84 autonomous nonproduction work active; source-policy gate HOLD
+
+Owner directive Sentinel_24ca0891806881918c4ada1c935616f1 authorizes bounded nonproduction PR84 discovery development, corrections/tests/research/CI/documentation through independent acceptance. No merge, deployment, runtime publication, PR82 changes, credentials/settings/Play/operator outreach/FrightMaps/restricted crawling.
+
+CURRENT: Draft PR84 integration/seasonal-source-discovery-v1-2026-10-18 remains exact422bf4f352987d5d450ca14b7ef5898e7f300a66/tree55a2baa9a476e4cc533dfd97dccf0b792a590350, parentbecf5c57220f01f2bb79fc578f690493e491c4b4. Historical checkpoint not reset. Ten isolated research/workflow/test paths; no app runtime wiring. Baseline26 local fixtures PASS, but independent seven bounded gaps (six failed functional probes plus regex CPU measurements) require corrections. Sole-editor work remains uncommitted and under review, not a verified successor.
+
+Baseline CI: web39131023861 IN_PROGRESS, mock39131023862 SUCCESS, Android39131023877 SUCCESS/protected signingSKIPPED. Five representative originals size/SHA/CRC checked; not all artifacts. Mock checkout was synthetic a4bff35eda3d75b727920e8d8ce4231c315e755b with identical tree, not exact commit checkout. Partial snapshot from evidence lane: core checks1279PASS/1283total/four skips, application71, catalog83; mock26PASS with synthetic merge tree identical to exact head; Android source bound to422bf4f, unsigned/lint14warnings0errors. Broader browser work pending at this checkpoint. No overall independent acceptance and no baseline PASS transfers to changed source.
+
+Completed source-policy review: ZERO of three operator sources cleared. Sawmill/West Alton, Lone Jack Acres, Gospel Farms all remain blocked-pending-policy-review. Robots allow registered paths but do not establish automated factual retrieval/storage/reuse rights. Terms/reuse basis unresolved; Lone Jack policy-link discovery truncated at262144bytes. Sawmill crawl delay5seconds and Gospel10seconds must be respected by any future separately eligible transport. No venue facts/2026 eligibility/deduplication recertified. Exact nine-file sanitized policy evidence under audit/seasonal-source-discovery-2026-10-18/source-access-review/.
+
+Accounting: three web opens failed transport, two policy search calls/sixqueries, six bounded direct requests (robots/root policy-link discovery), no redirects/bypass/outreach/collector/parser execution. Raw venue HTML not retained. This is completed bounded HOLD, not a scheduled crawler. Registry remains disabled and all proposals unverified/nonpublishable/OpenNow-ineligible.
+
+NEXT: complete independent review and frozen successor identity for bounded fixes/transport controls; exact-head tests, fresh CI and original artifact verification before any technical acceptance. Keep technical behavior separate from permission to use live sources. No live source eligible on current evidence.
+
+HOLD: source-policy rights0/3, actual transport/security acceptance, complete92published+20pending identity reconciliation, per-field provenance/current-year/lifecycle factual clearance and separate release authority. Do not substitute fixture success for factual/live-source readiness. PR82 exactcf18ff1c5a56ecf59f8006d4f7c83fb289f393df/tree6300c1061a790d84447bb92166f340aec895757b conditional October19 America/Chicago authority and all mandatory safeguards remain untouched. No automatic release; current production/main remain separate. Prior complete continuity and authority retained below.
+
+---
+
 ## CURRENT — 2026-10-17 18:56 UTC: scoped owner tablet/PWA observations; frozen release unchanged
 
 Owner source Sentinel_313a16f3a4f48191b88acdd93e2270b1, October17 report; exact test timestamps unspecified. Documentation and read-only analysis only.

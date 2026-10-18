@@ -1,0 +1,44 @@
+{
+  "initialWebOpens": [
+    {
+      "url": "https://www.thesawmillatwestalton.com/robots.txt",
+      "result": "Internal Error",
+      "originStatusKnown": false
+    },
+    {
+      "url": "https://lonejackacres.com/robots.txt",
+      "result": "Internal Error",
+      "originStatusKnown": false
+    },
+    {
+      "url": "https://www.gospelfarms.com/robots.txt",
+      "result": "Internal Error",
+      "originStatusKnown": false
+    }
+  ],
+  "queries": [
+    {
+      "call": 1,
+      "queries": [
+        "site:thesawmillatwestalton.com terms conditions use robots",
+        "site:lonejackacres.com terms conditions use robots",
+        "site:gospelfarms.com terms conditions use robots"
+      ],
+      "result": "Incidental indexed visitor/event pages; no website access or reuse grant established. No venue facts retained or certified."
+    },
+    {
+      "call": 2,
+      "queries": [
+        "site:thesawmillatwestalton.com (\"privacy\" OR \"terms\" OR \"copyright\" OR \"robots\")",
+        "site:lonejackacres.com (\"privacy policy\" OR \"terms of use\" OR \"copyright\" OR \"automated\")",
+        "site:gospelfarms.com (\"privacy policy\" OR \"terms of use\" OR \"copyright\" OR \"automated\")"
+      ],
+      "result": "Empty search results."
+    }
+  ],
+  "explicitOpens": 3,
+  "searchCalls": 2,
+  "searchQueries": 6,
+  "upstreamWireRequestsKnown": false,
+  "searchResultsImportedAsVenueData": false
+}

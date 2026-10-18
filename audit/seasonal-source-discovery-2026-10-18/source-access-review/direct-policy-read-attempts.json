@@ -1,0 +1,72 @@
+[
+  {
+    "sourceId": "sawmill-west-alton",
+    "url": "https://www.thesawmillatwestalton.com/robots.txt",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:25:28.823050+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 16384,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "date": "Sun, 18 Oct 2026 13:25:34 GMT",
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "no-cache, private",
+      "last-modified": "Sun, 18 Oct 2026 13:25:34 GMT"
+    },
+    "finalUrl": "https://www.thesawmillatwestalton.com/robots.txt",
+    "bodyBytes": 309,
+    "bodySha256": "82a1c57f6446270c5c5adbb2fa62e11becdb4c9cc998a7754391b58228852325",
+    "body": "User-agent: *\nDisallow: /s/search\nDisallow: /s/cart/\nDisallow: /s/checkout/\nDisallow: /store/checkout\nDisallow: /store/status\nDisallow: /product/*/*/leave-review\nCrawl-delay: 5\n\nUser-agent: Googlebot\nDisallow:\nUser-agent: Googlebot-Image\nDisallow:\n\nSitemap: https://www.thesawmillatwestalton.com/sitemap.xml\n\n",
+    "finishedAt": "2026-10-18T13:25:34.367026+00:00",
+    "sensitiveHeadersRetained": false
+  },
+  {
+    "sourceId": "lone-jack-acres",
+    "url": "https://lonejackacres.com/robots.txt",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:25:34.367087+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 16384,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "content-type": "text/plain; charset=utf-8",
+      "cache-control": "public, max-age=0",
+      "content-length": "116",
+      "date": "Sun, 18 Oct 2026 13:25:38 GMT"
+    },
+    "finalUrl": "https://lonejackacres.com/robots.txt",
+    "bodyBytes": 116,
+    "bodySha256": "3e40acd1d2ed6d53ad5439b562c2bc3994516af7d90dadb783a1409b818954d0",
+    "body": "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://lonejackacres.com/sitemaps.xml\n",
+    "finishedAt": "2026-10-18T13:25:38.624889+00:00",
+    "sensitiveHeadersRetained": false
+  },
+  {
+    "sourceId": "gospel-farms",
+    "url": "https://www.gospelfarms.com/robots.txt",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:25:38.624939+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 16384,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "last-modified": "Fri, 16 Oct 2026 19:02:24 GMT",
+      "etag": "\"b9-65df9cdf6b000\"",
+      "content-length": "185",
+      "content-type": "text/plain",
+      "date": "Sun, 18 Oct 2026 13:25:41 GMT"
+    },
+    "finalUrl": "https://www.gospelfarms.com/robots.txt",
+    "bodyBytes": 185,
+    "bodySha256": "ff648b9c675b52e9ae02ea03800fd28315b652efde8e8477d223fa0cb0b0efc0",
+    "body": "User-agent: *\nCrawl-delay: 10\nDisallow: /admin/\nDisallow: /includes/\nDisallow: /config/\nDisallow: /logs/\nDisallow: /backup/\nDisallow: /.env\nDisallow: /wp-admin/\nDisallow: /wp-includes/\n",
+    "finishedAt": "2026-10-18T13:25:41.926182+00:00",
+    "sensitiveHeadersRetained": false
+  }
+]

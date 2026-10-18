@@ -1,0 +1,107 @@
+{
+  "head": "422bf4f352987d5d450ca14b7ef5898e7f300a66",
+  "tree": "55a2baa9a476e4cc533dfd97dccf0b792a590350",
+  "synthetic_merge": "a4bff35eda3d75b727920e8d8ce4231c315e755b",
+  "merge_tree_equal": true,
+  "role": "baseline, not final candidate",
+  "checks": {
+    "repository_tests": {
+      "tests": 1283,
+      "pass": 1279,
+      "fail": 0,
+      "skip": 4
+    },
+    "application_tests": {
+      "tests": 71,
+      "pass": 71,
+      "fail": 0,
+      "skip": 0
+    },
+    "casino_audit_tests": {
+      "tests": 83,
+      "pass": 83,
+      "fail": 0,
+      "skip": 0
+    },
+    "eslint": {
+      "errors": 0,
+      "warnings": 6
+    }
+  },
+  "mock": {
+    "tests": 26,
+    "pass": 26,
+    "fail": 0,
+    "checkout": "synthetic merge with equal tree"
+  },
+  "android": {
+    "checkout": "PR head",
+    "sign_upload": "skipped",
+    "lint_warnings": 14,
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "play_console_acceptance": "NOT VERIFIED"
+  },
+  "artifact_integrity": [
+    {
+      "file": "artifact-12138430796.zip",
+      "artifact_id": 12138430796,
+      "sha256": "788151f162f3f5b75ab5f2d18aa225b14f2a5032507eedfb5b6ab23d6ba0792b",
+      "matches_github_digest": true,
+      "bytes": 6866410,
+      "zip_crc_pass": true,
+      "file_count": 8
+    },
+    {
+      "file": "build-proof-422bf4f.zip",
+      "artifact_id": 12138171832,
+      "sha256": "75fdaec3e7fd93478d185cde07d5d18df86b1248e9533725be9761e511faabe0",
+      "matches_github_digest": true,
+      "bytes": 391,
+      "zip_crc_pass": true,
+      "file_count": 1
+    },
+    {
+      "file": "artifact-12137617741.zip",
+      "artifact_id": 12137617741,
+      "sha256": "0e1064b3fb67ea4648d2cc8dad3bb3269af97214c90f3287d88420001908c8df",
+      "matches_github_digest": true,
+      "bytes": 22624649,
+      "zip_crc_pass": true,
+      "file_count": 222
+    },
+    {
+      "file": "artifact-12137848491.zip",
+      "artifact_id": 12137848491,
+      "sha256": "573509070c98c44f531b4e44a2667b0405ef9c90e0d8078fce96d62e413994ca",
+      "matches_github_digest": true,
+      "bytes": 24069,
+      "zip_crc_pass": true,
+      "file_count": 3
+    },
+    {
+      "file": "artifact-12138286425.zip",
+      "artifact_id": 12138286425,
+      "sha256": "097f0ad47f586027c5138ea7fbe1f002663c6eead8c251f32f117b8c3121bfc4",
+      "matches_github_digest": true,
+      "bytes": 430981,
+      "zip_crc_pass": true,
+      "file_count": 8
+    }
+  ],
+  "prior_failure": {
+    "run": 39110169527,
+    "head": "dab607ffeddf40825ef29e0270fe461bbcf56f78",
+    "job": 117624397159,
+    "file": "scripts/seasonal-source-triage.test.mjs",
+    "line": 32,
+    "column": 41,
+    "rule": "no-useless-escape",
+    "description": "Unnecessary apostrophe escape; corrected in baseline"
+  },
+  "skipped_repository_tests": [
+    "2026-10-18T13:19:53.2578859Z ok 32 - SKILL.md and AGENTS.md name the marker path and bound this script uses # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-18T13:19:53.2582707Z ok 33 - the sections that own the brand-task prohibition never affirm a wait # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-18T13:19:53.2585810Z ok 34 - SKILL.md tells the pass to self-check with the flag this CLI accepts # SKIP External workspace OG documentation package is not installed in this checkout",
+    "2026-10-18T13:20:38.4403334Z ok 1282 - every hand-over the og skill prints is one this script accepts # SKIP External workspace OG documentation package is not installed in this checkout"
+  ]
+}

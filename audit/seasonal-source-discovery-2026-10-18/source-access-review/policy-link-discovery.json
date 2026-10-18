@@ -1,0 +1,76 @@
+[
+  {
+    "sourceId": "sawmill-west-alton",
+    "url": "https://www.thesawmillatwestalton.com/",
+    "purpose": "bounded policy-link discovery only; no venue-fact extraction or HTML retained",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:26:25.643314+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 262144,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "date": "Sun, 18 Oct 2026 13:26:30 GMT",
+      "content-type": "text/html; charset=utf-8"
+    },
+    "finalUrl": "https://www.thesawmillatwestalton.com/",
+    "truncated": false,
+    "bodyBytesInspected": 47761,
+    "bodySha256": "46ba3c971efe9c5a96856046bb1ef68775316fd1ecf1712282ebe83064cbf824",
+    "policyLinks": [],
+    "allRightsReservedNotice": false,
+    "rawHtmlPersisted": false,
+    "finishedAt": "2026-10-18T13:26:30.275336+00:00"
+  },
+  {
+    "sourceId": "lone-jack-acres",
+    "url": "https://lonejackacres.com/",
+    "purpose": "bounded policy-link discovery only; no venue-fact extraction or HTML retained",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:26:30.275428+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 262144,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "content-type": "text/html",
+      "content-length": "336123",
+      "date": "Sun, 18 Oct 2026 13:26:33 GMT"
+    },
+    "finalUrl": "https://lonejackacres.com/",
+    "truncated": true,
+    "bodyBytesInspected": 262144,
+    "bodySha256": "b1a29f7da91a389d6e197e69b30710ceddf8cdfd86072c275af94aa951f84a73",
+    "policyLinks": [],
+    "allRightsReservedNotice": false,
+    "rawHtmlPersisted": false,
+    "finishedAt": "2026-10-18T13:26:33.874308+00:00"
+  },
+  {
+    "sourceId": "gospel-farms",
+    "url": "https://www.gospelfarms.com/",
+    "purpose": "bounded policy-link discovery only; no venue-fact extraction or HTML retained",
+    "method": "GET",
+    "attemptedAt": "2026-10-18T13:26:33.874391+00:00",
+    "timeoutSeconds": 10,
+    "maxResponseBytes": 262144,
+    "redirectsFollowed": 0,
+    "retries": 0,
+    "status": 200,
+    "headers": {
+      "content-length": "64798",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Sun, 18 Oct 2026 13:26:37 GMT"
+    },
+    "finalUrl": "https://www.gospelfarms.com/",
+    "truncated": false,
+    "bodyBytesInspected": 64798,
+    "bodySha256": "fb825f79660f34f8af8d7666fe05c3a830b7bd05aef4cb73191e8e3d084defa4",
+    "policyLinks": [],
+    "allRightsReservedNotice": false,
+    "rawHtmlPersisted": false,
+    "finishedAt": "2026-10-18T13:26:37.341568+00:00"
+  }
+]
