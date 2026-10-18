@@ -1,3 +1,17 @@
+## CURRENT — 2026-10-18 14:09 UTC: PR84 final isolated service source frozen; exact-head CI PENDING
+
+DraftPR84 exact9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4/tree26725dfcfe2de5e82f49cda02b9ec49addb421ce, parent98915d0eee7b3ec0096f6148d13e7fa551b2bdca. Six accepted file readbacks match independent service review; source freeze is complete.104repository fixtures+10separately authored adversarial tests independently PASS within isolated mocked service scope. Hosted exact-head CI/artifacts remain PENDING; no overall completion yet.
+
+Service composes strict bounded transport, captured-byte provenance, immutable inventory validation and conservative proposal triage. Cancellation/coalescing/cache revalidation/revocation and bounded fail-closed uncertainty/negative stores tested. Negative state is service-instance-only, not durable across restart. No app endpoint/runtime/UI import/auto-run/scheduler added. All proposals remain unverified/nonpublishable/OpenNow-ineligible.
+
+Identity snapshot92published/20pending plus AcresHOLD, seven expired published identities retained. Pending factual reviews due/overdue; receipt expires2026-10-18T19:41:16Z then fails closed. Captured facts/timestamps do not prove venue operation or rights. All3operator sources still blocked, ZERO approved.
+
+NEXT: finish final exact-head web/mock/Android original-evidence verification and independent final binding; preserve earlier failures and scoped successes without transferring PASS. No further source change planned absent concrete defects.
+
+HOLD: real permitted operator fixtures, DNS/TLS/deployment egress, durable lifecycle authority, factual refresh, runtime/UI and production acceptance unproven. No live activation/import/merge/deploy/outreach/FrightMaps/restricted crawl/Play. PR82 exact conditionalOctober19Chicago authority and all safeguards untouched. No production mutation.
+
+---
+
 ## CURRENT — 2026-10-18 13:59 UTC: PR84 foundation milestone; service and hosted acceptance PENDING
 
 Published PR84 head98915d0eee7b3ec0096f6148d13e7fa551b2bdca/treec834d3954033297e1e3ce428416ce12591dbdf2f, parentb99fad7c6b43613569e157c9f151e6d3f1447321. Seventeen immutable file readbacks match independent R4 review.87/87 local focused fixtures PASS; five identical reproduction corrections PASS; all17source hashes unchanged during review. Exact-head hosted CI remains pending. This is bounded offline foundation acceptance, not service/runtime/live-source acceptance.
