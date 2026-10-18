@@ -5,6 +5,11 @@
  */
 
 const DAY = /^20\d{2}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])$/;
+const HALLOWEEN_2026_START = "2026-09-01";
+const HALLOWEEN_2026_END = "2026-11-02";
+const SEASONAL_ACTIVITY_HINTS = new Set([
+  "haunted-house", "corn-maze", "pumpkin-patch", "other-halloween-fall",
+]);
 
 function validDay(value) {
   if (typeof value !== "string" || !DAY.test(value)) return false;
@@ -73,6 +78,13 @@ export function triageSeasonalProposals(proposals, {
     if (!name) reasons.push("missing-name");
     if (!address) reasons.push("missing-address");
     if (!hasDates) reasons.push("missing-or-invalid-2026-date-range");
+    if (hasDates && (end < HALLOWEEN_2026_START || start > HALLOWEEN_2026_END))
+      reasons.push("outside-halloween-2026-window");
+    // A source's preassigned directory category is not proof that this particular
+    // event is seasonal. Category hints are research leads, never classifications.
+    if (!Array.isArray(proposal?.activityHints) ||
+      !proposal.activityHints.some(hint => SEASONAL_ACTIVITY_HINTS.has(hint)))
+      reasons.push("seasonal-category-unsubstantiated");
     if (proposal?.evidence?.format !== "json-ld") reasons.push("insufficient-structured-evidence");
     if (hasDates && todayLocalDate && end < todayLocalDate) reasons.push("ended-before-local-day");
     if (matches.length) reasons.push("possible-existing-identity");
