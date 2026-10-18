@@ -35,3 +35,17 @@ Main tree and Issue #71 were read; relevant date-night code was inspected. A det
 
 ## Next
 Read back exact draft-branch files. Run `node --test scripts/seasonal-source-registry.test.mjs`, check permissions/robots for any intended source, then prototype one operator adapter on the branch and run independent acceptance. Avoid `npm run build`: it invokes migrations. Do not merge/deploy without separate explicit owner approval.
+
+
+## 2026-10-18 pilot implementation follow-up
+
+The branch now contains `scripts/seasonal-source-discovery.mjs` and `scripts/seasonal-source-discovery.test.mjs`.
+This is an isolated Node research prototype, NOT imported by the app UI or backend. It:
+- denies every source in the checked-in registry, unless future explicit source-specific clearance and global activation are recorded;
+- allows only named operator source IDs (no caller-supplied URLs);
+- fails closed on non-HTTPS/malformed URLs and on redirects, non-HTML responses, oversized response streams and upstream failures;
+- uses a six-second request deadline, bounded HTML/JSON-LD parsing and six-hour in-memory caching;
+- emits only unverified, nonpublishable candidate proposals with field-level structural provenance; never Open Now;
+- includes tests for disabled behavior, duplicate in-flight requests, caching and invalid input using mock fixtures, **not live websites**.
+
+**Limitations/hold:** No automated site access permissions have been established. Before any network use, perform independent source access/legal checks and secure URL/DNS/redirect/egress handling on the actual deployment environment (SSRF review); mock clearance in tests is not permission. Do not enable the registry or bind this prototype into production. `scripts/seasonal-source-discovery.test.mjs` was committed but execution is NOT independently verified. No CI/browser/device PASS is claimed. Owner release approval is still separate.
