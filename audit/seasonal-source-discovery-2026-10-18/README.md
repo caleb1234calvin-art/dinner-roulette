@@ -77,3 +77,18 @@ Prototype responses are cloned at cache reads, concurrent response handoffs and 
 ## CI lint remediation — October 18
 
 Exact-head `dab607ff` mock-only suite and Android readiness passed, but full integration CI failed ESLint on `scripts/seasonal-source-triage.test.mjs` line 32: unnecessary apostrophe escape (`no-useless-escape`). The other six warnings were inherited/unchanged. Candidate commit `becf5c57` removes just that escape. Await new exact-head full CI and mock CI; earlier PASS does not transfer. No live crawler or production changes.
+
+## Bounded candidate hardening — October 18, second work session
+
+The preceding checkpoints are preserved history. The clean `422bf4f352987d5d450ca14b7ef5898e7f300a66` baseline passed its 26 existing mock fixtures. Separate adversarial review established six correctness gaps and a malformed-markup CPU-bound gap; these were not failures in production, where this prototype is not imported.
+
+This source-only successor:
+- Races the whole asynchronous fetch/body operation against six seconds, requests cancellation without awaiting untrusted cleanup, rejects late completion, and releases in-flight bookkeeping. It cannot stop arbitrary synchronously blocking injected JavaScript; the bounded parser now uses progressive tag scans rather than repeated remaining-document regular-expression scans.
+- Snapshots source identity and clearance, rechecks them before returning/caching a response, and binds cache records to their policy/URL fingerprint. Clock rollback cannot reuse a cache capture from the future. Invalid or future policy-review calendar days are rejected.
+- Keeps an omitted end date unknown and excludes it from source-evidence fields. Known non-scheduled/unknown event status is retained and held. Contradictory structured copies sharing name/address/start date are all held, including contradictions discovered after the output cap.
+- Preserves exact MIME and UTF-8 byte limits, default-deny source registry, explicit injected transport only, immutable returned cache values, and `verified=false`, `publishable=false`, `openNowEligible=false` on every proposal.
+
+Acceptance is still scoped to an offline research prototype. All three real operator sources remain policy HOLD; this date validation is not proof of terms, robots, reuse scope or clearance freshness. No live fixture, operator eligibility, production adapter or release acceptance is conferred. Missing destination-local day and source-capture freshness are not yet proven by the offline research pipeline; callers must not interpret its review queue as expiry, duplicate or source verification. Complete revision-bound published/pending inventories, capture hashes and block/node provenance, persistent negative-lifecycle evidence, richer identity conflicts and deployment-level egress controls remain future acceptance gates. Separate transport work, if added, requires its own review before integration; it must not silently become this pilot's default fetch.
+
+
+The first local hardening proposal was rejected by independent review for an introduced Unicode case-folding offset bug and malformed concern-metadata handling; neither was published. The revised proposal preserves offsets with ASCII-only folding and fails closed on malformed concern inputs. That review also found two preexisting provenance gaps: attribute substrings masquerading as a script `type` and invalid timestamp suffixes being accepted as dates. The revised bounded attribute tokenizer requires one real quoted JSON-LD type attribute, and full date/time syntax must validate before its literal local date is retained. These are research-fidelity corrections, not operating-hours verification.

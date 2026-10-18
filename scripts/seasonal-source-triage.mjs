@@ -86,6 +86,15 @@ export function triageSeasonalProposals(proposals, {
       !proposal.activityHints.some(hint => SEASONAL_ACTIVITY_HINTS.has(hint)))
       reasons.push("seasonal-category-unsubstantiated");
     if (proposal?.evidence?.format !== "json-ld") reasons.push("insufficient-structured-evidence");
+    if (proposal?.eventStatus != null &&
+      !/^(?:https?:\/\/schema\.org\/)?EventScheduled$/.test(proposal.eventStatus))
+      reasons.push("event-status-not-scheduled");
+    const concerns = proposal?.researchConcerns;
+    if (concerns != null && (!Array.isArray(concerns) ||
+      concerns.some(concern => typeof concern !== "string")))
+      reasons.push("malformed-research-concerns");
+    if (Array.isArray(concerns) && concerns.includes("conflicting-structured-events"))
+      reasons.push("conflicting-structured-events");
     if (hasDates && todayLocalDate && end < todayLocalDate) reasons.push("ended-before-local-day");
     if (matches.length) reasons.push("possible-existing-identity");
 
