@@ -1,0 +1,29 @@
+name: Seasonal OSM Metadata Offline Tests
+on:
+  push:
+    branches:
+      - integration/seasonal-osm-metadata-adapter-2026-10-18
+  pull_request:
+    paths:
+      - scripts/seasonal-osm-metadata.mjs
+      - scripts/seasonal-osm-metadata.test.mjs
+      - .github/workflows/seasonal-osm-metadata.yml
+permissions:
+  contents: read
+jobs:
+  mock-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Offline OSM metadata regression tests
+        run: node --test scripts/seasonal-osm-metadata.test.mjs
+      - name: Changed-file lint
+        run: |
+          npm ci --ignore-scripts
+          npx eslint scripts/seasonal-osm-metadata.mjs scripts/seasonal-osm-metadata.test.mjs
