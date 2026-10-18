@@ -1,0 +1,56 @@
+{
+  "reviewedAt": "2026-10-18T14:33:10.256062+00:00",
+  "candidate": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4",
+  "gitStatusPorcelain": "",
+  "sourceClasses": [
+    "osm-private-coffee-api",
+    "osm-geofabrik-public-extracts",
+    "nps-events-api"
+  ],
+  "liveDataRequests": 0,
+  "codeChanges": false,
+  "factual2026Clearance": false,
+  "localInputs": [
+    {
+      "path": "LOCATION_HANDOFF.md",
+      "sha256": "bc711a0774c4e7ee31a4209f9e82a26a824dbcb583145fc20b1076bb47b9a126"
+    },
+    {
+      "path": "audit/location-architecture-2026-09-13.md",
+      "sha256": "22f06871569a3f0acc14ca693001fb2620cbc1f5b21b2b4672d00654a1c3dec6"
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/source-registry.json",
+      "sha256": "0e99063963936a3aed833d6085bed0489d00ef93daf27adacffd93e70216dcd0"
+    },
+    {
+      "path": "src/lib/discovery/hedged-provider.ts",
+      "sha256": "bf99b03bc28009f4bf8af104b9cfef89bcc0a57e0d87e0d3ed651223eeca5df6"
+    },
+    {
+      "path": "src/lib/discovery/provider-chain.ts",
+      "sha256": "e223716101651d19b1ac8b466d966691334fced3ad932d6058870eb5f58386bf"
+    },
+    {
+      "path": "src/lib/date-night/search.ts",
+      "sha256": "76506102c20bd30bc5dd965675470f0c3c3a5b6beb4b16215ba43bfe06709ac6"
+    },
+    {
+      "path": "src/lib/date-night/query-plan.ts",
+      "sha256": "208e29b22a462542e123ba43916e57a26dfc22c07c05cb5dcb673aa3e517218e"
+    },
+    {
+      "path": "src/lib/restaurants/overpass.ts",
+      "sha256": "55c0755a6ac3540323c368693e968c7157737d0627824c12f68d713d7a61d07c"
+    },
+    {
+      "path": "src/lib/restaurants/geocode.ts",
+      "sha256": "3df3d5b1062870ff5c12c52a1fc597b11282ea3a6ffaf559c626e0dfc9d84f0e"
+    },
+    {
+      "path": "src/lib/nightlife/search.ts",
+      "sha256": "b7061b1ebc8ba0c6a897bab31b9914c3a11cebe21bc286666760eb795e9bc2d2"
+    }
+  ],
+  "completedAt": "2026-10-18T14:34:28.696635+00:00"
+}

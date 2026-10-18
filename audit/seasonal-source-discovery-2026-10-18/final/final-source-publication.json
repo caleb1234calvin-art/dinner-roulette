@@ -1,0 +1,52 @@
+{
+  "head": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4",
+  "tree": "26725dfcfe2de5e82f49cda02b9ec49addb421ce",
+  "parent": "98915d0eee7b3ec0096f6148d13e7fa551b2bdca",
+  "base": "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+  "pr": "https://github.com/caleb1234calvin-art/dinner-roulette/pull/84",
+  "draft": true,
+  "state": "open",
+  "merged": false,
+  "changed_files": 21,
+  "additions": 10597,
+  "deletions": 0,
+  "sourceReadbacks": [
+    {
+      "path": ".github/workflows/seasonal-source-pilot.yml",
+      "sha": "625d14da361b7c1ef6b1bf8fa8ca483bb6a6d9e8",
+      "equal": true
+    },
+    {
+      "path": "audit/seasonal-source-discovery-2026-10-18/README.md",
+      "sha": "b9129bfa501498669373a9409fa330bc968c709c",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-service.mjs",
+      "sha": "54764c869c2d3550f3209c7bd18a7809434bd4bb",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-service.test.mjs",
+      "sha": "4b9d75ae58432b71c7c4f76be16f182109bddea6",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-transport.mjs",
+      "sha": "8a915b0e9437c8e9dd63e261eb3c3ff2e1fe72d6",
+      "equal": true
+    },
+    {
+      "path": "scripts/seasonal-source-transport.test.mjs",
+      "sha": "b3d7d9e9cc36dbc4e41027ce5445d5441449c332",
+      "equal": true
+    }
+  ],
+  "independentRepositoryTests": 104,
+  "independentAdversarialTests": 10,
+  "sourceApproval": "0/3 HOLD",
+  "runtimeApproval": false,
+  "hostedCI": "separate exact-head disposition pending",
+  "reviewReportSha256": "199ced14dbac3ebf0fb7d7e51cb598e30260af1bd3b010a7e165bbb2350e59cf",
+  "sourceFrozen": true
+}

@@ -1,0 +1,123 @@
+{
+  "head": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4",
+  "tree": "26725dfcfe2de5e82f49cda02b9ec49addb421ce",
+  "parent": "98915d0eee7b3ec0096f6148d13e7fa551b2bdca",
+  "runs": {
+    "web": 39134672907,
+    "mock": 39134672906,
+    "android": 39134672933
+  },
+  "status": "HOSTED PASS; original artifact integrity and representative visual review complete with explicit qualifications",
+  "conclusions": {
+    "web": "success",
+    "mock": "success",
+    "android": "success"
+  },
+  "web_jobs": {
+    "total": 17,
+    "passed": 17,
+    "browser_suites": 15,
+    "aggregate_validate": "success"
+  },
+  "mock": {
+    "tests": 104,
+    "passed": 104,
+    "failed": 0,
+    "skipped": 0,
+    "checkout": "exact head with logged tree"
+  },
+  "repository": {
+    "tests": 1361,
+    "passed": 1357,
+    "failed": 0,
+    "skipped": 4
+  },
+  "application": {
+    "tests": 71,
+    "passed": 71,
+    "failed": 0,
+    "skipped": 0
+  },
+  "casino_audit": {
+    "tests": 83,
+    "passed": 83,
+    "failed": 0,
+    "skipped": 0
+  },
+  "eslint": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "android": {
+    "validation": "success",
+    "sign_upload": "skipped",
+    "source_revision": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4",
+    "app_lint_warnings": 14,
+    "upstream_lint_baseline_filters_errors": 6,
+    "bundletool": "PASS",
+    "signing": "unsigned",
+    "runtime": "Remote HTTPS app; not a snapshot of branch web content",
+    "play_console_acceptance": "NOT VERIFIED"
+  },
+  "artifact_integrity": {
+    "original_archives": 18,
+    "archive_bytes": 1382038990,
+    "members": 13745,
+    "uncompressed_bytes": 1462201921,
+    "sha256_size_crc_head_checks": "all passed",
+    "decoded_pngs": 13658,
+    "image_decode_errors": 0
+  },
+  "web_source_fingerprint": {
+    "sha256": "930a533204b4b4b19dd4125a15c9980c58676bb2e081eed950cf3ca9496bf84a",
+    "files": 533
+  },
+  "browser_verdict_totals": {
+    "seasonal_scenario_entries": 2020,
+    "radial_scenario_entries": 10,
+    "casino_checks": 16,
+    "location_checks": 19,
+    "geometry_comparisons": 774,
+    "note": "Repeated evidence scenarios across suites are not unique tests; do not sum with Node test totals.",
+    "seasonal_decoded_image_records": 771,
+    "seasonal_unobscured_note_records": 2103,
+    "seasonal_reachable_control_records": 1269
+  },
+  "actions_log_gaps": [
+    {
+      "job": 117696652754,
+      "suite": "seasonal-cumulative",
+      "reason": "Connector Transport closed",
+      "original_artifact": 12140011160,
+      "raw_verdicts_complete": true
+    },
+    {
+      "job": 117696652730,
+      "suite": "seasonal-regional-wave1",
+      "reason": "Connector Transport closed",
+      "original_artifact": 12140990108,
+      "raw_verdicts_complete": true
+    }
+  ],
+  "scope": "Final immutable mock-only research source validation. No live activation, runtime integration, signed release, merge, or deployment is established.",
+  "verified_at": "2026-10-18T15:00:00Z",
+  "pr": {
+    "number": 84,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4",
+    "base": "c3208d9fdc9a21d698efa9254be1286f5d3d2836"
+  },
+  "visual_review": {
+    "final_png_originals_viewed": 44,
+    "baseline_png_originals_viewed": 4,
+    "new_visual_regression_found": false,
+    "casino_artwork": "Inherited blank artwork capture gap on baseline and final; eventual artwork rendering not proven by these captures.",
+    "geometry_scope": "Static real overlay components with mocked React/store state and production CSS, dark theme, widths 320/390/512. Historical comparison baseline 2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81. Does not prove hydration/RPC/actions.",
+    "narrow_option_labels": "Expected ellipsis; not zero text truncation.",
+    "regional_public_provider_acceptance": false,
+    "sample_note": "44 originals from final-run artifacts include geometry comparison views. Four additional originals are from baseline casino artifact.",
+    "capture_scope": "Some full-page fixed-layer seams; seasonal browser font fallback. These do not establish exhaustive layout/contrast or live factual verification."
+  }
+}
