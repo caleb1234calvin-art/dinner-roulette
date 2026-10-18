@@ -14,7 +14,7 @@ const ATTRIBUTION = "© OpenStreetMap contributors";
 const LICENSE = "ODbL-1.0";
 
 function cleanText(input, max = MAX_TEXT) {
-  return typeof input === "string" ? input.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, max) : "";
+  return typeof input === "string" ? Array.from(input, ch => ch.charCodeAt(0) < 32 || ch.charCodeAt(0) === 127 ? " " : ch).join("").replace(/\s+/g, " ").trim().slice(0, max) : "";
 }
 function norm(value) {
   return cleanText(value).normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
