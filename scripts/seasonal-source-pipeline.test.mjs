@@ -9,9 +9,9 @@ const checkedAt = "2026-10-18T12:00:00.000Z";
 const markup = '<!doctype html><html><head><script type="application/ld+json">' +
   JSON.stringify({
     "@context": "https://schema.org", "@type": "Event",
-    name: "The Harvest Haunt",
+    name: "The Harvest Haunted House",
     startDate: "2026-10-23", endDate: "2026-10-31",
-    location: { name: "Harvest Haunt", address: {
+    location: { name: "Harvest Haunted House", address: {
       streetAddress: "14 Example Road", addressLocality: "Joplin",
       addressRegion: "MO", postalCode: "64801",
     }},
@@ -50,7 +50,7 @@ test("full identity inputs only elevate to independent review, never live eligib
 
 test("pending and published matches remain visible research holds", () => {
   const report = scan({
-    published: [{ id: "existing", name: "The Harvest Haunt", address: "Another Rd" }],
+    published: [{ id: "existing", name: "The Harvest Haunted House", address: "Another Rd" }],
     pending: [{ id: "queued", name: "Different Name", address: "14 Example Road, Joplin, MO, 64801" }],
   });
   assert.equal(report.counts.held, 1);
