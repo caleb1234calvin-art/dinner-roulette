@@ -73,3 +73,7 @@ The pure triage now requires an explicit recognized seasonal activity hint and a
 ## Cache isolation / redirect guard (October 18)
 
 Prototype responses are cloned at cache reads, concurrent response handoffs and final return, so caller mutation cannot corrupt later cached research facts. Custom transports reporting a redirected response or off-source final URL are rejected. Additional fixture tests cover both. This is not a complete SSRF control: any future real transport must enforce DNS resolution and public-IP egress checks, redirect refusal and deployment-level restrictions. Live crawl remains disabled. Exact-head tests for this amendment are not yet confirmed.
+
+## CI lint remediation — October 18
+
+Exact-head `dab607ff` mock-only suite and Android readiness passed, but full integration CI failed ESLint on `scripts/seasonal-source-triage.test.mjs` line 32: unnecessary apostrophe escape (`no-useless-escape`). The other six warnings were inherited/unchanged. Candidate commit `becf5c57` removes just that escape. Await new exact-head full CI and mock CI; earlier PASS does not transfer. No live crawler or production changes.
