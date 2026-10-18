@@ -11,3 +11,7 @@ All proposals explicitly have `verified=false`, `publishable=false`, `openNowEli
 **Limitations:** Discovery is limited to explicitly mapped seasonal attraction tags. No actual live network call is permitted in this phase. Existing app Overpass providers already supply some of this metadata; incremental coverage is unknown. True date/hour evidence, provenance conflict resolution, identity inventory refresh, durable negative lifecycle authority, complete ODbL/public attribution, privacy review, public-service rate limiting and exact live network acceptance remain future gates.
 
 **Release boundaries:** PR #84 remains frozen draft. PR #82 conditional October 19 authority is separate. No merge, deploy, migration, app-store action or publication authorized. Evaluate CI against exact candidate commit before marking PASS. This phase is research-only and requires separate owner approval for any production promotion.
+
+## Review hardening checkpoint
+
+Additional offline guards now retain historical-only mapped attraction IDs as negative-lifecycle research leads (without positive category classification), enforce the JSON byte limit on directly supplied object fixtures, reject malformed tag value types, and flag contradictory rows sharing one OSM type/ID. Regression tests added. No external calls or runtime behavior changes. Exact-head CI remains mandatory; this work does not demonstrate expanded seasonal inventory.
