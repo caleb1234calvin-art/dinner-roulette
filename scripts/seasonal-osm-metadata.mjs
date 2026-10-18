@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+
 /**
  * Offline-only OpenStreetMap/Overpass metadata adapter.
  * This module never fetches any URL, follows an operator website, or joins app runtime.
@@ -9,9 +11,61 @@ const MAX_ELEMENTS = 100;
 const MAX_PROPOSALS = 100;
 const MAX_TEXT = 160;
 const TYPES = new Set(["node", "way", "relation"]);
-const LIFECYCLE_PREFIXES = ["disused:", "abandoned:", "demolished:", "removed:", "was:"];
+const LIFECYCLE_PREFIXES = ["disused:", "abandoned:", "demolished:", "removed:", "was:", "destroyed:", "razed:"];
 const ATTRIBUTION = "© OpenStreetMap contributors";
 const LICENSE = "ODbL-1.0";
+
+// Canonical JSON snapshot rejects values JSON.stringify would silently drop or
+// coerce. This fidelity check is not a sandbox for executable hostile objects.
+function canonicalJson(value, ancestors = new Set(), depth = 0) {
+  if (depth > 64) throw new Error("JSON nesting limit");
+  if (value === null || typeof value === "string" || typeof value === "boolean") return JSON.stringify(value);
+  if (typeof value === "number" && Number.isFinite(value)) return JSON.stringify(value);
+  if (!value || typeof value !== "object" || ancestors.has(value)) throw new Error("Non-JSON value");
+  const array = Array.isArray(value);
+  if (!array && ![Object.prototype, null].includes(Object.getPrototypeOf(value))) throw new Error("Non-JSON object");
+  const descriptors = Object.getOwnPropertyDescriptors(value);
+  const keys = Reflect.ownKeys(descriptors).filter(key => !(array && key === "length"));
+  if (keys.some(key => typeof key !== "string" || !descriptors[key].enumerable ||
+    !Object.hasOwn(descriptors[key], "value"))) throw new Error("Non-JSON property");
+  if (array && (keys.length !== value.length || keys.some((key, i) => key !== String(i)))) throw new Error("Non-JSON array");
+  ancestors.add(value);
+  const items = (array ? keys : keys.sort()).map(key =>
+    (array ? "" : JSON.stringify(key) + ":") + canonicalJson(descriptors[key].value, ancestors, depth + 1));
+  ancestors.delete(value);
+  return array ? "[" + items.join(",") + "]" : "{" + items.join(",") + "}";
+}
+const sha256 = text => createHash("sha256").update(text, "utf8").digest("hex");
+const positiveLifecycleValue = value => typeof value === "string" && Boolean(value) &&
+  !["no", "false", "0"].includes(value.toLowerCase());
+function lifecycleEvidence(tags) {
+  return Object.fromEntries(Object.entries(tags).filter(([key, value]) => {
+    if (!positiveLifecycleValue(value)) return false;
+    if (key === "closed") return ["yes", "true"].includes(value.toLowerCase());
+    return LIFECYCLE_PREFIXES.some(prefix => {
+      if (key === prefix.slice(0, -1)) return true;
+      if (!key.startsWith(prefix)) return false;
+      return ["demolished:", "removed:", "razed:", "destroyed:"].includes(prefix) ||
+        ["leisure", "tourism", "attraction", "amenity"].includes(key.slice(prefix.length));
+    });
+  }));
+}
+
+const RAW_TAG_KEYS = new Set([
+  "name", "attraction", "leisure", "maze:type", "crop", "tourism", "amenity", "closed",
+  "addr:full", "addr:housenumber", "addr:street", "addr:place", "addr:city", "addr:town",
+  "addr:village", "addr:hamlet", "addr:state", "addr:province", "addr:region", "addr:postcode", "addr:country",
+]);
+function rawEvidenceTags(tags) {
+  const entries = Object.entries(tags).filter(([key]) => RAW_TAG_KEYS.has(key) ||
+    LIFECYCLE_PREFIXES.some(prefix => key === prefix.slice(0, -1) || key.startsWith(prefix)));
+  // Preserve whitelisted values unchanged or reject the entire capture; never
+  // present shortened/normalized evidence as an original provider tag.
+  if (entries.length > 64 || entries.some(([key, value]) =>
+    Buffer.byteLength(key, "utf8") > 160 || Buffer.byteLength(value, "utf8") > 4096)) return null;
+  const result = Object.fromEntries(entries);
+  return Buffer.byteLength(canonicalJson(result), "utf8") <= 16384 ? result : null;
+}
 
 function cleanText(input, max = MAX_TEXT) {
   return typeof input === "string" ? Array.from(input, ch => ch.charCodeAt(0) < 32 || ch.charCodeAt(0) === 127 ? " " : ch).join("").replace(/\s+/g, " ").trim().slice(0, max) : "";
@@ -27,41 +81,40 @@ function typeHints(tags) {
   if (["haunted_house", "haunted_trail", "haunted_forest", "haunted_attraction"].includes(attraction))
     types.push("haunted-house");
   if (["corn_maze", "maize_maze"].includes(attraction) ||
-    (maze && ["corn", "maize"].includes(tags["maze:type"] || tags.crop)))
+    (maze && [tags["maze:type"], tags.crop].some(value => ["corn", "maize"].includes(value))))
     types.push("corn-maze");
   if (attraction === "pumpkin_patch") types.push("pumpkin-patch");
   return types;
 }
 function historicalTypeHints(tags) {
-  const historical = {};
+  const hints = new Set();
   for (const prefix of LIFECYCLE_PREFIXES) {
-    for (const [key, value] of Object.entries(tags)) {
-      if (!key.startsWith(prefix)) continue;
-      const field = key.slice(prefix.length);
-      if (["attraction", "leisure", "maze:type", "crop"].includes(field) &&
-          typeof value === "string" && !Object.hasOwn(historical, field)) historical[field] = value;
+    // Lifecycle scopes describe separate states; never combine their fields.
+    const historical = {};
+    for (const field of ["attraction", "leisure", "maze:type", "crop"]) {
+      if (typeof tags[prefix + field] === "string") historical[field] = tags[prefix + field];
     }
+    for (const hint of typeHints(historical)) hints.add(hint);
   }
-  return typeHints(historical);
+  return [...hints];
 }
 function lifecycleWarnings(tags) {
-  const concerns = [];
-  if (Object.keys(tags).some(k => LIFECYCLE_PREFIXES.some(prefix => k.startsWith(prefix))))
-    concerns.push("mapped-lifecycle-negative-tag");
-  if (["yes", "true", "permanently_closed"].includes(tags.disused) ||
-    ["yes", "true"].includes(tags.abandoned) || ["yes", "true"].includes(tags.demolished) ||
-    ["yes", "true"].includes(tags.closed))
-    concerns.push("mapped-lifecycle-negative-state");
-  return concerns;
+  const keys = Object.keys(lifecycleEvidence(tags));
+  return [
+    ...(keys.some(key => key.includes(":")) ? ["mapped-lifecycle-negative-tag"] : []),
+    ...(keys.some(key => !key.includes(":")) ? ["mapped-lifecycle-negative-state"] : []),
+  ];
 }
 function fullAddress(tags) {
-  const street = cleanText(tags["addr:street"], 100);
-  const house = cleanText(tags["addr:housenumber"], 30);
-  const city = cleanText(tags["addr:city"], 100);
-  const state = cleanText(tags["addr:state"], 60);
-  const postcode = cleanText(tags["addr:postcode"], 16);
-  return [ [house, street].filter(Boolean).join(" "), city, [state, postcode].filter(Boolean).join(" ") ]
-    .filter(Boolean).join(", ").slice(0, 240) || null;
+  const full = cleanText(tags["addr:full"], 240);
+  if (full) return full;
+  const parts = [
+    [tags["addr:housenumber"], tags["addr:street"] || tags["addr:place"]].filter(Boolean).join(" "),
+    tags["addr:city"] || tags["addr:town"] || tags["addr:village"] || tags["addr:hamlet"],
+    tags["addr:state"] || tags["addr:province"] || tags["addr:region"],
+    tags["addr:postcode"], tags["addr:country"],
+  ].map(part => cleanText(part, 240)).filter(Boolean);
+  return [...new Set(parts)].join(", ").slice(0, 240) || null;
 }
 function position(element) {
   const candidate = element.type === "node" ? element : element.center;
@@ -84,21 +137,23 @@ function validElement(element) {
  */
 export function adaptOsmSeasonalMetadata(input) {
   let envelope;
-  if (typeof input === "string") {
-    if (Buffer.byteLength(input, "utf8") > MAX_BYTES) return { status: "bounded-input-rejected", proposals: [] };
-    try { envelope = JSON.parse(input); } catch { return { status: "malformed-response", proposals: [] }; }
-  } else {
-    // Offline object fixtures must obey the same byte cap as parsed network JSON.
-    // This is an input-fidelity guard, not a CPU/memory sandbox for hostile objects.
-    try {
-      const snapshot = JSON.stringify(input);
-      if (typeof snapshot !== "string") return { status: "malformed-response", proposals: [] };
-      if (Buffer.byteLength(snapshot, "utf8") > MAX_BYTES)
-        return { status: "bounded-input-rejected", proposals: [] };
+  let snapshot;
+  let inputHashBasis;
+  try {
+    if (typeof input === "string") {
+      if (Buffer.byteLength(input, "utf8") > MAX_BYTES) return { status: "bounded-input-rejected", proposals: [] };
+      envelope = JSON.parse(input);
+      canonicalJson(envelope);
+      snapshot = input;
+      inputHashBasis = "supplied-string-utf8-bytes";
+    } else {
+      snapshot = canonicalJson(input);
+      if (Buffer.byteLength(snapshot, "utf8") > MAX_BYTES) return { status: "bounded-input-rejected", proposals: [] };
       envelope = JSON.parse(snapshot);
-    } catch {
-      return { status: "malformed-response", proposals: [] };
+      inputHashBasis = "canonical-json-object-snapshot-utf8";
     }
+  } catch {
+    return { status: "malformed-response", proposals: [] };
   }
   if (!envelope || typeof envelope !== "object" || Array.isArray(envelope) ||
     !Array.isArray(envelope.elements) || envelope.remark) {
@@ -109,32 +164,53 @@ export function adaptOsmSeasonalMetadata(input) {
     return { status: "coverage-incomplete", proposals: [],
       diagnostic: "element-count-limit", publicationEligible: false };
   }
+  const provenance = { inputSha256: sha256(snapshot), inputHashBasis,
+    recordHashBasis: "canonical-json-original-element-utf8", sourceRows: [] };
   const proposals = [];
   const names = new Map();
   const identifiers = new Map();
-  let discarded = 0;
-  for (const element of envelope.elements) {
-    if (!validElement(element)) { discarded++; continue; }
-    const tags = element.tags;
-    if (!Object.entries(tags).every(([key, value]) =>
-      typeof key === "string" && typeof value === "string")) {
-      discarded++;
-      continue;
+  // Index every valid record before category filtering, including nonseasonal
+  // siblings whose negative state must not disappear from a seasonal identity.
+  for (const [elementIndex, element] of envelope.elements.entries()) {
+    if (!validElement(element) || !Object.values(element.tags).every(value => typeof value === "string")) {
+      return { status: "coverage-incomplete", proposals: [], diagnostic: "invalid-elements",
+        publicationEligible: false };
     }
+    const idKey = element.type + "/" + element.id;
+    const rawTags = rawEvidenceTags(element.tags);
+    if (!rawTags) return { status: "coverage-incomplete", proposals: [],
+      diagnostic: "evidence-tag-limit", publicationEligible: false };
+    const recordSha256 = sha256(canonicalJson(element));
+    const concerns = lifecycleWarnings(element.tags);
+    const identity = identifiers.get(idKey) || { hashes: new Map(), concerns: new Set(), negativeIndices: [] };
+    identity.hashes.set(recordSha256, (identity.hashes.get(recordSha256) || 0) + 1);
+    for (const concern of concerns) identity.concerns.add(concern);
+    if (concerns.length) identity.negativeIndices.push(elementIndex);
+    provenance.sourceRows.push({ elementIndex, osmType: element.type, osmId: element.id,
+      recordSha256, rawTags, mappedLifecycleConcerns: concerns, lifecycleTags: lifecycleEvidence(element.tags) });
+    identifiers.set(idKey, identity);
+  }
+  for (const [elementIndex, element] of envelope.elements.entries()) {
+    const tags = element.tags;
     const activeHints = typeHints(tags);
     const historicalHints = historicalTypeHints(tags);
     if (!activeHints.length && !historicalHints.length) continue;
     // Historical/disused attractions are identity warnings, never live category leads.
     const location = position(element);
     const name = cleanText(tags.name);
-    const lifecycle = lifecycleWarnings(tags);
+    const identity = identifiers.get(element.type + "/" + element.id);
+    const lifecycle = [...identity.concerns];
     const reasons = ["2026-activity-not-verified", "operator-dates-and-hours-unverified"];
     if (!activeHints.length) reasons.push("historical-mapping-only");
     if (!name) reasons.push("missing-mapped-name");
     if (!location) reasons.push("missing-mapped-location");
     if (lifecycle.length) reasons.push("negative-lifecycle-evidence");
+    if (identity.hashes.size > 1) reasons.push("conflicting-osm-identity");
+    const recordSha256 = provenance.sourceRows[elementIndex].recordSha256;
+    if (identity.hashes.get(recordSha256) > 1) reasons.push("duplicate-osm-record");
     const item = {
       sourceId: "openstreetmap-metadata",
+      provenance: { elementIndex, recordSha256, negativeEvidenceIndices: [...identity.negativeIndices] },
       osm: { type: element.type, id: element.id,
         elementUrl: "https://www.openstreetmap.org/" + element.type + "/" + element.id },
       proposedName: name || null,
@@ -151,22 +227,14 @@ export function adaptOsmSeasonalMetadata(input) {
       license: { attribution: ATTRIBUTION, identifier: LICENSE,
         copyrightUrl: "https://www.openstreetmap.org/copyright" },
     };
-    const idKey = element.type + "/" + element.id;
-    if (identifiers.has(idKey)) {
-      const previous = identifiers.get(idKey);
-      if (!previous.triage.reasons.includes("conflicting-osm-identity"))
-        previous.triage.reasons.push("conflicting-osm-identity");
-      item.triage.reasons.push("conflicting-osm-identity");
-    } else {
-      identifiers.set(idKey, item);
-    }
     const key = norm(name);
     if (key) {
       const prior = names.get(key) || [];
       for (const old of prior) {
         if (!old.triage.reasons.includes("possible-mapped-identity-collision"))
           old.triage.reasons.push("possible-mapped-identity-collision");
-        item.triage.reasons.push("possible-mapped-identity-collision");
+        if (!item.triage.reasons.includes("possible-mapped-identity-collision"))
+          item.triage.reasons.push("possible-mapped-identity-collision");
       }
       prior.push(item);
       names.set(key, prior);
@@ -174,9 +242,7 @@ export function adaptOsmSeasonalMetadata(input) {
     proposals.push(item);
     if (proposals.length >= MAX_PROPOSALS) break;
   }
-  if (discarded) return { status: "coverage-incomplete", proposals: [], diagnostic: "invalid-elements",
-    publicationEligible: false };
-  return { status: "metadata-proposals-only", proposals,
+  return { status: "metadata-proposals-only", proposals, provenance,
     countedElements: envelope.elements.length,
     sourceScope: "OSM-place-metadata-not-event-operating-evidence",
     publicationEligible: false };
