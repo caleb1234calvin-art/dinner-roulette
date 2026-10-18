@@ -65,3 +65,7 @@ Added `scripts/seasonal-source-triage.mjs` and `scripts/seasonal-source-triage.t
 ## Offline pipeline checkpoint (October 18)
 
 Added `scripts/seasonal-source-pipeline.mjs` plus offline integration fixtures. This composes the existing parser and triage without performing any HTTP requests or importing app runtime. Missing published/pending identity inventories cause a research HOLD. Complete inventories only allow a candidate to await independent review, never publish or claim Open Now. Restricted directory IDs are not allowed as operator inputs. The source registry is still default-deny, and no real website has been crawled. New exact-head CI execution must be observed before marking this checkpoint PASS.
+
+## Seasonal relevance guard (October 18)
+
+The pure triage now requires an explicit recognized seasonal activity hint and a 2026 event-date window overlapping September 1–November 2 to advance to *awaiting-independent-review*. Unrelated concerts and other nonseasonal events remain HOLD even when their structured metadata is complete. A source-level category hint does not suffice. This is a conservative research filter, not a claim that an event is verified or open. Independent review must still reconcile scope, address, operating calendar, source permissions, and preexisting identities. Exact-head CI remains required for this revision; previous PASS does not transfer.
