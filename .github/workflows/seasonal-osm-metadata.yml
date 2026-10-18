@@ -1,0 +1,38 @@
+name: Seasonal OSM Metadata Offline Tests
+on:
+  push:
+    branches:
+      - integration/seasonal-osm-metadata-adapter-2026-10-18
+  pull_request:
+    paths:
+      - scripts/seasonal-osm-metadata.mjs
+      - scripts/seasonal-osm-metadata.test.mjs
+      - .github/workflows/seasonal-osm-metadata.yml
+permissions:
+  contents: read
+jobs:
+  mock-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Verify exact candidate checkout
+        env:
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          ACTUAL_HEAD="$(git rev-parse HEAD)"
+          printf 'Expected candidate: %s\nChecked out: %s\n' "$EXPECTED_HEAD" "$ACTUAL_HEAD"
+          printf 'Candidate tree: %s\n' "$(git rev-parse HEAD^{tree})"
+          test "$ACTUAL_HEAD" = "$EXPECTED_HEAD"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install locked test dependencies
+        run: npm ci --ignore-scripts
+      - name: Offline OSM metadata regression tests
+        run: node --test scripts/seasonal-osm-metadata.test.mjs
+      - name: Changed-file lint
+        run: npx eslint scripts/seasonal-osm-metadata.mjs scripts/seasonal-osm-metadata.test.mjs
