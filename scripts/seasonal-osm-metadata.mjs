@@ -32,6 +32,18 @@ function typeHints(tags) {
   if (attraction === "pumpkin_patch") types.push("pumpkin-patch");
   return types;
 }
+function historicalTypeHints(tags) {
+  const historical = {};
+  for (const prefix of LIFECYCLE_PREFIXES) {
+    for (const [key, value] of Object.entries(tags)) {
+      if (!key.startsWith(prefix)) continue;
+      const field = key.slice(prefix.length);
+      if (["attraction", "leisure", "maze:type", "crop"].includes(field) &&
+          typeof value === "string" && !Object.hasOwn(historical, field)) historical[field] = value;
+    }
+  }
+  return typeHints(historical);
+}
 function lifecycleWarnings(tags) {
   const concerns = [];
   if (Object.keys(tags).some(k => LIFECYCLE_PREFIXES.some(prefix => k.startsWith(prefix))))
@@ -76,7 +88,17 @@ export function adaptOsmSeasonalMetadata(input) {
     if (Buffer.byteLength(input, "utf8") > MAX_BYTES) return { status: "bounded-input-rejected", proposals: [] };
     try { envelope = JSON.parse(input); } catch { return { status: "malformed-response", proposals: [] }; }
   } else {
-    envelope = input;
+    // Offline object fixtures must obey the same byte cap as parsed network JSON.
+    // This is an input-fidelity guard, not a CPU/memory sandbox for hostile objects.
+    try {
+      const snapshot = JSON.stringify(input);
+      if (typeof snapshot !== "string") return { status: "malformed-response", proposals: [] };
+      if (Buffer.byteLength(snapshot, "utf8") > MAX_BYTES)
+        return { status: "bounded-input-rejected", proposals: [] };
+      envelope = JSON.parse(snapshot);
+    } catch {
+      return { status: "malformed-response", proposals: [] };
+    }
   }
   if (!envelope || typeof envelope !== "object" || Array.isArray(envelope) ||
     !Array.isArray(envelope.elements) || envelope.remark) {
@@ -89,16 +111,25 @@ export function adaptOsmSeasonalMetadata(input) {
   }
   const proposals = [];
   const names = new Map();
+  const identifiers = new Map();
   let discarded = 0;
   for (const element of envelope.elements) {
     if (!validElement(element)) { discarded++; continue; }
     const tags = element.tags;
-    const hints = typeHints(tags);
-    if (!hints.length) continue; // No inference from broad farm/park names or operator URLs.
+    if (!Object.entries(tags).every(([key, value]) =>
+      typeof key === "string" && typeof value === "string")) {
+      discarded++;
+      continue;
+    }
+    const activeHints = typeHints(tags);
+    const historicalHints = historicalTypeHints(tags);
+    if (!activeHints.length && !historicalHints.length) continue;
+    // Historical/disused attractions are identity warnings, never live category leads.
     const location = position(element);
     const name = cleanText(tags.name);
     const lifecycle = lifecycleWarnings(tags);
     const reasons = ["2026-activity-not-verified", "operator-dates-and-hours-unverified"];
+    if (!activeHints.length) reasons.push("historical-mapping-only");
     if (!name) reasons.push("missing-mapped-name");
     if (!location) reasons.push("missing-mapped-location");
     if (lifecycle.length) reasons.push("negative-lifecycle-evidence");
@@ -109,7 +140,8 @@ export function adaptOsmSeasonalMetadata(input) {
       proposedName: name || null,
       proposedAddress: fullAddress(tags),
       approximateLocation: location,
-      activityHints: hints,
+      activityHints: activeHints,
+      historicalCategoryHints: historicalHints,
       mappedLifecycleConcerns: lifecycle,
       sourceWebsite: null, // OSM website tags are NOT crawl permission.
       startDate: null, endDate: null, openingHours: null,
@@ -119,6 +151,15 @@ export function adaptOsmSeasonalMetadata(input) {
       license: { attribution: ATTRIBUTION, identifier: LICENSE,
         copyrightUrl: "https://www.openstreetmap.org/copyright" },
     };
+    const idKey = element.type + "/" + element.id;
+    if (identifiers.has(idKey)) {
+      const previous = identifiers.get(idKey);
+      if (!previous.triage.reasons.includes("conflicting-osm-identity"))
+        previous.triage.reasons.push("conflicting-osm-identity");
+      item.triage.reasons.push("conflicting-osm-identity");
+    } else {
+      identifiers.set(idKey, item);
+    }
     const key = norm(name);
     if (key) {
       const prior = names.get(key) || [];
