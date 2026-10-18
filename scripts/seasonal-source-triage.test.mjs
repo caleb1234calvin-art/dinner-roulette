@@ -28,7 +28,7 @@ test("complete candidate stays unpublished and queued for independent review", (
 
 test("both published and pending identities trigger conservative holds", () => {
   const [result] = triageSeasonalProposals([candidate], {
-    published: [{ id: "a", name: "Hallows Eve and Haunted Trail", address: "456 Second St" }],
+    published: [{ id: "a", name: "Hallow\'s Eve and Haunted Trail", address: "456 Second St" }],
     pending: [{ id: "b", name: "Another attraction", address: "123 Old Road Example MO" }],
   });
   assert.equal(result.triage.status, "hold-for-research");
