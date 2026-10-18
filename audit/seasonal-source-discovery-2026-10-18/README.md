@@ -1,0 +1,37 @@
+# Seasonal source-driven discovery — bounded research handoff (2026-10-18)
+
+Status: **RESEARCH-ONLY PREPARATION / NOT RUNTIME READY**.
+
+## Scope and authority
+Owner authorized moving ahead with currently available sources and adding more later. Owner explicitly ruled out contacting third-party directories to negotiate access and excluded FrightMaps. This is NOT permission to scrape restricted sites, publish venues, modify production, merge, or deploy. Preserve PR #82 exact-head October 19 legal publication path and Play audit as separate workstreams.
+
+Baseline: main commit `c3208d9fdc9a21d698efa9254be1286f5d3d2836`, existing 92 production curated identities reported in Issue #71. Draft PR #82 is distinct and protected. Reference: https://github.com/caleb1234calvin-art/dinner-roulette/issues/71
+
+## Files
+- `source-registry.json` is a policy-blocked research index, NOT an automated crawler allowlist.
+- `scripts/seasonal-source-registry.test.mjs` enforces default-deny and no accidental approval of sources or pilot candidates.
+
+## Source findings
+- FrightMaps excluded on owner's explicit decision; no outreach.
+- FrightFind and Haunts.com excluded from automated integration owing to discovered terms restrictions.
+- HauntWorld, The Scare Factor, America Haunts and Pumpkin Patches and More are manual-reference/link-only candidates, pending formal access-policy checks. Their visibility on the public web is NOT a permission grant.
+- CornfieldMaze.org access cannot presently be verified.
+- Haunted Attraction Association's finder refers into The Scare Factor; do not count as independent coverage.
+- Do not copy directory descriptions, images, reviews or lists, do not bypass site restrictions, and do not run network-fetch code from the app client.
+
+## Architecture for future authorized work
+1. Register individually cleared first-party attraction sites, with policy review including robots directives, terms, rate limits, and a recorded attribution/reuse scope.
+2. Perform server-side bounded, on-demand retrieval with timeouts, cache/TTL, request coalescing, source error handling and an explicit kill switch; never crawl automatically until policy-cleared.
+3. Normalize discoveries to *proposals*, recording source URL, checked-at, factual quotation-free field provenance, operator/location identity and season/year.
+4. Cross-check the 92 published identities and the 20 separately recovered pending seasonal records before proposing additions. Verify independent 2026 operation, address, exact dates and expiry; do not infer opening hours.
+5. Reuse existing seasonal eligibility/identity/negative-lifecycle/Open Now rules. Discovery alone does not confer listing eligibility. Preserve conservative fail-closed Open Now.
+6. Validate unit, browser, native/WebView and failure-mode behavior on an isolated candidate; independent acceptance and separate owner authority are prerequisites to any release.
+
+## Candidate quality warning
+Three official-operator URLs are stored as *pilot leads only*. URLs, site rights, publication duplicates, visit windows and current operating dates must be independently confirmed before ingestion. A claimed name-search miss in the current main catalog is NOT a full duplicate clearance. The indexed registry is not a plan to import any venue today.
+
+## Verification status
+Main tree and Issue #71 were read; relevant date-night code was inspected. A deterministic registry test was added, but its execution has NOT been independently observed in this tool session. No full tests, hosted CI or browser acceptance claimed. Only docs and isolated test source added. No production source, settings, migration, Android/Play action, or running crawler was changed.
+
+## Next
+Read back exact draft-branch files. Run `node --test scripts/seasonal-source-registry.test.mjs`, check permissions/robots for any intended source, then prototype one operator adapter on the branch and run independent acceptance. Avoid `npm run build`: it invokes migrations. Do not merge/deploy without separate explicit owner approval.
