@@ -98,3 +98,42 @@ test("explicit transport is required even for test-only cleared registry", async
   assert.deepEqual(await pilot.discover(source.id),
     { status: "transport-not-configured", proposals: [] });
 });
+
+
+test("caller mutation cannot poison cached results or the concurrent response", async () => {
+  let requests = 0;
+  const pilot = createSeasonalDiscoveryPilot({
+    registry: cleared(), now: () => Date.parse("2026-10-18T12:00:00Z"),
+    fetchImpl: async () => {
+      requests++;
+      return new Response(markup, {headers: {"content-type": "text/html"}});
+    },
+  });
+  const [first, second] = await Promise.all([pilot.discover(source.id), pilot.discover(source.id)]);
+  assert.equal(first.status, "fresh");
+  assert.equal(second.status, "fresh");
+  assert.notStrictEqual(first.proposals, second.proposals);
+  first.proposals[0].proposedName = "ATTACKER REPLACEMENT";
+  second.proposals.pop();
+  const third = await pilot.discover(source.id);
+  assert.equal(third.status, "cached");
+  assert.equal(third.proposals.length, 1);
+  assert.equal(third.proposals[0].proposedName, "Test Haunted House");
+  assert.equal(requests, 1);
+});
+
+test("transport redirects and cross-source final URLs are rejected", async () => {
+  for (const finalUrl of [
+    "https://other-source.example/events",
+    "http://localhost/private",
+  ]) {
+    const pilot = createSeasonalDiscoveryPilot({
+      registry: cleared(), fetchImpl: async () => ({
+        ok: true, redirected: false, url: finalUrl,
+        headers: new Headers({ "content-type": "text/html" }),
+        body: new Response(markup).body,
+      }),
+    });
+    assert.equal((await pilot.discover(source.id)).status, "upstream-redirect-rejected");
+  }
+});
