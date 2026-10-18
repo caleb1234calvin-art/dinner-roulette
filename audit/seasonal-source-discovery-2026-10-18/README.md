@@ -49,3 +49,9 @@ This is an isolated Node research prototype, NOT imported by the app UI or backe
 - includes tests for disabled behavior, duplicate in-flight requests, caching and invalid input using mock fixtures, **not live websites**.
 
 **Limitations/hold:** No automated site access permissions have been established. Before any network use, perform independent source access/legal checks and secure URL/DNS/redirect/egress handling on the actual deployment environment (SSRF review); mock clearance in tests is not permission. Do not enable the registry or bind this prototype into production. `scripts/seasonal-source-discovery.test.mjs` was committed but execution is NOT independently verified. No CI/browser/device PASS is claimed. Owner release approval is still separate.
+
+## Follow-up security hardening (2026-10-18)
+
+A further candidate revision rejects explicitly non-2026 Event dates without replacing them with a title-only pseudo-event. It also requires an explicitly injected transport; there is **no global default network fetch** even if a future registry flips its global enable flag. Additional malformed/non-public hostnames fail URL screening. Tests were updated for the changed fail-closed contract.
+
+**Security boundary:** Injecting an arbitrary fetch implementation or changing source clearance in memory does not mean an operator permits crawling. Prior to any real network integration the server-side adapter still requires resolved-IP/egress controls, redirect prohibition, robots/terms review and independent security checks. The mock-only fixture is not an access grant. No runtime wiring or production execution was added. Any running CI from an earlier candidate SHA is not evidence for this revised head.
