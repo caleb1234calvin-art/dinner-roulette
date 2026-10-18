@@ -8,6 +8,7 @@ const candidate = {
   proposedName: "Hallow's Eve & Haunted Trail",
   proposedAddress: "123 Old Road, Example, MO",
   startDate: "2026-10-23",
+  activityHints: ["haunted-house"],
   endDate: "2026-10-31",
   evidence: { format: "json-ld", checkedAt: "2026-10-18T12:00:00Z" },
   verified: true, publishable: true, openNowEligible: true,
@@ -89,4 +90,44 @@ test("malformed proposals fail conservatively and input size is bounded", () => 
   assert.equal(results[0].publishable, false);
   assert.ok(results[0].triage.reasons.includes("missing-name"));
   assert.deepEqual(triageSeasonalProposals(null), []);
+});
+
+
+test("unrelated 2026 events remain research HOLD despite complete metadata", () => {
+  const [concert] = triageSeasonalProposals([{
+    ...candidate,
+    proposedName: "Friday Night Concert",
+    activityHints: [],
+  }]);
+  assert.equal(concert.triage.status, "hold-for-research");
+  assert.ok(concert.triage.reasons.includes("seasonal-category-unsubstantiated"));
+  assert.equal(concert.publishable, false);
+});
+
+test("seasonal category assigned to source is not enough without event hint", () => {
+  const [unknown] = triageSeasonalProposals([{
+    ...candidate, proposedName: "Fall Fun Fest", activityHints: undefined,
+    sourceCategoryHint: "corn-maze",
+  }]);
+  assert.ok(unknown.triage.reasons.includes("seasonal-category-unsubstantiated"));
+  assert.equal(unknown.triage.status, "hold-for-research");
+});
+
+test("off-window events must not enter Halloween 2026 review-ready queue", () => {
+  for (const [startDate, endDate] of [
+    ["2026-07-03", "2026-07-04"],
+    ["2026-12-05", "2026-12-06"],
+  ]) {
+    const [outside] = triageSeasonalProposals([{ ...candidate, startDate, endDate }]);
+    assert.ok(outside.triage.reasons.includes("outside-halloween-2026-window"));
+    assert.equal(outside.triage.status, "hold-for-research");
+  }
+  for (const [startDate, endDate] of [
+    ["2026-08-30", "2026-09-01"],
+    ["2026-11-02", "2026-11-03"],
+  ]) {
+    const [overlap] = triageSeasonalProposals([{ ...candidate, startDate, endDate }]);
+    assert.ok(!overlap.triage.reasons.includes("outside-halloween-2026-window"));
+    assert.equal(overlap.triage.status, "awaiting-independent-review");
+  }
 });
