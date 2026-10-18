@@ -66,3 +66,34 @@ test("same mapped name cannot be silently deduplicated", () => {
   assert.equal(r.proposals.length,2);
   assert.ok(r.proposals.every(x=>x.triage.reasons.includes("possible-mapped-identity-collision")));
 });
+
+test("retired mapped identity survives as warning without positive activity", () => {
+ const r=adaptOsmSeasonalMetadata({elements:[place(90,{name:"Former Fright",
+  "disused:attraction":"haunted_house"})]});
+ assert.equal(r.proposals.length,1);
+ assert.deepEqual(r.proposals[0].activityHints,[]);
+ assert.deepEqual(r.proposals[0].historicalCategoryHints,["haunted-house"]);
+ assert.ok(r.proposals[0].triage.reasons.includes("historical-mapping-only"));
+ assert.ok(r.proposals[0].triage.reasons.includes("negative-lifecycle-evidence"));
+});
+test("object fixtures obey the same byte limit as JSON strings", () => {
+ const r=adaptOsmSeasonalMetadata({elements:[place(1,{name:"Haunt",
+  attraction:"haunted_house",notes:"x".repeat(600000)})]});
+ assert.equal(r.status,"bounded-input-rejected");
+});
+test("contradictory objects with identical OSM identity remain separate holds", () => {
+ const r=adaptOsmSeasonalMetadata({elements:[
+  place(7,{name:"Haunted House A",attraction:"haunted_house"}),
+  place(7,{name:"Haunted House B",attraction:"haunted_house"}),
+ ]});
+ assert.equal(r.proposals.length,2);
+ assert.ok(r.proposals.every(x=>x.triage.reasons.includes("conflicting-osm-identity")));
+});
+test("malformed tag values fail closed", () => {
+ const r=adaptOsmSeasonalMetadata({elements:[
+  place(1,{name:"Haunt",attraction:"haunted_house"}),
+  place(2,{name:"Bad",attraction:["haunted_house"]})
+ ]});
+ assert.equal(r.status,"coverage-incomplete");
+ assert.deepEqual(r.proposals,[]);
+});
