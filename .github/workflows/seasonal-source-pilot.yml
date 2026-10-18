@@ -16,6 +16,8 @@ on:
       - scripts/seasonal-source-transport.test.mjs
       - scripts/seasonal-source-identities.mjs
       - scripts/seasonal-source-identities.test.mjs
+      - scripts/seasonal-source-service.mjs
+      - scripts/seasonal-source-service.test.mjs
       - audit/seasonal-source-discovery-2026-10-18/identity-inventories/**
       - audit/seasonal-source-discovery-2026-10-18/source-registry.json
       - .github/workflows/seasonal-source-pilot.yml
@@ -41,4 +43,4 @@ jobs:
         with:
           node-version: '22'
       - name: Run fail-closed registry and mocked discovery tests
-        run: node --test scripts/seasonal-source-registry.test.mjs scripts/seasonal-source-discovery.test.mjs scripts/seasonal-source-triage.test.mjs scripts/seasonal-source-pipeline.test.mjs scripts/seasonal-source-transport.test.mjs scripts/seasonal-source-identities.test.mjs
+        run: node --test scripts/seasonal-source-registry.test.mjs scripts/seasonal-source-discovery.test.mjs scripts/seasonal-source-triage.test.mjs scripts/seasonal-source-pipeline.test.mjs scripts/seasonal-source-transport.test.mjs scripts/seasonal-source-identities.test.mjs scripts/seasonal-source-service.test.mjs

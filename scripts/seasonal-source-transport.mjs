@@ -143,6 +143,13 @@ function directAgent() {
 }
 function buildTransport({ registry, now, resolverFactory, request, deadlineMs }) {
   return Object.freeze({
+    // Read-only, current-policy snapshot for orchestration cache/coalescing
+    // guards. This does not reserve capacity or authorize a later retrieval;
+    // retrieve always performs its own policy and completion checks.
+    inspectPolicy(sourceId) {
+      const admitted = approvedSource(registry, sourceId, now());
+      return Object.freeze({ sourceId, sourceUrl: admitted.url.href, fingerprint: admitted.fingerprint });
+    },
     async retrieve(sourceId, { signal } = {}) {
       const started = performance.now();
       const admittedAt = now();

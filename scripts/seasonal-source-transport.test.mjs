@@ -69,7 +69,11 @@ async function started(f) {
 test("checked-in registry is blocked in production; there is no implicit network activation", async () => {
   const registry = JSON.parse(readFileSync(new URL("../audit/seasonal-source-discovery-2026-10-18/source-registry.json", import.meta.url)));
   const transport = createSeasonalSourceTransport();
-  for (const source of registry.officialOperatorPilotQueue) await rejects(transport.retrieve(source.id), "blocked-by-policy");
+  for (const source of registry.officialOperatorPilotQueue) {
+    assert.throws(() => transport.inspectPolicy(source.id), { code: "blocked-by-policy" });
+    await rejects(transport.retrieve(source.id), "blocked-by-policy");
+  }
+  assert.throws(() => transport.inspectPolicy("https://unregistered.org/"), { code: "unknown-source" });
   await rejects(transport.retrieve("https://unregistered.org/"), "unknown-source");
   assert.throws(() => createSeasonalSourceTransportForTests({ registry }), /Both offline/);
 });
@@ -90,9 +94,11 @@ test("unambiguous source IDs and complete current exact-URL clearance are requir
   ];
   for (const change of changes) {
     const f = fixture(); change(f.registry, f.source);
+    assert.throws(() => f.transport.inspectPolicy(f.source.id), { code: "blocked-by-policy" });
     await rejects(f.retrieve(), "blocked-by-policy"); assert.equal(f.calls.dns.length, 0);
   }
   const f = fixture(); f.registry.officialOperatorPilotQueue.push(structuredClone(f.source));
+  assert.throws(() => f.transport.inspectPolicy(f.source.id), { code: "ambiguous-source" });
   await rejects(f.retrieve(), "ambiguous-source"); assert.equal(f.calls.dns.length, 0);
 });
 
@@ -104,6 +110,7 @@ test("only canonical DNS HTTPS port443 URLs are admitted", async () => {
     "https://good.org./", "https://good..org/", "https://-good.org/", "https://good_.org/", "https://GOOD.org/",
     " https://good.org/", "https://good.org/a/../b", "https://good.org/\\evil"]) {
     const f = fixture(); f.source.url = url; f.source.fetchClearance.approvedUrl = url;
+    assert.throws(() => f.transport.inspectPolicy(f.source.id), { code: "invalid-source-url" });
     await rejects(f.retrieve(), "invalid-source-url"); assert.equal(f.calls.dns.length, 0);
   }
 });
@@ -389,4 +396,42 @@ test("bounded host ledger never evicts active spacing and can reclaim an elapsed
   tick += 10000;
   await rejects(makeFailure().retrieve(), "source-dns-failed");
   await rejects(makeFailure(slow).retrieve(), "source-host-cooldown");
+});
+
+test("policy inspection returns an immutable current snapshot without DNS or rate-ledger effects", async () => {
+  const f = fixture();
+  const first = f.transport.inspectPolicy(f.source.id);
+  assert.deepEqual(Object.keys(first), ["sourceId", "sourceUrl", "fingerprint"]);
+  assert.equal(first.sourceId, f.source.id); assert.equal(first.sourceUrl, f.source.url);
+  assert.equal(typeof first.fingerprint, "string"); assert.ok(Object.isFrozen(first));
+  assert.throws(() => { first.sourceUrl = "https://attacker.org/"; }, TypeError);
+  const second = f.transport.inspectPolicy(f.source.id);
+  assert.notStrictEqual(first, second); assert.deepEqual(first, second);
+  assert.deepEqual(f.calls.dns, []); assert.deepEqual(f.calls.requests, []);
+  await f.retrieve(); // Inspections neither reserve capacity nor start a cooldown.
+  assert.deepEqual(f.transport.inspectPolicy(f.source.id), first);
+  await rejects(f.retrieve(), "source-host-cooldown"); // Nor can inspection reset the cooldown.
+  f.source.fetchClearance.reviewer = "a different reviewer";
+  assert.notEqual(f.transport.inspectPolicy(f.source.id).fingerprint, first.fingerprint);
+  assert.equal(first.fingerprint, second.fingerprint); // Earlier snapshot remains immutable.
+  f.registry.automationEnabled = false;
+  assert.throws(() => f.transport.inspectPolicy(f.source.id), { code: "blocked-by-policy" });
+});
+
+test("both transport factories expose the same strict read-only inspection, including expiry", () => {
+  const registry = registryFixture();
+  const source = registry.officialOperatorPilotQueue[0];
+  const wallNow = Date.now();
+  source.fetchClearance.reviewedAt = new Date(wallNow - 60000).toISOString();
+  source.fetchClearance.expiresAt = new Date(wallNow + 60000).toISOString();
+  const production = createSeasonalSourceTransport({ registry });
+  const offline = fixture({ registry, now: () => wallNow });
+  assert.deepEqual(production.inspectPolicy(source.id), offline.transport.inspectPolicy(source.id));
+  assert.deepEqual(offline.calls.dns, []); assert.deepEqual(offline.calls.requests, []);
+  let tick = NOW;
+  const expiring = fixture({ now: () => tick });
+  expiring.transport.inspectPolicy(expiring.source.id);
+  tick = Date.parse(expiring.source.fetchClearance.expiresAt);
+  assert.throws(() => expiring.transport.inspectPolicy(expiring.source.id), { code: "blocked-by-policy" });
+  assert.deepEqual(expiring.calls.dns, []);
 });
