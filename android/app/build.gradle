@@ -9,11 +9,11 @@ if (releaseCode < 1 || releaseCode > 2100000000 || !(releaseName ==~ /\d+\.\d+\.
 }
 
 android {
-    namespace = "com.calebcalvin.pickforus"
+    namespace = "app.pickforus.android"
     compileSdk = rootProject.ext.compileSdkVersion
     buildToolsVersion = "36.0.0"
     defaultConfig {
-        applicationId = "com.calebcalvin.pickforus"
+        applicationId = "app.pickforus.android"
         minSdk = rootProject.ext.minSdkVersion
         targetSdk = rootProject.ext.targetSdkVersion
         versionCode = releaseCode
