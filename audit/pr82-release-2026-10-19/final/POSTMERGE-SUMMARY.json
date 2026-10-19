@@ -1,0 +1,78 @@
+{
+  "observedAt": "2026-10-19T06:41:25.254Z",
+  "main": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+  "tree": "6300c1061a790d84447bb92166f340aec895757b",
+  "parents": [
+    "c3208d9fdc9a21d698efa9254be1286f5d3d2836",
+    "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df"
+  ],
+  "mergedAt": "2026-10-19T06:40:14Z",
+  "deployment": {
+    "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+    "url": "dinner-roulette-5jtc6tffq-minions-9e2c.vercel.app",
+    "state": "READY",
+    "meta": {
+      "githubCommitRef": "main",
+      "githubCommitSha": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "githubCommitMessage": "Merge pull request #82 from caleb1234calvin-art/integration/legal-publication-source-2026-10-19\n\nFinalize October 19 Chicago legal publication source",
+      "githubRepo": "dinner-roulette",
+      "githubOrg": "caleb1234calvin-art"
+    },
+    "alias": [
+      "pickforus.app",
+      "dinner-roulette-chi.vercel.app",
+      "www.pickforus.app",
+      "dinner-roulette-minions-9e2c.vercel.app",
+      "dinner-roulette-git-main-minions-9e2c.vercel.app"
+    ],
+    "target": "production",
+    "ready": 1792392031600,
+    "readyState": "READY",
+    "aliasError": null
+  },
+  "aliases": [
+    {
+      "host": "pickforus.app",
+      "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+      "source": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "state": "READY",
+      "aliasError": null
+    },
+    {
+      "host": "www.pickforus.app",
+      "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+      "source": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "state": "READY",
+      "aliasError": null
+    },
+    {
+      "host": "dinner-roulette-chi.vercel.app",
+      "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+      "source": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "state": "READY",
+      "aliasError": null
+    },
+    {
+      "host": "dinner-roulette-minions-9e2c.vercel.app",
+      "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+      "source": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "state": "READY",
+      "aliasError": null
+    },
+    {
+      "host": "dinner-roulette-git-main-minions-9e2c.vercel.app",
+      "id": "dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe",
+      "source": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+      "state": "READY",
+      "aliasError": null
+    }
+  ],
+  "buildLog": {
+    "events": 100,
+    "first": "2026-10-19T06:40:17.657Z",
+    "last": "2026-10-19T06:40:47.611Z",
+    "migrationMentionCount": 0,
+    "explicitFullCommandPrinted": false,
+    "qualification": "Successful direct Vite client/SSR build and no migration invocation in all retrieved events. Full effective override command proof remains separate preflight browser evidence; logs do not echo it."
+  }
+}
