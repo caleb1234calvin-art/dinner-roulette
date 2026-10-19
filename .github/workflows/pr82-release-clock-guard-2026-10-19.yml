@@ -1,0 +1,38 @@
+name: PR82 October 19 Release Clock Guard (Read Only)
+on:
+  push:
+    branches:
+      - integration/pr82-release-clock-guard-2026-10-19
+permissions:
+  contents: read
+jobs:
+  real-clock-check:
+    name: Exact source genuine clock legal publication guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out frozen PR82 source
+        uses: actions/checkout@v4
+        with:
+          ref: cf18ff1c5a56ecf59f8006d4f7c83fb289f393df
+          persist-credentials: false
+      - name: Verify immutable release identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df"
+          test "$(git rev-parse HEAD^{tree})" = "6300c1061a790d84447bb92166f340aec895757b"
+          git diff --exit-code
+          printf 'Exact source: '; git rev-parse HEAD
+          printf 'Exact tree: '; git rev-parse HEAD^{tree}
+      - name: Use Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Genuine-clock legal publication guard (no date injection)
+        shell: bash
+        run: |
+          set -euo pipefail
+          date -u +'%Y-%m-%dT%H:%M:%SZ'
+          node scripts/check-legal-release.mjs --publication --authorized-date=2026-10-19 --publication-time-zone=America/Chicago
+          git diff --exit-code
