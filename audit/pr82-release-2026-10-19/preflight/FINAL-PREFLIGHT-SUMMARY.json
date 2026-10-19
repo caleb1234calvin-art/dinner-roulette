@@ -1,0 +1,17 @@
+{
+  "originalSha256": "cf7a2f6227c921205e744b007fa3b6f70a2e0ff30865de5cb1dd6878e3a712ec",
+  "bytes": 10152,
+  "observedAt": "2026-10-19T06:31:59.539Z",
+  "candidateTree": "6300c1061a790d84447bb92166f340aec895757b",
+  "localGuard": {
+    "timestamp": "2026-10-19T06:31:23Z",
+    "exit": 0,
+    "log": "real-clock-guard-0631.log"
+  },
+  "safeOperation": {
+    "notExecuted": true,
+    "sequence": "Recheck head/base/main/clock and effective hosted override; confirm independent operational evidence; mark exact PR82 ready; normal merge with merge_method=merge and expected_head_sha=cf18ff1c5a56ecf59f8006d4f7c83fb289f393df; existing Git main integration deploys; verify actual merged tree equals6300c1061a790d84447bb92166f340aec895757b and deployment source equals merge SHA.",
+    "limitations": "Expected head safeguards candidate drift only, not simultaneous base movement. Fresh main check and postmerge exact tree verification mandatory. No squash/rebase/alternate commit/deployment/settings changes."
+  },
+  "scope": "Private full API payload retained; intermediate pending checks superseded by PREFLIGHT-ACCEPTANCE.md."
+}

@@ -1,3 +1,17 @@
+## CURRENT — 2026-10-19 06:38 UTC: revised-authority PR82 preflight PASS; execution not completed
+
+Exact PR82 cf18ff1c5a56ecf59f8006d4f7c83fb289f393df/tree6300c1061a790d84447bb92166f340aec895757b; approved October19Chicago one-release unprotected-main exception. Owner explicitly revised recovery to three configured production domains apex/www/chi, accepts futureFMS eligibility as unobservable before deployment, and requires two generated aliases separately monitored/documented. Previous strict-five-host HOLD is superseded by explicit decision, not bypassed; other safeguards remain mandatory.
+
+Fresh source/main/prior19web+AndroidCI/five-aliasmetadata PASS. Independent genuine-clock workflow39209712892 exactcandidate PASS; separate workflowc649f3c is not release source. Local guards06:31:23 and immediate06:36:20 PASS; repeat immediately before retry. Saved dashboard06:32 Build Override ON/full authenticated migration-free command PASS. Supported current selector FMS→8DB with three configured domains verified/canceled; futureFMS eligibility remains postrelease verification under explicit revised authority.
+
+Independent HTTP baseline allfivehome200/www308→apex; old-source apex/chi privacy/terms404 expected. Assets agree; one timeout/retry preserved. Browser fivehome/title and bounded coreResult baseline PASS, not candidate/device acceptance. Original independent exact-source acceptance615ef0a and historical failures retained. Current PR82 body reconciled with full oldbody preserved and exactreadback06:37:31.
+
+Initial normal expected-head merge request rejected by reviewer citing historical pending text; no merge occurred. Parent06:36:30 verified open/ready exacthead/mainc3208 unchanged. This checkpoint supplies current evidence before ONE SAME expected-head normal merge retry after freshguard; no alternate route/bypass/source/protection change. No release/deployment outcome claimed. Postrelease merge/tree/READY/build, actualFMS recovery selector, three-domain delivery, separate generated-host observations and full legal/footer/core unsigned/no-JS acceptance remain PENDING.
+
+Evidence: audit/pr82-release-2026-10-19/preflight/PREFLIGHT-ACCEPTANCE.md and sanitized receipts. Canonical documentation only; main/production/source/PR84/85/rootlegacyrelease unchanged by this work. Complete prior history follows.
+
+---
+
 ## CURRENT — 2026-10-19 06:05 UTC: exact PR82 exception approved; recovery HOLD persists
 
 Owner message Sentinel_fc7c94c007508191b7ccecda89d10186 at06:03:18UTC explicitly authorizes the one-release-only unprotected-main exception for PR82 cf18ff1c5a56ecf59f8006d4f7c83fb289f393df / tree6300c1061a790d84447bb92166f340aec895757b on October19,2026 America/Chicago. No branch-protection settings change; all other safeguards mandatory. This supersedes pending-waiver wording only, is not standing permission, and does not imply any actual release or consumption state.
