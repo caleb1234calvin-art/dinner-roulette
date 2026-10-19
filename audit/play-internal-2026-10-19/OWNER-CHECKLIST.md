@@ -1,3 +1,7 @@
+## Stage boundary
+
+Current signing/upload HOLD concerns operational signing controls, owner key/certificate decisions, exact source/version confirmation, and separately authorized actions. Prepare a clean installation and data-preservation plan now. Testing a Play-delivered binary happens after a separately authorized internal upload/rollout; it is not an impossible prerequisite to that first internal upload. Broader physical-device and public-production acceptance remains separate. The internal-only Data safety form exemption is not a pre-internal-testing blocker.
+
 # Pick For Us: owner-operated Google Play internal testing checklist
 
 Checked 19 October 2026 UTC against current official Google guidance. Readiness remains HOLD pending the exact signed candidate, package reconciliation and final-device checks. This is preparation, not a Console declaration, legal opinion, signing action or upload approval.

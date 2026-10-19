@@ -1,3 +1,7 @@
+## Stage boundary
+
+Current signing/upload HOLD concerns operational signing controls, owner key/certificate decisions, exact source/version confirmation, and separately authorized actions. Prepare a clean installation and data-preservation plan now. Testing a Play-delivered binary happens after a separately authorized internal upload/rollout; it is not an impossible prerequisite to that first internal upload. Broader physical-device and public-production acceptance remains separate. The internal-only Data safety form exemption is not a pre-internal-testing blocker.
+
 # Independent upload-signing readiness review
 Reviewed 2026-10-19. Scope: read-only preparation. No key generation, secret reads or writes, signing, signed dispatch, Play upload, enrollment, agreements, repository mutation, or security configuration performed.
 
