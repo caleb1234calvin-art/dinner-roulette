@@ -1,3 +1,19 @@
+## Current checkpoint — October 19, 2026, 18:44 UTC: local Termux signing preparation
+
+**READY FOR LOCAL SIGNING**, scoped to the reviewed owner-operated procedure and verified unsigned input. The owner reports local key setup and the recorded backup checks are complete; a second backup is deferred. These are owner attestations, not independent access to the key. The expected public certificate fingerprint must be established and checked locally before signing; its actual value is not known in this record.
+
+The selected path is owner-operated Termux signing. It supersedes the earlier GitHub signing-environment prerequisite for this path only; no GitHub signing secrets or settings are needed or authorized here. No agent signed a bundle, accessed a private key/password, uploaded to Play, accepted terms, or changed source or production.
+
+Use the verified artifact `12171094706` from run `39015345242`, attempt 2. Exact ZIP member `PickForUs-unsigned.aab`: 3,103,485 bytes, SHA-256 `ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a`. Checkout `cf18ff1c5a56ecf59f8006d4f7c83fb289f393df` has the identical complete tree `6300c1061a790d84447bb92166f340aec895757b` as released main `e078dcdaa9f0ca84951409cdb92805731af3d34b`; this was not an exact-main workflow run. Artifact availability, digest, CRC, source binding and unsigned state were reverified at 18:40 UTC. Retention ends November 2 at 08:07:44 UTC.
+
+Read [artifact provenance](audit/play-local-signing-2026-10-19/ARTIFACT.md), [the local signing procedure](audit/play-local-signing-2026-10-19/LOCAL-SIGNING.md), and [later Console decisions](audit/play-local-signing-2026-10-19/NEXT-CONSOLE.md). The signed output will have a new digest. Actual signed-bundle validation, matching its signer to the independently established expected public certificate, Play signing enrollment/terms, version availability, upload, rollout and Play-delivered device acceptance remain unperformed. Future physical testing follows separately authorized internal upload/rollout; it is not an impossible prerequisite to the first upload.
+
+Preserve existing same-package debug installations and local data: their signer differs from Play's distribution signer. Prefer a clean permitted device/profile; no uninstall or data clearing without a preservation plan and separate approval. Do not promise backup restoration.
+
+PR #82 remains LIVE with its named website certification HOLD; local signing does not close the deployed no-JavaScript or responsive-browser gaps. See the [release report](audit/pr82-release-2026-10-19/final/FINAL-REPORT.md). PR #84/#85 remain frozen qualified offline research; PR #61 remains parked: “Radial discovery becomes an audit layer.” All prior continuity below remains historical evidence; only the explicitly superseded local-signing prerequisite and owner-reported key status change here.
+
+---
+
 # AI continuity — current checkpoint
 
 Updated October 19, 2026, 08:11 UTC.

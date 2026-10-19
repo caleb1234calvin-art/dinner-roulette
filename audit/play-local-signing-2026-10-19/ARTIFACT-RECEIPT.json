@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-19T18:40:00Z",
+  "mainSha": "e078dcdaa9f0ca84951409cdb92805731af3d34b",
+  "mainTree": "6300c1061a790d84447bb92166f340aec895757b",
+  "candidateSha": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+  "candidateTree": "6300c1061a790d84447bb92166f340aec895757b",
+  "artifact": {
+    "id": 12171094706,
+    "name": "PickForUs-Android-validation-510cef023f5e567aaa591353d6adc9ecd7bb7b44",
+    "size_in_bytes": 6865783,
+    "url": "https://api.github.com/repos/caleb1234calvin-art/dinner-roulette/actions/artifacts/12171094706",
+    "expired": false,
+    "expires_at": "2026-11-02T08:07:44Z",
+    "digest": "sha256:960ca4523f18c2ccbd892ccbc329a9177a34955e49762c08dc108cf0b236fb56"
+  },
+  "localVerification": {
+    "zipBytes": 6865783,
+    "zipSha256": "960ca4523f18c2ccbd892ccbc329a9177a34955e49762c08dc108cf0b236fb56",
+    "member": "PickForUs-unsigned.aab",
+    "aabBytes": 3103485,
+    "aabSha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+    "zipCrc": "PASS",
+    "aabCrc": "PASS",
+    "signatureEntries": [],
+    "sourceRevision": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df"
+  },
+  "qualification": "Preserved original ZIP was rehashed and compared to fresh GitHub metadata; no redundant download, build, signing, key access or upload."
+}
