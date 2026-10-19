@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-18",
+  "purpose": "Non-production research and source-policy register; not a crawl allowlist or venue catalog",
+  "automationEnabled": false,
+  "decisionRules": {
+    "directoryAutomatedRetrieval": "DENY_UNLESS_SPECIFICALLY_REVIEWED_AND_DOCUMENTED",
+    "officialOperatorAutomatedRetrieval": "DENY_UNTIL_SITE_POLICY_ROBOTS_AND_TECHNICAL_CHECKS_PASS",
+    "discoveryIsVerification": false,
+    "sourceAccessMustNotRequireOutreach": true,
+    "publishRequiresIndependentEvidenceAndOwnerApproval": true
+  },
+  "directories": [
+    {
+      "id": "frightmaps",
+      "url": "https://frightmaps.com/",
+      "status": "excluded",
+      "automaticAccess": "blocked",
+      "rationale": "Owner excludes; do not request third-party access. Scraping restrictions noted."
+    },
+    {
+      "id": "hauntworld",
+      "url": "https://www.hauntworld.com/",
+      "status": "manual-discovery-reference",
+      "automaticAccess": "blocked",
+      "rationale": "Useful geographic clues; automated access/reuse rights not established."
+    },
+    {
+      "id": "the-scare-factor",
+      "url": "https://www.thescarefactor.com/",
+      "status": "manual-discovery-reference",
+      "automaticAccess": "blocked",
+      "rationale": "Review/discovery reference; no clearance to automate or reuse reviews/media."
+    },
+    {
+      "id": "frightfind",
+      "url": "https://frightfind.com/",
+      "status": "excluded-from-automation",
+      "automaticAccess": "blocked",
+      "rationale": "Site terms restrict automated access/compiling another commercial service."
+    },
+    {
+      "id": "haunts",
+      "url": "https://www.haunts.com/",
+      "status": "excluded-from-automation",
+      "automaticAccess": "blocked",
+      "rationale": "Terms restrict use in another information retrieval system."
+    },
+    {
+      "id": "america-haunts",
+      "url": "https://www.americahaunts.com/ah/attractions/",
+      "status": "manual-discovery-reference",
+      "automaticAccess": "blocked",
+      "rationale": "Potential operator leads; no automated reuse approval or site-policy clearance."
+    },
+    {
+      "id": "pumpkin-patches-and-more",
+      "url": "https://www.pumpkinpatchesandmore.org/",
+      "status": "manual-link-reference",
+      "automaticAccess": "blocked",
+      "rationale": "Site permits links but restricts reproducing site content; automated access unverified."
+    },
+    {
+      "id": "cornfieldmaze",
+      "url": "https://cornfieldmaze.org/",
+      "status": "unavailable",
+      "automaticAccess": "blocked",
+      "rationale": "Site access/content unverified; no assumptions."
+    },
+    {
+      "id": "haunted-attraction-association",
+      "url": "https://hauntedattractionassociation.com/haunt-finder",
+      "status": "manual-discovery-reference",
+      "automaticAccess": "blocked",
+      "rationale": "Directory refers to Scare Factor; don't count as independent coverage."
+    }
+  ],
+  "officialOperatorPilotQueue": [
+    {
+      "id": "sawmill-west-alton",
+      "name": "The Sawmill at West Alton",
+      "url": "https://www.thesawmillatwestalton.com/",
+      "categoryHint": "haunted-house",
+      "observed2026Dates": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-30"
+      ],
+      "status": "research-candidate-only",
+      "automaticAccess": "blocked-pending-policy-review",
+      "publishedDuplicateCheck": "No name hit in main branch code search; unpublished 20-record batch not exhaustively checked",
+      "note": "Official operator page lists West Alton address and October 2026 dates. No venue eligibility or opening-hours certification."
+    },
+    {
+      "id": "lone-jack-acres",
+      "name": "Lone Jack Acres Fall Fun Fest",
+      "url": "https://lonejackacres.com/fall-festival/",
+      "categoryHint": "corn-maze",
+      "observed2026Dates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "research-candidate-only",
+      "automaticAccess": "blocked-pending-policy-review",
+      "publishedDuplicateCheck": "No name hit in main branch code search; unpublished 20-record batch not exhaustively checked",
+      "note": "Official operator page shows fall festival schedule; category/visit details require review."
+    },
+    {
+      "id": "gospel-farms",
+      "name": "Gospel Farms Fall Season",
+      "url": "https://www.gospelfarms.com/hours-pricing/",
+      "categoryHint": "pumpkin-patch",
+      "observed2026Dates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-31"
+      ],
+      "status": "research-candidate-only",
+      "automaticAccess": "blocked-pending-policy-review",
+      "publishedDuplicateCheck": "No name hit in main branch code search; unpublished 20-record batch not exhaustively checked",
+      "note": "Official operator hours page shows fall activities and weather qualification. Precise location and acceptance remain unverified."
+    }
+  ]
+}

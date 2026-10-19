@@ -1,0 +1,46 @@
+name: Seasonal Source Pilot (Mock-only)
+on:
+  push:
+    branches:
+      - integration/seasonal-source-discovery-v1-2026-10-18
+  pull_request:
+    paths:
+      - scripts/seasonal-source-discovery.mjs
+      - scripts/seasonal-source-discovery.test.mjs
+      - scripts/seasonal-source-registry.test.mjs
+      - scripts/seasonal-source-triage.mjs
+      - scripts/seasonal-source-triage.test.mjs
+      - scripts/seasonal-source-pipeline.mjs
+      - scripts/seasonal-source-pipeline.test.mjs
+      - scripts/seasonal-source-transport.mjs
+      - scripts/seasonal-source-transport.test.mjs
+      - scripts/seasonal-source-identities.mjs
+      - scripts/seasonal-source-identities.test.mjs
+      - scripts/seasonal-source-service.mjs
+      - scripts/seasonal-source-service.test.mjs
+      - audit/seasonal-source-discovery-2026-10-18/identity-inventories/**
+      - audit/seasonal-source-discovery-2026-10-18/source-registry.json
+      - .github/workflows/seasonal-source-pilot.yml
+permissions:
+  contents: read
+jobs:
+  policy-and-parser:
+    name: Node regression fixtures (no network)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Verify exact candidate source
+        env:
+          EXPECTED_SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SOURCE_SHA"
+          git rev-parse HEAD HEAD^{tree}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run fail-closed registry and mocked discovery tests
+        run: node --test scripts/seasonal-source-registry.test.mjs scripts/seasonal-source-discovery.test.mjs scripts/seasonal-source-triage.test.mjs scripts/seasonal-source-pipeline.test.mjs scripts/seasonal-source-transport.test.mjs scripts/seasonal-source-identities.test.mjs scripts/seasonal-source-service.test.mjs
