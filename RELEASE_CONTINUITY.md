@@ -1,3 +1,17 @@
+## Current checkpoint — October 19, 2026, 08:06 UTC
+
+PR #82 is LIVE at main `e078dcdaa9f0ca84951409cdb92805731af3d34b`, approved tree `6300c1061a790d84447bb92166f340aec895757b`, production `dpl_9R5RMpECSSZeVGXRHhcsNWAJ7dPe` (READY). Merge occurred at 06:40:14 UTC after the approved same-route expected-head retry and real-clock guard. The initial denied attempt remains recorded. The owner's one-release unprotected-main exception was used for this exact release; it is not standing authority. Policies version 1.0 are live and effective October 19, America/Chicago. First observed complete policy response: 06:40:51.645120 UTC / 01:40:51.645120 Chicago, not an asserted activation instant.
+
+Final website certification remains **HOLD** for actual live rendered JavaScript-disabled policy pages and live 320/390/512-pixel and tablet portrait/landscape browser layouts. Full HTTP policy delivery, five hostnames, 96 assets, bounded desktop navigation/results, and actual external Maps/return passed within their documented scopes. Local browser startup/escalation failed and cloud DevTools was explicitly denied; no bypass was attempted. Prior exact-source controlled browser checks do not substitute for missing live observations. No critical application failure or rollback trigger was observed.
+
+Actual recovery UI offered previous FMS/source c3208 for the three configured domains, in accordance with the owner's revised requirement; the selector was canceled without execution. Generated aliases currently deliver the release and retain separate recovery qualifications. The owner may explicitly accept the named gaps or obtain the remaining checks through a permitted browser. Settled release authorization does not need to be repeated.
+
+See [final report](audit/pr82-release-2026-10-19/final/FINAL-REPORT.md), [independent review](audit/pr82-release-2026-10-19/final/INDEPENDENT-TERMINAL-REVIEW.md), and [current AI continuity](AI_CONTINUITY.md). Complete prior AI history is preserved byte-for-byte at [the authoritative archive](audit/continuity-history/AI_CONTINUITY-through-a6685bc.md), blob `4414bd9f7ab55bb33cc66eaff21064ed17554537`. All prior RELEASE text follows unchanged. Historical pending-release statements are superseded only by the explicit current outcome above.
+
+Google Play internal preparation is now authorized. The developer account, app creation, selected package `app.pickforus.android`, and saved internal tester list are OWNER-REPORTED, not independently inspected. Unsigned run 39015345242 attempt 2 is in progress at this checkpoint, with no PASS claimed and signing ineligible for its PR event. This documentation adds no upload, registration, signing, or Google account action authority. PR #84 and PR #85 remain frozen qualified offline research; PR #61 remains parked.
+
+---
+
 # CURRENT — PR #72 released; PR #73 R2 technical checks complete, release HOLD
 
 **October 15, 2026:** production remains READY deployment `dpl_72on94mDyDhNBbmN356bdXBsMqtY`, source/main `991978fe24ec165eeacd5500a26d66f35d86c560`, tree `95f66498048590cbd30c623b17d15bf2d5b7cc73`, with **92 released curated source identities**. Fresh hostname-specific reads confirm pickforus.app, www.pickforus.app (redirects to apex), dinner-roulette-chi.vercel.app, dinner-roulette-minions-9e2c.vercel.app and dinner-roulette-git-main-minions-9e2c.vercel.app all assign this deployment. PR #72 is merged/released; do not repeat it.
