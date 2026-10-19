@@ -1,0 +1,53 @@
+{
+  "observedAt": "2026-10-19T08:11:15.853799+00:00",
+  "artifactId": 12171094706,
+  "zipSha256": "960ca4523f18c2ccbd892ccbc329a9177a34955e49762c08dc108cf0b236fb56",
+  "zipBytes": 6865783,
+  "badCrcMember": null,
+  "members": [
+    {
+      "path": "PickForUs-debug.apk",
+      "bytes": 4174814,
+      "crc": 1882912209
+    },
+    {
+      "path": "PickForUs-unsigned.aab",
+      "bytes": 3103485,
+      "crc": 1577647699
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 195,
+      "crc": 3911041710
+    },
+    {
+      "path": "android-bundle-verification.json",
+      "bytes": 2031,
+      "crc": 3733248370
+    },
+    {
+      "path": "android-bundle-verification.manifest.xml",
+      "bytes": 3863,
+      "crc": 1702434696
+    },
+    {
+      "path": "signing-guard.log",
+      "bytes": 1735,
+      "crc": 193578885
+    },
+    {
+      "path": "android-lint-summary.json",
+      "bytes": 2633,
+      "crc": 2692265297
+    },
+    {
+      "path": "source-revision.txt",
+      "bytes": 41,
+      "crc": 570875949
+    }
+  ],
+  "sourceRevision": "cf18ff1c5a56ecf59f8006d4f7c83fb289f393df",
+  "aabSha256": "ac5623cfcae5aecdda24b6c61f04fc251c21a58bc091ea82e536f4aeaebe559a",
+  "independentManifestReviewed": true,
+  "scope": "Root independently recomputed downloaded original ZIP/AAB hash and member CRCs; compiled bundle inspection separately performed by source/artifact reviewer."
+}
