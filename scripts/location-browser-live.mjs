@@ -68,7 +68,12 @@ try {
       const toggle = section.getByRole("button", { name: "Change location" });
       if (await toggle.getAttribute("aria-expanded") !== "true") await toggle.click();
       await section.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill(query);
-      await section.getByRole("button", { name: "Set location", exact: true }).click();
+      await section.getByRole("button", { name: "Find location", exact: true }).click();
+      // Select a municipality explicitly; a ranked county is never an equivalent test origin.
+      const choice = section.getByRole("button", { name: new RegExp(`^Use ${locality}, .*Place type: (city|town|municipality)$`, "i") });
+      await choice.waitFor();
+      assert.equal(await choice.count(), 1, "Live municipality must be unambiguous before test selection");
+      await choice.click();
       await section.getByRole("status").filter({ hasText: "Location set to" }).waitFor({ timeout: 20000 });
       console.log("LOCATION_LIVE_STAGE resolved " + query);
       const location = await page.evaluate(() => JSON.parse(localStorage.getItem("pick-for-us-v1")).state.location);

@@ -178,6 +178,13 @@ jobs:
           LOCATION_BROWSER_OUTPUT: audit/browser-results/location
         run: node scripts/location-browser.mjs
 
+      - name: Verify explicit location choices and mobile focus visibility
+        if: matrix.suite == 'location'
+        env:
+          VITE_AUTH_ENABLED: "true"
+          LOCATION_BROWSER_OUTPUT: audit/browser-results/location-disambiguation
+        run: node scripts/location-disambiguation-browser.mjs
+
       - name: Regress ordinary Date Night progressive loading and local controls
         if: matrix.suite == 'date-night-radial'
         env:

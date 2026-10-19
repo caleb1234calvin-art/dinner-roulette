@@ -141,7 +141,8 @@ try {
     await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).waitFor();
     verdict.checks.push(label + ": denied geolocation opens a visible error and manual recovery form");
     await page.getByRole("textbox", { name: "City, region and country, or postal code", exact: true }).fill("Empty Test");
-    await page.getByRole("button", { name: "Set location", exact: true }).click();
+    await page.getByRole("button", { name: "Find location", exact: true }).click();
+    await page.getByRole("button", { name: "Use Empty Test Place type: city", exact: true }).click();
     await page.getByText("We couldn't refresh nightlife right now", { exact: true }).waitFor();
     assert.equal(await pick.isDisabled(), true);
     verdict.checks.push(label + ": manual location, no-catalog/provider failure and favorites empty states");
