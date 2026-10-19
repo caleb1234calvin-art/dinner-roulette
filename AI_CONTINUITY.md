@@ -1,3 +1,17 @@
+## Current checkpoint — October 19, 2026, 19:42 UTC: existing signed-AAB review reconciled
+
+**Qualified PASS recorded for the exact signed artifact, based on an existing independent report read in full.** This checkpoint reconciles that report; it is not a new root cryptographic verification or a new signing operation. The signed AAB was not rematerialized or reverified in this reconciliation.
+
+Signed `PickForUs-upload-signed.aab`: **3,144,515 bytes**, SHA-256 `aa29027197802cc08bf6070772929cce816f7bf13f7a7c86d2f3beb6c54cdc12`. Public upload-certificate SHA-256: `8CB8B5CE2E67142AD2B257248584BC0FBBBFDE37B04885CB6F1AF13622D4E370`. The existing reviewer reports that this certificate matches the independently pre-recorded owner-provided fingerprint; this reconciliation did not reread that original record.
+
+The report states all **430 original payload entries** are byte-identical and have reviewed signature coverage. The signed archive adds only the three expected signature metadata files. Package `app.pickforus.android`, versionCode 1 / versionName 1.0.0, and SDK 24/36/36 remain unchanged. Strict verification exit 4 was specifically attributed to a self-signed/untrusted chain, with no-timestamp and future 2054-expiry notices; no corrupt/unsigned payload, unexpected signer, weak algorithm, expired or not-yet-valid certificate was reported. This is not blanket acceptance of exit code 4.
+
+See the [signed report reconciliation](audit/play-local-signing-2026-10-19/SIGNED-REPORT-RECONCILIATION.md) for traceable report identity and complete qualifications. The earlier “ready for local signing” and signed-review-pending statements below are historical stages, superseded by this receipt. No key regeneration or repeat signing is needed on the evidence reviewed; the owner's private key stays on the phone.
+
+**Play Console acceptance remains unproven and no upload is authorized by this receipt.** Signing enrollment/key choice and terms, unused versionCode confirmation, exact-bundle upload and rollout remain separate owner decisions. Play-delivered physical testing follows an authorized internal rollout. Preserve existing debug installations and local data. The website remains LIVE with the existing no-JavaScript/responsive-browser certification HOLD. No source, production, key, signing or Console action occurred in this documentation update.
+
+---
+
 ## Current checkpoint — October 19, 2026, 18:44 UTC: local Termux signing preparation
 
 **READY FOR LOCAL SIGNING**, scoped to the reviewed owner-operated procedure and verified unsigned input. The owner reports local key setup and the recorded backup checks are complete; a second backup is deferred. These are owner attestations, not independent access to the key. The expected public certificate fingerprint must be established and checked locally before signing; its actual value is not known in this record.
