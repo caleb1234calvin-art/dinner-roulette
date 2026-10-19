@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-10-19T06:04:41.384Z",
+  "at": "2026-10-19T06:03:58.696Z",
+  "authority": {
+    "source": "Coordinating parent reports actual owner approval at06:03 UTC",
+    "scope": "PR82-only unprotected-main exception, exact cf18ff1c5a56ecf59f8006d4f7c83fb289f393df tree6300c1061a790d84447bb92166f340aec895757b October19 America/Chicago; all other gates strict; all-five recovery must be preestablished or HOLD",
+    "verifiedDirectOwnerTranscript": false
+  },
+  "guard": {
+    "at": "2026-10-19T06:04:01Z",
+    "exit": 0,
+    "log": "real-clock-guard-0604.log",
+    "scope": "exact three previously blob-verified files; no clock injection; repeat immediately before production mutation"
+  },
+  "gates": {
+    "exactSource": "PASS",
+    "terminalCI": "PASS",
+    "unchangedMain": "PASS",
+    "fiveAliasMetadata": "PASS, not HTTP/browser",
+    "realClock": "PASS at06:04:01Z only",
+    "unprotectedMainDecision": "Resolved per parent-supplied owner decision; no mutation authorized to this worker",
+    "effectiveHostedBuild": "Browser worker handling fresh proof",
+    "rollbackTargetEligibilityRouteAndAllFiveRecovery": "HOLD until browser worker supplies actual proof",
+    "postreleaseDelivery": "NOT RUN; dependent on approved release"
+  },
+  "originalPrivateReceipt": {
+    "sha256": "d9f9617589e4d9268bc3a0d0ad86df0127eab069bf9ea77d813b37a757f6ed79",
+    "bytes": 59414
+  },
+  "scope": "Selected receipt fields; browser evidence and final HOLD report supersede intermediate browser-pending status. Original complete receipt retained privately; no unrelated account metadata published."
+}

@@ -1,3 +1,17 @@
+## CURRENT — 2026-10-19 06:05 UTC: exact PR82 exception approved; recovery HOLD persists
+
+Owner message Sentinel_fc7c94c007508191b7ccecda89d10186 at06:03:18UTC explicitly authorizes the one-release-only unprotected-main exception for PR82 cf18ff1c5a56ecf59f8006d4f7c83fb289f393df / tree6300c1061a790d84447bb92166f340aec895757b on October19,2026 America/Chicago. No branch-protection settings change; all other safeguards mandatory. This supersedes pending-waiver wording only, is not standing permission, and does not imply any actual release or consumption state.
+
+Renewed06:04 source/main/CI metadata PASS: exact PR82 draft/unmerged, all19 prior web jobs and Android validation SUCCESS/signing SKIPPED, mainc3208/FMS READY and five metadata bindings unchanged. Real-clock guard06:04:01UTC PASS without injection; repeat immediately before any permitted release. Saved Build Override ON/full migration-free command freshly verified, no edit. Public HTTP/browser release acceptance NOT RUN.
+
+Independent recovery review: HOLD. Current selector FMS→8DB/sourceead2319 and apex/www/chi only; canceled without Continue in this refresh. Project domain settings same three hosts, www308→apex. Future FMS eligibility under immediate-predecessor rules and both generated-host rollback paths are not established. Generated git-main branch URL semantics are not a production recovery guarantee; current aliases do not prove future restoration. This is insufficient evidence under the strict owner criterion, not universal impossibility.
+
+Parent reported HOLD06:05UTC and recommended retaining it. Proceeding without missing prepublication proof requires a separate explicit owner decision revising this exact release's recovery-evidence requirement and accepting both unknowns. No such revision recorded; do not expand the unprotected-main exception. No merge/deploy/rollback/protection/settings/source change or automatic schedule. PR82/84/85/main and historical root/legacy release documents untouched.
+
+Evidence: audit/publication-readiness-2026-10-19/exception-and-recovery-hold/RECOVERY-HOLD.md with verbatim owner excerpt, fresh guard/receipt summary, independent official-source review, minimal dashboard excerpts and private-original manifest. Three new screenshots actually viewed, originals retained privately. Complete prior history follows.
+
+---
+
 ## CURRENT — 2026-10-19 05:37 UTC: PR82 real-day readiness checked; operational HOLD
 
 PR82 remains exact cf18ff1c5a56ecf59f8006d4f7c83fb289f393df / tree6300c1061a790d84447bb92166f340aec895757b, draft/open/unmerged. Prior exact-head web39015345296 all19jobs and Android39015345242 validation SUCCESS/signing SKIPPED freshly read, not rerun. Mainc3208d9 and productionFMS READY/sourcec3208 unchanged; all five hostname metadata bindings resolve to FMS, not live HTTP/content acceptance.
