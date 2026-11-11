@@ -29,7 +29,17 @@ export interface ChristmasOverlay {
   }[];
 }
 
-export type DateNightPresentationCategory = ConcreteDateNightType | "christmas-lights";
+export type ChristmasEventCategory =
+  | "christmas-lights"
+  | "holiday-market"
+  | "holiday-craft-fair"
+  | "holiday-community-event";
+export type DateNightPresentationCategory = ConcreteDateNightType | ChristmasEventCategory;
+
+export function isChristmasAppWindow(now: Date) {
+  const instant = now.getTime();
+  return instant >= CHRISTMAS_START && instant < CHRISTMAS_END;
+}
 export function dateNightCategoryWeight(category: DateNightPresentationCategory, reduceParks: boolean) {
   return category === "park" && reduceParks ? 0.08 : 1;
 }
@@ -161,11 +171,10 @@ export function resolveDateNightPresentation(
     iconKey: category,
     eventAvailability: null,
   };
-  const instant = context.now.getTime();
   if (
     context.homeMode !== "date-night" ||
     context.christmasEnabled === false ||
-    !(instant >= CHRISTMAS_START && instant < CHRISTMAS_END) ||
+    !isChristmasAppWindow(context.now) ||
     venue.lifecycle ||
     venue.availability.season !== "ordinary" ||
     !venue.availability.browseEligible

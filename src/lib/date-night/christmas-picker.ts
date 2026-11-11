@@ -5,11 +5,13 @@ import type { DateNightFilters, DecoratedDateNightPlace } from "./types";
 import type { RestaurantPreference, TemporaryExclusion } from "../restaurants/types";
 
 export type ChristmasSelection = DateNightPresentationCategory | "anything";
-export interface ChristmasChoice {
+export interface ChristmasPickableChoice {
   /** The canonical record is never rewritten or given a permanent holiday type. */
   readonly venue: DecoratedDateNightPlace;
-  readonly presentation: DateNightPresentation;
   readonly categories: readonly DateNightPresentationCategory[];
+}
+export interface ChristmasChoice extends ChristmasPickableChoice {
+  readonly presentation: DateNightPresentation;
 }
 
 /** Adapt *after* canonical merge/decorate. Reuse the ordinary eligibility gates
@@ -76,7 +78,7 @@ function weighted<T>(values: readonly T[], weights: readonly number[], random: R
   }
   return values[values.length - 1] ?? null;
 }
-function categoryPool(items: readonly ChristmasChoice[]) {
+function categoryPool(items: readonly ChristmasPickableChoice[]) {
   return [...new Set(items.flatMap(item => item.categories))];
 }
 function chooseCategory(
@@ -92,8 +94,8 @@ function chooseCategory(
   );
   return weighted(categories, weights, random);
 }
-function chooseVenue(
-  choices: readonly ChristmasChoice[],
+function chooseVenue<T extends ChristmasPickableChoice>(
+  choices: readonly T[],
   mood: number,
   shown: readonly string[],
   random: Random,
@@ -109,27 +111,27 @@ function chooseVenue(
 }
 
 /** Keep the existing category-first roulette semantics and ordinary park penalty. */
-export function pickChristmasChoice(
-  choices: readonly ChristmasChoice[],
+export function pickChristmasChoice<T extends ChristmasPickableChoice>(
+  choices: readonly T[],
   filters: Pick<DateNightFilters, "mood" | "reduceParks">,
   shown: readonly string[] = [],
   previous: DateNightPresentationCategory | null = null,
   random: Random = Math.random,
-): ChristmasChoice | null {
+): T | null {
   const category = chooseCategory(categoryPool(choices), filters.reduceParks, previous, random);
   if (!category) return null;
   return chooseVenue(choices.filter(item => item.categories.includes(category)), filters.mood, shown, random);
 }
 
 /** Four distinct canonical IDs, preferring distinct effective categories first. */
-export function pickChristmasOptions(
-  choices: readonly ChristmasChoice[],
+export function pickChristmasOptions<T extends ChristmasPickableChoice>(
+  choices: readonly T[],
   filters: Pick<DateNightFilters, "mood" | "reduceParks">,
   shown: readonly string[] = [],
   count = 4,
   random: Random = Math.random,
-): ChristmasChoice[] {
-  const result: ChristmasChoice[] = [];
+): T[] {
+  const result: T[] = [];
   const used = new Set<string>();
   const remainingCategories = categoryPool(choices);
   const maximum = Number.isFinite(count) ? Math.max(0, Math.min(4, Math.floor(count))) : 4;
