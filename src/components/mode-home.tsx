@@ -2,6 +2,8 @@ import { useDateNightClock } from "@/lib/date-night/use-clock";
 import { useEffect } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
+import { ChristmasSnowfall } from "@/components/christmas-snowfall";
+import { isChristmasAtmosphereEnabled } from "@/lib/atmosphere/season";
 import { HalloweenDateNightPanel } from "@/components/halloween-date-night-panel";
 import { ModeHint } from "@/components/mode-hint";
 import { NightlifeHome } from "@/components/nightlife-home";
@@ -37,6 +39,7 @@ export function ModeHome() {
   const nightlife = mode === "nightlife";
   const dateNight = mode === "date-night";
   const halloweenDateNight = dateNight && halloweenSeason && spookySeasonEnabled;
+  const christmasSnowActive = isChristmasAtmosphereEnabled(mode, now);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -53,8 +56,9 @@ export function ModeHome() {
   function selectMode(next: HomeMode) { if (next !== mode) trackAppEvent("Mode Selected", { mode: next }); setMode(next); }
 
   return (
-    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme", halloweenDateNight && "halloween-date-night-theme")}>
+    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme", halloweenDateNight && "halloween-date-night-theme", christmasSnowActive && "christmas-snow-theme")}>
       <style>{DATE_NIGHT_ICON_THEME_STYLES}</style>
+      <ChristmasSnowfall enabled={christmasSnowActive} />
       {halloweenDateNight ? <div className="halloween-accent-splatter" aria-hidden="true" /> : null}
       <ModeHint />
       <header className="px-4 pt-8 pb-5">
