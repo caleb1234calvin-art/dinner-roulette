@@ -1,0 +1,45 @@
+/* Scoped, cosmetic Storybook Christmas: ordinary modes and Halloween unchanged. */
+.christmas-snow-theme {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 17% 14%, #244b56 0, transparent 33rem),
+    radial-gradient(ellipse at 80% 65%, #1d3b47 0, transparent 38rem),
+    #102833;
+  --app-bg: #102833;
+  --app-surface: #20444a;
+  --app-elevated: #284d52;
+  --app-fg: #f4e9d8;
+  --app-muted: #d3ddd4;
+  --app-subtle: #b9cac9;
+  --app-accent: #d9b874;
+  --app-accent-fg: #183639;
+  --app-border: #56736f;
+}
+
+/* The scene is behind the snow. Canvas sits immediately below readable UI
+ * bubbles, navigation and overlays. No particle can receive pointer input. */
+.christmas-snow-theme > .christmas-snow-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100dvh;
+  pointer-events: none;
+  user-select: none;
+}
+.christmas-snow-theme > header { position: relative; }
+.christmas-snow-theme > header > .christmas-header-copy { position: relative; z-index: 3; }
+.christmas-snow-theme > header > .christmas-village { position: relative; z-index: 1; }
+.christmas-snow-theme > main { position: relative; z-index: 3; }
+.christmas-snow-theme > main > header { display: none; } /* Existing duplicate Date Night heading */
+.christmas-snow-theme > .sticky { z-index: 20; }
+.christmas-village { max-width: 440px; margin: 0 auto; }
+.christmas-village svg { width: 100%; height: auto; display: block; }
+.christmas-village .christmas-window { animation: christmas-window-glow 3.6s ease-in-out infinite alternate; }
+.christmas-village .christmas-window:nth-child(2n) { animation-delay: -1.4s; }
+@keyframes christmas-window-glow { from { opacity: .62; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .christmas-village .christmas-window { animation: none; }
+}

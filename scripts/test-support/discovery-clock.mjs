@@ -6,6 +6,13 @@ export const flush = () => new Promise((resolve) => setImmediate(resolve));
 export function discoveryClock(t) {
   let now = 0,
     nextId = 0;
+  const epoch = Date.parse("2026-09-30T20:00:00Z");
+  // Date Night's seasonal gate reads new Date(); deadlines and caches read Date.now().
+  t.mock.timers.enable({ apis: ["Date"], now: epoch });
+  const advanceTo = (time) => {
+    now = time;
+    t.mock.timers.setTime(epoch + time);
+  };
   const timers = new Map();
   const schedule = (fn, ms = 0) => {
     const id = ++nextId;
@@ -15,7 +22,6 @@ export function discoveryClock(t) {
   t.mock.method(globalThis, "setTimeout", schedule);
   t.mock.method(globalThis, "clearTimeout", (id) => timers.delete(id));
   t.mock.method(performance, "now", () => now);
-  t.mock.method(Date, "now", () => 1790798400000 + now);
   t.mock.method(AbortSignal, "timeout", (ms) => {
     const controller = new AbortController();
     schedule(() => controller.abort(new DOMException("Timed out", "TimeoutError")), ms);
@@ -36,11 +42,11 @@ export function discoveryClock(t) {
         if (!next || next[1].at > end) break;
         const [id, timer] = next;
         timers.delete(id);
-        now = timer.at;
+        advanceTo(timer.at);
         timer.fn();
         await flush();
       }
-      now = end;
+      advanceTo(end);
       await flush();
     },
   };

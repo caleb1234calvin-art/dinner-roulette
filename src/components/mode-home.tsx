@@ -2,6 +2,9 @@ import { useDateNightClock } from "@/lib/date-night/use-clock";
 import { useEffect } from "react";
 import { Heart, MoonStar, UtensilsCrossed } from "lucide-react";
 import { DateNightHome } from "@/components/date-night-home";
+import { ChristmasSnowfall } from "@/components/christmas-snowfall";
+import { StorybookChristmasVillage } from "@/components/storybook-christmas-village";
+import { isChristmasAtmosphereEnabled } from "@/lib/atmosphere/season";
 import { HalloweenDateNightPanel } from "@/components/halloween-date-night-panel";
 import { ModeHint } from "@/components/mode-hint";
 import { NightlifeHome } from "@/components/nightlife-home";
@@ -37,6 +40,7 @@ export function ModeHome() {
   const nightlife = mode === "nightlife";
   const dateNight = mode === "date-night";
   const halloweenDateNight = dateNight && halloweenSeason && spookySeasonEnabled;
+  const christmasSnowActive = isChristmasAtmosphereEnabled(mode, now);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -53,14 +57,28 @@ export function ModeHome() {
   function selectMode(next: HomeMode) { if (next !== mode) trackAppEvent("Mode Selected", { mode: next }); setMode(next); }
 
   return (
-    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme", halloweenDateNight && "halloween-date-night-theme")}>
+    <div className={cn("mode-home min-h-dvh", nightlife && "nightlife-theme", dateNight && "date-night-theme", halloweenDateNight && "halloween-date-night-theme", christmasSnowActive && "christmas-snow-theme")}>
       <style>{DATE_NIGHT_ICON_THEME_STYLES}</style>
+      <ChristmasSnowfall enabled={christmasSnowActive} />
       {halloweenDateNight ? <div className="halloween-accent-splatter" aria-hidden="true" /> : null}
       <ModeHint />
       <header className="px-4 pt-8 pb-5">
-        <p className="text-kicker text-subtle">{nightlife ? "Pick For Us · Nightlife" : halloweenDateNight ? "Pick For Us · October after dark" : dateNight ? "Pick For Us · Date Night" : "Pick For Us"}</p>
-        <h1 className="font-display mt-2 text-4xl leading-tight text-fg">{nightlife ? "What's the Move?" : halloweenDateNight ? "Where Should the Night Take Us?" : dateNight ? "What Should We Do?" : "What's for Dinner?"}</h1>
-        <p className="mt-3 max-w-sm text-sm text-muted">{nightlife ? "Set the vibe. Let the app pick the place." : halloweenDateNight ? "Pick your poison. Set the mood. Let October decide the rest." : dateNight ? "Set the mood. Let the app pick the date." : "You set the rules. The app helps decide."}</p>
+        {christmasSnowActive ? (
+          <>
+            <div className="christmas-header-copy">
+              <p className="text-kicker text-accent">Pick For Us · Storybook Christmas</p>
+              <h1 className="font-display mt-2 text-4xl leading-tight text-fg">Where Will Winter Take Us?</h1>
+              <p className="mt-3 max-w-sm text-sm text-muted">Set the mood. Let the season choose.</p>
+            </div>
+            <StorybookChristmasVillage />
+          </>
+        ) : (
+          <>
+            <p className="text-kicker text-subtle">{nightlife ? "Pick For Us · Nightlife" : halloweenDateNight ? "Pick For Us · October after dark" : dateNight ? "Pick For Us · Date Night" : "Pick For Us"}</p>
+            <h1 className="font-display mt-2 text-4xl leading-tight text-fg">{nightlife ? "What's the Move?" : halloweenDateNight ? "Where Should the Night Take Us?" : dateNight ? "What Should We Do?" : "What's for Dinner?"}</h1>
+            <p className="mt-3 max-w-sm text-sm text-muted">{nightlife ? "Set the vibe. Let the app pick the place." : halloweenDateNight ? "Pick your poison. Set the mood. Let October decide the rest." : dateNight ? "Set the mood. Let the app pick the date." : "You set the rules. The app helps decide."}</p>
+          </>
+        )}
       </header>
       <div className="sticky top-0 z-20 mx-auto max-w-lg bg-bg/95 px-4 py-2 backdrop-blur-sm">
         <div className="grid grid-cols-3 rounded-xl bg-surface/95 p-1 shadow-border">
