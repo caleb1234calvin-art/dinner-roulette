@@ -1,3 +1,4 @@
+import { dateNightCategoryWeight } from "@/lib/date-night/christmas-overlay";
 import { recordSeasonalIdentityReceipts } from "@/lib/date-night/identity-receipts";
 import { DISCOVERY_TIMEOUT_MESSAGE } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
@@ -79,7 +80,7 @@ function pickCategory(
   if (!categories.length) return null;
   const hasAlternative = Boolean(avoidCategory && categories.some((type) => type !== avoidCategory));
   const weights = categories.map((type) => {
-    const parkWeight = type === "park" && reduceParks ? 0.08 : 1;
+    const parkWeight = dateNightCategoryWeight(type, reduceParks);
     const repeatWeight = hasAlternative && type === avoidCategory ? 0.18 : 1;
     return parkWeight * repeatWeight;
   });

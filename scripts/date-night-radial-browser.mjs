@@ -52,6 +52,9 @@ try {
       } }));
     }, { radiusMiles, scenario });
     const page = await context.newPage(); currentPage = page;
+    // The controlled seasonal scenario is pinned to Sep 30, 2026, rather than
+    // the real execution date. setFixedTime changes Date without pausing timers.
+    await page.clock.setFixedTime(new Date("2026-09-30T20:00:00Z"));
     const pageErrors = [], rpcRequests = [], cancelled = [];
     page.on("pageerror", e => pageErrors.push(e.name));
     page.on("request", r => { if (r.url().includes("/_serverFn/") && r.postData()?.includes("patchId")) rpcRequests.push(r); });
