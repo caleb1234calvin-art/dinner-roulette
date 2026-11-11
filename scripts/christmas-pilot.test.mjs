@@ -97,6 +97,10 @@ test("Chicago app calendar is independent of actual Sparkle dates and host timez
 });
 
 test("Sparkle uses its 17:00 to midnight hours without borrowing parent park hours", () => {
+  // The conditional weather-backup opening is outside the app window. Even
+  // direct use of the evidence helper must not assume a 17:00 admission time.
+  assert.equal(state("C26-001", "2026-11-24T17:30:00-06:00").openNowEligible, false);
+  assert.equal(state("C26-001", "2026-11-24T18:30:00-06:00").browseEligible, false);
   for (const [iso, open] of [
     ["2026-11-27T16:59:59-06:00", false],
     ["2026-11-27T17:00:00-06:00", true],

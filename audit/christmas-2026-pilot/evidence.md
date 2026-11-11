@@ -25,7 +25,7 @@ Actual event dates remain in the catalog. The application separately intersects 
 
 Astra reports CWEP page metadata dates February 21 and November 4, 2026 respectively. The older `/about-us/sparkle-in-the-park/` path redirects to the current display page. An embedded 2024 video and old fifth-season extract do not establish 2026 hours.
 
-The opening ceremony is retained as a start-only session because its finish is unverified. Recurring nights are recorded after opening, with the backup fact stated rather than invented calendar exceptions. Opening/backup uncertainty lies outside the fixed app window. Midnight is the closing boundary, not continuous access into the next day.
+The opening ceremony is retained as a start-only session because its finish is unverified. Recurring machine intervals begin November 25, after both advertised opening dates. November 24 is withheld from machine availability because the conditional backup ceremony starts at 6 p.m. and the evidence does not resolve that night's admission interval. The backup fact remains in the source notes. Opening/backup uncertainty lies outside the fixed app window. Midnight is the closing boundary, not continuous access into the next day.
 
 **Unknown / unavailable:** canonical permanent venue ID, exact visitor gate/approach, last admission, reservations, accessibility and additional holiday exceptions. Do not navigate to CWEP's office. Permanent park hours do not establish display availability.
 

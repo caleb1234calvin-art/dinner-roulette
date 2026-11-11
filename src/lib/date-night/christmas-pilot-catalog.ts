@@ -3,9 +3,10 @@ import type { ChristmasPilotAttraction } from "./christmas-pilot-model";
 const firstReview = "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6808848226";
 const secondReview = "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6809219778";
 
-/** Actual advertised nights after opening; the independent app window is applied by the resolver. */
+/** Advertised nights after both opening dates. The conditional November 24
+ * backup has no unconditional admission interval; the app window is separate. */
 const sparkleNights = [
-  "2026-11-24", "2026-11-25", "2026-11-26", "2026-11-27", "2026-11-28", "2026-11-29", "2026-11-30",
+  "2026-11-25", "2026-11-26", "2026-11-27", "2026-11-28", "2026-11-29", "2026-11-30",
   "2026-12-01", "2026-12-02", "2026-12-03", "2026-12-04", "2026-12-05", "2026-12-06", "2026-12-07",
   "2026-12-08", "2026-12-09", "2026-12-10", "2026-12-11", "2026-12-12", "2026-12-13", "2026-12-14",
   "2026-12-15", "2026-12-16", "2026-12-17", "2026-12-18", "2026-12-19", "2026-12-20", "2026-12-21",
@@ -72,7 +73,7 @@ export const CHRISTMAS_2026_PILOT: readonly ChristmasPilotAttraction[] = [
         opens: "17:00",
         closes: "24:00",
         admission: { kind: "free", priceUsd: 0, note: "Free public admission." },
-        scheduleNote: "After opening, the advertised display runs nightly 5 p.m.–midnight through January 1, 2027. The app permits Christmas eligibility only November 27–December 31. The opening ceremony's weather backup does not establish additional nightly exceptions.",
+        scheduleNote: "After opening, the advertised display runs nightly 5 p.m.–midnight through January 1, 2027. The app permits Christmas eligibility only November 27–December 31. November 24 has no machine admission interval here because its conditional weather-backup opening is at 6 p.m.; the evidence does not resolve that opening-night interval.",
       },
     ],
     route: null,
