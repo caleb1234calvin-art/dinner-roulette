@@ -1,9 +1,13 @@
 // Disposable controlled server only. Every external fetch is intercepted.
 import { appendFileSync, readFileSync } from "node:fs";
 import { appModuleLoader } from "./load-app-module.mjs";
+import { installFixtureCalendar } from "./fixture-calendar.mjs";
 if (process.env.CI !== "true" || process.env.DATE_NIGHT_RADIAL_BROWSER !== "1") throw new Error("Radial fixture requires disposable CI");
 const control = process.env.DATE_NIGHT_RADIAL_CONTROL, events = process.env.DATE_NIGHT_RADIAL_EVENTS;
 if (!control || !events) throw new Error("Radial fixture paths required");
+// Match the page clock used in this controlled seasonal browser fixture.
+// Real timers continue to advance, but server Date.now/new Date share Sep 30.
+installFixtureCalendar("2026-09-30T20:00:00Z");
 const { planDateNightPatches } = appModuleLoader()("src/lib/date-night/radial-plan.ts");
 const origin = { lat: 37.176447, lon: -94.310223 };
 const plan = planDateNightPatches(origin, 50);
