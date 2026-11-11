@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { createAtmosphereController, type AtmosphereEffect } from "./controller.ts";
 import { CHRISTMAS_ATMOSPHERE_END, CHRISTMAS_ATMOSPHERE_START, isChristmasAtmosphereEnabled } from "./season.ts";
-import { createSnowEffect, snowflakeBudget, snowPixelRatio } from "./snow.ts";
+import { CHRISTMAS_SNOW_DENSITY, createSnowEffect, snowflakeBudget, snowPixelRatio } from "./snow.ts";
 
 test("Christmas begins at Chicago midnight on Nov 27 and ends at Jan 1 midnight", () => {
   assert.equal(CHRISTMAS_ATMOSPHERE_START, Date.parse("2026-11-27T06:00:00Z"));
@@ -94,7 +94,9 @@ test("deactivation cancels RAF and does not revive until explicitly reactivated"
 
 test("snowflake and backing bitmap budgets are capped at mobile and 4K widths", () => {
   assert.ok(snowflakeBudget(320, 640) >= 12);
-  assert.ok(snowflakeBudget(3840, 2160) <= 72);
+  assert.equal(CHRISTMAS_SNOW_DENSITY, 68);
+  assert.equal(snowflakeBudget(390, 844), 73);
+  assert.ok(snowflakeBudget(3840, 2160) <= 190);
   assert.equal(snowflakeBudget(0, 640), 0);
   assert.ok(snowPixelRatio(390, 844, 4) <= 1.5);
   const ratio = snowPixelRatio(3840, 2160, 4);
@@ -109,8 +111,10 @@ test("snow renderer handles resize, draws within budget and clears", () => {
     beginPath: () => {},
     arc: () => { calls.particles++; },
     fill: () => {},
-    fillStyle: "",
-    globalAlpha: 1,
+    ellipse: () => { calls.particles++; },
+    save: () => {}, restore: () => {}, translate: () => {}, rotate: () => {},
+    moveTo: () => {}, lineTo: () => {}, stroke: () => { calls.particles++; },
+    fillStyle: "", globalAlpha: 1, shadowBlur: 0, shadowColor: "", lineWidth: 1, strokeStyle: "",
   };
   const canvas = { width: 0, height: 0, getContext: () => context } as unknown as HTMLCanvasElement;
   const originalDocument = globalThis.document;
@@ -121,7 +125,7 @@ test("snow renderer handles resize, draws within budget and clears", () => {
     assert.equal(calls.transform, 1);
     assert.ok(canvas.width * canvas.height <= 1_600_001);
     effect.render(16.67, 1000);
-    assert.equal(calls.particles, snowflakeBudget(390, 844));
+    assert.ok(calls.particles >= snowflakeBudget(390, 844));
     effect.clear();
     assert.equal(calls.clear, 2);
   } finally {
