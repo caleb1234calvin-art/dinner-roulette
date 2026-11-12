@@ -1,3 +1,34 @@
+# Pick For Us — AI Continuity: Dot visitor-placement research checkpoint
+
+## CURRENT — November 12, 2026 UTC: Dot targeted evidence DONE; Astra review pending; Codex critical corrections in progress
+
+**Documentation-only milestone.** Recorded from Dot's verified GitHub research handoff at Issue #93, comment [`6813704313`](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813704313). Dot says requests and research occurred on November 12, 2026 UTC; the record distinguishes individual content acquisition times from access/request dates and publication dates. This is *new research*, not independent Astra acceptance or implementation clearance. Prior continuity is reproduced unchanged after this checkpoint.
+
+### DONE — new evidence, correctly scoped
+
+- **C26-001 Sparkle in the Park:** Authoritative OSM object/history/changeset endpoints reported way `987588580` at v2, changeset `189037687` (timestamp September 15, 2026). A derived OSM park bounding-box midpoint `37.1734644, -94.3130247` is a **radius-only review candidate**, NOT an entrance, travel destination or proof of measured accuracy. Existing normal Date Night Overpass query uses `out center tags;`, lacks reviewed version/changeset, and a verified live `out meta` packet was not obtained (one endpoint HTTP 403, another timed out). The existing synthetic mixed-v2/v3 conflicting-classification bug and in-flight open-event selection bug remain unresolved. The 2026 walk-through event's entrance, parking and directions are not established.
+- **C26-010 NEWcaps Holiday Craft Fair:** The official Neosho School District map links a named `Neosho High School` marker at `36.8638487, -94.3805242`. This is a **campus-level radius candidate** from district-linked map material with visible 2024 publication and unstated positional precision; not a 2026 event-specific entrance, drop-off, parking or door. The current 2026 fair listing supports December 5, 9 a.m.–3 p.m. CST, free public visitor admission in cafeteria/hallways/auxiliary gym. District school does not become an ordinary Date Night venue.
+- **C26-005 Olde World Christmas Market:** Grace Episcopal's rendered calendar details name `Parish House, Classrooms, Hallways, Kitchen` for the December 4 gala and December 5 market. Diocesan hours and $10 Friday/free Saturday admissions are reaffirmed. Neither calendar room names nor old general building ramp/parking statements establish a 2026 fair-specific exterior door, arrival point, parking permission or accessible route. **No independently sourced radius coordinate** acquired for market; HOLD.
+- **C26-007 downtown lighting/parade:** City calendar geocodes for lighting and parade were found inside mapped building outlines (courthouse and a west-side building), so both were explicitly **rejected as visitor/spectator placement**. Public sidewalk around Carthage Square is an **area/line candidate**, NOT a verified 2026 spectator zone, radius point or event gate. OSM sidewalk way `1375949279` is a closed *line*, not a filled plaza polygon. Start-only caroling/lighting/parade schedule remains; calendar end slots are not confirmed actual finish times; neither event session becomes Open Now.
+
+### Independent verification handoff — next action
+
+**Send to Astra Work:** independently evaluate Dot's four-record evidence packet at Issue #93 comment `6813704313`, ranked **NEWcaps → Sparkle → Olde World Market → Downtown**. Verify first-party/district source affiliation, source freshness and point geometry, radius-only precision and uncertainty, whether candidate placements can support actual radius decisions, and whether any missing event-specific placement still blocks them. Review invalid downtown city geocodes and closed sidewalk-line semantics. Confirm the normal OSM revision-acquisition gap separately from authoritative direct-API reads. For each field, return ACCEPT RADIUS-ONLY, HOLD or REJECT with reason and sources. Do **not** change existing Astra verdicts, production event flags or code. No operator outreach, publishing, maps/navigation/ticket actions, merge, signing or deployment.
+
+### Workstream and safety state
+
+- Dot's targeted research assignment is **DONE** for source collection and issue handoff; it is not independently VERIFIED for the new radius evidence. Earlier discovery queue in #93 remains preserved, including its 24 deduplicated leads and initial 12 Astra verdicts.
+- Codex's separate critical correction assignment is **owner-reported RUNNING**, without a returned new SHA in this thread. Scope: (1) open selection/occurrence continuity so event cannot switch to ordinary host and leak Directions, (2) mixed provider revision/classification conflict, (3) keyboard dialog focus/Escape and AA contrast at 320/390/512. Do not mark complete merely because earlier #96 CI was green.
+- Astra is next for this read-only **location-evidence acceptance**; its independent code acceptance should follow the new Codex candidate separately. Combined Storybook V4 and actual Android/TalkBack/WebView acceptance remain outstanding.
+- Draft PR #96 remains at last verified head `ba50b14ae36b80961036986f0cdfe50786039a52`; V4 draft #90 at `5f6c2175306af8da76df49cc9a11ce492f555595`. Last verified main `e078dcdaa9f0ca84951409cdb92805731af3d34b`. All four Christmas attraction publication flags remain HOLD; no public import/merge/deploy/sign/Play action or owner release authority.
+
+### Milestone continuity procedure
+
+Owner's November 11 rule continues: update this `AI_CONTINUITY.md` on the deployment-suppressed documentation branch after each material **completed** milestone, preserve prior historical text and provenance, verify the exact file-only diff and commit, and never treat research candidates or green CI as publication approval. The current handoff is Astra verification of Dot's evidence, parallel with ongoing Codex corrections.
+
+---
+
+## Previous continuity checkpoint (Nov 11, 2026; preserved verbatim)
 # Pick For Us — AI Continuity: Christmas 2026 operational checkpoint
 
 ## CURRENT — November 11, 2026: Storybook Christmas; two independent assignments active
