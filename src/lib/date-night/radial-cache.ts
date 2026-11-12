@@ -1,6 +1,7 @@
 import { hasReviewedSeasonalPlacement } from "./listing";
 import { createDateNightDiscoveryCache, type DateNightAcquisition } from "./cache";
 import { mergeDateNight } from "./identity";
+import { attachDateNightIdentityObservations, mergeDateNightIdentityObservations } from "./source-observations";
 import { normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_VERSION, planDateNightPatches, summarizeDateNightCoverage,
   type DateNightPatchCoverageRecord } from "./radial-plan";
@@ -29,14 +30,15 @@ export function createDateNightRadialCache(options: Parameters<typeof createDate
       const coverage = summarizeDateNightCoverage(plan, query.radiusMiles, requested, records);
       const successful = snapshots.flatMap(({ snapshot }) => snapshot.response ? [snapshot.response] : []);
       const negativeEvidence = snapshots[0]?.snapshot.negativeEvidence ?? [];
-      const allVenues = mergeDateNight([...successful.flatMap(r => r.venues), ...negativeEvidence]
-        .sort((a, b) => a.id.localeCompare(b.id) || JSON.stringify(a).localeCompare(JSON.stringify(b))), []);
+      const identityObservations = mergeDateNightIdentityObservations(...snapshots.map(({ snapshot }) => snapshot.identityObservations));
+      const allVenues = attachDateNightIdentityObservations(mergeDateNight([...successful.flatMap(r => r.venues), ...negativeEvidence]
+        .sort((a, b) => a.id.localeCompare(b.id) || JSON.stringify(a).localeCompare(JSON.stringify(b))), []), identityObservations);
       const venues = clipDateNightRadius(allVenues, query);
       const source = venues.some(p => p.source !== "osm" || p.discoveryEvidence?.some(e => e.source === "catalog")) ? "merged" : "live";
       const response: DateNightSearchResponse | null = successful.length ? {
-        venues, source, discovery: { groups: successful.flatMap(r => r.discovery?.groups ?? []), partial: coverage.failedPatchIds.length > 0 },
+        venues, source, ...(identityObservations.length ? { identityObservations } : {}), discovery: { groups: successful.flatMap(r => r.discovery?.groups ?? []), partial: coverage.failedPatchIds.length > 0 },
       } : null;
-      return { coverage, response, negativeEvidence };
+      return { coverage, response, negativeEvidence, ...(identityObservations.length ? { identityObservations } : {}) };
     },
   };
 }

@@ -31,6 +31,18 @@ export interface DateNightFilters {
 
 export type DateNightLifecycle = "disused" | "permanently-closed";
 
+/** Affirmative provider fields retained across merge; coordinates are not identity. */
+export interface DateNightSourceIdentity {
+  objectType: string;
+  objectId: number;
+  version?: number;
+  changeset?: number;
+  name: string;
+  address: string;
+  classification: Record<string, string>;
+  observedAt?: string;
+}
+
 export interface DateNightEvidence {
   id: string;
   source: "osm" | "catalog";
@@ -38,11 +50,15 @@ export interface DateNightEvidence {
   openingHours: string | null;
   website: string | null;
   lifecycle?: DateNightLifecycle;
+  sourceIdentity?: DateNightSourceIdentity;
 }
 
 export interface DateNightPlace extends Restaurant {
   lifecycle?: DateNightLifecycle;
   discoveryEvidence?: DateNightEvidence[];
+  /** Retained identity proof exceeded its memory budget. Ordinary discovery is
+   * unchanged, but reviewed event binding requires a fresh acquisition. */
+  identityObservationOverflow?: true;
   seasonalAvailability?: SeasonalVenueAvailability;
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
@@ -65,6 +81,9 @@ export interface DateNightGroupCoverage {
 
 export interface DateNightSearchResponse {
   venues: DateNightPlace[];
+  /** Raw source identities are validation evidence, never discoverable venues.
+   * Retain contrary observations even when ordinary classification rejects them. */
+  identityObservations?: DateNightEvidence[];
   source: "live" | "merged" | "fallback";
   warning?: string;
   patch?: { id: string; version: string };

@@ -1,4 +1,5 @@
 import type { GeographicLocation } from "../location/model";
+import type { ChristmasEventSnapshot } from "../date-night/christmas-pilot-model";
 
 export const PRICE_LABELS = ["$", "$$", "$$$", "$$$$"] as const;
 export type PriceLevel = 1 | 2 | 3 | 4;
@@ -77,6 +78,8 @@ export interface Restaurant {
   isChain: boolean;
   photoKey: PhotoKey;
   source: "osm" | "catalog" | "merged";
+  /** Safe event presentation, distinct from ordinary host identity/fields. */
+  dateNightEvent?: ChristmasEventSnapshot;
 }
 
 export interface DecoratedRestaurant extends Restaurant {
@@ -119,6 +122,8 @@ export interface RestaurantPreference {
   lon?: number;
   address?: string;
   priceLevel?: PriceLevel | null;
+  dateNightEvent?: ChristmasEventSnapshot;
+  dateNightEventUnavailable?: true;
 }
 
 export interface VisitRecord {
@@ -129,6 +134,8 @@ export interface VisitRecord {
   date: string;
   personalRating: number | null;
   note: string;
+  dateNightEvent?: ChristmasEventSnapshot;
+  dateNightEventUnavailable?: true;
 }
 
 export interface TemporaryExclusion {

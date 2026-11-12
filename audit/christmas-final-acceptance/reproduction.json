@@ -1,0 +1,292 @@
+{
+  "purpose": "Immutable reviewed-parent reproduction, not candidate CI acceptance. Final candidate results are separately recorded in the draft PR.",
+  "review": "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813347588",
+  "parent": {
+    "sha": "ba50b14ae36b80961036986f0cdfe50786039a52",
+    "tree": "4904392d3cba03f92fe070abb2221f173ca3d519",
+    "checkout": "/workspace/christmas-acceptance-baseline",
+    "edited": false
+  },
+  "selection": {
+    "sameExecutableTest": "scripts/christmas-selection-continuity.test.mjs",
+    "testSha256": "219e85c8989ef1a7eaaf4acf94351cc15cc07508a2050caec8fdedd7ad9f47be",
+    "before": {
+      "sourceRoot": "/workspace/christmas-acceptance-baseline",
+      "tests": 28,
+      "passed": 7,
+      "failed": 21,
+      "skipped": 0,
+      "log": "/workspace/christmas-selection-before.log",
+      "logSha256": "6a3f5e539963966f08ce4787eea9ea4ab8ba71b0137c8e991e82846adb260feb"
+    },
+    "controls": [
+      "Result/Options/Plan: Dec31 midnight",
+      "Result/Options/Plan: source metadata loss and later recovery",
+      "Result/Options/Plan: Friday closes then Saturday opens",
+      "Result/Options/Plan: direct Friday-to-Saturday resume",
+      "Result/Options/Plan: synthetic same-day bounded admissions with gap skipped",
+      "Result/Options/Plan: opt-out/opt-in",
+      "Result/Options/Plan: exclusion/expiration",
+      "Result/Options/Plan: valid upcoming-to-active same occurrence preserved",
+      "ordinary-only Plan/Replan after opt-out and January1",
+      "Result/Options/Plan: original ordinary transient-discovery recovery remains unchanged"
+    ],
+    "scope": "Actual Home, policy, resolver and selection modules; React scheduling, leaf components and discovery transport replaced. Actual browser matrix is separate.",
+    "retirementScope": "Irreversible retirement applies only to event selections. Ordinary records retain the preexisting hide/recover state behavior."
+  },
+  "provider": {
+    "cwd": "/workspace/christmas-acceptance-baseline",
+    "command": "node --test --test-isolation=none --test-name-pattern='provider boundary rejects' /workspace/christmas-final-acceptance/scripts/christmas-provider-boundary.test.mjs",
+    "testExecutableSha256": "7d38ae4ef8ce984b8898d3ad09ae7a5ff4cdd068549ebdace0614e1eff1f9eae",
+    "testExecutableUnchangedBetweenBaselineAndFinal": true,
+    "tests": 2,
+    "pass": 0,
+    "fail": 2,
+    "expectedNodeExitCode": 1,
+    "failedTests": [
+      "provider boundary rejects reviewed v2 then contradictory v3 school before binding",
+      "provider boundary rejects contradictory v3 school then reviewed v2 before binding"
+    ],
+    "failure": "Raw rejected classification/revision did not reach validator (false !== true), both input orders. Actual search\u2192decorate\u2192binding pipeline.",
+    "log": {
+      "path": "/tmp/christmas-provider-boundary-before-final.log",
+      "sha256": "ca5439cdb0339314b1b0c700c3ef13711d79e257607edf1148c7664110d115bc"
+    }
+  },
+  "browser": {
+    "sourceSha": "ba50b14ae36b80961036986f0cdfe50786039a52",
+    "sourceTree": "4904392d3cba03f92fe070abb2221f173ca3d519",
+    "sourceState": "",
+    "appFingerprint": "9666adcba0d4a2c6d64cb40b15505ad68a0940a8be7cf88e04115315cb711754",
+    "harnessFingerprint": "029420c4c261d721b3b64176acfadacc1fb6ad79f7492c8e36abc825a9f503ac",
+    "bundleFingerprint": "3d545c1c971094f4315cb8e59cfd21a7715a858b2796df034a74b076b2117a6c",
+    "axeVersion": "4.14.0",
+    "reproduction": true,
+    "provenance": "local",
+    "command": "CHRISTMAS_APP_ROOT=/workspace/christmas-acceptance-baseline CHRISTMAS_REPRODUCTION=1 CHRISTMAS_FINAL_BROWSER_OUTPUT=/tmp/pfu-christmas-final-baseline-final PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium node scripts/christmas-final-browser.mjs",
+    "scriptSha256": "775768a9f7f0362145f70f12c0a2662bb23312124a92bffd0c8bb6ceb3daaa2a",
+    "receiptSha256": "f715e2769f85d70c4ff0dc3924f9e579877e3f7bc6112e5f9d9a8c3cce5a2f94",
+    "cases": 42,
+    "passes": 2,
+    "failures": 40,
+    "results": [
+      {
+        "name": "result: Home selection retires through midnight and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "midnight: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "result: Home selection retires through missing-revision and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "missing-revision recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "result: Home selection retires through opt-out and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "opt-out: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "result: Home selection retires through unavailable and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "unavailable recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "result: Home selection retires through gala-to-market and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "gala-to-market recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Home selection retires through midnight and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "midnight: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Home selection retires through missing-revision and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "missing-revision recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Home selection retires through opt-out and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "opt-out: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Home selection retires through unavailable and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "unavailable recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Home selection retires through gala-to-market and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "gala-to-market recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "plan: Home selection retires through midnight and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "midnight: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "plan: Home selection retires through missing-revision and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "missing-revision recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "plan: Home selection retires through opt-out and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "opt-out: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "plan: Home selection retires through unavailable and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "unavailable recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "plan: Home selection retires through gala-to-market and cannot resurrect",
+        "passed": false,
+        "errorExcerpt": "gala-to-market recovery without new click: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "result: Anything selection rejects park substitution while retaining independently chosen cinema",
+        "passed": false,
+        "errorExcerpt": "Anything missing revision: original selection must be retired\n\n1 !== 0\n"
+      },
+      {
+        "name": "options: Anything selection rejects park substitution while retaining independently chosen cinema",
+        "passed": false,
+        "errorExcerpt": "The input was expected to not match the regular expression /Sparkle|Central Park/. Input:\n\n'DATE NIGHT SHORTLIST\\n' +\n  '\\n' +\n  \"Tonight's options\\n\" +\n  '\\n' +\n  'Pick one, or let us shuffle again.\\n' +\n  '\\n' +\n  'Central Park\\n' +\n  'PARK\\n' +\n  '\\n' +\n  'Nearby \u00b7 Closed now\\n' +\n  '\\n' +\n  'Fixture ordinary cinema\\n' +\n  'MOVIES\\n' +\n  '\\n' +\n  'Nearby \u00b7 Open now\\n' +\n  '\\n' +\n  'SHUFFLE OPTIONS\\n' +\n  '\\n' +\n  'Pick For Us\\n' +\n  '\\n' +\n  'by Caustic Relay\\n' +\n  '\\n' +\n  'Independent application. Not affiliated with or endorsed by listed venues, delivery services, rideshare providers, mapping services or other third parties unless expressly stated.\\n' +\n  '\\n' +\n  'External services m"
+      },
+      {
+        "name": "plan: Anything selection rejects park substitution while retaining independently chosen cinema",
+        "passed": false,
+        "errorExcerpt": "The input was expected to not match the regular expression /Sparkle|Central Park/. Input:\n\n'DATE NIGHT\\n' +\n  '\\n' +\n  'Date Night plan candidates\\n' +\n  '\\n' +\n  'Compare each suggestion\u2019s schedule and admission. Travel time and a combined itinerary have not been verified.\\n' +\n  '\\n' +\n  'SUGGESTION 1\\n' +\n  '\\n' +\n  'Central Park\\n' +\n  '\\n' +\n  'Park \u00b7 Closed now\\n' +\n  '\\n' +\n  '305 West Chestnut Street, Carthage, MO, 64836\\n' +\n  '\\n' +\n  'Directions\\n' +\n  '\\n' +\n  'SUGGESTION 2\\n' +\n  '\\n' +\n  'Fixture ordinary cinema\\n' +\n  '\\n' +\n  'Movies \u00b7 Open now\\n' +\n  '\\n' +\n  'Synthetic test address\\n' +\n  '\\n' +\n  'Directions\\n' +\n  'Plan a different night\\n' +\n  '\\n' +\n  'Pick For Us\\n' +\n"
+      },
+      {
+        "name": "320px light no-preference result: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px light no-preference result: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "result: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#f3f8fb',\n+               colorParse: undefined,\n+               contrastRatio: 3.39,\n+               expectedContrastRatio: '4.5:1',\n+               fgC"
+      },
+      {
+        "name": "320px light no-preference options: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px light no-preference options: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "options: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#f3f8fb',\n+               colorParse: undefined,\n+               contrastRatio: 3.39,\n+               expectedContrastRatio: '4.5:1',\n+               fg"
+      },
+      {
+        "name": "320px light no-preference plan: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px light no-preference plan: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "plan: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#f3f8fb',\n+               colorParse: undefined,\n+               contrastRatio: 3.39,\n+               expectedContrastRatio: '4.5:1',\n+               fgCol"
+      },
+      {
+        "name": "320px light no-preference ordinary-only Christmas result: keyboard dialog continuity",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px light no-preference ordinary-only Christmas options: keyboard dialog continuity",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px light no-preference mixed Options to ordinary Result preserves modality and Home focus return",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly equal:\n\n0 !== 1\n"
+      },
+      {
+        "name": "320px light no-preference favorites: AA contrast, keyboard focus and layout",
+        "passed": false,
+        "errorExcerpt": "favorites: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#f3f8fb',\n+               colorParse: undefined,\n+               contrastRatio: 3.39,\n+               expectedContrastRatio: '4.5:1',\n+               "
+      },
+      {
+        "name": "320px light no-preference history: AA contrast, keyboard focus and layout",
+        "passed": false,
+        "errorExcerpt": "history: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#f3f8fb',\n+               colorParse: undefined,\n+               contrastRatio: 3.39,\n+               expectedContrastRatio: '4.5:1',\n+               fg"
+      },
+      {
+        "name": "320px dark no-preference result: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px dark no-preference result: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "result: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#14110e',\n+               colorParse: undefined,\n+               contrastRatio: 4.39,\n+               expectedContrastRatio: '4.5:1',\n+               fgC"
+      },
+      {
+        "name": "320px dark no-preference options: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px dark no-preference options: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "options: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#1d1915',\n+               colorParse: undefined,\n+               contrastRatio: 4.08,\n+               expectedContrastRatio: '4.5:1',\n+               fg"
+      },
+      {
+        "name": "320px dark no-preference plan: keyboard dialog entry, containment, return and Escape",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px dark no-preference plan: AA contrast and layout",
+        "passed": false,
+        "errorExcerpt": "plan: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#1d1915',\n+               colorParse: undefined,\n+               contrastRatio: 4.08,\n+               expectedContrastRatio: '4.5:1',\n+               fgCol"
+      },
+      {
+        "name": "320px dark no-preference ordinary-only Christmas result: keyboard dialog continuity",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px dark no-preference ordinary-only Christmas options: keyboard dialog continuity",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'expected one dialog, received 0',\n+   'modal/name semantics: {\"modal\":false,\"named\":false,\"focused\":false}',\n+   'keyboard opening left focus outside overlay',\n+   'Tab escaped modal',\n+   'Shift+Tab escaped modal',\n+   'missing visible keyboard focus: null',\n+   'underlying Home accepted focus while modal open',\n+   'Escape did not close overlay'\n+ ]\n- []\n"
+      },
+      {
+        "name": "320px dark no-preference mixed Options to ordinary Result preserves modality and Home focus return",
+        "passed": false,
+        "errorExcerpt": "Expected values to be strictly equal:\n\n0 !== 1\n"
+      },
+      {
+        "name": "320px dark no-preference favorites: AA contrast, keyboard focus and layout",
+        "passed": false,
+        "errorExcerpt": "favorites: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#1d1915',\n+               colorParse: undefined,\n+               contrastRatio: 4.08,\n+               expectedContrastRatio: '4.5:1',\n+               "
+      },
+      {
+        "name": "320px dark no-preference history: AA contrast, keyboard focus and layout",
+        "passed": false,
+        "errorExcerpt": "history: axe color contrast violations\n+ actual - expected\n\n+ [\n+   {\n+     description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',\n+     help: 'Elements must meet minimum color contrast ratio thresholds',\n+     helpUrl: 'https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI',\n+     id: 'color-contrast',\n+     impact: 'serious',\n+     nodes: [\n+       {\n+         all: [],\n+         any: [\n+           {\n+             data: {\n+               bgColor: '#1d1915',\n+               colorParse: undefined,\n+               contrastRatio: 4.08,\n+               expectedContrastRatio: '4.5:1',\n+               fg"
+      },
+      {
+        "name": "no page errors or external requests",
+        "passed": true
+      },
+      {
+        "name": "source and harness remained stable during acceptance",
+        "passed": true
+      }
+    ],
+    "pageErrors": [],
+    "externalRequests": []
+  },
+  "intermediateFailures": [
+    "A first cache-retirement implementation lost retained contradictions or deleted fresh ordinary records. Independent review reproduced it before commit; final regression controls require provenance retention and ordinary row preservation.",
+    "An expanded working-tree browser run passed 173 controls but failed its required source-stability control during concurrent edits. It is not a frozen-candidate pass.",
+    "Initial historical-byte checks caught exact new axe dependency bytes until explicit one-occurrence reversals were added; original expected hashes remain unchanged.",
+    "A local Python discovery command pointed at scripts and found zero tests (exit5); corrected native-android discovery ran 17 tests. No empty run is credited.",
+    "The preliminary legacy radial run rejected a stale safe-build fingerprint before browser launch; final exact-head rebuild/rerun required."
+  ]
+}
