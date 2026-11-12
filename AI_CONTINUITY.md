@@ -1,3 +1,63 @@
+# Pick For Us — AI Continuity: Christmas 2026 operational checkpoint
+
+## CURRENT — November 11, 2026: Storybook Christmas; two independent assignments active
+
+**Scope and authority:** Documentation-only continuity delta. This file is an AI-to-AI handoff, not a change to production, a completed feature release, an automated recurring task, or a blanket authorization to merge/deploy/sign/publish. Preserve the entire preceding continuity history below unchanged. Release authorization always requires a separate explicit owner decision.
+
+**Current deployment and baseline:** Main remained e078dcdaa9f0ca84951409cdb92805731af3d34b at the last GitHub read; the four Christmas pilot attractions are all DISABLED/HOLD. Do not claim PRs #90, #94, #95 or #96 have been merged or released. The Christmas season for the Date Night experience is November 27–December 31, 2026, inclusive, America/Chicago; no Christmas category in Dinner/Nightlife; no seasonal recurrence into 2027.
+
+### OWNER DESIGN — Storybook Christmas V4 baseline
+
+- Owner accepted the peaceful, visibly continuous snowfall after V3: visual density 68/100, natural mix of distant flecks, soft irregular midground and rare crystalline foreground flakes, roughly 10% faster falling than V3, not a blizzard. Visual stack is winter background and village/scenery, then transparent snow, then interactive bubbles/text/controls; touches never intercepted.
+- Storybook Christmas is nostalgic, cozy, miniature-village/stop-motion-influenced. V4 visual candidate exists at draft PR #90, head 5f6c2175306af8da76df49cc9a11ce492f555595 (two exact-head general and Android workflows reported SUCCESS). The V4 visual has NOT been accepted together with the event-aware UI on PR #96. Compact opt-out design, light-theme, screen-reader/keyboard, ordinary-motion and physical Android/WebView acceptance remain separate gates.
+
+### MILESTONES — work completed and retained
+
+1. **Design and foundation:** Master GitHub Issue #86. Issue #87 isolated venue-wide resolver at a44967628f27e198390dc8222fff3d8ff194eb07. Issue #88 modular atmosphere foundation at a8119007345f1c4524884bf05b1c13d1fbb6a282. Issue #89 tracked V4 preference. The approved visual branch remained separate from event/picker branches.
+2. **Picker architecture:** Issue #91 and draft PR #92, original adapter head 4f866c31a6d8a9219944b250a8dd9536213a9e59. Original general CI FAIL (radial browser expected October-only Plan button outside its test season); Android PASS. Do not retrospectively mark #92 general PASS.
+3. **Fixture repair:** Draft PR #94 at a85c151282759addc744aaa071c1e065ab41cfce corrected disposable test clocks without altering product calendar; general and Android exact-head CI SUCCESS. No merge.
+4. **Discovery:** Dot produced 24 candidate research records in Issue #93. Astra independently reviewed 12: seven VERIFIED for reviewed fields, five HOLD, zero rejected; 12 original leads not independently reviewed. VERIFIED research does NOT authorize production import. Owner chose Dot for continuing discovery/evidence collection, Astra for independent verification/acceptance, Codex for code/test changes, and owner for release decisions.
+5. **Four-activity pilot:** Draft PR #95 at 2fb7fba7393be98909dace3ac9135ab6cbf9b5f1, tree ecb55a539dec177aa567e3d41a419ea68a85092b. Exact-head general and Android CI SUCCESS. Scope restricted to C26-001 Sparkle in the Park, C26-005 Olde World Christmas Market, C26-010 NEWcaps Holiday Craft Fair, C26-007 Carthage Downtown Lighting/Parade. The three temporary hosts are not automatically ordinary Date Night venues. All public records remain held.
+6. **First independent identity review:** Astra Issue #93 comment 6810772595: ACCEPT WITH REQUIRED CHANGES. Sparkle has reviewed Central Park permanent ID date-night-osm-way-987588580, OSM way 987588580 v2, changeset 189037687. Grace Episcopal Church, Neosho High School and downtown square/route are not legitimate ordinary Date Night host IDs: use separate edition-scoped temporary event keys, preserve event sessions, and never substitute a courthouse or a school/church host as an ordinary selectable activity. A wrong-host binding and stale Christmas category on season exit were reproduced.
+7. **Identity and five-surface candidate:** Draft PR #96, branch integration/work-93-christmas-identity-ui, exact head ba50b14ae36b80961036986f0cdfe50786039a52, tree 4904392d3cba03f92fe070abb2221f173ca3d519. Correction touched 37 files against reviewed #95; 47 files in main-relative comparison. Candidate added edition-scoped events, session identity, preference/history persistence, ordinary season fallback and event-aware Result, Four Options, Plan, Favorites, History. Exact-head general CI 19/19 SUCCESS; unsigned Android readiness SUCCESS; protected signing SKIPPED. Reported and Astra-reproduced: 1,342 repository tests passed, four inherited skips, 75 application tests, 63 focused Christmas tests, 41 targeted browser scenarios. Test PASS did NOT imply independent acceptance or release.
+8. **Second independent acceptance:** Astra Issue #93 comment 6813347588 (reviewed exact PR #96 head and tree): ACCEPT WITH REQUIRED CHANGES; all four PUBLICATION HOLD. Event/venue/session identity and storage/persistence PASS; stale holiday-filter exit PASS; open-screen continuity, mixed provider evidence and keyboard/contrast FAIL or PARTIAL. This comment supersedes any optimistic publication conclusion based only on CI.
+
+### CURRENT HIGH-PRIORITY BLOCKERS — do not minimize
+
+**P0 / User action and safety of meaning:** An open Sparkle Result/Plan/Options may silently become ordinary Central Park when Christmas expires at Jan 1 midnight or live park revision metadata disappears. It can then expose ordinary park Directions despite no verified event visitor gate. The Friday paid market session can reopen as the Saturday free session without a fresh user choice. Selection must pin event/occurrence/presentation independently of canonical preference ID, and close/retire rather than silently substitute.
+
+**P0 / Binding integrity:** A synthetic conflicting later OSM revision reclassifying way 987588580 as a school can be dropped by ordinary discovery before binding validation; mixed v2+v3 then incorrectly accepts stale v2 in either input order. Preserve contrary raw provider observations through the validation boundary and reject conflicts. Actual reviewed OSM object was still v2/changeset 189037687 when Astra checked; the v3 case is a synthetic regression, not evidence that OSM has changed.
+
+**P1 / Accessibility:** Keyboard Enter opens Result/Options/Plan without moving focus into overlay; Escape did not close; Options lacked dialog semantics; focus could traverse underlying controls. All five event surfaces had normal-text contrast failures at 320 CSS px in light and dark themes (examples 3.39:1 light Result, 4.08:1 dark Favorites, below 4.5:1). Require focus entry/trap/return, Escape, dialog labels, semantic isolation and tested contrast at 320/390/512.
+
+**Publication evidence:** Sparkle's canonical park ID was independently matched but the ordinary provider query lacks required version/changeset metadata. Gate/entrance remains unverified, so event Directions unavailable. Temporary market/fair/downtown event radius placements are unconfirmed; distinguish independently supported distance placement from arrival-entrance and navigational authorization. Market $10 Dec 4 gala 17:30–19:00 and free Dec 5 market 09:00–14:00; fair free Dec 5 09:00–15:00; downtown lighting/parade start-only Dec 7 and neither qualifies Open Now. All four event publication flags disabled until independent evidence and explicit approval.
+
+### NEXT — separate bounded owners; status is OWNER-REPORTED RUNNING, not DONE
+
+- **Codex:** Owner has sent the critical correction assignment after Astra comment 6813347588. Produce NEW isolated SHA/tree and draft PR; fix open selection/occurrence continuity, preserve conflicting provider revisions, correct accessibility, add adversarial matrix and exact-head general/Android CI. Do not edit PR #90 or merge, deploy, sign, publish, or activate records.
+- **Dot:** Owner has sent targeted evidence assignment separately: authoritative park revision acquisition path, reviewed event placement for church fair / school fair / downtown square-and-parade, distinction among venue-level address, radius point, visitor gate/spectator site and nav-ready directions. Return fresh sourced findings for Astra review. No operator outreach, false coordinate, production import or status promotion on unreviewed claims.
+- **Astra:** Await NEW Codex commit and Dot evidence. Independently review corrections and placements (in separate read-only assignments). Combined V4-plus-UI, keyboard/screen-reader and physical Android/WebView/device acceptance remain to be executed after a bounded integration candidate exists.
+- **Owner / coordinator:** Manage sequencing, exact commits, original failed checks and evidence provenance. Keep PRs #90/#94/#95/#96 draft and preserve existing branches. Separately authorize any future merge/release; November 27 is a target season start, not permission to ship unsafe or unverified records.
+
+### AI CONTINUITY PROTOCOL — owner decision adopted November 11, 2026
+
+**Update this repository AI_CONTINUITY.md immediately after every completed material milestone and before any agent takeover or release decision.** Never wait for the whole Christmas update. Each checkpoint must preserve earlier history and include: what changed, exact GitHub issue/PR/branch/commit/tree; owner vs independent evidence, pass/fail/not-run and preexisting failures; current production and deployment state; open high-severity blockers; DONE / NEXT / HOLD; accountable agent and next prompt; and whether release authorization exists. Distinguish owner-reported in-flight work from returned evidence. Publish only to deployment-suppressed documentation branch unless separately authorized; read back exact committed bytes and verify only intended documentation changed. Keep release continuity separate; do not touch the release continuity branch or production silently.
+
+**Agent handoff read order:** (1) this latest CURRENT checkpoint on continuity branch, (2) master Issue #86, (3) Issue #93 primary independent review comments 6810772595 and 6813347588, (4) exact draft PR #90 for V4 and #96 for event/UI, (5) newer exact-head Codex/Dot outputs when they actually exist. Never assume a reported new task has completed or that an event marked VERIFIED for one field is publication-ready.
+
+### Immutable references for this checkpoint
+
+- Master: https://github.com/caleb1234calvin-art/dinner-roulette/issues/86
+- Research and verdicts: https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6810772595 and https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813347588
+- Visual: https://github.com/caleb1234calvin-art/dinner-roulette/pull/90
+- Fixture correction: https://github.com/caleb1234calvin-art/dinner-roulette/pull/94
+- Four-event pilot: https://github.com/caleb1234calvin-art/dinner-roulette/pull/95
+- Event identity and five-surface candidate: https://github.com/caleb1234calvin-art/dinner-roulette/pull/96
+- Exact accepted CI receipts for #96: general https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/43132273565 ; Android https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/43132273588 . Independent review found additional defects outside those passing suites.
+
+---
+
+## Preserved earlier continuity (prior latest checkpoint October 19, 2026)
 ## Current checkpoint — October 19, 2026, 19:42 UTC: existing signed-AAB review reconciled
 
 **Qualified PASS recorded for the exact signed artifact, based on an existing independent report read in full.** This checkpoint reconciles that report; it is not a new root cryptographic verification or a new signing operation. The signed AAB was not rematerialized or reverified in this reconciliation.
