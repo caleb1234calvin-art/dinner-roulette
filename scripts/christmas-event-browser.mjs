@@ -131,7 +131,7 @@ try {
       await page.getByRole("button", { name: "Close night plan", exact: true }).click();
       await page.getByRole("button", { name: "Anything", exact: true }).click();
     });
-    await check(`${width}px ordinary-only Christmas plan keeps its context through opt-out`, async () => {
+    await check(`${width}px ordinary-only Christmas plan and Replan survive opt-out and January 1`, async () => {
       await page.getByRole("button", { name: "Movies", exact: true }).click();
       await page.getByRole("button", { name: "Plan our outing", exact: true }).click();
       const plan = page.locator('[data-christmas-surface="plan"]');
@@ -141,8 +141,18 @@ try {
       await fixture(page, "configure", { christmasEnabled: false });
       await page.getByRole("heading", { name: "Date Night plan candidates", exact: true }).waitFor();
       assert.doesNotMatch(await plan.innerText(), /October after dark|No complete seasonal pair|Scare|Settle/);
+      await page.getByRole("button", { name: "Plan a different night", exact: true }).click();
+      await page.getByRole("heading", { name: "Date Night plan candidates", exact: true }).waitFor();
+      assert.match(await plan.innerText(), /Fixture ordinary cinema/);
+      assert.doesNotMatch(await plan.innerText(), /October after dark|No complete seasonal pair|Scare|Settle/);
+      await setTime(page, "2027-01-01T00:00:00-06:00");
+      await page.getByRole("button", { name: "Plan a different night", exact: true }).click();
+      await page.getByRole("heading", { name: "Date Night plan candidates", exact: true }).waitFor();
+      assert.match(await plan.innerText(), /Fixture ordinary cinema/);
+      assert.doesNotMatch(await plan.innerText(), /October after dark|No complete seasonal pair|Scare|Settle/);
       await page.getByRole("button", { name: "Close night plan", exact: true }).click();
       await fixture(page, "configure", { christmasEnabled: true });
+      await setTime(page, "2026-12-05T10:00:00-06:00");
       await page.getByRole("button", { name: "Anything", exact: true }).click();
     });
     await check(`${width}px Result uses market session data and unavailable actions`, async () => {

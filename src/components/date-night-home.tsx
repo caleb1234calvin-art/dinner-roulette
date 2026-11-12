@@ -343,9 +343,17 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
   }
 
   function planNight() {
-    setPlanContext(christmasActive ? "christmas" : "halloween");
+    setPlanContext(christmasActive || !halloweenActive ? "christmas" : "halloween");
     if (christmasActive) {
       const next = pickChristmasOptions(christmas.choices, filters, sessionShown, 2).map(choiceRecord);
+      next.forEach(item => markShown(item.id));
+      setNightPlan(next.length ? next : null);
+      return;
+    }
+    // An open Christmas plan can outlive opt-out or the edition. Replanning
+    // ordinary suggestions keeps their ordinary categories and general layout.
+    if (!halloweenActive) {
+      const next = pickDiverseOptions(eligible, filters, sessionShown, 2);
       next.forEach(item => markShown(item.id));
       setNightPlan(next.length ? next : null);
       return;
