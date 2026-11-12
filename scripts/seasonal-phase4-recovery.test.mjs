@@ -5,6 +5,7 @@ import test from "node:test";
 import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
+import ts from "typescript";
 import { appModuleLoader } from "./test-support/load-app-module.mjs";
 const load = appModuleLoader();
 const { MISSOURI_2026_PHASE4_RECOVERY_CATALOG: rows } = load("src/lib/date-night/missouri-2026-phase4-recovery-catalog.ts");
@@ -210,11 +211,86 @@ test("Branson's exact 17 dates survive November/DST as lifecycle Anything browse
   for (const pattern of [/November 6–7 and 13–14/, /Crossover hours unconfirmed/, /Posted October hours/, /Intense audio, live actors, fog and strobes/, /separate from Field of Screams Nixa/]) assert.match(details, pattern);
 });
 
-test("all 52 previous V1 records, presentation copy, radial implementation and unchanged UI remain byte-bound to main", () => {
+// Project only the explicitly isolated Christmas branches away, then apply the
+// original byte receipts to every ordinary/Halloween body and shared branch.
+// Exact replacements fail on any unrelated change; dispatch guards are checked
+// in full, so Dinner/Nightlife cannot accidentally reach an event renderer.
+function ordinaryUiBeforeChristmas(path, bytes) {
+  let source = bytes.toString();
+  const replaceExact = (before, after = "") => {
+    assert.equal(source.split(before).length, 2, `Exactly one authorized Christmas change in ${path}: ${before}`);
+    source = source.replace(before, after);
+  };
+  const removeFunction = (name, expected) => {
+    const ast = ts.createSourceFile(path, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+    const matches = ast.statements.filter(node => ts.isFunctionDeclaration(node) && node.name?.text === name);
+    assert.equal(matches.length, 1, `${path}: one isolated ${name}`);
+    const node = matches[0];
+    if (expected) assert.equal(node.getText(ast), expected, `${path}: exact event dispatch preserves the ordinary branch`);
+    source = source.slice(0, node.getFullStart()) + source.slice(node.end);
+  };
+  if (path === "src/lib/date-night/use-clock.ts") {
+    replaceExact(`/** Refresh at minute boundaries and immediately after a suspended tab resumes.
+ * A start-only announcement expires just after its inclusive start instant, so
+ * an exactly-on-the-minute tick also schedules the following millisecond. */`,
+    "/** Refresh at minute boundaries and immediately after a suspended tab resumes. */");
+    replaceExact(`      const elapsed = Date.now() % 60_000;
+      timer = setTimeout(refresh, elapsed === 0 ? 1 : 60_000 - elapsed);`,
+    "      timer = setTimeout(refresh, 60_000 - (Date.now() % 60_000));");
+  } else if (path === "src/components/result-overlay.tsx") {
+    replaceExact('import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";\n');
+    replaceExact('import { ChristmasEventResult } from "@/components/christmas-event-result";\n');
+    removeFunction("ResultOverlay", `export function ResultOverlay(props: Parameters<typeof OrdinaryResultOverlay>[0]) {
+  if (props.mode === "date-night" && hasSavedChristmasEvent(props.restaurant)) {
+    return <ChristmasEventResult restaurant={props.restaurant} onClose={props.onClose} onReroll={props.onReroll} onNotTonight={props.onNotTonight} />;
+  }
+  return <OrdinaryResultOverlay {...props} />;
+}`);
+    replaceExact("function OrdinaryResultOverlay(", "export function ResultOverlay(");
+  } else if (path === "src/components/date-night-plan-overlay.tsx") {
+    replaceExact('import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";\n');
+    replaceExact('import { ChristmasEventPlan } from "@/components/christmas-event-plan";\n');
+    removeFunction("DateNightPlanOverlay", `export function DateNightPlanOverlay({ context, ...props }: Parameters<typeof OrdinaryDateNightPlanOverlay>[0] & { context?: "christmas" | "halloween" }) {
+  if (context === "christmas" || props.plan.some(hasSavedChristmasEvent)) return <ChristmasEventPlan {...props} />;
+  return <OrdinaryDateNightPlanOverlay {...props} />;
+}`);
+    replaceExact("function OrdinaryDateNightPlanOverlay(", "export function DateNightPlanOverlay(");
+  } else if (path === "src/components/options-overlay.tsx") {
+    for (const line of [
+      'import { ChristmasEventActions, ChristmasEventDetails } from "@/components/christmas-event-details";\n',
+      'import { refreshChristmasEventSnapshot } from "@/lib/date-night/christmas-pilot-model";\n',
+      'import { hasSavedChristmasEvent, sanitizeChristmasEventSnapshot } from "@/lib/date-night/christmas-saved";\n',
+      'import { useDateNightClock } from "@/lib/date-night/use-clock";\n',
+    ]) replaceExact(line);
+    replaceExact(`  const hasEvents = mode === "date-night" && restaurants.some(hasSavedChristmasEvent);
+  const seenEvents = new Set<string>();
+  const shownRestaurants = restaurants.filter(restaurant => {
+    if (mode !== "date-night" || !hasSavedChristmasEvent(restaurant)) return true;
+    if (seenEvents.has(restaurant.id)) return false;
+    seenEvents.add(restaurant.id);
+    return true;
+  });
+`);
+    replaceExact('{hasEvents ? "Date Night options" : "Tonight\'s options"}', "Tonight's options");
+    replaceExact('{hasEvents ? "Review each event’s schedule and admission." : "Pick one, or let us shuffle again."}', "Pick one, or let us shuffle again.");
+    replaceExact('shownRestaurants.length === 1 ? "grid-cols-1" : hasEvents ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2"', 'restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2"');
+    replaceExact("{shownRestaurants.map((restaurant)", "{restaurants.map((restaurant)");
+    replaceExact('mode === "date-night" ? hasSavedChristmasEvent(restaurant) ? null : getDateNightIcon(', 'mode === "date-night" ? getDateNightIcon(');
+    removeFunction("ChristmasOptionCard");
+    removeFunction("OptionCard", `function OptionCard(props: Parameters<typeof OrdinaryOptionCard>[0]) {
+  if (props.mode === "date-night" && hasSavedChristmasEvent(props.restaurant)) return <ChristmasOptionCard {...props} />;
+  return <OrdinaryOptionCard {...props} />;
+}`);
+    replaceExact("function OrdinaryOptionCard(", "function OptionCard(");
+  }
+  return Buffer.from(source);
+}
+
+test("all 52 previous V1 records, presentation copy, radial implementation and ordinary UI remain byte-bound to main", () => {
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
   for (const [path, hash] of Object.entries(baseline.files)) {
-    let source = curatedRadiusSourceBefore(path, occurrenceSourceBefore(path));
+    let source = ordinaryUiBeforeChristmas(path, curatedRadiusSourceBefore(path, occurrenceSourceBefore(path)));
     // Authorized unified footer addition: reverse only the exact added lines,
     // then retain every historical byte/hash assertion (including Directions).
     if (["src/components/result-overlay.tsx", "src/components/options-overlay.tsx", "src/components/date-night-plan-overlay.tsx"].includes(path)) {

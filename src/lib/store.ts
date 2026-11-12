@@ -1,4 +1,13 @@
 import { clearSeasonalIdentityReceipts } from "./date-night/identity-receipts";
+import {
+  isChristmasEventPreferenceKey,
+  sanitizeChristmasEventSnapshot,
+  sanitizeChristmasSelections,
+  sanitizeOrdinaryDateNightTypes,
+  sanitizeSavedChristmasMetadata,
+} from "./date-night/christmas-saved";
+import type { ChristmasSelection } from "./date-night/christmas-picker";
+import type { ChristmasEventSnapshot } from "./date-night/christmas-pilot-model";
 import { create } from "zustand";
 import { isGeographicLocation } from "./location/model";
 import { persist } from "zustand/middleware";
@@ -30,11 +39,15 @@ interface AppState {
   sessionDate: string;
   theme: ThemeId;
   spookySeasonEnabled: boolean;
+  christmasEnabled: boolean;
+  christmasCategories: ChristmasSelection[];
   hydrated: boolean;
   setHydrated: (value: boolean) => void;
   setTheme: (theme: ThemeId) => void;
   setHomeMode: (mode: HomeMode) => void;
   setSpookySeasonEnabled: (value: boolean) => void;
+  setChristmasEnabled: (value: boolean) => void;
+  setChristmasCategories: (values: readonly ChristmasSelection[]) => void;
   setLocation: (location: SearchLocation) => void;
   setFilters: (patch: Partial<AppFilters>) => void;
   setDateNightFilters: (patch: Partial<DateNightFilters>) => void;
@@ -53,6 +66,7 @@ interface AppState {
     lon?: number;
     address?: string;
     priceLevel?: RestaurantPreference["priceLevel"];
+    dateNightEvent?: ChristmasEventSnapshot;
   }) => void;
   setRating: (restaurantId: string, rating: number | null) => void;
   recordVisit: (input: {
@@ -61,6 +75,7 @@ interface AppState {
     cuisineLabel: string;
     personalRating: number | null;
     note?: string;
+    dateNightEvent?: ChristmasEventSnapshot;
   }) => void;
   pruneExpired: () => void;
   resetFilters: () => void;
@@ -94,6 +109,8 @@ function upsertPref(
     lon: patch.lon ?? existing?.lon,
     address: patch.address ?? existing?.address,
     priceLevel: patch.priceLevel !== undefined ? patch.priceLevel : existing?.priceLevel,
+    ...(patch.dateNightEvent ?? existing?.dateNightEvent ? { dateNightEvent: patch.dateNightEvent ?? existing?.dateNightEvent } : {}),
+    ...(!patch.dateNightEvent && existing?.dateNightEventUnavailable ? { dateNightEventUnavailable: true as const } : {}),
   };
   return { ...map, [patch.restaurantId]: next };
 }
@@ -112,6 +129,8 @@ export const useAppStore = create<AppState>()(
       sessionDate: todayKey(),
       theme: "dark",
       spookySeasonEnabled: false,
+      christmasEnabled: true,
+      christmasCategories: ["anything"],
       hydrated: false,
       setHydrated: (value) => set({ hydrated: value }),
       setTheme: (theme) => {
@@ -120,6 +139,8 @@ export const useAppStore = create<AppState>()(
       },
       setHomeMode: (mode) => set({ homeMode: mode }),
       setSpookySeasonEnabled: (value) => set({ spookySeasonEnabled: value }),
+      setChristmasEnabled: (value) => set({ christmasEnabled: value }),
+      setChristmasCategories: (values) => set({ christmasCategories: sanitizeChristmasSelections(values) }),
       setLocation: (location) => set({ location, sessionShown: [] }),
       setFilters: (patch) => set({ filters: { ...DEFAULT_FILTERS, ...get().filters, ...patch } }),
       setDateNightFilters: (patch) =>
@@ -128,6 +149,7 @@ export const useAppStore = create<AppState>()(
             ...DEFAULT_DATE_NIGHT_FILTERS,
             ...get().dateNightFilters,
             ...patch,
+            activityTypes: sanitizeOrdinaryDateNightTypes(patch.activityTypes ?? get().dateNightFilters.activityTypes, get().dateNightFilters.activityTypes),
           },
         }),
       toggleCuisine: (id) => {
@@ -177,9 +199,28 @@ export const useAppStore = create<AppState>()(
       clearExclusions: () => set({ exclusions: [] }),
       toggleFavorite: (input) => {
         const existing = get().preferences[input.restaurantId];
+        const snapshot = sanitizeChristmasEventSnapshot(input.dateNightEvent, input.restaurantId);
+        if (input.dateNightEvent !== undefined && !snapshot) return;
+        if (isChristmasEventPreferenceKey(input.restaurantId) && !snapshot) {
+          // A malformed saved event may still be removed, but cannot be newly
+          // favorited or promoted to an ordinary place through a missing payload.
+          if (existing?.favorite) set({ preferences: upsertPref(get().preferences, { ...existing, favorite: false }) });
+          return;
+        }
+        const permanent = snapshot?.kind === "permanent-venue-display";
         set({
           preferences: upsertPref(get().preferences, {
             ...input,
+            ...(snapshot ? { dateNightEvent: snapshot } : {}),
+            ...(permanent ? {
+              name: existing?.name ?? snapshot.host.name,
+              cuisineLabel: existing?.cuisineLabel ?? "Park",
+              address: existing?.address ?? snapshot.host.address,
+              photoKey: existing?.photoKey ?? input.photoKey,
+              lat: existing?.lat ?? input.lat,
+              lon: existing?.lon ?? input.lon,
+              priceLevel: existing?.priceLevel ?? input.priceLevel,
+            } : {}),
             favorite: !existing?.favorite,
           }),
         });
@@ -196,6 +237,8 @@ export const useAppStore = create<AppState>()(
         });
       },
       recordVisit: (input) => {
+        const snapshot = sanitizeChristmasEventSnapshot(input.dateNightEvent, input.restaurantId);
+        if ((input.dateNightEvent !== undefined && !snapshot) || (isChristmasEventPreferenceKey(input.restaurantId) && !snapshot)) return;
         const visit: VisitRecord = {
           id: `${input.restaurantId}-${Date.now()}`,
           restaurantId: input.restaurantId,
@@ -204,18 +247,20 @@ export const useAppStore = create<AppState>()(
           date: new Date().toISOString(),
           personalRating: input.personalRating,
           note: input.note ?? "",
+          ...(snapshot ? { dateNightEvent: snapshot } : {}),
         };
         const existing = get().preferences[input.restaurantId];
         set({
           visits: [visit, ...get().visits].slice(0, 200),
           preferences: upsertPref(get().preferences, {
             restaurantId: input.restaurantId,
-            name: input.restaurantName,
-            cuisineLabel: input.cuisineLabel,
+            name: snapshot?.kind === "permanent-venue-display" ? existing?.name ?? snapshot.host.name : input.restaurantName,
+            cuisineLabel: snapshot?.kind === "permanent-venue-display" ? existing?.cuisineLabel ?? "Park" : input.cuisineLabel,
             timesVisited: (existing?.timesVisited ?? 0) + 1,
             lastVisited: visit.date,
             ourRating: input.personalRating ?? existing?.ourRating ?? null,
-            neverRecommend: input.personalRating === 1,
+            neverRecommend: snapshot && input.personalRating === null ? existing?.neverRecommend ?? false : input.personalRating === 1,
+            ...(snapshot ? { dateNightEvent: snapshot } : {}),
           }),
         });
       },
@@ -229,7 +274,7 @@ export const useAppStore = create<AppState>()(
           sessionShown: sessionDate === today ? get().sessionShown : [],
         });
       },
-      resetFilters: () => set({ filters: DEFAULT_FILTERS, dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS }),
+      resetFilters: () => set({ filters: DEFAULT_FILTERS, dateNightFilters: DEFAULT_DATE_NIGHT_FILTERS, christmasCategories: ["anything"] }),
       resetAllData: () => {
         clearSeasonalIdentityReceipts();
         set({
@@ -242,6 +287,8 @@ export const useAppStore = create<AppState>()(
           sessionShown: [],
           sessionDate: todayKey(),
           spookySeasonEnabled: false,
+          christmasEnabled: true,
+          christmasCategories: ["anything"],
         });
       },
     }),
@@ -260,6 +307,8 @@ export const useAppStore = create<AppState>()(
         sessionDate: state.sessionDate,
         theme: state.theme,
         spookySeasonEnabled: state.spookySeasonEnabled,
+        christmasEnabled: state.christmasEnabled,
+        christmasCategories: state.christmasCategories,
       }),
       merge: (persisted, current) => {
         const saved = (persisted ?? {}) as Partial<AppState>;
@@ -269,13 +318,19 @@ export const useAppStore = create<AppState>()(
           location: isGeographicLocation(saved.location) && ["geo", "manual", "default"].includes(saved.location.source)
             ? saved.location : current.location,
           filters: { ...DEFAULT_FILTERS, ...saved.filters },
-          dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters },
+          dateNightFilters: { ...DEFAULT_DATE_NIGHT_FILTERS, ...saved.dateNightFilters,
+            activityTypes: sanitizeOrdinaryDateNightTypes(saved.dateNightFilters?.activityTypes, current.dateNightFilters.activityTypes) },
+          preferences: Object.fromEntries(Object.entries(saved.preferences ?? current.preferences).map(([key, preference]) =>
+            [key, sanitizeSavedChristmasMetadata(preference, key)])),
+          visits: (saved.visits ?? current.visits).map(visit => sanitizeSavedChristmasMetadata(visit)),
           homeMode: isHomeMode(saved.homeMode) ? saved.homeMode : current.homeMode,
           theme: isThemeId(saved.theme) ? saved.theme : current.theme,
           spookySeasonEnabled:
             typeof saved.spookySeasonEnabled === "boolean"
               ? saved.spookySeasonEnabled
               : current.spookySeasonEnabled,
+          christmasEnabled: typeof saved.christmasEnabled === "boolean" ? saved.christmasEnabled : current.christmasEnabled,
+          christmasCategories: sanitizeChristmasSelections(saved.christmasCategories),
         };
       },
       onRehydrateStorage: () => (state) => {

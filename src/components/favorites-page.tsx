@@ -1,3 +1,5 @@
+import { ChristmasSavedFavorite } from "@/components/christmas-event-saved-card";
+import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";
 import { resolveSavedSeasonalPlace } from "@/lib/date-night/identity-receipts";
 import { seasonalFavoriteToggleIds } from "@/lib/date-night/identity-preferences";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
@@ -22,7 +24,7 @@ export function FavoritesPage() {
     .filter((item) => item.favorite)
     .sort((a, b) => a.name.localeCompare(b.name))
     .filter(item => {
-      const id = resolveSavedSeasonalPlace(item)?.id ?? item.restaurantId;
+      const id = hasSavedChristmasEvent(item) ? item.restaurantId : resolveSavedSeasonalPlace(item)?.id ?? item.restaurantId;
       if (seenIdentities.has(id)) return false;
       seenIdentities.add(id);
       return true;
@@ -45,6 +47,7 @@ export function FavoritesPage() {
       ) : (
         <ul className="mt-6 space-y-3">
           {favorites.map((item) => {
+            if (hasSavedChristmasEvent(item)) return <ChristmasSavedFavorite key={item.restaurantId} item={item} now={now} onRemove={() => toggleFavorite({ restaurantId: item.restaurantId, name: item.name })} />;
             // Saved coordinates are a snapshot, never current seasonal arrival evidence.
             // Historical favorites remain manageable after expiry with an explicit status.
             const current = resolveSavedSeasonalPlace(item);
