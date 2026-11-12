@@ -32,6 +32,7 @@ import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
 import { dedupeDateNight, mergeDateNight, mergeIdentity, moodFor } from "./identity";
+import { attachDateNightIdentityObservations, DATE_NIGHT_MAX_IDENTITY_OBSERVATIONS, mergeDateNightIdentityObservations } from "./source-observations";
 import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
 import { dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import {
@@ -40,6 +41,7 @@ import {
   type DateNightPlace,
   type DateNightSearchResponse,
   type DateNightGroupCoverage,
+  type DateNightEvidence,
 } from "./types";
 
 interface OverpassElement {
@@ -73,6 +75,28 @@ function classify(tags: Record<string, string>, halloweenSeason: boolean): Concr
   if (halloweenSeason) seasonalTypes(tags).forEach((type) => types.add(type));
 
   return [...types];
+}
+
+function identityObservation(element: OverpassElement, halloweenSeason: boolean): DateNightEvidence | null {
+  if (!["node", "way", "relation"].includes(element.type) || !Number.isSafeInteger(element.id) || element.id <= 0) return null;
+  const rawTags = element.tags ?? {};
+  const tags = normalizeLifecycleTags(rawTags);
+  return {
+    id: `date-night-osm-${element.type}-${element.id}`, source: "osm",
+    activityTypes: classify(tags, halloweenSeason),
+    // Rejected classifications supply no ordinary hours or venue actions.
+    openingHours: null, website: null,
+    lifecycle: providerLifecycle(rawTags),
+    sourceIdentity: {
+      objectType: element.type, objectId: element.id,
+      ...(Number.isInteger(element.version) ? { version: element.version } : {}),
+      ...(Number.isInteger(element.changeset) ? { changeset: element.changeset } : {}),
+      name: typeof tags.name === "string" ? tags.name.trim() : "",
+      address: formatOsmAddress(tags) || "Address unavailable",
+      classification: Object.fromEntries(["leisure", "amenity", "tourism", "sport"]
+        .filter(key => typeof rawTags[key] === "string").map(key => [key, rawTags[key]])),
+    },
+  };
 }
 
 function elementToPlace(element: OverpassElement, halloweenSeason: boolean): DateNightPlace | null {
@@ -131,7 +155,8 @@ function elementToPlace(element: OverpassElement, halloweenSeason: boolean): Dat
   };
 }
 
-async function queryMirror(url: string, body: string, halloweenSeason: boolean, signal: AbortSignal): Promise<DateNightPlace[]> {
+async function queryMirror(url: string, body: string, halloweenSeason: boolean, signal: AbortSignal,
+  observationsByResult: WeakMap<DateNightPlace[], DateNightEvidence[]>): Promise<DateNightPlace[]> {
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -145,6 +170,12 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
   if (!response.ok) throw new ProviderResponseError(`Overpass ${response.status}`, "http-error", response.status);
   const json = (await response.json()) as { elements?: OverpassElement[]; remark?: string };
   if (!Array.isArray(json?.elements) || json.remark) throw new ProviderResponseError("Live discovery returned an incomplete response. Please try again.", "malformed");
+  if (json.elements.length > DATE_NIGHT_MAX_IDENTITY_OBSERVATIONS)
+    throw new ProviderResponseError("Live discovery exceeded its bounded identity evidence budget. Please try a smaller area.", "malformed");
+  // Capture before name, placement, lifecycle and ordinary category filtering.
+  // The request-scoped sidecar is read only for the winning mirror's exact array.
+  const observations = json.elements.map(element => identityObservation(element, halloweenSeason))
+    .filter((item): item is DateNightEvidence => item !== null);
   const unique = new Map<string, DateNightPlace>();
   for (const element of json.elements.slice().sort((a, b) => `${a.type}-${a.id}`.localeCompare(`${b.type}-${b.id}`))) {
     const place = elementToPlace(element, halloweenSeason);
@@ -153,7 +184,9 @@ async function queryMirror(url: string, body: string, halloweenSeason: boolean, 
     const existing = unique.get(key);
     unique.set(key, existing ? mergeIdentity(existing, place) : place);
   }
-  return dedupeDateNight([...unique.values()].sort((a, b) => a.id.localeCompare(b.id)));
+  const venues = dedupeDateNight([...unique.values()].sort((a, b) => a.id.localeCompare(b.id)));
+  observationsByResult.set(venues, mergeDateNightIdentityObservations(observations));
+  return venues;
 }
 
 function localWithin(lat: number, lon: number, radiusMiles: number, halloweenActive: boolean): DateNightPlace[] {
@@ -189,11 +222,12 @@ export const searchDateNight = createServerFn({ method: "POST" })
     const owned = (place: DateNightPlace) => !data.patch || dateNightPatchOwns(data, data.patch, place);
     const local = localWithin(data.lat, data.lon, fetchRadius, halloweenSeason).filter(owned);
     const chain = createDateNightProvider(data.patch ? getRequest().signal : undefined);
+    const observationsByResult = new WeakMap<DateNightPlace[], DateNightEvidence[]>();
     const outcomes = await Promise.allSettled(plan.map(async (group) => {
       const providerTypes = group.activityTypes.filter((type) => type !== "other-halloween-fall");
       if (!providerTypes.length) return []; // Curated-only category; never query generic parks/events.
       const body = `data=${encodeURIComponent(buildDateNightQuery({ activityTypes: providerTypes }, center.lat, center.lon, radiusMeters))}`;
-      return chain.run(group.id, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal));
+      return chain.run(group.id, (mirror, signal) => queryMirror(mirror, body, halloweenSeason, signal, observationsByResult));
     }));
     const groups: DateNightGroupCoverage[] = plan.map((group, index) => {
       const result = outcomes[index]!;
@@ -209,10 +243,15 @@ export const searchDateNight = createServerFn({ method: "POST" })
       // Keep negative companions across overlapping acquisition circles; positive
       // rows belong to one logical sector. Lifecycle evidence is never coverage.
       const live = successes.flatMap((result) => result.value).filter(place => place.lifecycle || owned(place));
-      const venues = mergeDateNight(live, local);
+      const identityObservations = mergeDateNightIdentityObservations(...successes.map(result => observationsByResult.get(result.value)));
+      if (identityObservations.length > DATE_NIGHT_MAX_IDENTITY_OBSERVATIONS) {
+        chain.finish("error");
+        throw new ProviderResponseError("Combined discovery exceeded its bounded identity evidence budget. Please try a smaller area.", "malformed");
+      }
+      const venues = attachDateNightIdentityObservations(mergeDateNight(live, local), identityObservations);
       const source = local.length ? "merged" : "live";
       chain.finish(source);
-      return { venues, source, discovery, ...(patch ? { patch } : {}),
+      return { venues, source, discovery, ...(identityObservations.length ? { identityObservations } : {}), ...(patch ? { patch } : {}),
         ...(discovery.partial ? { warning: `Some live activity searches are unavailable: ${failedTypes.map((type) => dateNightTypeLabel([type])).join(", ")}. Available live results and saved places are included; coverage may be incomplete.` } : {}),
       };
     }

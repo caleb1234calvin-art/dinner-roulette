@@ -31,7 +31,7 @@ export function FavoritesPage() {
     });
 
   return (
-    <main className="px-4 pt-6 pb-8">
+    <main className={favorites.some(hasSavedChristmasEvent) ? "christmas-event-surface px-4 pt-6 pb-8" : "px-4 pt-6 pb-8"}>
       <p className="text-xs tracking-[0.22em] text-subtle uppercase">Saved for later</p>
       <h1 className="font-display mt-1 text-4xl text-fg">Favorites</h1>
       <p className="mt-2 text-sm text-muted">Places you already know you like.</p>

@@ -56,6 +56,9 @@ export interface DateNightEvidence {
 export interface DateNightPlace extends Restaurant {
   lifecycle?: DateNightLifecycle;
   discoveryEvidence?: DateNightEvidence[];
+  /** Retained identity proof exceeded its memory budget. Ordinary discovery is
+   * unchanged, but reviewed event binding requires a fresh acquisition. */
+  identityObservationOverflow?: true;
   seasonalAvailability?: SeasonalVenueAvailability;
   activityTypes: ConcreteDateNightType[];
   moodLevel: 1 | 2 | 3;
@@ -78,6 +81,9 @@ export interface DateNightGroupCoverage {
 
 export interface DateNightSearchResponse {
   venues: DateNightPlace[];
+  /** Raw source identities are validation evidence, never discoverable venues.
+   * Retain contrary observations even when ordinary classification rejects them. */
+  identityObservations?: DateNightEvidence[];
   source: "live" | "merged" | "fallback";
   warning?: string;
   patch?: { id: string; version: string };

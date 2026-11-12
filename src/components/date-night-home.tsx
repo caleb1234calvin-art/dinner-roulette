@@ -5,6 +5,7 @@ import { buildChristmasPilotCandidate, buildIsolatedChristmasPilotCandidate } fr
 import type { ChristmasPilotChoice } from "@/lib/date-night/christmas-pilot";
 import type { ChristmasEventPlacement, ChristmasPilotAttraction, ChristmasVenueBinding } from "@/lib/date-night/christmas-pilot-model";
 import { toChristmasEventRecord } from "@/lib/date-night/christmas-event-record";
+import { reconcileDateNightSelection, reconcileDateNightSelections, retainDateNightSelectionState } from "@/lib/date-night/selection";
 import { pickChristmasChoice, pickChristmasOptions } from "@/lib/date-night/christmas-picker";
 import type { ChristmasChoice, ChristmasSelection } from "@/lib/date-night/christmas-picker";
 import { recordSeasonalIdentityReceipts } from "@/lib/date-night/identity-receipts";
@@ -209,6 +210,8 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
   const [expanding, setExpanding] = useState(false);
   const [lastChristmasCategory, setLastChristmasCategory] = useState<DateNightPresentationCategory | null>(null);
   const [planContext, setPlanContext] = useState<"christmas" | "halloween">("halloween");
+  const [pickDialogContext, setPickDialogContext] = useState<"christmas" | undefined>();
+  const [optionsDialogContext, setOptionsDialogContext] = useState<"christmas" | undefined>();
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
   const christmasControlsVisible = isChristmasAppWindow(now) &&
@@ -272,10 +275,31 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
   const eligible = christmasActive ? christmas.choices.map(choiceRecord) : ordinaryEligible;
   const pickerLoading = loading && !eligible.some(place => place.dateNightEvent);
   const coverage = seasonalCoverage(decorated, filters, source, halloweenActive);
-  // Open overlays receive refreshed status/eligibility, too, including on resume.
-  const currentPick = pick ? eligible.find((venue) => venue.id === pick.id) : null;
-  const currentOptions = options?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
-  const currentPlan = nightPlan?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  // Refresh only the exact selected presentation and dated occurrence. A park
+  // preference ID or an event key shared by admissions is not a UI selection.
+  const currentPick = pick ? reconcileDateNightSelection(pick, eligible) : null;
+  const currentOptions = options ? reconcileDateNightSelections(options, eligible) : null;
+  const currentPlan = nightPlan ? reconcileDateNightSelections(nightPlan, eligible) : null;
+  useEffect(() => {
+    // Remove invalid events from state as well as the current render. They
+    // must not reopen later merely because evidence/session eligibility returns.
+    // Ordinary selections retain the existing transient discovery behavior.
+    if (pick && !currentPick && !retainDateNightSelectionState([pick], eligible).length) {
+      setPick(null);
+      setPickDialogContext(undefined);
+    }
+    if (options && currentOptions && options.length !== currentOptions.length) {
+      const retained = retainDateNightSelectionState(options, eligible);
+      if (retained.length !== options.length) {
+        setOptions(retained.length ? retained : null);
+        if (!retained.length) setOptionsDialogContext(undefined);
+      }
+    }
+    if (nightPlan && currentPlan && nightPlan.length !== currentPlan.length) {
+      const retained = retainDateNightSelectionState(nightPlan, eligible);
+      if (retained.length !== nightPlan.length) setNightPlan(retained.length ? retained : null);
+    }
+  }, [pick, currentPick, options, currentOptions, nightPlan, currentPlan, eligible]);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
@@ -306,6 +330,7 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
   }
 
   function roll(pool = eligible) {
+    setPickDialogContext(christmasActive || (pick !== null && pickDialogContext === "christmas") ? "christmas" : undefined);
     if (christmasActive) {
       const allowed = new Set(pool.map(item => item.id));
       const choices = christmas.choices.filter(choice => allowed.has(choiceRecord(choice).id));
@@ -330,6 +355,7 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
   }
 
   function dealOptions() {
+    setOptionsDialogContext(christmasActive || (options !== null && optionsDialogContext === "christmas") ? "christmas" : undefined);
     if (christmasActive) {
       const next = pickChristmasOptions(christmas.choices, filters, sessionShown, 4).map(choiceRecord);
       next.forEach(item => markShown(item.id));
@@ -544,8 +570,8 @@ export function DateNightHome({ christmasReview }: { christmasReview?: Christmas
         </div>
       </div>
 
-      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} dialogContext={pickDialogContext} onClose={() => { setPick(null); setPickDialogContext(undefined); }} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); setPickDialogContext(undefined); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} dialogContext={optionsDialogContext} onClose={() => { setOptions(null); setOptionsDialogContext(undefined); }} onSelect={(restaurant) => { setPickDialogContext(optionsDialogContext); setOptions(null); setOptionsDialogContext(undefined); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
       {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} context={planContext} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );

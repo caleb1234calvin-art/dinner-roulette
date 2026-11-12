@@ -62,7 +62,7 @@ function harness({ value = "2026-12-04T23:45:00Z", preferences = {}, visits = []
         jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true },
     }).outputText;
     const require = specifier => {
-      if (specifier === "react") return { ...React, useMemo: fn => fn(), useEffect: () => {},
+      if (specifier === "react") return { ...React, useMemo: fn => fn(), useEffect: () => {}, useLayoutEffect: () => {}, useRef: initial => ({ current: initial }),
         useState(initial) {
           const frame = currentFrame, index = frame.cursor++;
           if (!(index in frame.values)) frame.values[index] = index === 0 && typeof initial === "boolean"
@@ -278,6 +278,26 @@ test("Compact event Options retain every announced square activity start", () =>
   assert.match(html, /caroling/i); assert.match(html, /dance/i); assert.match(html, /lighting/i);
   assert.match(html, /6:15/); assert.match(html, /6:30/);
   assert.match(html, /Reviewed square address/); assert.match(html, /Parade route/);
+});
+
+test("Mixed Options retains its named modal when an event retires but the selected ordinary choice survives", () => {
+  const h = harness();
+  const ordinary = { id: "date-night-ordinary-cafe", name: "Ordinary café", cuisineLabel: "Coffee", address: "Ordinary address", lat: 37.2, lon: -94.4,
+    hoursKnown: true, isOpen: true, activityTypes: ["coffee"], distanceMiles: 1 };
+  const props = { mode: "date-night", onClose() {}, onSelect() {}, onShuffle() {}, onNotTonight() {} };
+  const render = restaurants => h.render("options-overlay", "OptionsOverlay", { ...props, restaurants });
+  assert.equal(all(render([fixture("C26-001"), ordinary]), node => node.type === "dialog").length, 1);
+  const retained = render([ordinary]);
+  const dialogs = all(retained, node => node.type === "dialog");
+  assert.equal(dialogs.length, 1, "event removal must not downgrade an already-open modal");
+  assert.equal(dialogs[0].props["aria-labelledby"], "christmas-options-heading");
+  assert.equal(all(retained, node => node.props.id === "christmas-options-heading").length, 1);
+  assert.match(h.html(retained), /Ordinary café/);
+  assert.doesNotMatch(h.html(retained), /Sparkle in the Park/);
+  const ordinaryOnly = harness().render("options-overlay", "OptionsOverlay", { ...props, restaurants: [ordinary] });
+  assert.equal(all(ordinaryOnly, node => node.type === "dialog").length, 0, "unrelated ordinary-only behavior is unchanged");
+  const explicit = harness().render("options-overlay", "OptionsOverlay", { ...props, restaurants: [ordinary], dialogContext: "christmas" });
+  assert.equal(all(explicit, node => node.type === "dialog").length, 1, "Christmas-origin ordinary choices remain modal");
 });
 
 test("Ordinary-only Christmas Plan uses explicit context and does not enter Halloween renderer", () => {

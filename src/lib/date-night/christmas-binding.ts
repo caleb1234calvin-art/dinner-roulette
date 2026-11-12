@@ -41,6 +41,8 @@ export function resolveChristmasParkBinding(
   const matching = venues.filter(venue => venue.id === reviewed.canonicalVenueId);
   if (!matching.length) return { state: "absent-from-query", reason: "The reviewed Central Park identity is valid but absent from this discovery response." };
   for (const venue of matching) {
+    if (venue.identityObservationOverflow)
+      return { state: "conflicting-source", reason: "Retained provider identity evidence exceeded its bounded capacity; a fresh acquisition and review are required before the park can bind." };
     if (normalize(venue.name) !== normalize(reviewed.expected.name) || normalize(venue.address) !== normalize(reviewed.expected.address) ||
         !venue.activityTypes.includes("park") || venue.activityTypes.some(type => type !== "park") || venue.lifecycle ||
         venue.seasonalListing || !["osm", "merged"].includes(venue.source))

@@ -3,6 +3,7 @@ import { DATE_NIGHT_CACHE_TTL_MS, failedDateNightAcquisition, type DateNightAcqu
 import { getCuratedSeasonalPlaces } from "./curated-policy";
 import { createDateNightRadialCache, clipDateNightRadius } from "./radial-cache";
 import { mergeDateNight } from "./identity";
+import { attachDateNightIdentityObservations, mergeDateNightIdentityObservations } from "./source-observations";
 import { normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNightPatchCoverageRecord } from "./radial-plan";
 import type { ConcreteDateNightType, DateNightPlace, DateNightSearchResponse } from "./types";
@@ -61,7 +62,14 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
 
   const publish = () => {
     if (!query || !onChange) return;
-    const { coverage, response, negativeEvidence } = snapshot();
+    const { coverage, response, negativeEvidence, identityObservations: cachedObservations } = snapshot();
+    const identityObservations = mergeDateNightIdentityObservations(cachedObservations, displayOnly?.identityObservations);
+    // Presentation-only rows have no cache entry to retain composed evidence.
+    // Keep actual source observations with these bounded records until a fresh
+    // acquisition replaces them; expiry cannot silently restore old authority.
+    if (displayOnly) displayOnly = { ...displayOnly,
+      venues: attachDateNightIdentityObservations(displayOnly.venues, identityObservations) };
+    savedPool = attachDateNightIdentityObservations(savedPool, identityObservations);
     let visible = response;
     if (displayOnly) {
       const venues = clipDateNightRadius(mergeDateNight([
@@ -89,6 +97,8 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       }
     }
     const hasFailure = coverage.failedPatchIds.length > 0;
+    if (visible && identityObservations.length) visible = { ...visible, identityObservations,
+      venues: attachDateNightIdentityObservations(visible.venues, identityObservations) };
     if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,
       discovery: { groups: visible.discovery?.groups ?? [], partial: true } };
     const ready = Boolean(visible) || (coreSettled && !inFlight);

@@ -1,4 +1,5 @@
 import { ChristmasEventActions, ChristmasEventDetails } from "@/components/christmas-event-details";
+import { ChristmasEventDialog } from "@/components/christmas-event-dialog";
 import { refreshChristmasEventSnapshot } from "@/lib/date-night/christmas-pilot-model";
 import { hasSavedChristmasEvent, sanitizeChristmasEventSnapshot } from "@/lib/date-night/christmas-saved";
 import { useDateNightClock } from "@/lib/date-night/use-clock";
@@ -23,19 +24,23 @@ import { cn } from "@/lib/utils";
 
 type ResultMode = "dinner" | "nightlife" | "date-night";
 
-export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNotTonight, mode = "dinner" }: {
+export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNotTonight, mode = "dinner", dialogContext }: {
   restaurants: DecoratedRestaurant[];
   onClose: () => void;
   onSelect: (restaurant: DecoratedRestaurant) => void;
   onShuffle: () => void;
   onNotTonight: (restaurant: DecoratedRestaurant) => void;
   mode?: ResultMode;
+  dialogContext?: "christmas";
 }) {
   const [mounted, setMounted] = useState(false);
   const theme = useAppStore((s) => s.theme);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const halloween = mode === "date-night" && isHalloweenDateNightActive(spookySeasonEnabled);
   const hasEvents = mode === "date-night" && restaurants.some(hasSavedChristmasEvent);
+  const requestedDialog = mode === "date-night" && dialogContext === "christmas";
+  const [eventDialog, setEventDialog] = useState(hasEvents || requestedDialog);
+  const useEventDialog = hasEvents || requestedDialog || eventDialog;
   const seenEvents = new Set<string>();
   const shownRestaurants = restaurants.filter(restaurant => {
     if (mode !== "date-night" || !hasSavedChristmasEvent(restaurant)) return true;
@@ -45,15 +50,16 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
   });
 
   useEffect(() => { setMounted(true); }, []);
+  useEffect(() => { if (hasEvents || requestedDialog) setEventDialog(true); }, [hasEvents, requestedDialog]);
   if (!mounted) return null;
 
   const kicker = mode === "nightlife" ? "Nightlife shortlist" : mode === "date-night" ? (halloween ? "🎃 Date Night · Halloween" : "Date Night shortlist") : "Compressed shortlist";
 
-  return createPortal(
+  const content = (
     <div className={cn("fixed inset-0 z-50 overflow-y-auto bg-bg", halloween && "date-night-halloween-options")}>
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-6">
         <div className="flex items-start justify-between gap-3">
-          <div className="flex-1"><p className="text-kicker text-subtle">{kicker}</p><h2 className="font-display mt-1 text-3xl leading-tight text-fg">{hasEvents ? "Date Night options" : "Tonight's options"}</h2><p className="mt-1 text-sm text-muted">{hasEvents ? "Review each event’s schedule and admission." : "Pick one, or let us shuffle again."}</p></div>
+          <div className="flex-1"><p className="text-kicker text-subtle">{kicker}</p><h2 id={useEventDialog ? "christmas-options-heading" : undefined} className="font-display mt-1 text-3xl leading-tight text-fg">{hasEvents ? "Date Night options" : "Tonight's options"}</h2><p className="mt-1 text-sm text-muted">{hasEvents ? "Review each event’s schedule and admission." : "Pick one, or let us shuffle again."}</p></div>
           <button type="button" onClick={onClose} className="mt-2 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options"><X className="size-5" /></button>
         </div>
         <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", shownRestaurants.length === 1 ? "grid-cols-1" : hasEvents ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2")}>
@@ -62,9 +68,11 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
         <div className="mt-4"><Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}><Shuffle className="size-4" /><span className="tracking-kicker uppercase">Shuffle options</span></Button></div>
         <div className="pb-[max(0.5rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={restaurants.map((restaurant) => mode === "date-night" ? hasSavedChristmasEvent(restaurant) ? null : getDateNightIcon({ activityTypes: (restaurant as DecoratedDateNightPlace).activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : mode === "nightlife" ? nightlifeArtwork((restaurant as DecoratedNightlifePlace).venueTypes ?? []) : dinnerRestaurantIcon(restaurant, theme))} /></div>
       </div>
-    </div>,
-    document.body,
+    </div>
   );
+  return useEventDialog
+    ? <ChristmasEventDialog labelledBy="christmas-options-heading" onClose={onClose}>{content.props.children}</ChristmasEventDialog>
+    : createPortal(content, document.body);
 }
 
 function OrdinaryOptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {

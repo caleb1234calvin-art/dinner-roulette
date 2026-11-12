@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { createRoot } from "react-dom/client";
-import { DateNightHome } from "../../src/components/date-night-home";
-import { ResultOverlay } from "../../src/components/result-overlay";
-import { OptionsOverlay } from "../../src/components/options-overlay";
-import { DateNightPlanOverlay } from "../../src/components/date-night-plan-overlay";
-import { FavoritesPage } from "../../src/components/favorites-page";
-import { HistoryPage } from "../../src/components/history-page";
-import { useAppStore } from "../../src/lib/store";
-import { buildIsolatedChristmasPilotCandidate, isChristmasPilotChoice } from "../../src/lib/date-night/christmas-pilot";
-import { CHRISTMAS_2026_PILOT } from "../../src/lib/date-night/christmas-pilot-catalog";
-import { toChristmasEventRecord } from "../../src/lib/date-night/christmas-event-record";
-import { decorateDateNight } from "../../src/lib/date-night/eligibility";
-import { DEFAULT_DATE_NIGHT_FILTERS } from "../../src/lib/date-night/types";
-import type { DecoratedDateNightPlace } from "../../src/lib/date-night/types";
-import type { ChristmasEventPlacement } from "../../src/lib/date-night/christmas-pilot-model";
-import { ordinaryFixtureVenues, discoveryRequests, clearDiscoveryRequests } from "./christmas-event-search-fixture";
-import "../../src/styles.css";
-import "../../src/date-night-base-polish.css";
-import "../../src/halloween-date-night-overrides.css";
+import { DateNightHome } from "@/components/date-night-home";
+import { ResultOverlay } from "@/components/result-overlay";
+import { OptionsOverlay } from "@/components/options-overlay";
+import { DateNightPlanOverlay } from "@/components/date-night-plan-overlay";
+import { FavoritesPage } from "@/components/favorites-page";
+import { HistoryPage } from "@/components/history-page";
+import { useAppStore } from "@/lib/store";
+import { buildIsolatedChristmasPilotCandidate, isChristmasPilotChoice } from "@/lib/date-night/christmas-pilot";
+import { CHRISTMAS_2026_PILOT } from "@/lib/date-night/christmas-pilot-catalog";
+import { toChristmasEventRecord } from "@/lib/date-night/christmas-event-record";
+import { decorateDateNight } from "@/lib/date-night/eligibility";
+import { DEFAULT_DATE_NIGHT_FILTERS } from "@/lib/date-night/types";
+import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
+import type { ChristmasEventPlacement } from "@/lib/date-night/christmas-pilot-model";
+import { ordinaryFixtureVenues, discoveryRequests, clearDiscoveryRequests, setDiscoveryFixtureMode } from "./christmas-event-search-fixture";
+import "@/styles.css";
+import "@/date-night-base-polish.css";
+import "@/halloween-date-night-overrides.css";
 
 type Surface = "home" | "result" | "options" | "plan" | "favorites" | "history";
 const location = { lat: 37.1734644, lon: -94.3130247, label: "Synthetic review location", source: "manual" as const };
@@ -35,8 +35,7 @@ const placements: readonly ChristmasEventPlacement[] = CHRISTMAS_2026_PILOT
     sourceRefs: event.hostSourceRefs,
   }));
 
-function records() {
-  const now = new Date();
+function records(now = new Date()) {
   return buildIsolatedChristmasPilotCandidate({
     venues: decorateDateNight(ordinaryFixtureVenues, location, now), filters,
     selectedCategories: ["anything"], homeMode: "date-night", location, now, placements,
@@ -86,6 +85,24 @@ function init() {
     discovery() { return structuredClone(discoveryRequests); },
     clearDiscovery() { clearDiscoveryRequests(); },
     configure(patch: Record<string, unknown>) { useAppStore.setState(patch); },
+    refreshDiscovery(mode: Parameters<typeof setDiscoveryFixtureMode>[0]) {
+      setDiscoveryFixtureMode(mode);
+      const current = useAppStore.getState().location;
+      useAppStore.setState({ location: { ...current, lat: current.lat + 0.000001 } });
+    },
+    setTheme(theme: "light" | "dark") {
+      useAppStore.getState().setTheme(theme);
+      document.documentElement.dataset.theme = theme;
+    },
+    seedAllEvents() {
+      const at: Record<string, string> = { "C26-001": "2026-12-05T18:00:00-06:00", "C26-005": "2026-12-05T10:00:00-06:00", "C26-010": "2026-12-05T10:00:00-06:00", "C26-007": "2026-12-07T17:00:00-06:00" };
+      for (const [id, iso] of Object.entries(at)) {
+        const event = records(new Date(iso)).find(item => item.dateNightEvent?.researchId === id)!.dateNightEvent!;
+        const store = useAppStore.getState();
+        if (!store.preferences[event.preferenceKey]?.favorite) store.toggleFavorite({ restaurantId: event.preferenceKey, name: event.eventName, cuisineLabel: event.categoryLabel, dateNightEvent: event });
+        store.recordVisit({ restaurantId: event.preferenceKey, restaurantName: event.eventName, cuisineLabel: event.categoryLabel, personalRating: 4, dateNightEvent: event });
+      }
+    },
     refreshClock() { window.dispatchEvent(new Event("focus")); },
     events() { return records().map(item => item.dateNightEvent); },
     preserveCurrent(researchId: string) { setSnapshot(selectRecord(researchId)); },

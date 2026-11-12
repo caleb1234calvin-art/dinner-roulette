@@ -1,5 +1,6 @@
 import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";
 import { ChristmasEventResult } from "@/components/christmas-event-result";
+import { ChristmasEventDialog } from "@/components/christmas-event-dialog";
 import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalIdentityPreference, seasonalFavoriteToggleIds } from "@/lib/date-night/identity-preferences";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
@@ -64,7 +65,7 @@ export function ResultOverlay(props: Parameters<typeof OrdinaryResultOverlay>[0]
   return <OrdinaryResultOverlay {...props} />;
 }
 
-function OrdinaryResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
+function OrdinaryResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner", dialogContext }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; dialogContext?: "christmas"; }) {
   const preferences = useAppStore((s) => s.preferences);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const theme = useAppStore((s) => s.theme);
@@ -118,7 +119,7 @@ function OrdinaryResultOverlay({ restaurant, reelNames, onClose, onReroll, onNot
   const resultKicker = mode === "nightlife" ? "Tonight's move" : mode === "date-night" ? "Tonight's date" : "Tonight's pick";
   const chosenLabel = mode === "nightlife" ? "We went here" : mode === "date-night" ? "We did this" : "We chose this";
 
-  return createPortal(
+  const content = (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-bg"><div className="mx-auto flex min-h-dvh max-w-lg flex-col">
       {phase === "spin" ? <div className="flex flex-1 flex-col items-center justify-center px-6 text-center"><p className="text-kicker text-subtle">Choosing</p><div className="mt-6 w-full overflow-hidden rounded-xl bg-surface px-4 py-8 shadow-border"><p key={reel} className="reel-name font-display text-3xl text-fg">{reel}</p></div></div> : <>
         <div className="relative h-56 overflow-hidden">
@@ -141,6 +142,9 @@ function OrdinaryResultOverlay({ restaurant, reelNames, onClose, onReroll, onNot
           </div>
         </div>
         <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={[mode === "nightlife" && nightlifeIcon ? nightlifeIcon : mode === "date-night" ? dateNightIcon : visual.src]} /></div></>}
-    </div></div>, document.body,
+    </div></div>
   );
+  return mode === "date-night" && dialogContext === "christmas"
+    ? <ChristmasEventDialog label={phase === "spin" ? "Choosing a Date Night idea" : restaurant.name} onClose={onClose}>{content.props.children}</ChristmasEventDialog>
+    : createPortal(content, document.body);
 }

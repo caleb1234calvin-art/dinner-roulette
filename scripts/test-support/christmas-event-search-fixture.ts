@@ -1,4 +1,4 @@
-import type { DateNightPlace, DateNightSearchResponse } from "../../src/lib/date-night/types";
+import type { DateNightPlace, DateNightSearchResponse } from "@/lib/date-night/types";
 
 /** Only the transport is replaced. This module is aliased by the standalone
  * browser harness and is never imported by the application build. */
@@ -31,10 +31,26 @@ export const ordinaryFixtureVenues: DateNightPlace[] = [
 ];
 
 export const discoveryRequests: unknown[] = [];
+type DiscoveryFixtureMode = "reviewed" | "missing-revision" | "absent" | "closed";
+let discoveryFixtureMode: DiscoveryFixtureMode = "reviewed";
+export function setDiscoveryFixtureMode(mode: DiscoveryFixtureMode) { discoveryFixtureMode = mode; }
+function responseVenues() {
+  const venues = structuredClone(ordinaryFixtureVenues);
+  const park = venues[0];
+  if (discoveryFixtureMode === "absent") return venues.slice(1);
+  if (discoveryFixtureMode === "missing-revision") for (const evidence of park.discoveryEvidence ?? []) {
+    if (evidence.sourceIdentity) { delete evidence.sourceIdentity.version; delete evidence.sourceIdentity.changeset; }
+  }
+  if (discoveryFixtureMode === "closed") {
+    park.lifecycle = "permanently-closed";
+    for (const evidence of park.discoveryEvidence ?? []) evidence.lifecycle = "permanently-closed";
+  }
+  return venues;
+}
 export function clearDiscoveryRequests() { discoveryRequests.length = 0; }
 export async function searchDateNight({ data }: { data: unknown }): Promise<DateNightSearchResponse> {
   discoveryRequests.push(structuredClone(data));
-  return { venues: ordinaryFixtureVenues, source: "live" };
+  return { venues: responseVenues(), source: "live" };
 }
 export async function lookupLocation() { throw new Error("Location lookup is outside this isolated fixture"); }
 export async function lookupReverseLocation() { throw new Error("Reverse lookup is outside this isolated fixture"); }

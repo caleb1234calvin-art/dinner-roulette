@@ -23,7 +23,7 @@ export function HistoryPage() {
   }, {});
 
   return (
-    <main className="px-4 pt-6 pb-8">
+    <main className={visits.some(hasSavedChristmasEvent) ? "christmas-event-surface px-4 pt-6 pb-8" : "px-4 pt-6 pb-8"}>
       <p className="text-xs tracking-[0.22em] text-subtle uppercase">Places we chose</p>
       <h1 className="font-display mt-1 text-4xl text-fg">History</h1>
       <p className="mt-2 text-sm text-muted">Recent choices get a quieter chance next time.</p>

@@ -194,6 +194,14 @@ jobs:
           CHRISTMAS_EVENT_BROWSER_OUTPUT: audit/browser-results/christmas-events
         run: node scripts/christmas-event-browser.mjs
 
+      - name: Verify event continuity, modal keyboard behavior and contrast
+        if: matrix.suite == 'date-night-radial'
+        env:
+          CI: "true"
+          VITE_AUTH_ENABLED: "true"
+          CHRISTMAS_FINAL_BROWSER_OUTPUT: audit/browser-results/christmas-final
+        run: node scripts/christmas-final-browser.mjs
+
       - name: Exercise integrated two-record seasonal experience in local Chromium
         if: matrix.suite == 'seasonal-two'
         env:

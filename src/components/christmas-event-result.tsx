@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
+import { ChristmasEventDialog } from "@/components/christmas-event-dialog";
 import { Ban, Heart, RotateCcw, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UnifiedFooter } from "@/components/unified-footer";
@@ -31,8 +31,8 @@ export function ChristmasEventResult({ restaurant, onClose, onReroll, onNotTonig
   const event = verified ? refreshChristmasEventSnapshot(verified, now) : null;
   if (!mounted) return null;
   const favorite = event ? Boolean(preferences[event.preferenceKey]?.favorite) : false;
-  return createPortal(
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-bg" role="dialog" aria-modal="true" aria-labelledby="christmas-result-heading" data-christmas-surface="result">
+  return (
+    <ChristmasEventDialog labelledBy="christmas-result-heading" onClose={onClose} surface="result">
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 py-6">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
@@ -76,6 +76,6 @@ export function ChristmasEventResult({ restaurant, onClose, onReroll, onNotTonig
         </> : <p className="mt-5 text-sm text-muted">The saved event information could not be verified. Travel and attendance actions are unavailable.</p>}
         <div className="mt-auto pt-6 pb-[max(1rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={[]} /></div>
       </div>
-    </div>, document.body,
+    </ChristmasEventDialog>
   );
 }

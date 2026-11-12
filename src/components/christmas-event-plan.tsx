@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
+import { ChristmasEventDialog } from "@/components/christmas-event-dialog";
 import { MapPinned, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { UnifiedFooter } from "@/components/unified-footer";
@@ -32,8 +32,8 @@ export function ChristmasEventPlan({ plan, onClose, onReplan }: {
   });
   const hasEvents = stops.some(stop => stop.isEvent);
   const current = stops.every(stop => !stop.isEvent || stop.event?.attendanceEligible);
-  return createPortal(
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-bg" role="dialog" aria-modal="true" aria-labelledby="christmas-plan-heading" data-christmas-surface="plan">
+  return (
+    <ChristmasEventDialog labelledBy="christmas-plan-heading" onClose={onClose} surface="plan">
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 py-6">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0 flex-1">
@@ -57,6 +57,6 @@ export function ChristmasEventPlan({ plan, onClose, onReplan }: {
         <Button className="mt-6 min-h-11 w-full" variant="secondary" onClick={onReplan}><RotateCcw className="size-4" />Plan a different night</Button>
         <div className="mt-auto pt-6 pb-[max(1rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={[]} /></div>
       </div>
-    </div>, document.body,
+    </ChristmasEventDialog>
   );
 }

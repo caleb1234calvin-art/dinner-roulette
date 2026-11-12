@@ -1,9 +1,11 @@
 import { getCuratedSeasonalPlace } from "./curated-policy";
 import { mergeDateNight } from "./identity";
+import { attachDateNightIdentityObservations, mergeDateNightIdentityObservations } from "./source-observations";
 import { buildDateNightQueryPlan, normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_VERSION, dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import type {
   ConcreteDateNightType,
+  DateNightEvidence,
   DateNightGroupCoverage,
   DateNightPlace,
   DateNightSearchResponse,
@@ -31,6 +33,7 @@ export interface DateNightCacheSnapshot {
   response: DateNightSearchResponse | null;
   missingActivityTypes: ConcreteDateNightType[];
   negativeEvidence?: DateNightPlace[];
+  identityObservations?: DateNightEvidence[];
   acquiredAt?: number;
 }
 
@@ -51,6 +54,7 @@ export function normalizeDateNightClientActivityTypes(raw: unknown, halloweenAct
 interface CacheEntry {
   acquisition: DateNightAcquisition;
   venues: DateNightPlace[];
+  identityObservations: DateNightEvidence[];
   groups: DateNightGroupCoverage[];
   acquiredAt: number;
   readonly admitted: number;
@@ -76,15 +80,20 @@ function liveSource(venues: DateNightPlace[]): DateNightSearchResponse["source"]
 /** Combine a fresh response with the snapshot that was fresh when acquisition
  * started. Never store this assembled response: that would extend older TTLs. */
 export function combineDateNightDiscovery(snapshot: DateNightCacheSnapshot, fresh: DateNightSearchResponse): DateNightSearchResponse {
-  if (!snapshot.response) return snapshot.negativeEvidence?.length
-    ? { ...fresh, venues: canonicalMerge([...fresh.venues, ...snapshot.negativeEvidence]) }
+  const identityObservations = mergeDateNightIdentityObservations(snapshot.identityObservations, snapshot.response?.identityObservations, fresh.identityObservations);
+  const observed = (venues: DateNightPlace[]) => attachDateNightIdentityObservations(canonicalMerge(venues), identityObservations);
+  if (!snapshot.response) return identityObservations.length || snapshot.negativeEvidence?.length
+    ? { ...fresh, venues: observed([...fresh.venues, ...(snapshot.negativeEvidence ?? [])]),
+      ...(identityObservations.length ? { identityObservations } : {}) }
     : fresh;
-  const venues = canonicalMerge([...snapshot.response.venues, ...fresh.venues, ...(snapshot.negativeEvidence ?? [])]);
+  const venues = observed([...snapshot.response.venues, ...fresh.venues, ...(snapshot.negativeEvidence ?? [])]);
   // Legacy responses can still be displayed, but cannot assert category coverage.
-  if (!fresh.discovery) return { venues, source: liveSource(venues), warning: fresh.warning };
+  if (!fresh.discovery) return { venues, source: liveSource(venues), warning: fresh.warning,
+    ...(identityObservations.length ? { identityObservations } : {}) };
   const groups = [...snapshot.response.discovery!.groups, ...fresh.discovery.groups];
   const partial = groups.some((group) => group.outcome === "failed" || group.outcome === "cancelled");
   return { venues, source: liveSource(venues), warning: partial ? PARTIAL_WARNING : undefined,
+    ...(identityObservations.length ? { identityObservations } : {}),
     discovery: { groups, partial } };
 }
 
@@ -140,6 +149,8 @@ export function createDateNightDiscoveryCache({
   const compatible = (entry: CacheEntry, query: DateNightAcquisition) =>
     sameSignature(entry, query) && entry.acquisition.patchId === query.patchId &&
       (Boolean(query.patchId) || entry.acquisition.radiusMiles >= query.radiusMiles);
+  const evidenceCount = (entry: CacheEntry) => mergeDateNightIdentityObservations(entry.identityObservations,
+    ...entry.venues.map(place => place.discoveryEvidence)).length;
   return {
     read(query: DateNightAcquisition): DateNightCacheSnapshot {
       prune(now());
@@ -148,6 +159,8 @@ export function createDateNightDiscoveryCache({
       // a different category. It does not establish coverage for that category.
       const negativeEvidence = entries.filter((entry) => sameSignature(entry, query))
         .flatMap((entry) => entry.venues.filter((place) => Boolean(place.lifecycle)));
+      const identityObservations = mergeDateNightIdentityObservations(...entries.filter(entry => sameSignature(entry, query))
+        .map(entry => entry.identityObservations));
       const selected = new Map<ConcreteDateNightType, { entry: CacheEntry; group: DateNightGroupCoverage }>();
       // Equal-resolution clock readings still follow acquisition order. LRU
       // reads may change eviction priority, never a snapshot's freshness.
@@ -160,7 +173,8 @@ export function createDateNightDiscoveryCache({
         }
       }
       const missingActivityTypes = requested.filter((type) => !selected.has(type));
-      if (!selected.size) return { response: null, missingActivityTypes, negativeEvidence };
+      if (!selected.size) return { response: null, missingActivityTypes, negativeEvidence,
+        ...(identityObservations.length ? { identityObservations } : {}) };
       const usedEntries = [...new Set([...selected.values()].map(({ entry }) => entry))];
       for (const entry of usedEntries) entry.used = ++sequence;
       const groups: DateNightGroupCoverage[] = [];
@@ -172,7 +186,7 @@ export function createDateNightDiscoveryCache({
         if (existing) existing.activityTypes.push(type);
         else groups.push({ id: hit.group.id, activityTypes: [type], outcome: "cache-hit", originOutcome });
       }
-      const venues = canonicalMerge([...usedEntries.flatMap((entry) => {
+      const venues = attachDateNightIdentityObservations(canonicalMerge([...usedEntries.flatMap((entry) => {
         const covered = requested.filter((type) => selected.get(type)?.entry === entry);
         // Reusing an old superset for Movies must not resurrect an old Corn Maze
         // snapshot after a newer Corn Maze query returned valid-empty. Retain
@@ -182,17 +196,18 @@ export function createDateNightDiscoveryCache({
           // Their ordinary filters, radius, expiry and Open Now policy are applied
           // downstream; only a current registry identity can claim this exception.
           (!query.halloweenActive && getCuratedSeasonalPlace(place.id)?.seasonalListing?.visibility === "listing-lifecycle"));
-      }), ...negativeEvidence]);
-      return { missingActivityTypes, negativeEvidence,
+      }), ...negativeEvidence]), identityObservations);
+      return { missingActivityTypes, negativeEvidence, ...(identityObservations.length ? { identityObservations } : {}),
         acquiredAt: Math.min(...usedEntries.map(entry => entry.acquiredAt)),
-        response: { venues, source: liveSource(venues), discovery: { groups, partial: false } } };
+        response: { venues, source: liveSource(venues), ...(identityObservations.length ? { identityObservations } : {}), discovery: { groups, partial: false } } };
     },
     store(query: DateNightAcquisition, response: DateNightSearchResponse): boolean {
       const at = now();
       prune(at);
       // Missing metadata, complete fallback and prior cache assemblies cannot
       // become proof that a provider acquired a category.
-      if (response.source === "fallback" || !response.discovery || response.venues.length > maxVenues) return false;
+      if (response.source === "fallback" || !response.discovery || response.venues.length > maxVenues ||
+          (response.identityObservations?.length ?? 0) > maxVenues) return false;
       const patch = query.patchId ? resolveDateNightPatch(query, query.radiusMiles, query.patchId) : undefined;
       if (patch && (response.patch?.id !== patch.id || response.patch.version !== DATE_NIGHT_RADIAL_VERSION)) return false;
       const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);
@@ -216,8 +231,17 @@ export function createDateNightDiscoveryCache({
       const admitted = ++sequence;
       entries.push({ acquisition: { ...query, activityTypes: [...query.activityTypes] },
         venues: patch ? response.venues.filter(place => place.lifecycle || dateNightPatchOwns(query, patch, place)) : response.venues,
+        identityObservations: mergeDateNightIdentityObservations(response.identityObservations),
         groups, acquiredAt: at, admitted, used: admitted });
-      while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues) {
+      // Compose source facts back onto the exact existing records, not only the
+      // transient read result. Standalone evidence may expire or be evicted,
+      // but cannot make a retained venue forget a contradiction it has received.
+      // A genuinely new acquisition replaces its category authority normally.
+      const scoped = entries.filter(entry => sameSignature(entry, query));
+      const observations = mergeDateNightIdentityObservations(...scoped.map(entry => entry.identityObservations));
+      for (const entry of scoped) entry.venues = attachDateNightIdentityObservations(entry.venues, observations);
+      while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues ||
+          entries.reduce((sum, entry) => sum + evidenceCount(entry), 0) > maxVenues) {
         const oldest = entries.reduce((a, b) => a.used < b.used ? a : b);
         retireEvictedNegative(oldest);
         entries.splice(entries.indexOf(oldest), 1);

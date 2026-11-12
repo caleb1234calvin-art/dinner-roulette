@@ -1,5 +1,6 @@
 import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs";
 import { curatedRadiusSourceBefore } from "./test-support/curated-radius-source-before.mjs";
+import { christmasProviderSourceBefore } from "./test-support/christmas-provider-source-before.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
@@ -240,6 +241,16 @@ function ordinaryUiBeforeChristmas(path, bytes) {
   } else if (path === "src/components/result-overlay.tsx") {
     replaceExact('import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";\n');
     replaceExact('import { ChristmasEventResult } from "@/components/christmas-event-result";\n');
+    replaceExact('import { ChristmasEventDialog } from "@/components/christmas-event-dialog";\n');
+    replaceExact(', mode = "dinner", dialogContext }:', ', mode = "dinner" }:');
+    replaceExact(' mode?: ResultMode; dialogContext?: "christmas";', ' mode?: ResultMode;');
+    replaceExact("  const content = (", "  return createPortal(");
+    replaceExact(`    </div></div>
+  );
+  return mode === "date-night" && dialogContext === "christmas"
+    ? <ChristmasEventDialog label={phase === "spin" ? "Choosing a Date Night idea" : restaurant.name} onClose={onClose}>{content.props.children}</ChristmasEventDialog>
+    : createPortal(content, document.body);`, `    </div></div>, document.body,
+  );`);
     removeFunction("ResultOverlay", `export function ResultOverlay(props: Parameters<typeof OrdinaryResultOverlay>[0]) {
   if (props.mode === "date-night" && hasSavedChristmasEvent(props.restaurant)) {
     return <ChristmasEventResult restaurant={props.restaurant} onClose={props.onClose} onReroll={props.onReroll} onNotTonight={props.onNotTonight} />;
@@ -258,10 +269,27 @@ function ordinaryUiBeforeChristmas(path, bytes) {
   } else if (path === "src/components/options-overlay.tsx") {
     for (const line of [
       'import { ChristmasEventActions, ChristmasEventDetails } from "@/components/christmas-event-details";\n',
+      'import { ChristmasEventDialog } from "@/components/christmas-event-dialog";\n',
       'import { refreshChristmasEventSnapshot } from "@/lib/date-night/christmas-pilot-model";\n',
       'import { hasSavedChristmasEvent, sanitizeChristmasEventSnapshot } from "@/lib/date-night/christmas-saved";\n',
       'import { useDateNightClock } from "@/lib/date-night/use-clock";\n',
     ]) replaceExact(line);
+    replaceExact(', mode = "dinner", dialogContext }:', ', mode = "dinner" }:');
+    replaceExact('  dialogContext?: "christmas";\n');
+    replaceExact(`  const requestedDialog = mode === "date-night" && dialogContext === "christmas";
+  const [eventDialog, setEventDialog] = useState(hasEvents || requestedDialog);
+  const useEventDialog = hasEvents || requestedDialog || eventDialog;
+`);
+    replaceExact('  useEffect(() => { if (hasEvents || requestedDialog) setEventDialog(true); }, [hasEvents, requestedDialog]);\n');
+    replaceExact("  const content = (", "  return createPortal(");
+    replaceExact(`    </div>
+  );
+  return useEventDialog
+    ? <ChristmasEventDialog labelledBy="christmas-options-heading" onClose={onClose}>{content.props.children}</ChristmasEventDialog>
+    : createPortal(content, document.body);`, `    </div>,
+    document.body,
+  );`);
+    replaceExact(' id={useEventDialog ? "christmas-options-heading" : undefined}');
     replaceExact(`  const hasEvents = mode === "date-night" && restaurants.some(hasSavedChristmasEvent);
   const seenEvents = new Set<string>();
   const shownRestaurants = restaurants.filter(restaurant => {
@@ -290,7 +318,31 @@ test("all 52 previous V1 records, presentation copy, radial implementation and o
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
   for (const [path, hash] of Object.entries(baseline.files)) {
-    let source = ordinaryUiBeforeChristmas(path, curatedRadiusSourceBefore(path, occurrenceSourceBefore(path)));
+    let source = ordinaryUiBeforeChristmas(path, curatedRadiusSourceBefore(path, christmasProviderSourceBefore(path, occurrenceSourceBefore(path))));
+    // Acceptance-only dependency: reverse its exact single line while retaining
+    // the original package receipt and every other dependency byte.
+    if (path === "package.json") {
+      const addition = '    "axe-core": "4.14.0",\n';
+      assert.equal(source.toString().split(addition).length, 2, "Exact axe-core test dependency addition");
+      source = Buffer.from(source.toString().replace(addition, ""));
+    }
+    if (path === "package-lock.json") {
+      const additions = ['        "axe-core": "4.14.0",\n', `    "node_modules/axe-core": {
+      "version": "4.14.0",
+      "resolved": "https://registry.npmjs.org/axe-core/-/axe-core-4.14.0.tgz",
+      "integrity": "sha512-9WTZxEjsZ7b13TH8JPmbV2z8CHbl80/2hm3XPEG4JgNdQLK81IBRXmSxHfMAOkSqQeRxT/0dwNDz2GOm3zzpcQ==",
+      "dev": true,
+      "license": "MPL-2.0",
+      "engines": {
+        "node": ">=4"
+      }
+    },
+`];
+      for (const addition of additions) {
+        assert.equal(source.toString().split(addition).length, 2, "Exact axe-core lockfile addition");
+        source = Buffer.from(source.toString().replace(addition, ""));
+      }
+    }
     // Authorized unified footer addition: reverse only the exact added lines,
     // then retain every historical byte/hash assertion (including Directions).
     if (["src/components/result-overlay.tsx", "src/components/options-overlay.tsx", "src/components/date-night-plan-overlay.tsx"].includes(path)) {

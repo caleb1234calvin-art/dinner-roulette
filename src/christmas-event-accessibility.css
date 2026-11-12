@@ -1,0 +1,81 @@
+/* Event-only contrast tokens. Keep the existing backgrounds and each theme's
+   warm/teal/Date Night accent family; ordinary-only pages are unchanged.
+   The weakest text/background pair below exceeds 5:1, leaving room above AA. */
+.christmas-event-surface,
+[data-christmas-surface],
+[data-christmas-event-details] {
+  --app-muted: #b8a994;
+  --app-subtle: #b8a994;
+  --app-accent: #dc8a59;
+  --app-accent-fg: #21150c;
+  --app-danger: #f0949d;
+  --app-heart: #f0949d;
+  --app-open: #a6c8ae;
+  --event-focus: #dc8a59;
+  color: var(--app-fg);
+}
+
+html[data-theme="light"] :is(.christmas-event-surface, [data-christmas-surface], [data-christmas-event-details]) {
+  --app-muted: #4d6a72;
+  --app-subtle: #4d6a72;
+  --app-accent: #086873;
+  --app-accent-fg: #f4fffe;
+  --app-danger: #9c2635;
+  --app-heart: #9c2635;
+  --app-open: #28634c;
+  --event-focus: #086873;
+}
+
+/* Favorites/History can be visited while Nightlife forces its dark scheme,
+   even when the saved theme preference is light. Honor that actual surface. */
+html.nightlife-active :is(.christmas-event-surface, [data-christmas-surface], [data-christmas-event-details]),
+.nightlife-theme :is(.christmas-event-surface, [data-christmas-surface], [data-christmas-event-details]) {
+  --app-muted: #b8a994;
+  --app-subtle: #b8a994;
+  --app-accent: #6cc9ce;
+  --app-accent-fg: #10292c;
+  --app-danger: #f0949d;
+  --app-heart: #6cc9ce;
+  --app-open: #a6c8ae;
+  --event-focus: #6cc9ce;
+}
+
+html.date-night-active:not([data-theme="light"]) :is(.christmas-event-surface, [data-christmas-surface], [data-christmas-event-details]) {
+  --app-muted: #c6bdcc;
+  --app-subtle: #bdb1c7;
+  --app-accent: #c9a7ff;
+  --app-accent-fg: #241b31;
+  --app-danger: #f0949d;
+  --app-heart: #c9a7ff;
+  --app-open: #a6c8ae;
+  --event-focus: #c9a7ff;
+}
+
+html.date-night-active[data-theme="light"] :is(.christmas-event-surface, [data-christmas-surface], [data-christmas-event-details]) {
+  --app-muted: #6f6174;
+  --app-subtle: #6f6174;
+  --app-accent: #9a326b;
+  --app-accent-fg: #fff8fc;
+  --app-danger: #a22e4f;
+  --app-heart: #9a326b;
+  --app-open: #28634c;
+  --event-focus: #9a326b;
+}
+
+/* Unavailable event actions still contain useful information. Keep the text
+   legible; disabled semantics, pointer blocking and the dashed border retain
+   the unavailable state without relying on low opacity. */
+:is(.christmas-event-surface, [data-christmas-surface]) button:disabled {
+  opacity: 1;
+  border: 1px dashed var(--app-subtle);
+}
+
+:is(.christmas-event-surface, [data-christmas-surface]) :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--event-focus);
+  outline-offset: 3px;
+}
+
+/* The approved legal footer deliberately retains its fixed near-black panel. */
+:is(.christmas-event-surface, [data-christmas-surface]) [data-unified-footer] :focus-visible {
+  outline-color: #ffffff;
+}
