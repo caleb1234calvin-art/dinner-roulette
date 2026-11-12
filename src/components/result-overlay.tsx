@@ -1,3 +1,5 @@
+import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";
+import { ChristmasEventResult } from "@/components/christmas-event-result";
 import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalIdentityPreference, seasonalFavoriteToggleIds } from "@/lib/date-night/identity-preferences";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
@@ -55,7 +57,14 @@ function buildWhyReasons(restaurant: DecoratedRestaurant, mode: ResultMode, favo
   return [...new Set(reasons)].slice(0, 4);
 }
 
-export function ResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
+export function ResultOverlay(props: Parameters<typeof OrdinaryResultOverlay>[0]) {
+  if (props.mode === "date-night" && hasSavedChristmasEvent(props.restaurant)) {
+    return <ChristmasEventResult restaurant={props.restaurant} onClose={props.onClose} onReroll={props.onReroll} onNotTonight={props.onNotTonight} />;
+  }
+  return <OrdinaryResultOverlay {...props} />;
+}
+
+function OrdinaryResultOverlay({ restaurant, reelNames, onClose, onReroll, onNotTonight, skipSpin = false, mode = "dinner" }: { restaurant: DecoratedRestaurant; reelNames: string[]; onClose: () => void; onReroll: () => void; onNotTonight: () => void; skipSpin?: boolean; mode?: ResultMode; }) {
   const preferences = useAppStore((s) => s.preferences);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const theme = useAppStore((s) => s.theme);

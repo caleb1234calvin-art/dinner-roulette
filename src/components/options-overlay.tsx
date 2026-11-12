@@ -1,3 +1,7 @@
+import { ChristmasEventActions, ChristmasEventDetails } from "@/components/christmas-event-details";
+import { refreshChristmasEventSnapshot } from "@/lib/date-night/christmas-pilot-model";
+import { hasSavedChristmasEvent, sanitizeChristmasEventSnapshot } from "@/lib/date-night/christmas-saved";
+import { useDateNightClock } from "@/lib/date-night/use-clock";
 import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { SeasonalVisitNotes } from "@/components/seasonal-visit-notes";
@@ -31,6 +35,14 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
   const theme = useAppStore((s) => s.theme);
   const spookySeasonEnabled = useAppStore((s) => s.spookySeasonEnabled);
   const halloween = mode === "date-night" && isHalloweenDateNightActive(spookySeasonEnabled);
+  const hasEvents = mode === "date-night" && restaurants.some(hasSavedChristmasEvent);
+  const seenEvents = new Set<string>();
+  const shownRestaurants = restaurants.filter(restaurant => {
+    if (mode !== "date-night" || !hasSavedChristmasEvent(restaurant)) return true;
+    if (seenEvents.has(restaurant.id)) return false;
+    seenEvents.add(restaurant.id);
+    return true;
+  });
 
   useEffect(() => { setMounted(true); }, []);
   if (!mounted) return null;
@@ -41,21 +53,21 @@ export function OptionsOverlay({ restaurants, onClose, onSelect, onShuffle, onNo
     <div className={cn("fixed inset-0 z-50 overflow-y-auto bg-bg", halloween && "date-night-halloween-options")}>
       <div className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center px-4 py-6">
         <div className="flex items-start justify-between gap-3">
-          <div className="flex-1"><p className="text-kicker text-subtle">{kicker}</p><h2 className="font-display mt-1 text-3xl leading-tight text-fg">Tonight's options</h2><p className="mt-1 text-sm text-muted">Pick one, or let us shuffle again.</p></div>
+          <div className="flex-1"><p className="text-kicker text-subtle">{kicker}</p><h2 className="font-display mt-1 text-3xl leading-tight text-fg">{hasEvents ? "Date Night options" : "Tonight's options"}</h2><p className="mt-1 text-sm text-muted">{hasEvents ? "Review each event’s schedule and admission." : "Pick one, or let us shuffle again."}</p></div>
           <button type="button" onClick={onClose} className="mt-2 flex size-11 shrink-0 items-center justify-center rounded-md bg-surface text-fg shadow-border" aria-label="Close options"><X className="size-5" /></button>
         </div>
-        <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", restaurants.length === 1 ? "grid-cols-1" : "grid-cols-2")}>
-          {restaurants.map((restaurant) => <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />)}
+        <div className={cn("mt-5 grid content-start gap-x-3 gap-y-4", shownRestaurants.length === 1 ? "grid-cols-1" : hasEvents ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2")}>
+          {shownRestaurants.map((restaurant) => <OptionCard key={restaurant.id} restaurant={restaurant} mode={mode} halloween={halloween} onSelect={() => onSelect(restaurant)} onNotTonight={() => onNotTonight(restaurant)} />)}
         </div>
         <div className="mt-4"><Button size="lg" variant="secondary" className="w-full" onClick={onShuffle}><Shuffle className="size-4" /><span className="tracking-kicker uppercase">Shuffle options</span></Button></div>
-        <div className="pb-[max(0.5rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={restaurants.map((restaurant) => mode === "date-night" ? getDateNightIcon({ activityTypes: (restaurant as DecoratedDateNightPlace).activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : mode === "nightlife" ? nightlifeArtwork((restaurant as DecoratedNightlifePlace).venueTypes ?? []) : dinnerRestaurantIcon(restaurant, theme))} /></div>
+        <div className="pb-[max(0.5rem,env(safe-area-inset-bottom))]"><UnifiedFooter artworkSources={restaurants.map((restaurant) => mode === "date-night" ? hasSavedChristmasEvent(restaurant) ? null : getDateNightIcon({ activityTypes: (restaurant as DecoratedDateNightPlace).activityTypes, cuisineLabel: restaurant.cuisineLabel, halloween }) : mode === "nightlife" ? nightlifeArtwork((restaurant as DecoratedNightlifePlace).venueTypes ?? []) : dinnerRestaurantIcon(restaurant, theme))} /></div>
       </div>
     </div>,
     document.body,
   );
 }
 
-function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
+function OrdinaryOptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { restaurant: DecoratedRestaurant; mode: ResultMode; halloween: boolean; onSelect: () => void; onNotTonight: () => void; }) {
   const openLabel = mode === "date-night" ? dateNightStatusLabel(restaurant as DecoratedDateNightPlace) : restaurant.hoursKnown ? (restaurant.isOpen ? restaurant.closesLabel ?? "Open" : "Closed") : null;
   const theme = useAppStore((s) => s.theme);
   const visualSrc = dinnerRestaurantIcon(restaurant, theme);
@@ -94,4 +106,24 @@ function OptionCard({ restaurant, mode, halloween, onSelect, onNotTonight }: { r
       {mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length) ? <div className="px-2 pb-1"><SeasonalVisitNotes place={dateNightRestaurant} /></div> : null}
     </article>
   );
+}
+
+function OptionCard(props: Parameters<typeof OrdinaryOptionCard>[0]) {
+  if (props.mode === "date-night" && hasSavedChristmasEvent(props.restaurant)) return <ChristmasOptionCard {...props} />;
+  return <OrdinaryOptionCard {...props} />;
+}
+
+function ChristmasOptionCard({ restaurant, onSelect, onNotTonight }: Parameters<typeof OrdinaryOptionCard>[0]) {
+  const now = useDateNightClock();
+  const verified = sanitizeChristmasEventSnapshot(restaurant.dateNightEvent, restaurant.id);
+  const event = verified ? refreshChristmasEventSnapshot(verified, now) : null;
+  return <article className="flex min-w-0 flex-col gap-3 overflow-hidden rounded-xl bg-surface p-3 shadow-border" data-christmas-surface="options">
+    <h3 className="font-display break-words text-lg leading-tight text-fg">{event?.eventName ?? "Event details unavailable"}</h3>
+    {event ? <>
+      <ChristmasEventDetails event={event} compact />
+      <ChristmasEventActions compact />
+      <Button className="mt-auto min-h-11 whitespace-normal" disabled={!event.attendanceEligible} onClick={onSelect}>{event.attendanceEligible ? "Choose event" : "Schedule only"}</Button>
+      <Button className="min-h-11 whitespace-normal" variant="ghost" onClick={onNotTonight} aria-label={`Not tonight: ${event.eventName}`}><Ban className="size-4 shrink-0" />Not tonight</Button>
+    </> : <p className="text-sm text-muted">Event information could not be verified. Attendance and travel actions are unavailable.</p>}
+  </article>;
 }

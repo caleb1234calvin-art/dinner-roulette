@@ -31,6 +31,18 @@ export interface DateNightFilters {
 
 export type DateNightLifecycle = "disused" | "permanently-closed";
 
+/** Affirmative provider fields retained across merge; coordinates are not identity. */
+export interface DateNightSourceIdentity {
+  objectType: string;
+  objectId: number;
+  version?: number;
+  changeset?: number;
+  name: string;
+  address: string;
+  classification: Record<string, string>;
+  observedAt?: string;
+}
+
 export interface DateNightEvidence {
   id: string;
   source: "osm" | "catalog";
@@ -38,6 +50,7 @@ export interface DateNightEvidence {
   openingHours: string | null;
   website: string | null;
   lifecycle?: DateNightLifecycle;
+  sourceIdentity?: DateNightSourceIdentity;
 }
 
 export interface DateNightPlace extends Restaurant {

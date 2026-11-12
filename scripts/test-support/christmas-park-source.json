@@ -1,0 +1,43 @@
+{
+  "provenance": {
+    "sourceUrls": [
+      "https://api.openstreetmap.org/api/0.6/way/987588580.json",
+      "https://api.openstreetmap.org/api/0.6/way/987588580/full.json",
+      "https://www.openstreetmap.org/way/987588580"
+    ],
+    "reviewUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6810772595",
+    "retrievedAt": "2026-11-12T00:47:13.903333+00:00",
+    "rawFullSha256": "f00679220da27aca9234e3fe1c8247775fd9b6ee341222c815ea6c9273e3b013",
+    "attribution": "\u00a9 OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "centerMethod": "Midpoint of the retrieved way-node bounding box; used only for provider replay and distance. Not an entrance, visitor gate, approach, parking place or public navigation clearance.",
+    "redactions": "Contributor names and user IDs omitted. Object identity, version, changeset, timestamp and relevant tags retained."
+  },
+  "bounds": {
+    "minLat": 37.1728722,
+    "maxLat": 37.1740566,
+    "minLon": -94.3140635,
+    "maxLon": -94.3119859
+  },
+  "element": {
+    "type": "way",
+    "id": 987588580,
+    "version": 2,
+    "changeset": 189037687,
+    "timestamp": "2026-09-15T01:38:46Z",
+    "tags": {
+      "addr:city": "Carthage",
+      "addr:housenumber": "305",
+      "addr:postcode": "64836",
+      "addr:state": "MO",
+      "addr:street": "West Chestnut Street",
+      "leisure": "park",
+      "name": "Central Park"
+    },
+    "center": {
+      "lat": 37.1734644,
+      "lon": -94.3130247
+    }
+  }
+}

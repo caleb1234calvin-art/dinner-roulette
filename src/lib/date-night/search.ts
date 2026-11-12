@@ -49,6 +49,8 @@ interface OverpassElement {
   lon?: number;
   center?: { lat: number; lon: number };
   tags?: Record<string, string>;
+  version?: number;
+  changeset?: number;
 }
 
 const RETIRED_DATE_NIGHT_NAMES = ["powers museum"] as const;
@@ -116,6 +118,14 @@ function elementToPlace(element: OverpassElement, halloweenSeason: boolean): Dat
       openingHours: tags.opening_hours ?? null,
       website: tags.website ?? tags["contact:website"] ?? null,
       lifecycle,
+      sourceIdentity: {
+        objectType: element.type, objectId: element.id,
+        ...(Number.isInteger(element.version) ? { version: element.version } : {}),
+        ...(Number.isInteger(element.changeset) ? { changeset: element.changeset } : {}),
+        name, address,
+        classification: Object.fromEntries(["leisure", "amenity", "tourism", "sport"]
+          .filter(key => typeof rawTags[key] === "string").map(key => [key, rawTags[key]])),
+      },
     }],
     moodLevel: moodFor(activityTypes),
   };

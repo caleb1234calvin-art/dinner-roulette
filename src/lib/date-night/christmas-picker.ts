@@ -7,10 +7,15 @@ import type { RestaurantPreference, TemporaryExclusion } from "../restaurants/ty
 export type ChristmasSelection = DateNightPresentationCategory | "anything";
 export interface ChristmasPickableChoice {
   /** The canonical record is never rewritten or given a permanent holiday type. */
-  readonly venue: DecoratedDateNightPlace;
+  readonly venue?: DecoratedDateNightPlace;
+  readonly selectionKey?: string;
+  readonly preferenceKey?: string;
+  readonly distanceMiles?: number;
+  readonly moodLevel?: 1 | 2 | 3;
   readonly categories: readonly DateNightPresentationCategory[];
 }
 export interface ChristmasChoice extends ChristmasPickableChoice {
+  readonly venue: DecoratedDateNightPlace;
   readonly presentation: DateNightPresentation;
 }
 
@@ -63,6 +68,15 @@ export function eligibleChristmasChoices(
   return result;
 }
 
+export function christmasChoiceKey(choice: ChristmasPickableChoice): string {
+  return choice.selectionKey ?? choice.venue?.id ?? "";
+}
+function mayRecommend(choice: ChristmasPickableChoice) {
+  const presentation = (choice as ChristmasPickableChoice & { presentation?: { attendanceEligible?: boolean } }).presentation;
+  const distance = choice.distanceMiles ?? choice.venue?.distanceMiles;
+  return !!christmasChoiceKey(choice) && presentation?.attendanceEligible !== false &&
+    typeof distance === "number" && Number.isFinite(distance) && distance >= 0;
+}
 type Random = () => number;
 function unitRandom(random: Random): number {
   const sample = random();
@@ -101,11 +115,11 @@ function chooseVenue<T extends ChristmasPickableChoice>(
   random: Random,
 ) {
   const target = 1 + Math.min(100, Math.max(0, mood)) / 100 * 2;
-  const weights = choices.map(({ venue }) =>
+  const weights = choices.map(choice =>
     Math.max(0.001,
-      1 / (1 + venue.distanceMiles * 0.04) *
-      1 / (1 + Math.abs(venue.moodLevel - target) * 0.8) *
-      (shown.includes(venue.id) ? 0.12 : 1)),
+      1 / (1 + (choice.distanceMiles ?? choice.venue?.distanceMiles ?? Infinity) * 0.04) *
+      1 / (1 + Math.abs((choice.moodLevel ?? choice.venue?.moodLevel ?? 2) - target) * 0.8) *
+      (shown.includes(christmasChoiceKey(choice)) ? 0.12 : 1)),
   );
   return weighted(choices, weights, random);
 }
@@ -118,12 +132,13 @@ export function pickChristmasChoice<T extends ChristmasPickableChoice>(
   previous: DateNightPresentationCategory | null = null,
   random: Random = Math.random,
 ): T | null {
-  const category = chooseCategory(categoryPool(choices), filters.reduceParks, previous, random);
+  const eligible = choices.filter(mayRecommend);
+  const category = chooseCategory(categoryPool(eligible), filters.reduceParks, previous, random);
   if (!category) return null;
-  return chooseVenue(choices.filter(item => item.categories.includes(category)), filters.mood, shown, random);
+  return chooseVenue(eligible.filter(item => item.categories.includes(category)), filters.mood, shown, random);
 }
 
-/** Four distinct canonical IDs, preferring distinct effective categories first. */
+/** Four distinct selection identities; multiple sessions never create extra picks. */
 export function pickChristmasOptions<T extends ChristmasPickableChoice>(
   choices: readonly T[],
   filters: Pick<DateNightFilters, "mood" | "reduceParks">,
@@ -133,29 +148,30 @@ export function pickChristmasOptions<T extends ChristmasPickableChoice>(
 ): T[] {
   const result: T[] = [];
   const used = new Set<string>();
-  const remainingCategories = categoryPool(choices);
+  const eligible = choices.filter(mayRecommend);
+  const remainingCategories = categoryPool(eligible);
   const maximum = Number.isFinite(count) ? Math.max(0, Math.min(4, Math.floor(count))) : 4;
   while (remainingCategories.length && result.length < maximum) {
     const category = chooseCategory(remainingCategories, filters.reduceParks, null, random);
     if (!category) break;
     remainingCategories.splice(remainingCategories.indexOf(category), 1);
     const choice = chooseVenue(
-      choices.filter(item => !used.has(item.venue.id) && item.categories.includes(category)),
+      eligible.filter(item => !used.has(christmasChoiceKey(item)) && item.categories.includes(category)),
       filters.mood, shown, random,
     );
     if (choice) {
       result.push(choice);
-      used.add(choice.venue.id);
+      used.add(christmasChoiceKey(choice));
     }
   }
   while (result.length < maximum) {
     const choice = pickChristmasChoice(
-      choices.filter(item => !used.has(item.venue.id)),
+      eligible.filter(item => !used.has(christmasChoiceKey(item))),
       filters, shown, null, random,
     );
     if (!choice) break;
     result.push(choice);
-    used.add(choice.venue.id);
+    used.add(christmasChoiceKey(choice));
   }
   return result;
 }

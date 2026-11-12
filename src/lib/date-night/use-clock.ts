@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-/** Refresh at minute boundaries and immediately after a suspended tab resumes. */
+/** Refresh at minute boundaries and immediately after a suspended tab resumes.
+ * A start-only announcement expires just after its inclusive start instant, so
+ * an exactly-on-the-minute tick also schedules the following millisecond. */
 export function useDateNightClock() {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
@@ -8,7 +10,8 @@ export function useDateNightClock() {
     const refresh = () => {
       clearTimeout(timer);
       setNow(new Date());
-      timer = setTimeout(refresh, 60_000 - (Date.now() % 60_000));
+      const elapsed = Date.now() % 60_000;
+      timer = setTimeout(refresh, elapsed === 0 ? 1 : 60_000 - elapsed);
     };
     refresh();
     window.addEventListener("focus", refresh);
