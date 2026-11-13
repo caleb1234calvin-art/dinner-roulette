@@ -1678,5 +1678,126 @@
       "nativePythonPass": 17,
       "safeMigrationFreeBuild": "pass"
     }
+  },
+  "secondHeadHostedGeometryFailure": {
+    "receipt": {
+      "sourceSha": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+      "sourceTree": "d7f54508fb0d3211949de15baf0957ba8b4e8990",
+      "jobId": 131645655093,
+      "runId": 43352190036,
+      "conclusion": "failure",
+      "comparisons": 774,
+      "errorCount": 276,
+      "distinctMessages": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'relative flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border'\n- 'flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border'\n\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-card-layout-browser.mjs:364:14"
+      ],
+      "errorsByWidth": {
+        "320": 92,
+        "390": 92,
+        "512": 92
+      },
+      "errorsByKind": {
+        "options": 276
+      },
+      "verdict": "/workspace/christmas-two-ci-artifacts/final/geometry-json/seasonal-card-layout/verdict.json",
+      "archive": "/workspace/christmas-two-ci-artifacts/final/geometry-14005422146.zip",
+      "artifactId": 14005422146,
+      "artifactDigest": "sha256:76b6e643c877542a43c9db21db1b3b1368ce15cc7dd2c1ce9c6b80c1e9aba534",
+      "digestVerified": true,
+      "zipCrcVerified": true,
+      "recordedAt": "2026-11-13T02:50:14.661680+00:00"
+    },
+    "receiptSha256": "7cde8a56f5be9886189e253b86d1b410f5579642822741dc20f600b7eab8cbcb",
+    "independentMeasurementReview": "All276 Options numerical comparisons replayed: zero ordinary width/height deltas; media, overflow and seasonal growth limits pass. Only exact shell class differs.",
+    "correction": "Restore exact original article class; use relative inner wrapper for one named selection and sibling exclusion, independent disclosure. No geometry assertions or limits changed.",
+    "sourceProjection": "Only Options explicit reversal updated; all five files recover immutable d933 bytes. Historical44/layout4 pass; original hashes unchanged.",
+    "validation": "Corrected full Options probe276/276 with2208measurements/0failures; all historical class/numeric limits unchanged. Final clean-head local suites and hosted full CI pending new commit.",
+    "afterCorrection": {
+      "receipt": {
+        "kind": "Preserve historical Options shell while retaining one accessible selection action",
+        "recordedAt": "2026-11-13T03:01:45.653140+00:00",
+        "runtimeParent": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+        "before": {
+          "hostedJob": "131645655093",
+          "artifact": "14005422146",
+          "verdictPath": "/workspace/christmas-two-ci-artifacts/final/geometry-json/seasonal-card-layout/verdict.json",
+          "verdictSha256": "137d4023c79739d4d5d92b0a0ee71fe5de02e5dfc0d5ed1e27a22c63ff3e3e0a",
+          "comparisonCount": 774,
+          "failingOptionsComparisons": 276,
+          "cause": "Only the additional article class token relative violates the exact historical shell class assertion; all captured ordinary dimensions and later seasonal numeric bounds already pass.",
+          "ordinaryHeightDeltaPx": 0,
+          "maximumSeasonalExcessPx": 0.0
+        },
+        "correction": "Restore the exact historical article class. A relative flex wrapper contains the existing unified named selection and separate sibling Ban; disclosure remains outside. No inline positioning bypass, palette, artwork or geometry assertion change.",
+        "afterTargetedProbe": {
+          "passed": true,
+          "scenarioCount": 276,
+          "measurementCount": 2208,
+          "errors": 0,
+          "prior": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+          "baseline": "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81",
+          "browser": "156.0.8078.79",
+          "maximumSeasonalExcessPx": {
+            "matchedOrdinary": 0,
+            "currentShortStandard": 0,
+            "historicalShortStandard": 0
+          },
+          "exactPriorCurrentRectDeltaPx": 0,
+          "exactHistoricalOrdinarySizeDeltaPx": 0,
+          "currentSeasonalHeights": [
+            272
+          ],
+          "buildSourceSha256": "51f68092a6d41c9538b4bb49b556edefebe5bab92e3c9e457aa4e177a22ebf0b",
+          "buildOutputSha256": "340fc739815e3873c01846ec0e6327b3059e45a7d6faed3c3152c4445368897d",
+          "cssSha256": "60a2e524d1a84a79dedcce32244434ddaacf5c3ceba2b753bea4fd91b68129c9",
+          "sourceHashes": {
+            "currentOptions": "981fc0cb92d4059f43696350b5920269c752bc7932db504519117e5897f8f7b7",
+            "priorOptions": "2cf44a34189a128b318920e13eab3d6f82e01d4481792cf8261c751121adf028",
+            "historicalOptions": "58e0b82e4f8d70b1c4134ac26d1cc33352fddda8e8ff393138d931c1c61c4df3",
+            "harness": "7dbd97fe09a39db0d30771b203cbd437ccc201283682784ccec00572fec96efc"
+          },
+          "frozenIdsSha256": "2266d83c16938d9efcbe41121676ce37778d376cdcea0c273a86ba77214713fa",
+          "codePath": "/tmp/options-full-geometry-probe.mjs",
+          "codeSha256": "77ce81dc20d4f0a2bb4f712261dc79f62b64974e7b11b038feaa29f50ea22471",
+          "evidencePath": "/tmp/options-full-geometry-evidence.json",
+          "evidenceSha256": "bf52cd901a2a8c2bc3a0230e0a4f0ef78e057ee0f909d77af5eb232e23944392"
+        },
+        "unitControls": {
+          "log": "/tmp/christmas-two-options-wrapper-unit.log",
+          "logSha256": "d53df84871fc1a62dab17d5cfe317c5932e2679b884bffa7f93aaa425c779e19",
+          "passed": 4,
+          "failed": 0
+        },
+        "preservedOfficialGeometryGate": {
+          "path": "scripts/seasonal-card-layout-browser.mjs",
+          "byteIdenticalTo408": true,
+          "sha256": "7dbd97fe09a39db0d30771b203cbd437ccc201283682784ccec00572fec96efc",
+          "ordinaryHeightEqualityUnchanged": true,
+          "seasonalOptionsLimitPx": 0.5
+        },
+        "candidateState": {
+          "head": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+          "dirtyWorkingTree": true,
+          "optionsSourceSha256": "981fc0cb92d4059f43696350b5920269c752bc7932db504519117e5897f8f7b7"
+        },
+        "limits": [
+          "Expanded probe is actual-source precommit evidence, not the full official774-scenario screenshot suite or new-head hosted CI. The unchanged complete gate must run on the new exact commit.",
+          "Local Chromium156 uses the same final production stylesheet for historical,408 and current comparisons; hosted browser version may differ.",
+          "No public attraction status, calendar behavior, preferences, release configuration or V4 artwork changed."
+        ]
+      },
+      "receiptSha256": "7535db14e0a0257a7bf5998a8e5c9e6fd69199f38cd47bdfedde219d2af2a2dc",
+      "scope": "Working-tree complete Options matrix before final commit; unchanged official774-comparison geometry suite still required at the final head.",
+      "fullLocalChecks": {
+        "repositoryPass": 1462,
+        "inheritedSkips": 4,
+        "applicationPass": 75,
+        "typecheck": "pass",
+        "lint": "0 errors / 6 inherited warnings",
+        "safeBuild": "pass, no migrations",
+        "androidSourceIcons": "pass",
+        "nativePythonPass": 17
+      }
+    }
   }
 }

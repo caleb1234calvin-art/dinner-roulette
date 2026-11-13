@@ -55,6 +55,12 @@ Both casino smoke and live-check fixtures now identify the first option's single
 
 The corrected isolated casino smoke passes all 16 desktop/mobile checks on the fresh follow-up build, including selection of the exact first option, destination links, reroll and persisted exclusion. Its result is retained in the reproduction receipt; it must also pass again at the final committed head.
 
+The next head, `4088139fe6ba3de64f23d901821bbd7eb3fc0cd5`, passed the casino correction and its exact local suites, but [geometry job 131645655093](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/43352190036/job/131645655093) rejected the added `relative` article class. The downloaded, integrity-verified receipt contains 774 comparisons and 276 Options failures, all at the exact historical shell-class assertion. Independent replay of the measured values confirms zero ordinary width/height changes and passing media, overflow and seasonal size limits, including assertions that followed the class failure. This run is a second failed candidate validation, not final acceptance.
+
+The positioning anchor moves inside the Options card, around the named selection button and its separate exclusion sibling; the article retains its exact approved class and the disclosure remains outside the selection action. The historical geometry assertions and limits remain unchanged. The PR records a fresh committed-head validation after this correction; earlier successful lanes do not validate that later head.
+
+The complete local Options probe passes all 92 records at all three widths: 276 scenarios, 2,208 measurements and zero failures. Card, media, selection, exclusion and disclosure rectangles match the preceding runtime exactly; the article class and ordinary dimensions match the frozen historical baseline. Maximum seasonal excess is zero pixels, within the unchanged 0.5-pixel limit. Source, stylesheet and build proof remain stable. The follow-up full local suite again passes 1,462 repository and 75 application tests with the same four inherited skips, plus typecheck, lint, safe build, Android source checks and 17 native Python tests. The unchanged official 774-comparison geometry suite remains part of required final exact-head CI.
+
 ## Geographic evidence and publication boundaries
 
 [Astra's geographic acceptance, comment 6813951806](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813951806), supersedes geographic-uncleared wording in older ledgers. It accepts three approximate **host-distance only** points:

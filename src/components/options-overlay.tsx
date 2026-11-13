@@ -87,31 +87,33 @@ function OrdinaryOptionCard({ restaurant, mode, halloween, onSelect, onNotTonigh
   const nightlifeIcon = mode === "nightlife" ? nightlifeArtwork(nightlifeRestaurant.venueTypes ?? []) : null;
 
   return (
-    <article className="relative flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
-      <button type="button" onClick={onSelect} className="flex w-full flex-1 flex-col text-left" style={{ outlineOffset: -3 }}>
-        <span className="sr-only">Choose </span>
-        <div className="relative w-full">
-          {mode === "date-night" && dateNightIcon ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn("size-24 rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
-          ) : mode === "date-night" ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
-          ) : mode === "nightlife" && nightlifeIcon ? (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
-          ) : mode === "nightlife" ? (
-            <div className="h-28 w-full bg-elevated outline outline-1 -outline-offset-1 outline-fg/10" aria-hidden="true" />
-          ) : (
-            <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visualSrc} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
-          )}
-        </div>
-        <div className={cn("flex w-full flex-1 flex-col text-left", seasonal ? "px-2 pt-2 pb-0" : "px-3 py-3")}>
-        <h3 title={restaurant.name} className={cn("font-display text-fg", seasonal ? "w-full truncate text-sm leading-[18px]" : "line-clamp-2 text-lg leading-tight")}>{restaurant.name}</h3>
-        {mode === "date-night" && activityTypes.length ? <div className={cn("flex gap-1", seasonal ? "mt-1 w-full min-w-0" : "mt-2 flex-wrap")}>{activityTypes.slice(0, 3).map((type) => <span key={type} title={dateNightTypeLabel([type])} className={cn("rounded-full bg-elevated text-[10px] tracking-wide text-muted uppercase", seasonal ? "min-w-0 truncate px-1 py-0.5 leading-[14px]" : "px-2 py-1")}>{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
-        <p className={cn("text-xs text-subtle", seasonal ? "mt-1 leading-[14px]" : "mt-2")}>{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
-        {mode === "date-night" && !restaurant.hoursKnown && !dateNightRestaurant.seasonalListing && !dateNightRestaurant.seasonalAvailability && !dateNightRestaurant.seasonalVisitNotes?.length ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
-        {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
-        </div>
-      </button>
-      <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
+    <article className="flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border">
+      <div className="relative flex flex-1 flex-col">
+        <button type="button" onClick={onSelect} className="flex w-full flex-1 flex-col text-left" style={{ outlineOffset: -3 }}>
+          <span className="sr-only">Choose </span>
+          <div className="relative w-full">
+            {mode === "date-night" && dateNightIcon ? (
+              <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={dateNightIcon} alt="" className={cn("size-24 rounded-2xl object-cover shadow-sm", halloween && "date-night-halloween-icon")} /></div>
+            ) : mode === "date-night" ? (
+              <div className="flex h-28 w-full items-center justify-center bg-elevated outline outline-1 -outline-offset-1 outline-fg/10"><Sparkles className="size-10 text-accent" /></div>
+            ) : mode === "nightlife" && nightlifeIcon ? (
+              <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={nightlifeIcon} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
+            ) : mode === "nightlife" ? (
+              <div className="h-28 w-full bg-elevated outline outline-1 -outline-offset-1 outline-fg/10" aria-hidden="true" />
+            ) : (
+              <div className="flex h-28 w-full items-center justify-center bg-elevated p-2 outline outline-1 -outline-offset-1 outline-fg/10"><img src={visualSrc} alt="" className="size-24 rounded-2xl object-cover shadow-sm" /></div>
+            )}
+          </div>
+          <div className={cn("flex w-full flex-1 flex-col text-left", seasonal ? "px-2 pt-2 pb-0" : "px-3 py-3")}>
+          <h3 title={restaurant.name} className={cn("font-display text-fg", seasonal ? "w-full truncate text-sm leading-[18px]" : "line-clamp-2 text-lg leading-tight")}>{restaurant.name}</h3>
+          {mode === "date-night" && activityTypes.length ? <div className={cn("flex gap-1", seasonal ? "mt-1 w-full min-w-0" : "mt-2 flex-wrap")}>{activityTypes.slice(0, 3).map((type) => <span key={type} title={dateNightTypeLabel([type])} className={cn("rounded-full bg-elevated text-[10px] tracking-wide text-muted uppercase", seasonal ? "min-w-0 truncate px-1 py-0.5 leading-[14px]" : "px-2 py-1")}>{dateNightTypeLabel([type])}</span>)}</div> : <p className="mt-1 text-xs text-muted">{restaurant.cuisineLabel}{restaurant.priceLevel ? ` · ${formatPrice(restaurant.priceLevel)}` : ""}</p>}
+          <p className={cn("text-xs text-subtle", seasonal ? "mt-1 leading-[14px]" : "mt-2")}>{seasonalDistancePrefix(restaurant)}{formatDistance(restaurant.distanceMiles)}{openLabel ? ` · ${openLabel}` : ""}</p>
+          {mode === "date-night" && !restaurant.hoursKnown && !dateNightRestaurant.seasonalListing && !dateNightRestaurant.seasonalAvailability && !dateNightRestaurant.seasonalVisitNotes?.length ? <p className="mt-1 text-xs text-subtle">Hours unknown — check before going</p> : null}
+          {restaurant.closingSoon ? <p className="mt-1 text-xs text-danger">Closing soon</p> : null}
+          </div>
+        </button>
+        <button type="button" onClick={onNotTonight} className="absolute top-2 right-2 flex size-10 items-center justify-center rounded-md bg-bg/80 text-fg" aria-label={`Not tonight: ${restaurant.name}`}><Ban className="size-4" /></button>
+      </div>
       {mode === "date-night" && (dateNightRestaurant.seasonalListing || dateNightRestaurant.seasonalAvailability || dateNightRestaurant.seasonalVisitNotes?.length) ? <div className="px-2 pb-1"><SeasonalVisitNotes place={dateNightRestaurant} /></div> : null}
     </article>
   );
