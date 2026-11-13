@@ -32,7 +32,8 @@ import { seasonalTypes, providerLifecycle } from "./provider-evidence";
 import { normalizeLifecycleTags } from "./lifecycle";
 import { isHalloweenDateNightActive } from "./season";
 import { dedupeDateNight, mergeDateNight, mergeIdentity, moodFor } from "./identity";
-import { attachDateNightIdentityObservations, DATE_NIGHT_MAX_IDENTITY_OBSERVATIONS, mergeDateNightIdentityObservations } from "./source-observations";
+import { attachDateNightIdentityObservations, attachDateNightIdentityUncertainty, dateNightIdentityScope, identityUncertaintyFor,
+  DATE_NIGHT_MAX_IDENTITY_OBSERVATIONS, mergeDateNightIdentityObservations } from "./source-observations";
 import { buildDateNightQuery, buildDateNightQueryPlan, validateDateNightActivityTypes } from "./query-plan";
 import { dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import {
@@ -237,6 +238,14 @@ export const searchDateNight = createServerFn({ method: "POST" })
     });
     const successes = outcomes.filter((result): result is PromiseFulfilledResult<DateNightPlace[]> => result.status === "fulfilled");
     const failedTypes = groups.filter((group) => group.outcome === "failed").flatMap((group) => group.activityTypes);
+    // Only exhausted groups lose authority. Failures from a losing mirror do
+    // not contaminate the complete response of its successful winning mirror.
+    const identityQuery = { ...data, halloweenActive: halloweenSeason,
+      ...(data.patch ? { patchId: data.patch.id, semanticVersion: data.patch.version } : {}) };
+    const identityUncertainty = identityUncertaintyFor(identityQuery, failedTypes);
+    const providerTypes = groups.flatMap(group => group.activityTypes).filter(type => type !== "other-halloween-fall");
+    const identityEvidenceCoverage = !failedTypes.length && providerTypes.length
+      ? { scope: dateNightIdentityScope(identityQuery), activityTypes: providerTypes } : undefined;
     const discovery = { groups, partial: successes.length > 0 && failedTypes.length > 0 };
     const patch = data.patch ? { id: data.patch.id, version: data.patch.version } : undefined;
     if (successes.length > 0) {
@@ -248,10 +257,12 @@ export const searchDateNight = createServerFn({ method: "POST" })
         chain.finish("error");
         throw new ProviderResponseError("Combined discovery exceeded its bounded identity evidence budget. Please try a smaller area.", "malformed");
       }
-      const venues = attachDateNightIdentityObservations(mergeDateNight(live, local), identityObservations);
+      const venues = attachDateNightIdentityUncertainty(
+        attachDateNightIdentityObservations(mergeDateNight(live, local), identityObservations), identityUncertainty);
       const source = local.length ? "merged" : "live";
       chain.finish(source);
       return { venues, source, discovery, ...(identityObservations.length ? { identityObservations } : {}), ...(patch ? { patch } : {}),
+        ...(identityUncertainty ? { identityUncertainty } : {}), ...(identityEvidenceCoverage ? { identityEvidenceCoverage } : {}),
         ...(discovery.partial ? { warning: `Some live activity searches are unavailable: ${failedTypes.map((type) => dateNightTypeLabel([type])).join(", ")}. Available live results and saved places are included; coverage may be incomplete.` } : {}),
       };
     }
@@ -263,6 +274,7 @@ export const searchDateNight = createServerFn({ method: "POST" })
         venues: dedupeDateNight(local),
         source: "fallback",
         discovery,
+        ...(identityUncertainty ? { identityUncertainty } : {}),
         ...(patch ? { patch } : {}),
         warning: "Using saved Date Night places while the live map is unavailable.",
       };

@@ -1,9 +1,10 @@
 import { startDiscoveryRequest } from "../discovery/client-request";
-import { DATE_NIGHT_CACHE_TTL_MS, failedDateNightAcquisition, type DateNightAcquisition } from "./cache";
+import { DATE_NIGHT_CACHE_TTL_MS, dateNightAcquisitionIdentityEvidence, failedDateNightAcquisition, type DateNightAcquisition } from "./cache";
 import { getCuratedSeasonalPlaces } from "./curated-policy";
 import { createDateNightRadialCache, clipDateNightRadius } from "./radial-cache";
 import { mergeDateNight } from "./identity";
-import { attachDateNightIdentityObservations, mergeDateNightIdentityObservations } from "./source-observations";
+import { attachDateNightIdentityObservations, attachDateNightIdentityUncertainty,
+  freshDateNightIdentityIds, mergeDateNightIdentityObservations, mergeDateNightIdentityUncertainty, refreshDateNightIdentityUncertainty } from "./source-observations";
 import { normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_MAX_PATCHES, type DateNightCoverageState, type DateNightPatchCoverageRecord } from "./radial-plan";
 import type { ConcreteDateNightType, DateNightPlace, DateNightSearchResponse } from "./types";
@@ -62,14 +63,16 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
 
   const publish = () => {
     if (!query || !onChange) return;
-    const { coverage, response, negativeEvidence, identityObservations: cachedObservations } = snapshot();
+    const { coverage, response, negativeEvidence, identityObservations: cachedObservations, identityUncertainty: cachedUncertainty } = snapshot();
     const identityObservations = mergeDateNightIdentityObservations(cachedObservations, displayOnly?.identityObservations);
+    const identityUncertainty = mergeDateNightIdentityUncertainty(cachedUncertainty, displayOnly?.identityUncertainty);
     // Presentation-only rows have no cache entry to retain composed evidence.
     // Keep actual source observations with these bounded records until a fresh
     // acquisition replaces them; expiry cannot silently restore old authority.
     if (displayOnly) displayOnly = { ...displayOnly,
-      venues: attachDateNightIdentityObservations(displayOnly.venues, identityObservations) };
-    savedPool = attachDateNightIdentityObservations(savedPool, identityObservations);
+      venues: cache.annotateIdentityEvidence(attachDateNightIdentityUncertainty(
+        attachDateNightIdentityObservations(displayOnly.venues, identityObservations), identityUncertainty)) };
+    savedPool = attachDateNightIdentityUncertainty(attachDateNightIdentityObservations(savedPool, identityObservations), identityUncertainty);
     let visible = response;
     if (displayOnly) {
       const venues = clipDateNightRadius(mergeDateNight([
@@ -99,6 +102,13 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
     const hasFailure = coverage.failedPatchIds.length > 0;
     if (visible && identityObservations.length) visible = { ...visible, identityObservations,
       venues: attachDateNightIdentityObservations(visible.venues, identityObservations) };
+    if (visible && identityUncertainty) visible = { ...visible, identityUncertainty,
+      venues: attachDateNightIdentityUncertainty(visible.venues, identityUncertainty) };
+    if (visible) {
+      // A composed or retained view cannot masquerade as a fresh acquisition.
+      const { identityEvidenceCoverage: _freshCoverage, ...retainedView } = visible;
+      visible = retainedView;
+    }
     if (visible && hasFailure && response) visible = { ...visible, warning: PARTIAL_WARNING,
       discovery: { groups: visible.discovery?.groups ?? [], partial: true } };
     const ready = Boolean(visible) || (coreSettled && !inFlight);
@@ -142,7 +152,19 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       request: signal => request(flight.query, signal),
       onSuccess: result => {
         if (inFlight !== flight) return;
+        // An opaque legacy refresh is display data, not proof that a previously
+        // incomplete identity acquisition has become complete. Keep its gaps
+        // before admission, so a display row cannot launder them into the cache.
+        const freshIds = freshDateNightIdentityIds(dateNightAcquisitionIdentityEvidence(flight.query, result));
+        if (displayOnly) {
+          const prior = new Map(displayOnly.venues.map(venue => [venue.id, venue.identityUncertainty]));
+          result = { ...result, venues: result.venues.map(venue => freshIds.has(venue.id) ? venue
+            : attachDateNightIdentityUncertainty([venue], prior.get(venue.id))[0]!) };
+        }
         cache.store(flight.query, result);
+        result = dateNightAcquisitionIdentityEvidence(flight.query, result);
+        result = { ...result, venues: cache.annotateIdentityEvidence(result.venues) };
+        savedPool = refreshDateNightIdentityUncertainty(savedPool, result);
         const after = snapshot().coverage.patches.find(p => p.id === candidate.id)!;
         const missing = flight.types.filter(t => after.missingActivityTypes.includes(t));
         degraded = missing.length > 0;
@@ -165,6 +187,7 @@ export function createDateNightRadialSession({ cache = createDateNightRadialCach
       },
       onError: failure => {
         if (inFlight !== flight) return;
+        cache.store(flight.query, failedDateNightAcquisition(flight.query));
         degraded = true;
         const failures = failed.get(candidate.id) ?? new Set<ConcreteDateNightType>();
         flight.types.forEach(t => failures.add(t));

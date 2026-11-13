@@ -11,7 +11,7 @@ export const REVIEWED_CHRISTMAS_BINDINGS: readonly ChristmasVenueBinding[] = [{
   supportingSources: ["https://www.carthagemo.gov/events?id=67898747", "https://www.cwep.com/calendar-events/sparkle-in-the-park-lighting-ceremony/", "https://www.openstreetmap.org/way/987588580"],
 }];
 
-export type ChristmasBindingState = "bound" | "missing-review" | "conflicting-review" | "absent-from-query" | "missing-source-evidence" | "stale-source" | "conflicting-source";
+export type ChristmasBindingState = "bound" | "missing-review" | "conflicting-review" | "absent-from-query" | "missing-source-evidence" | "incomplete-source-evidence" | "stale-source" | "conflicting-source";
 export interface ChristmasBindingResult { state: ChristmasBindingState; reason: string; venue?: DecoratedDateNightPlace }
 
 const normalize = (value: string) => (typeof value === "string" ? value : "").toLowerCase().replace(/\bwest\b/g, "w").replace(/\bstreet\b/g, "st")
@@ -41,6 +41,8 @@ export function resolveChristmasParkBinding(
   const matching = venues.filter(venue => venue.id === reviewed.canonicalVenueId);
   if (!matching.length) return { state: "absent-from-query", reason: "The reviewed Central Park identity is valid but absent from this discovery response." };
   for (const venue of matching) {
+    if (venue.identityUncertainty?.overflow || venue.identityUncertainty?.scopes.length)
+      return { state: "incomplete-source-evidence", reason: "Provider acquisition lost or could not complete source evidence; fresh complete acquisition of the affected scope and reviewed identity is required before the park can bind." };
     if (venue.identityObservationOverflow)
       return { state: "conflicting-source", reason: "Retained provider identity evidence exceeded its bounded capacity; a fresh acquisition and review are required before the park can bind." };
     if (normalize(venue.name) !== normalize(reviewed.expected.name) || normalize(venue.address) !== normalize(reviewed.expected.address) ||

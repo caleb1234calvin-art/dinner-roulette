@@ -31,26 +31,69 @@ export const ordinaryFixtureVenues: DateNightPlace[] = [
 ];
 
 export const discoveryRequests: unknown[] = [];
-type DiscoveryFixtureMode = "reviewed" | "missing-revision" | "absent" | "closed";
+export const discoveryCompletions: { mode: DiscoveryFixtureMode; retainedPark: boolean }[] = [];
+type ProviderReplayMode = "complete" | "oversized-first" | "oversized-last" | "exhausted";
+type DiscoveryFixtureMode = "reviewed" | "missing-revision" | "absent" | "closed" | `provider-${ProviderReplayMode}`;
 let discoveryFixtureMode: DiscoveryFixtureMode = "reviewed";
 export function setDiscoveryFixtureMode(mode: DiscoveryFixtureMode) { discoveryFixtureMode = mode; }
-function responseVenues() {
+let nextResponseGate: Promise<void> | undefined;
+let releaseResponse: (() => void) | undefined;
+/** Hold transport delivery while the same-query radial retry is pending. This
+ * lets browser assertions prove retirement happens after evidence loss arrives,
+ * rather than because an incompatible location update first emptied the pool. */
+export function holdNextDiscoveryResponse() {
+  if (releaseResponse) throw new Error("A discovery response is already held");
+  nextResponseGate = new Promise(resolve => { releaseResponse = resolve; });
+}
+export function releaseDiscoveryResponse() {
+  if (!releaseResponse) throw new Error("No discovery response is held");
+  releaseResponse(); releaseResponse = undefined;
+}
+function responseVenues(mode: DiscoveryFixtureMode) {
   const venues = structuredClone(ordinaryFixtureVenues);
   const park = venues[0];
-  if (discoveryFixtureMode === "absent") return venues.slice(1);
-  if (discoveryFixtureMode === "missing-revision") for (const evidence of park.discoveryEvidence ?? []) {
+  if (mode === "absent") return venues.slice(1);
+  if (mode === "missing-revision") for (const evidence of park.discoveryEvidence ?? []) {
     if (evidence.sourceIdentity) { delete evidence.sourceIdentity.version; delete evidence.sourceIdentity.changeset; }
   }
-  if (discoveryFixtureMode === "closed") {
+  if (mode === "closed") {
     park.lifecycle = "permanently-closed";
     for (const evidence of park.discoveryEvidence ?? []) evidence.lifecycle = "permanently-closed";
   }
   return venues;
 }
-export function clearDiscoveryRequests() { discoveryRequests.length = 0; }
+export function clearDiscoveryRequests() { discoveryRequests.length = 0; discoveryCompletions.length = 0; }
 export async function searchDateNight({ data }: { data: unknown }): Promise<DateNightSearchResponse> {
+  const mode = discoveryFixtureMode, gate = nextResponseGate;
+  nextResponseGate = undefined;
   discoveryRequests.push(structuredClone(data));
-  return { venues: responseVenues(), source: "live" };
+  if (gate) await gate;
+  let response: DateNightSearchResponse;
+  if (mode.startsWith("provider-")) {
+    const replays = (window as unknown as {
+      __christmasProviderLossReplay?: Record<ProviderReplayMode | "complete-culture", DateNightSearchResponse>;
+    }).__christmasProviderLossReplay;
+    const requested = (data as { activityTypes: string[] }).activityTypes;
+    const cultureOnly = requested.length === 2 && requested.includes("movies") && requested.includes("museum");
+    const replayKey = mode === "provider-complete" && cultureOnly ? "complete-culture" : mode.slice("provider-".length) as ProviderReplayMode;
+    const recorded = replays?.[replayKey];
+    if (!recorded) throw new Error(`Missing actual-search browser replay: ${mode}`);
+    const acquired = [...new Set(recorded.discovery?.groups.flatMap(group => group.activityTypes) ?? [])].sort();
+    if (JSON.stringify([...requested].sort()) !== JSON.stringify(acquired)) {
+      throw new Error(`Browser replay does not match requested acquisition categories: ${requested.join(",")}`);
+    }
+    const query = data as { lat: number; lon: number; radiusMiles: number; patchId: string };
+    if (query.lat !== ordinaryFixtureVenues[0].lat || query.lon !== ordinaryFixtureVenues[0].lon || query.radiusMiles !== 15 || query.patchId !== "radial-v1:core") {
+      throw new Error("Browser provider replay requires its exact recorded core acquisition");
+    }
+    // The harness executes the selected checkout's real search with controlled
+    // network packets before startup. Preserve its full patch, discovery and
+    // source-evidence envelopes, including absence of fields on the old parent.
+    // The cinema remains a separate synthetic ordinary-control fixture.
+    response = { ...structuredClone(recorded), venues: [...structuredClone(recorded.venues), structuredClone(ordinaryFixtureVenues[1])] };
+  } else response = { venues: responseVenues(mode), source: "live" };
+  discoveryCompletions.push({ mode, retainedPark: response.venues.some(venue => venue.id === ordinaryFixtureVenues[0].id) });
+  return response;
 }
 export async function lookupLocation() { throw new Error("Location lookup is outside this isolated fixture"); }
 export async function lookupReverseLocation() { throw new Error("Reverse lookup is outside this isolated fixture"); }

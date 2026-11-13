@@ -1,7 +1,8 @@
 import { hasReviewedSeasonalPlacement } from "./listing";
 import { createDateNightDiscoveryCache, type DateNightAcquisition } from "./cache";
 import { mergeDateNight } from "./identity";
-import { attachDateNightIdentityObservations, mergeDateNightIdentityObservations } from "./source-observations";
+import { attachDateNightIdentityObservations, attachDateNightIdentityUncertainty,
+  mergeDateNightIdentityObservations, mergeDateNightIdentityUncertainty } from "./source-observations";
 import { normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_VERSION, planDateNightPatches, summarizeDateNightCoverage,
   type DateNightPatchCoverageRecord } from "./radial-plan";
@@ -14,6 +15,9 @@ export function createDateNightRadialCache(options: Parameters<typeof createDate
   const versioned = (query: DateNightAcquisition) => ({ ...query,
     semanticVersion: query.semanticVersion ?? DATE_NIGHT_RADIAL_VERSION });
   return {
+    annotateIdentityEvidence(venues: readonly DateNightPlace[]) {
+      return cache.annotateIdentityEvidence(venues);
+    },
     store(query: DateNightAcquisition, response: DateNightSearchResponse) {
       if (!query.patchId) return false;
       return cache.store(versioned(query), response);
@@ -31,14 +35,15 @@ export function createDateNightRadialCache(options: Parameters<typeof createDate
       const successful = snapshots.flatMap(({ snapshot }) => snapshot.response ? [snapshot.response] : []);
       const negativeEvidence = snapshots[0]?.snapshot.negativeEvidence ?? [];
       const identityObservations = mergeDateNightIdentityObservations(...snapshots.map(({ snapshot }) => snapshot.identityObservations));
-      const allVenues = attachDateNightIdentityObservations(mergeDateNight([...successful.flatMap(r => r.venues), ...negativeEvidence]
-        .sort((a, b) => a.id.localeCompare(b.id) || JSON.stringify(a).localeCompare(JSON.stringify(b))), []), identityObservations);
+      const identityUncertainty = mergeDateNightIdentityUncertainty(...snapshots.map(({ snapshot }) => snapshot.identityUncertainty));
+      const allVenues = attachDateNightIdentityUncertainty(attachDateNightIdentityObservations(mergeDateNight([...successful.flatMap(r => r.venues), ...negativeEvidence]
+        .sort((a, b) => a.id.localeCompare(b.id) || JSON.stringify(a).localeCompare(JSON.stringify(b))), []), identityObservations), identityUncertainty);
       const venues = clipDateNightRadius(allVenues, query);
       const source = venues.some(p => p.source !== "osm" || p.discoveryEvidence?.some(e => e.source === "catalog")) ? "merged" : "live";
       const response: DateNightSearchResponse | null = successful.length ? {
-        venues, source, ...(identityObservations.length ? { identityObservations } : {}), discovery: { groups: successful.flatMap(r => r.discovery?.groups ?? []), partial: coverage.failedPatchIds.length > 0 },
+        venues, source, ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}), discovery: { groups: successful.flatMap(r => r.discovery?.groups ?? []), partial: coverage.failedPatchIds.length > 0 },
       } : null;
-      return { coverage, response, negativeEvidence, ...(identityObservations.length ? { identityObservations } : {}) };
+      return { coverage, response, negativeEvidence, ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}) };
     },
   };
 }

@@ -14,7 +14,7 @@ import { decorateDateNight } from "@/lib/date-night/eligibility";
 import { DEFAULT_DATE_NIGHT_FILTERS } from "@/lib/date-night/types";
 import type { DecoratedDateNightPlace } from "@/lib/date-night/types";
 import type { ChristmasEventPlacement } from "@/lib/date-night/christmas-pilot-model";
-import { ordinaryFixtureVenues, discoveryRequests, clearDiscoveryRequests, setDiscoveryFixtureMode } from "./christmas-event-search-fixture";
+import { ordinaryFixtureVenues, discoveryRequests, discoveryCompletions, clearDiscoveryRequests, setDiscoveryFixtureMode, holdNextDiscoveryResponse, releaseDiscoveryResponse } from "./christmas-event-search-fixture";
 import "@/styles.css";
 import "@/date-night-base-polish.css";
 import "@/halloween-date-night-overrides.css";
@@ -83,12 +83,23 @@ function init() {
     setPublic(value: boolean) { setReview(!value); setSurface("home"); setSnapshot(null); },
     state() { return JSON.parse(JSON.stringify(useAppStore.getState())); },
     discovery() { return structuredClone(discoveryRequests); },
+    discoveryCompletions() { return structuredClone(discoveryCompletions); },
     clearDiscovery() { clearDiscoveryRequests(); },
+    holdDiscovery() { holdNextDiscoveryResponse(); },
+    releaseDiscovery() { releaseDiscoveryResponse(); },
     configure(patch: Record<string, unknown>) { useAppStore.setState(patch); },
     refreshDiscovery(mode: Parameters<typeof setDiscoveryFixtureMode>[0]) {
       setDiscoveryFixtureMode(mode);
       const current = useAppStore.getState().location;
       useAppStore.setState({ location: { ...current, lat: current.lat + 0.000001 } });
+    },
+    refreshDiscoveryInPlace(mode: Parameters<typeof setDiscoveryFixtureMode>[0]) {
+      setDiscoveryFixtureMode(mode);
+      const retry = [...document.querySelectorAll<HTMLButtonElement>("button")].find(button => button.textContent === "Retry missing areas" || button.textContent === "Try again");
+      if (!retry || retry.disabled) throw new Error("Same-query provider retry is unavailable");
+      // This is a controlled background refresh, not a user interaction claim:
+      // the visible modal intentionally prevents pointer access to Home.
+      retry.click();
     },
     setTheme(theme: "light" | "dark") {
       useAppStore.getState().setTheme(theme);

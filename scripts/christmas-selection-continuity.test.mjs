@@ -16,6 +16,8 @@ const requirePackage = createRequire(import.meta.url);
 const { DEFAULT_DATE_NIGHT_FILTERS } = pure(path.join(root, "src/lib/date-night/types.ts"));
 const { CHRISTMAS_2026_PILOT } = pure(path.join(root, "src/lib/date-night/christmas-pilot-catalog.ts"));
 const { ordinaryFixtureVenues } = pure(path.join(root, "scripts/test-support/christmas-event-search-fixture.ts"));
+const reviewedPark = JSON.parse(fs.readFileSync(new URL("./test-support/christmas-park-source.json", import.meta.url), "utf8")).element;
+const parkId = "date-night-osm-way-987588580";
 const location = { lat: 37.1734644, lon: -94.3130247, label: "Synthetic continuity control", source: "manual" };
 const placements = CHRISTMAS_2026_PILOT.filter(event => event.kind === "temporary-event").map(event => ({
   eventKey: event.eventKey, hostReference: event.hostReference,
@@ -126,7 +128,80 @@ function home(iso, categories = ["anything"], attractions = CHRISTMAS_2026_PILOT
 }
 
 const labels = { result: "Pick our date", options: "Give us options", plan: "Plan our outing" };
+
+// Feed real search output into Home's discovery callback. This reproduces the
+// group-loss defect without manufacturing the uncertainty field in the test.
+// The extra cinema is a controlled ordinary choice, not another provider fact.
+async function providerRefresh(t, mode) {
+  const school = { ...structuredClone(reviewedPark), version: 3, changeset: 189037688,
+    tags: { ...reviewedPark.tags, amenity: "school" } };
+  delete school.tags.leisure;
+  const fillers = Array.from({ length: 19_998 }, (_, index) => ({
+    type: "node", id: 10_000_000 + index, tags: { amenity: "school" },
+  }));
+  const oversized = [...fillers, fillers[0], fillers[0]];
+  if (mode === "oversized-first") oversized.unshift(school);
+  else oversized.push(school);
+  assert.equal(oversized.length, 20_001);
+  const calls = { culture: 0, outdoor: 0 };
+  t.mock.method(console, "warn", () => {});
+  t.mock.method(globalThis, "fetch", async (_url, init) => {
+    const query = new URLSearchParams(init.body).get("data");
+    const selected = query.split(")->.lifecycle_context;\n").at(-1);
+    const culture = selected.includes('nwr["amenity"="cinema"](around:');
+    calls[culture ? "culture" : "outdoor"] += 1;
+    if (culture && mode === "exhausted") throw new Error("Controlled exhausted culture mirrors");
+    return { ok: true, json: async () => ({ elements: culture ? mode === "complete" ? [] : oversized : [reviewedPark] }) };
+  });
+  const { searchDateNight } = pure(path.join(root, "src/lib/date-night/search.ts"));
+  const response = await searchDateNight({ data: {
+    lat: location.lat, lon: location.lon, radiusMiles: 15, activityTypes: ["movies", "park"], spookySeasonEnabled: false, patchId: "radial-v1:core",
+  } });
+  assert.equal(calls.outdoor, 1, "Reviewed outdoor source succeeds independently");
+  assert.equal(calls.culture, mode === "complete" ? 1 : 4, "The failed culture group exhausts all four attempts");
+  const park = response.venues.filter(place => place.id === parkId);
+  assert.equal(park.length, 1, "The valid reviewed outdoor row remains present; retirement cannot be caused by an empty discovery pool");
+  assert.equal(response.venues.some(place => place.activityTypes.includes("school")), false);
+  return [...park, structuredClone(ordinaryFixtureVenues[1])];
+}
+
 for (const surface of Object.keys(labels)) {
+  for (const mode of ["oversized-first", "oversized-last", "exhausted"]) {
+    test(`${surface}: provider uncertainty ${mode} retires Sparkle without ordinary substitution or automatic revival`, async t => {
+      const h = home("2026-12-20T18:00:00-06:00");
+      try {
+        h.discovery(await providerRefresh(t, "complete"));
+        h.click(labels[surface]);
+        const before = h.current(surface);
+        assert.ok(before.some(record => record.dateNightEvent?.researchId === "C26-001"));
+        const ordinary = before.filter(record => !record.dateNightEvent).map(record => record.id);
+        h.discovery(await providerRefresh(t, mode));
+        assert.ok(!h.current(surface).some(record => record.id === parkId), "Incomplete provider evidence cannot keep Sparkle or substitute ordinary park Directions");
+        assert.deepEqual(h.current(surface).map(record => record.id), ordinary, "Independently selected ordinary choices remain functional");
+        h.discovery(await providerRefresh(t, "complete"));
+        assert.ok(!h.current(surface).some(record => record.id === parkId), "Fresh source evidence cannot reopen a retired event without a new user selection");
+        h.click(labels[surface]);
+        assert.ok(h.current(surface).some(record => record.dateNightEvent?.researchId === "C26-001"), "Complete fresh reviewed source supports an explicit new event selection");
+      } finally { h.dispose(); }
+    });
+  }
+
+  test(`${surface}: provider uncertainty preserves ordinary cinema selection and explicit ordinary replanning`, async t => {
+    const h = home("2026-12-20T18:00:00-06:00", ["movies"]);
+    try {
+      h.click(labels[surface]);
+      assert.deepEqual(h.current(surface).map(record => record.id), ["fixture-ordinary-cinema"]);
+      h.discovery(await providerRefresh(t, "oversized-last"));
+      assert.deepEqual(h.current(surface).map(record => record.id), ["fixture-ordinary-cinema"]);
+      assert.ok(h.current(surface).every(record => !record.dateNightEvent));
+      const component = { result: "ResultOverlay", options: "OptionsOverlay", plan: "DateNightPlanOverlay" }[surface];
+      const action = { result: "onReroll", options: "onShuffle", plan: "onReplan" }[surface];
+      const overlay = find(h.render(), node => node.type?.name === component);
+      overlay.props[action]();
+      assert.deepEqual(h.current(surface).map(record => record.id), ["fixture-ordinary-cinema"]);
+    } finally { h.dispose(); }
+  });
+
   test(`${surface}: ordinary selections retain their existing transient discovery recovery`, () => {
     const h = home("2026-12-20T18:00:00-06:00", ["movies"]);
     try {

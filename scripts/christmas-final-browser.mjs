@@ -10,6 +10,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { chromium } from "playwright";
 import { checkedOutputPath } from "./browser-guard.mjs";
+import { buildChristmasProviderLossReplay } from "./test-support/christmas-provider-loss-replay.mjs";
 
 // This harness may exercise an immutable parent checkout with current controls.
 // Application and harness fingerprints are deliberately separate; local and CI
@@ -17,6 +18,8 @@ import { checkedOutputPath } from "./browser-guard.mjs";
 const harnessRoot = resolve(".");
 const appRoot = resolve(process.env.CHRISTMAS_APP_ROOT ?? harnessRoot);
 const reproduction = process.env.CHRISTMAS_REPRODUCTION === "1";
+const optionsReproduction = process.env.CHRISTMAS_OPTIONS_REPRODUCTION === "1";
+const providerReproduction = process.env.CHRISTMAS_PROVIDER_REPRODUCTION === "1";
 const output = checkedOutputPath(process.env.CHRISTMAS_FINAL_BROWSER_OUTPUT ?? "/tmp/pfu-christmas-final-browser", ["/tmp", resolve("audit")], "Christmas final evidence");
 await mkdir(output, { recursive: true });
 const git = (root, ...args) => execFileSync("git", args, { cwd: root, encoding: "utf8" }).trim();
@@ -24,7 +27,7 @@ const sourceSha = git(appRoot, "rev-parse", "HEAD");
 const sourceTree = git(appRoot, "rev-parse", "HEAD^{tree}");
 const sourceState = git(appRoot, "status", "--porcelain=v1");
 const appInputs = git(appRoot, "ls-files", "--cached", "--others", "--exclude-standard", "src").split("\n").filter(Boolean);
-const harnessInputs = ["scripts/christmas-final-browser.mjs", "scripts/test-support/christmas-event-fixture.tsx", "scripts/test-support/christmas-event-search-fixture.ts", "package.json", "package-lock.json"];
+const harnessInputs = ["scripts/christmas-final-browser.mjs", "scripts/test-support/christmas-event-fixture.tsx", "scripts/test-support/christmas-event-search-fixture.ts", "scripts/test-support/christmas-provider-loss-replay.mjs", "scripts/test-support/christmas-park-source.json", "scripts/test-support/load-app-module.mjs", "package.json", "package-lock.json"];
 async function fingerprint(root, inputs) {
   const hash = createHash("sha256");
   for (const path of [...new Set(inputs)].sort()) hash.update(path + "\0").update(await readFile(resolve(root, path)));
@@ -32,6 +35,7 @@ async function fingerprint(root, inputs) {
 }
 const appFingerprint = await fingerprint(appRoot, appInputs);
 const harnessFingerprint = await fingerprint(harnessRoot, harnessInputs);
+const providerReplay = await buildChristmasProviderLossReplay(appRoot);
 const result = await build({
   root: appRoot, configFile: false, publicDir: false, mode: "production",
   plugins: [react(), tailwindcss()],
@@ -46,7 +50,8 @@ const result = await build({
 const chunks = [result].flat().flatMap(bundle => bundle.output);
 const code = chunks.filter(item => item.type === "chunk").map(item => item.code).join("\n");
 const css = chunks.filter(item => item.type === "asset" && item.fileName.endsWith(".css")).map(item => item.source).join("\n");
-const html = `<!doctype html><html lang="en" data-theme="dark"><head><title>Isolated Christmas acceptance</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${css}</style></head><body><div id="root"></div><script src="/fixture.js"></script></body></html>`;
+const replayJson = JSON.stringify(providerReplay.responses).replace(/</g, "\\u003c");
+const html = `<!doctype html><html lang="en" data-theme="dark"><head><title>Isolated Christmas acceptance</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${css}</style></head><body><div id="root"></div><script>window.__christmasProviderLossReplay=${replayJson};</script><script src="/fixture.js"></script></body></html>`;
 const server = createServer(async (request, response) => {
   if (request.url === "/fixture.js") { response.setHeader("Content-Type", "application/javascript"); response.end(code); return; }
   if (request.url === "/") { response.setHeader("Content-Type", "text/html"); response.end(html); return; }
@@ -63,10 +68,11 @@ await new Promise(ready => server.listen(0, "127.0.0.1", ready));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const axeSource = await readFile(createRequire(import.meta.url).resolve("axe-core/axe.min.js"), "utf8");
 const verdict = {
-  passed: false, reproduction, provenance: process.env.CI ? "hosted CI" : "local", appRoot, sourceSha, sourceTree, sourceState,
+  passed: false, reproduction, optionsReproduction, providerReproduction, provenance: process.env.CI ? "hosted CI" : "local", appRoot, sourceSha, sourceTree, sourceState,
+  providerReplay: providerReplay.provenance,
   appFingerprint, harnessFingerprint, harnessHead: git(harnessRoot, "rev-parse", "HEAD"),
   bundleFingerprint: createHash("sha256").update(code).update(css).digest("hex"),
-  axeVersion: "4.14.0", cases: [], contrast: [], keyboard: [], observations: [], pageErrors: [], externalRequests: [],
+  axeVersion: "4.14.0", cases: [], contrast: [], keyboard: [], accessibility: [], optionActions: [], providerTransitions: [], observations: [], pageErrors: [], externalRequests: [],
   limitations: ["Actual application components/store with substituted discovery transport and synthetic temporary placements.", "Not public placement clearance, combined V4 acceptance, physical Android/WebView or real assistive-technology acceptance."],
 };
 let browser;
@@ -215,6 +221,137 @@ async function contrastCase(page, surface, label) {
   const failed = measurements.filter(item => item.ratio + 0.001 < item.threshold);
   assert.deepEqual(failed, [], `${surface}: text below WCAG AA: ${JSON.stringify(failed)}`);
 }
+// Broad WCAG A/AA scans include button-name; contrast-only scans cannot
+// establish that an actionable image has an accessible name.
+async function broadAxe(page, surface, label, selector = '[data-christmas-dialog], body > .fixed') {
+  const audit = await page.evaluate(async selector => {
+    const result = await window.axe.run({ include: [...document.querySelectorAll(selector)] }, {
+      runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"] },
+    });
+    return { violations: result.violations, incomplete: result.incomplete,
+      passedRules: result.passes.map(rule => rule.id) };
+  }, selector);
+  // axe can report an ambiguous background stack for native top-layer dialog
+  // text even when its opaque card/footer covers every underlying element.
+  // Keep the original incomplete finding. Resolve only that specific ambiguity
+  // with independent visible-text hit tests and solid-background contrast;
+  // unsupported paint/overlap or any other incomplete rule still fails.
+  audit.contrastReview = [];
+  for (const rule of audit.incomplete) for (const node of rule.nodes) {
+    const checks = [...node.any, ...node.all, ...node.none];
+    if (rule.id !== "color-contrast" || !checks.length || checks.some(check => check.data?.messageKey !== "elmPartiallyObscuring") || node.target.length !== 1) continue;
+    const target = node.target[0];
+    const paint = await page.evaluate(target => {
+      const elements = [...document.querySelectorAll(target)];
+      if (elements.length !== 1) return { supported: false, reason: "Ambiguous target" };
+      const el = elements[0], ancestors = [];
+      let opaque = false;
+      for (let current = el; current; current = current.parentElement) {
+        const style = getComputedStyle(current);
+        ancestors.push({ tag: current.tagName, background: style.backgroundColor });
+        if (style.backgroundImage !== "none" || Number(style.opacity) !== 1 || style.filter !== "none" || style.mixBlendMode !== "normal") return { supported: false, reason: "Complex paint", ancestors };
+        const rgba = style.backgroundColor.match(/^rgba?\(([^)]+)\)$/)?.[1].split(",").map(Number);
+        if (rgba && (rgba.length === 3 || rgba[3] === 1)) opaque = true;
+      }
+      const ranges = [], walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) {
+        if (!walker.currentNode.textContent.trim()) continue;
+        const range = document.createRange(); range.selectNodeContents(walker.currentNode);
+        for (const rect of range.getClientRects()) {
+          if (rect.width === 0 || rect.height === 0) continue;
+          const visible = rect.left >= 0 && rect.right <= innerWidth && rect.top >= 0 && rect.bottom <= innerHeight;
+          const hits = [0.1, 0.5, 0.9].flatMap(x => [0.1, 0.5, 0.9].map(y => {
+            const hit = document.elementFromPoint(rect.left + rect.width * x, rect.top + rect.height * y);
+            return hit === el || el.contains(hit);
+          }));
+          ranges.push({ left: rect.left, top: rect.top, width: rect.width, height: rect.height, visible, unoccluded: hits.every(Boolean) });
+        }
+      }
+      return { supported: opaque && ranges.length > 0 && ranges.every(range => range.visible && range.unoccluded), opaque, ancestors, ranges };
+    }, target);
+    const measurements = await measureText(page, target);
+    audit.contrastReview.push({ target, paint, measurements,
+      resolved: paint.supported && measurements.length > 0 && measurements.every(item => item.ratio + 0.001 >= item.threshold),
+      method: "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained." });
+  }
+  audit.unresolvedIncomplete = audit.incomplete.flatMap(rule => rule.nodes.filter(node =>
+    !(rule.id === "color-contrast" && audit.contrastReview.some(review => review.resolved && node.target.length === 1 && review.target === node.target[0])))
+    .map(node => ({ rule: rule.id, node })));
+  verdict.accessibility.push({ label, surface, ...audit });
+  return audit;
+}
+function assertBroadAxe(audit, surface) {
+  assert.deepEqual(audit.violations, [], `${surface}: WCAG A/AA axe violations`);
+  assert.deepEqual(audit.unresolvedIncomplete, [], `${surface}: WCAG A/AA axe needs unresolved review`);
+}
+async function optionActionCase(page, label, category, christmas = true) {
+  const open = async () => {
+    if (christmas) return openHome(page, "options", category);
+    await fixtures(page, "configure", { christmasEnabled: false, dateNightFilters: { ...filters, activityTypes: ["movies"] } });
+    const trigger = page.getByRole("button", { name: "Give us options", exact: true });
+    await trigger.focus(); await page.keyboard.press("Enter");
+    await page.getByRole("button", { name: "Close options", exact: true }).waitFor(); await frame(page);
+    return trigger;
+  };
+  const trigger = await open();
+  const mode = christmas ? category === "anything" ? "mixed" : "ordinary-only Christmas" : "ordinary Date Night";
+  const cinema = shell(page).locator("article").filter({ hasText: "Fixture ordinary cinema" });
+  const selected = cinema.locator('button:not([aria-label^="Not tonight:"])');
+  const issues = [];
+  await assertLayout(page);
+  const audit = christmas ? await broadAxe(page, `${mode} Options`, label) : null;
+  if (audit?.violations.length) issues.push(`WCAG A/AA rules: ${audit.violations.map(rule => rule.id).join(", ")}`);
+  if (audit?.unresolvedIncomplete.length) issues.push(`WCAG A/AA needs review: ${audit.unresolvedIncomplete.map(item => item.rule).join(", ")}`);
+  const selectionCount = await selected.count();
+  const namedCount = await cinema.getByRole("button", { name: /^Choose Fixture ordinary cinema(?: |$)/ }).count();
+  if (selectionCount !== 1) issues.push(`expected one selection control; found ${selectionCount}`);
+  if (namedCount !== 1) issues.push(`expected one meaningful Choose Fixture ordinary cinema action; found ${namedCount}`);
+  const accessibleTree = await cinema.ariaSnapshot();
+  const tabStops = new Set();
+  await page.getByRole("button", { name: "Close options", exact: true }).focus();
+  const allControls = await shell(page).locator('button:not([disabled]), a[href], input:not([disabled]), [tabindex="0"]').count();
+  for (let i = 0; i < allControls + 2; i++) {
+    await page.keyboard.press("Tab");
+    const index = await selected.evaluateAll(elements => elements.indexOf(document.activeElement));
+    if (index >= 0) tabStops.add(index);
+  }
+  if (tabStops.size !== 1) issues.push(`expected one selection Tab stop; found ${tabStops.size}`);
+  // Exercise the image action even in the immutable parent, where it is unnamed.
+  // A name/count failure must not prevent the before receipt from recording
+  // that the defective control really opens the cinema on Enter.
+  await selected.first().focus();
+  const selectionFocus = await selected.first().evaluate(el => {
+    const style = getComputedStyle(el), rect = el.getBoundingClientRect(), card = el.closest("article").getBoundingClientRect();
+    const width = parseFloat(style.outlineWidth), expansion = width + parseFloat(style.outlineOffset);
+    return { visible: el.matches(":focus-visible"), width, outlineStyle: style.outlineStyle, offset: parseFloat(style.outlineOffset),
+      insideClip: rect.left - expansion >= card.left && rect.right + expansion <= card.right && rect.top - expansion >= card.top && rect.bottom + expansion <= card.bottom,
+      viewportVisible: rect.bottom > 0 && rect.top < innerHeight };
+  });
+  if (!selectionFocus.visible || selectionFocus.width < (christmas ? 2 : 1) || selectionFocus.outlineStyle === "none" || !selectionFocus.insideClip || !selectionFocus.viewportVisible) issues.push(`selection focus is not visibly painted within its clipped card: ${JSON.stringify(selectionFocus)}`);
+  await page.keyboard.press("Enter");
+  await page.getByRole("button", { name: "Close result", exact: true }).waitFor(); await frame(page);
+  assert.match(await shell(page).innerText(), /Fixture ordinary cinema/);
+  if (christmas) {
+    assert.equal(await page.getByRole("dialog").count(), 1);
+    assert.equal(await shell(page).evaluate(el => el.contains(document.activeElement)), true);
+    await page.keyboard.press("Escape"); await frame(page);
+    assert.equal(await trigger.evaluate(el => document.activeElement === el), true);
+  } else await page.getByRole("button", { name: "Close result", exact: true }).click();
+  for (const pointerTarget of ["image", "summary"]) {
+    await open();
+    const card = shell(page).locator("article").filter({ hasText: "Fixture ordinary cinema" });
+    if (pointerTarget === "image") await card.locator("img").click();
+    else await card.getByRole("heading", { name: "Fixture ordinary cinema", exact: true }).click();
+    await page.getByRole("button", { name: "Close result", exact: true }).waitFor(); await frame(page);
+    assert.match(await shell(page).innerText(), /Fixture ordinary cinema/);
+    await page.getByRole("button", { name: "Close result", exact: true }).click(); await frame(page);
+  }
+  await assertLayout(page);
+  verdict.optionActions.push({ label, mode, selectionCount, namedCount, selectionTabStops: tabStops.size,
+    accessibleTree, selectionFocus, keyboardSelection: true, imagePointerSelection: true, summaryPointerSelection: true,
+    broadAxe: christmas ? "WCAG A/AA on complete Options overlay" : "Not run: this control-only ordinary-mode regression does not claim broader ordinary-page accessibility." });
+  assert.deepEqual(issues, []);
+}
 async function savedPageKeyboard(page, surface, label) {
   const actions = page.locator('main button:not([disabled]), main a[href], main input:not([disabled]), main [tabindex="0"]');
   const count = await actions.count();
@@ -244,7 +381,56 @@ async function savedPageKeyboard(page, surface, label) {
 
 try {
   browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH, args: ["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"] });
-  for (const surface of Object.keys(controls)) {
+  if (!optionsReproduction) for (const surface of Object.keys(controls)) {
+    for (const mode of ["oversized-first", "oversized-last", "exhausted"]) {
+      await check(`${surface}: retained reviewed park survives pending ${mode} refresh, retires on delivered uncertainty and requires explicit recovery selection`, async () => {
+        const { context, page } = await createPage({ iso: "2026-12-05T18:00:00-06:00" });
+        try {
+          await openHome(page, surface);
+          assert.match(await shell(page).innerText(), /Sparkle in the Park/);
+          const requests = (await fixtures(page, "discovery")).length;
+          const completions = (await fixtures(page, "discoveryCompletions")).length;
+          await fixtures(page, "holdDiscovery");
+          await fixtures(page, "refreshDiscoveryInPlace", `provider-${mode}`);
+          await page.waitForFunction(count => window.christmasFixture.discovery().length > count, requests);
+          await frame(page);
+          assert.equal((await fixtures(page, "discoveryCompletions")).length, completions, "Controlled response must remain pending");
+          assert.match(await shell(page).innerText(), /Sparkle in the Park/, "Same-query pending refresh must retain the valid selected event");
+          await fixtures(page, "releaseDiscovery");
+          await page.waitForFunction(count => window.christmasFixture.discoveryCompletions().length > count, completions);
+          await frame(page);
+          const delivery = (await fixtures(page, "discoveryCompletions")).at(-1);
+          assert.equal(delivery.mode, `provider-${mode}`);
+          assert.equal(delivery.retainedPark, true, "The delivered actual search response retains reviewed v2, avoiding empty-pool retirement");
+          const closedAfterDelivery = await page.getByRole("button", { name: controls[surface].close, exact: true }).count() === 0;
+          verdict.providerTransitions.push({ surface, mode, pendingSelectionRetained: true, delivery, closedAfterDelivery });
+          await noOpenSelection(page, `delivered ${mode} source uncertainty`);
+          const recovered = (await fixtures(page, "discoveryCompletions")).length;
+          await fixtures(page, "refreshDiscoveryInPlace", "provider-complete");
+          await page.waitForFunction(count => window.christmasFixture.discoveryCompletions().length > count, recovered);
+          await frame(page);
+          await noOpenSelection(page, "fresh sufficient evidence without explicit selection");
+          await openHome(page, surface);
+          assert.match(await shell(page).innerText(), /Sparkle in the Park/);
+          await page.getByRole("button", { name: controls[surface].close, exact: true }).click();
+          // Independent ordinary discovery/replanning remains usable after the
+          // source uncertainty and recovery cycle.
+          await openHome(page, surface, "movies");
+          assert.match(await shell(page).innerText(), /Fixture ordinary cinema/);
+          if (surface === "plan") {
+            await page.getByRole("button", { name: /^(Plan a different night|Try the plan again)$/ }).click();
+            assert.match(await shell(page).innerText(), /Fixture ordinary cinema/);
+          }
+          await page.getByRole("button", { name: controls[surface].close, exact: true }).click();
+        } catch (error) {
+          verdict.observations.push({ surface, transition: `provider-${mode}`, text: await page.locator("body").innerText(),
+            requests: await fixtures(page, "discovery"), completions: await fixtures(page, "discoveryCompletions") });
+          throw error;
+        } finally { await context.close(); }
+      });
+    }
+  }
+  if (!optionsReproduction && !providerReproduction) for (const surface of Object.keys(controls)) {
     for (const transition of ["midnight", "missing-revision", "opt-out", "unavailable", "gala-to-market"]) {
       await check(`${surface}: Home selection retires through ${transition} and cannot resurrect`, async () => {
         const isMarket = transition === "gala-to-market";
@@ -282,7 +468,7 @@ try {
       });
     }
   }
-  for (const surface of Object.keys(controls)) {
+  if (!optionsReproduction && !providerReproduction) for (const surface of Object.keys(controls)) {
     await check(`${surface}: Anything selection rejects park substitution while retaining independently chosen cinema`, async () => {
       const { context, page } = await createPage({ iso: "2026-12-05T18:00:00-06:00" });
       try {
@@ -320,29 +506,30 @@ try {
   const widths = reproduction ? [320] : [320, 390, 512];
   const motions = reproduction ? ["no-preference"] : ["no-preference", "reduce"];
   const matrix = widths.flatMap(width => ["light", "dark"].flatMap(theme => motions.map(motion => ({ width, theme, motion, modeScope: !reproduction }))));
-  if (!reproduction) for (const theme of ["light", "dark"]) matrix.push({ width: 390, theme, motion: "no-preference", modeScope: false });
-  for (const { width, theme, motion, modeScope } of matrix) {
+  if (!reproduction && !optionsReproduction) for (const theme of ["light", "dark"]) matrix.push({ width: 390, theme, motion: "no-preference", modeScope: false });
+  if (!providerReproduction) for (const { width, theme, motion, modeScope } of matrix) {
     const label = `${width}px ${theme} ${motion}${modeScope ? " date-night-active" : ""}`;
     const { context, page } = await createPage({ width, theme, motion, modeScope });
     try {
       await page.addScriptTag({ content: axeSource });
       await fixtures(page, "seedAllEvents");
-      for (const surface of Object.keys(controls)) {
+      if (!optionsReproduction) for (const surface of Object.keys(controls)) {
         await check(`${label} ${surface}: keyboard dialog entry, containment, return and Escape`, () => keyboardCase(page, surface));
         await check(`${label} ${surface}: AA contrast and layout`, async () => {
           await openHome(page, surface, "holiday-market");
           await page.screenshot({ path: resolve(output, `${width}-${theme}-${motion}${modeScope ? "-date-night" : ""}-${surface}.png`), fullPage: false });
           await contrastCase(page, surface, label);
+          assertBroadAxe(await broadAxe(page, surface, label), surface);
         });
         if (await page.getByRole("button", { name: controls[surface].close, exact: true }).count()) await page.getByRole("button", { name: controls[surface].close, exact: true }).click();
       }
-      for (const surface of ["result", "options"]) {
+      if (!optionsReproduction) for (const surface of ["result", "options"]) {
         await check(`${label} ordinary-only Christmas ${surface}: keyboard dialog continuity`, () => keyboardCase(page, surface, "movies"));
       }
-      await check(`${label} mixed Options to ordinary Result preserves modality and Home focus return`, async () => {
+      if (!optionsReproduction) await check(`${label} mixed Options to ordinary Result preserves modality and Home focus return`, async () => {
         const trigger = await openHome(page, "options", "anything");
         const cinema = shell(page).locator("article").filter({ hasText: "Fixture ordinary cinema" });
-        const choose = cinema.getByRole("button", { name: /^Fixture ordinary cinema/ });
+        const choose = cinema.locator("button").filter({ hasText: "Fixture ordinary cinema" });
         await choose.focus(); await page.keyboard.press("Enter");
         await page.getByRole("button", { name: "Close result", exact: true }).waitFor(); await frame(page);
         assert.match(await shell(page).innerText(), /Fixture ordinary cinema/);
@@ -354,12 +541,36 @@ try {
       });
       if (await page.getByRole("button", { name: "Close result", exact: true }).count()) await page.getByRole("button", { name: "Close result", exact: true }).click();
       if (await page.getByRole("button", { name: "Close options", exact: true }).count()) await page.getByRole("button", { name: "Close options", exact: true }).click();
-      for (const surface of ["favorites", "history"]) {
+      if (!optionsReproduction) for (const surface of ["favorites", "history"]) {
         await check(`${label} ${surface}: AA contrast, keyboard focus and layout`, async () => {
           await fixtures(page, "show", surface); await page.locator(`[data-christmas-surface="${surface}"]`).first().waitFor();
           await page.screenshot({ path: resolve(output, `${width}-${theme}-${motion}${modeScope ? "-date-night" : ""}-${surface}.png`), fullPage: true });
           await contrastCase(page, surface, label);
           await savedPageKeyboard(page, surface, label);
+          assertBroadAxe(await broadAxe(page, surface, label, "main"), surface);
+        });
+      }
+      // Return from saved pages to the actual Home before exercising mixed and
+      // ordinary-only options. Every original acceptance control remains above.
+      await fixtures(page, "show", "home"); await frame(page);
+      for (const category of ["anything", "movies"]) {
+        await check(`${label} ${category === "anything" ? "mixed" : "ordinary-only Christmas"} Options: one named selection action, Tab, Enter and pointer paths`,
+          () => optionActionCase(page, label, category));
+      }
+      if (!optionsReproduction) {
+        await check(`${label} ordinary Date Night Options: one named selection action and existing input paths`,
+          () => optionActionCase(page, label, "movies", false));
+        await check(`${label} event rating panel: broad WCAG A/AA audit and keyboard controls`, async () => {
+          await openHome(page, "result", "holiday-market");
+          await page.getByRole("button", { name: "We did this", exact: true }).click();
+          await page.getByRole("button", { name: "Save choice", exact: true }).waitFor(); await frame(page);
+          assertBroadAxe(await broadAxe(page, "rating", label), "rating");
+          await assertLayout(page);
+          const rating = page.getByRole("button", { name: "5 Favorite", exact: true });
+          await rating.focus(); await page.keyboard.press("Enter");
+          assert.equal(await rating.getAttribute("aria-pressed"), "true");
+          await page.keyboard.press("Escape"); await frame(page);
+          assert.equal(await page.getByRole("button", { name: "Close result", exact: true }).count(), 0);
         });
       }
     } finally { await context.close(); }
@@ -378,5 +589,5 @@ try {
 } finally {
   await browser?.close(); await new Promise(done => server.close(done));
   await writeFile(resolve(output, "verdict.json"), JSON.stringify(verdict, null, 2) + "\n");
-  console.log(JSON.stringify({ passed: verdict.passed, reproduction, sourceSha, sourceTree, cases: verdict.cases.length, failures: verdict.cases.filter(item => !item.passed).length, output, failure: verdict.failure }));
+  console.log(JSON.stringify({ passed: verdict.passed, reproduction, optionsReproduction, providerReproduction, sourceSha, sourceTree, cases: verdict.cases.length, failures: verdict.cases.filter(item => !item.passed).length, output, failure: verdict.failure }));
 }

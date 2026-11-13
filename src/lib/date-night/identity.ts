@@ -3,7 +3,7 @@ import { isApproximateSeasonalPlace } from "./listing";
 import { haversineMiles } from "../restaurants/geo";
 import { namesMatch, normalizeName } from "../utils";
 import { dateNightTypeLabel, type ConcreteDateNightType, type DateNightPlace } from "./types";
-import { boundDateNightIdentityEvidence } from "./source-observations";
+import { boundDateNightIdentityEvidence, mergeDateNightIdentityUncertainty } from "./source-observations";
 
 const DATE_NIGHT_ALIAS_GROUPS = [
   [
@@ -74,6 +74,8 @@ export function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPl
   return {
     ...second!, ...first!, activityTypes, discoveryEvidence,
     ...(a.identityObservationOverflow || b.identityObservationOverflow || bounded.overflow ? { identityObservationOverflow: true as const } : {}),
+    ...(a.identityUncertainty || b.identityUncertainty
+      ? { identityUncertainty: mergeDateNightIdentityUncertainty(a.identityUncertainty, b.identityUncertainty) } : {}),
     lifecycle: a.lifecycle === "permanently-closed" || b.lifecycle === "permanently-closed"
       ? "permanently-closed" : a.lifecycle ?? b.lifecycle,
     openingHours: (first!.seasonalAvailability ?? second!.seasonalAvailability)?.openNowPolicy === "never"
