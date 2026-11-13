@@ -1,3 +1,6 @@
+import { ChristmasEventHistory } from "@/components/christmas-event-saved-card";
+import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";
+import { useDateNightClock } from "@/lib/date-night/use-clock";
 import { Clock3, Sparkles } from "lucide-react";
 import { getDateNightIcon, isDateNightRecord } from "@/lib/date-night/icons";
 import { useAppStore } from "@/lib/store";
@@ -10,6 +13,7 @@ function formatDay(iso: string): string {
 }
 
 export function HistoryPage() {
+  const now = useDateNightClock();
   const visits = useAppStore((s) => s.visits);
   const grouped = visits.reduce<Record<string, typeof visits>>((acc, visit) => {
     const key = formatDay(visit.date);
@@ -19,7 +23,7 @@ export function HistoryPage() {
   }, {});
 
   return (
-    <main className="px-4 pt-6 pb-8">
+    <main className={visits.some(hasSavedChristmasEvent) ? "christmas-event-surface px-4 pt-6 pb-8" : "px-4 pt-6 pb-8"}>
       <p className="text-xs tracking-[0.22em] text-subtle uppercase">Places we chose</p>
       <h1 className="font-display mt-1 text-4xl text-fg">History</h1>
       <p className="mt-2 text-sm text-muted">Recent choices get a quieter chance next time.</p>
@@ -39,6 +43,7 @@ export function HistoryPage() {
               <h2 className="text-xs tracking-wide text-subtle uppercase">{day}</h2>
               <ul className="mt-2 space-y-2">
                 {items.map((visit) => {
+                  if (hasSavedChristmasEvent(visit)) return <ChristmasEventHistory key={visit.id} visit={visit} now={now} />;
                   const dateNight = isDateNightRecord(visit.restaurantId);
                   const icon = dateNight ? getDateNightIcon({ cuisineLabel: visit.cuisineLabel }) : null;
                   return (

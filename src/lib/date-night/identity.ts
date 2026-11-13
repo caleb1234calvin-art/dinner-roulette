@@ -3,6 +3,7 @@ import { isApproximateSeasonalPlace } from "./listing";
 import { haversineMiles } from "../restaurants/geo";
 import { namesMatch, normalizeName } from "../utils";
 import { dateNightTypeLabel, type ConcreteDateNightType, type DateNightPlace } from "./types";
+import { boundDateNightIdentityEvidence, mergeDateNightIdentityUncertainty } from "./source-observations";
 
 const DATE_NIGHT_ALIAS_GROUPS = [
   [
@@ -65,12 +66,16 @@ export function mergeIdentity(a: DateNightPlace, b: DateNightPlace): DateNightPl
   const [first, second] = [a, b].sort((x, y) => rank(x).localeCompare(rank(y)) || snapshot(x).localeCompare(snapshot(y)));
   const activityTypes = combineTypes(a.activityTypes, b.activityTypes);
   const evidence = [...evidenceFor(a), ...evidenceFor(b)];
-  const discoveryEvidence = [...new Map(evidence.map((item) => [JSON.stringify(item), item])).values()]
-    .sort((x, y) => JSON.stringify(x).localeCompare(JSON.stringify(y)));
+  const bounded = boundDateNightIdentityEvidence([...new Map(evidence.map((item) => [JSON.stringify(item), item])).values()]
+    .sort((x, y) => JSON.stringify(x).localeCompare(JSON.stringify(y))));
+  const discoveryEvidence = bounded.evidence;
   const hours = [...new Set(discoveryEvidence.map((item) => item.openingHours).filter((value) => value && value !== "unknown"))];
   const curated = discoveryEvidence.find((item) => item.source === "catalog" && item.openingHours && item.openingHours !== "unknown");
   return {
     ...second!, ...first!, activityTypes, discoveryEvidence,
+    ...(a.identityObservationOverflow || b.identityObservationOverflow || bounded.overflow ? { identityObservationOverflow: true as const } : {}),
+    ...(a.identityUncertainty || b.identityUncertainty
+      ? { identityUncertainty: mergeDateNightIdentityUncertainty(a.identityUncertainty, b.identityUncertainty) } : {}),
     lifecycle: a.lifecycle === "permanently-closed" || b.lifecycle === "permanently-closed"
       ? "permanently-closed" : a.lifecycle ?? b.lifecycle,
     openingHours: (first!.seasonalAvailability ?? second!.seasonalAvailability)?.openNowPolicy === "never"

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import ts from "typescript";
@@ -93,7 +93,12 @@ function savedPages(store, now) {
       if (specifier === "@/lib/store") return { useAppStore: selector => selector(store) };
       if (specifier === "@/lib/date-night/use-clock") return { useDateNightClock: () => now };
       if (specifier === "@/components/ui/button") return { Button: props => { const clean = { ...props }; delete clean.asChild; return React.createElement("button", clean, props.children); } };
-      if (specifier.startsWith("@/")) return pure(`src/${specifier.slice(2)}.ts`);
+      if (specifier.startsWith("@/")) {
+        const base = `src/${specifier.slice(2)}`;
+        const file = [base + ".ts", base + ".tsx"].find(existsSync);
+        assert.ok(file, `Application module must resolve: ${specifier}`);
+        return pure(file);
+      }
       return requirePackage(specifier);
     };
     new Function("require", "module", "exports", outputText)(require, module, module.exports);

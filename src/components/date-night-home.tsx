@@ -1,8 +1,19 @@
+import { dateNightCategoryWeight, isChristmasAppWindow } from "@/lib/date-night/christmas-overlay";
+import type { DateNightPresentationCategory } from "@/lib/date-night/christmas-overlay";
+import { CHRISTMAS_2026_PILOT } from "@/lib/date-night/christmas-pilot-catalog";
+import { buildChristmasPilotCandidate, buildIsolatedChristmasPilotCandidate } from "@/lib/date-night/christmas-pilot";
+import type { ChristmasPilotChoice } from "@/lib/date-night/christmas-pilot";
+import type { ChristmasEventPlacement, ChristmasPilotAttraction, ChristmasVenueBinding } from "@/lib/date-night/christmas-pilot-model";
+import { toChristmasEventRecord } from "@/lib/date-night/christmas-event-record";
+import { reconcileDateNightSelection, reconcileDateNightSelections, retainDateNightSelectionState } from "@/lib/date-night/selection";
+import { pickChristmasChoice, pickChristmasOptions } from "@/lib/date-night/christmas-picker";
+import type { ChristmasChoice, ChristmasSelection } from "@/lib/date-night/christmas-picker";
 import { recordSeasonalIdentityReceipts } from "@/lib/date-night/identity-receipts";
 import { DISCOVERY_TIMEOUT_MESSAGE } from "@/lib/discovery/client-request";
 import { useEffect, useMemo, useState } from "react";
 import { Heart, LayoutGrid } from "lucide-react";
 import { DateNightPlanOverlay } from "@/components/date-night-plan-overlay";
+import { ChristmasEventDetails } from "@/components/christmas-event-details";
 import { DiscoveryLoading, DiscoveryNotice } from "@/components/discovery-status";
 import { OptionsOverlay } from "@/components/options-overlay";
 import { ResultOverlay } from "@/components/result-overlay";
@@ -79,7 +90,7 @@ function pickCategory(
   if (!categories.length) return null;
   const hasAlternative = Boolean(avoidCategory && categories.some((type) => type !== avoidCategory));
   const weights = categories.map((type) => {
-    const parkWeight = type === "park" && reduceParks ? 0.08 : 1;
+    const parkWeight = dateNightCategoryWeight(type, reduceParks);
     const repeatWeight = hasAlternative && type === avoidCategory ? 0.18 : 1;
     return parkWeight * repeatWeight;
   });
@@ -143,7 +154,28 @@ function pickDiverseOptions(
   return result;
 }
 
-export function DateNightHome() {
+const CHRISTMAS_CHIPS: readonly { id: ChristmasSelection; label: string }[] = [
+  { id: "anything", label: "Anything" },
+  { id: "christmas-lights", label: "Christmas Lights" },
+  { id: "holiday-market", label: "Holiday Markets" },
+  { id: "holiday-craft-fair", label: "Holiday Craft Fairs" },
+  { id: "holiday-community-event", label: "Holiday Events" },
+];
+const DEFAULT_CHRISTMAS_SELECTION: readonly ChristmasSelection[] = ["anything"];
+
+/** Only the separate, local acceptance entry supplies this prop. Public routes
+ * never receive a URL, environment or persisted switch that can release HOLDs. */
+export interface ChristmasReviewContext {
+  placements?: readonly ChristmasEventPlacement[];
+  bindings?: readonly ChristmasVenueBinding[];
+  attractions?: readonly ChristmasPilotAttraction[];
+}
+
+function choiceRecord(choice: ChristmasChoice | ChristmasPilotChoice): DecoratedDateNightPlace {
+  return "eventKey" in choice ? toChristmasEventRecord(choice) : choice.venue;
+}
+
+export function DateNightHome({ christmasReview }: { christmasReview?: ChristmasReviewContext } = {}) {
   const location = useAppStore((s) => s.location);
   const preferences = useAppStore((s) => s.preferences);
   const exclusions = useAppStore((s) => s.exclusions);
@@ -154,6 +186,10 @@ export function DateNightHome() {
   const setDateNightFilters = useAppStore((s) => s.setDateNightFilters);
   const markShown = useAppStore((s) => s.markShown);
   const excludeTonight = useAppStore((s) => s.excludeTonight);
+  const christmasEnabled = useAppStore((s) => s.christmasEnabled) ?? true;
+  const christmasCategories = useAppStore((s) => s.christmasCategories) ?? DEFAULT_CHRISTMAS_SELECTION;
+  const setChristmasEnabled = useAppStore((s) => s.setChristmasEnabled);
+  const setChristmasCategories = useAppStore((s) => s.setChristmasCategories);
 
   const [venues, setVenues] = useState<DateNightPlace[]>([]);
   const [loading, setLoading] = useState(true);
@@ -172,9 +208,25 @@ export function DateNightHome() {
   const [radialSession] = useState(createDateNightRadialSession);
   const [radialCoverage, setRadialCoverage] = useState<DateNightCoverageState>();
   const [expanding, setExpanding] = useState(false);
+  const [lastChristmasCategory, setLastChristmasCategory] = useState<DateNightPresentationCategory | null>(null);
+  const [planContext, setPlanContext] = useState<"christmas" | "halloween">("halloween");
+  const [pickDialogContext, setPickDialogContext] = useState<"christmas" | undefined>();
+  const [optionsDialogContext, setOptionsDialogContext] = useState<"christmas" | undefined>();
   const halloweenActive = isHalloweenDateNightActive(spookySeasonEnabled, now);
   const activityChips = dateNightChipsForNow(spookySeasonEnabled, now);
-  const acquisitionSignature = normalizeDateNightClientActivityTypes(filters.activityTypes, halloweenActive).join(",");
+  const christmasControlsVisible = isChristmasAppWindow(now) &&
+    (Boolean(christmasReview) || CHRISTMAS_2026_PILOT.some(event => event.publicationStatus === "accepted"));
+  const christmasActive = christmasControlsVisible && christmasEnabled;
+  // Acquire only ordinary categories. Lights may need a park response, but a
+  // church/school/route is never added to ordinary discovery by its event.
+  const needsPark = christmasActive && (christmasCategories.includes("anything") || christmasCategories.includes("christmas-lights"));
+  const selectedOrdinary = christmasActive
+    ? activityChips.filter(chip => christmasCategories.includes(chip.id)).map(chip => chip.id)
+    : filters.activityTypes;
+  const requestedOrdinary = selectedOrdinary.length ? selectedOrdinary : filters.activityTypes;
+  const acquisitionTypes = needsPark && !requestedOrdinary.includes("anything")
+    ? [...new Set([...requestedOrdinary, "park" as const])] : requestedOrdinary;
+  const acquisitionSignature = normalizeDateNightClientActivityTypes(acquisitionTypes, halloweenActive).join(",");
 
   useEffect(() => {
     radialSession.update({
@@ -205,21 +257,59 @@ export function DateNightHome() {
 
   const decorated = useMemo(() => decorateDateNight(venues, location, now), [venues, location, now]);
   useEffect(() => recordSeasonalIdentityReceipts(decorated), [decorated]);
-  const eligible = useMemo(
+  const ordinaryEligible = useMemo(
     () => eligibleDateNight(decorated, filters, halloweenActive, preferences, exclusions, now.getTime()),
     [decorated, exclusions, filters, halloweenActive, preferences, now],
   );
+  const christmas = useMemo(() => {
+    const input = {
+      venues: decorated, location, filters, selectedCategories: christmasCategories,
+      now, homeMode: "date-night" as const, christmasEnabled: christmasActive,
+      halloweenActive, preferences, exclusions,
+    };
+    return christmasReview
+      ? buildIsolatedChristmasPilotCandidate({ ...input, ...christmasReview })
+      : buildChristmasPilotCandidate(input);
+  }, [decorated, location, filters, christmasCategories, now, christmasActive, halloweenActive, preferences, exclusions, christmasReview]);
+  // Ordinary/Halloween keep their original picker and stored category choices.
+  const eligible = christmasActive ? christmas.choices.map(choiceRecord) : ordinaryEligible;
+  const pickerLoading = loading && !eligible.some(place => place.dateNightEvent);
   const coverage = seasonalCoverage(decorated, filters, source, halloweenActive);
-  // Open overlays receive refreshed status/eligibility, too, including on resume.
-  const currentPick = pick ? eligible.find((venue) => venue.id === pick.id) : null;
-  const currentOptions = options?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
-  const currentPlan = nightPlan?.map((item) => eligible.find((venue) => venue.id === item.id)).filter((item): item is DecoratedDateNightPlace => Boolean(item));
+  // Refresh only the exact selected presentation and dated occurrence. A park
+  // preference ID or an event key shared by admissions is not a UI selection.
+  const currentPick = pick ? reconcileDateNightSelection(pick, eligible) : null;
+  const currentOptions = options ? reconcileDateNightSelections(options, eligible) : null;
+  const currentPlan = nightPlan ? reconcileDateNightSelections(nightPlan, eligible) : null;
+  useEffect(() => {
+    // Remove invalid events from state as well as the current render. They
+    // must not reopen later merely because evidence/session eligibility returns.
+    // Ordinary selections retain the existing transient discovery behavior.
+    if (pick && !currentPick && !retainDateNightSelectionState([pick], eligible).length) {
+      setPick(null);
+      setPickDialogContext(undefined);
+    }
+    if (options && currentOptions && options.length !== currentOptions.length) {
+      const retained = retainDateNightSelectionState(options, eligible);
+      if (retained.length !== options.length) {
+        setOptions(retained.length ? retained : null);
+        if (!retained.length) setOptionsDialogContext(undefined);
+      }
+    }
+    if (nightPlan && currentPlan && nightPlan.length !== currentPlan.length) {
+      const retained = retainDateNightSelectionState(nightPlan, eligible);
+      if (retained.length !== nightPlan.length) setNightPlan(retained.length ? retained : null);
+    }
+  }, [pick, currentPick, options, currentOptions, nightPlan, currentPlan, eligible]);
 
   function updateFilters(patch: Partial<DateNightFilters>) {
     setDateNightFilters(patch);
   }
 
   function toggleActivityType(id: DateNightTypeId) {
+    if (christmasActive) {
+      toggleChristmasCategory(id);
+      return;
+    }
     if (id === "anything") {
       updateFilters({ activityTypes: ["anything"] });
       return;
@@ -229,7 +319,31 @@ export function DateNightHome() {
     updateFilters({ activityTypes: next.length ? next : ["anything"] });
   }
 
+  function toggleChristmasCategory(id: ChristmasSelection) {
+    if (id === "anything") {
+      setChristmasCategories(["anything"]);
+      return;
+    }
+    const current = christmasCategories.filter(item => item !== "anything");
+    const next = current.includes(id) ? current.filter(item => item !== id) : [...current, id];
+    setChristmasCategories(next.length ? next : ["anything"]);
+  }
+
   function roll(pool = eligible) {
+    setPickDialogContext(christmasActive || (pick !== null && pickDialogContext === "christmas") ? "christmas" : undefined);
+    if (christmasActive) {
+      const allowed = new Set(pool.map(item => item.id));
+      const choices = christmas.choices.filter(choice => allowed.has(choiceRecord(choice).id));
+      const chosen = pickChristmasChoice(choices, filters, sessionShown, lastChristmasCategory);
+      if (!chosen) return;
+      const record = choiceRecord(chosen);
+      markShown(record.id);
+      setLastChristmasCategory(chosen.categories[0] ?? null);
+      setReelNames(choices.map(choice => choiceRecord(choice).name));
+      setSkipSpin(Boolean(record.dateNightEvent));
+      setPick(record);
+      return;
+    }
     const chosen = balancedPick(pool, filters, sessionShown, undefined, lastCategory, halloweenActive);
     if (!chosen) return;
     markShown(chosen.id);
@@ -241,6 +355,13 @@ export function DateNightHome() {
   }
 
   function dealOptions() {
+    setOptionsDialogContext(christmasActive || (options !== null && optionsDialogContext === "christmas") ? "christmas" : undefined);
+    if (christmasActive) {
+      const next = pickChristmasOptions(christmas.choices, filters, sessionShown, 4).map(choiceRecord);
+      next.forEach(item => markShown(item.id));
+      setOptions(next.length ? next : null);
+      return;
+    }
     const next = pickDiverseOptions(eligible, filters, sessionShown, 4);
     next.forEach((item) => markShown(item.id));
     setOptions(next.length ? next : null);
@@ -248,6 +369,21 @@ export function DateNightHome() {
   }
 
   function planNight() {
+    setPlanContext(christmasActive || !halloweenActive ? "christmas" : "halloween");
+    if (christmasActive) {
+      const next = pickChristmasOptions(christmas.choices, filters, sessionShown, 2).map(choiceRecord);
+      next.forEach(item => markShown(item.id));
+      setNightPlan(next.length ? next : null);
+      return;
+    }
+    // An open Christmas plan can outlive opt-out or the edition. Replanning
+    // ordinary suggestions keeps their ordinary categories and general layout.
+    if (!halloweenActive) {
+      const next = pickDiverseOptions(eligible, filters, sessionShown, 2);
+      next.forEach(item => markShown(item.id));
+      setNightPlan(next.length ? next : null);
+      return;
+    }
     const thrillPool = eligible.filter((item) =>
       item.activityTypes.some((type) => HALLOWEEN_THRILL_TYPES.includes(type)),
     );
@@ -273,7 +409,7 @@ export function DateNightHome() {
   const radiusIndex = Math.max(0, DISTANCE_OPTIONS.indexOf(filters.radiusMiles));
 
   return (
-    <main className={cn("px-4 pt-5", halloweenActive ? "pb-56" : "pb-48")}>
+    <main className={cn("px-4 pt-5", halloweenActive || christmasActive ? "pb-56" : "pb-48")}>
       {halloweenActive ? null : (
         <header className="mb-6">
           <p className="text-kicker text-accent">Dinner roulette · Date Night</p>
@@ -283,6 +419,13 @@ export function DateNightHome() {
       )}
 
       <LocationControl />
+
+      {christmasControlsVisible ? (
+        <section className="mt-5 flex items-center justify-between gap-3 rounded-xl bg-surface px-4 py-3 shadow-border">
+          <div><p className="text-sm text-fg">Christmas date ideas</p><p className="text-xs text-subtle">Use the published 2026 event schedules</p></div>
+          <Switch checked={christmasEnabled} onCheckedChange={setChristmasEnabled} aria-label="Christmas date ideas" />
+        </section>
+      ) : null}
 
       <section className="mt-6">
         <div className="mb-3 flex items-end justify-between">
@@ -296,8 +439,14 @@ export function DateNightHome() {
       <section className="mt-7">
         <h2 className="mb-3 text-sm text-muted">What sounds fun?</h2>
         <div className="flex flex-wrap gap-2">
+          {christmasActive ? CHRISTMAS_CHIPS.filter(chip => chip.id !== "anything").map(chip => (
+            <button key={chip.id} type="button" aria-pressed={christmasCategories.includes(chip.id)} onClick={() => toggleChristmasCategory(chip.id)}
+              className={cn("chip min-h-11 rounded-full px-3 py-2 text-sm shadow-border transition", christmasCategories.includes(chip.id) ? "bg-accent text-accent-fg" : "bg-surface text-muted")}>
+              {chip.label}
+            </button>
+          )) : null}
           {activityChips.map((chip) => {
-            const selected = chip.id === "anything" ? filters.activityTypes.includes("anything") : filters.activityTypes.includes(chip.id);
+            const selected = christmasActive ? christmasCategories.includes(chip.id) : filters.activityTypes.includes(chip.id);
             const seasonal = isSeasonalDateNightType(chip.id);
             return (
               <button
@@ -322,6 +471,18 @@ export function DateNightHome() {
           })}
         </div>
       </section>
+
+      {christmasActive && christmas.scheduleOnlyChoices.length ? (
+        <section className="mt-7 space-y-4" aria-label="Published event schedules">
+          <h2 className="text-sm text-muted">Published schedules · attendance unconfirmed</h2>
+          {christmas.scheduleOnlyChoices.map(choice => (
+            <article key={choice.preferenceKey} className="rounded-xl bg-surface p-4 shadow-border">
+              <h3 className="mb-3 font-display text-xl text-fg">{choice.presentation.eventName}</h3>
+              <ChristmasEventDetails event={choice.presentation} />
+            </article>
+          ))}
+        </section>
+      ) : null}
 
       <section className="mt-7">
         <div className="mb-3 flex items-end justify-between">
@@ -391,27 +552,27 @@ export function DateNightHome() {
 
       <div className="fixed inset-x-0 bottom-20 z-20 mx-auto w-full max-w-lg px-4 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div className="rounded-xl bg-bg/95 p-3 shadow-border backdrop-blur-sm">
-          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{loading ? "Finding date ideas…" : `${eligible.length} activities match`}</p>
+          <p className="mb-2 text-center text-xs text-subtle tabular-nums">{pickerLoading ? "Finding date ideas…" : `${eligible.length} activities match`}</p>
           {halloweenActive ? (
             <p role="note" className="mb-2 text-center text-xs leading-relaxed text-muted">
               Seasonal listings can change quickly. Double-check the location, dates, and hours before you go.
             </p>
           ) : null}
           <div className="grid grid-cols-2 gap-2">
-            <Button size="lg" className="pick-pulse h-14 gap-1.5 px-2 font-display" onClick={() => roll()} disabled={!eligible.length || loading}><Heart className="size-4" />Pick our date</Button>
-            <Button size="lg" variant="secondary" className="h-14 gap-1.5 px-2" onClick={dealOptions} disabled={!eligible.length || loading}><LayoutGrid className="size-4" />Give us options</Button>
+            <Button size="lg" className="pick-pulse h-14 gap-1.5 px-2 font-display" onClick={() => roll()} disabled={!eligible.length || pickerLoading}><Heart className="size-4" />Pick our date</Button>
+            <Button size="lg" variant="secondary" className="h-14 gap-1.5 px-2" onClick={dealOptions} disabled={!eligible.length || pickerLoading}><LayoutGrid className="size-4" />Give us options</Button>
           </div>
-          {halloweenActive ? (
-            <Button size="lg" variant="secondary" className="mt-2 h-12 w-full" onClick={planNight} disabled={!eligible.length || loading}>
-              Plan the night
+          {halloweenActive || christmasActive ? (
+            <Button size="lg" variant="secondary" className="mt-2 h-12 w-full" onClick={planNight} disabled={!eligible.length || pickerLoading}>
+              {christmasActive ? "Plan our outing" : "Plan the night"}
             </Button>
           ) : null}
         </div>
       </div>
 
-      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} onClose={() => setPick(null)} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); }} skipSpin={skipSpin} mode="date-night" /> : null}
-      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} onClose={() => setOptions(null)} onSelect={(restaurant) => { setOptions(null); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
-      {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
+      {currentPick ? <ResultOverlay restaurant={currentPick as DecoratedRestaurant} reelNames={reelNames} dialogContext={pickDialogContext} onClose={() => { setPick(null); setPickDialogContext(undefined); }} onReroll={() => roll()} onNotTonight={() => { excludeTonight(currentPick.id, currentPick.name); setPick(null); setPickDialogContext(undefined); }} skipSpin={skipSpin} mode="date-night" /> : null}
+      {currentOptions?.length ? <OptionsOverlay restaurants={currentOptions as DecoratedRestaurant[]} dialogContext={optionsDialogContext} onClose={() => { setOptions(null); setOptionsDialogContext(undefined); }} onSelect={(restaurant) => { setPickDialogContext(optionsDialogContext); setOptions(null); setOptionsDialogContext(undefined); setSkipSpin(true); setPick(restaurant as DecoratedDateNightPlace); }} onShuffle={dealOptions} onNotTonight={(restaurant) => excludeTonight(restaurant.id, restaurant.name)} mode="date-night" /> : null}
+      {currentPlan?.length ? <DateNightPlanOverlay plan={currentPlan} context={planContext} onClose={() => setNightPlan(null)} onReplan={planNight} /> : null}
     </main>
   );
 }

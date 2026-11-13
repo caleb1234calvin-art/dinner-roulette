@@ -1,0 +1,1803 @@
+{
+  "provider": {
+    "status": "frozen uncommitted-working-tree validation; exact-head reruns pending root commit",
+    "reviewedParent": {
+      "commit": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+      "tree": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+      "checkout": "/workspace/christmas-final-acceptance",
+      "clean": true
+    },
+    "executable": {
+      "path": "scripts/christmas-provider-uncertainty.test.mjs",
+      "sha256": "c75dcebbaba90e4cc522a4b9b9c05b07af081875a0515174fa73200dfe61f4ae"
+    },
+    "before": {
+      "cwd": "/workspace/christmas-final-acceptance",
+      "command": "node --test --test-isolation=none --test-name-pattern='exact 20' /workspace/christmas-two-corrections/scripts/christmas-provider-uncertainty.test.mjs",
+      "counts": {
+        "tests": 4,
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "log": "/tmp/christmas-two-provider-before.log",
+      "logSha256": "6861c522c81e532fa58614ddb8f4a8859d6bbb60c5d311c0ee2de940d6863c88",
+      "controls": [
+        {
+          "size": 20000,
+          "contradictionPosition": "first",
+          "binding": "conflicting-source",
+          "assertion": "pass"
+        },
+        {
+          "size": 20000,
+          "contradictionPosition": "last",
+          "binding": "conflicting-source",
+          "assertion": "pass"
+        },
+        {
+          "size": 20001,
+          "contradictionPosition": "first",
+          "binding": "bound",
+          "expectedBinding": "incomplete-source-evidence",
+          "assertion": "fail"
+        },
+        {
+          "size": 20001,
+          "contradictionPosition": "last",
+          "binding": "bound",
+          "expectedBinding": "incomplete-source-evidence",
+          "assertion": "fail"
+        }
+      ]
+    },
+    "after": {
+      "cwd": "/workspace/christmas-two-corrections",
+      "command": "node --test --test-isolation=none scripts/christmas-provider-uncertainty.test.mjs",
+      "counts": {
+        "tests": 11,
+        "pass": 11,
+        "fail": 0,
+        "skip": 0
+      },
+      "log": "/tmp/christmas-two-provider-after.log",
+      "logSha256": "b794ab97b72ecfd4ec7c63178c813152bf5e611bcdd077bec25f01bc24d325f9",
+      "supersededByConsolidatedFrozenRuntimeRun": true
+    },
+    "scope": "Provider overflow/network exhaustion, successful mirror isolation, ordinary/public HOLD preservation, cache and radial read/store, exact packet orders, identity merge, false fresh coverage, own source metadata. Cache lifecycle and actual UI continuity are separate suites.",
+    "limitations": [
+      "No candidate commit or hosted exact-head evidence yet; root will rerun and attach receipts.",
+      "Scope-registry or proof-ledger capacity overflow stays failclosed for the mounted cache/session; a new session and complete fresh evidence are required.",
+      "Recovery requires matching origin/semantic/patch scope or broader same-origin legacy radius; shifted or smaller acquisitions do not discharge a prior scope.",
+      "Opaque legacy rows retain accepted compatibility only when no known source failure or per-ID proof debt exists; they never establish scoped fresh completeness."
+    ],
+    "packetConstruction": {
+      "schoolFillers": 19998,
+      "duplicateFillersAt20000": 1,
+      "contradictoryReviewedObjectV3School": 1,
+      "onlyDifferenceAt20001": "one additional duplicate of the first school filler",
+      "contradictionOrders": [
+        "first",
+        "last"
+      ],
+      "oversizedMirrorsAttempted": 4
+    },
+    "frozenFocusedRegression": {
+      "cwd": "/workspace/christmas-two-corrections",
+      "command": "node --test --test-isolation=none scripts/christmas-provider-uncertainty.test.mjs scripts/christmas-uncertainty-cache.test.mjs scripts/date-night-hedged-provider.test.mjs scripts/date-night-cache.test.mjs scripts/date-night-radial-cache.test.mjs scripts/date-night-radial-session.test.mjs scripts/date-night-radial-search.test.mjs",
+      "counts": {
+        "tests": 142,
+        "pass": 142,
+        "fail": 0,
+        "skip": 0
+      },
+      "log": "/tmp/christmas-two-provider-regression.log",
+      "logSha256": "8940c2f76d9dc37f0151945593537446e8c7db82e80f01cca67b5fee70ec1a76"
+    },
+    "cacheLifecycle": {
+      "created_at": "2026-11-13T02:01:38.080506+00:00",
+      "reviewed_parent": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+      "reviewed_tree": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+      "baseline_cwd": "/workspace/christmas-final-acceptance",
+      "candidate_cwd": "/workspace/christmas-two-corrections",
+      "test_executable": "node --test --test-isolation=none /workspace/christmas-two-corrections/scripts/christmas-uncertainty-cache.test.mjs",
+      "before": {
+        "tests": 34,
+        "pass": 2,
+        "fail": 32,
+        "skipped": 0
+      },
+      "after": {
+        "tests": 34,
+        "pass": 34,
+        "fail": 0,
+        "skipped": 0
+      },
+      "existing_regressions": {
+        "tests": 94,
+        "pass": 94,
+        "fail": 0,
+        "skipped": 0
+      },
+      "files_sha256": {
+        "src/lib/date-night/cache.ts": "6f6b2581cbdfb9e3887f62df1bb6fad691a3a414adfe4dee131c5a415adb41be",
+        "src/lib/date-night/radial-cache.ts": "a8e395c07adaf7e491fb0b331442ae6bac074271c3d1854bf30e134b0f19ba62",
+        "src/lib/date-night/radial-session.ts": "67c5188000bf90cb343994b242c122ebf0472401a719a54527103cc7796a09e1",
+        "scripts/christmas-uncertainty-cache.test.mjs": "7e60124882b0e6e8d2f6da6f19e74af73bd95253126e84e122b3f8633dc39e34"
+      },
+      "logs_sha256": {
+        "/tmp/christmas-two-uncertainty-cache-before.log": "055e6da0ca9aedf3709c5badf9cc5ef00f1bc76de8cdaa98a63ef36031a86adb",
+        "/tmp/christmas-two-uncertainty-cache.log": "1656defdb4151cb067db7427b43c5fd4b20dc7682c337d41b6738bfa4b155f10",
+        "/tmp/christmas-two-cache-regressions.log": "403c4ff6d9ff1918e5dc5848fbb397b51d114ed37990944e96067ec1334504a5",
+        "/tmp/christmas-two-cache-typecheck.log": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f",
+        "/tmp/christmas-two-cache-lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "limitation": "Scope registry or canonical-ID debt capacity overflow remains fail-closed for the mounted cache lifetime; recovery requires a new session and complete fresh evidence."
+    },
+    "frozenFilesSha256": {
+      "src/lib/date-night/types.ts": "8ba9a991c5069fce8202bbb0b1d157d152bdb0234c6487d588e8f977d05c924f",
+      "src/lib/date-night/source-observations.ts": "6037cd1e9055d03f71ac51454ba9b4329bbed1cb51f88d541d42815550fb9384",
+      "src/lib/date-night/search.ts": "f6a859dd6d6444795688dfe52cb9ff1b2b04ba96cc8679f8d351265f77668a15",
+      "src/lib/date-night/identity.ts": "ede97814daac3b06549f7e400e2c561e6f170cda92e5a13fc49417aa8b002f1f",
+      "src/lib/date-night/christmas-binding.ts": "c19ab87f18bc9fc599da36f69d5c4031ddf7f5bd30ec1bebf31c558c543cbc28",
+      "src/lib/date-night/cache.ts": "6f6b2581cbdfb9e3887f62df1bb6fad691a3a414adfe4dee131c5a415adb41be",
+      "src/lib/date-night/radial-cache.ts": "a8e395c07adaf7e491fb0b331442ae6bac074271c3d1854bf30e134b0f19ba62",
+      "src/lib/date-night/radial-session.ts": "67c5188000bf90cb343994b242c122ebf0472401a719a54527103cc7796a09e1",
+      "scripts/christmas-provider-uncertainty.test.mjs": "c75dcebbaba90e4cc522a4b9b9c05b07af081875a0515174fa73200dfe61f4ae",
+      "scripts/christmas-uncertainty-cache.test.mjs": "7e60124882b0e6e8d2f6da6f19e74af73bd95253126e84e122b3f8633dc39e34"
+    },
+    "architecture": [
+      "A bounded scoped uncertainty registry is distinct from positive/negative OSM observations and survives empty responses, TTL and LRU.",
+      "Known uncertainty follows affected physical venues across nearby origins; unrelated distant scopes do not poison them.",
+      "A separately bounded canonical-ID proof ledger retains already-marked identity obligations after a global empty scope settles, across entry expiry/eviction and legacy display-only replacements.",
+      "Only complete query-owned category/scope evidence plus fresh own-ID OSM revision metadata inside the acquisition footprint can rehabilitate the identity. Cache-hit, malformed descriptors and opaque legacy data cannot.",
+      "Registry limit128 scopes and proof-ledger limit20,000 canonical IDs(default); overflow remains explicitly failclosed for the mounted cache/session."
+    ]
+  },
+  "selection": {
+    "purpose": "Same executable before/after reproduction for Issue93 comment6835518155 selected-event continuity under actual provider evidence loss.",
+    "parent": {
+      "commit": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+      "tree": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+      "worktree": "/workspace/christmas-final-acceptance",
+      "clean": true
+    },
+    "harness_sha256": {
+      "scripts/christmas-selection-continuity.test.mjs": "988d9bb07d99ae1854b55bddb6ed902cde5f14353eb95bcafeaca7fc646d5a81",
+      "scripts/test-support/christmas-event-search-fixture.ts": "ebf406cbc58d9fb2cd10669c83e0b7cada0a9f6463c77d6541dc8f60967ceac1",
+      "scripts/test-support/christmas-provider-loss-replay.mjs": "6915f3e41fd1cf1af5163d6cf965b29b06dfc577197029589ef2040f8e956518"
+    },
+    "before": {
+      "command": "CHRISTMAS_SELECTION_SOURCE_ROOT=/workspace/christmas-final-acceptance node --test --test-isolation=none scripts/christmas-selection-continuity.test.mjs",
+      "exit": 1,
+      "log": "/tmp/christmas-two-selection-before-full.log",
+      "log_sha256": "fd76f13698c29abfc14947bffed393124a56b3cf2a9c77f69bf1bb4e908f8ee5",
+      "tests": 40,
+      "pass": 31,
+      "fail": 9,
+      "skipped": 0,
+      "expected_failures": "9: 3 surfaces times oversized-first, oversized-last and four exhausted mirrors. Failure asserts incomplete evidence cannot retain Sparkle or substitute ordinary park Directions."
+    },
+    "after": {
+      "command": "node --test --test-isolation=none scripts/christmas-selection-continuity.test.mjs",
+      "exit": 0,
+      "log": "/tmp/christmas-two-selection-after-full.log",
+      "log_sha256": "5ba887fab1c6628df5d93b693c48d0a18ff012484eefc41b377d059c7ca4ed84",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "source": "Uncommitted candidate worktree; root must rerun after exact candidate commit."
+    },
+    "controls": [
+      "All28 original tests remain unchanged and pass both before/after.",
+      "Each real search response contains one successful reviewed outdoor park, so an empty discovery pool cannot trigger retirement.",
+      "9 new cases verify retirement on source uncertainty, no automatic revival on complete fresh proof, and explicit new selection can bind.",
+      "3 new controls retain ordinary cinema and Result reroll / Options shuffle / Plan replan callbacks.",
+      "No eligible school is returned. Synthetic ordinary cinema is separate from provider identity evidence."
+    ],
+    "provider_replay_before": {
+      "appRoot": "/workspace/christmas-final-acceptance",
+      "query": {
+        "lat": 37.1734644,
+        "lon": -94.3130247,
+        "radiusMiles": 15,
+        "activityTypes": [
+          "anything"
+        ],
+        "spookySeasonEnabled": false,
+        "patchId": "radial-v1:core"
+      },
+      "replays": [
+        {
+          "mode": "complete",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 0,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "exact-limit",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20000,
+          "binding": "conflicting-source",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "oversized-first",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20001,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "oversized-last",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20001,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "exhausted",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": null,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "complete-culture",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 0,
+            "entertainment": 0
+          },
+          "culturePacketElements": 1,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        }
+      ],
+      "scope": "Real selected-checkout search and binding. Synthetic provider packets; no live request. Browser fixtures add a separately identified ordinary cinema control."
+    },
+    "provider_replay_after": {
+      "appRoot": "/workspace/christmas-two-corrections",
+      "query": {
+        "lat": 37.1734644,
+        "lon": -94.3130247,
+        "radiusMiles": 15,
+        "activityTypes": [
+          "anything"
+        ],
+        "spookySeasonEnabled": false,
+        "patchId": "radial-v1:core"
+      },
+      "replays": [
+        {
+          "mode": "complete",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 0,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "exact-limit",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20000,
+          "binding": "conflicting-source",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "oversized-first",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20001,
+          "binding": "incomplete-source-evidence",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "oversized-last",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": 20001,
+          "binding": "incomplete-source-evidence",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "exhausted",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 4,
+            "outdoor": 1,
+            "entertainment": 1
+          },
+          "culturePacketElements": null,
+          "binding": "incomplete-source-evidence",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        },
+        {
+          "mode": "complete-culture",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "movies",
+              "museum"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "calls": {
+            "culture": 1,
+            "outdoor": 0,
+            "entertainment": 0
+          },
+          "culturePacketElements": 1,
+          "binding": "bound",
+          "retainedParkCount": 1,
+          "schoolSelectable": false
+        }
+      ],
+      "scope": "Real selected-checkout search and binding. Synthetic provider packets; no live request. Browser fixtures add a separately identified ordinary cinema control."
+    },
+    "limitations": [
+      "Home unit harness replaces React scheduling, leaf overlays, and radial transport; browser agent separately exercises real modal and same-query radial paths.",
+      "No publication flags, artwork, production configuration, or runtime Home code changed by this agent.",
+      "Workingtree after receipt is preliminary; independent acceptance requires final exact-head CI and review."
+    ],
+    "browser_transport_notes": [
+      "Full actual source patch/discovery/identity envelopes remain unchanged. No source uncertainty is manufactured.",
+      "Provider-complete chooses actual movies/museum-only acquisition on narrowed recovery retry, with reviewed v2 as fresh context evidence.",
+      "Adapter rejects mismatched query categories, origin, radius or patch. Held same-query delivery APIs prove prior selection remains present while request is pending.",
+      "Browser agent owns integration and exact baseline/candidate browser receipts; this receipt does not claim browser completion."
+    ]
+  },
+  "accessibility": {
+    "kind": "PR97 final two corrections: isolated browser reproduction and candidate evidence",
+    "recordedAt": "2026-11-13T02:07:36.378714+00:00",
+    "reviewedParent": {
+      "commit": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+      "tree": "d01e34d1ab43e76b9108da53874a534ffc66858d"
+    },
+    "harnessFingerprint": "351da72553c6e54a6dcc9c83898699ed1197a21741247e1c1ec332b0a21598bc",
+    "runs": {
+      "optionsBefore": {
+        "receiptPath": "/tmp/christmas-two-options-before-final/verdict.json",
+        "receiptSha256": "c25393058fb7d3ac17f8b2aa1b1bd8d5dac3ce168a8643f3a15b129f4553c47e",
+        "applicationCommitAtRun": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+        "applicationTreeAtRun": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+        "applicationFingerprint": "edefbe5e2802b82d986021e4915af7672297dd10f499dbf534b57d791d815e15",
+        "dirtyWorkingTree": false,
+        "passed": false,
+        "cases": 26,
+        "passingCases": 2,
+        "failingCases": 24,
+        "integrityChecks": [
+          {
+            "name": "no page errors or external requests",
+            "passed": true
+          },
+          {
+            "name": "source and harness remained stable during acceptance",
+            "passed": true
+          }
+        ],
+        "providerReplay": {
+          "appRoot": "/workspace/christmas-final-acceptance",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "replays": [
+            {
+              "mode": "complete",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 0,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exact-limit",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20000,
+              "binding": "conflicting-source",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-first",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-last",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exhausted",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": null,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "complete-culture",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 0,
+                "entertainment": 0
+              },
+              "culturePacketElements": 1,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            }
+          ],
+          "scope": "Real selected-checkout search and binding. Synthetic provider packets; no live request. Browser fixtures add a separately identified ordinary cinema control."
+        },
+        "providerTransitions": [],
+        "accessibility": {
+          "auditCount": 24,
+          "axeViolationCount": 24,
+          "axeViolationRules": [
+            "button-name"
+          ],
+          "originalAxeIncompleteRuleCount": 4,
+          "originalAxeIncompleteNodeCount": 12,
+          "independentContrastReviewCount": 12,
+          "resolvedContrastReviewCount": 12,
+          "unresolvedIncompleteNodeCount": 0,
+          "contrastReviews": [
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                5.772
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                5.772
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                8.549
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                8.549
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            }
+          ]
+        },
+        "optionActionCases": 24,
+        "pageErrors": [],
+        "externalRequests": []
+      },
+      "providerBefore": {
+        "receiptPath": "/tmp/christmas-two-provider-before-final/verdict.json",
+        "receiptSha256": "f5a25ca984845f75213c062b181cca41e670e13b3a765a1e0bae29221cea2d51",
+        "applicationCommitAtRun": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+        "applicationTreeAtRun": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+        "applicationFingerprint": "edefbe5e2802b82d986021e4915af7672297dd10f499dbf534b57d791d815e15",
+        "dirtyWorkingTree": false,
+        "passed": false,
+        "cases": 11,
+        "passingCases": 2,
+        "failingCases": 9,
+        "integrityChecks": [
+          {
+            "name": "no page errors or external requests",
+            "passed": true
+          },
+          {
+            "name": "source and harness remained stable during acceptance",
+            "passed": true
+          }
+        ],
+        "providerReplay": {
+          "appRoot": "/workspace/christmas-final-acceptance",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "replays": [
+            {
+              "mode": "complete",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 0,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exact-limit",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20000,
+              "binding": "conflicting-source",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-first",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-last",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exhausted",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": null,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "complete-culture",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 0,
+                "entertainment": 0
+              },
+              "culturePacketElements": 1,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            }
+          ],
+          "scope": "Real selected-checkout search and binding. Synthetic provider packets; no live request. Browser fixtures add a separately identified ordinary cinema control."
+        },
+        "providerTransitions": [
+          {
+            "surface": "result",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "result",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "result",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "options",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "options",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "options",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "plan",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "plan",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          },
+          {
+            "surface": "plan",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": false
+          }
+        ],
+        "accessibility": {
+          "auditCount": 0,
+          "axeViolationCount": 0,
+          "axeViolationRules": [],
+          "originalAxeIncompleteRuleCount": 0,
+          "originalAxeIncompleteNodeCount": 0,
+          "independentContrastReviewCount": 0,
+          "resolvedContrastReviewCount": 0,
+          "unresolvedIncompleteNodeCount": 0,
+          "contrastReviews": []
+        },
+        "optionActionCases": 0,
+        "pageErrors": [],
+        "externalRequests": []
+      },
+      "candidateBeforeCommit": {
+        "receiptPath": "/tmp/christmas-two-full-browser-frozen/verdict.json",
+        "receiptSha256": "4ff7909318d3a800ea284635d06497836ff2a89edf7a467a18afcf56f845f2ed",
+        "applicationCommitAtRun": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+        "applicationTreeAtRun": "d01e34d1ab43e76b9108da53874a534ffc66858d",
+        "applicationFingerprint": "ac23582e491d0a888f6b7e69f711f152655ad7f26dc325dff517446c913bee30",
+        "dirtyWorkingTree": true,
+        "passed": true,
+        "cases": 239,
+        "passingCases": 239,
+        "failingCases": 0,
+        "integrityChecks": [
+          {
+            "name": "no page errors or external requests",
+            "passed": true
+          },
+          {
+            "name": "source and harness remained stable during acceptance",
+            "passed": true
+          }
+        ],
+        "providerReplay": {
+          "appRoot": "/workspace/christmas-two-corrections",
+          "query": {
+            "lat": 37.1734644,
+            "lon": -94.3130247,
+            "radiusMiles": 15,
+            "activityTypes": [
+              "anything"
+            ],
+            "spookySeasonEnabled": false,
+            "patchId": "radial-v1:core"
+          },
+          "replays": [
+            {
+              "mode": "complete",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 0,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exact-limit",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20000,
+              "binding": "conflicting-source",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-first",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "incomplete-source-evidence",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "oversized-last",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": 20001,
+              "binding": "incomplete-source-evidence",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "exhausted",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "anything"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 4,
+                "outdoor": 1,
+                "entertainment": 1
+              },
+              "culturePacketElements": null,
+              "binding": "incomplete-source-evidence",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            },
+            {
+              "mode": "complete-culture",
+              "query": {
+                "lat": 37.1734644,
+                "lon": -94.3130247,
+                "radiusMiles": 15,
+                "activityTypes": [
+                  "movies",
+                  "museum"
+                ],
+                "spookySeasonEnabled": false,
+                "patchId": "radial-v1:core"
+              },
+              "calls": {
+                "culture": 1,
+                "outdoor": 0,
+                "entertainment": 0
+              },
+              "culturePacketElements": 1,
+              "binding": "bound",
+              "retainedParkCount": 1,
+              "schoolSelectable": false
+            }
+          ],
+          "scope": "Real selected-checkout search and binding. Synthetic provider packets; no live request. Browser fixtures add a separately identified ordinary cinema control."
+        },
+        "providerTransitions": [
+          {
+            "surface": "result",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "result",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "result",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "options",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "options",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "options",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "plan",
+            "mode": "oversized-first",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-first",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "plan",
+            "mode": "oversized-last",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-oversized-last",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          },
+          {
+            "surface": "plan",
+            "mode": "exhausted",
+            "pendingSelectionRetained": true,
+            "delivery": {
+              "mode": "provider-exhausted",
+              "retainedPark": true
+            },
+            "closedAfterDelivery": true
+          }
+        ],
+        "accessibility": {
+          "auditCount": 112,
+          "axeViolationCount": 0,
+          "axeViolationRules": [],
+          "originalAxeIncompleteRuleCount": 4,
+          "originalAxeIncompleteNodeCount": 12,
+          "independentContrastReviewCount": 12,
+          "resolvedContrastReviewCount": 12,
+          "unresolvedIncompleteNodeCount": 0,
+          "contrastReviews": [
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                5.772
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                5.772
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px light reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                8.549
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark no-preference date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".text-xs.mt-2.text-subtle",
+              "resolved": true,
+              "ratios": [
+                8.549
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-4:nth-child(2)",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            },
+            {
+              "label": "512px dark reduce date-night-active",
+              "surface": "ordinary-only Christmas Options",
+              "target": ".mt-3",
+              "resolved": true,
+              "ratios": [
+                12.761
+              ],
+              "method": "Independent solid-background color ratio and text-range visibility/hit tests; original axe incomplete retained."
+            }
+          ]
+        },
+        "optionActionCases": 42,
+        "pageErrors": [],
+        "externalRequests": []
+      }
+    },
+    "unitControls": {
+      "test": "scripts/christmas-options-accessibility.test.mjs",
+      "scriptSha256": "0d69f324fbb144108b1a0b3ea877fbd058e4f4e3ab3ad40d168e73773f69b8ac",
+      "before": {
+        "command": "CHRISTMAS_OPTIONS_SOURCE_ROOT=/workspace/christmas-final-acceptance node scripts/christmas-options-accessibility.test.mjs",
+        "passing": 0,
+        "failing": 4,
+        "log": "/tmp/christmas-two-options-unit-before.log",
+        "logSha256": "b497cd46073f1e3f5c8cb731e74f2356b73cf26a42c715c763929dd1ac276d2e"
+      },
+      "after": {
+        "command": "node scripts/christmas-options-accessibility.test.mjs",
+        "passing": 4,
+        "failing": 0,
+        "log": "/tmp/christmas-two-options-unit-after.log",
+        "logSha256": "4b6535eb2ca4d401729c344eb404df2907b0d2eb6d19b4d8ddb62952491535c5"
+      }
+    },
+    "architecture": [
+      "One ordinary selection button contains the unchanged image and visible summary, with a native sr-only Choose prefix; Not tonight and seasonal disclosure remain separate.",
+      "Selection outline is drawn inward to remain visible inside the overflow-hidden card.",
+      "Browser transport receives results from each selected checkout's actual provider search under controlled packets; full source envelopes and exact acquisition scope are preserved.",
+      "Same-query held retries prove selections survive while a request is pending and retire only after delivered uncertainty, despite retained reviewed v2. Fresh complete evidence requires an explicit new user selection."
+    ],
+    "limitations": [
+      "Candidate run precedes the new commit: its source SHA/tree still name d933 plus the recorded dirty working-tree application fingerprint. Exact new-head local and hosted evidence must follow.",
+      "Original axe elmPartiallyObscuring incompletes are retained. The candidate has zero axe violations and twelve independently verified contrast nodes, not zero raw axe incompletes.",
+      "Broad WCAG A/AA scans cover all five Christmas surfaces, event rating, mixed Options and ordinary-only Christmas Options. Off-season ordinary Options checks cover names, focus, input paths and overflow only; no broader ordinary-page accessibility claim.",
+      "Synthetic browser placement and provider packets; no public eligibility, physical Android/WebView, combined V4 or assistive-technology acceptance is claimed.",
+      "Intermediate exploratory runs failed on the initial partial ARIA label, expected source-fingerprint changes during parallel edits, and recovery fixture mismatches; the final frozen executable receipts supersede them without erasing their external logs."
+    ]
+  },
+  "receiptScope": "Before/after working-tree evidence for the frozen correction; final exact commit, clean reruns and hosted CI receipts are recorded in the draft PR. This file cannot self-reference its own eventual commit.",
+  "localPrecommit": {
+    "repository": {
+      "passed": 1462,
+      "skipped": 4,
+      "failed": 0
+    },
+    "application": {
+      "passed": 75,
+      "failed": 0
+    },
+    "typecheck": "pass",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeBuild": "pass; VITE_AUTH_ENABLED=true direct Vite production build, no migrations",
+    "androidSourceIcons": "pass",
+    "nativePython": 17,
+    "existingEventBrowser": 31,
+    "ordinaryHalloweenRadialBrowser": 10,
+    "fullNewBrowser": 239,
+    "buildProof": {
+      "schemaVersion": 1,
+      "status": "BUILT",
+      "authFlag": "true",
+      "source": {
+        "sha256": "13010bf7dfd548fdb06a537f8d45eba4ae96312aa1735ba2760426dc33ec7210",
+        "files": 582
+      },
+      "startedAt": "2026-11-13T02:03:39.422Z",
+      "output": {
+        "sha256": "f1fb2ea4f9bc449a440f46f1ab9cb50809bac1e8360b6f38f02e38e3c6500f05",
+        "files": 202
+      },
+      "completedAt": "2026-11-13T02:03:44.772Z"
+    },
+    "logs": {
+      "/tmp/christmas-two-precommit/lint.log": {
+        "sha256": "2e8bed8d0509b6697c3ce021bb29ad8c1895691bc8800bbad68a82dbf5ff1d0e"
+      },
+      "/tmp/christmas-two-precommit/safe-build.log": {
+        "sha256": "189ea9753b06e6bbe7e576f150c0a6ab09772061fba3f84d81a532c4a60d51ad"
+      },
+      "/tmp/christmas-two-precommit/repository-application.log": {
+        "sha256": "a912fe270295a0b3b0110667fe0cf6b4aa4661cf4ed427610853f38c995cc1a2"
+      },
+      "/tmp/christmas-two-precommit/build-capture.log": {
+        "sha256": "db810d11a05748d702765463317de3ff70584aa44106d251dfa7a79a34f08564"
+      },
+      "/tmp/christmas-two-precommit/build-complete.log": {
+        "sha256": "df498fb0b9d24a35dcd19bb2b5425d21780f9efe9b48b0439c818f1def2cf323"
+      },
+      "/tmp/christmas-two-precommit/android-source.log": {
+        "sha256": "e26719ab67e8cbaac207dae7b40418d101c668a8a62028a12b7b0fcd95b6e76c"
+      },
+      "/tmp/christmas-two-precommit/native-python.log": {
+        "sha256": "9eb929715e09dab33093165c3270151a1a39b215b1f2fde18923d4ace385fd8d"
+      },
+      "/tmp/christmas-two-precommit/typecheck.log": {
+        "sha256": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+      },
+      "/tmp/christmas-two-event-precommit/verdict.json": {
+        "sha256": "038dacfdb4b7ec2ac46bc36583275c1128aa7301c1a970dc31c16c4a61a895bf"
+      },
+      "/tmp/christmas-two-radial-precommit/verdict.json": {
+        "sha256": "57bc77347048969ddf4d3f7bacfadfe59aecf0a56c66128daa4cd507272de9e4"
+      }
+    }
+  },
+  "firstHeadHostedRegression": {
+    "commit": "726cf305d7424dda9795cb5c05992d7dd165b834",
+    "tree": "3a4112d77dbf6ebf1b8999af20cbc95c21fc8701",
+    "generalRun": 43350970249,
+    "casinoJob": 131641669795,
+    "result": "casino browser failure; other unfinished jobs may be superseded, final outcomes recorded in PR",
+    "cause": "Positional last button selects Not tonight after consolidation; unchanged Directions assertion times out.",
+    "android": "Unsigned readiness succeeded; protected signing skipped. These results do not validate a later child.",
+    "localBefore": {
+      "commit": "726cf305d7424dda9795cb5c05992d7dd165b834",
+      "tree": "3a4112d77dbf6ebf1b8999af20cbc95c21fc8701",
+      "workingTree": "",
+      "command": "CI=true VITE_AUTH_ENABLED=true CASINO_BROWSER_EXECUTABLE_PATH=/usr/bin/chromium node scripts/casino-browser-smoke.mjs",
+      "expectedFailure": "The positional final button selects Not tonight; the canonical Result/Directions assertion times out.",
+      "files": {
+        "casino-browser-smoke.mjs": "f488e9742fd990592a1375ca9a1858a171fb90c5967a0baee0fe8e657106f819",
+        "desktop-options.png": "74da0bdc0d3041cec0ff6172b19bfbe37f3a034d2f2be663214e2dfea07f2f97",
+        "build-proof.json": "fbfc22a6809dc7064b0f9d25306e20c77965f9f9c6463e13ccd3b8f45ba9ceeb",
+        "casino-browser-live-check.mjs": "ee30abe213d0ea9ee2de62529cb3be1368210bb98f538bd6bd2551428088bf43",
+        "verdict.json": "6741e144caf71536d299b68f621e69be27982646a9b047ea6a6839e4a2724627",
+        "failure.png": "c6909e02a6aa61ad3ebccb7ce3e6c4e904f3c5e224f16aa56c5b3aef9752d040",
+        "server.log": "b96b887c9cefe09bab38c33351f1634f68dbf11037cec67a440f9b2b1ee18ff9"
+      }
+    },
+    "beforeVerdictSha256": "6741e144caf71536d299b68f621e69be27982646a9b047ea6a6839e4a2724627",
+    "fixtureCorrection": "Both casino scripts select the one accessible Choose + exact first option name. Existing Directions/canonical result/reroll/exclusion assertions preserved; live-check adds exact Result heading.",
+    "optionalLiveProviderCasinoCheck": "not run",
+    "correctedSmokePrecommit": {
+      "checks": [
+        "desktop: completed the four-step first-run tour",
+        "desktop: casino filter and saved-catalog outage fallback",
+        "desktop: strict open-now excludes unknown hours; empty state disables selection",
+        "desktop: compiled fallback matches 19 current canonical casinos",
+        "desktop: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+        "desktop: denied geolocation opens a visible error and manual recovery form",
+        "desktop: manual location, no-catalog/provider failure and favorites empty states",
+        "desktop: non-casino navigation, settings and no horizontal overflow or page errors",
+        "mobile: completed the four-step first-run tour",
+        "mobile: casino filter and saved-catalog outage fallback",
+        "mobile: strict open-now excludes unknown hours; empty state disables selection",
+        "mobile: compiled fallback matches 3 current canonical casinos",
+        "mobile: unique canonical options, option selection, map destination, reroll and persisted exclusion",
+        "mobile: denied geolocation opens a visible error and manual recovery form",
+        "mobile: manual location, no-catalog/provider failure and favorites empty states",
+        "mobile: non-casino navigation, settings and no horizontal overflow or page errors"
+      ],
+      "errors": [],
+      "log": "/tmp/christmas-two-casino-after.log",
+      "logSha256": "79adc21f827b0369538fce63ad1f7d05abc430297e69da5df585f96b8dac5e58",
+      "buildProof": {
+        "schemaVersion": 1,
+        "status": "BUILT",
+        "authFlag": "true",
+        "source": {
+          "sha256": "7896af48629509285a9f4e3c615b76c15eb008c51a074d2c735f35d784139245",
+          "files": 582
+        },
+        "startedAt": "2026-11-13T02:24:10.051Z",
+        "output": {
+          "sha256": "64a1bad8745855ba820bc970454a92cbaf48a7ed63fb52e5f2e97a0b465acc2c",
+          "files": 202
+        },
+        "completedAt": "2026-11-13T02:24:13.827Z"
+      },
+      "status": "Working-tree preliminary; final exact child rerun required."
+    },
+    "followupPrecommitChecks": {
+      "repositoryPass": 1462,
+      "inheritedSkips": 4,
+      "applicationPass": 75,
+      "typecheck": "pass",
+      "lint": "0 errors / 6 inherited warnings",
+      "androidSourceIcons": "pass",
+      "nativePythonPass": 17,
+      "safeMigrationFreeBuild": "pass"
+    }
+  },
+  "secondHeadHostedGeometryFailure": {
+    "receipt": {
+      "sourceSha": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+      "sourceTree": "d7f54508fb0d3211949de15baf0957ba8b4e8990",
+      "jobId": 131645655093,
+      "runId": 43352190036,
+      "conclusion": "failure",
+      "comparisons": 774,
+      "errorCount": 276,
+      "distinctMessages": [
+        "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'relative flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border'\n- 'flex min-h-[17rem] flex-col overflow-hidden rounded-xl bg-surface shadow-border'\n\n    at file:///home/runner/work/dinner-roulette/dinner-roulette/scripts/seasonal-card-layout-browser.mjs:364:14"
+      ],
+      "errorsByWidth": {
+        "320": 92,
+        "390": 92,
+        "512": 92
+      },
+      "errorsByKind": {
+        "options": 276
+      },
+      "verdict": "/workspace/christmas-two-ci-artifacts/final/geometry-json/seasonal-card-layout/verdict.json",
+      "archive": "/workspace/christmas-two-ci-artifacts/final/geometry-14005422146.zip",
+      "artifactId": 14005422146,
+      "artifactDigest": "sha256:76b6e643c877542a43c9db21db1b3b1368ce15cc7dd2c1ce9c6b80c1e9aba534",
+      "digestVerified": true,
+      "zipCrcVerified": true,
+      "recordedAt": "2026-11-13T02:50:14.661680+00:00"
+    },
+    "receiptSha256": "7cde8a56f5be9886189e253b86d1b410f5579642822741dc20f600b7eab8cbcb",
+    "independentMeasurementReview": "All276 Options numerical comparisons replayed: zero ordinary width/height deltas; media, overflow and seasonal growth limits pass. Only exact shell class differs.",
+    "correction": "Restore exact original article class; use relative inner wrapper for one named selection and sibling exclusion, independent disclosure. No geometry assertions or limits changed.",
+    "sourceProjection": "Only Options explicit reversal updated; all five files recover immutable d933 bytes. Historical44/layout4 pass; original hashes unchanged.",
+    "validation": "Corrected full Options probe276/276 with2208measurements/0failures; all historical class/numeric limits unchanged. Final clean-head local suites and hosted full CI pending new commit.",
+    "afterCorrection": {
+      "receipt": {
+        "kind": "Preserve historical Options shell while retaining one accessible selection action",
+        "recordedAt": "2026-11-13T03:01:45.653140+00:00",
+        "runtimeParent": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+        "before": {
+          "hostedJob": "131645655093",
+          "artifact": "14005422146",
+          "verdictPath": "/workspace/christmas-two-ci-artifacts/final/geometry-json/seasonal-card-layout/verdict.json",
+          "verdictSha256": "137d4023c79739d4d5d92b0a0ee71fe5de02e5dfc0d5ed1e27a22c63ff3e3e0a",
+          "comparisonCount": 774,
+          "failingOptionsComparisons": 276,
+          "cause": "Only the additional article class token relative violates the exact historical shell class assertion; all captured ordinary dimensions and later seasonal numeric bounds already pass.",
+          "ordinaryHeightDeltaPx": 0,
+          "maximumSeasonalExcessPx": 0.0
+        },
+        "correction": "Restore the exact historical article class. A relative flex wrapper contains the existing unified named selection and separate sibling Ban; disclosure remains outside. No inline positioning bypass, palette, artwork or geometry assertion change.",
+        "afterTargetedProbe": {
+          "passed": true,
+          "scenarioCount": 276,
+          "measurementCount": 2208,
+          "errors": 0,
+          "prior": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+          "baseline": "2fe002e6bdc9c2c42ecfc0d61e4de08df20d0d81",
+          "browser": "156.0.8078.79",
+          "maximumSeasonalExcessPx": {
+            "matchedOrdinary": 0,
+            "currentShortStandard": 0,
+            "historicalShortStandard": 0
+          },
+          "exactPriorCurrentRectDeltaPx": 0,
+          "exactHistoricalOrdinarySizeDeltaPx": 0,
+          "currentSeasonalHeights": [
+            272
+          ],
+          "buildSourceSha256": "51f68092a6d41c9538b4bb49b556edefebe5bab92e3c9e457aa4e177a22ebf0b",
+          "buildOutputSha256": "340fc739815e3873c01846ec0e6327b3059e45a7d6faed3c3152c4445368897d",
+          "cssSha256": "60a2e524d1a84a79dedcce32244434ddaacf5c3ceba2b753bea4fd91b68129c9",
+          "sourceHashes": {
+            "currentOptions": "981fc0cb92d4059f43696350b5920269c752bc7932db504519117e5897f8f7b7",
+            "priorOptions": "2cf44a34189a128b318920e13eab3d6f82e01d4481792cf8261c751121adf028",
+            "historicalOptions": "58e0b82e4f8d70b1c4134ac26d1cc33352fddda8e8ff393138d931c1c61c4df3",
+            "harness": "7dbd97fe09a39db0d30771b203cbd437ccc201283682784ccec00572fec96efc"
+          },
+          "frozenIdsSha256": "2266d83c16938d9efcbe41121676ce37778d376cdcea0c273a86ba77214713fa",
+          "codePath": "/tmp/options-full-geometry-probe.mjs",
+          "codeSha256": "77ce81dc20d4f0a2bb4f712261dc79f62b64974e7b11b038feaa29f50ea22471",
+          "evidencePath": "/tmp/options-full-geometry-evidence.json",
+          "evidenceSha256": "bf52cd901a2a8c2bc3a0230e0a4f0ef78e057ee0f909d77af5eb232e23944392"
+        },
+        "unitControls": {
+          "log": "/tmp/christmas-two-options-wrapper-unit.log",
+          "logSha256": "d53df84871fc1a62dab17d5cfe317c5932e2679b884bffa7f93aaa425c779e19",
+          "passed": 4,
+          "failed": 0
+        },
+        "preservedOfficialGeometryGate": {
+          "path": "scripts/seasonal-card-layout-browser.mjs",
+          "byteIdenticalTo408": true,
+          "sha256": "7dbd97fe09a39db0d30771b203cbd437ccc201283682784ccec00572fec96efc",
+          "ordinaryHeightEqualityUnchanged": true,
+          "seasonalOptionsLimitPx": 0.5
+        },
+        "candidateState": {
+          "head": "4088139fe6ba3de64f23d901821bbd7eb3fc0cd5",
+          "dirtyWorkingTree": true,
+          "optionsSourceSha256": "981fc0cb92d4059f43696350b5920269c752bc7932db504519117e5897f8f7b7"
+        },
+        "limits": [
+          "Expanded probe is actual-source precommit evidence, not the full official774-scenario screenshot suite or new-head hosted CI. The unchanged complete gate must run on the new exact commit.",
+          "Local Chromium156 uses the same final production stylesheet for historical,408 and current comparisons; hosted browser version may differ.",
+          "No public attraction status, calendar behavior, preferences, release configuration or V4 artwork changed."
+        ]
+      },
+      "receiptSha256": "7535db14e0a0257a7bf5998a8e5c9e6fd69199f38cd47bdfedde219d2af2a2dc",
+      "scope": "Working-tree complete Options matrix before final commit; unchanged official774-comparison geometry suite still required at the final head.",
+      "fullLocalChecks": {
+        "repositoryPass": 1462,
+        "inheritedSkips": 4,
+        "applicationPass": 75,
+        "typecheck": "pass",
+        "lint": "0 errors / 6 inherited warnings",
+        "safeBuild": "pass, no migrations",
+        "androidSourceIcons": "pass",
+        "nativePythonPass": 17
+      }
+    }
+  }
+}
