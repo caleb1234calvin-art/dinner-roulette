@@ -1,3 +1,5 @@
+import { hasSavedChristmasEvent } from "@/lib/date-night/christmas-saved";
+import { ChristmasEventPlan } from "@/components/christmas-event-plan";
 import { UnifiedFooter } from "@/components/unified-footer";
 import { seasonalDistancePrefix } from "@/lib/date-night/listing";
 import { cn } from "@/lib/utils";
@@ -26,7 +28,12 @@ function isValidHalloweenPlan(plan: DecoratedDateNightPlace[]) {
   return firstIsThrill && secondIsSettle;
 }
 
-export function DateNightPlanOverlay({
+export function DateNightPlanOverlay({ context, ...props }: Parameters<typeof OrdinaryDateNightPlanOverlay>[0] & { context?: "christmas" | "halloween" }) {
+  if (context === "christmas" || props.plan.some(hasSavedChristmasEvent)) return <ChristmasEventPlan {...props} />;
+  return <OrdinaryDateNightPlanOverlay {...props} />;
+}
+
+function OrdinaryDateNightPlanOverlay({
   plan,
   onClose,
   onReplan,

@@ -12,6 +12,11 @@ type RidePlace = NavigablePlace & {
 
 /** Approximate discovery points must never be presented as precise ride dropoffs. */
 export function uberRideTarget(place: RidePlace): { url: string; ariaLabel: string } {
+  if (place.dateNightEvent !== undefined || place.dateNightEventUnavailable ||
+      place.id?.startsWith("date-night-event-christmas-2026-") ||
+      place.restaurantId?.startsWith("date-night-event-christmas-2026-")) {
+    return { url: "https://m.uber.com/", ariaLabel: "Open Uber; choose your destination in the external service" };
+  }
   const target = place.seasonalListing?.directionsTarget;
   const coordinates = target?.kind === "verified-point" ? target : place;
   if (place.seasonalListing?.ridesharePolicy === "external-picker" || (target?.kind !== "verified-point" && (isApproximateSeasonalPlace(place) || target?.kind === "visitor-address")) || !isCoordinates(coordinates)) {

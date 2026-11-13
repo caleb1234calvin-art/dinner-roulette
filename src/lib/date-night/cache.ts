@@ -1,10 +1,15 @@
 import { getCuratedSeasonalPlace } from "./curated-policy";
 import { mergeDateNight } from "./identity";
+import { attachDateNightIdentityObservations, attachDateNightIdentityUncertainty, dateNightIdentityScope, freshDateNightIdentityIds, freshIdentityCoverage,
+  identityUncertaintyAtVenue, identityUncertaintyFor, identityUncertaintyForQuery, mergeDateNightIdentityObservations, mergeDateNightIdentityUncertainty,
+  refreshDateNightIdentityUncertainty, resolveDateNightIdentityUncertainty } from "./source-observations";
 import { buildDateNightQueryPlan, normalizeDateNightActivityTypes } from "./query-plan";
 import { DATE_NIGHT_RADIAL_VERSION, dateNightPatchOwns, resolveDateNightPatch } from "./radial-plan";
 import type {
   ConcreteDateNightType,
+  DateNightEvidence,
   DateNightGroupCoverage,
+  DateNightIdentityUncertainty,
   DateNightPlace,
   DateNightSearchResponse,
   DateNightTypeId,
@@ -31,6 +36,8 @@ export interface DateNightCacheSnapshot {
   response: DateNightSearchResponse | null;
   missingActivityTypes: ConcreteDateNightType[];
   negativeEvidence?: DateNightPlace[];
+  identityObservations?: DateNightEvidence[];
+  identityUncertainty?: DateNightIdentityUncertainty;
   acquiredAt?: number;
 }
 
@@ -51,6 +58,7 @@ export function normalizeDateNightClientActivityTypes(raw: unknown, halloweenAct
 interface CacheEntry {
   acquisition: DateNightAcquisition;
   venues: DateNightPlace[];
+  identityObservations: DateNightEvidence[];
   groups: DateNightGroupCoverage[];
   acquiredAt: number;
   readonly admitted: number;
@@ -73,18 +81,43 @@ function liveSource(venues: DateNightPlace[]): DateNightSearchResponse["source"]
     place.discoveryEvidence?.some((record) => record.source === "catalog")) ? "merged" : "live";
 }
 
+/** Only the response for this actual acquisition can resolve its missing
+ * evidence. Session-owned rows use the same guard as admitted cache entries. */
+export function dateNightAcquisitionIdentityEvidence(query: DateNightAcquisition, response: DateNightSearchResponse,
+  maxVenues = DATE_NIGHT_CACHE_MAX_VENUES): DateNightSearchResponse {
+  const expected = dateNightIdentityScope(query), coverage = freshIdentityCoverage(response), actual = coverage?.scope;
+  const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive).filter(type => type !== "other-halloween-fall");
+  const patchMatches = !query.patchId || response.patch?.id === query.patchId && response.patch.version === DATE_NIGHT_RADIAL_VERSION;
+  const matches = response.venues.length <= maxVenues && (response.identityObservations?.length ?? 0) <= maxVenues && patchMatches && actual &&
+    Object.entries(expected).every(([key, value]) => actual[key as keyof typeof actual] === value) && actual.patchId === expected.patchId &&
+    requested.length === coverage.activityTypes.length && requested.every(type => coverage.activityTypes.includes(type));
+  if (matches) return response;
+  const { identityEvidenceCoverage: _unverifiedCoverage, ...displayOnly } = response;
+  return displayOnly;
+}
+
 /** Combine a fresh response with the snapshot that was fresh when acquisition
  * started. Never store this assembled response: that would extend older TTLs. */
 export function combineDateNightDiscovery(snapshot: DateNightCacheSnapshot, fresh: DateNightSearchResponse): DateNightSearchResponse {
-  if (!snapshot.response) return snapshot.negativeEvidence?.length
-    ? { ...fresh, venues: canonicalMerge([...fresh.venues, ...snapshot.negativeEvidence]) }
-    : fresh;
-  const venues = canonicalMerge([...snapshot.response.venues, ...fresh.venues, ...(snapshot.negativeEvidence ?? [])]);
+  const identityObservations = mergeDateNightIdentityObservations(snapshot.identityObservations, snapshot.response?.identityObservations, fresh.identityObservations);
+  const identityUncertainty = mergeDateNightIdentityUncertainty(
+    resolveDateNightIdentityUncertainty(snapshot.identityUncertainty, fresh),
+    resolveDateNightIdentityUncertainty(snapshot.response?.identityUncertainty, fresh), fresh.identityUncertainty);
+  const observed = (venues: DateNightPlace[]) => attachDateNightIdentityUncertainty(
+    attachDateNightIdentityObservations(canonicalMerge(refreshDateNightIdentityUncertainty(venues, fresh)), identityObservations), identityUncertainty);
+  const { identityEvidenceCoverage: _freshCoverage, ...assembledFresh } = fresh;
+  if (!snapshot.response) return identityObservations.length || identityUncertainty || snapshot.negativeEvidence?.length
+    ? { ...assembledFresh, venues: observed([...fresh.venues, ...(snapshot.negativeEvidence ?? [])]),
+      ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}) }
+    : assembledFresh;
+  const venues = observed([...snapshot.response.venues, ...fresh.venues, ...(snapshot.negativeEvidence ?? [])]);
   // Legacy responses can still be displayed, but cannot assert category coverage.
-  if (!fresh.discovery) return { venues, source: liveSource(venues), warning: fresh.warning };
+  if (!fresh.discovery) return { venues, source: liveSource(venues), warning: fresh.warning,
+    ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}) };
   const groups = [...snapshot.response.discovery!.groups, ...fresh.discovery.groups];
   const partial = groups.some((group) => group.outcome === "failed" || group.outcome === "cancelled");
   return { venues, source: liveSource(venues), warning: partial ? PARTIAL_WARNING : undefined,
+    ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}),
     discovery: { groups, partial } };
 }
 
@@ -93,6 +126,8 @@ export function combineDateNightDiscovery(snapshot: DateNightCacheSnapshot, fres
 export function failedDateNightAcquisition(acquisition: DateNightAcquisition): DateNightSearchResponse {
   return {
     venues: [], source: "fallback",
+    identityUncertainty: identityUncertaintyFor(acquisition, normalizeDateNightActivityTypes(acquisition.activityTypes, acquisition.halloweenActive)),
+    ...(acquisition.patchId ? { patch: { id: acquisition.patchId, version: DATE_NIGHT_RADIAL_VERSION } } : {}),
     discovery: {
       groups: buildDateNightQueryPlan(acquisition.activityTypes, acquisition.halloweenActive)
         .map((group) => ({ ...group, outcome: "failed" })),
@@ -112,6 +147,78 @@ export function createDateNightDiscoveryCache({
 }: { now?: () => number; ttlMs?: number; maxEntries?: number; maxVenues?: number } = {}) {
   let entries: CacheEntry[] = [];
   let sequence = 0;
+  // Missing source is not venue coverage and has no TTL that can prove it
+  // complete. This bounded scope registry also protects rows arriving later.
+  let unresolvedIdentity: DateNightIdentityUncertainty | undefined;
+  // Settling an empty group does not supply a retained venue's own revision.
+  // Keep that proof obligation independently of venue TTL/LRU until a complete
+  // acquisition supplies this canonical ID. Capacity loss is fail-closed.
+  // Canonical obligations cross origin boundaries; the actual facts that
+  // discharge them must follow the same boundary. Only identities that owed
+  // missing-source proof enter this bounded ledger. Ordinary observations with
+  // no such obligation retain their existing origin-scoped cache semantics.
+  // Recovery facts outlive venue TTL/LRU, just like the obligation they replace;
+  // neither an opaque old row nor proof-entry eviction can undo that recovery.
+  // Both tracked IDs and their total deduplicated observations share the
+  // existing venue-budget limit. Capacity loss keeps session uncertainty sticky.
+  const identityProofOwed = new Map<string, {
+    uncertainty?: DateNightIdentityUncertainty;
+    observations: DateNightEvidence[];
+  }>();
+  let proofObservationCount = 0;
+  const completeOwnIdentity = (item: DateNightEvidence) => {
+    const source = item.sourceIdentity;
+    return item.source === "osm" && source && ["node", "way", "relation"].includes(source.objectType) &&
+      Number.isInteger(source.objectId) && source.objectId > 0 && item.id === `date-night-osm-${source.objectType}-${source.objectId}` &&
+      Number.isInteger(source.version) && source.version! > 0 && Number.isInteger(source.changeset) && source.changeset! > 0;
+  };
+  const retainRecoveryProof = (groups: readonly (readonly DateNightEvidence[] | undefined)[]) => {
+    const incoming = new Map<string, DateNightEvidence[]>();
+    for (const group of groups) {
+      for (const item of group ?? []) {
+        // Missing revision metadata is an unresolved proof obligation, not a
+        // definitive revision to preserve after adequate fresh proof arrives.
+        if (!identityProofOwed.has(item.id) || !completeOwnIdentity(item)) continue;
+        const rows = incoming.get(item.id) ?? [];
+        rows.push(item);
+        incoming.set(item.id, rows);
+      }
+    }
+    for (const [id, rows] of incoming) {
+      const proof = identityProofOwed.get(id)!;
+      const observations = mergeDateNightIdentityObservations(proof.observations, rows);
+      const count = proofObservationCount - proof.observations.length + observations.length;
+      if (count > maxVenues) {
+        unresolvedIdentity = mergeDateNightIdentityUncertainty(unresolvedIdentity, { scopes: [], overflow: true });
+        continue;
+      }
+      proof.observations = observations;
+      proofObservationCount = count;
+    }
+  };
+  const retainIdentityProof = (venues: readonly DateNightPlace[], freshIds = new Set<string>()) => {
+    const retained = venues.map(original => {
+      const proof = identityProofOwed.get(original.id);
+      const venue = proof?.observations.length
+        ? attachDateNightIdentityObservations([original], proof.observations)[0]! : original;
+      if (venue.source !== "osm" && !venue.discoveryEvidence?.some(item => item.source === "osm")) return venue;
+      const pending = identityUncertaintyAtVenue(unresolvedIdentity, venue);
+      if (freshIds.has(venue.id) && !pending) {
+        if (proof) proof.uncertainty = undefined;
+        const { identityUncertainty: _previousUncertainty, ...complete } = venue;
+        return complete;
+      }
+      const identityUncertainty = mergeDateNightIdentityUncertainty(venue.identityUncertainty, proof?.uncertainty, pending);
+      if (!identityUncertainty) return venue;
+      if (proof) proof.uncertainty = identityUncertainty;
+      else if (identityProofOwed.size < maxVenues) identityProofOwed.set(venue.id, { uncertainty: identityUncertainty, observations: [] });
+      else unresolvedIdentity = mergeDateNightIdentityUncertainty(unresolvedIdentity, { scopes: [], overflow: true });
+      // A canonical ID already owes this proof even if a later opaque row
+      // changes its coordinates. Geography limits new unknown scopes only.
+      return { ...venue, identityUncertainty };
+    });
+    return attachDateNightIdentityUncertainty(retained, unresolvedIdentity);
+  };
   // If a spatial negative is evicted, retire conflicting older positives before
   // removing its proof. Eviction must not turn a known closed venue back on.
   // Expiry retains the legacy freshness policy; a newer acquisition can refresh
@@ -140,14 +247,22 @@ export function createDateNightDiscoveryCache({
   const compatible = (entry: CacheEntry, query: DateNightAcquisition) =>
     sameSignature(entry, query) && entry.acquisition.patchId === query.patchId &&
       (Boolean(query.patchId) || entry.acquisition.radiusMiles >= query.radiusMiles);
+  const evidenceCount = (entry: CacheEntry) => mergeDateNightIdentityObservations(entry.identityObservations,
+    ...entry.venues.map(place => place.discoveryEvidence)).length;
   return {
+    annotateIdentityEvidence(venues: readonly DateNightPlace[]) {
+      return retainIdentityProof(venues);
+    },
     read(query: DateNightAcquisition): DateNightCacheSnapshot {
       prune(now());
       const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);
+      let identityUncertainty = identityUncertaintyForQuery(unresolvedIdentity, query);
       // Fresh negative evidence protects an identity even when acquired through
       // a different category. It does not establish coverage for that category.
       const negativeEvidence = entries.filter((entry) => sameSignature(entry, query))
         .flatMap((entry) => entry.venues.filter((place) => Boolean(place.lifecycle)));
+      const identityObservations = mergeDateNightIdentityObservations(...entries.filter(entry => sameSignature(entry, query))
+        .map(entry => entry.identityObservations));
       const selected = new Map<ConcreteDateNightType, { entry: CacheEntry; group: DateNightGroupCoverage }>();
       // Equal-resolution clock readings still follow acquisition order. LRU
       // reads may change eviction priority, never a snapshot's freshness.
@@ -160,7 +275,8 @@ export function createDateNightDiscoveryCache({
         }
       }
       const missingActivityTypes = requested.filter((type) => !selected.has(type));
-      if (!selected.size) return { response: null, missingActivityTypes, negativeEvidence };
+      if (!selected.size) return { response: null, missingActivityTypes, negativeEvidence,
+        ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}) };
       const usedEntries = [...new Set([...selected.values()].map(({ entry }) => entry))];
       for (const entry of usedEntries) entry.used = ++sequence;
       const groups: DateNightGroupCoverage[] = [];
@@ -172,7 +288,7 @@ export function createDateNightDiscoveryCache({
         if (existing) existing.activityTypes.push(type);
         else groups.push({ id: hit.group.id, activityTypes: [type], outcome: "cache-hit", originOutcome });
       }
-      const venues = canonicalMerge([...usedEntries.flatMap((entry) => {
+      const venues = retainIdentityProof(attachDateNightIdentityObservations(canonicalMerge([...usedEntries.flatMap((entry) => {
         const covered = requested.filter((type) => selected.get(type)?.entry === entry);
         // Reusing an old superset for Movies must not resurrect an old Corn Maze
         // snapshot after a newer Corn Maze query returned valid-empty. Retain
@@ -182,19 +298,53 @@ export function createDateNightDiscoveryCache({
           // Their ordinary filters, radius, expiry and Open Now policy are applied
           // downstream; only a current registry identity can claim this exception.
           (!query.halloweenActive && getCuratedSeasonalPlace(place.id)?.seasonalListing?.visibility === "listing-lifecycle"));
-      }), ...negativeEvidence]);
-      return { missingActivityTypes, negativeEvidence,
+      }), ...negativeEvidence]), identityObservations));
+      identityUncertainty = identityUncertaintyForQuery(unresolvedIdentity, query);
+      return { missingActivityTypes, negativeEvidence, ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}),
         acquiredAt: Math.min(...usedEntries.map(entry => entry.acquiredAt)),
-        response: { venues, source: liveSource(venues), discovery: { groups, partial: false } } };
+        response: { venues, source: liveSource(venues), ...(identityObservations.length ? { identityObservations } : {}), ...(identityUncertainty ? { identityUncertainty } : {}), discovery: { groups, partial: false } } };
     },
     store(query: DateNightAcquisition, response: DateNightSearchResponse): boolean {
       const at = now();
       prune(at);
-      // Missing metadata, complete fallback and prior cache assemblies cannot
-      // become proof that a provider acquired a category.
-      if (response.source === "fallback" || !response.discovery || response.venues.length > maxVenues) return false;
       const patch = query.patchId ? resolveDateNightPatch(query, query.radiusMiles, query.patchId) : undefined;
-      if (patch && (response.patch?.id !== patch.id || response.patch.version !== DATE_NIGHT_RADIAL_VERSION)) return false;
+      const packetFits = response.venues.length <= maxVenues && (response.identityObservations?.length ?? 0) <= maxVenues;
+      const patchMatches = !patch || response.patch?.id === patch.id && response.patch.version === DATE_NIGHT_RADIAL_VERSION;
+      // Fresh coverage is scoped to this actual acquisition, not an arbitrary
+      // descriptor supplied alongside an otherwise legitimate provider result.
+      const fresh = dateNightAcquisitionIdentityEvidence(query, response, maxVenues);
+      // Opaque legacy display data has never claimed patch authority. An
+      // explicit wrong patch or an unfulfilled fresh-coverage claim has, and
+      // rejection must not make the existing patch appear complete by default.
+      const rejectedPatch = !patchMatches && Boolean(response.patch || response.identityEvidenceCoverage);
+      const failedTypes = !packetFits || rejectedPatch ? normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive)
+        : response.discovery?.groups.filter(group => ["failed", "cancelled"].includes(group.outcome)).flatMap(group => group.activityTypes) ?? [];
+      unresolvedIdentity = mergeDateNightIdentityUncertainty(resolveDateNightIdentityUncertainty(unresolvedIdentity, fresh), response.identityUncertainty,
+        identityUncertaintyFor(query, failedTypes));
+      const freshIds = freshDateNightIdentityIds(fresh);
+      // One complete observation cannot certify an ambiguous same-ID packet.
+      // Unknown/mismatched observations keep uncertainty instead of becoming
+      // invented definitive source facts in the canonical recovery ledger.
+      for (const group of [fresh.identityObservations, ...fresh.venues.map(venue => venue.discoveryEvidence)])
+        for (const item of group ?? []) if (item.source === "osm" && !completeOwnIdentity(item)) freshIds.delete(item.id);
+      for (const venue of fresh.venues)
+        if (venue.discoveryEvidence?.some(item => item.source === "osm" && item.sourceIdentity && item.id !== venue.id)) freshIds.delete(venue.id);
+      // Register newly affected IDs before capturing facts, including a first
+      // partial packet's ineligible observations. A later successful group must
+      // not erase facts already received while this canonical proof was owed.
+      for (const entry of entries) entry.venues = retainIdentityProof(entry.venues);
+      retainIdentityProof(response.venues);
+      retainRecoveryProof(entries.flatMap(entry => [entry.identityObservations, ...entry.venues.map(venue => venue.discoveryEvidence)]));
+      if (packetFits && patchMatches && response.source !== "fallback" && response.discovery?.groups.some(succeeded) &&
+          (!response.identityEvidenceCoverage || fresh.identityEvidenceCoverage))
+        retainRecoveryProof([response.identityObservations, ...response.venues.map(venue => venue.discoveryEvidence)]);
+      // Record actual source facts before globally clearing uncertainty; their
+      // revision/classification eligibility remains the reviewed binder's job.
+      for (const entry of entries) entry.venues = retainIdentityProof(refreshDateNightIdentityUncertainty(entry.venues, fresh), freshIds);
+      const retainedVenues = retainIdentityProof(response.venues, freshIds);
+      // Protective uncertainty is retained even for a failed/no-coverage result.
+      // The return value still means ordinary coverage was actually admitted.
+      if (response.source === "fallback" || !response.discovery || !packetFits || !patchMatches) return false;
       const requested = normalizeDateNightActivityTypes(query.activityTypes, query.halloweenActive);
       const groups = response.discovery.groups.filter(succeeded).map((group) => ({
         ...group, activityTypes: group.activityTypes.filter((type) => requested.includes(type)),
@@ -215,9 +365,18 @@ export function createDateNightDiscoveryCache({
       }
       const admitted = ++sequence;
       entries.push({ acquisition: { ...query, activityTypes: [...query.activityTypes] },
-        venues: patch ? response.venues.filter(place => place.lifecycle || dateNightPatchOwns(query, patch, place)) : response.venues,
+        venues: patch ? retainedVenues.filter(place => place.lifecycle || dateNightPatchOwns(query, patch, place)) : retainedVenues,
+        identityObservations: mergeDateNightIdentityObservations(response.identityObservations),
         groups, acquiredAt: at, admitted, used: admitted });
-      while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues) {
+      // Compose source facts back onto the exact existing records, not only the
+      // transient read result. Standalone evidence may expire or be evicted,
+      // but cannot make a retained venue forget a contradiction it has received.
+      // A genuinely new acquisition replaces its category authority normally.
+      const scoped = entries.filter(entry => sameSignature(entry, query));
+      const observations = mergeDateNightIdentityObservations(...scoped.map(entry => entry.identityObservations));
+      for (const entry of scoped) entry.venues = attachDateNightIdentityObservations(entry.venues, observations);
+      while (entries.length > maxEntries || entries.reduce((sum, entry) => sum + entry.venues.length, 0) > maxVenues ||
+          entries.reduce((sum, entry) => sum + evidenceCount(entry), 0) > maxVenues) {
         const oldest = entries.reduce((a, b) => a.used < b.used ? a : b);
         retireEvictedNegative(oldest);
         entries.splice(entries.indexOf(oldest), 1);

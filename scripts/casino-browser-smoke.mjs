@@ -116,7 +116,11 @@ try {
     assert.ok(optionNames.every((name) => canonical.some((r) => r.name === name && r.jurisdiction === expectedState)));
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
     await page.screenshot({ path: output + "/" + label + "-options.png", fullPage: true });
-    await page.locator("article").first().getByRole("button").last().click();
+    const optionAction = page.locator("article").first().getByRole("button", {
+      name: new RegExp("^Choose " + optionNames[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?:\\s|$)"),
+    });
+    assert.equal(await optionAction.count(), 1, "The first canonical option has one named selection action");
+    await optionAction.click();
     const optionResult = await assertDirections(page, expectedState);
     assert.equal(optionResult.name, optionNames[0]);
     await page.getByRole("button", { name: "Close result", exact: true }).click();

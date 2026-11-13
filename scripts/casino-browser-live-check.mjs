@@ -87,7 +87,12 @@ try {
     const names = await page.locator("article h3").allTextContents();
     assert.equal(names.length, Math.min(4, count)); assert.equal(new Set(names).size, names.length);
     await page.screenshot({ path: `${output}/${location.name.toLowerCase()}-options.png`, fullPage: true });
-    await page.locator("article").first().getByRole("button").last().click();
+    const optionAction = page.locator("article").first().getByRole("button", {
+      name: new RegExp("^Choose " + names[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?:\\s|$)"),
+    });
+    assert.equal(await optionAction.count(), 1, "The first option has one named selection action");
+    await optionAction.click();
+    await page.getByRole("heading", { level: 2, name: names[0], exact: true }).waitFor();
     const maps = page.getByRole("link", { name: /Directions.*Google Maps/ }); await maps.waitFor();
     const directions = await maps.getAttribute("href");
     assert.equal(new URL(directions).origin, "https://www.google.com");
