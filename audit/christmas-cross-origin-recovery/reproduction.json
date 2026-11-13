@@ -1,0 +1,4965 @@
+{
+  "schemaVersion": 1,
+  "scope": "Identical executable before/after controls. Corrected results are frozen precommit working-tree evidence; final clean exact-head receipts are linked in the draft PR and hosted artifacts.",
+  "review": "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6865398821",
+  "reconciliation": {
+    "reviewedParent": {
+      "sha": "c1e370e633df1797bae692717c6692d0a98995c4",
+      "tree": "2180520bdd9f051f2417bf60435f3b4bc0b8f027"
+    },
+    "branch": "integration/work-93-christmas-cross-origin-recovery",
+    "worktree": "/workspace/christmas-cross-origin",
+    "preserved": [
+      {
+        "number": 90,
+        "sha": "5f6c2175306af8da76df49cc9a11ce492f555595",
+        "branch": "integration/work-89-storybook-v4-snow-ui-candidate",
+        "draft": true,
+        "merged": false
+      },
+      {
+        "number": 94,
+        "sha": "a85c151282759addc744aaa071c1e065ab41cfce",
+        "branch": "integration/work-92-picker-clock-repair",
+        "draft": true,
+        "merged": false
+      },
+      {
+        "number": 95,
+        "sha": "2fb7fba7393be98909dace3ac9135ab6cbf9b5f1",
+        "branch": "integration/work-93-christmas-four-pilot",
+        "draft": true,
+        "merged": false
+      },
+      {
+        "number": 96,
+        "sha": "ba50b14ae36b80961036986f0cdfe50786039a52",
+        "branch": "integration/work-93-christmas-identity-ui",
+        "draft": true,
+        "merged": false
+      },
+      {
+        "number": 97,
+        "sha": "d933c75e2489dd29ee5b875ba781406c70a7f12e",
+        "branch": "integration/work-93-christmas-final-acceptance",
+        "draft": true,
+        "merged": false
+      },
+      {
+        "number": 98,
+        "sha": "c1e370e633df1797bae692717c6692d0a98995c4",
+        "branch": "integration/work-93-christmas-evidence-loss-accessibility",
+        "draft": true,
+        "merged": false
+      }
+    ],
+    "openPrs": [
+      {
+        "number": 98,
+        "head": "integration/work-93-christmas-evidence-loss-accessibility",
+        "sha": "c1e370e633df1797bae692717c6692d0a98995c4"
+      },
+      {
+        "number": 97,
+        "head": "integration/work-93-christmas-final-acceptance",
+        "sha": "d933c75e2489dd29ee5b875ba781406c70a7f12e"
+      },
+      {
+        "number": 96,
+        "head": "integration/work-93-christmas-identity-ui",
+        "sha": "ba50b14ae36b80961036986f0cdfe50786039a52"
+      },
+      {
+        "number": 95,
+        "head": "integration/work-93-christmas-four-pilot",
+        "sha": "2fb7fba7393be98909dace3ac9135ab6cbf9b5f1"
+      },
+      {
+        "number": 94,
+        "head": "integration/work-92-picker-clock-repair",
+        "sha": "a85c151282759addc744aaa071c1e065ab41cfce"
+      },
+      {
+        "number": 92,
+        "head": "integration/work-91-christmas-picker-adapter",
+        "sha": "4f866c31a6d8a9219944b250a8dd9536213a9e59"
+      },
+      {
+        "number": 90,
+        "head": "integration/work-89-storybook-v4-snow-ui-candidate",
+        "sha": "5f6c2175306af8da76df49cc9a11ce492f555595"
+      },
+      {
+        "number": 85,
+        "head": "integration/seasonal-osm-metadata-adapter-2026-10-18",
+        "sha": "8b574be4f437d029246af107812c7b0227029b14"
+      },
+      {
+        "number": 84,
+        "head": "integration/seasonal-source-discovery-v1-2026-10-18",
+        "sha": "9eb1b85c503d900993e6ab0d0e5797fd7bcacfb4"
+      },
+      {
+        "number": 79,
+        "head": "integration/unified-legal-footer-2026-10-17",
+        "sha": "efb440fe3545fda5ec9b9a7dc92de3f9c03fb6f2"
+      },
+      {
+        "number": 78,
+        "head": "integration/android-brand-identity-2026-10-16",
+        "sha": "4010edf31e71a7350d891a98dd43f20535602abd"
+      },
+      {
+        "number": 75,
+        "head": "integration/location-disambiguation-2026-10-16",
+        "sha": "91896a2b8c086b7d86b831c462e158fe04e6c00d"
+      },
+      {
+        "number": 61,
+        "head": "integration/date-night-primary-radial-audit-1",
+        "sha": "c78b97175cc094436e454fa888e1ed83486f750d"
+      },
+      {
+        "number": 58,
+        "head": "integration/seasonal-three-source-tier-a-five",
+        "sha": "d876dbc12de47d5d40be0e9cc2116b30d9834089"
+      },
+      {
+        "number": 56,
+        "head": "integration/seasonal-brookdale-late-fall",
+        "sha": "a61af2bfd05ad959dfa3a3fb8dd564ad7b804921"
+      },
+      {
+        "number": 55,
+        "head": "integration/seasonal-final-four",
+        "sha": "e397488c4e33355cbf1e278d388226d0a41716dc"
+      },
+      {
+        "number": 54,
+        "head": "integration/seasonal-deferred-batch-3-five-records",
+        "sha": "f539d49fc5ff1ff08727566b6344e86c00e35d91"
+      },
+      {
+        "number": 49,
+        "head": "integration/hotfix-47-ci-build-order",
+        "sha": "49a552cf36e800fb684504cf8f36beb1ee3d3b5b"
+      },
+      {
+        "number": 48,
+        "head": "feature/seasonal-two-records-2026",
+        "sha": "3dc116ef8d114127402d94fcbe299272080d0f4a"
+      },
+      {
+        "number": 47,
+        "head": "fix/halloween-arrival-hotfix-1",
+        "sha": "277aca01996b5559b6e520d9d3f193c4989f4f64"
+      },
+      {
+        "number": 46,
+        "head": "acceptance/date-night-radial-loading-live-acceptance-remediation-1",
+        "sha": "761832d58c75f9cda857886ead908e58f4d02a56"
+      },
+      {
+        "number": 45,
+        "head": "acceptance/date-night-radial-loading-browser-1",
+        "sha": "748c1ae4ed6dc5f84853a69af67b5d4a313abeb6"
+      }
+    ],
+    "reviewUrl": "https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6865398821",
+    "scope": "Isolated implementation/tests; no publication or production changes."
+  },
+  "cache": {
+    "parent": {
+      "kind": "parent",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "/workspace/christmas-cross-origin/scripts/christmas-cross-origin-cache.test.mjs"
+      ],
+      "cwd": "/workspace/christmas-two-corrections",
+      "head": "c1e370e633df1797bae692717c6692d0a98995c4",
+      "tree": "2180520bdd9f051f2417bf60435f3b4bc0b8f027",
+      "status": "",
+      "exitCode": 1,
+      "counts": {
+        "tests": 37,
+        "pass": 13,
+        "fail": 24,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "testSha256": "d3763d6d444305e9c504b1046a0040698ada81f4ab722365b476e78a794b28ad",
+      "cacheSha256": "6f6b2581cbdfb9e3887f62df1bb6fad691a3a414adfe4dee131c5a415adb41be",
+      "log": "/workspace/christmas-cross-origin-parent-tests.log",
+      "logSha256": "933cdb960d0c4539f4f7ae60a8eea2654a3ff4107a52421afce75c59e540f240",
+      "providerTrace": "/workspace/christmas-cross-origin-parent-reproduction.json",
+      "providerTraceSha256": "a23a89e9c00f085cedabec4bd1558e91ad10e18e5ab22ff0dd4526ba276db6d6",
+      "failedTestNames": [
+        "first partial stale facts survive a subsequent complete-v2 recovery across origins",
+        "first partial conflict facts survive a subsequent complete-v2 recovery across origins",
+        "later partial stale facts survive a subsequent complete-v2 recovery across origins",
+        "later partial conflict facts survive a subsequent complete-v2 recovery across origins",
+        "before first loss stale facts survive a subsequent complete-v2 recovery across origins",
+        "before first loss conflict facts survive a subsequent complete-v2 recovery across origins",
+        "school-only completion conflict facts survive a subsequent complete-v2 recovery across origins",
+        "recovery ledger deduplicates actual facts and bounds total revisions without fabricated negatives",
+        "mixed complete-v2 plus missing revision recovery retains uncertainty across origins",
+        "mixed complete-v2 plus wrong source object recovery retains uncertainty across origins",
+        "mixed complete-v2 plus embedded foreign identity recovery retains uncertainty across origins",
+        "shared loss and canonical recovery never attach park revisions to an unrelated ordinary identity",
+        "mounted real search B \u2192 A \u2192 B: stale recovery stays canonical on zero-request hits",
+        "mounted real search B \u2192 A \u2192 B: conflict recovery stays canonical on zero-request hits",
+        "mounted real search A \u2192 B \u2192 A: stale recovery stays canonical on zero-request hits",
+        "mounted real search A \u2192 B \u2192 A: conflict recovery stays canonical on zero-request hits",
+        "cache overflow partial success carries stale proof through source-entry eviction and presentation rows",
+        "cache overflow partial success carries conflict proof through source-entry eviction and presentation rows",
+        "cache timeout partial success carries stale proof through source-entry eviction and presentation rows",
+        "cache timeout partial success carries conflict proof through source-entry eviction and presentation rows",
+        "expired pre-loss copy returns after stale recovery (full evidence)",
+        "expired pre-loss copy returns after stale recovery (embedded evidence)",
+        "expired pre-loss copy returns after conflict recovery (full evidence)",
+        "expired pre-loss copy returns after conflict recovery (embedded evidence)"
+      ]
+    },
+    "correctedPrecommit": {
+      "kind": "candidate",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "/workspace/christmas-cross-origin/scripts/christmas-cross-origin-cache.test.mjs"
+      ],
+      "cwd": "/workspace/christmas-cross-origin",
+      "head": "c1e370e633df1797bae692717c6692d0a98995c4",
+      "tree": "2180520bdd9f051f2417bf60435f3b4bc0b8f027",
+      "status": "M scripts/christmas-final-browser.mjs\n M scripts/seasonal-phase4-recovery.test.mjs\n M src/lib/date-night/cache.ts\n?? scripts/christmas-cross-origin-browser.mjs\n?? scripts/christmas-cross-origin-cache.test.mjs\n?? scripts/test-support/christmas-cross-origin-fixture.tsx\n?? scripts/test-support/christmas-cross-origin-observer.ts\n?? scripts/test-support/christmas-cross-origin-provider.mjs\n?? scripts/test-support/christmas-cross-origin-source-before.mjs\n?? scripts/test-support/christmas-cross-origin-transport.ts",
+      "exitCode": 0,
+      "counts": {
+        "tests": 37,
+        "pass": 37,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "testSha256": "d3763d6d444305e9c504b1046a0040698ada81f4ab722365b476e78a794b28ad",
+      "cacheSha256": "682af74ad95e5fabe9b66b7ec199115fadeaa4005c6cb96401708721ccad82d3",
+      "log": "/workspace/christmas-cross-origin-candidate-tests.log",
+      "logSha256": "fc06574d7c5938ad7133984404d7b646855c6eef95b43ba9e0410d7c7df8160e",
+      "providerTrace": "/workspace/christmas-cross-origin-candidate-reproduction.json",
+      "providerTraceSha256": "cf93e2c44698673d06cb63fecc75b6acb90e6d68638f73e0c8ef036e5adc92bf"
+    },
+    "parentTrace": {
+      "applicationRoot": "/workspace/christmas-two-corrections",
+      "time": "2026-12-05T18:00:00-06:00",
+      "scope": "radial-v1:core",
+      "origins": {
+        "A": {
+          "lat": 37.1734644,
+          "lon": -94.3130247
+        },
+        "B": {
+          "lat": 37.1744644,
+          "lon": -94.3130247
+        }
+      },
+      "source": {
+        "id": "date-night-osm-way-987588580",
+        "version": 2,
+        "changeset": 189037687
+      },
+      "syntheticControls": "v3/v4 revisions, school classifications, filler nodes and unrelated park are adversarial fixtures, not live OSM findings.",
+      "cases": [
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "stale",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "stale",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "conflict",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "conflict",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "valid",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "valid",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "stale",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "stale",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "conflict",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "conflict",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "valid",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "valid",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        }
+      ]
+    },
+    "correctedTrace": {
+      "applicationRoot": "/workspace/christmas-cross-origin",
+      "time": "2026-12-05T18:00:00-06:00",
+      "scope": "radial-v1:core",
+      "origins": {
+        "A": {
+          "lat": 37.1734644,
+          "lon": -94.3130247
+        },
+        "B": {
+          "lat": 37.1744644,
+          "lon": -94.3130247
+        }
+      },
+      "source": {
+        "id": "date-night-osm-way-987588580",
+        "version": 2,
+        "changeset": 189037687
+      },
+      "syntheticControls": "v3/v4 revisions, school classifications, filler nodes and unrelated park are adversarial fixtures, not live OSM findings.",
+      "cases": [
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "stale",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "stale",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "conflict",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "conflict",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "B",
+          "failed": "A",
+          "recovery": "valid",
+          "states": [
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "valid",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "stale",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "stale-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "stale",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "conflict",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "conflicting-source",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                },
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 3,
+                    "changeset": 189037688,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "amenity": "school"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "conflict",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        },
+        {
+          "cached": "A",
+          "failed": "B",
+          "recovery": "valid",
+          "states": [
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 2,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "incomplete-source-evidence",
+              "providerRequests": 7,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "A",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "origin": "B",
+              "binding": "bound",
+              "providerRequests": 8,
+              "canonicalEvidence": [
+                {
+                  "id": "date-night-osm-way-987588580",
+                  "sourceIdentity": {
+                    "objectType": "way",
+                    "objectId": 987588580,
+                    "version": 2,
+                    "changeset": 189037687,
+                    "name": "Central Park",
+                    "address": "305 West Chestnut Street, Carthage, MO, 64836",
+                    "classification": {
+                      "leisure": "park"
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "providerCalls": [
+            {
+              "mode": "complete",
+              "group": "movies"
+            },
+            {
+              "mode": "complete",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "park"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "overflow",
+              "group": "movies"
+            },
+            {
+              "mode": "valid",
+              "group": "movies"
+            }
+          ],
+          "requests": [
+            {
+              "lat": 37.1734644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies",
+                "park"
+              ],
+              "patchId": "radial-v1:core"
+            },
+            {
+              "lat": 37.1744644,
+              "lon": -94.3130247,
+              "radiusMiles": 15,
+              "halloweenActive": false,
+              "activityTypes": [
+                "movies"
+              ],
+              "patchId": "radial-v1:core"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "browser": {
+    "schemaVersion": 1,
+    "scope": "Same final browser controls on immutable reviewed parent and frozen corrected working tree; precommit result is not final exact-head validation.",
+    "parent": {
+      "sourceSha": "c1e370e633df1797bae692717c6692d0a98995c4",
+      "sourceTree": "2180520bdd9f051f2417bf60435f3b4bc0b8f027",
+      "sourceState": "",
+      "appFingerprint": "01844beb427e21fb6aa24c8fd905d00e273592e5f4f5f05f30aaa27d30709788",
+      "harnessFingerprint": "65bd25f509a202bb689c927cdf2ad94b51d7dc9547c5d3dc4da4f88ad0976454",
+      "bundleFingerprint": "d5d9e97e8049b731d3169e1632f4720cd7f678fe9ab6c746d541fe1aec26c431",
+      "actualSessionModule": {
+        "path": "/workspace/christmas-two-corrections/src/lib/date-night/radial-session.ts",
+        "sha256": "67c5188000bf90cb343994b242c122ebf0472401a719a54527103cc7796a09e1"
+      },
+      "actualSearchModule": {
+        "path": "/workspace/christmas-two-corrections/src/lib/date-night/search.ts",
+        "sha256": "f6a859dd6d6444795688dfe52cb9ff1b2b04ba96cc8679f8d351265f77668a15"
+      },
+      "integrity": [
+        {
+          "name": "no page errors or external requests",
+          "passed": true
+        },
+        {
+          "name": "source and harness stable",
+          "passed": true
+        }
+      ],
+      "passed": false,
+      "rawVerdict": "/tmp/christmas-cross-origin-parent-exact-packets/verdict.json",
+      "rawVerdictSha256": "2d6e2f32bca4aae5984f8aa5c22242de10954faf87aa862bd20ad2b8313ee9c5",
+      "cases": 18,
+      "passedCases": 6,
+      "failedCases": 12,
+      "assertions": 198,
+      "failedAssertions": 24,
+      "searchRpcs": 54,
+      "providerAttempts": 144,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    "candidatePrecommit": {
+      "sourceSha": "c1e370e633df1797bae692717c6692d0a98995c4",
+      "sourceTree": "2180520bdd9f051f2417bf60435f3b4bc0b8f027",
+      "sourceState": "M scripts/christmas-final-browser.mjs\n M scripts/seasonal-phase4-recovery.test.mjs\n M src/lib/date-night/cache.ts\n?? scripts/christmas-cross-origin-browser.mjs\n?? scripts/christmas-cross-origin-cache.test.mjs\n?? scripts/test-support/christmas-cross-origin-fixture.tsx\n?? scripts/test-support/christmas-cross-origin-observer.ts\n?? scripts/test-support/christmas-cross-origin-provider.mjs\n?? scripts/test-support/christmas-cross-origin-source-before.mjs\n?? scripts/test-support/christmas-cross-origin-transport.ts",
+      "appFingerprint": "1c7a4805b6fdd6adca338d2065764764675ed8c2b250a28adf47e0f7e8ceda9f",
+      "harnessFingerprint": "65bd25f509a202bb689c927cdf2ad94b51d7dc9547c5d3dc4da4f88ad0976454",
+      "bundleFingerprint": "a104111cd84cfc53967ed310ba8a35890f89d096dedb60752cff8e3b47ba579d",
+      "actualSessionModule": {
+        "path": "/workspace/christmas-cross-origin/src/lib/date-night/radial-session.ts",
+        "sha256": "67c5188000bf90cb343994b242c122ebf0472401a719a54527103cc7796a09e1"
+      },
+      "actualSearchModule": {
+        "path": "/workspace/christmas-cross-origin/src/lib/date-night/search.ts",
+        "sha256": "f6a859dd6d6444795688dfe52cb9ff1b2b04ba96cc8679f8d351265f77668a15"
+      },
+      "integrity": [
+        {
+          "name": "no page errors or external requests",
+          "passed": true
+        },
+        {
+          "name": "source and harness stable",
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "rawVerdict": "/tmp/christmas-cross-origin-candidate-precommit/verdict.json",
+      "rawVerdictSha256": "b1372655b0fe368a1cb99cb00c56ef8ddd87085a59c6e2ed01c466a936155def",
+      "cases": 18,
+      "passedCases": 18,
+      "failedCases": 0,
+      "assertions": 198,
+      "failedAssertions": 0,
+      "searchRpcs": 54,
+      "providerAttempts": 144,
+      "pageErrors": [],
+      "externalRequests": []
+    },
+    "sameHarness": true,
+    "sameActualSearchAndSession": true,
+    "cases": [
+      {
+        "name": "B\u2192A\u2192B stale-v3 after overflow-first; result",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B stale-v3 after overflow-last; options",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B stale-v3 after timeout; plan",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B conflict-v3 after overflow-first; result",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B conflict-v3 after overflow-last; options",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B conflict-v3 after timeout; plan",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B reviewed-v2 after overflow-first; result",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B reviewed-v2 after overflow-last; options",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "B\u2192A\u2192B reviewed-v2 after timeout; plan",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A stale-v3 after overflow-first; result",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A stale-v3 after overflow-last; options",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A stale-v3 after timeout; plan",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "stale-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A conflict-v3 after overflow-first; result",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A conflict-v3 after overflow-last; options",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A conflict-v3 after timeout; plan",
+        "beforePassed": false,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": false,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "conflicting-source",
+            "requests": 3,
+            "pickDisabled": true,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A reviewed-v2 after overflow-first; result",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A reviewed-v2 after overflow-last; options",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      },
+      {
+        "name": "A\u2192B\u2192A reviewed-v2 after timeout; plan",
+        "beforePassed": true,
+        "afterPassed": true,
+        "beforeExplicitPick": true,
+        "afterExplicitPick": true,
+        "mountedSessions": 1,
+        "beforeStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ],
+        "afterStages": [
+          {
+            "stage": "complete seed",
+            "binding": "bound",
+            "requests": 1,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "loss at second origin",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "first origin retains loss",
+            "binding": "incomplete-source-evidence",
+            "requests": 2,
+            "pickDisabled": true,
+            "overlays": 0
+          },
+          {
+            "stage": "complete Movies recovery at second origin",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "cached origin after recovery",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return B",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          },
+          {
+            "stage": "repeat cache-only return A",
+            "binding": "bound",
+            "requests": 3,
+            "pickDisabled": false,
+            "overlays": 0
+          }
+        ]
+      }
+    ],
+    "exploratoryLimitations": [
+      "First exploratory controls assumed real search would return only the synthetic cinema; the retained catalog made that ordinary pick nondeterministic. Existing Favorites filtering now selects the known cinema without changing source responses.",
+      "Recovery packets were tightened to Astra exact one/two/one park observations; synthetic cinema remains only in the complete seed. All final comparisons use the same exact-packet harness."
+    ]
+  },
+  "precommitChecks": {
+    "repository": {
+      "passed": 1499,
+      "skipped": 4,
+      "failed": 0
+    },
+    "application": {
+      "passed": 75,
+      "failed": 0
+    },
+    "focusedInherited": {
+      "passed": 236,
+      "failed": 0
+    },
+    "historicalByteAssertions": {
+      "passed": 44,
+      "failed": 0
+    },
+    "typecheck": "PASS",
+    "lint": {
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "safeProductionBuild": "PASS; auth enabled; direct Vite; no migrations",
+    "androidSourceIcons": "PASS",
+    "nativePython": {
+      "passed": 17
+    },
+    "logSha256": {
+      "lint.log": "9807ad23a5ab745a4a9a7eee30363e09f896338b3b26cab66a7e36cfce906b50",
+      "safe-build.log": "a776b4655eb7ba7492786051a152c0cf9ca1d857e33b47f078278a0f9af58e5f",
+      "repository-application.log": "495633484fd76a07b7c1a593558157a5c6d97d4b69159cd09c79e9cee4b6eb08",
+      "build-capture.log": "f8937ce226ac639891ff1dadaf4cbe6aee7f6ee6375639a240ce4d822187aa46",
+      "build-complete.log": "504c38d415190e6d30e67fd8b43c45f5f69354f9a2c1741656078a9098e13977",
+      "android-source.log": "e26719ab67e8cbaac207dae7b40418d101c668a8a62028a12b7b0fcd95b6e76c",
+      "native-python.log": "707d17a2ecf45983575cc9d2d20fe00349a2d6d7cf4702da14f6835a9115eaa6",
+      "typecheck.log": "8fa1cf5506304e8abac55868e7f1a136c9b1dde57a3981a382da4c21ea129a6f"
+    }
+  },
+  "limits": [
+    "All four publication HOLD flags unchanged.",
+    "Synthetic adversarial provider inputs; no live OSM revision acquired.",
+    "New browser uses real search and mounted session, with substituted RPC/provider transport and isolated review placements.",
+    "Inherited ordinary Christmas-off light-theme contrast remains outside this correction.",
+    "Physical Android/WebView, real screen reader/TalkBack, combined V4 and optional external live-provider casino not completed."
+  ]
+}

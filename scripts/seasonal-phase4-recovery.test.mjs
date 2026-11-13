@@ -2,6 +2,7 @@ import { occurrenceSourceBefore } from "./test-support/occurrence-amendments.mjs
 import { curatedRadiusSourceBefore } from "./test-support/curated-radius-source-before.mjs";
 import { christmasProviderSourceBefore } from "./test-support/christmas-provider-source-before.mjs";
 import { christmasTwoSourceBefore } from "./test-support/christmas-two-source-before.mjs";
+import { christmasCrossOriginSourceBefore } from "./test-support/christmas-cross-origin-source-before.mjs";
 import assert from "node:assert/strict";
 import test from "node:test";
 import { admissionPresentationAfter } from "./test-support/admission-amendments.mjs";
@@ -319,7 +320,7 @@ test("all 52 previous V1 records, presentation copy, radial implementation and o
   const baseline = JSON.parse(readFileSync("audit/phase4-recovery-implementation-2026-10-10/Production-Baseline-Receipts-R1.json", "utf8"));
   assert.equal(baseline.ref, "fe22c15cc6442fc4a48fec23c9a1331c69d70bd2");
   for (const [path, hash] of Object.entries(baseline.files)) {
-    let source = ordinaryUiBeforeChristmas(path, curatedRadiusSourceBefore(path, christmasProviderSourceBefore(path, christmasTwoSourceBefore(path, occurrenceSourceBefore(path)))));
+    let source = ordinaryUiBeforeChristmas(path, curatedRadiusSourceBefore(path, christmasProviderSourceBefore(path, christmasTwoSourceBefore(path, christmasCrossOriginSourceBefore(path, occurrenceSourceBefore(path))))));
     // Acceptance-only dependency: reverse its exact single line while retaining
     // the original package receipt and every other dependency byte.
     if (path === "package.json") {

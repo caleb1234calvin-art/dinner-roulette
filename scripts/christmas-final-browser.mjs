@@ -27,12 +27,15 @@ const sourceSha = git(appRoot, "rev-parse", "HEAD");
 const sourceTree = git(appRoot, "rev-parse", "HEAD^{tree}");
 const sourceState = git(appRoot, "status", "--porcelain=v1");
 const appInputs = git(appRoot, "ls-files", "--cached", "--others", "--exclude-standard", "src").split("\n").filter(Boolean);
-const harnessInputs = ["scripts/christmas-final-browser.mjs", "scripts/test-support/christmas-event-fixture.tsx", "scripts/test-support/christmas-event-search-fixture.ts", "scripts/test-support/christmas-provider-loss-replay.mjs", "scripts/test-support/christmas-park-source.json", "scripts/test-support/load-app-module.mjs", "package.json", "package-lock.json"];
+const harnessInputs = ["scripts/christmas-final-browser.mjs", "scripts/test-support/christmas-event-fixture.tsx", "scripts/test-support/christmas-event-search-fixture.ts", "scripts/test-support/christmas-provider-loss-replay.mjs", "scripts/test-support/christmas-park-source.json", "scripts/test-support/load-app-module.mjs", "package.json", "package-lock.json",
+  "scripts/christmas-cross-origin-browser.mjs", "scripts/test-support/christmas-cross-origin-fixture.tsx", "scripts/test-support/christmas-cross-origin-transport.ts",
+  "scripts/test-support/christmas-cross-origin-observer.ts", "scripts/test-support/christmas-cross-origin-provider.mjs"];
 async function fingerprint(root, inputs) {
   const hash = createHash("sha256");
   for (const path of [...new Set(inputs)].sort()) hash.update(path + "\0").update(await readFile(resolve(root, path)));
   return hash.digest("hex");
 }
+
 const appFingerprint = await fingerprint(appRoot, appInputs);
 const harnessFingerprint = await fingerprint(harnessRoot, harnessInputs);
 const providerReplay = await buildChristmasProviderLossReplay(appRoot);
@@ -590,4 +593,25 @@ try {
   await browser?.close(); await new Promise(done => server.close(done));
   await writeFile(resolve(output, "verdict.json"), JSON.stringify(verdict, null, 2) + "\n");
   console.log(JSON.stringify({ passed: verdict.passed, reproduction, optionsReproduction, providerReproduction, sourceSha, sourceTree, cases: verdict.cases.length, failures: verdict.cases.filter(item => !item.passed).length, output, failure: verdict.failure }));
+}
+
+// Keep the accepted 239 controls and their historical reproduction modes intact.
+// The additional real-search/mounted-cache regression has its own downloadable
+// byte receipt within this existing CI artifact; no workflow change is needed.
+if (!reproduction && !optionsReproduction && !providerReproduction) {
+  const childOutput = resolve(output, "cross-origin");
+  process.env.CHRISTMAS_CROSS_ORIGIN_APP_ROOT = appRoot;
+  process.env.CHRISTMAS_CROSS_ORIGIN_OUTPUT = childOutput;
+  try {
+    await import("./christmas-cross-origin-browser.mjs");
+    const bytes = await readFile(resolve(childOutput, "verdict.json"));
+    const child = JSON.parse(bytes.toString("utf8"));
+    verdict.crossOrigin = { path: "cross-origin/verdict.json", sha256: createHash("sha256").update(bytes).digest("hex"),
+      passed: child.passed, cases: child.cases.length, sourceSha: child.sourceSha, sourceTree: child.sourceTree,
+      appFingerprint: child.appFingerprint, harnessFingerprint: child.harnessFingerprint, bundleFingerprint: child.bundleFingerprint };
+    verdict.passed = verdict.passed && child.passed;
+  } catch (error) { verdict.passed = false; verdict.crossOrigin = { passed: false, failure: error.message }; }
+  if (!verdict.passed) process.exitCode = 1;
+  await writeFile(resolve(output, "verdict.json"), JSON.stringify(verdict, null, 2) + "\n");
+  console.log(JSON.stringify({ passed: verdict.passed, sourceSha, crossOrigin: verdict.crossOrigin, output }));
 }
