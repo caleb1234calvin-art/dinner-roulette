@@ -47,6 +47,14 @@ The extended browser performs 112 broad WCAG A/AA audits. It reports zero violat
 
 Exploratory failures are retained rather than credited: intermediate runs correctly rejected concurrent source changes; a partial ARIA label exposed a visible-label mismatch before the final native-name implementation; cache review identified and closed premature authority restoration through eviction and legacy replacement. Sandbox subprocess/socket restrictions required authorized reruns; one initial radial invocation lacked the harness's `CI=true` guard. No candidate test failure remains in the frozen preliminary runs, and no existing meaningful assertion was disabled.
 
+### Hosted fixture correction
+
+The first committed candidate, `726cf305d7424dda9795cb5c05992d7dd165b834`, passed its exact local suites and unsigned Android run, but [general CI 43350970249](https://github.com/caleb1234calvin-art/dinner-roulette/actions/runs/43350970249) exposed a casino fixture regression. Its positional `article` last-button click now selected the separate exclusion action, so the unchanged Result Directions assertion timed out. A clean local reproduction confirmed that the first option was excluded rather than selected. This is a failed candidate validation, not credited as successful final CI.
+
+Both casino smoke and live-check fixtures now identify the first option's single accessible `Choose <name>` action. The canonical selected identity, Directions, reroll and exclusion assertions remain; the live-check fixture also waits for the exact selected Result heading. No runtime code changed in this follow-up. The optional live-provider casino run remains unrun; isolated smoke validation and fresh full exact-head CI govern the final candidate. The PR records the final child SHA/tree and results separately from the first head, including any superseded run cancellation.
+
+The corrected isolated casino smoke passes all 16 desktop/mobile checks on the fresh follow-up build, including selection of the exact first option, destination links, reroll and persisted exclusion. Its result is retained in the reproduction receipt; it must also pass again at the final committed head.
+
 ## Geographic evidence and publication boundaries
 
 [Astra's geographic acceptance, comment 6813951806](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813951806), supersedes geographic-uncleared wording in older ledgers. It accepts three approximate **host-distance only** points:
