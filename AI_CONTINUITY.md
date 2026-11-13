@@ -1,3 +1,44 @@
+# Pick For Us — AI Continuity: Astra PR #98 independent acceptance checkpoint
+
+## CURRENT — November 13, 2026: independent PR #98 verdict ACCEPT WITH REQUIRED CHANGES
+
+**Milestone DONE for independent review; implementation correction still required; all four attraction publication flags remain HOLD.** Astra independently reviewed [draft PR #98](https://github.com/caleb1234calvin-art/dinner-roulette/pull/98), exact SHA `c1e370e633df1797bae692717c6692d0a98995c4`, tree `2180520bdd9f051f2417bf60435f3b4bc0b8f027`, and recorded the verdict, exact reproduction steps and provenance in [Issue #93 comment 6865398821](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6865398821). This supersedes the prior checkpoint's pending Astra acceptance status without erasing the previous historical record. Last GitHub read found PR #98 draft/unmerged at the pinned SHA and main `e078dcdaa9f0ca84951409cdb92805731af3d34b`.
+
+### Independently accepted at PR #98
+
+- **Original provider 20,000/20,001 overflow defect FIXED.** Synthetic contradictory OSM v3 school way and 19,998 noneligible filler nodes plus duplicates at exactly 20,000/20,001 in either order: at 20,000 direct evidence remains `conflicting-source`; at 20,001, four culture mirror attempts exhaust and the missing group is represented as `incomplete-source-evidence`; reviewed outdoor park v2 does **not** become authoritative by default. Fresh and cached controls block Sparkle, ordinary choices remain usable; no school row fabricated. The synthetic v3 is not an actual OSM change.
+- **Accessible cinema selection ACCEPT.** Mixed and cinema-only Four Options expose a single named ordinary selection button, keyboard Enter/Space launch correct Result, separate Not tonight/exclusion/disclosure actions and focus behavior pass. Zero unnamed buttons in inspected tree. 276 Options geometry comparisons preserve historical shell and zero height growth.
+- **Exact-head test receipts verified by Astra:** 1,462 repository PASS / four inherited optional external-documentation skips, 75 application PASS, 239 acceptance +31 event +10 radial +16 casino browser PASS; hosted general CI 19/19 PASS, 774 geometry comparisons, 317 regional and 277 Wave 2 scenarios PASS in identifiable hosted artifacts; unsigned Android readiness PASS, protected signing SKIPPED. Astra did not independently rerun all hosted browser lanes or full Gradle etc. The submitter's extra `deeaf798...` receipt bytes could not be independently identified, unlike separately verified actual artifacts.
+- **Broad accessibility:** Submitted 112 WCAG audits have no reported violations but four incomplete axe audits (12 text nodes) remain incomplete. Astra inspected those pixels and independently measured cinema status 5.772:1 light / 8.549:1 dark; ordinary footer 12.761:1, above 4.5:1. Don't turn incomplete axe audit into a reported pass.
+
+### NEW HIGH blocker — cross-origin stale cache recovery
+
+Astra's additional independent mounted radial-session and Chromium Home/Result probe demonstrated that **newer disqualifying information at one location can fail to block a stale older source cached at a nearby origin**. The separate 20,001 overflow behavior and in-place binding at the origin of the newer evidence remain correct, but cross-origin retirement is incomplete.
+
+**Exact reproduction from [comment 6865398821](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6865398821):** 15-mile `radial-v1:core`, Movies + Park, Christmas Lights, Dec 5 2026 18:00 America/Chicago. Origin A `37.1734644,-94.3130247` and B `37.1744644,-94.3130247` (~111 m apart). First cache complete reviewed Central Park OSM way 987588580 v2 / changeset 189037687 at B. At A, outdoor v2 plus 20,001-element culture packet exhausting four mirrors blocks Sparkle correctly at **both** origins. Returning to A, fetch only missing Movies group with one of: **(bad case 1)** complete synthetic stale v3 park at changeset 189037688; **(bad case 2)** reviewed v2 park plus synthetic conflicting v3 school; **positive control** only reviewed v2 park. A correctly reports `stale-source`, `conflicting-source` or `bound` respectively. Switching back to B within TTL with **zero fresh provider requests** incorrectly reports `bound` and allows Home `Pick our date` → Sparkle for both bad cases; the valid v2 case should bind normally. Public builder remains zero events throughout. No previously retired overlay auto-reopened, but a new bad selection is possible. Root lead: fresh-ID test admits any positive version/changeset and clears canonical proof obligations globally while propagating newly observed source facts only to currently matching origin signature. Fix needs canonical-ID disqualification or invalidation across origins/retained cache, with fresh complete reviewed evidence required for recovery, without disabling ordinary choices or fabricating negative observations.
+
+### Separate inherited accessibility issue — do NOT conflate with accepted naming correction
+
+Astra independently found **two pre-existing ordinary, Christmas-OFF Date Night light-theme contrast defects** on both PR #97 and #98 in all six light width/motion combinations: 12px "Date Night shortlist" at **3.36:1**, and "Nearby · Open now" at **3.52:1** against white, below WCAG AA 4.5:1 for ordinary text. Main PR #98 browser acceptance matrix did not include this ordinary Christmas-off control. Keep tracked as separate accessible ordinary-mode follow-up and release/design gate; do not silently mark pass or bundle into critical cross-origin cache fix without separate scope.
+
+### Publication and geography unchanged
+
+- All four attraction publication flags HOLD. Separate accepted radius-only approximate host locations from [Issue #93 comment 6813951806](https://github.com/caleb1234calvin-art/dinner-roulette/issues/93#issuecomment-6813951806): Sparkle park midpoint `37.1734644,-94.3130247`, NEWcaps district school `36.8638487,-94.3805242`, Olde World church `37.1721466,-94.3086071`. These are approximate host-distance points only, not entrances, Directions, parking/dropoff, access routes or strict boundary clearance. Downtown lighting and parade still lack verified event audience/spectator radius points; both city interior-building geocodes rejected.
+- Central Park normal operational OSM version/changeset acquisition and mirror freshness remains unproven (ordinary query uses `out center tags;`). The tested v3 is synthetic only. All event-specific travel actions remain withheld pending separate real visitor evidence. Combined Storybook Christmas V4 (#90), real screen reader/TalkBack and physical candidate Android/WebView remain unaccepted; Android readiness wrapper targets remote HTTPS app.
+- No merge, deployment, release signing, public catalog import, activation, Play upload, operator outreach or other production authority.
+
+### NEXT handoff / ownership
+
+**Codex NEXT (new isolated SHA/tree from pinned PR #98 head):** implement cross-origin canonical-ID proof obligation persistence or stale-cache invalidation across all retained radial and ordinary cached origin records. Preserve disqualifying newer revisions/conflict, prohibit stale source clearance when switching B→A→B without new provider requests. Include both negative recovery packets (synthetic v3 park; mixed v2+v3 school) and complete current v2 positive control **through mounted radial session, actual Home Pick and Result**, under zero additional requests at cached B, with TTL/eviction/changed origin and ordinary controls. Prevent open/retired selection resurrection, preserve chosen occurrence identity and normal Date Night behavior; no catalog/publishing or artwork changes. Record before/after reproductions, exact-head CI/receipts, and request new independent Astra review against comment 6865398821.
+
+**Astra AFTER Codex:** read-only adverse replay of cross-origin stale recovery with both negative cases and v2 positive control, after exact head provided; independent verification and separate acceptance decision.
+
+**Coordinator/owner:** keep inherited ordinary light-theme text contrast on distinct backlog for later bounded accessibility assignment. Follow the after-every-milestone documentation protocol. Do not start radius/V4/public merge while critical cache eligibility unresolved.
+
+---
+
+## Preserved previous continuity (PR #98 development milestone; verbatim)
+
 # Pick For Us — AI Continuity: PR #98 final two-correction development checkpoint
 
 ## CURRENT — November 12, 2026: Codex PR #98 development DONE; Astra independent acceptance REQUESTED, not yet received
